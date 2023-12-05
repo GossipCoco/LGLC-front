@@ -1,0 +1,9 @@
+@import './variables.scss';
+.card-image{
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+}
+.card-image img{
+    width: 50%;
+}
