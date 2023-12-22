@@ -1,0 +1,22 @@
+@import './variables.scss';
+.card-image{
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+}
+.card-image img{
+    width: 50%;
+}
+.character-list-wrapper .card-header{
+    display: flex;
+    flex-direction: column;
+}
+.name-characatrer-text p{
+    text-align: center;
+
+}
+
+.name-characatrer-link{
+    flex: 1;
+    
+}

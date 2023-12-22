@@ -1,0 +1,150 @@
+@import "./variables.scss";
+
+.header-container.container {
+  max-width: 100%;
+}
+
+.b-example-divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: solid rgba(0, 0, 0, 0.15);
+  border-width: 1px 0;
+  box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+    inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+}
+
+.form-control-dark {
+  color: #fff;
+  background-color: var(--bs-dark);
+  border-color: var(--bs-gray);
+}
+
+.form-control-dark:focus {
+  color: #fff;
+  background-color: var(--bs-dark);
+  border-color: #fff;
+  box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25);
+}
+
+.bi {
+  vertical-align: -0.125em;
+  fill: currentColor;
+}
+
+.text-small {
+  font-size: 85%;
+}
+
+.dropdown-toggle {
+  outline: 0;
+}
+
+.logo-container {
+  padding: 2rem 0 0 0;
+}
+
+.logo-navbar {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+}
+.logo-container{
+  margin: 0rem 0 0 2rem;
+}
+.logo-container img{
+  width: 75%;
+}
+#navbarCollapse {
+  height: 75px;
+  padding: 0;
+  margin-top: -0.5rem;
+  margin-left: 1rem;
+}
+.menu-left .menu-left ul{
+  margin-top: 2rem;
+}
+/* MENU LEFT */
+.side-bar {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  align-content: center;
+}
+
+.li-level1 {
+  margin-left: -1rem;
+}
+
+.menu-left {
+  height: 97vh;
+  position: fixed;
+  background-color: rgba(var(--dark-green-01), 1);
+  border-radius: 8px;
+  width: 12%;
+  margin-top: 1rem;
+}
+
+.menu-left ul {
+  margin-top: 8rem;
+}
+
+.menu-left ul li {
+  font-family: var(--roboto-text);
+  color: rgba(var(--main-white), 1);
+  margin: 1rem 0;
+}
+
+.menu-level1 {
+  display: flex;
+  flex-direction: column;
+  height: 10vh;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.link-menu-container a,
+.sub-menu a {
+  color: rgba(var(--main-white), 1);
+}
+
+.icon-menu-container {
+  width: 55px;
+  height: 55px;
+  background-color: rgba(var(--clear-green-02), 1);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.icon-menu-container svg,
+.icon-menu-container i,
+.icon-menu-container img {
+  color: rgba(var(--dark-green-02), 1);
+}
+
+.link-menu-container {
+  flex: 1;
+  padding: 0 0 0 0;
+  margin-top: 0.5rem;
+}
+
+.link-menu-container {
+  text-transform: uppercase;
+}
+
+ul {
+  list-style: none;
+}
+
+.icon-menu-container img {
+  width: 30px;
+}
+
+.link-menu-container {
+  font-size: 14px;
+  color: rgba(var(--main-white), 1)
+}
