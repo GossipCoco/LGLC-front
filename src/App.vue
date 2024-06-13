@@ -2,21 +2,25 @@
   <router-view></router-view>
 </template>
 <script>
+import EventBus from "./http/EventBus";
 import UserService from "./services/UserService";
+import jwtAPI from "./api/JwtApi";
 export default {
   name: "App",
-  provide() {
-    return {
-      user: "gossipCoco",
-    };
-  },
+
   data() {
     return {
-      currentURL: null,
-      jwtAPI: null,
-      currentUser: null,
+      jwtApi: null,
+      user: null,
       userInfo: null,
+      usrAPI: null,
+      usrRole: null,
     };
+  },
+  computed: {
+    currentUser() {
+      return this.$store.state.auth.user;
+    },
   },
   created() {
     console.log(
@@ -25,14 +29,18 @@ export default {
         "x" +
         window.innerHeight
     );
-    // this.jwtAPI = JwtApi
-    this.currentUser = "gossipCoco";
-    this.getUserById(this.currentUser);
-    //if(!this.currentUser) this.$router.push({ path: "/signin" }).catch(() => {})
-    //console.log(JwtApi.IsLogged(), this.currentUser)
+    this.jwtApi = jwtAPI;
+    if (this.$store.state.auth.user === null) {
+      this.$router.push("/Accueil");
+    } else {
+      this.getUser(this.$store.state.auth.user.userID);
+    }
+    EventBus.on("logout", () => {
+      this.logOut();
+    });
   },
   methods: {
-    getUserById(currentUser) {
+    getUser(currentUser) {
       UserService.getUserById(currentUser)
         .then((response) => {
           this.userInfo = response.data.ob;
@@ -40,5 +48,10 @@ export default {
         .catch((error) => console.error(error));
     },
   },
+  
+  logOut() {
+      this.$store.dispatch("auth/logout");
+      this.$router.push("/login");
+    },
 };
 </script>

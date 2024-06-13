@@ -1,3 +1,22 @@
 @import './variables.scss';
 
 a{ text-decoration: none; }
+.title-author-container h1{
+    font-size: 2.5rem;
+    font-variant-caps: petite-caps;
+    font-weight: 500;
+    font-family: 'Cinzel';
+}
+.info-fan .author-text{
+    font-family: 'Monsteserat';
+}
+.summaray-title-text p a{
+    color: rgba(var(--clear-green-02),1);
+    font-variant: small-caps;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+.summaray-title-text p a:hover{
+    color: rgba(var(--active-hover), 1);
+
+}

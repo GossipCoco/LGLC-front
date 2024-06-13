@@ -15,10 +15,15 @@
     left: 90%;
     z-index: 99999;
 }
-.card-image{
+.character-details.card .card-image{
     display: flex;
     justify-content: center;
     background-size: cover;
+    border-radius: 20% 0 0 20%;
+    border-top: 1rem solid rgba(var(--clear-green-02), 1);
+    border-bottom: 1rem solid rgba(var(--clear-green-02), 1);
+    border-left: 1rem solid rgba(var(--clear-green-02), 1);
+
 }
 .character-card-group{
     display: flex;
@@ -27,17 +32,23 @@
 .character-container-global{
     height: 100vh;
     width: 180vh;
+    margin-top: 2rem;
 }
 .character-card.card{
-    background: linear-gradient(90deg, rgba(var(--dark-green-01), 1), rgba(var(--clear-green-02), 1));
+    /* background: linear-gradient(90deg, rgba(var(--dark-green-01), 1), rgba(var(--clear-green-02), 1)); */
+    background-color: rgba(var(--dark-green-01), 1);
     border: none;
     color: rgba(var(--main-white), 1);
     font-family: var(--opensans-text);
-    margin: 5rem 3rem 0 0;
-    width: 25rem;
+    margin: 1rem 1rem 0 0;
+    width: 20rem;
     flex: 1;
-    min-width: 25rem;
-    padding: 1rem;
+    min-width: 20rem;
+    padding: 0rem 1rem 1rem 1.5rem;
+    text-align: center;
+    max-width: 20rem;
+    height: 20rem
+    /* border-radius: 45% 45% 0 0; */
 }
 
 
@@ -86,18 +97,102 @@
     border: none;
     color: rgba(var(--main-white), 1);
     font-family: var(--opensans-text);
-    margin: 2rem 2rem 0 0;
+    margin: 3rem 0 0 0;
     flex: 1;
-    min-width: 25rem;
+    width: 105rem;
+    min-width: 105rem;
     padding: 2rem;
+    height: 53rem;
+    overflow-y: hidden;
 }
-.dashboard-max-card-container::before{
+.form-character-container-global .card {
+    background: linear-gradient(90deg, rgba(var(--dark-green-01), 1), rgba(var(--clear-green-02), 1));
+    border: none;
+    color: rgba(var(--main-white), 1);
+    font-family: var(--opensans-text);
+    margin: 3rem 0 0 0;
+    flex: 1;
+    width: 105rem;
+    min-width: 105rem;
+    padding: 2rem;
+    height: 53rem;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.dashboard-fiction-game-card-container.card {
+    background: linear-gradient(90deg, rgba(var(--dark-green-01), 1), rgba(var(--clear-green-02), 1));
+    border: none;
+    color: rgba(var(--main-white), 1);
+    font-family: var(--opensans-text);
+    margin: 0rem 10rem 0 -4rem;
+    flex: 1;
+    width: 120rem;
+    min-width: 100rem;
+    padding: 2rem;
+    height: 51rem;
+    overflow-y: scroll;
+}
+
+.dashboard-home-max-card-container.card {
+    background: none;
+    border: none;
+    color: rgba(var(--main-white), 1);
+    font-family: var(--opensans-text);
+    margin: 1rem 2rem 0 -2rem;
+    flex: 1;
+    width: 100%;
+    padding: 1.5rem;
+    height: 100%;
+    /* overflow-y: auto; */
+}
+
+.fiction-globale-container.card.fiction-container{
+    background: linear-gradient(90deg, rgba(var(--dark-green-01), 1), rgba(var(--clear-green-02), 1));
+    border: none;
+    color: rgba(var(--main-white), 1);
+    font-family: var(--opensans-text);
+    margin: 4.5rem 5rem 0 1rem;
+    flex: 1;
+    width: 105rem;
+    min-width: 105rem;
+    padding: 0rem;
+    height: 51rem;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.dashboard-home-max-card-container  .row .card{
+    background: linear-gradient(90deg, rgba(var(--dark-green-01), 1), rgba(var(--clear-green-02), 1));
+    border: none;
+    position: relative;
+}
+.dashboard-max-card-container.card.fiction-container{    
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100vh;
+    margin: 0 0 5rem 0;
+}
+.dashboard-fiction-game-card-container.card {
+    background: linear-gradient(90deg, rgba(var(--dark-green-01), 1), rgba(var(--clear-green-02), 1));
+    border: none;
+    color: rgba(var(--main-white), 1);
+    font-family: var(--opensans-text);
+    margin: 0rem 10rem 0 -4rem;
+    flex: 1;
+    width: 120rem;
+    min-width: 100rem;
+    padding: 2rem;
+    height: 51rem;
+    overflow-y: scroll;
+}
+
+.dashboard-max-card-container::before, .dashboard-fiction-game-card-container::before,
+.fiction-globale-container::before{
     content: url('../images/icons/cat-corner.svg');
     width: 10px;
     height: 10px;
     position: relative;
     top: -4rem;
-    left: 22rem
+    left: 90%
 }
 
 .character-card.card::before{
@@ -105,36 +200,75 @@
     width: 10px;
     height: 10px;
     position: relative;
-    top: -4rem;
-    left: 22rem
+    top: -2rem;
+    left: 16rem;
 }
+
+
+/* 
+.top-dashboard, .bottom-dashboard{
+    height: 45vh;
+} */
 /* Character Details */
 
 .character-details{
-    margin: 14rem auto;
-    width: 75rem;
-    background: linear-gradient(90deg, rgba(0,75,66,1) 0%, rgba(89,207,187,1) 100%);
-    padding: 1rem;
+    margin: 2rem 1rem 0 0 ;
+    width: 100rem;
+    height: 51rem;
+    background: linear-gradient(90deg, rgba(var(--dark-green-01), 0) 0%, rgba(var(--clear-green-02), 0) 100%);
+    padding: 1rem 1rem 1rem 1rem;
 }
-
+.profil-user-card{
+    background: linear-gradient(90deg, rgba(var(--dark-green-01), 1) 0%, rgba(var(--clear-green-02), 1) 100%);
+}
 .clan-card{
-    width: 25rem;
-    height: 250px;
+    width: 30rem;
+    height: 20rem;
+    border-radius: 12px 12px 0 0;
+}
+.card-image-layout{
+    width: 95rem;
+    margin: 4rem 0 0 3rem;
+
 }
 .clan-detail-card{
-    width: 50rem;
-    height: 500px;
+    width: 95rem;
+    height: 25rem;
+    background-position: 50%;
 }
-.character-details .card-body{
-    background-color: white;
+.clans-location-container{
+    margin: 0 0 5rem 0;
 }
 
 .character-card.card .card-image {
     display: flex;
     justify-content: center;
     background-size: cover;
-    width: 350px;
-    height: 25vh;
+    height: 250px;
+    width: 250px;
+    border-radius: 100% 100% 0 0;
+}
+.character-container h3{
+    font-variant: small-caps;
+}
+.character-list-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card.card-image-layout.clan-detail-layout.mb-3{
+    width: 95rem;
+}
+.card.card-image-layout.clan-detail-layout.mb-3 .card-image-layout{
+    width: 95rem;
+    margin: 4rem 0 0 3rem;
+}
+
+.card.card-image-layout.clan-detail-layout.mb-3 .card-body{
+    height: 25rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 /* USER */
 
@@ -143,17 +277,106 @@
     flex-direction: row;
 }
 .avatar-container, .avatar-container img{
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     border-radius: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
 }
+.dashboard-home-max-card-container .avatar-container img
+{
+width: 100px;
+height: 100px;
+border-radius: 100%;
+align-items: center;
+display: flex;
+flex-direction: column;
+
+}
+.dashboard-home-max-card-container .avatar-container{
+    width: 5vh;
+    height: 5vh;
+    margin-top: -1.5rem;
+}
+/* .avatar-container img {
+    width: 250px;
+    height: 245px;
+} */
 .form-profil-user-card{
     margin-top: 3rem;
-    height: 50vh;
+    height: 20vh;
 }
 .all-clans-cards .card-body{
     height: 35vh;
 }
 .character-details .col-md-4{
     padding-top: 14vh;
+}
+.card-form-create-character{
+    flex-direction: column;
+    display: flex;
+    align-items:center;
+    align-content:baseline;
+    flex: 1;
+    margin: 2rem 0 0 2rem;
+    padding: 2rem;
+    height: 180vh;
+    overflow: scroll;
+}
+
+.form-first-part-container{    
+    overflow: hidden;
+}
+.form-first-part-container .col-md-6{
+    height: 10vh;
+   
+}
+.form-second-part-container{
+    height: 80vh;
+    overflow-y: scroll;
+
+}
+.dashboard-max-card-container.card.fiction-container div.col-sm-4.mb-4.mb-sm-0{
+    margin: 0 0 0 0;
+}
+
+.card.profil-card img {
+    border-radius: 100% 100% 0 0;
+    border: 10px solid rgba(var(--dark-green-01), 0);
+}
+
+
+.dashboard-home-max-card-container .card.profil-card{
+    display: flex;
+    flex-direction: column;
+}
+.bottom-top-dashboard .card{
+    height: 35vh;
+}
+.fiction-card .card-header{
+    border-bottom: rgba(var(--clear-green-02), 0);
+    font-family: var(--montserratRegular);
+    font-size: 18px;;
+    z-index: 9999;
+    margin-left: 2rem;
+    font-variant: small-caps;
+}
+.clan-group .card-body{
+    display: flex;
+    flex-direction: column;
+    height: 9rem;
+}
+.clan-description{
+    display: flex;
+    flex:1;
+    padding: 2rem auto; 
+}
+.clan-description p{
+    text-align:justify;
+    
+}
+.card-group.clan-group .card{
+    margin: 1rem;
 }

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #000;
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        isolation: isolate;
+      }
+    </style>
+  </defs>
+  <image id="Clan_du_Tonnerre" data-name="Clan du Tonnerre" class="cls-2" width="37" height="37" transform="translate(0 .49) scale(2.7)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAYAAACoPemuAAAACXBIWXMAAAQmAAAEJgELCP9kAAAEt0lEQVRYhc2YX4hUVRzHv+d3zrn3zp07c+/OnXXd1SC1tvJfkuRDCUYgGFEW4R8yKjVE8sEojV6kHqJ9MgLJgoSgICEtfSjCfF3UhxDpoUyISQIza3V3Z3fdmTl/epgZGXdnZsdtd8cv/GDu/M6953PO73d/5zeDOI5Ty5cvX4m7Q2kAMYAYruvuTqfTI3Ecb9y0aRNvI1SH4zhHAHxQMewXQtgwDP8JgmBjm6BC3/cPcs6LAPoA9BEAKKUwOjqa5ZyfyGazO+YYKnYc53ChUHhTay2rX1L1QwWOFQqFD7PZ7NY5CmvsOM57SqkXtdaTnPsB2Kpxzm0qlRqMomhbLfgsqMvzvE8454Xa+VEbylpprTE+Ph4C+LKjo2PzLEGlXdc9WCwWd2utnXoD6u5IqVRCPp9n1tpDXV1dW6y1bAahMp7nva+U2mqMaThINHJorTEyMpLVWn8lpZwP4PIMQHHHcZ4vlUrb6uVUS2BA+YXI5/ME4KMZgAJQjoa1dspxs5ncddUKFNAGsFbFAfwVRVGnUmpFs2ScQ/UD5R3LDQ4OvqSUepaIcijXkrarGkoL4HtjzMudnZ1/MDaT1WF6qs0xA6A/CIINUsrPKxW5bZqU/Llc7tLRo0ffyWQy73LOh9oBNZWY67rbOedXUDlDu7u7h6WUhjFWe7bNtPUB6GvaQWitL1hrDwshHmCMPeg4zjXG2H1E9Ke1drEQIssYa7k2tah+oFwungyC4JFisfhrg4Gqp6fnzMjISMfNmzfvGR8f/1gp1S+EOJtMJqG1XmaMkQ3unTYYiGi/EOJGKpU6BCADoO4rGcdxynXde3F7XibDMHyCiM5zzv+doRD3VazcjxGRJaIfOOdPT2eZ6XR6vRDiZM0Epxhjf08X7NbqjTGw1m5YtGjRZ57nHVizZk36TsCGh4dPK6VeA7AHwGXf949Zazczxs5Pty7e1sECsIwxG8fxL57nPQbgjvMnk8mkASQrl0wI8R1j7NrEeRpY/Q72blFdMGstBgYGHjLGHBdCvB2GYTRxjJRye6OHXr9+fRjAaPVxSqktRLR73rx5V1sNa9MdK5VK3VrrA4VC4XQikViImsbSGLNTCHEynU4/inLZaaZRrfWJJUuWrO/t7f2RiMaIpg7WpBybaIwxyzn/jYj27d27NwIAxtg5IrKc8wEAe4IgyE45E4Bdu3b5ruu+7vv+Tw3mu71ctAJHRAXf9z8FAM75uRrfmJTymzAMF1cBgiDIRlH0TBPGpVLKY0T0/8AmQF4CcKOOrySlfMX3/fkA7gdghRDHASxrRNfT07ODMXbRdV1bKdC3zsrHAaxvsrJJYozFALw6LiKip7TWK40xPwN41RizlIjWuq47ppS6BEDV3pDP5y9IKc8kEgkUi8UV1tpzVd8d71grxhi7UnsthBiWUp5KJBILV69eXa82JgE8R0T7iGjfrIHVM8/zLOf892Qy+RZaKNxzBlY1IhoDcATAwkZQban8xpiEEGJnMpm8KITYs2rVqs564+Z8x6rGGLOMsWIURV8vWLDg4Vqopn8RzLYqna8cGhp6IZ/PrwXwxrp1674FAEFEV40xXwBo2w8Pay201iCi3lwulwKA/wAE9Gg8i1JlpQAAAABJRU5ErkJggg=="/>
+  <polygon class="cls-1" points="0 0 0 32.96 30.91 55.94 30.91 47.6 57.64 61.72 57.64 56.62 100.7 83.68 100 3.85 94.91 3.85 87.09 16.11 17.81 16.11 0 0"/>
+  <polygon class="cls-1" points="0 53.55 0 100.49 99.17 100.49 100 96.62 63.09 74.83 63.09 83.68 38.4 67.85 38.4 77.02 0 53.55"/>
+  <polygon class="cls-1" points="99.98 96.73 98.77 95.89 98.77 100.49 99.98 100.49 99.98 96.73"/>
+</svg>

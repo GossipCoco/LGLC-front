@@ -1,0 +1,84 @@
+@import './variables.scss';
+
+@media (min-width: 1200px) and (max-width: 1600px) {
+
+    .container-fluid {
+        overflow-y: hidden;
+    }
+
+    .dashboard-home-max-card-container.card {
+        padding: 0;
+        margin: 1rem 0 0 0;
+    }
+
+    .character-card.card {
+        height: 60vh;
+    }
+
+    .icon-menu-container {
+        width: 50px;
+    }
+
+    .icon-menu-container svg,
+    .icon-menu-container img {
+        width: 25px;
+    }
+
+    .character-card.card .card-image {
+        height: 250px;
+        width: 250px;
+    }
+
+    .card-image img {
+        width: 50%;
+        height: 100%;
+    }
+
+    .pagination-container {
+        margin: -1.5rem 0 0 5rem;
+    }
+
+    .menu-left ul li {
+        margin: 0.5rem 0;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .menu-left {
+        width: 100%;
+
+        height: 20%;
+        margin-top: -2rem;
+        z-index: 99999;
+    }
+
+    .burger-menu img {
+        width: 120px;
+    }
+
+    .top-dashboard,
+    .bottom-dashboard {
+        height: 150rem;
+    }
+
+    .character-l1 {
+        flex: 0.1;
+    }
+    .dashboard-max-card-container.card.fiction-container{
+        overflow-y: auto;
+    }
+    .title-dashboard-container-header{
+        justify-content: left;
+    }
+    .border-gradient-decoration-bottom{
+        height: 15.5rem;
+        left: 39.5rem;
+    }
+    .btn-container{
+        width: 30%;
+    }
+    .list-fictions-dashboard{
+        width: 43rem;
+    }
+}

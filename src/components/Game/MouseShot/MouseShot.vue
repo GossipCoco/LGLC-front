@@ -1,0 +1,138 @@
+<template>
+    <div class="dashboard-max-card-container card fiction-container">
+        <div class="game" @keydown="handleKeyPress" tabindex="0">
+            <div v-if="gameStarted" ref="gameArea" :style="{ backgroundImage: 'url(' + backgroundImage + ')' }"
+                class="game-area" @mousemove="handleMouseMove">
+                <img :src="mouseImage" :style="mouseStyle" class="mouse" />
+                <img :src="catImage" :style="catStyle" class="cat" />
+            </div>
+            <button class="btn btn-primary" type="button" v-if="!gameStarted" @click="startGame">Start Game</button>
+            <button class="btn btn-primary" type="button" v-if="!gameStarted" @click="resetGame">Nouvelle Partie</button>
+            <div v-if="gameOver" class="score">Score: {{ score }} / 35</div>
+        </div>
+    </div>
+</template>
+<script>
+export default {
+    name: "CardComponent",
+    data() {
+        return {
+            mouseImage: '/images/Game/mouse.png', // Adjust path as necessary
+            catImage: '/images/Game/Etoiledefeu.png', // Adjust path as necessary
+            backgroundImage: '/images/Game/trees-8726870_1920.jpg', // Adjust path as necessary
+            mouseStyle: { top: '0px', left: '0px' },
+            catStyle: { bottom: '20px', left: '50px' },
+            score: 0,
+            gameStarted: false,
+            gameOver: false,
+            mouseCount: 35,
+            gameDuration: 45000 // 75 seconds
+        };
+    },
+    methods: {
+        startGame() {
+            this.resetGame();
+            this.gameStarted = true;
+            this.gameOver = false;
+            this.score = 0;
+            let interval = setInterval(() => {
+                this.dropMouse();
+                if (--this.mouseCount <= 0) {
+                    clearInterval(interval);
+                    this.gameOver = true;
+                    this.gameStarted = false;
+                }
+            }, this.gameDuration / 45);
+        },
+        resetGame() {
+            this.gameOver = false;
+            this.gameStarted = false;
+            this.score = 0;
+            this.mouseCount = 35;
+            this.catStyle.left = '50px';  // Reset the position of the cat
+        },
+        dropMouse() {
+            const gameArea = this.$refs.gameArea;
+            if (!gameArea) return;
+            const maxX = gameArea.clientWidth - 100;
+            const newX = Math.floor(Math.random() * maxX);
+            this.mouseStyle.left = `${newX}px`;
+            this.mouseStyle.top = '0px';
+            //   let fallDuration = 2000;
+            let fallInterval = setInterval(() => {
+                let newY = parseInt(this.mouseStyle.top) + 5;
+                if (newY < gameArea.clientHeight - 100) {
+                    this.mouseStyle.top = `${newY}px`;
+                } else {
+                    clearInterval(fallInterval);
+                    if (Math.abs(parseInt(this.mouseStyle.left) - parseInt(this.catStyle.left)) < 100) {
+                        this.score++;
+                    }
+                }
+            }, 10);
+        },
+        handleKeyPress(event) {
+            if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+                let currentPosition = parseInt(this.catStyle.left);
+                const moveAmount = event.key === 'ArrowLeft' ? -100 : 100; // Smaller increment for smoother movement
+                const newPosition = currentPosition + moveAmount;
+                if (newPosition >= 0 && newPosition <= (this.$refs.gameArea.clientWidth - 150)) {
+                    this.moveCat(newPosition);
+                }
+            }
+        },
+        handleMouseMove(event) {
+            const gameArea = this.$refs.gameArea;
+            let newPosition = event.clientX - gameArea.getBoundingClientRect().left;
+            if (newPosition >= 0 && newPosition <= (gameArea.clientWidth - 150)) {
+                this.moveCat(newPosition);
+            }
+        },
+        moveCat(position) {
+            const gameArea = this.$refs.gameArea;
+            if (!gameArea) return;
+            this.catStyle.left = `${position}px`;
+        },
+    },
+    mounted() {
+        this.$nextTick(() => {
+            this.$el.focus();
+        });
+        document.addEventListener('keydown', this.handleKeyPress);
+    },
+    beforeUnmount() {
+        document.removeEventListener('keydown', this.handleKeyPress);
+    }
+};
+</script>
+
+<style scoped>
+.game {
+    outline: none;
+}
+
+.game-area {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    background-size: cover;
+    overflow: hidden;
+    outline: none;
+}
+
+.mouse {
+    position: absolute;
+    width: 100px;
+}
+
+.cat {
+    position: absolute;
+    width: 25%;
+    height: 25%;
+    cursor: pointer;
+}
+
+.score {
+    font-size: 24px;
+}
+</style>

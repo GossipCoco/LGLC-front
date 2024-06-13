@@ -1,51 +1,94 @@
 <template>
-  <div>
-    <div class="signin-container">
-      <main class="form-signin">
-        <div class="card" style="width: 38rem">
-          <div class="card-body">
-            <h5 class="card-title">Se connecter</h5>
-            <h6 class="card-subtitle mb-2 text-muted"></h6>
-
-            <form name="login-form">
-              <div class="mb-3">
-                <label for="username">Username: </label>
-                <input id="username" type="text" v-model="form.login" />
+  <div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+      <div class="card login-card">
+        <div class="card-body">
+          <div class="login-container">
+            <h2>Se connecter à son compte</h2>
+            <form @submit.prevent="login">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" v-model="email" class="form-control" id="email" required>
               </div>
-              <div class="mb-3">
-                <label for="password">Password: </label>
-                <input id="password" type="password" v-model="form.password" />
+              <div class="form-group">
+                <label for="password">Mot de passe</label>
+                <input type="password" v-model="password" class="form-control" id="password" required>
               </div>
-              <button class="btn btn-outline-dark" @click="login">Login</button>
-              <br />
-              <router-link to="/home" type="button">
-                Se connecter directement
-              </router-link>
+              <button type="submit" class="btn btn-primary">Se connecter</button>
             </form>
+            <div v-if="error" class="error-message">{{ error }}</div>
           </div>
         </div>
-      </main>
+      </div>
     </div>
+    <div class="col-4"></div>
   </div>
 </template>
 <script>
+import JwtAPI from '../../api/JwtApi';
 export default {
-  name: "Login",
-  data(){
-    return{
-      form:{
-        login: null,
-        password: null
-      }
-    }
+  name: 'Login',
+  data() {
+    return {
+      email: '',
+      password: '',
+      error: '',
+      falsePassword: null,
+    };
   },
-  methods:{
-    login(e){
-      
-      console.log("test",e, this.form);
-
-      this.$router.push({ path: "/home" });
-    }
+  created() {
+    console.log(this.$store)
+    this.$store.state.auth.user === null;
+    JwtAPI.IsLogged();
+  },
+  methods: {
+    login(e) {
+      e.preventDefault();
+      let email = this.email;
+      let pwd = this.password;
+      console.log({
+        Email: email,
+        Password: pwd,
+      })
+      this.$store
+        .dispatch("auth/login", {
+          Email: email,
+          Password: pwd,
+        })
+        .then(
+          () => {
+            console.log("je passe ici 1")
+            this.$router.push({ path: "/Dashboard" });
+          },
+          (error) => {
+            if (!error) {
+              this.falsePassword = "Login ou Mot de passe incorrect";
+              this.loading = false;
+              this.message =
+                (error.response && error.response.data) ||
+                error.message ||
+                error.toString();
+            }
+          }
+        )
+        .catch((errors) => {
+          console.log("Cannot log in", errors);
+          this.falsePassword = "Login ou Mot de passe incorrect";
+        });
+    },
+    onReset(event) {
+      event.preventDefault();
+      // Reset our form values
+      this.email = "";
+      this.password = "";
+      // Trick to reset/clear native browser form validation state
+      this.show = false;
+      this.$nextTick(() => {
+        this.show = true;
+      });
+    },
+    
   }
 };
 </script>

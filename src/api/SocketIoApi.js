@@ -12,7 +12,7 @@ const LocalData = {
     subscriber: undefined,
   },
 };
-console.log(LocalData);
+
 IOController.initSocket = () => {
   socket.on("connect", () => {
     console.log("socketIOClient", socket.id);

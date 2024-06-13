@@ -1,19 +1,38 @@
 <template>
-    <div class="row mb-3">
-      <div class="col-md-8 themed-grid-col">
-        <div class="pb-3">
-          .col-md-8
-        </div>
-        <div class="row">
-          <div class="col-md-6 themed-grid-col">.col-md-6</div>
-          <div class="col-md-6 themed-grid-col"><tchat-card /></div>
+  <div class="dashboard-max-card-container card">
+    <div class="game-container">
+      <div class="button-container">
+        <div class="d-grid gap-2 col-12 mx-auto">
+        <router-link type="button" class="btn btn-primary" to="/rollOfDice">Jeu de dé</router-link>
+        <router-link type="button" class="btn btn-primary" to="/puzzle">Puzzle</router-link>
+        <router-link type="button" class="btn btn-primary" to="/mouseShot">Jeu du chat et de la souris</router-link>
+        <router-link type="button" class="btn btn-primary" :to="'/allFictions/' + usrId">Mes fictions</router-link>
+        <router-link type="button" class="btn btn-primary" to="/createANewFiction">Créer une nouvelle fiction</router-link>
         </div>
       </div>
-      <div class="col-md-4 themed-grid-col">.col-md-4</div>
     </div>
+  </div>
 </template>
 <script>
 export default {
-    name:'GameLayout'
+  name: 'GameLayout',
+  inject: ["user"],
+  data() {
+    return {
+      usrId: this.$store.state.auth.user.usrID,
+
+      games: {},
+      filters: [],
+      nav: {
+        current: 0,
+        pages: 0,
+        step: 6,
+      },
+    };
+  },
+  created() {
+
+  },
+
 }
 </script>

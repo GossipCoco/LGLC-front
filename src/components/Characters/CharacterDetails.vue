@@ -2,34 +2,48 @@
   <div class="character-details card mb-3">
     <div class="row g-0">
       <div class="col-md-4">
-        <div
-          class="card-image"
-          v-bind:style="{ backgroundImage: 'url(/images/Backgrounds/' + background + ')' }"
-        >
-          <img :src="'/images/Characters/' + image" />
+        <div class="card-image" v-bind:style="{ backgroundImage: 'url(/images/Backgrounds/' + background + ')' }">
+          <img  class="img-fluid"  :src="'/images/Characters/' + image" :alt="image"/>
         </div>
       </div>
       <div class="col-md-8">
         <div class="card-body">
-          <h5 class="card-title">{{ currentName }}</h5>
-          <div v-for="(char, index) in character" :key="index">
-            <p>{{ char.Warrior.Clan.Name }}</p>
-          <p class="card-text">
-            {{ char.Genre }}
-          </p>
-          <p class="card-text">
-            {{ char.Description }}
-          </p>
-          <p class="card-text">
-            {{ char.Biography }}
-          </p>
-          <p class="card-text">
-            <small class="text-muted"></small>
-          </p>
-        </div>
-          <p class="card-text">
-            <router-link to="/allCharacters" type="button"  class="btn btn-primary">Retour à la liste des personnages</router-link>
-          </p>
+          <div class="row">
+            <div class="col-12">
+              <p class="card-text">
+                <router-link to="/allCharacters" type="button" class="btn btn-primary">Retour à la liste des
+                  personnages</router-link>
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="information-global-character">
+                <div class="character-info-general-container" v-for="(char, index) in character" :key="index">
+                  <div class="identity-character-container">
+                    <h5 class="card-title">{{ currentName }}</h5>
+                    <p>{{ char.Warrior.Clan.Name }}</p>
+                    <p class="card-text">
+                      {{ char.Genre }}
+                    </p>
+                  </div>
+
+                  <div class="clan-logo-container">
+                    <img :src="'/images/Clans/' + char.Warrior.Clan.Symbol" class="img-fluid" />
+                  </div>
+
+                </div>
+                <p class="card-text">
+                  {{ description }}
+                </p>
+                <p class="card-text biographie-text" v-html="Biography">
+                </p>
+                <p class="card-text">
+                  <small class="text-muted"></small>
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -49,7 +63,8 @@ export default {
       genre: null,
       age: null,
       description: null,
-      grade: null
+      grade: null,
+      Biography: null,
     }
   },
   created() {
@@ -71,6 +86,7 @@ export default {
           this.genre = response.data.ob[0].Genre
           this.age = response.data.ob[0].Age
           this.description = response.data.ob[0].Description
+          this.Biography = response.data.ob[0].Biography
         })
         .catch((e) => {
           console.log(e);

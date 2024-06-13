@@ -1,98 +1,86 @@
 <template>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-1"></div>
-      <div class="col-10">
+      <div class="col-12">
         <div class="profil-user-card card">
-          <div class="card-body">
+          <div class="card-body profil-user-card-body">
             <div class="avatar-container">
-              <img :src="'/images/Avatars/' + avatar" />
+              <h2>{{ Role }}</h2>
+              <img :src="'/images/Avatars/' + form.Avatar" /><br>
+              <label class="btn btn-default p-0" for="upload-avatar">
+                <input id="upload-avatar" type="file" accept="image/png, image/jpeg, image/jpg" ref="file"
+                  @change="selectImage" />
+              </label><br>
+              <button class="btn btn-success btn-sm float-right" :disabled="!currentImage" @click="upload">
+                Choisir un avatar
+              </button>
             </div>
-            <p class="card-text">
-              {{ userInfo }}
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-1"></div>
-    </div>
-    <div class="row">
-      <div class="col-1"></div>
-      <div class="col-10">
-        <div class="form-profil-user-card card">
-          <div class="card-body">
-            <div class="row">
-              <div class="col-8">
-                <label class="btn btn-default p-0" for="upload-avatar">
-                  <input
-                    id="upload-avatar"
-                    type="file"
-                    accept="image/png, image/jpeg, image/jpg"
-                    ref="file"
-                    @change="selectImage"
-                  />
-                </label>
-              </div>
-              <div class="col-4">
-                <button
-                  class="btn btn-success btn-sm float-right"
-                  :disabled="!currentImage"
-                  @click="upload"
-                >
-                  Choisir un avatar
-                </button>
-              </div>
-            </div>
-            <div class="row">
-              <div v-if="currentImage" class="progress">
-                <div
-                  class="progress-bar progress-bar-info"
-                  role="progressbar"
-                  :aria-valuenow="progress"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                  :style="{ width: progress + '%' }"
-                >
-                  {{ progress }}%
+            <div class="profil-text-container">
+              <div class="card-text">
+                <div class="row">
+                  <form @submit.prevent="edit">
+                    <div class="col">
+                      <div class="mb-3">
+                        <input type="text" v-model="form.LastName" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="mb-3">
+                        <input type="text" v-model="form.FirstName" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="mb-3">
+                        <input type="date" v-model="form.Birthday" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="mb-3">
+                        <input type="text" v-model="form.Login" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="mb-3">
+                        <input type="email" v-model="form.Email" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="mb-3">
+                        <input type="password" v-model="form.Pwd" class="form-control">
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Modifier</button>
+                  </form>
                 </div>
-              </div>
-
-              <div v-if="previewImage">
-                <div>
-                  <img
-                    class="preview my-3"
-                    :src="previewImage"
-                    alt=""
-                    width="250px"
-                  />
-                </div>
-              </div>
-
-              <div v-if="message" class="alert alert-secondary" role="alert">
-                {{ message }}
+                <!-- {{ userInfo }} -->
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-1"></div>
     </div>
   </div>
 </template>
-  <script>
+<script>
 import UploadService from "../../services/UploadFilesService";
 import UserService from "../../services/UserService";
 export default {
   name: "UserProfil",
   inject: ["user"],
-  components: {
-    // UserProfil,
-  },
   data() {
     return {
-      usrId: this.user,
+      usrId: this.$store.state.auth.user.usrID,
+      form: {
+        Avatar: null,
+        Email: null,
+        Login: null,
+        LastName: null,
+        FirstName: null,
+        Birthday: null,
+        Pwd: null, 
+        Role: null,
+      },
       userInfo: null,
-      avatar: null,
       currentImage: undefined,
       previewImage: undefined,
       progress: 0,
@@ -104,11 +92,23 @@ export default {
     this.GetUserById(this.usrId);
   },
   methods: {
-    GetUserById(userId) {
-      UserService.getUserById(userId)
+    edit() {
+      console.log(this.form)
+    },
+
+    GetUserById(e) {
+      UserService.getUserById(e)
         .then((response) => {
-          this.userInfo = response.data.ob;
-          this.avatar = this.userInfo.Avatar;
+          this.userInfo = response.data.ob
+          this.form.Avatar = this.userInfo.Avatar
+          this.form.Email = this.userInfo.Email
+          this.form.Pwd = this.userInfo.Password
+          this.form.Login = this.userInfo.Login
+          this.form.LastName = this.userInfo.LastName
+          this.form.FirstName = this.userInfo.FirstName
+          this.form.Birthday = this.userInfo.Birthday
+          this.form.Login = this.userInfo.Login
+          this.Role = this.userInfo.Role.Name
         })
         .catch((error) => {
           console.error(error);

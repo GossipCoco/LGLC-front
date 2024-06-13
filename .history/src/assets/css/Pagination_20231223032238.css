@@ -1,0 +1,30 @@
+@import './variables.scss';
+.pagination-container {
+    width: 100vh;
+    align-items: center;
+    align-content: center;
+}
+.row.all-calls-pagination-container{
+    height: 100px;
+}
+.pagination li,.pagination-container, .pagination-container-row.col-lg-12.col-md-12.col-sm-12.col-xxl-12.col-xs-12 {
+    display: flex;
+    flex-direction: row;
+    flex:1;
+    margin: -2.5rem 0 0 0;
+}
+.row.search-pagination-container{
+    height: 50px;
+}
+.row.search-pagination-container .col-2{
+    padding: 0 0 1rem 0;
+}
+.pagination-container-row.col-lg-12.col-md-12.col-sm-12.col-xxl-12.col-xs-12{
+    padding: 2rem 0 0 1rem;
+    margin: 0 auto;
+    align-items: center;
+}
+.row.pagination-container p{
+    color:rgba(var(--main-white),1);
+    font-size: 25px
+}

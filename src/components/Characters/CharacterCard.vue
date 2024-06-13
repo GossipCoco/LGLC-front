@@ -5,14 +5,14 @@
       :key="index"
       class="character-card card"
     >
-    {{ character.CurrentName }}
+    <!-- <h3>{{ character.CurrentName }}</h3> -->
 
       <character-text v-bind:character="character" />
     </div>
   </div>
 </template>
 <script>
-import CharacterText from "./CharacterComponent/CharacterText.vue";
+import CharacterText from "./CharacterComponent/CharacterText";
 export default {
   name: "CharacterCard",
   props: ["characters_props"],

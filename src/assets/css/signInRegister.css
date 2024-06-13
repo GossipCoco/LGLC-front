@@ -39,3 +39,9 @@
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
+.login-card{
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    margin: 50% auto;
+}

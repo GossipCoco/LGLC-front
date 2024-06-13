@@ -7,11 +7,18 @@ import Vuex from 'vuex'
 import store from "./store"
 import io from 'socket.io-client'
 import IOController from '../src/api/SocketIoApi'
+import { QuillEditor } from '@vueup/vue-quill'
+import '@vueup/vue-quill/dist/vue-quill.snow.css';
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faCat, faEnvelope, faGamepad, faHome, faHouseUser, faUser, faUserAlt, faUserCog, faUsers } from '@fortawesome/free-solid-svg-icons'
+import { faCat, faEnvelope, faGamepad, faHome, faHouseUser, faUser, faUserAlt, faUserCog,
+        faUsers, faBurger, faBook, faGear, faChevronDown
+        } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/fontawesome-free'
 
-import 'bootstrap/dist/css/bootstrap.css'
+import 'jquery/dist/jquery'
+import 'popper.js'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.min.js'
 
 import './assets/css/layout.css'
 import './assets/css/navbar.css'
@@ -19,15 +26,23 @@ import './assets/css/components.css'
 import './assets/css/Pagination.css'
 import './assets/css/card.css'
 import './assets/css/text.css'
+import './assets/css/FictionChapter.css'
 import './assets/css/signInRegister.css'
+import './assets/css/responsive.css'
+import './assets/css/Accueil.css'
+import './assets/css/Form.css'
 
 
 IOController.initSocket(io)
 
-library.add(faUser, faHouseUser, faGamepad, faUser, faHome, faEnvelope, faUserCog, faCat, faUserAlt, faUsers, faCat)
+library.add(faUser, faHouseUser, faGamepad, faUser, faHome, faEnvelope,
+            faUserCog, faCat, faUserAlt, faUsers, faCat, faBurger, faBook,
+            faGear, faChevronDown)
 const app = createApp(App)
 
+app.component('QuillEditor', QuillEditor)
 app.use(FontAwesomeIcon)
+
 app.use(Vuex)
 app.use(store)
 app.use(router)

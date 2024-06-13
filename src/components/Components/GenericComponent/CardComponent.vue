@@ -15,4 +15,4 @@
 export default {
   name: "CardComponent",
 };
-</script>>
+</script>

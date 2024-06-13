@@ -1,0 +1,196 @@
+@import './variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(120%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#accueil {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: rgba(var(--main-white), 1);
+}
+
+#accueil main {
+    height: 100vh;
+    background-image: url('../../../public/images/Backgrounds/_68fcc4ae-3bd3-4c21-8944-457799b6e0ed.jpg');
+    background-size: cover;
+    transform: translate3d(0px, 0, 0);
+}
+
+#accueil nav.bg-dark {
+    background-color: rgba(var(--main-black), 1);
+}
+
+#accueil .accueil-header {
+    padding: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+#accueil .title-accueil,
+#accueil .image-accueil {
+    flex: 1;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    
+}
+#accueil .title-accueil{
+    flex-direction: column;
+}
+#accueil h1 {
+    width: 60%;
+    font-family: 'Cinzel';
+    font-size: 92px;
+    font-weight: 600;
+    color: rgba(var(--main-white), 1);
+    position: relative;
+    animation: slideInLeft 3s ease-out;
+}
+#accueil h2 {
+    margin-top: 4rem;
+    width: 95%;
+    font-family: var(--montserratMedium);
+    font-size: 48px;
+    font-weight: 400;
+    color: rgba(var(--dark-green-01), 1);
+    position: relative;
+    animation: slideInLeft 3s ease-out;
+    word-wrap: break-word;
+}
+#accueil .title-accueil h2 {
+    margin-top: 4rem;
+    width: 95%;
+    font-family: var(--montserratMedium);
+    font-size: 48px;
+    font-weight: 400;
+    color: rgba(var(--main-white), 1);
+    position: relative;
+    animation: slideInLeft 3s ease-out;
+    word-wrap: break-word;
+}
+#accueil li.nav-item{
+    flex: 1;
+    display: flex;
+    width: 8rem;
+}
+/* #accueil .row.featurette{
+    margin: 0 0 0 10rem;
+} */
+#accueil .col-md-5{
+    display: grid;
+    vertical-align: middle;
+}
+#accueil .image-row-second{
+    /* padding: 0 0 0 18rem; */
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: left;
+    /* align-items: end;
+    align-content: end; */
+}
+#accueil .image-row-second img{
+    width: 500px;
+}
+#accueil p.lead{
+    text-align: justify;
+    font-family: var(--opensans-text);
+}
+.px-3 {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+#accueil .navbar-brand img {
+    width: 150px;
+}
+
+#accueil .image-accueil .image-one {
+    position: relative;
+    animation: slideInRight 2s ease-out;
+    position: absolute;
+    margin: 0px 16rem 0 0;
+    z-index: 1;
+    width: 100%;
+}
+
+#accueil .image-accueil .image-one img {
+    width: 100%;
+}
+
+#accueil .image-accueil {
+    position: relative;
+}
+#accueil .p-3 {
+    padding: 0;
+}
+#accueil .image-rond img {
+    width: 200px;
+}
+
+#accueil .col-image-rond {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    margin: 0 0 0 0.2;
+}
+
+/* #rever-container, #jouer-container, #creer-container {
+    opacity: 0;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+} */
+
+.slide-in-left {
+    opacity: 1;
+    transform: translateX(0);
+    animation: slideInLeft 1s forwards;
+}
+
+.slide-in-up {
+    opacity: 1;
+    transform: translateY(0);
+    animation: slideInUp 1s forwards;
+}
+
+.slide-in-right {
+    opacity: 1;
+    transform: translateX(0);
+    animation: slideInRight 1s forwards;
+}

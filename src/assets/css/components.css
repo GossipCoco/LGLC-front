@@ -1,15 +1,33 @@
 @import './variables.scss';
+.btn-primary {
+    background-color: rgba(var(--middle-green-02), 1);
+    border: 1px solid rgba(var(--middle-green-02), 1);
+}
+.btn-primary:hover {
+    background-color: rgba(var(--clear-green-01), 1);
+    border: 1px solid rgba(var(--clear-green-01), 1);
+    color: rgba(var(--middle-green-02), 1);
+}
 .card-image{
     display: flex;
     justify-content: center;
     background-size: cover;
 }
 .card-image img{
-    width: 50%;
+    width: 75%;
 }
 .character-list-wrapper .card-header{
     display: flex;
     flex-direction: column;
+}
+.character-info-general-container{    
+    display: flex;
+    flex-direction: row;
+}
+.identity-character-container{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 .name-characatrer-text-card{
     text-align: center;
@@ -21,4 +39,144 @@
 .name-characatrer-link{
     flex: 1;
     
+}
+.select-character-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.select-character-container .form-check{
+    width: 15rem;
+}
+.create-character-form{
+    width: 100%;
+}
+.create-character-form .text-area-container{
+    height: 30rem;
+}
+.card-form-create-character .card-body{
+    width: 100%;
+}
+.create-character-form > div:nth-child(2){
+    height: 5vh;
+}
+.select-character-container img{
+    width: 50%;
+}
+.fiction-container{
+    display: flex;
+    flex-direction: column;
+}
+.info-fanfiction-container{
+    display: flex;
+    flex-direction: row;
+}
+ .character-chapters-fiction-container{
+    flex: 1;
+}
+
+.game-container{
+    display: flex;
+    flex:1;
+    flex-direction: row;
+}
+.image-fiction-container img {
+    width: 180px;
+}
+.image-fiction-container{
+    background-size: cover;
+    height: 200px;
+    border-radius: 12px;
+}
+.avatar-container h2{
+    color: rgba(var(--main-white), 1)
+}
+input#upload-avatar{
+    color: rgba(var(--main-white), 1)
+}
+.biographie-text{
+    text-align: justify;
+}
+.one-fiction-container{
+    display: flex;
+    flex-direction: row;
+    flex:1;
+    padding: 1rem 0 0 0;
+}
+.one-fiction-container .image-fiction-container{
+    flex: 0.25;
+    width:  20rem;
+    height: 20rem;
+    background-size: cover;
+    background-position: 40% 20%;
+    border-radius: 2rem;
+    margin-left: 2rem;
+    margin-top: 6rem;
+}
+.dashboard-max-card-container.card.fiction-container table{
+    color: rgba(var(--main-white), 1);
+}
+th{
+    font-weight: 200;
+}
+.title-dashboard-container{
+    display: flex;
+    flex: 1;
+    justify-content: right;
+    text-align: right;
+}
+.bottom-dashboard .card{
+    height: 40vh;
+    margin: 1rem auto;
+}
+.chapter-global-content{
+    display: flex;
+    height: 70vh;
+}
+.chapter-image-content, .chapter-text-content{
+    flex: 1
+}
+.chapter-image-content{
+    width: 500px;
+    background-size: cover;
+    background-position: 20%;
+    height: 700px;
+    flex: 0.5;
+}
+.chapter-text-content{
+    padding: 0.5rem;
+}
+.chapter-text-content p{
+    text-align: justify;
+}
+
+.row.btn-generate-btn{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+.logo img{
+    width: 55%;
+}
+.logo-wrapper-contain{
+    display: flex;
+    flex-direction: row;
+}
+.logo-wrapper-contain .logo{
+    flex: 0.25
+}
+.list-all-fictions-globale--container{
+    display: flex;
+    flex-direction: row;
+}
+
+.summaray-title-text{
+    margin: 0 0 0 0.5rem;
+}
+.pagination-container{
+    margin-top: -2rem;
+}
+
+.row.list-fiction-card-container{
+    height: 35rem;
 }

@@ -1,8 +1,8 @@
 <template>
-    <div class="character-container all-clans-cards">
-      <div class="card-group">
+    <div class="character-container-global clans-location-container" style="overflow-y: scroll;">
+      <div class="card-group clan-group">
         <div v-for="(clan, index) in clans" :key="index">
-          <div class="card" style="width: 25rem">
+          <div class="card" style="width: 30rem">
             <div
               class="card-image clan-card"
               v-bind:style="{
@@ -11,8 +11,14 @@
             ></div>
             <div class="card-header">{{ clan.Name }}</div>
             <div class="card-body">
-              {{ clan.Description }}
-              <router-link :to="'/clan/'+clan.Id">Plus de détails</router-link>
+              <div class="clan-description">
+                <p v-html="truncateText(clan.Description, 100)">
+
+              </p>
+            </div>
+            <div class="clan-link">
+              <router-link type="button" class="btn btn-primary" :to="'/clan/'+clan.Id">Plus de détails</router-link>
+            </div>
             </div>
           </div>
         </div>
@@ -33,6 +39,13 @@
       this.getAllClans();
     },
     methods: {
+      
+    truncateText(text, maxLength) {
+      if (text.length <= maxLength) {
+        return text;
+      }
+      return text.substring(0, maxLength) + '...';
+    },
       getAllClans() {
         ClanService.getAllClans()
           .then((response) => {

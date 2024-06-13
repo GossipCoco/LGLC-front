@@ -1,5 +1,5 @@
 <template>
-  <div class="card mb-3">
+  <div class="card card-image-layout  clan-detail-layout mb-3">
     <div
       class="card-image clan-detail-card"
       v-bind:style="{

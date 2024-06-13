@@ -1,10 +1,5 @@
 <template>
   <div class="character-list-wrapper">
-    <div class="card-header">
-      <p class="card-text name-characatrer-text-card">
-        <span class="name-characatrer-text" v-for="(name, index) in character.CurrentName" :key="index">{{ name.warrior }}</span>
-      </p>
-    </div>
     <div
       class="card-image"
       v-bind:style="{
@@ -14,11 +9,11 @@
     >
       <img :src="'/images/Characters/' + character.Image" />
     </div>
-    <div class="card-header">
+    <div class="card-body">
       <p style="text-align: center;">
       <span class="name-characatrer-link">
         <router-link :to="'/characterDetails/' + character.Id" type="button" class="btn btn-outline-light">
-          En savoir plus
+         {{ character.CurrentName }}
         </router-link></span>
       </p>
     </div>

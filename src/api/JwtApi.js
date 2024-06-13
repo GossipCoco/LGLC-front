@@ -1,55 +1,71 @@
-const axios = require('axios')
-const config = require('../../server')
-
-const JwtAPI = {}
+import axios from 'axios';  // Utilisez `import` pour importer axios
+import config from '../../server';  // Vérifiez que ce chemin est correct et que server contient la config nécessaire
+// import http from '../http/http-common'
+const JwtAPI = {};
 
 JwtAPI.logged = false;
-JwtAPI.permission = null
+JwtAPI.permission = null;
+
 JwtAPI.SetUser = (token) => {
-    console.log(token)
-   return token
-}
+  console.log('token', token)
+  localStorage.setItem('token', token);
+  axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+};
+
 JwtAPI.GetUser = () => {
-    return localStorage.getItem('token')
-}
+  console.log('token')
+  return localStorage.getItem('token');
+};
+
 JwtAPI.UnsetUser = () => {
-    localStorage.removeItem('token')
-}
+  
+  console.log('token')
+  localStorage.removeItem('token');
+  delete axios.defaults.headers.common['Authorization'];
+};
+
 JwtAPI.Connexion = (user) => {
-    console.log("JwtAPI : ", user)
-    return axios
-    .post(config.Url + "/user/login", user)
-        .then((token) => {
-            console.log('token', token.data)
-            if (token.status == 200) {
-                JwtAPI.SetUser(token.data.token);
-                axios.defaults.headers.common['Authorization'] = JwtAPI.GetUser()
-                JwtAPI.logged = true
-            }
-            else {
-                JwtAPI.logged = false
-                JwtAPI.UnsetUser()
-            }
-        })
-        .catch((err) => console.log(err))
-}
+
+  // try {
+    const response = axios.post(`${config.Url}/user/login`, user);
+    
+    if (response.status === 200) {
+      console.log(response.data.token)
+      JwtAPI.SetUser(response.data.token);
+      JwtAPI.logged = true;
+      return true;
+    } else {
+      JwtAPI.logged = false;
+      JwtAPI.UnsetUser();
+      return false;
+    }
+  // } 
+  // catch (err) {
+  //   console.error("err", err);
+  //   JwtAPI.logged = false;
+  //   JwtAPI.UnsetUser();
+  //   throw new Error('Login failed');
+  // }
+};
 
 JwtAPI.Disconnect = (router) => {
-    JwtAPI.logged = false;
-    JwtAPI.UnsetUser()
-    router.push({ path: '/logout' });
-}
-JwtAPI.NotConnected = () => {
-    JwtAPI.UnsetUser();
-    this.$router.push({ path: '/login' })
-}
+  console.log('token')
+  JwtAPI.logged = false;
+  JwtAPI.UnsetUser();
+  router.push({ path: '/logout' });
+};
 
 JwtAPI.IsLogged = () => {
-    JwtAPI.logged = JwtAPI.GetUser() ? true : false
-    return JwtAPI.logged
+  console.log('IsLogged')
+  JwtAPI.logged = !!JwtAPI.GetUser();
+  return JwtAPI.logged;
 };
+
 JwtAPI.Permission = () => {
-    JwtAPI.permission = true
-    return JwtAPI.permission
-}
-module.exports = JwtAPI
+  
+  console.log('Permission')
+  JwtAPI.permission = true;
+  return JwtAPI.permission;
+};
+
+export default JwtAPI;  // Utilisez `export default` pour exporter JwtAPI
