@@ -45,3 +45,8 @@
     vertical-align: middle;
     margin: 50% auto;
 }
+
+#register-page .card.register-card{
+    margin: 13rem auto;
+    height: 30rem;
+}

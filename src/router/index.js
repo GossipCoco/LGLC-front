@@ -24,6 +24,7 @@ import AllExistingFictionsLayout from '../components/Fictions/AllExistingFiction
 import AExistingFictionContain from "../components/Fictions/AExistingFictionContain.vue";
 import UserCard from '../components/Users/UserCard.vue'
 import AllLocationsLayout from "../components/Locations/AllLocationsLayout.vue"
+import Register from '../components/Page/Register.vue'
 
 // import Logout from '../components/Page/Logout'
 // import Register from '../components/Page/Register'
@@ -48,6 +49,11 @@ const routes = [
     path: "/login",
     name: "/login",
     component: Login,
+  },
+  {
+    path: '/Register',
+    name: 'Register',
+    component: Register
   },
   {
     path: "/home",

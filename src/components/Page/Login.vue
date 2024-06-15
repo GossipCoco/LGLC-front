@@ -7,15 +7,32 @@
           <div class="login-container">
             <h2>Se connecter à son compte</h2>
             <form @submit.prevent="login">
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" v-model="email" class="form-control" id="email" required>
+              <div class="row">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" v-model="email" class="form-control" id="email" required>
+                  </div>
+                </div>
               </div>
-              <div class="form-group">
-                <label for="password">Mot de passe</label>
-                <input type="password" v-model="password" class="form-control" id="password" required>
+              <div class="row">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" v-model="password" class="form-control" id="password" required>
+                  </div>
+                </div>
               </div>
-              <button type="submit" class="btn btn-primary">Se connecter</button>
+
+              <div class="row">
+                <div class="col">
+                  <button type="submit" class="btn btn-primary">Se connecter</button>
+                </div>
+                <div class="col">
+                  <router-link type="button" class="btn btn-primary" to='/Register'>Créer un compte</router-link>
+                </div>
+              </div>
+
             </form>
             <div v-if="error" class="error-message">{{ error }}</div>
           </div>
@@ -88,7 +105,7 @@ export default {
         this.show = true;
       });
     },
-    
+
   }
 };
 </script>

@@ -10,10 +10,12 @@ import IOController from '../src/api/SocketIoApi'
 import { QuillEditor } from '@vueup/vue-quill'
 import '@vueup/vue-quill/dist/vue-quill.snow.css';
 import { library } from '@fortawesome/fontawesome-svg-core'
+import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faCat, faEnvelope, faGamepad, faHome, faHouseUser, faUser, faUserAlt, faUserCog,
         faUsers, faBurger, faBook, faGear, faChevronDown
         } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/fontawesome-free'
+
 
 import 'jquery/dist/jquery'
 import 'popper.js'
@@ -35,13 +37,13 @@ import './assets/css/Form.css'
 
 IOController.initSocket(io)
 
-library.add(faUser, faHouseUser, faGamepad, faUser, faHome, faEnvelope,
+library.add(faUserSecret,faUser, faHouseUser, faGamepad, faUser, faHome, faEnvelope,
             faUserCog, faCat, faUserAlt, faUsers, faCat, faBurger, faBook,
             faGear, faChevronDown)
 const app = createApp(App)
 
 app.component('QuillEditor', QuillEditor)
-app.use(FontAwesomeIcon)
+app.use('font-awesome-icon', FontAwesomeIcon)
 
 app.use(Vuex)
 app.use(store)
