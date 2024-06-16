@@ -17,6 +17,10 @@
                         v-if="usrCurrent === AuthorId">
                         Créer un chapitre
                     </router-link>
+                    <router-link type="button" class="btn btn-primary" :to="'/EditChapter/' + chapter.Id"
+                        v-if="usrCurrent === AuthorId">
+                        Editer le chapitre
+                    </router-link>
                     <router-link :to="'/fiction/' + chapter.FictionId" class="btn btn-primary">
                         Retour à la liste de chapitres
                     </router-link>

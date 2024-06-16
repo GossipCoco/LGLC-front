@@ -22,18 +22,12 @@ import MouseShot from '../components/Game/MouseShot/MouseShot.vue'
 import CreateChapter from '../components/Game/Fictions/CreateChapter.vue'
 import AllExistingFictionsLayout from '../components/Fictions/AllExistingFictionsLayout.vue'
 import AExistingFictionContain from "../components/Fictions/AExistingFictionContain.vue";
+import EditChapter from '../components/Game/Fictions/EditChapter.vue'
 import UserCard from '../components/Users/UserCard.vue'
 import AllLocationsLayout from "../components/Locations/AllLocationsLayout.vue"
 import Register from '../components/Page/Register.vue'
 
-// import Logout from '../components/Page/Logout'
-// import Register from '../components/Page/Register'
-// import CharacterLayout from '../components/Character/CharacterLayout'
-// 
-// 
-// import AllClans from '../components/Character/AllClans'
-// import ClanDetails from '../components/Character/ClanDetails'
-// import PageError from '../components/Page/404'
+
 
 const routes = [
   {
@@ -147,6 +141,11 @@ const routes = [
         path: '/createANewFiction',
         name: 'CreateFiction',
         component: CreateFiction
+      },
+      {
+        path: '/EditChapter/:id',
+        name: 'EditChapter',
+        component: EditChapter
       },
       {
         path: '/mouseShot',

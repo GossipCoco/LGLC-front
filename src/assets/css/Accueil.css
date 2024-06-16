@@ -41,15 +41,15 @@
     overflow-y: auto;
     overflow-x: hidden;
     background-color: rgba(var(--main-white), 1);
-}
-
-#accueil main {
+}ueil main {
     height: 100vh;
-    background-image: url('../../../public/images/Backgrounds/_68fcc4ae-3bd3-4c21-8944-457799b6e0ed.jpg');
+    /* background-image: url('../../../public/images/Backgrounds/_68fcc4ae-3bd3-4c21-8944-457799b6e0ed.jpg'); */
     background-size: cover;
     transform: translate3d(0px, 0, 0);
 }
-
+#accueil .container.marketing{
+    margin-top: 12rem;
+}
 #accueil nav.bg-dark {
     background-color: rgba(var(--main-black), 1);
 }
@@ -57,8 +57,32 @@
 #accueil .accueil-header {
     padding: 0 auto;
     display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 210vh;
+    height: 100vh;
+    position: relative;
+}
+#accueil .video-container{
+    flex: 1;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+#accueil video{
+    width: 217vh;
+    position: absolute;
+    top: -2%;
+    left: 0rem;
+}
+.accueil-title-image-container{
+    display: flex;
     flex-direction: row;
     flex: 1;
+    position: absolute;
+    top: 25rem;
+    width: 208vh;
 }
 
 #accueil .title-accueil,
@@ -67,26 +91,29 @@
     align-items: center;
     display: flex;
     justify-content: center;
+    width: 575vh;
     
 }
 #accueil .title-accueil{
     flex-direction: column;
 }
 #accueil h1 {
-    width: 60%;
+    text-align: center;
+    width: 100%;
     font-family: 'Cinzel';
     font-size: 92px;
     font-weight: 600;
     color: rgba(var(--main-white), 1);
     position: relative;
     animation: slideInLeft 3s ease-out;
+    text-shadow: #FC0 1px 0 10px;
 }
 #accueil h2 {
     margin-top: 4rem;
     width: 95%;
     font-family: var(--montserratMedium);
     font-size: 48px;
-    font-weight: 400;
+    font-weight: 600;
     color: rgba(var(--dark-green-01), 1);
     position: relative;
     animation: slideInLeft 3s ease-out;
@@ -97,16 +124,18 @@
     width: 95%;
     font-family: var(--montserratMedium);
     font-size: 48px;
-    font-weight: 400;
+    font-weight: 6400;
     color: rgba(var(--main-white), 1);
     position: relative;
     animation: slideInLeft 3s ease-out;
     word-wrap: break-word;
+    text-shadow: rgba(250, 227, 136, 0.5) 1px 0 5px;
+    text-align: center;
 }
 #accueil li.nav-item{
     flex: 1;
     display: flex;
-    width: 8rem;
+    width: 10rem;
 }
 /* #accueil .row.featurette{
     margin: 0 0 0 10rem;
@@ -144,13 +173,13 @@
     position: relative;
     animation: slideInRight 2s ease-out;
     position: absolute;
-    margin: 0px 16rem 0 0;
+    margin: 0 -8rem 0 0;
     z-index: 1;
     width: 100%;
 }
 
 #accueil .image-accueil .image-one img {
-    width: 100%;
+    width: 90%;
 }
 
 #accueil .image-accueil {
