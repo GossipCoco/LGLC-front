@@ -67,11 +67,13 @@
                                     <input type="number" class="form-control" id="inputAge" v-model="form.Age" required>
                                 </div>
                                 <div class="col-md-6">
+                                    <label for="inputImage" class="form-label">Upload Image</label>
+                                    <input type="file" class="form-control" id="inputImage" @change="onFileChange">
                                 </div>
                             </div>
                         </div>
                     </Transition>
-                    <Transition name="slide-fade">
+                    <!-- <Transition name="slide-fade">
                         <div v-if="formPart2" class="character-radio-button-container">
                             <div class="row form-second-part-container">
                                 <div class="col-md-12">
@@ -89,7 +91,7 @@
                                 </div>
                             </div>
                         </div>
-                    </Transition>
+                    </Transition> -->
                     <Transition name="slide-fade">
                         <div class="text-area-container" v-if="formPart3">
                             <div class="col-12">
@@ -120,23 +122,19 @@
                         <div class="col-12">
                             <div class="mb-12">
                                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                    <button class="btn btn-primary" v-on:click="NextToPart2"
+                                    <!-- <button class="btn btn-primary" v-on:click="NextToPart3"
                                     v-if="formPart1 === true && form.CurrentName && form.Clan && form.Grade"
-                                    title="Next2">
+                                    title="Next3">
                                     Suivant
-                                </button>
-                                    <!-- <button class="btn btn-primary" v-on:click="NextToPart2" title="Next2">
+                                </button> -->
+                                    <button class="btn btn-primary" v-on:click="NextToPart3" title="Next3">
                                         Suivant
-                                    </button> -->
-                                    <button class="btn btn-primary" v-on:click="PreviousToPart1"
-                                        v-if="formPart2 === true" title="Previous2">
-                                        Précédent
                                     </button>
                                     <button class="btn btn-primary" v-on:click="NextToPart3"
                                         v-if="formPart2 === true && form.Image" title="Neext3">
                                         Suivant
                                     </button>
-                                    <button class="btn btn-primary" v-on:click="PreviousToPart2"
+                                    <button class="btn btn-primary" v-on:click="PreviousToPart1"
                                         v-if="formPart3 === true" title="previous2">
                                         Précédent
                                     </button>
@@ -192,7 +190,7 @@ export default {
                 Description: '',
                 Personnality: '',
                 Biography: '',
-                Image: null
+                Image: null,
             }
         }
     },
@@ -203,6 +201,10 @@ export default {
         this.GetAllImages()
     },
     methods: {
+        onFileChange(e) {
+            const file = e.target.files[0];
+            this.form.Image = file;
+        },
         NextToPart2() {
             this.formPart1 = false;
             this.formPart2 = true;
@@ -260,9 +262,6 @@ export default {
         },
         handleOk() {
             console.log(this.form);
-            this.CreateCharacter(this.form);
-        },
-        CreateCharacter(form) {
             const Biography = this.form.Biography ? this.form.Biography.split('\n').map(paragraph => `<p>${paragraph}</p>`).join('') : '';
             this.form.Biography = Biography;
 
@@ -271,6 +270,27 @@ export default {
 
             const Personnality = this.form.Personnality ? this.form.Personnality.split('\n').map(paragraph => `<p>${paragraph}</p>`).join('') : '';
             this.form.Personnality = Personnality;
+            const formData = new FormData();
+            formData.append('CurrentName', this.form.CurrentName);
+            formData.append('KitName', this.form.KitName);
+            formData.append('ApprenticeName', this.form.ApprenticeName);
+            formData.append('WarriorName', this.form.WarriorName);
+            formData.append('OlderName', this.form.OlderName);
+            formData.append('LeaderName', this.form.LeaderName);
+            formData.append('Genre', this.form.Genre);
+            formData.append('Grade', this.form.Grade);
+            formData.append('Clan', this.form.Clan);
+            formData.append('Age', this.form.Age);
+            formData.append('Description', Description);
+            formData.append('Personnality', Personnality);
+            formData.append('Biography', Biography);
+            formData.append('image', this.form.Image);
+            if (this.file) {
+                formData.append('file', this.file);
+            }
+            this.CreateCharacter(formData);
+        },
+        CreateCharacter(form) {
 
             CharacterService.createANewCharacter(form)
                 .then((response) => {

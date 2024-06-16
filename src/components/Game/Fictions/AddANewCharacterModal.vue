@@ -67,6 +67,7 @@ export default {
             .then((response) => {response.data.ob
                     console.log(response.data.ob)
                     if(response){
+                        this.$router.push({ path: "/fiction/" + idGame });
                         window.location.reload()
                     }
                 })

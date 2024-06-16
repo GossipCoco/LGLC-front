@@ -21,7 +21,7 @@
                         Créer un chapitre {{ lastChap }}
                     </router-link>
                 </p>
-                <div class="dropdown">
+                <div class="dropdown" v-if="nbChapter > 0">
                     <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         Liste des chapitres
@@ -94,7 +94,9 @@ export default {
             Title: null,
             CharImg: null,
             Summary: null,
-            listOfCharacter: {}
+            listOfCharacter: {},
+            nbChapter: 0
+
         }
     },
     created() {
@@ -124,9 +126,7 @@ export default {
                 })
         },
         getFictionByName(id) {
-
             this.showspinner = true
-
             FictionService.getFictionByName(id, this.nav)
                 .then((response) => {
                     this.fiction = response.data.ob;
@@ -141,7 +141,8 @@ export default {
                     this.listOfCharacter = this.fiction.Game.GameCharacters
                     this.Summary = this.fiction.Summary
                     this.dateCreation = this.fiction.DateCreation
-
+                    console.log(this.fiction)
+                    this.nbChapter = this.fiction.Chapters.length
                     if (this.fiction.Chapters.length > 0) {
                         this.GetLastChapterOfAFiction(this.url)
                     }

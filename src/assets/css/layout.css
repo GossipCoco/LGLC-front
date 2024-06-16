@@ -342,7 +342,7 @@ flex-direction: row;
     height: 8vh;
 }
 .row.submit-container{
-    margin-top: -6rem;
+    margin-top: 0rem;
 }
 .card{
     border: none;

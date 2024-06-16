@@ -9,21 +9,37 @@
                 </div>
             </div>
             <div class="card-body">
-                <div class="chapter-button-content">
-                    <button @click="speakText" class="btn btn-primary">
-                            Lire à voix haute
-                        </button>
-                    <router-link type="button" class="btn btn-primary" :to="'/fiction/createChapter/' + chapter.FictionId"
-                        v-if="usrCurrent === AuthorId">
-                        Créer un chapitre
-                    </router-link>
-                    <router-link type="button" class="btn btn-primary" :to="'/EditChapter/' + chapter.Id"
-                        v-if="usrCurrent === AuthorId">
-                        Editer le chapitre
-                    </router-link>
-                    <router-link :to="'/fiction/' + chapter.FictionId" class="btn btn-primary">
-                        Retour à la liste de chapitres
-                    </router-link>
+                <div class="row">
+                    <div class="6">
+                        <div style="color: white" v-for="(illustration, index) in AllIillustrations" :key="index">
+                            <!-- {{ illustration.IllustrationId }} -->
+                            <div style="height: 150px; width: 150px;">
+                                <img :src="'/images/Fictions/' + illustration.IllustrationId"
+                                    :alt="illustration.IllustrationId" style="height: 150px; width: 150px;"/>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="6">
+
+                        <div class="chapter-button-content">
+                            <button @click="speakText" class="btn btn-primary">
+                                Lire à voix haute
+                            </button>
+                            <router-link type="button" class="btn btn-primary"
+                                :to="'/fiction/createChapter/' + chapter.FictionId" v-if="usrCurrent === AuthorId">
+                                Créer un chapitre
+                            </router-link>
+                            <router-link type="button" class="btn btn-primary" :to="'/EditChapter/' + chapter.Id"
+                                v-if="usrCurrent === AuthorId">
+                                Editer le chapitre
+                            </router-link>
+                            <router-link :to="'/fiction/' + chapter.FictionId" class="btn btn-primary">
+                                Retour à la liste de chapitres
+                            </router-link>
+                        </div>
+                    </div>
                 </div>
                 <div class="chapter-global-content">
                     <div class="chapter-image-content"
@@ -48,6 +64,7 @@ export default {
             Author: null,
             AuthorId: null,
             chapter: {},
+            AllIillustrations: {},
             nav: {
                 current: 0,
                 pages: 0,
@@ -71,9 +88,12 @@ export default {
         getChapter(id) {
             FictionService.getChapter(id, this.nav)
                 .then((response) => {
+                    console.log(response.data.ob)
+
                     this.chapter = response.data.ob || {};
                     this.Author = this.chapter.Fiction.UserId
                     this.AuthorId = this.chapter.Fiction.UserId
+                    this.AllIillustrations = this.chapter.ChapterIllustrations
                     this.typeText(this.chapter.Content);
                 })
                 .catch((e) => {

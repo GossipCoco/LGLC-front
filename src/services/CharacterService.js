@@ -27,7 +27,11 @@ class CharacterService {
     }
     createANewCharacter(data) {
         console.log(data)
-        return http.post('/character/createANewCharacter', data)
+        return http.post('/character/createANewCharacter', data, {
+            headers: {
+                'Content-Type': 'multipart/form-data',
+            }}
+        )
     }
     GetTwoRandoCharacters() {
         return http.get('/character/GetTwoRandoCharacters')
