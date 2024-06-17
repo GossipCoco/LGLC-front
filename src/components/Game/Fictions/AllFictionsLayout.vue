@@ -30,7 +30,14 @@
       </div>
     </div>
     <div class="row pagination-container">
-      <Pagination v-bind:nav="nav" v-bind:filters="filters" v-bind:getDatas="'GamesPagination'"
+
+      <div class="row bottom-top-dashboard">
+        <div v-if="showspinner" class="d-flex justify-content-center">
+          <div class="spinner-border text-success" role="status">
+          </div>
+        </div>
+      </div>
+      <Pagination v-if="!showspinner"  v-bind:nav="nav" v-bind:filters="filters" v-bind:getDatas="'GamesPagination'"
         @GamesPagination="GamesPagination" />
     </div>
   </div>
@@ -48,6 +55,7 @@ export default {
       NbAllMyGamesFictions: null,
       games: {},
       filters: [],
+      showspinner: false,
       nav: {
         current: 0,
         pages: 0,
@@ -86,7 +94,8 @@ export default {
       GameService.getAllGamesByUser(this.$store.state.auth.user.usrID, nav)
         .then((response) => {
           this.games = response.data.ob
-          console.log(this.games)
+          console.log(this.games)         
+          this.showspinner = false
           return functions.CalcPagination(
             this.NbAllMyGamesFictions,
             this.showPagination,

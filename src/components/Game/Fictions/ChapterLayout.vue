@@ -15,7 +15,7 @@
                             <!-- {{ illustration.IllustrationId }} -->
                             <div style="height: 150px; width: 150px;">
                                 <img :src="'/images/Fictions/' + illustration.IllustrationId"
-                                    :alt="illustration.IllustrationId" style="height: 150px; width: 150px;"/>
+                                    :alt="illustration.IllustrationId" style="height: 150px; width: 150px;" />
                             </div>
                         </div>
                     </div>

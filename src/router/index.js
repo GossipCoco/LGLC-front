@@ -26,7 +26,8 @@ import EditChapter from '../components/Game/Fictions/EditChapter.vue'
 import UserCard from '../components/Users/UserCard.vue'
 import AllLocationsLayout from "../components/Locations/AllLocationsLayout.vue"
 import Register from '../components/Page/Register.vue'
-
+import MentionsLegales from '../components/Page/MentionsLegales.vue'
+import faq from '../components/Page/faq.vue'
 
 
 const routes = [
@@ -39,7 +40,19 @@ const routes = [
     path: "/",
     redirect: "/Accueil",
     component: Accueil
-  }, {
+  },
+  {
+    path: '/MentionsLegales',
+    name: 'MentionsLegales',
+    component: MentionsLegales
+  },
+  {
+    path: '/faq',
+    bame: 'faq',
+    component: faq
+  },
+  
+  {
     path: "/login",
     name: "/login",
     component: Login,

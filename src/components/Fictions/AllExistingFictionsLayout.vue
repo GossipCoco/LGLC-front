@@ -38,7 +38,14 @@
       </div>
     </div>
     <div class="row pagination-container">
-      <Pagination v-bind:nav="nav" v-bind:filters="filters" v-bind:getDatas="'GamesPagination'"
+
+<div class="row bottom-top-dashboard">
+  <div v-if="showspinner" class="d-flex justify-content-center">
+    <div class="spinner-border text-success" role="status">
+    </div>
+  </div>
+</div>
+      <Pagination v-if="!showspinner"  v-bind:nav="nav" v-bind:filters="filters" v-bind:getDatas="'GamesPagination'"
         @GamesPagination="GamesPagination" />
     </div>
   </div>
