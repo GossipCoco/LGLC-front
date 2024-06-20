@@ -39,7 +39,8 @@
           <div class="collapse" id="collapseExample0">
             <router-link class="link-collapse" to="/rollOfDice">Jeu de dé</router-link><br>
             <router-link class="link-collapse" to="/puzzle">Puzzle</router-link><br>
-            <router-link class="link-collapse" to="/mouseShot">Jeu du chat et de la souris</router-link>
+            <router-link class="link-collapse" to="/mouseShot">Jeu du chat et de la souris</router-link><br>
+            <router-link class="link-collapse" to="/GooseGameLayout">Jeu de l'oie</router-link>
           </div>
         </li>
         <li class="li-level1">

@@ -19,6 +19,7 @@ import ChapterLayout from '../components/Game/Fictions/ChapterLayout.vue'
 import CreateFiction from '../components/Game/Fictions/CreateFiction.vue'
 import AllMyFictionsLayout from '../components/Game/Fictions/AllFictionsLayout.vue'
 import MouseShot from '../components/Game/MouseShot/MouseShot.vue'
+import GooseGameLayout from '../components/Game/GooseGame/GosseGameLayout.vue'
 import CreateChapter from '../components/Game/Fictions/CreateChapter.vue'
 import AllExistingFictionsLayout from '../components/Fictions/AllExistingFictionsLayout.vue'
 import AExistingFictionContain from "../components/Fictions/AExistingFictionContain.vue";
@@ -114,6 +115,11 @@ const routes = [
         path: '/game',
         name: 'Game',
         component: GameLayout
+      },
+      {
+        path: '/GooseGameLayout',
+        name:'GooseGameLayout',
+        component: GooseGameLayout
       },
       {
         path: '/AllLocationsLayout',
