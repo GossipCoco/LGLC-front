@@ -30,7 +30,6 @@
       </div>
     </div>
     <div class="row pagination-container">
-
       <div class="row bottom-top-dashboard">
         <div v-if="showspinner" class="d-flex justify-content-center">
           <div class="spinner-border text-success" role="status">

@@ -3,7 +3,12 @@
 .header-container.container {
   max-width: 100%;
 }
-
+.menu-left.menu-hidden.d-flex.flex-column.flex-shrink-0.p-3{
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-color: rgba(var(--dark-green-02),1) rgba(var(--clear-green-02),1);
+  scrollbar-width: thin;
+}
 .b-example-divider {
   height: 3rem;
   background-color: rgba(0, 0, 0, 0.1);
