@@ -88,8 +88,6 @@ export default {
         getChapter(id) {
             FictionService.getChapter(id, this.nav)
                 .then((response) => {
-                    console.log(response.data.ob)
-
                     this.chapter = response.data.ob || {};
                     this.Author = this.chapter.Fiction.UserId
                     this.AuthorId = this.chapter.Fiction.UserId
@@ -102,7 +100,6 @@ export default {
         },
         typeText(text) {
             this.displayedContent = '';
-            console.log()
             let index = 0;
             const typingSpeed = 10; // Vitesse de frappe (en millisecondes)
 

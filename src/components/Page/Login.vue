@@ -55,7 +55,6 @@ export default {
     };
   },
   created() {
-    console.log(this.$store)
     this.$store.state.auth.user === null;
     JwtAPI.IsLogged();
   },
@@ -64,10 +63,6 @@ export default {
       e.preventDefault();
       let email = this.email;
       let pwd = this.password;
-      console.log({
-        Email: email,
-        Password: pwd,
-      })
       this.$store
         .dispatch("auth/login", {
           Email: email,
@@ -75,7 +70,6 @@ export default {
         })
         .then(
           () => {
-            console.log("je passe ici 1")
             this.$router.push({ path: "/Dashboard" });
           },
           (error) => {

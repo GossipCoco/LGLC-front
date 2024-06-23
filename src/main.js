@@ -22,6 +22,12 @@ import 'popper.js'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 
+
+// import "@fullcalendar/daygrid/main.css";
+// import "@fullcalendar/timegrid/main.css";
+// import "@fullcalendar/list/main.css";
+
+
 import './assets/css/layout.css'
 import './assets/css/navbar.css'
 import './assets/css/components.css'
@@ -33,6 +39,7 @@ import './assets/css/signInRegister.css'
 import './assets/css/responsive.css'
 import './assets/css/Accueil.css'
 import './assets/css/Form.css'
+import './assets/css/Scheduler.css'
 
 
 IOController.initSocket(io)
@@ -49,4 +56,5 @@ app.use(Vuex)
 app.use(store)
 app.use(router)
 app.use(VueAxios, axios)
+
 app.mount('#app')

@@ -13,13 +13,10 @@ JwtAPI.SetUser = (token) => {
 };
 
 JwtAPI.GetUser = () => {
-  console.log('token')
   return localStorage.getItem('token');
 };
 
 JwtAPI.UnsetUser = () => {
-  
-  console.log('token')
   localStorage.removeItem('token');
   delete axios.defaults.headers.common['Authorization'];
 };
@@ -30,7 +27,6 @@ JwtAPI.Connexion = (user) => {
     const response = axios.post(`${config.Url}/user/login`, user);
     
     if (response.status === 200) {
-      console.log(response.data.token)
       JwtAPI.SetUser(response.data.token);
       JwtAPI.logged = true;
       return true;
@@ -39,17 +35,9 @@ JwtAPI.Connexion = (user) => {
       JwtAPI.UnsetUser();
       return false;
     }
-  // } 
-  // catch (err) {
-  //   console.error("err", err);
-  //   JwtAPI.logged = false;
-  //   JwtAPI.UnsetUser();
-  //   throw new Error('Login failed');
-  // }
 };
 
 JwtAPI.Disconnect = (router) => {
-  console.log('token')
   JwtAPI.logged = false;
   JwtAPI.UnsetUser();
   router.push({ path: '/logout' });
@@ -61,8 +49,7 @@ JwtAPI.IsLogged = () => {
   return JwtAPI.logged;
 };
 
-JwtAPI.Permission = () => {
-  
+JwtAPI.Permission = () => {  
   console.log('Permission')
   JwtAPI.permission = true;
   return JwtAPI.permission;

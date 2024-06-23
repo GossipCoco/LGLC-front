@@ -14,6 +14,7 @@ import AdminLayout from '../components/UserPanel/AdminDashboard'
 import CharacterCreate from '../components/Characters/CharacterComponent/CharacterCreate'
 import RollOfDiceLayout from '../components/Game/RollOfDice/RollOfDiceLayout.vue'
 import PuzzleLayout from '../components/Game/Puzzle/PuzzleLayout.vue'
+import TreasureHunt from '../components/Game/TreasureHunt/TreasureHunt.vue'
 import FictionContain from '../components/Game/Fictions/FictionContain'
 import ChapterLayout from '../components/Game/Fictions/ChapterLayout.vue'
 import CreateFiction from '../components/Game/Fictions/CreateFiction.vue'
@@ -120,6 +121,11 @@ const routes = [
         path: '/GooseGameLayout',
         name:'GooseGameLayout',
         component: GooseGameLayout
+      },
+      {
+        path: '/TreasureHunt',
+        name: 'TreasureHunt',
+        component: TreasureHunt
       },
       {
         path: '/AllLocationsLayout',

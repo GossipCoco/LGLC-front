@@ -1,46 +1,46 @@
 <template>
   <div class="character-details card mb-3">
-    <div class="row g-0">
-      <div class="col-md-4">
-        <div class="card-image" v-bind:style="{ backgroundImage: 'url(/images/Backgrounds/' + background + ')' }">
-          <img  class="img-fluid"  :src="'/images/Characters/' + image" :alt="image"/>
-        </div>
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <div class="row">
-            <div class="col-12">
-              <p class="card-text">
-                <router-link to="/allCharacters" type="button" class="btn btn-primary">Retour à la liste des
-                  personnages</router-link>
-              </p>
+    <div class="parallax">
+      <div class="parallax-layer parallax-layer-back">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <div class="card-image" v-bind:style="{ backgroundImage: 'url(/images/Backgrounds/' + background + ')' }">
+              <div class="vegetal-container">                
+                  <img class="img-fluid" :src="'/images/Characters/' + image" :alt="image" />
+              </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-12">
-              <div class="information-global-character">
-                <div class="character-info-general-container" v-for="(char, index) in character" :key="index">
-                  <div class="identity-character-container">
-                    <h5 class="card-title">{{ currentName }}</h5>
-                    <p>{{ char.Warrior.Clan.Name }}</p>
+          <div class="col-md-8">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-12">
+                  <p class="card-text">
+                    <router-link to="/allCharacters" type="button" class="btn btn-primary">Retour à la liste des
+                      personnages</router-link>
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="information-global-character">
+                    <div class="character-info-general-container">
+                      <div class="identity-character-container">
+                        <h5 class="card-title">{{ currentName }}</h5>
+                        <p>{{ NameClan }}</p>
+                        <p class="card-text" v-html="genre"></p>
+                      </div>
+                      <div class="clan-logo-container">
+                        <img :src="'/images/Clans/' + Symbol" class="img-fluid" />
+                      </div>
+                    </div>
+                    <p class="card-text" v-html="description"></p>
+                    <p class="card-text biographie-text" v-html="Biography">
+                    </p>
                     <p class="card-text">
-                      {{ char.Genre }}
+                      <small class="text-muted"></small>
                     </p>
                   </div>
-
-                  <div class="clan-logo-container">
-                    <img :src="'/images/Clans/' + char.Warrior.Clan.Symbol" class="img-fluid" />
-                  </div>
-
                 </div>
-                <p class="card-text">
-                  {{ description }}
-                </p>
-                <p class="card-text biographie-text" v-html="Biography">
-                </p>
-                <p class="card-text">
-                  <small class="text-muted"></small>
-                </p>
               </div>
             </div>
           </div>
@@ -65,6 +65,8 @@ export default {
       description: null,
       grade: null,
       Biography: null,
+      NameClan: null,
+      symboleClan: null,
     }
   },
   created() {
@@ -72,21 +74,24 @@ export default {
   },
   mounted() {
     this.url = this.$route.params.id;
-    console.log(this.url);
     this.getCharacter();
   },
   methods: {
     getCharacter() {
       CharacterService.getCharacterByName(this.url)
         .then((response) => {
+          console.log(response)
           this.character = response.data.ob
-          this.image = response.data.ob[0].Image
-          this.background = response.data.ob[0].Warrior.Clan.Image
-          this.currentName = response.data.ob[0].CurrentName
-          this.genre = response.data.ob[0].Genre
-          this.age = response.data.ob[0].Age
-          this.description = response.data.ob[0].Description
-          this.Biography = response.data.ob[0].Biography
+          console.log(this.character)
+          this.Symbol = this.character.Warrior.Clan.Symbol
+          this.NameClan = this.character.Warrior.Clan.Name
+          this.image = response.data.ob.Image
+          this.background = response.data.ob.Warrior.Clan.Image
+          this.currentName = response.data.ob.CurrentName
+          this.genre = response.data.ob.Genre
+          this.age = response.data.ob.Age
+          this.description = response.data.ob.Description
+          this.Biography = response.data.ob.Biography
         })
         .catch((e) => {
           console.log(e);

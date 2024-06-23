@@ -242,7 +242,6 @@ export default {
         GetAllClans() {
             ClansService.getAllClans()
                 .then((response) => {
-                    console.log(response.data.ob);
                     this.clans = response.data.ob;
                 })
                 .catch((e) => {
@@ -252,16 +251,13 @@ export default {
         GetAllGrade() {
             GradeService.getAllGrade()
                 .then((response) => {
-                    console.log("GetAllGrade", response.data.ob);
                     this.grades = response.data.ob;
-                    console.log(this.grades);
                 })
                 .catch((e) => {
                     console.log(e);
                 });
         },
         handleOk() {
-            console.log(this.form);
             const Biography = this.form.Biography ? this.form.Biography.split('\n').map(paragraph => `<p>${paragraph}</p>`).join('') : '';
             this.form.Biography = Biography;
 

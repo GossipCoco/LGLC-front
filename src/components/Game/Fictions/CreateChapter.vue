@@ -90,9 +90,7 @@ export default {
         .filter(paragraph => paragraph.trim() !== '') // Remove empty lines
         .map(paragraph => `<p style="text-align: justify">${paragraph}</p>`)
         .join('');
-      console.log(formattedText)
       this.form.Content = formattedText
-      console.log(this.form);
       const formData = new FormData();
       formData.append('Id', 'Chapitre ' + this.NextChapter + ' - ' + this.fictionId);
       formData.append('Title', 'Chapitre ' + this.NextChapter + ' - ' + this.form.Title);
@@ -107,10 +105,8 @@ export default {
       this.CreateANewChapter(this.fictionId, formData);
     },
     CreateANewChapter(fictionId, data) {
-      console.log(fictionId, data)
       FictionService.CreateANewChapter(fictionId, data)
         .then((response) => {
-          console.log(response)
           if (response) {
             this.$router.push({ path: "/chapter/" + this.form.Title });
           }
@@ -123,8 +119,6 @@ export default {
       FictionService.GetLastChapterOfAFiction(id)
         .then((response) => {
           if (response.data.ob) {
-            console.log(response.data.ob)
-
             this.lastChapter = response.data.ob
             this.NextChapterofLastfiction = response.data.ob.Id
             this.form.PrecedentChapterId = response.data.ob.Id
@@ -132,7 +126,6 @@ export default {
           } else {
             this.NextChapter = 1
           }
-
         })
         .catch(err => {
           console.log(err)

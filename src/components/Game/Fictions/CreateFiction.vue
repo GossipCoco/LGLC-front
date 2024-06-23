@@ -116,7 +116,6 @@ export default {
             CharacterService.GetAllNamesAndIdsCharacters()
                 .then((response) => {
                     this.characters = response.data.ob
-                    console.log(this.characters)
                 })
                 .catch((e) => {
                     console.log(e);
@@ -147,7 +146,6 @@ export default {
             for (let [key, value] of formData.entries()) {
                 console.log(key, value);
             }
-
             this.CreateANewFiction(this.userCurrent, formData);
         },
         CreateANewFiction(usr, formData) {

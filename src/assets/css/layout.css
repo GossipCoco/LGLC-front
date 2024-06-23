@@ -219,6 +219,22 @@ main.container {
     border-radius: 0px 12px 12px 0px;
     transform: matrix(1, 0, 0, 1, 0, 0);
 }
+.border-gradient-decoration-character{
+    position: absolute;
+    width: 63px;
+    height: 270px;
+    left: 20rem;
+    top: 0;
+    left: 84%;
+    background: linear-gradient(360deg, rgba(var(--main-black), 0) 0%, rgba(var(--main-white), 0.5) 100%);
+    border-radius: 0px 12px 12px 0px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    z-index: 0;
+}
+.character-col{
+    display: flex;
+    flex-direction: row;
+}
 .border-gradient-decoration:nth-child(2) {
     /* Rectangle 72 */
     position: absolute;
@@ -290,7 +306,7 @@ main.container {
 .title-dashboard-container-header h1{
     font-family: 'Cinzel';
     font-variant: small-caps;
-    margin-top: 1rem;
+    margin-top: 0.25rem;
 }
 .h1-title-dashboard{
 display: flex;
@@ -312,13 +328,10 @@ flex-direction: row;
 .all-characters-container-card{
     margin-top: 1rem;
 }
+
 .dashboard-character-container{
     display: flex;
     flex-direction: column;
-}
-.dashboard-character-container{
-    display: flex;
-    flex-direction: row;
 }
 .character-l1{
     flex: 1

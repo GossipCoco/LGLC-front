@@ -1,31 +1,26 @@
 <template>
   <div class="dashboard-home-max-card-container card">
-    <div class="row top-dashboard">
+    <div class="row title-dashboard">
       <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <TitleHeader v-if="!showspinner" v-bind:UserName="UserName" v-bind:Avatar="Avatar" />
-        <div class="row bottom-top-dashboard">
-          <div v-if="showspinner" class="d-flex justify-content-center">
-        <div class="spinner-border text-success" role="status">
+      </div>
+    </div>
+    <div v-if="showspinner" class="d-flex justify-content-center">
+      <div class="spinner-border text-success" role="status">
         <span class="visually-hidden">Loading...</span>
-        </div>
       </div>
-          <LastFiveFiction />
-
-          
-
-          <ExtractLastChap v-if="!showspinner" v-bind:userInfo="userInfo" />
-          <AvatarCard v-if="!showspinner" v-bind:Avatar="Avatar" v-bind:UserName="usr" v-bind:LastConnexion="LastConnexion"
-            v-bind:Inscription="Inscription" v-bind:level="LvelImf" v-bind:Role="role" v-bind:nBFiction="nBFiction"
-            v-bind:totalWords="totalWordsV2" />
-          <!-- <Statistics v-bind:nBFiction="nBFiction" v-bind:totalWords="totalWordsV2" />           -->
-        </div>
-      </div>
+    </div>
+    <div class="row top-dashboard">
+      <LastFiveFiction />
+      <ExtractLastChap v-if="!showspinner" v-bind:userInfo="userInfo" />
+      <CharacterRandom v-if="!showspinner" v-bind:randomCharacters="randomCharacters" />
+      <AvatarCard v-if="!showspinner" v-bind:Avatar="Avatar" v-bind:UserName="usr" v-bind:LastConnexion="LastConnexion"
+        v-bind:Inscription="Inscription" v-bind:level="LvelImf" v-bind:Role="role" v-bind:nBFiction="nBFiction"
+        v-bind:totalWords="totalWordsV2" />
     </div>
     <div class="row bottom-dashboard">
       <ListAllFictions v-if="!showspinner" />
-      <CharacterRandom v-if="!showspinner" v-bind:randomCharacters="randomCharacters" />
-      <EasyAction v-if="!showspinner" />
-
+      <Scheduler />
     </div>
   </div>
 </template>
@@ -36,11 +31,10 @@ import CharacterService from '../../services/CharacterService';
 import TitleHeader from './Components/TitleHeader.vue';
 import AvatarCard from './Components/AvatarCard.vue';
 import LastFiveFiction from './Components/LastFiveFiction.vue';
-// import Statistics from './Components/Statistics.vue';
 import ExtractLastChap from './Components/ExtractLastChap.vue';
 import CharacterRandom from './Components/CharacterRandom.vue';
-import EasyAction from './Components/EasyAction.vue';
 import ListAllFictions from './Components/ListAllFictions.vue';
+import Scheduler from './Components/Scheduler.vue';
 
 
 export default {
@@ -48,12 +42,11 @@ export default {
   components: {
     AvatarCard,
     LastFiveFiction,
-    // Statistics,
     ExtractLastChap,
     TitleHeader,
     CharacterRandom,
-    EasyAction,
-    ListAllFictions
+    ListAllFictions,
+    Scheduler
   },
   data() {
     return {
@@ -92,7 +85,7 @@ export default {
           this.showspinner = false
           if (response && response.data) {
             const characters = response.data.ob;
-            const randomCharacters = this.getRandomCharacters(characters[0], 3);
+            const randomCharacters = this.getRandomCharacters(characters, 2);
             this.randomCharacters = randomCharacters;
           }
         })
@@ -106,17 +99,19 @@ export default {
       return shuffled.slice(0, count);
     },
     CountTotalWordByUserV2(e) {
-
       this.showspinner = true
       FictionService.CountTotalWordBuUserV2(e)
         .then((response) => {
           this.showspinner = false
           if (response && response.data) {
+            
             const fictions = response.data.ob;
+            console.log(fictions)
             let totalWords = 0;
             // Parcourir les fictions et calculer la somme des mots pour toutes les fictions
             fictions.forEach(fictionEntry => {
-              fictionEntry.Game.Fiction.forEach(fiction => {
+              console.log(fictionEntry)
+              fictionEntry.Fiction.forEach(fiction => {
                 const fictionWords = fiction.Chapters.reduce((sum, chapter) => sum + parseInt(chapter.NbWords, 10), 0);
                 totalWords += fictionWords;
               });
@@ -129,13 +124,13 @@ export default {
           console.error('erreur', err);
         });
     },
-
     GetUserById(e) {
       this.showspinner = true
       UserService.getUserById(e)
         .then((response) => {
           this.showspinner = false
           this.userInfo = response.data.ob
+          console.log(this.userInfo)
           this.Avatar = response.data.ob.Avatar
           this.usr = response.data.ob.UserName
           this.UserName = this.usr

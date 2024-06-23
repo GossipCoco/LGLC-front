@@ -44,8 +44,9 @@ export default {
     GetFiveLastGameByUser(e) {
       GameService.GetFiveLastGameByUser(e)
         .then((response) => {
-          // console.log(response.data)
+          console.log("GetFiveLastGameByUser", response.data.data)
           this.GamesAndFictions = response.data.data
+          console.log("GetFiveLastGameByUser", this.GamesAndFictions)
         })
         .catch((error) => {
           console.error(error);

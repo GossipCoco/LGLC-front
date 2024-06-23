@@ -5,18 +5,15 @@ class FictionService {
         return http.get('/fiction')
     }
     CountAllMyFictions(id){
-        console.log("test")
         return http.post(`/fiction/countAllMyFictions/${id}`)
     }
     getFictionByName(id, data){
         return http.post(`/fiction/${id}`, data);
     }
     getChapter(id, data){
-        console.log(id, data)
         return http.post(`/fiction/chapitre/${id}`, data);
     }
     GetFiveLastChapByUser(id){
-        console.log(id)
         return http.get(`/fiction/GetFiveLastChapByUser/${id}`);
     }
     GetLastChapterOfAFiction(id, data){

@@ -1,5 +1,5 @@
 <template>
-    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
         <div class="card fiction-card">
             <div class="border-gradient-decoration-bottom"></div>
             <div class="card-header">
@@ -41,12 +41,8 @@ export default {
     methods: {
         GetFiveLastChapByUser(user) {
             FictionService.GetFiveLastChapByUser(user)
-                .then((response) => {
-                    // console.log(response.data.ob)
+                .then((response) => {                    
                     this.FiveLastChapters = response.data.ob
-                    // this.Title = this.FiveLastChapters.Title
-                    // this.Fiction = this.Fiction.Fiction.Title
-
                 })
                 .catch(err => {
                     console.log(err)

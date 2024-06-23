@@ -1,11 +1,10 @@
 const { io } = require("socket.io-client");
 const Config = require("../../server");
 const socket = io(Config.Url);
-//import UserLocalData from '../services/UserLocalData'
 const IOController = {};
 IOController.SocketIOInstance = undefined;
 
-//console.log(UserLocalData)
+
 const LocalData = {
   socket: {
     emitter: undefined,

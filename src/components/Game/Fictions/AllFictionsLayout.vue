@@ -1,7 +1,7 @@
 <template>
   <div class="dashboard-max-card-container card fiction-container">
     <div class="card-header">
-      <h4>Lire des fictions</h4>
+      <h4>Lire mes fictions</h4>
     </div>
     <div class="row list-fiction-card-container">
       <div class="col-3 col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3 mb-3 mb-sm-3 mb-3 mb-sm-3"
@@ -41,18 +41,19 @@
     </div>
   </div>
 </template>
+
 <script>
 import GameService from '../../../services/GameService'
-import functions from '../../../services/functions';
 import Pagination from '../../Components/GenericComponent/Pagination.vue';
+
 export default {
   name: 'GameLayout',
   components: { Pagination },
   data() {
     return {
       usrId: this.$store.state.auth.user.usrID,
-      NbAllMyGamesFictions: null,
-      games: {},
+      NbAllMyGamesFictions: 0,
+      games: [],
       filters: [],
       showspinner: false,
       nav: {
@@ -63,48 +64,38 @@ export default {
     };
   },
   created() {
-    this.userCurrent = this.usrId;
-    this.getAllGames(this.nav, this.filters);
-    this.countAllGames()
+    this.initData();
   },
   methods: {
     truncateText(text, maxLength) {
-      if (text.length <= maxLength) {
-        return text;
+      return text.length <= maxLength ? text : text.substring(0, maxLength) + '...';
+    },
+    async initData() {
+      this.showspinner = true;
+      await this.countAllGames();
+      await this.getAllGames(this.nav);
+      this.showspinner = false;
+    },
+    async GamesPagination(page) {
+      this.nav.current = page;
+      await this.getAllGames(this.nav);
+    },
+    async countAllGames() {
+      try {
+        const response = await GameService.CountAllMyFictions(this.$store.state.auth.user.usrID);
+        this.NbAllMyGamesFictions = response.data.ob;
+        this.nav.pages = Math.ceil(this.NbAllMyGamesFictions / this.nav.step);
+      } catch (error) {
+        console.error(error);
       }
-      return text.substring(0, maxLength) + '...';
     },
-    GamesPagination(e) {
-      console.log("e", e);
-      this.nav.current = e;
-      this.getAllGames(this.nav, this.userCurrent, this.filters);
-    },
-    countAllGames() {
-      GameService.CountAllMyFictions(this.$store.state.auth.user.usrID)
-        .then((response) => {
-          this.NbAllMyGamesFictions = response.data.ob;
-          console.log(this.NbAllMyGamesFictions)
-        })
-        .catch((e) => {
-          console.log(e);
-        });
-    },
-    getAllGames(nav) {
-      GameService.getAllGamesByUser(this.$store.state.auth.user.usrID, nav)
-        .then((response) => {
-          this.games = response.data.ob
-          console.log(this.games)         
-          this.showspinner = false
-          return functions.CalcPagination(
-            this.NbAllMyGamesFictions,
-            this.showPagination,
-            this.nav,
-            this.loading
-          )
-        })
-        .catch((e) => {
-          console.log(e);
-        });
+    async getAllGames(nav) {
+      try {
+        const response = await GameService.getAllGamesByUser(this.$store.state.auth.user.usrID, nav);
+        this.games = response.data.ob;
+      } catch (error) {
+        console.error(error);
+      }
     }
   }
 }

@@ -118,7 +118,6 @@ export default {
             FictionService.GetLastChapterOfAFiction(id)
                 .then((response) => {
                     const lastChapNum = response.data.ob
-                    console.log(lastChapNum.NumberChapter)
                     this.lastChap = lastChapNum.NumberChapter + 1
                 })
                 .catch(err => {
@@ -131,7 +130,6 @@ export default {
                 .then((response) => {
                     this.fiction = response.data.ob;
                     this.showspinner = false
-                    console.log(this.fiction)
                     this.IdFiction = this.fiction.Id
                     this.IdGame = this.fiction.Game.Id
                     this.Author = this.fiction.User.UserName
@@ -141,7 +139,6 @@ export default {
                     this.listOfCharacter = this.fiction.Game.GameCharacters
                     this.Summary = this.fiction.Summary
                     this.dateCreation = this.fiction.DateCreation
-                    console.log(this.fiction)
                     this.nbChapter = this.fiction.Chapters.length
                     if (this.fiction.Chapters.length > 0) {
                         this.GetLastChapterOfAFiction(this.url)

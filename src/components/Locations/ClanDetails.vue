@@ -26,8 +26,7 @@ export default {
     };
   },
   created() {
-    this.url = this.$route.params.id;
-    console.log(this.url);
+    this.url = this.$route.params.id
   },
   mounted() {
     this.getClan();
@@ -36,7 +35,6 @@ export default {
     getClan() {
       ClanService.getClanByName(this.url)
         .then((response) => {
-          console.log(response.data.ob);
           this.clan = response.data.ob;
         })
         .catch((e) => {

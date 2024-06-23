@@ -6,10 +6,10 @@
     <div class="card-body">
       <div v-if="showspinner" class="d-flex justify-content-center">
         <div class="spinner-border text-success" role="status">
-        <span class="visually-hidden">Loading...</span>
+          <span class="visually-hidden">Loading...</span>
         </div>
       </div>
-      <div class="row list-fiction-card-container">
+      <div class="row list-fiction-card-container" v-else>
         <div class="col-3 col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3 mb-3 mb-sm-3 mb-3 mb-sm-3"
           v-for="(game, index) in games" :key="index">
           <div class="card mb-3" style="max-width: 440px; max-height: 240px" v-for="(fiction, index) in game.Fiction"
@@ -38,22 +38,17 @@
       </div>
     </div>
     <div class="row pagination-container">
-
-<div class="row bottom-top-dashboard">
-  <div v-if="showspinner" class="d-flex justify-content-center">
-    <div class="spinner-border text-success" role="status">
-    </div>
-  </div>
-</div>
-      <Pagination v-if="!showspinner"  v-bind:nav="nav" v-bind:filters="filters" v-bind:getDatas="'GamesPagination'"
+      <Pagination v-if="!showspinner" :nav="nav" :filters="filters" :getDatas="'GamesPagination'"
         @GamesPagination="GamesPagination" />
     </div>
   </div>
 </template>
+
 <script>
 import GameService from '../../services/GameService'
-import functions from '../../services/functions';
+// import functions from '../../services/functions';
 import Pagination from '../Components/GenericComponent/Pagination.vue';
+
 export default {
   name: 'AllExistingFictionsLayout',
   components: { Pagination },
@@ -61,9 +56,8 @@ export default {
     return {
       showspinner: false,
       usrId: '',
-      NbAllMyGamesFictions: null,
-      author: null,
-      games: {},
+      NbAllMyGamesFictions: 0,
+      games: [],
       filters: [],
       nav: {
         current: 0,
@@ -73,50 +67,39 @@ export default {
     };
   },
   created() {
-    console.log(this.userCurrent)
-    this.userCurrent = this.usrId;
-    this.getAllGames(this.nav, this.filters);
-    this.countAllGames()
+    this.usrId = ''; // Assurez-vous de définir ou récupérer l'ID utilisateur
+    this.initData();
   },
   methods: {
     truncateText(text, maxLength) {
-      if (text.length <= maxLength) {
-        return text;
+      return text.length <= maxLength ? text : text.substring(0, maxLength) + '...';
+    },
+    async initData() {
+      this.showspinner = true;
+      await this.countAllGames();
+      await this.getAllGames(this.nav);
+      this.showspinner = false;
+    },
+    async GamesPagination(page) {
+      this.nav.current = page;
+      await this.getAllGames(this.nav);
+    },
+    async countAllGames() {
+      try {
+        const response = await GameService.countAllGames();
+        this.NbAllMyGamesFictions = response.data.ob;
+        this.nav.pages = Math.ceil(this.NbAllMyGamesFictions / this.nav.step);
+      } catch (error) {
+        console.error(error);
       }
-      return text.substring(0, maxLength) + '...';
     },
-    GamesPagination(e) {
-      console.log("e", e);
-      this.nav.current = e;
-      this.getAllGames(this.nav, this.userCurrent, this.filters);
-    },
-    countAllGames() {
-      GameService.countAllGames()
-        .then((response) => {
-          this.NbAllMyGamesFictions = response.data.ob;
-          console.log(this.NbAllMyGamesFictions)
-        })
-        .catch((e) => {
-          console.log(e);
-        });
-    },
-    getAllGames(nav) {
-      this.showspinner = true
-      GameService.getAllGames(nav)
-        .then((response) => {
-          this.games = response.data.ob
-          this.showspinner = false
-          console.log(this.games)
-          return functions.CalcPagination(
-            this.NbAllMyGamesFictions,
-            this.showPagination,
-            this.nav,
-            this.loading
-          )
-        })
-        .catch((e) => {
-          console.log(e);
-        });
+    async getAllGames(nav) {
+      try {
+        const response = await GameService.getAllGames(nav);
+        this.games = response.data.ob;
+      } catch (error) {
+        console.error(error);
+      }
     }
   }
 }

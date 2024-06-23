@@ -36,7 +36,7 @@ export default {
             nav: {
                 current: 0,
                 pages: 0,
-                step:3,
+                step:2,
             },
         };
     },
@@ -53,8 +53,8 @@ export default {
         GetAllLastFiveGames(nav) {
             GameService.GetAllLastFiveGames(nav)
                 .then((response) => {
+                    console.log(response)
                     this.fiveGames = response.data.data
-                    console.log(this.fiveGames)
                 })
                 .catch((e) => {
                     console.log(e);

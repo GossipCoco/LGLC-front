@@ -8,7 +8,6 @@ class ClanService {
         return http.get(`/clan/${id}`);
     }
     GetAllLocations() {
-        console.log('GetAllLocations')
         return http.get('/clan/Location/GetAllLocations')
     }
 }

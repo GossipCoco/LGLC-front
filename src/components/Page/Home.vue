@@ -59,7 +59,6 @@ export default {
       UserService.getUserById(e)
         .then((response) => {
           this.userInfo = response.data.ob;
-          this.Avatar = this.userInfo.Avatar
         })
         .catch((e) => {
           console.log(e);

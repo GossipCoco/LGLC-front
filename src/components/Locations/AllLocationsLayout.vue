@@ -45,7 +45,6 @@ export default {
         GetAllLocations() {
             ClanServices.GetAllLocations()
                 .then((response) => {
-                    console.log(response)
                     this.allLocations = response.data.ob
                 })
                 .catch(err => {

@@ -26,15 +26,13 @@
       <div class="col-1">
         <button type="button" class="btn btn-primary">Rechercher</button>
       </div>
-
     </div>
-    <div class="row all-characters-container-card">
+    <div class="row all-characters-container-card" id="all-characters-container-card">
       <character-card v-bind:characters_props="allCharacters" v-if="!showMyCharacter" />
     </div>
   </div>
   <div class="row">
     <div class="pagination-container">
-
       <div class="row bottom-top-dashboard">
         <div v-if="showspinner" class="d-flex justify-content-center">
           <div class="spinner-border text-success" role="status">
@@ -51,6 +49,7 @@ import CharacterService from "../../services/CharacterService";
 import CharacterCard from "./CharacterCard.vue";
 import Pagination from "../Components/GenericComponent/Pagination.vue";
 import functions from "../../services/functions";
+
 export default {
   name: "AllCharacters",
   components: { CharacterCard, Pagination },
@@ -78,10 +77,20 @@ export default {
   },
   created() {
     this.userCurrent = this.$store.state.auth.user.usrID;
-    this.getAllCharacters(this.nav);
-    this.countAllCharacter();
+    this.initPage();
+  },
+  watch: {
+    '$route'() {
+      // This will trigger when the route changes, ensuring the data is refreshed
+      this.initPage();
+    }
   },
   methods: {
+    initPage() {
+      this.showspinner = true;
+      this.getAllCharacters(this.nav);
+      this.countAllCharacter();
+    },
     showMyCharacters(e) {
       console.log("showMyCharacters")
       CharacterService.GetAllCharactersByUser(e)
@@ -107,21 +116,17 @@ export default {
         });
     },
     getAllCharacters(nav) {
-      console.log(nav);
-      CharacterService.getAllCharacters({
-        nav: nav,
-      })
+      CharacterService.getAllCharacters({ nav })
         .then((response) => {
+          console.log(response)
           this.allCharacters = response.data.ob;
-          // console.log(this.allCharacters);
-          this.showspinner = false
-          return functions.CalcPagination(
+          this.showspinner = false;
+          functions.CalcPagination(
             this.NbAllCharacters,
             this.showPagination,
             this.nav,
             this.loading
           );
-          //
         })
         .catch((e) => {
           console.log(e);

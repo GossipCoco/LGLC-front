@@ -2,15 +2,12 @@ import http from '../http/http-common'
 
 class CharacterService {
     getAllCharacters(nav) {
-        // console.log(nav)
         return http.post('/character/allcharacters', nav)
     }
     GetAllCharactersDashboard(nav) {
-        // console.log(nav)
         return http.post('/character/GetAllCharactersDashboard', nav)
     }
     CountAllCharacters(){
-        console.log("test")
         return http.get('/character/countAllcharacters')
     }
     getCharacterByName(id){

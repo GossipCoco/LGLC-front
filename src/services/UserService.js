@@ -7,7 +7,6 @@ class UserService {
         return http.get(`/user/${id}`)
     }
     loginUser(data){
-        console.log(data)
         return http.post('/user/login', data)
     }
 }
