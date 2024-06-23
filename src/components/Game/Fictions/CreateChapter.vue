@@ -1,7 +1,7 @@
 <template>
   <div class="dashboard-max-card-container card fiction-container">
     <div>
-      <h2>Chapitre {{ NextChapter }} de {{ fictionId }}</h2>
+      <h2>Chapitre {{ NextChapter }}</h2>
     </div>
     <form class="create-character-form" @submit.stop.prevent="onSubmit" ref="uploadForm">
       <div class="row">

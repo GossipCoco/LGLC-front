@@ -152,7 +152,7 @@ export default {
             GameService.CreateANewGame(usr, formData)
                 .then((response) => {
                     if (response) {
-                        this.$router.push({ path: "/fiction/" + this.form.Title });
+                        this.$router.push({ path: "/allFictions/" + this.$store.state.auth.user.usrID });
                     }
                 })
                 .catch((e) => {
