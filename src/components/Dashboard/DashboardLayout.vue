@@ -13,14 +13,15 @@
     <div class="row top-dashboard">
       <LastFiveFiction />
       <ExtractLastChap v-if="!showspinner" v-bind:userInfo="userInfo" />
-      <CharacterRandom v-if="!showspinner" v-bind:randomCharacters="randomCharacters" />
+      <ListAllFictions v-if="!showspinner" />
       <AvatarCard v-if="!showspinner" v-bind:Avatar="Avatar" v-bind:UserName="usr" v-bind:LastConnexion="LastConnexion"
-        v-bind:Inscription="Inscription" v-bind:level="LvelImf" v-bind:Role="role" v-bind:nBFiction="nBFiction"
+        v-bind:Inscription="Inscription" v-bind:level="LvelImf" v-bind:Role="role" v-bind:nBFiction="nBFictionV2"
         v-bind:totalWords="totalWordsV2" />
     </div>
     <div class="row bottom-dashboard">
-      <ListAllFictions v-if="!showspinner" />
       <Scheduler />
+      <Event />
+      <CharacterRandom v-if="!showspinner" v-bind:randomCharacters="randomCharacters" />
     </div>
   </div>
 </template>
@@ -35,7 +36,7 @@ import ExtractLastChap from './Components/ExtractLastChap.vue';
 import CharacterRandom from './Components/CharacterRandom.vue';
 import ListAllFictions from './Components/ListAllFictions.vue';
 import Scheduler from './Components/Scheduler.vue';
-
+import Event from './Components/Event.vue'
 
 export default {
   name: "DashboardLayout",
@@ -46,7 +47,8 @@ export default {
     TitleHeader,
     CharacterRandom,
     ListAllFictions,
-    Scheduler
+    Scheduler,
+    Event,
   },
   data() {
     return {
@@ -104,7 +106,7 @@ export default {
         .then((response) => {
           this.showspinner = false
           if (response && response.data) {
-            
+
             const fictions = response.data.ob;
             console.log(fictions)
             let totalWords = 0;
@@ -117,7 +119,7 @@ export default {
               });
             });
             this.totalWordsV2 = totalWords;
-            this.nBFiction = fictions.length;
+            this.nBFictionV2 = fictions.length;
           }
         })
         .catch((err) => {

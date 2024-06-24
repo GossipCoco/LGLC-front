@@ -4,10 +4,14 @@
 
 .fc.fc-media-screen.fc-direction-ltr.fc-theme-standard{
     margin-top: -1rem;
-    background-color: rgba(var(--main-white),1);
+    background-color: rgba(var(--clear-green-0),1);
     height: 21rem;
-    color: rgba(var(--dark-green-01),1)
+    color: rgba(var(--main-white),1)
 }
 .card-body.scheduler-container a, .fc-toolbar-title{
-    color: rgba(var(--dark-green-01),1)
+    color: rgba(var(--main-white),1)
+}
+
+.fc .fc-button-primary{
+    background-color: rgba(var(--dark-green-01),1)
 }
