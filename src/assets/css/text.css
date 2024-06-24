@@ -20,3 +20,21 @@ a{ text-decoration: none; }
     color: rgba(var(--active-hover), 1);
 
 }
+.rating{
+    width: 10rem;
+    height: 4rem;
+    display: flex;
+    flex-direction: row; 
+}
+.rating svg{
+    flex: 1
+}
+.rating svg {
+    fill: #d3d3d3;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+  }
+  .rating svg.checked {
+    fill: gold;
+  }

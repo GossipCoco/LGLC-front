@@ -6,6 +6,9 @@
             </div>
         </div>
         <div class="card-header title-chapter-container">
+            <Rating :fictionId="IdFiction"/>
+            <br>
+            <h2>{{ rating }} / 5</h2>
             <div class="title-author-container">
                 <h1>{{ Title }}</h1>
                 <div class="info-fan">
@@ -44,7 +47,8 @@
                     <div class="character-chapters-container">
                         <div class="characters-list-container" v-for="(character, index) in listOfCharacter"
                             :key="index">
-                            <img :src="'/images/Characters/' + character.Character.Image" v-if="character.Character"/><br>
+                            <img :src="'/images/Characters/' + character.Character.Image"
+                                v-if="character.Character" /><br>
                             <span v-if="character.Character">
                                 {{ character.Character.CurrentName }}<br>
                             </span>
@@ -63,13 +67,14 @@
 import FictionService from "../../../services/FictionService"
 // import GameService from "../../../services/GameService";
 import AddANewCharacterModal from "./AddANewCharacterModal.vue";
-
+import Rating from "./Rating.vue";
 
 export default {
     name: 'FictionContain',
     inject: ['user'],
     components: {
-        AddANewCharacterModal
+        AddANewCharacterModal,
+        Rating
     },
     data() {
         return {
@@ -95,7 +100,8 @@ export default {
             CharImg: null,
             Summary: null,
             listOfCharacter: {},
-            nbChapter: 0
+            nbChapter: 0,
+            rating: 0,
 
         }
     },
@@ -129,6 +135,8 @@ export default {
             FictionService.getFictionByName(id, this.nav)
                 .then((response) => {
                     this.fiction = response.data.ob;
+                    console.log(this.fiction)
+                    this.Rating = this.fiction.AverageRating
                     this.showspinner = false
                     this.IdFiction = this.fiction.Id
                     this.IdGame = this.fiction.Game.Id

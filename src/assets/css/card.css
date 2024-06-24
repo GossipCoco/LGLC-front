@@ -287,8 +287,35 @@
     height: 51rem;
     background: linear-gradient(90deg, rgba(var(--dark-green-01), 0) 0%, rgba(var(--clear-green-02), 0) 100%);
     padding: 1rem 1rem 1rem 1rem;
-}
+    perspective: 5rem;
 
+}
+.parallax {
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+  }
+  
+  .parallax__layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .parallax__layer--base {
+    transform: translateZ(0);
+  }
+  
+  .parallax__layer--back {
+    transform: translateZ(-1px) scale(2);
+  }
+  
+  .parallax img {
+    display: block;
+    width: 100%;
+  }
 @keyframes rotate {
     from {
         transform: rotate(0deg) rotateX(0deg);

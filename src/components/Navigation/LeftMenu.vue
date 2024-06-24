@@ -42,6 +42,7 @@
             <router-link class="link-collapse" to="/mouseShot">Jeu du chat et de la souris</router-link>
             <router-link class="link-collapse" to="/GooseGameLayout">Jeu de l'oie</router-link>
             <router-link class="link-collapse" to="/TreasureHunt">Chasse au trésor</router-link>
+            <router-link class="link-collapse" to="/Quest">Quêtes</router-link>
           </div>
         </li>
         <li class="li-level1">

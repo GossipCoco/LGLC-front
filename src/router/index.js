@@ -25,6 +25,7 @@ import CreateChapter from '../components/Game/Fictions/CreateChapter.vue'
 import AllExistingFictionsLayout from '../components/Fictions/AllExistingFictionsLayout.vue'
 import AExistingFictionContain from "../components/Fictions/AExistingFictionContain.vue";
 import EditChapter from '../components/Game/Fictions/EditChapter.vue'
+import QuestLayout from '../components/Game/Quest/QuestLayout.vue'
 import UserCard from '../components/Users/UserCard.vue'
 import AllLocationsLayout from "../components/Locations/AllLocationsLayout.vue"
 import Register from '../components/Page/Register.vue'
@@ -121,6 +122,11 @@ const routes = [
         path: '/GooseGameLayout',
         name:'GooseGameLayout',
         component: GooseGameLayout
+      },
+      {
+        path: '/Quest',
+        name: 'QuestLayout',
+        component: QuestLayout
       },
       {
         path: '/TreasureHunt',

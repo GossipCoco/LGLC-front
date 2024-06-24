@@ -4,12 +4,20 @@
       <div class="parallax-layer parallax-layer-back">
         <div class="row g-0">
           <div class="col-md-4">
-            <div class="card-image" v-bind:style="{ backgroundImage: 'url(/images/Backgrounds/' + background + ')' }">
-              <div class="vegetal-container">                
-                  <img class="img-fluid" :src="'/images/Characters/' + image" :alt="image" />
+            <div class="parallax">
+              <div class="parallax__layer parallax__layer--back">
+                <div class="card-image"
+                  v-bind:style="{ backgroundImage: 'url(/images/Backgrounds/' + background + ')' }">
+                  <div class="vegetal-container">
+                    <div class="parallax__layer parallax__layer--base">
+                    <img class="img-fluid" :src="'/images/Characters/' + image" :alt="image" />
+                  </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+
           <div class="col-md-8">
             <div class="card-body">
               <div class="row">
@@ -73,10 +81,23 @@ export default {
 
   },
   mounted() {
+    window.addEventListener('scroll', this.handleScroll);
     this.url = this.$route.params.id;
     this.getCharacter();
   },
+  beforeUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
   methods: {
+    handleScroll() {
+      const layers = document.querySelectorAll('.parallax__layer');
+      layers.forEach(layer => {
+        const depth = layer.getAttribute('data-depth');
+        const movement = -(window.pageYOffset * depth);
+        const translate3d = 'translate3d(0, ' + movement + 'px, 0)';
+        layer.style.transform = translate3d;
+      });
+    },
     getCharacter() {
       CharacterService.getCharacterByName(this.url)
         .then((response) => {
