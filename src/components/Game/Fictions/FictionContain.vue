@@ -136,7 +136,7 @@ export default {
                 .then((response) => {
                     this.fiction = response.data.ob;
                     console.log(this.fiction)
-                    this.Rating = this.fiction.AverageRating
+                    this.rating = this.fiction.AverageRating
                     this.showspinner = false
                     this.IdFiction = this.fiction.Id
                     this.IdGame = this.fiction.Game.Id
