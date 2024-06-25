@@ -5,6 +5,8 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 import Vuex from 'vuex'
 import store from "./store"
+
+import Vue3YouTube from 'vue3-youtube';
 import io from 'socket.io-client'
 import IOController from '../src/api/SocketIoApi'
 import { QuillEditor } from '@vueup/vue-quill'
@@ -56,4 +58,5 @@ app.use(Vuex)
 app.use(store)
 app.use(router)
 app.use(VueAxios, axios)
+app.use(Vue3YouTube)
 app.mount('#app')

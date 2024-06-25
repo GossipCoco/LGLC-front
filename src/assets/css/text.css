@@ -24,7 +24,11 @@ a{ text-decoration: none; }
     width: 10rem;
     height: 4rem;
     display: flex;
-    flex-direction: row; 
+   flex-direction: column; 
+}
+.rating-star{
+    display: flex;
+    flex-direction: row;
 }
 .rating svg{
     flex: 1

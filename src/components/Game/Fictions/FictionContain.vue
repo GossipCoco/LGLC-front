@@ -6,9 +6,7 @@
             </div>
         </div>
         <div class="card-header title-chapter-container">
-            <Rating :fictionId="IdFiction"/>
-            <br>
-            <h2>{{ rating }} / 5</h2>
+            <Rating :fictionId="IdFiction" :rating="rating"/>          
             <div class="title-author-container">
                 <h1>{{ Title }}</h1>
                 <div class="info-fan">
