@@ -553,3 +553,21 @@ left: 35%
 .row.bottom-dashboard .card{
     height: 25rem;
 }
+.quest--global-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1;
+}
+.quest-container,.quest--global-container p{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1;
+}
+.quest-image-container, .background-image-quest-image-container{
+    width: 250px;
+    height: 250px;
+    background-size: cover;
+
+}

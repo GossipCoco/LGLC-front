@@ -18,10 +18,10 @@
 import axios from 'axios';
 import Config from '../../../../server'
 export default {
-  props: ['fictionId'],
+  props: ['fictionId', 'rating'],
   data() {
     return {
-      currentRating: 0,
+      currentRating: this.rating,
     };
   },
   methods: {
