@@ -1,16 +1,21 @@
 <template>
   <div class="card card-image-layout  clan-detail-layout mb-3">
-    <div
-      class="card-image clan-detail-card"
-      v-bind:style="{
-        backgroundImage: 'url(/images/Backgrounds/' + clan.Image + ')',
-      }"
-    ></div>
+    <div class="card-image clan-detail-card" v-bind:style="{
+      backgroundImage: 'url(/images/Backgrounds/' + clan.Image + ')',
+    }"></div>
     <div class="card-body">
       <h5 class="card-title">{{ clan.Name }}</h5>
       <div class="card-text">
         <p>{{ clan.Description }}</p>
-        <p>{{ clan }}</p>
+        <div class="all-characters-list-containers">
+          <div class="character-of-clan-container" v-for="(character, index) in clan.Warriors" :key="index">
+            <div class="indivual-caracter-container">
+              <img class="img-fluid" :src="'/images/Characters/' + character.Character.Image"
+                :alt="character.Character.Image" /><br>
+              <p>{{ character.Character.CurrentName }}</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -23,6 +28,8 @@ export default {
     return {
       url: "",
       clan: {},
+      CurrentName: null,
+      Image: null
     };
   },
   created() {

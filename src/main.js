@@ -5,7 +5,6 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 import Vuex from 'vuex'
 import store from "./store"
-
 import Vue3YouTube from 'vue3-youtube';
 import io from 'socket.io-client'
 import IOController from '../src/api/SocketIoApi'
@@ -16,19 +15,11 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faCat, faEnvelope, faGamepad, faHome, faHouseUser, faUser, faUserAlt, faUserCog,
         faUsers, faBurger, faBook, faGear, faChevronDown, faStar, faUserSecret
         } from '@fortawesome/free-solid-svg-icons'
-
-
 import 'jquery/dist/jquery'
 import 'popper.js'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
-
-
-// import "@fullcalendar/daygrid/main.css";
-// import "@fullcalendar/timegrid/main.css";
-// import "@fullcalendar/list/main.css";
-
-
+import './assets/css/Base.css'
 import './assets/css/layout.css'
 import './assets/css/navbar.css'
 import './assets/css/components.css'
@@ -42,7 +33,6 @@ import './assets/css/Accueil.css'
 import './assets/css/Form.css'
 import './assets/css/Scheduler.css'
 
-
 IOController.initSocket(io)
 
 library.add(faUserSecret,faUser, faHouseUser, faGamepad, faUser, faHome, faEnvelope,
@@ -50,10 +40,8 @@ library.add(faUserSecret,faUser, faHouseUser, faGamepad, faUser, faHome, faEnvel
             faGear, faChevronDown, faStar)
 
 const app = createApp(App)
-
 app.component('QuillEditor', QuillEditor)
 app.component('font-awesome-icon', FontAwesomeIcon)
-
 app.use(Vuex)
 app.use(store)
 app.use(router)

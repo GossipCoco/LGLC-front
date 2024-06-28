@@ -106,13 +106,10 @@ export default {
         .then((response) => {
           this.showspinner = false
           if (response && response.data) {
-
             const fictions = response.data.ob;
-            console.log(fictions)
             let totalWords = 0;
             // Parcourir les fictions et calculer la somme des mots pour toutes les fictions
             fictions.forEach(fictionEntry => {
-              console.log(fictionEntry)
               fictionEntry.Fiction.forEach(fiction => {
                 const fictionWords = fiction.Chapters.reduce((sum, chapter) => sum + parseInt(chapter.NbWords, 10), 0);
                 totalWords += fictionWords;
@@ -132,7 +129,6 @@ export default {
         .then((response) => {
           this.showspinner = false
           this.userInfo = response.data.ob
-          console.log(this.userInfo)
           this.Avatar = response.data.ob.Avatar
           this.usr = response.data.ob.UserName
           this.UserName = this.usr

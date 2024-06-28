@@ -64,12 +64,10 @@ export default {
         GetAllEvents(id) {
             EventService.GetAllEvents(id)
                 .then((response) => {
-                    // console.log(response.data.ob)
                     // Assuming response.data contains the events array
                     this.calendarOptions.events = response.data.ob.map(event => {
                         // console.log(event)
                         return {
-
                             title: event.Id, // Replace with the actual property names from your events
                             start: event.StartDate, // Replace with the actual property names from your events
                             end: event.EndDate // If you have an end date

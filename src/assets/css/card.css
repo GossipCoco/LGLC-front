@@ -372,11 +372,20 @@ left: 35%
 }
 
 .clan-detail-card {
-    width: 95rem;
-    height: 35rem;
+    width: 65rem;
+    height: 40rem;
     background-position: 50%;
+    border-radius: 20px 0 0 20px;
+    background-color: rgba(var(--main-white), 0);
+    margin: 5rem 0 0 0;
+    border-top: 1rem solid rgba(var(--clear-green-02), 1);
+    border-bottom: 1rem solid rgba(var(--clear-green-02), 1);
+    border-left: 1rem solid rgba(var(--clear-green-02), 1);
 }
-
+.clan-detail-layout .card-body{
+    height: 45rem;
+    background-color: rgba(var(--main-white), 1);
+}
 .clans-location-container {
     margin: 0 0 5rem 0;
 }
@@ -405,6 +414,8 @@ left: 35%
     width: 95rem;
     display: flex;
     flex-direction: row;
+    border-radius: 20px 0 0 20px;
+    background-color: rgba(var(--main-white), 0);
 }
 
 .card.card-image-layout.clan-detail-layout.mb-3 .card-image-layout {
@@ -413,10 +424,11 @@ left: 35%
 }
 
 .card.card-image-layout.clan-detail-layout.mb-3 .card-body {
-    height: 35rem;
-    overflow-y: scroll;
+    height: 50rem;
+    overflow-y: auto;
     overflow-x: hidden;
     width: 100%;
+    border-radius: 20px;
 }
 
 /* USER */
@@ -569,5 +581,24 @@ left: 35%
     width: 250px;
     height: 250px;
     background-size: cover;
-
+}
+.all-characters-list-containers{
+    display: flex;
+    flex-direction: row;
+    flex:1;
+    flex-wrap: wrap;
+}
+.character-of-clan-container{
+    display: flex;
+    flex-direction: row;
+    flex:1
+}
+.indivual-caracter-container{
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    width: 110px;
+}
+.indivual-caracter-container img{
+    width: 100px;
 }

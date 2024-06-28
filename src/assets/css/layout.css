@@ -4,12 +4,15 @@ html,
 body {
     height: 100vh;
     overflow-y: hidden;
-    overflow-x: hidden;
+    overflow-x: hidden;    
+}
+#app{
     scroll-behavior: smooth;
-    background-color: rgba(var(--main-grey-background), 1);
-    background-image: url('../../../public/images/Backgrounds/_95b0d7b9-7130-4e52-a236-0124266a2058.jpg');
+    background-color: rgba(var(--main-grey-background), 1);    
+    background-image: url('../../../public/images/paysage/a_thick_forest2.jpg');    
+    /* background-image: url('../../../public/images/Backgrounds/_95b0d7b9-7130-4e52-a236-0124266a2058.jpg'); */
     background-size: cover;
-    background-position: 10%;
+    background-position: 5%;
 }
 
 h2 h3 {
