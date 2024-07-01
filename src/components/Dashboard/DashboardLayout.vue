@@ -1,5 +1,5 @@
 <template>
-  <div class="dashboard-home-max-card-container card">
+  <div id ="dashboard" class="dashboard-home-max-card-container card">
     <div class="row title-dashboard">
       <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <TitleHeader v-if="!showspinner" v-bind:UserName="UserName" v-bind:Avatar="Avatar" />
@@ -12,7 +12,7 @@
     </div>
     <div class="row top-dashboard">
       <LastFiveFiction />
-      <ExtractLastChap v-if="!showspinner" v-bind:userInfo="userInfo" />
+      <ExtractLastChap v-if="!showspinner"/>
       <ListAllFictions v-if="!showspinner" />
       <AvatarCard v-if="!showspinner" v-bind:Avatar="Avatar" v-bind:UserName="usr" v-bind:LastConnexion="LastConnexion"
         v-bind:Inscription="Inscription" v-bind:level="LvelImf" v-bind:Role="role" v-bind:nBFiction="nBFictionV2"

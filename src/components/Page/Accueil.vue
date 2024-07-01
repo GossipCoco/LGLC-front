@@ -41,7 +41,7 @@
                             <h1>La Guerre des Clans</h1>
                             <h2>Bienvenue dans l'univers captivant de "La Guerre des Clans" !</h2>
                         </div>
-                        <div class="image-accueil">
+                        <div class="image-accueil parallax">
                             <div class="image-one">
                                 <img src="/images/2_17ff9c3d-444c-44cd-b9fd-559dfd9e87d5.png" />
                             </div>
@@ -91,8 +91,8 @@
                             l'Ombre rôde dans les marécages sombres.
                         </p>
                     </div>
-                    <div class="col-md-5">
-                        <img src="/images/Accueil/12.png" />
+                    <div class="col-md-5 accueil-image-one">
+                        <!-- <img src="/images/Accueil/_5b729561-4ede-40d2-8039-7c82b8b47b15.jpeg" /> -->
                     </div>
                     <div class="col-md-1"></div>
                 </div>
@@ -114,8 +114,8 @@
                             l'enrichissement de ce monde fascinant.
                         </p>
                     </div>
-                    <div class="col-md-5 order-md-2 image-row-second">
-                        <img src="/images/Accueil/f3800b6f6efd.png" />
+                    <div class="col-md-5 order-md-2 accueil-image-two">
+                        
                     </div>
 
                     <div class="col-md-1 5 order-md-4"></div>
@@ -133,10 +133,8 @@
                             vos pas !
                         </p>
                     </div>
-                    <div class="col-md-5">
-                        <img src="/images/Accueil/d444f75af71f.png" />
+                    <div class="col-md-5 accueil-image-tree">                        
                     </div>
-
                     <div class="col-md-1"></div>
                 </div>
             </div>
@@ -162,14 +160,15 @@ export default {
     mounted() {
         window.addEventListener('scroll', this.handleScroll);
     },
-    // beforeUnmount() {
-    //     window.removeEventListener('scroll', this.handleScroll);
-    // },
+    beforeUnmount() {
+        window.removeEventListener('scroll', this.handleScroll);
+    },
     methods: {
         handleScroll() {
             const headerHeight = document.querySelector('header').offsetHeight;
             const scrollPosition = window.scrollY;
-
+            const parallax = document.querySelector('.parallax .image-one');
+            parallax.style.transform = `translateY(${scrollPosition * 25}px)`;
             if (scrollPosition > headerHeight) {
                 document.getElementById('rever-container').classList.add('slide-in-left');
                 document.getElementById('jouer-container').classList.add('slide-in-up');

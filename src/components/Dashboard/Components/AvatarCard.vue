@@ -1,5 +1,5 @@
 <template>
-    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+    <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12 card-global">
         <div class="card profil-card fiction-card">
             <div class="card-header avatar-container-header">
                 <h4>{{ UserName }}</h4> <!-- <div class="avatar-container"><img :src="'/images/Levels/' + level" class="img-fluid card-img-top" alt="avatar"></div> -->

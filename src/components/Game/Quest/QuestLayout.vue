@@ -1,5 +1,5 @@
 <template>
-    <div class="dashboard-max-card-container card fiction-container">
+    <div class="dashboard-max-card-container card one-quest-container">
         <div class="card-header">
             <h2>Liste des quêtes à réaliser</h2>
         </div>
@@ -12,7 +12,9 @@
 
                         </div>
                     </div>
+                    <p><router-link :to="'/QuestById/'+quest.Id" type="button" class="btn btn-primary">Quête {{ quest.Id }}</router-link></p>
                     <p>{{ quest.Title }} : {{ quest.Description }}</p>
+                    
                 </li>
             </ul>
         </div>

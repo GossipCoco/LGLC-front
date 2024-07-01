@@ -26,6 +26,7 @@ import AllExistingFictionsLayout from '../components/Fictions/AllExistingFiction
 import AExistingFictionContain from "../components/Fictions/AExistingFictionContain.vue";
 import EditChapter from '../components/Game/Fictions/EditChapter.vue'
 import QuestLayout from '../components/Game/Quest/QuestLayout.vue'
+import QuestById from '../components/Game/Quest/QuestById.vue'
 import UserCard from '../components/Users/UserCard.vue'
 import AllLocationsLayout from "../components/Locations/AllLocationsLayout.vue"
 import Register from '../components/Page/Register.vue'
@@ -127,6 +128,11 @@ const routes = [
         path: '/Quest',
         name: 'QuestLayout',
         component: QuestLayout
+      },
+      {
+        path: '/QuestById/:id',
+        name: 'QuestById',
+        component: QuestById
       },
       {
         path: '/TreasureHunt',

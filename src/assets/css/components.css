@@ -149,6 +149,7 @@ th{
 .list-all-fictions-globale--container{
     display: flex;
     flex-direction: row;
+    width: 25rem;
 }
 
 .summaray-title-text{
@@ -161,4 +162,7 @@ th{
 .row.list-fiction-card-container{
     height: 35rem;
     padding: 1rem;
+}
+#dashboard .row.top-dashboard .card-global{
+    margin: 0 auto;
 }
