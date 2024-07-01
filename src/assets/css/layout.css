@@ -394,3 +394,6 @@ main.container {
 .card {
     border: none;
 }
+#dashboard p, #dashboard h1,#dashboard h4{
+    color: rgba(var(--main-white), 1)
+}

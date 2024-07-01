@@ -7,14 +7,23 @@
             <ul class="quest--global-container">
                 <li v-for="(quest, index) in allQuests" :key="index" class="quest-container">
                     <div v-for="(image, index) in quest.QuestImages" :key="index" class="quest-image-container">
+                        <div class="quest-title">
+                        <h4>{{ quest.Title }} </h4>
+                        </div>
                         <div v-bind:style="{ backgroundImage: 'url(/images/Fictions/' + image.Image }"
                             class="background-image-quest-image-container">
 
                         </div>
                     </div>
-                    <p><router-link :to="'/QuestById/'+quest.Id" type="button" class="btn btn-primary">Quête {{ quest.Id }}</router-link></p>
-                    <p>{{ quest.Title }} : {{ quest.Description }}</p>
-                    
+                    <div class="quest-button-text">
+                        
+                        <p> {{ quest.Description }}</p>
+                        <p>
+                            <router-link :to="'/QuestById/' + quest.Id" type="button" class="btn btn-primary">
+                                Quête {{ quest.Id }}
+                            </router-link>
+                        </p>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -44,7 +53,7 @@ export default {
             nav: {
                 current: 0,
                 pages: 0,
-                step: 6,
+                step: 4,
             },
         }
     },
@@ -53,7 +62,7 @@ export default {
             allQuests: this.allQuests,
         };
     },
-    created() {        
+    created() {
         this.userCurrent = this.$store.state.auth.user.usrID;
         this.GetAllQuests(this.nav)
         this.initPage();
@@ -67,15 +76,16 @@ export default {
         initPage() {
             this.showspinner = true;
             this.GetAllQuests(this.nav);
-            this.GetTotalQueries();
+            this.GetTotalQuest();
         },
         QuestPagination(e) {
             this.nav.current = e;
             this.GetAllQuests(this.nav);
         },
-        GetTotalQueries() {
-            QuestService.GetTotalQueries()
+        GetTotalQuest() {
+            QuestService.GetTotalQuest()
                 .then((response) => {
+                    console.log(response)
                     this.nbQuests = response.data.ob;
                     console.log(this.nbQuests)
                 })
