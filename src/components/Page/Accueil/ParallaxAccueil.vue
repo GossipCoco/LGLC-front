@@ -1,18 +1,21 @@
 <template>
-    <div class="video-container">
-        <video autoplay loop muted class="video">
-            <source src="/videos/2294537169c717b277.mp4" type="video/webm" />
-            <source src="/videos/2294537169c717b277.mp4" type="video/mp4" />
-        </video>
-    </div>
-    <div class="accueil-title-image-container">
-        <div class="title-accueil">
-            <h1>La Guerre des Clans</h1>
-            <h2>Bienvenue dans l'univers captivant de "La Guerre des Clans" !</h2>
+    <div id="parallax">
+        <div class="video-container">
+            
+            <!-- <video autoplay loop muted class="video">
+                <source src="/videos/2294537169c717b277.mp4" type="video/webm" />
+                <source src="/videos/2294537169c717b277.mp4" type="video/mp4" />
+            </video> -->
         </div>
-        <div class="image-accueil parallax">
-            <div class="image-one">
-                <img src="/images/2_17ff9c3d-444c-44cd-b9fd-559dfd9e87d5.png" />
+        <div class="accueil-title-image-container">
+            <div class="title-accueil">
+                <h1>La Guerre des Clans</h1>
+                <h2>Bienvenue dans l'univers captivant de "La Guerre des Clans" !</h2>
+            </div>
+            <div class="image-accueil parallax">
+                <div class="image-one">
+                    <img src="/images/2_17ff9c3d-444c-44cd-b9fd-559dfd9e87d5.png" />
+                </div>
             </div>
         </div>
     </div>
