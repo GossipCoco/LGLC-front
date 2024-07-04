@@ -32,7 +32,7 @@ import './assets/css/responsive.css'
 import './assets/css/Accueil.css'
 import './assets/css/Form.css'
 import './assets/css/Scheduler.css'
-
+import './assets/css/Parallax.css'
 IOController.initSocket(io)
 
 library.add(faUserSecret,faUser, faHouseUser, faGamepad, faUser, faHome, faEnvelope,
