@@ -63,7 +63,7 @@ export default {
             allQuests: this.allQuests,
         };
     },
-    created() {        
+    created() {
         this.userCurrent = this.$store.state.auth.user.usrID;
         this.GetAllQuests(this.nav);
         this.GetTotalQuest();

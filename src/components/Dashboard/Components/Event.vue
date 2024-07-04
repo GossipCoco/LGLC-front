@@ -6,10 +6,8 @@
                 <!-- <div class="avatar-container"><img :src="'/images/Levels/' + level" class="img-fluid card-img-top" alt="avatar"></div> -->
             </div>
             <div class="card-body">
-                A venir
-                <br>
                 <div v-for="(event, index) in events" :key="index">
-                    {{ event.Title }}
+                    <p>{{ event.Title }}</p>
                 </div>
             </div>
         </div>
