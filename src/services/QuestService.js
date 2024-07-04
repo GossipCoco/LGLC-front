@@ -4,10 +4,6 @@ class QuestService{
         console.log("GetTotalQuest")
         return http.get('/quest/GetTotalQuest')
     }
-    GetTotalQuest(){
-        console.log("GetTotalQuest")
-        return http.get('/quest/GetTotalQuest')
-    }
     GetQuestById(id){
         console.log(id)
         return http.get(`/quest/${id}`)
