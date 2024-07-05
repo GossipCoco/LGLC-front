@@ -8,7 +8,7 @@
             </div>
             <div class="image-accueil parallax">
                 <div class="image-one">
-                    <img src="/images/perso-detoure/121_e753ecd9-dbc1-4c16-b603-3996ff81a082.png" />
+                    <img src="/images/perso-detoure/Warriors(213).png" />
                 </div>
             </div>
         </div>
