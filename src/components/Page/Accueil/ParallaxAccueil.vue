@@ -2,15 +2,16 @@
     <div id="parallax">
         <div class="video-container"></div>
         <div class="accueil-title-image-container">
-            <div class="title-accueil">
-                <h1>La Guerre des Clans</h1>
-                <h2>Bienvenue dans l'univers captivant de "La Guerre des Clans" !</h2>
-            </div>
             <div class="image-accueil parallax">
                 <div class="image-one">
                     <img src="/images/perso-detoure/Warriors221.png" />
                 </div>
             </div>
+            <div class="title-accueil">
+                <h1>La Guerre des Clans</h1>
+                <h2>Bienvenue dans l'univers captivant de <br>"La Guerre des Clans" !</h2>
+            </div>
+            
         </div>
     </div>
 </template>

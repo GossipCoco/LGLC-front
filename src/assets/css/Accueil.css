@@ -74,7 +74,7 @@
 
 
 #accueil .container.marketing{
-    margin-top: 17rem;
+    margin-top: 10rem;
     background: linear-gradient(90deg, rgba(var(--dark-green-01), 1) 0%, rgba(var(--clear-green-02), 1) 100%);
 }
 #accueil nav.bg-dark, #accueil nav .container-fluid {
@@ -91,8 +91,8 @@
 }
 #accueil .video-container{
     flex: 1;
-    width: 110%;
-    height: 110vh;
+    width: 105%;
+    height: 105vh;
     position: relative;
     margin: 4rem 0 0 0;
     background-size: cover;
@@ -128,18 +128,21 @@
     flex-direction: column;
 }
 #accueil h1 {
+    margin: -25rem 0 5rem -20rem;
     text-align: center;
     width: 100%;
     font-family: 'Cinzel';
-    font-size: 92px;
+    font-size: 124px;
     font-weight: 600;
     color: rgba(var(--main-white), 1);
     position: relative;
     animation: slideInLeft 3s ease-out;
     text-shadow: #FC0 1px 0 10px;
 }
-#accueil h2 {
-    margin-top: 4rem;
+
+
+#accueil .title-accueil h2 {
+    margin: 4rem 0 0 0;
     width: 95%;
     font-family: var(--montserratMedium);
     font-size: 48px;
@@ -148,18 +151,7 @@
     position: relative;
     animation: slideInLeft 3s ease-out;
     word-wrap: break-word;
-}
-#accueil .title-accueil h2 {
-    margin-top: 4rem;
-    width: 95%;
-    font-family: var(--montserratMedium);
-    font-size: 48px;
-    font-weight: 6400;
-    color: rgba(var(--main-white), 1);
-    position: relative;
-    animation: slideInLeft 3s ease-out;
-    word-wrap: break-word;
-    text-shadow: rgba(250, 227, 136, 0.5) 1px 0 5px;
+    text-shadow: #198754 2px 2px 1px;
     text-align: center;
 }
 #accueil span.text-body-secondary{
