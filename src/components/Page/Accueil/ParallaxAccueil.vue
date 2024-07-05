@@ -1,12 +1,6 @@
 <template>
     <div id="parallax">
-        <div class="video-container">
-            
-            <!-- <video autoplay loop muted class="video">
-                <source src="/videos/2294537169c717b277.mp4" type="video/webm" />
-                <source src="/videos/2294537169c717b277.mp4" type="video/mp4" />
-            </video> -->
-        </div>
+        <div class="video-container"></div>
         <div class="accueil-title-image-container">
             <div class="title-accueil">
                 <h1>La Guerre des Clans</h1>
