@@ -22,9 +22,6 @@ import ParallaxAccueil from './Accueil/ParallaxAccueil'
 import TopMiddleAccueil from './Accueil/TopMiddleAccueil'
 import BottomMiddleAccueil from './Accueil/BottomMiddleAccueil'
 import FooterAccueil from './Accueil/FooterAccueil'
-
-
-
 export default {
     name: 'Accueil',
     components:{HeaderAccueil, ParallaxAccueil, TopMiddleAccueil, BottomMiddleAccueil, FooterAccueil},
