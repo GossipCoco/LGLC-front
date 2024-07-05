@@ -61,7 +61,7 @@
 }
 #accueil main, #accueil .cover-container {
     height: 100vh;
-    /* background-image: url('../../../public/images/Backgrounds/_68fcc4ae-3bd3-4c21-8944-457799b6e0ed.jpg'); */
+    /* background-image: url('../../../public/images/Backgrounds/Warriors-paysage01.png'); */
     background: linear-gradient(90deg, rgba(var(--dark-green-01), 1) 0%, rgba(var(--clear-green-02), 1) 100%);
     background-size: cover;
     transform: translate3d(0px, 0, 0);
@@ -69,7 +69,7 @@
 
 
 #accueil #parallax .video-container{
-    background-image: url('../../../public/images/paysage/9_3b64e9d9-f187-4bc3-b7c7-75e7ea2be8f1.png');
+    background-image: url('../../../public/images/paysage/Warriors-paysage01.png');
 }
 
 
