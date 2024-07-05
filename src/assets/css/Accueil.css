@@ -91,10 +91,13 @@
 }
 #accueil .video-container{
     flex: 1;
-    width: 100%;
-    height: 100vh;
+    width: 110%;
+    height: 110vh;
     position: relative;
-    margin: 5rem 0 0 0;
+    margin: 4rem 0 0 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+
 }
 
 #accueil video{
@@ -255,8 +258,8 @@
 }
 #accueil .accueil-image-one{
     margin: 0 0 0 10rem;
-    width: 600px;
-    height: 600px;
+    width: 400px;
+    height: 400px;
     background-image: url('../../../public/images/Accueil/_5b729561-4ede-40d2-8039-7c82b8b47b15.jpeg');
     background-size: cover;
     background-position: 50%;
@@ -264,18 +267,18 @@
 }
 
 #accueil .accueil-image-two{
-    margin: 0 0 0 10rem;
-    width: 600px;
-    height: 600px;
-    background-image: url('../../../public/images/Accueil/_17ff9c3d-444c-44cd-b9fd-559dfd9e87d5.jpg');
+    margin: 0rem 10rem 0 2rem;
+    width: 400px;
+    height: 400px;
     background-size: cover;
+    background-image: url('../../../public/images/Accueil/_17ff9c3d-444c-44cd-b9fd-559dfd9e87d5.jpg');
     background-position: 50%;
     border-radius: 50%;
 }
 #accueil .accueil-image-tree{
     margin: 0 0 0 10rem;
-    width: 600px;
-    height: 600px;
+    width: 400px;
+    height: 400px;
     background-image: url('../../../public/images/Accueil/_511d2e02-8f95-4a6f-8ed3-ec65aad75168.jpg');
     background-size: cover;
     background-position: 50%;
