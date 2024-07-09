@@ -62,7 +62,7 @@ export default {
       nav: {
         current: 0,
         pages: 0,
-        step: 4,
+        step: 6,
       },
     };
   },

@@ -59,7 +59,7 @@ export default {
       nav: {
         current: 0,
         pages: 0,
-        step: 8,
+        step: 6,
       },
     };
   },
@@ -83,7 +83,8 @@ export default {
     async countAllGames() {
       try {
         const response = await GameService.CountAllMyFictions(this.$store.state.auth.user.usrID);
-        this.NbAllMyGamesFictions = response.data.ob.count;
+        console.log(response.data)
+        this.NbAllMyGamesFictions = response.data.ob;
         console.log(this.NbAllMyGamesFictions)
         this.nav.pages = Math.ceil(this.NbAllMyGamesFictions / this.nav.step);
       } catch (error) {
