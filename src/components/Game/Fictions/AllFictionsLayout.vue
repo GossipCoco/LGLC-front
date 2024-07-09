@@ -83,7 +83,8 @@ export default {
     async countAllGames() {
       try {
         const response = await GameService.CountAllMyFictions(this.$store.state.auth.user.usrID);
-        this.NbAllMyGamesFictions = response.data.ob;
+        this.NbAllMyGamesFictions = response.data.ob.count;
+        console.log(this.NbAllMyGamesFictions)
         this.nav.pages = Math.ceil(this.NbAllMyGamesFictions / this.nav.step);
       } catch (error) {
         console.error(error);

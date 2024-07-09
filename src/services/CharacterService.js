@@ -1,20 +1,21 @@
 import http from '../http/http-common'
 
 class CharacterService {
+    getCharacterByName(id){
+        console.log("getCharacterByName : ", id)
+        return http.get(`/character/GetCharacterByName/${id}`)
+    }
+    CountAllCharacters(){
+        return http.get('/character/countAllcharacters')
+    }    
+    GetAllCharactersByUser(id){
+        return http.get(`/character/GetAllCharactersByUser/${id}`)
+    }
     getAllCharacters(nav) {
         return http.post('/character/allcharacters', nav)
     }
     GetAllCharactersDashboard(nav) {
         return http.post('/character/GetAllCharactersDashboard', nav)
-    }
-    CountAllCharacters(){
-        return http.get('/character/countAllcharacters')
-    }
-    getCharacterByName(id){
-        return http.get(`/character/${id}`)
-    }
-    GetAllCharactersByUser(id){
-        return http.get(`/character/GetAllCharactersByUser/${id}`)
     }
     getCharacterByNameSearch(name) {
         return http.get(`/character/search/${name}`)

@@ -1,5 +1,6 @@
 <template>
   <div class="character-list-wrapper">
+     <!-- {{ character.Warrior }} -->
     <div
       class="card-image"
       v-bind:style="{

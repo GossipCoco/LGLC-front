@@ -62,7 +62,7 @@ export default {
       nav: {
         current: 0,
         pages: 0,
-        step: 8,
+        step: 4,
       },
     };
   },
@@ -87,6 +87,7 @@ export default {
     async countAllGames() {
       try {
         const response = await GameService.countAllGames();
+        console.log(response.data.ob)
         this.NbAllMyGamesFictions = response.data.ob;
         this.nav.pages = Math.ceil(this.NbAllMyGamesFictions / this.nav.step);
       } catch (error) {
@@ -96,7 +97,8 @@ export default {
     async getAllGames(nav) {
       try {
         const response = await GameService.getAllGames(nav);
-        this.games = response.data.ob;
+        this.games = response.data.ob;        
+        console.log(this.games)
       } catch (error) {
         console.error(error);
       }

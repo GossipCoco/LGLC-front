@@ -83,7 +83,7 @@ export default {
   mounted() {
     window.addEventListener('scroll', this.handleScroll);
     this.url = this.$route.params.id;
-    this.getCharacter();
+    this.getCharacter(this.url);
   },
   beforeUnmount() {
     window.removeEventListener('scroll', this.handleScroll);
@@ -93,21 +93,22 @@ export default {
       const layers = document.querySelectorAll('.parallax__layer');
       layers.forEach(layer => {
         const depth = layer.getAttribute('data-depth');
-        const movement = -(window.pageYOffset * depth);
+        const movement = -(window.scrollY * depth);
         const translate3d = 'translate3d(0, ' + movement + 'px, 0)';
         layer.style.transform = translate3d;
       });
     },
-    getCharacter() {
-      CharacterService.getCharacterByName(this.url)
+    getCharacter(id ){
+      console.log(id)
+      CharacterService.getCharacterByName(id)
         .then((response) => {
           console.log(response)
           this.character = response.data.ob
           console.log(this.character)
-          this.Symbol = this.character.Warrior.Clan.Symbol
-          this.NameClan = this.character.Warrior.Clan.Name
+          this.Symbol = this.character.Clan.Symbol
+          this.NameClan = this.character.Clan.Name
           this.image = response.data.ob.Image
-          this.background = response.data.ob.Warrior.Clan.Image
+          this.background = response.data.ob.Clan.Image
           this.currentName = response.data.ob.CurrentName
           this.genre = response.data.ob.Genre
           this.age = response.data.ob.Age
