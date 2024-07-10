@@ -7,8 +7,8 @@
             <div class="card-body scheduler-container">
                 <FullCalendar :options='calendarOptions'>
                     <template v-slot:eventContent='arg'>
-                        <b>{{ arg.timeText }}</b>
                         <i>{{ arg.event.title }}</i>
+                        <b>{{ arg.event.text }}</b>
                     </template>
                 </FullCalendar>
             </div>
@@ -65,10 +65,12 @@ export default {
             EventService.GetAllEvents(id)
                 .then((response) => {
                     // Assuming response.data contains the events array
+                    console.log(this.calendarOptions)
                     this.calendarOptions.events = response.data.ob.map(event => {
                         // console.log(event)
                         return {
-                            title: event.Id, // Replace with the actual property names from your events
+                            title: event.Title,
+                            text: event.Description,// Replace with the actual property names from your events
                             start: event.StartDate, // Replace with the actual property names from your events
                             end: event.EndDate // If you have an end date
                         }

@@ -15,3 +15,6 @@
 .fc .fc-button-primary{
     background-color: rgba(var(--dark-green-01),1)
 }
+.fc-popover-title{
+    color: rgba(var(--dark-green-01),1)
+}

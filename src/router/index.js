@@ -27,6 +27,7 @@ import AExistingFictionContain from "../components/Fictions/AExistingFictionCont
 import EditChapter from '../components/Game/Fictions/EditChapter.vue'
 import QuestLayout from '../components/Game/Quest/QuestLayout.vue'
 import QuestById from '../components/Game/Quest/QuestById.vue'
+import EventGlobalLayout from '../components/Event/EventGlobaleLayout.vue'
 import UserCard from '../components/Users/UserCard.vue'
 import AllLocationsLayout from "../components/Locations/AllLocationsLayout.vue"
 import Register from '../components/Page/Register.vue'
@@ -158,6 +159,11 @@ const routes = [
         path: '/AllExistingFictionsLayout',
         name: 'AllExistingFictionsLayout',
         component: AllExistingFictionsLayout
+      },
+      {
+        path: '/EventGlobal',
+        name: 'EventGlobal',
+        component: EventGlobalLayout
       },
       {
         path:'/allFictions/:id',
