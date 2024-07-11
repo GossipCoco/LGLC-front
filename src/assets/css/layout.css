@@ -374,3 +374,28 @@ main.container {
 #dashboard p, #dashboard h1,#dashboard h4{
     color: rgba(var(--main-white), 1)
 }
+.illustration-background .background-fiction-contain{
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 38rem;
+    display: flex;
+    flex-direction: column;
+}
+.opacity-container{
+    background-color: rgba(var(--dark-green-01), 0.75)
+}
+.illustration-background .background-fiction-contain .characters-list-container{
+    display: flex;
+    flex-direction: column;
+    flex:0.25;
+    height: 10rem;
+    margin: 1rem 0 1rem 0;
+}
+.all-characters-of-fiction{
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 0 4rem;
+}
+.illustration-background .background-fiction-contain .characters-list-container img{
+    width: 150px;
+}

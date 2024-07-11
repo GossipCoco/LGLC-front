@@ -95,6 +95,7 @@ export default {
       try {
         const response = await GameService.getAllGamesByUser(this.$store.state.auth.user.usrID, nav);
         this.games = response.data.ob;
+        console.log(this.games)
       } catch (error) {
         console.error(error);
       }

@@ -6,7 +6,7 @@
             </div>
         </div>
         <div class="card-header title-chapter-container">
-            <Rating :fictionId="IdFiction" :rating="rating"/>          
+            <Rating :fictionId="IdFiction" :rating="rating" />
             <div class="title-author-container">
                 <h1>{{ Title }}</h1>
                 <div class="info-fan">
@@ -43,19 +43,30 @@
                     v-bind:style="{ backgroundImage: 'url(/images/Fictions/' + backgroundImageFiction + ')' }"></div>
                 <div class="character-chapters-fiction-container">
                     <div class="character-chapters-container">
-                        <div class="characters-list-container" v-for="(character, index) in listOfCharacter"
-                            :key="index">
-                            <img :src="'/images/Characters/' + character.Character.Image"
-                                v-if="character.Character" /><br>
-                            <span v-if="character.Character">
-                                {{ character.Character.CurrentName }}<br>
-                            </span>
-                        </div>
-                        <div class="button-modal">
-                            <AddANewCharacterModal v-if="AuthorId === usrCurrent" v-bind:IdGame="IdGame" />
+                        <div class="illustration-background" v-for="(illus, index) in illustration" :key="index">
+                            <div :style="{ backgroundImage: 'url(/images/Fictions/' + illus.IllustrationId + ')' }"
+                                class="background-fiction-contain">
+                                <div class="opacity-container">
+                                    <div class="all-characters-of-fiction">
+                                        <div class="characters-list-container"
+                                            v-for="(character, index) in listOfCharacter" :key="index">
+                                            <img :src="'/images/Characters/' + character.Character.Image"
+                                                v-if="character.Character" />
+                                            <span v-if="character.Character">
+                                                {{ character.Character.CurrentName }}
+                                            </span>
+                                        </div>
+                                        <div class="button-modal">
+                                            <AddANewCharacterModal v-if="AuthorId === usrCurrent"
+                                                v-bind:IdGame="IdGame" />
+                                        </div>
+                                    </div>
+                                    <div class="summary-container" v-html="Summary"></div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
-                    <div class="summary-container" v-html="Summary"></div>
                 </div>
             </div>
         </div>
@@ -100,7 +111,7 @@ export default {
             listOfCharacter: {},
             nbChapter: 0,
             rating: 0,
-
+            illustration: null,
         }
     },
     created() {
@@ -135,8 +146,7 @@ export default {
                     this.fiction = response.data.ob[0];
                     console.log(this.fiction)
                     this.rating = this.fiction.AverageRating
-                    console.log(this.rating)
-                    this.showspinner = false
+
                     this.IdFiction = this.fiction.Id
                     this.IdGame = this.fiction.Game.Id
                     this.Author = this.fiction.User.UserName
@@ -147,9 +157,11 @@ export default {
                     this.Summary = this.fiction.Summary
                     this.dateCreation = this.fiction.DateCreation
                     this.nbChapter = this.fiction.Chapters.length
+                    this.illustration = this.fiction.FictionIllustrations
                     if (this.fiction.Chapters.length > 0) {
                         this.GetLastChapterOfAFiction(this.url)
                     }
+                    this.showspinner = false
                 })
                 .catch((e) => {
                     console.log(e);
