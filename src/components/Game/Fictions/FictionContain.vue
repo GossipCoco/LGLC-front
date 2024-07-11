@@ -48,17 +48,19 @@
                                 class="background-fiction-contain">
                                 <div class="opacity-container">
                                     <div class="all-characters-of-fiction">
-                                        <div class="characters-list-container"
-                                            v-for="(character, index) in listOfCharacter" :key="index">
-                                            <img :src="'/images/Characters/' + character.Character.Image"
-                                                v-if="character.Character" />
-                                            <span v-if="character.Character">
-                                                {{ character.Character.CurrentName }}
-                                            </span>
-                                        </div>
                                         <div class="button-modal">
                                             <AddANewCharacterModal v-if="AuthorId === usrCurrent"
                                                 v-bind:IdGame="IdGame" />
+                                        </div>
+                                        <div class="all-characters-list-container">
+                                        <div class="characters-list-container"
+                                            v-for="(character, index) in listOfCharacter" :key="index">
+                                            <span v-if="character.Character">
+                                                {{ character.Character.CurrentName }}
+                                            </span>
+                                            <img :src="'/images/Characters/' + character.Character.Image"
+                                                v-if="character.Character" />                                            
+                                        </div>
                                         </div>
                                     </div>
                                     <div class="summary-container" v-html="Summary"></div>

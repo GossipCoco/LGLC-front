@@ -56,7 +56,7 @@
     height: 100%;
     overflow-y: auto;
     overflow-x: hidden;
-    background: linear-gradient(90deg, rgba(var(--dark-green-01), 1) 0%, rgba(var(--clear-green-02), 1) 100%);
+    background: linear-gradient(90deg, rgba(var(--dark-green-01), 0.85) 0%, rgba(var(--clear-green-02), 0.65) 100%);
     color: rgba(var(--main-white), 1)
 }
 #accueil main, #accueil .cover-container {

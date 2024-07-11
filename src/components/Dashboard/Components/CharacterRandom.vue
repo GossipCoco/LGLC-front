@@ -10,7 +10,7 @@
             <div class="character-l1" v-for="character in randomCharacters" :key="character.Id">
               <img class="img-fluid" :src="'/images/Characters/' + character.Image" :alt="character.Image" />
               <br>
-              <span>
+              <span class="character-details-router">
                 <router-link :to="'/characterDetails/' + character.Id">
                   {{ character.CurrentName }}
                 </router-link>
