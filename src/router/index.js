@@ -4,7 +4,7 @@ import Accueil from '../components/Page/Accueil'
 import Home from "../components/Page/Home";
 import DashboardLayout from "../components/Dashboard/DashboardLayout";
 import AllCharactersLayout from "../components/Characters/AllCharactersLayout";
-import CharacterDetails from "../components/Characters/CharacterDetails";
+import CharacterDetails from "../components/Characters/CharacterComponent/CharacterDetails";
 import UserLayout from "../components/Users/UserLayout";
 import AllClansLayout from "../components/Locations/AllClansLayout";
 import ClanDetails from "../components/Locations/ClanDetails"

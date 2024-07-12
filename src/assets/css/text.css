@@ -41,5 +41,16 @@ a{ text-decoration: none; }
     height: 2rem;
   }
   .rating svg.checked {
-    fill: gold;
+    fill: rgb(255, 215, 1);
+  }
+  .card.quest-by-id-card h2{
+    color: rgba(var(--main-white), 1);
+  }
+  #quest-by-id .card-header.quest-container-header{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
   }

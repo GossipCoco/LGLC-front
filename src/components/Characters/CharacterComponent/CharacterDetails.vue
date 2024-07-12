@@ -58,7 +58,7 @@
   </div>
 </template>
 <script>
-import CharacterService from "../../services/CharacterService";
+import CharacterService from "../../../services/CharacterService";
 export default {
   name: "CharacterDetails",
   data() {
