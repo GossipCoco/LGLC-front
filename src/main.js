@@ -18,8 +18,10 @@ import { faCat, faEnvelope, faGamepad, faHome, faHouseUser, faUser, faUserAlt, f
 import 'jquery/dist/jquery'
 import 'popper.js/dist/umd/popper.min.js'
 import 'popper.js'
+
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
+
 import './assets/css/Base.css'
 import './assets/css/layout.css'
 import './assets/css/navbar.css'
