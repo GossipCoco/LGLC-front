@@ -46,7 +46,7 @@
 </template>
 <script>
 import CharacterService from "../../services/CharacterService";
-import CharacterCard from "./CharacterCard.vue";
+import CharacterCard from "./CharacterComponent/CharacterCard.vue";
 import Pagination from "../Components/GenericComponent/Pagination.vue";
 import functions from "../../services/functions";
 

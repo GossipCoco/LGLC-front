@@ -12,7 +12,7 @@
   </div>
 </template>
 <script>
-import CharacterText from "./CharacterComponent/CharacterText";
+import CharacterText from "../CharacterComponent/CharacterText";
 export default {
   name: "CharacterCard",
   props: ["characters_props"],
