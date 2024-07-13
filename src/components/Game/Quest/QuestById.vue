@@ -6,7 +6,12 @@
     <div class="card quest-by-id-card">
       <div class="card-header quest-container-header">
         <h2>{{ quest.Title }}</h2>
-        <button type="button" class="btn btn-primary" id="liveToastBtn" @click="showToast">
+        <button
+          type="button"
+          class="btn btn-primary"
+          id="liveToastBtn"
+          @click="showToast"
+        >
           Ma mission
         </button>
 
@@ -18,7 +23,7 @@
             aria-live="assertive"
             aria-atomic="true"
           >
-            <div class="toast-header" style="width: 350px;">
+            <div class="toast-header" style="width: 350px">
               <strong class="me-auto">{{ quest.Title }}</strong>
               <button
                 type="button"
@@ -27,9 +32,14 @@
                 aria-label="Close"
               ></button>
             </div>
-            <div class="toast-body">{{quest.Description}}</div>
+            <div class="toast-body">{{ quest.Description }}</div>
           </div>
         </div>
+        <p class="card-text">
+          <router-link to="/Quest" type="button" class="btn btn-primary"
+            >Retour à la liste des quêtes</router-link
+          >
+        </p>
       </div>
       <div class="card-body">
         <div class="parallax-container">
@@ -37,9 +47,10 @@
             v-for="(layer, index) in layers"
             :key="index"
             :style="{
-              backgroundImage: `url(${layer})`,
+              backgroundImage: `url(${layer.Image})`,
               backgroundRepeat: 'no-repeat',
               backgroundSize: 'cover',
+              zIndex: layer.Position,
             }"
             class="parallax-layer"
           ></div>
@@ -48,10 +59,9 @@
     </div>
   </div>
 </template>
-
 <script>
 import QuestService from "../../../services/QuestService";
-import { Toast } from 'bootstrap';  // Import Bootstrap's Toast component
+import { Toast } from "bootstrap"; // Import Bootstrap's Toast component
 
 export default {
   name: "QuestById",
@@ -59,37 +69,7 @@ export default {
     return {
       quest: {},
       url: null,
-      layers: [
-        "/images/parallax/warrior-img01-38.png",
-        '/images/parallax/fond--12.png',
-        '/images/parallax/warrior-img01-92.png',
-      ],
-      interactiveElements: [
-        {
-          top: "20%",
-          left: "30%",
-          backgroundSize: "contain",
-          backgroundRepeat: "no-repeat",
-          label: "Point 1",
-          action: "action1",
-        },
-        {
-          top: "50%",
-          left: "50%",
-          backgroundSize: "contain",
-          backgroundRepeat: "no-repeat",
-          label: "Point 2",
-          action: "action2",
-        },
-        {
-          top: "80%",
-          left: "70%",
-          backgroundSize: "contain",
-          backgroundRepeat: "no-repeat",
-          label: "Point 3",
-          action: "action3",
-        },
-      ],
+      layers: [],
     };
   },
   created() {
@@ -107,8 +87,12 @@ export default {
     GetQuestById(id) {
       QuestService.GetQuestById(id)
         .then((response) => {
+          console.log(response.data.ob);
           this.quest = response.data.ob;
-          console.log(this.quest)
+          this.layers = response.data.ob.QuestParallaxes.map((item) => ({
+            Image: `/images/parallax/${item.Parallax.Image}`,
+            Position: item.Parallax.Position,
+          }));
         })
         .catch((err) => {
           console.log(err);
@@ -125,10 +109,10 @@ export default {
       });
     },
     showToast() {
-      const toastEl = document.getElementById('liveToast');
+      const toastEl = document.getElementById("liveToast");
       const toast = new Toast(toastEl);
       toast.show();
-    }
+    },
   },
 };
 </script>
