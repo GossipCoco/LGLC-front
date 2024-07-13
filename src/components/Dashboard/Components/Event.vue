@@ -1,15 +1,13 @@
 <template>
-    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12  card-global">
         <div class="card profil-card fiction-card">
             <div class="card-header avatar-container-header">
                 <h4>Event à venir</h4>
                 <!-- <div class="avatar-container"><img :src="'/images/Levels/' + level" class="img-fluid card-img-top" alt="avatar"></div> -->
             </div>
             <div class="card-body">
-                A venir
-                <br>
                 <div v-for="(event, index) in events" :key="index">
-                    {{ event.Title }}
+                    <p>{{ event.Title }}</p>
                 </div>
             </div>
         </div>

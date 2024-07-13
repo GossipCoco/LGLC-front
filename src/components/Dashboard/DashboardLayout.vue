@@ -1,5 +1,5 @@
 <template>
-  <div class="dashboard-home-max-card-container card">
+  <div id ="dashboard" class="dashboard-home-max-card-container card">
     <div class="row title-dashboard">
       <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <TitleHeader v-if="!showspinner" v-bind:UserName="UserName" v-bind:Avatar="Avatar" />
@@ -12,7 +12,7 @@
     </div>
     <div class="row top-dashboard">
       <LastFiveFiction />
-      <ExtractLastChap v-if="!showspinner" v-bind:userInfo="userInfo" />
+      <ExtractLastChap v-if="!showspinner"/>
       <ListAllFictions v-if="!showspinner" />
       <AvatarCard v-if="!showspinner" v-bind:Avatar="Avatar" v-bind:UserName="usr" v-bind:LastConnexion="LastConnexion"
         v-bind:Inscription="Inscription" v-bind:level="LvelImf" v-bind:Role="role" v-bind:nBFiction="nBFictionV2"
@@ -106,13 +106,10 @@ export default {
         .then((response) => {
           this.showspinner = false
           if (response && response.data) {
-
             const fictions = response.data.ob;
-            console.log(fictions)
             let totalWords = 0;
             // Parcourir les fictions et calculer la somme des mots pour toutes les fictions
             fictions.forEach(fictionEntry => {
-              console.log(fictionEntry)
               fictionEntry.Fiction.forEach(fiction => {
                 const fictionWords = fiction.Chapters.reduce((sum, chapter) => sum + parseInt(chapter.NbWords, 10), 0);
                 totalWords += fictionWords;
@@ -132,7 +129,6 @@ export default {
         .then((response) => {
           this.showspinner = false
           this.userInfo = response.data.ob
-          console.log(this.userInfo)
           this.Avatar = response.data.ob.Avatar
           this.usr = response.data.ob.UserName
           this.UserName = this.usr

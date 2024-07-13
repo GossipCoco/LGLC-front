@@ -1,0 +1,177 @@
+ Le volume dans le lecteur C s'appelle Windows
+ Le num‚ro de s‚rie du volume est 0067-673B
+
+ R‚pertoire de C:\Users\gossi\OneDrive\Documents\project\Project-Warriors\front-app-v3\public\images\Characters
+
+
+25/06/2024  16:44            38ÿ127 AileBlanche.Line.png
+13/06/2024  13:39            32ÿ268 AileBlanche.Line.webp
+25/06/2024  16:44            38ÿ371 AileBlanche.Line2.png
+05/07/2024  10:26            43ÿ203 AiledeColombe-Line-GuerriŠre.png
+25/06/2024  16:44            45ÿ140 AiledeColombe-Line-GuerriŠre1.png
+13/06/2024  13:39            33ÿ820 Alderheart1.webp
+25/06/2024  16:44            28ÿ704 Aurore_Violette_GuerriŠre (1).png
+25/06/2024  16:44            27ÿ255 Aurore_Violette_GuerriŠre.png
+25/06/2024  16:44            13ÿ078 Barley.kit.webp
+25/06/2024  16:44            13ÿ934 Barley.rogue.webp
+07/05/2022  06:34            50ÿ150 belle-de-jour.png
+25/06/2024  16:44            36ÿ846 Blazefire.webp
+05/07/2024  10:26            56ÿ394 Bluestar-warrior.png
+07/05/2022  06:34            42ÿ991 Bone.bc.png
+09/03/2021  10:27            59ÿ635 bouton-d-or.png
+25/06/2024  16:44            52ÿ237 caramel.png
+07/03/2021  13:11            59ÿ054 caramel2.png
+07/05/2022  06:34           112ÿ291 cat-model1.psd
+25/06/2024  16:44            69ÿ954 Chester.warrior.png
+07/05/2022  06:34            35ÿ347 Chipiet.png
+07/05/2022  06:34            50ÿ389 coeur-d-aulne.png
+07/05/2022  06:34            48ÿ114 Coeur_Blanc (1).png
+07/03/2021  13:11            52ÿ192 Coeur_Blanc.png
+07/03/2021  13:11            36ÿ974 Conteur-des-Pointes-Rocheuses.png
+25/06/2024  16:44            38ÿ226 conteur-grive.png
+09/03/2021  10:27            56ÿ539 corbeau-grive.png
+25/06/2024  16:44            47ÿ364 cro-de-vipere.png
+07/05/2022  06:34            72ÿ532 croc-de-vipere.png
+07/05/2022  06:34            60ÿ717 Croc-jaune-0 (1).png
+07/03/2021  13:11            60ÿ716 Croc-jaune-0.png
+13/06/2024  13:39            60ÿ716 Croc-jaune.png
+25/06/2024  16:44            18ÿ680 Crookedstar.star.webp
+13/06/2024  13:39            36ÿ256 Dewnose.webp
+07/03/2021  13:11            70ÿ627 Ecureuil.png
+07/05/2022  06:34            84ÿ721 etoile-brise.png
+09/03/2021  10:27            75ÿ661 etoile-d-ecume.png
+07/05/2022  06:34            66ÿ625 etoile-du-tigre2.png
+07/03/2021  13:11            79ÿ175 etoilebalafre.png
+05/07/2024  10:26            48ÿ858 Etoiledefeu (2).png
+05/07/2024  10:26            63ÿ479 Etoiledefeu.png
+07/05/2022  06:34            43ÿ996 etoiledefeuille.png
+25/06/2024  16:44            82ÿ923 EtoileDuSapin.png
+13/06/2024  13:39            42ÿ090 EtoileDuSapin.webp
+07/03/2021  13:11            58ÿ579 Etoile_Bleue1.png
+07/03/2021  13:11            65ÿ021 Etoile_Bleue2.png
+07/03/2021  13:11            81ÿ075 Etoile_Bleue3.png
+07/03/2021  13:11            46ÿ544 etoile_de_Brume_2.png
+09/03/2021  10:27            73ÿ730 Etoile_de_Feuille.png
+07/03/2021  13:11            67ÿ970 etoile_de_Jais copy.png
+07/03/2021  13:11            67ÿ886 etoile_de_Jais.png
+13/06/2024  13:39            67ÿ970 etoile_de_Jais1.png
+25/06/2024  16:44            36ÿ222 etoile_de_la_Biche.webp
+07/03/2021  13:11            72ÿ774 Etoile_de_Ronce_line.png
+25/06/2024  16:44            17ÿ756 Etoile_de_Ronce_line.webp
+07/05/2022  06:34            64ÿ760 Etoile_de_Ronce_line2.png
+07/03/2021  13:11            83ÿ272 etoile_du_leopard.png
+07/05/2022  06:34            91ÿ006 Etoile_du_Soleil.png
+13/06/2024  13:39            74ÿ344 Etoile_du_Soleil_redo.png
+07/03/2021  13:11            54ÿ104 etoile_du_Tigre1.png
+05/07/2024  10:26            55ÿ681 Etoile_Fauve_2.png
+05/07/2024  10:26            15ÿ514 Etoile_Fauve_2.webp
+07/03/2021  13:11            41ÿ436 Etoile_Filante-0.png
+07/03/2021  13:11            65ÿ289 etoile_Solitaire_chef.png
+13/06/2024  13:39            24ÿ454 Etoile_Solitaire_chef.webp
+13/06/2024  13:39            13ÿ248 ETtoile_de_Brume_2.webp
+07/03/2021  13:11            76ÿ628 Feuille-01.png
+09/03/2021  10:27            77ÿ689 Feuille-rousse.png
+25/06/2024  16:44            33ÿ519 Feuille_de_Houx_version_CE.png
+25/06/2024  16:44            37ÿ125 Feuille_de_Lis_version_lieutenante.png
+07/05/2022  06:34            66ÿ143 Feuille_de_lune-0 (1).png
+07/03/2021  13:11            65ÿ602 Feuille_de_lune-0.png
+25/06/2024  16:44            49ÿ873 Feuille_de_lune-01.png
+07/03/2021  13:11            81ÿ910 Feuille_Morte.png
+07/03/2021  13:11            59ÿ433 ficelle.png
+07/03/2021  13:11            29ÿ437 fleau.png
+09/03/2021  10:27            76ÿ726 Fleur_d-Ajoncs.png
+07/03/2021  13:11            62ÿ296 Flocon_de_Neige.png
+07/03/2021  13:11            50ÿ409 gerboise.png
+09/03/2021  10:27            52ÿ512 Griffe_Feroce.png
+07/05/2022  06:34            74ÿ675 Hawkfrost.png
+13/06/2024  13:39            29ÿ646 Hawkwing (2).webp
+13/06/2024  13:39            28ÿ956 Hawkwing.webp
+07/03/2021  13:11            34ÿ117 Houx3.png
+05/07/2024  10:26    <DIR>          illustration
+25/06/2024  16:44            29ÿ612 IMG_8013.PNG.png
+25/06/2024  16:44            37ÿ092 IMG_8042.webp
+25/06/2024  16:44            49ÿ759 IMG_8045.png
+09/03/2021  10:27            55ÿ757 Isidore.png
+07/05/2022  06:34            54ÿ578 Jolie_Plume2 (1).png
+25/06/2024  16:44            44ÿ558 Jolie_Plume2 (2).png
+07/03/2021  13:11            57ÿ782 Jolie_Plume2.png
+25/06/2024  16:44            49ÿ992 Kestrelwing.png
+06/07/2024  15:16                 0 Liste.txt
+06/07/2024  15:05                19 ListeFichiers.bat
+07/03/2021  13:11            63ÿ429 Longue_Plume.png
+25/06/2024  16:44            79ÿ951 Mothwing.mc.png
+25/06/2024  16:44            30ÿ598 Museaucendr3F.webp
+07/03/2021  13:11            57ÿ814 Museaucendre.png
+13/06/2024  13:39            30ÿ974 Needleclaw.webp
+07/05/2022  06:34            57ÿ136 New_Flocon_de_Neige (1).png
+07/03/2021  13:11            55ÿ119 New_Flocon_de_Neige.png
+07/05/2022  06:34            14ÿ953 Nuage_Agile.png
+07/03/2021  13:11            37ÿ721 Nuage_de_Jais.png
+25/06/2024  16:44            68ÿ534 Oakstar.png
+13/06/2024  13:39            32ÿ932 Oakstar.webp
+25/06/2024  16:44            44ÿ800 Oatspeckle-0.png
+09/03/2021  10:27            77ÿ034 Ombre_Brisee.png
+25/06/2024  16:44            73ÿ527 Papillon.png
+09/03/2021  10:27            76ÿ395 pelage-d-or.png
+25/06/2024  16:44            34ÿ255 Pelaged'orages.png
+07/03/2021  13:11            64ÿ734 Pelagedelion-3.png
+07/05/2022  06:34            46ÿ385 Pelagedorages.png
+07/03/2021  13:11            54ÿ420 Pelage_de_Poussiere.png
+07/03/2021  13:11            58ÿ098 Pelage_de_Silex.png
+13/06/2024  13:39            29ÿ198 Pelage_de_Silex_29.webp
+08/03/2021  12:06            65ÿ113 Petite_Feuille1.png
+09/03/2021  10:27            75ÿ512 plume-rousse.png
+13/06/2024  13:39            66ÿ738 PlumeGriseleader.png
+07/03/2021  13:11            43ÿ501 plume_blanche.png
+07/03/2021  13:11            83ÿ663 plume_blanche2.png
+07/03/2021  13:11            68ÿ061 Plume_de_geai.png
+25/06/2024  16:44            75ÿ808 Plume_de_geai2.png
+07/05/2022  06:34            48ÿ568 Plume_de_Jais.png
+07/03/2021  13:11            46ÿ123 Plume_Grise.png
+13/06/2024  13:39            51ÿ730 Plume_Grise_4.png
+13/06/2024  13:39            51ÿ723 Plume_Grise_5.png
+13/06/2024  13:39            40ÿ386 Poil_de_Cerise.webp
+25/06/2024  16:44            40ÿ422 Poil_de_Foug%3Fre_guerrier.webp
+07/03/2021  13:11            15ÿ659 Poil_de_Souris_ancienne.png
+07/03/2021  13:11            72ÿ144 poil_d_Ecureuil.png
+07/03/2021  13:11            55ÿ710 pomme-de-pin-etoile.png
+07/03/2021  13:11            68ÿ338 pomme-de-pin-warrior.png
+07/03/2021  13:11            67ÿ876 pomme-de-pinwarrior.png
+07/03/2021  13:11            70ÿ707 pomme.png
+07/03/2021  13:11            53ÿ460 Pomme_de_Pin3.png
+07/03/2021  13:11            72ÿ852 Pomme_de_Pin4.png
+07/05/2022  06:34            61ÿ410 Princesse.png
+07/03/2021  13:11           192ÿ418 Princesse2.png
+07/03/2021  13:11            56ÿ196 Princesse3.png
+13/06/2024  13:39            41ÿ218 Puddleshine.webp
+13/06/2024  13:39            41ÿ456 Puddleshine2.webp
+25/06/2024  16:44            36ÿ872 Rainflower.star.png
+25/06/2024  16:44            17ÿ309 Ravenpaw.unknown.png
+25/06/2024  16:44             8ÿ318 Ravenpaw.warrior.webp
+25/06/2024  16:44            54ÿ275 Redstar.star.png
+07/03/2021  13:11            42ÿ037 Rhume_des_Foins.png
+07/03/2021  13:11            40ÿ980 riviere_d_argent.png
+25/06/2024  16:44            34ÿ653 RiviŠre_d'Argentggg.png
+13/06/2024  13:39            35ÿ892 Rootspring.webp
+25/06/2024  16:44            36ÿ774 Sans_titre_505_20191109110029.png
+07/03/2021  13:11            33ÿ767 Shadowstar.png
+25/06/2024  16:44            29ÿ078 Shadowstar2.png
+25/06/2024  16:44            48ÿ648 Shellheart.star.png
+13/06/2024  13:39            28ÿ420 Sparkpelt_29.webp
+25/06/2024  16:44            42ÿ549 Squirrelstar_version_cheffe.png
+25/06/2024  16:44            64ÿ972 Starclangranit.png
+25/06/2024  16:44            51ÿ955 Sunbeam.png
+25/06/2024  16:44            90ÿ974 Sunbeam.warrior.png
+07/03/2021  13:11            56ÿ988 tempete_de_sable.png
+25/06/2024  16:44            58ÿ141 Thunderstar.star.png
+07/03/2021  13:11            74ÿ568 Tornade_Blancheg.png
+13/06/2024  13:39            33ÿ536 Tree. (2).webp
+25/06/2024  16:44            37ÿ492 Tree..webp
+09/03/2021  10:27            39ÿ399 Truffe_de_Pin.png
+13/06/2024  13:39            28ÿ138 Twigbranch1.webp
+09/03/2021  10:27            73ÿ528 un-oeil.png
+25/06/2024  16:44            56ÿ251 Violette_(CD).png
+25/06/2024  16:44            37ÿ664 W.png
+13/06/2024  13:39           409ÿ932 _4fb61933-ebd7-41c5-815b-acbfe1ccb014.jpg
+25/06/2024  16:44            45ÿ286 toilebalafr‚.png
+

@@ -1,5 +1,5 @@
 <template>
-  <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+  <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12  card-global">
     <div class="card  fiction-card">
       <div class="border-gradient-decoration-bottom"></div>
       <div class="card-header">
@@ -44,9 +44,7 @@ export default {
     GetFiveLastGameByUser(e) {
       GameService.GetFiveLastGameByUser(e)
         .then((response) => {
-          console.log("GetFiveLastGameByUser", response.data.data)
           this.GamesAndFictions = response.data.data
-          console.log("GetFiveLastGameByUser", this.GamesAndFictions)
         })
         .catch((error) => {
           console.error(error);

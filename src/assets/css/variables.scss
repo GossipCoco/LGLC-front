@@ -4,11 +4,13 @@
 @import './Montserrat-Medium.css';
 @import './Montserrat-Bold.css';
 @import './Cinzel-Regular.css';
-@import './Cinzel-Medium.css';
-@import './Cinzel-Bold.css';
+;
 
 
+
+/* Import des polices */
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 :root{
     --opensans-text: 'Open Sans', sans-serif;
     --roboto-text: 'Roboto', sans-serif;
@@ -16,20 +18,34 @@
     --montserratMedium: 'Montserrat Medium', sans-serif;
     --montserratBold: 'Montserrat Bold', sans-serif;
     --CinzelRegular: 'Cinzel', serif;
-    --CinzelMedium: 'Cinzel Medium', serif;
-    --CinzelBold: 'Cinzel Bold', serif;
+
 
     --main-white: 255, 255, 255;
     --main-grey-background: 249, 251, 253;
     --main-black: 0,0,0;
     
-    --dark-green-01: 6, 16, 14;
+    /* --dark-green-01: 6, 16, 14;
     --dark-green-02: 24, 44, 33;
     --middle-green-01:58, 106, 72;
     --middle-green-02: 58, 106, 72;
     --clear-green-01: 170, 202, 101;
     --clear-green-02: 170, 202, 101;
-    --active-hover: 252, 195, 71;
+    --active-hover: 252, 195, 71; */
 
 
+    /* --dark-green-01: 2,38,1;
+    --dark-green-02: 1, 13, 0;
+     --middle-green-01:15, 64, 1;
+    --middle-green-02: 58, 106, 72;
+    --clear-green-01: 93, 166, 60;
+    --clear-green-02: 130, 217, 67;
+    --active-hover: 252, 195, 71;*/
+
+    --dark-green-01: 0,61,40;
+    --dark-green-02: 1, 13, 0;
+    --middle-green-01:79, 135, 74;
+    --middle-green-02: 58, 106, 72;
+    --clear-green-01: 185, 211, 99;
+    --clear-green-02: 130, 217, 67;
+    --active-hover: 249, 248, 113;
 }

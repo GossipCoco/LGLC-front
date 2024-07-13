@@ -1,0 +1,34 @@
+ Le volume dans le lecteur C s'appelle Windows
+ Le num‚ro de s‚rie du volume est 0067-673B
+
+ R‚pertoire de C:\Users\gossi\OneDrive\Documents\project\Project-Warriors\front-app-v3\public\images\Fictions
+
+09/07/2024  10:41    <DIR>          .
+08/07/2024  16:40    <DIR>          ..
+25/06/2024  16:44           447ÿ464 01.webp
+13/06/2024  13:39           428ÿ121 03.jpg
+13/06/2024  13:39           448ÿ923 06.jpg
+13/06/2024  13:39           468ÿ318 10.jpg
+25/06/2024  16:44           512ÿ358 14.jpg
+25/06/2024  16:44           531ÿ972 DALLPrrincess.webp
+13/06/2024  13:39           637ÿ311 Default_Generate_me_a_beautiful_and_fantasy_illustration_of_th_0.jpg
+13/06/2024  13:39           690ÿ850 Default_Generate_me_a_beautiful_and_realistic_illustration_of_0.jpg
+25/06/2024  16:44           672ÿ086 Default_Generate_me_a_beautiful_and_realistic_illustration_of_3.jpg
+19/06/2024  06:09           680ÿ640 Default_Generate_me_a_beautiful_AND_realistic_picture_of_the_c_0.jpg
+13/06/2024  13:39           252ÿ720 FG-8-1.webp
+09/07/2024  10:41               247 Liste.txt
+06/07/2024  15:05                19 ListeFichiers.bat
+13/06/2024  13:39           210ÿ996 OIG496.jpg
+25/06/2024  16:44           500ÿ226 Princesse_guerriere.webp
+23/06/2024  18:14           371ÿ900 _10bd627c-8582-4e0c-a4a7-74099235b3c3.jpg
+25/06/2024  16:44           286ÿ093 _131822c4-9b10-48b2-83e8-9af7651c4076.jpeg
+25/06/2024  16:44           396ÿ467 _5312a208-13ed-49b9-8016-9061c594c02d.jpeg
+23/06/2024  18:03           287ÿ551 _5440d9cb-5663-4be9-9a3c-c210e137e034.jpg
+25/06/2024  16:44           240ÿ994 _5ad369d5-f983-4b53-bc67-ea7d8cde2b47.jpeg
+25/06/2024  16:44           361ÿ321 _8f5cb0d3-6d04-491a-81f2-08c81dff8e4e.jpeg
+25/06/2024  16:44           278ÿ369 _a9ff0ea4-2157-4a65-a296-b182e2069126.jpeg
+25/06/2024  16:44           305ÿ290 _bcaa492c-11fc-482f-8a35-efc0f5e005b8.jpeg
+23/06/2024  16:06           207ÿ010 _bffcc7e9-c473-4ac2-baa8-ad43e3ea8869.jpg
+23/06/2024  18:10           255ÿ908 _de52fd85-2b74-4699-98f2-8a9495f0a99c.jpg
+              25 fichier(s)        9ÿ473ÿ154 octets
+               2 R‚p(s)  253ÿ157ÿ265ÿ408 octets libres

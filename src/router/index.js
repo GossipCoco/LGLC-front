@@ -4,7 +4,7 @@ import Accueil from '../components/Page/Accueil'
 import Home from "../components/Page/Home";
 import DashboardLayout from "../components/Dashboard/DashboardLayout";
 import AllCharactersLayout from "../components/Characters/AllCharactersLayout";
-import CharacterDetails from "../components/Characters/CharacterDetails";
+import CharacterDetails from "../components/Characters/CharacterComponent/CharacterDetails";
 import UserLayout from "../components/Users/UserLayout";
 import AllClansLayout from "../components/Locations/AllClansLayout";
 import ClanDetails from "../components/Locations/ClanDetails"
@@ -26,6 +26,8 @@ import AllExistingFictionsLayout from '../components/Fictions/AllExistingFiction
 import AExistingFictionContain from "../components/Fictions/AExistingFictionContain.vue";
 import EditChapter from '../components/Game/Fictions/EditChapter.vue'
 import QuestLayout from '../components/Game/Quest/QuestLayout.vue'
+import QuestById from '../components/Game/Quest/QuestById.vue'
+import EventGlobalLayout from '../components/Event/EventGlobaleLayout.vue'
 import UserCard from '../components/Users/UserCard.vue'
 import AllLocationsLayout from "../components/Locations/AllLocationsLayout.vue"
 import Register from '../components/Page/Register.vue'
@@ -129,6 +131,11 @@ const routes = [
         component: QuestLayout
       },
       {
+        path: '/QuestById/:id',
+        name: 'QuestById',
+        component: QuestById
+      },
+      {
         path: '/TreasureHunt',
         name: 'TreasureHunt',
         component: TreasureHunt
@@ -152,6 +159,11 @@ const routes = [
         path: '/AllExistingFictionsLayout',
         name: 'AllExistingFictionsLayout',
         component: AllExistingFictionsLayout
+      },
+      {
+        path: '/EventGlobal',
+        name: 'EventGlobal',
+        component: EventGlobalLayout
       },
       {
         path:'/allFictions/:id',

@@ -27,6 +27,7 @@
 .character-chapters-fiction-container{
     margin: 0rem 0 0 2rem;
     text-align: justify;
+    width: 100%;
 }
 .title-chapter-container{
     display: flex;
@@ -119,16 +120,21 @@
 .character-chapters-fiction-container .character-chapters-container{
     display: flex;
     flex-direction: row;
+    width: 100%;
+}
+.illustration-background{
+    width: 100%;
 }
 .character-chapters-container img{
     width: 50%;
 }
 .summary-container{
-    height: 350px;
+    height: 60vh;
     overflow-y: auto;
     overflow-x: hidden;
     padding: 0 1rem;
-    margin-top: 2rem;
+    margin: 1rem;
+    width: 100%;
 }
 .create-chapter-btn-container .btn{
     width: 15rem;

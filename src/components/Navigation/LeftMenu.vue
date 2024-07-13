@@ -23,6 +23,18 @@
           </router-link>
         </li>
         <li class="li-level1">
+          <router-link to="/EventGlobal">
+            <div class="menu-level1">
+              <div class="menu-li-contain">
+                <div class="icon-menu-container">
+                  <img src="/images/icons/calendar-days-solid.svg" />
+                </div>
+                <div class="chevron-container"></div>
+              </div>
+            </div>
+          </router-link>
+        </li>
+        <li class="li-level1">
           <router-link to="/game" data-bs-toggle="collapse" href="#collapseExample0" role="button" aria-expanded="false"
             aria-controls="collapseExample0">
             <div class="menu-level1">

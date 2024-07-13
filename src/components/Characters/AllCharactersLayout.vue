@@ -46,7 +46,7 @@
 </template>
 <script>
 import CharacterService from "../../services/CharacterService";
-import CharacterCard from "./CharacterCard.vue";
+import CharacterCard from "./CharacterComponent/CharacterCard.vue";
 import Pagination from "../Components/GenericComponent/Pagination.vue";
 import functions from "../../services/functions";
 
@@ -109,7 +109,8 @@ export default {
     countAllCharacter() {
       CharacterService.CountAllCharacters()
         .then((response) => {
-          this.NbAllCharacters = response.data.ob;
+          console.log('NbAllCharacters', response)
+          this.NbAllCharacters = response.data.ob.count;
         })
         .catch((e) => {
           console.log(e);

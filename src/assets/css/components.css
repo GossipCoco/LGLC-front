@@ -1,4 +1,9 @@
 @import './variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import './variables.scss';
+
+/* BUTTON */
 .btn-primary {
     background-color: rgba(var(--middle-green-02), 1);
     border: 1px solid rgba(var(--middle-green-02), 1);
@@ -8,6 +13,8 @@
     border: 1px solid rgba(var(--clear-green-01), 1);
     color: rgba(var(--middle-green-02), 1);
 }
+
+/* CARD */
 .card-image{
     display: flex;
     justify-content: center;
@@ -20,42 +27,40 @@
     display: flex;
     flex-direction: column;
 }
-.character-info-general-container{    
+.character-info-general-container, .select-character-container,
+.info-fanfiction-container, .game-container, .one-fiction-container
+{    
     display: flex;
     flex-direction: row;
 }
-.identity-character-container{
+.fiction-container, .identity-character-container{
     display: flex;
     flex-direction: column;
+}
+.identity-character-container,
+.character-chapters-fiction-container,
+.game-container, .one-fiction-container{
     flex: 1;
 }
 .name-characatrer-text-card{
     text-align: center;
     font-size: 3vh;
     font-variant: small-caps;
-
 }
-
 .name-characatrer-link{
-    flex: 1;
-    
+    flex: 1;    
 }
 .select-character-container{
-    display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
 }
 .select-character-container .form-check{
     width: 15rem;
 }
-.create-character-form{
+.create-character-form, .card-form-create-character .card-body{
     width: 100%;
 }
 .create-character-form .text-area-container{
     height: 30rem;
-}
-.card-form-create-character .card-body{
-    width: 100%;
 }
 .create-character-form > div:nth-child(2){
     height: 5vh;
@@ -63,23 +68,7 @@
 .select-character-container img{
     width: 50%;
 }
-.fiction-container{
-    display: flex;
-    flex-direction: column;
-}
-.info-fanfiction-container{
-    display: flex;
-    flex-direction: row;
-}
- .character-chapters-fiction-container{
-    flex: 1;
-}
 
-.game-container{
-    display: flex;
-    flex:1;
-    flex-direction: row;
-}
 .image-fiction-container img {
     width: 180px;
 }
@@ -88,19 +77,14 @@
     height: 200px;
     border-radius: 12px;
 }
-.avatar-container h2{
+.avatar-container h2, input#upload-avatar{
     color: rgba(var(--main-white), 1)
 }
-input#upload-avatar{
-    color: rgba(var(--main-white), 1)
-}
+
 .biographie-text{
     text-align: justify;
 }
 .one-fiction-container{
-    display: flex;
-    flex-direction: row;
-    flex:1;
     padding: 1rem 0 0 0;
 }
 .one-fiction-container .image-fiction-container{
@@ -168,6 +152,7 @@ th{
 .list-all-fictions-globale--container{
     display: flex;
     flex-direction: row;
+    width: 25rem;
 }
 
 .summaray-title-text{
@@ -180,4 +165,7 @@ th{
 .row.list-fiction-card-container{
     height: 35rem;
     padding: 1rem;
+}
+#dashboard .row.top-dashboard .card-global{
+    margin: 0 auto;
 }

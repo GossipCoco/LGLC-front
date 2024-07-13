@@ -1,17 +1,16 @@
 <template>
-  <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12">
+  <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12  card-global">
     <div class="card fiction-card">
       <div class="card-header">
         <h4>Personnages Aléatoires</h4>
       </div>
-      <div class="border-gradient-decoration-character"></div>
       <div class="card-body dashboard-character-container">
         <div class="row">
           <div class="col-12 character-col">
             <div class="character-l1" v-for="character in randomCharacters" :key="character.Id">
               <img class="img-fluid" :src="'/images/Characters/' + character.Image" :alt="character.Image" />
               <br>
-              <span>
+              <span class="character-details-router">
                 <router-link :to="'/characterDetails/' + character.Id">
                   {{ character.CurrentName }}
                 </router-link>
