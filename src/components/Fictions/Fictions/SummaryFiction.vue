@@ -1,68 +1,67 @@
 <template>
-<div class="card-body">
-      <div v-if="showspinner" class="d-flex justify-content-center">
-        <div class="spinner-border text-success" role="status">
-          <span class="visually-hidden">Loading...</span>
-        </div>
+  <div class="card-body">
+    <div v-if="showspinner" class="d-flex justify-content-center">
+      <div class="spinner-border text-success" role="status">
+        <span class="visually-hidden">Loading...</span>
       </div>
-      <div class="row list-fiction-card-container" v-else>
-        <!-- <SummaryFiction v-bind:games="games" /> -->
+    </div>
+    <div class="row list-fiction-card-container" v-else>      
+      <div
+        class="col-4 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4"
+        v-for="(game, index) in games"
+        :key="index"
+      >
         <div
-          class="col-3 col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3 mb-3 mb-sm-3 mb-3 mb-sm-3"
-          v-for="(game, index) in games"
+          class="card mb-3"
+          style="max-width: 440px; max-height: 240px"
+          v-for="(fiction, index) in game.Fiction"
           :key="index"
         >
-          <div
-            class="card mb-3"
-            style="max-width: 440px; max-height: 240px"
-            v-for="(fiction, index) in game.Fiction"
-            :key="index"
-          >
-            <div class="row g-0">
-              <div class="col-md-6">
-                <div
-                  class="image-fiction-container"
-                  v-bind:style="{
-                    backgroundImage:
-                      'url(/images/Fictions/' + fiction.Image + ')',
-                  }"
-                ></div>
-              </div>
-              <div class="col-md-6">
-                <div class="card-body">
-                  <h5 class="card-title" style="color: black">
-                    {{ fiction.Title }}
-                  </h5>
-                  <p
-                    class="card-text"
-                    style="color: black; font-size: 14px"
-                    v-html="truncateText(fiction.Summary, 35)"
-                  ></p>
-                  <p class="card-text" style="color: black">
-                    <small class="text-body-secondary">
-                      <router-link
-                        class="link-text-a"
-                        :to="'/fiction/' + fiction.Id"
-                        >Lire</router-link
-                      >
-                    </small>
-                  </p>
-                </div>
+          <div class="row g-0">
+            <div class="col-md-6">
+              <div
+                class="image-fiction-container"
+                v-bind:style="{
+                  backgroundImage:
+                    'url(/images/Fictions/' + fiction.Image + ')',
+                }"
+              ></div>
+            </div>
+            <div class="col-md-6">
+              <div class="card-body">
+                <h5 class="card-title" style="color: black">
+                  {{ fiction.Title }}
+                </h5>
+                <p
+                  class="card-text"
+                  style="color: black; font-size: 14px"
+                  v-html="truncateText(fiction.Summary, 35)"
+                ></p>
+                <p class="card-text" style="color: black">
+                  <small class="text-body-secondary">
+                    <router-link
+                      class="link-text-a"
+                      :to="'/fiction/' + fiction.Title"
+                      >Lire</router-link
+                    >
+                  </small>
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="row pagination-container">
-      <Pagination
-        v-if="!showspinner"
-        :nav="nav"
-        :filters="filters"
-        :getDatas="'GamesPagination'"
-        @GamesPagination="GamesPagination"
-      />
-    </div>
+  </div>
+  <div class="row pagination-container">
+    <Pagination
+      v-if="!showspinner"
+      :nav="nav"
+      :filters="filters"
+      :getDatas="'GamesPagination'"
+      @GamesPagination="GamesPagination"
+    />
+  </div>
 </template>
 <script>
 import Pagination from "../../Components/GenericComponent/Pagination.vue";

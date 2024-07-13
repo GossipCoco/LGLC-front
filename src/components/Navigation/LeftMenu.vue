@@ -127,7 +127,7 @@
             </router-link>
           </div>
         </li>
-        <li class="li-level1" v-if="role === 'admin'">
+        <li class="li-level1" v-if="role === 'Administrateur'">
           <router-link to="/admin">
             <div class="menu-level1">
               <div class="icon-menu-container">
@@ -178,7 +178,8 @@ export default {
     GetUserById(e) {
       UserService.getUserById(e)
         .then((response) => {
-          this.role = response.data.ob.RoleId
+          this.role = response.data.ob.Role.Name
+          console.log(this.role)
         })
         .catch((error) => {
           console.error(error);

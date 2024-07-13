@@ -381,19 +381,14 @@ main.container {
     display: flex;
     flex-direction: column;
 }
-.opacity-container{
-    background-color: rgba(var(--dark-green-01), 0.75);
-    height: 67vh;
-    display: flex;
-    flex-direction: row;
-}
+
 .illustration-background .background-fiction-contain .characters-list-container{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     align-content: center;
-    padding: 1rem 0 0 0;
+    padding: 0.5rem 0 0.5rem 0;
 }
 .all-characters-of-fiction{
     display: flex;
@@ -402,13 +397,6 @@ main.container {
 }
 .illustration-background .background-fiction-contain .characters-list-container img{
     width: 150px;
-}
-.all-characters-list-container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    overflow-x: auto;
-    overflow-y: hidden;
 }
 .character-details-router{
     text-align: justify;

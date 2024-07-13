@@ -610,12 +610,7 @@ li.quest-container{
 .one-quest-container .pagination-container{
     margin: 0;
 }
-.all-characters-list-containers{
-    display: flex;
-    flex-direction: row;
-    flex:1;
-    flex-wrap: wrap;
-}
+
 .character-of-clan-container{
     display: flex;
     flex-direction: row;
