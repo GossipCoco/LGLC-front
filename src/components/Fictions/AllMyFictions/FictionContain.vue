@@ -5,10 +5,7 @@
         <span class="visually-hidden">Loading...</span>
       </div>
     </div>
-    <div
-      id="card-fiction-container"
-      class="card-header title-chapter-container"
-    >
+    <div id="card-fiction-container" class="card-header title-chapter-container">
       <Rating :fictionId="IdFiction" :rating="rating" />
       <div class="title-author-container">
         <h1>{{ Title }}</h1>
@@ -16,8 +13,8 @@
           <h3>
             par
             <router-link :to="'/getUserBy/' + Author" class="author-text">
-              {{ Author }}</router-link
-            >
+              {{ Author }}
+            </router-link>
           </h3>
           <p>{{ formatDate(dateCreation) }}</p>
         </div>
@@ -25,7 +22,6 @@
       <div class="">
         <router-link type="button" class="btn btn-primary" :to="'/allFictions/'+Author">Retour à la liste des fictions</router-link>
       </div>
-
     </div>
     <div class="card-body">
       <div class="one-fiction-container">

@@ -23,6 +23,34 @@
           </router-link>
         </li>
         <li class="li-level1">
+          <router-link to="/allCharacters" data-bs-toggle="collapse" href="#collapseExample3" role="button"
+            aria-expanded="false" aria-controls="collapseExample3">
+            <div class="menu-level1">
+              <div class="menu-li-contain">
+                <div class="icon-menu-container">
+                  <img src="/images/icons/35699773_1129.svg" style="width: 2rem;"/>
+                </div>
+                <div class="chevron-container">
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+              </div>
+            </div>
+          </router-link>
+          <div class="collapse" id="collapseExample3">
+            <router-link to="/allCharacters"  class="link-collapse">
+              Personnnages</router-link>
+            <router-link to="/CharacterCreate" class="link-collapse">
+              Nouveau personnage
+            </router-link>
+            <router-link class="link-collapse" to="/AllClansLayout">
+              Clans
+            </router-link>
+            <router-link class="link-collapse" to="/AllLocationsLayout">
+              Lieux
+            </router-link>
+          </div>
+        </li>
+        <li class="li-level1">
           <router-link to="/EventGlobal">
             <div class="menu-level1">
               <div class="menu-li-contain">
@@ -83,51 +111,7 @@
             </router-link>
           </div>
         </li>
-        <li class="li-level1">
-          <router-link to="/allCharacters" data-bs-toggle="collapse" href="#collapseExample3" role="button"
-            aria-expanded="false" aria-controls="collapseExample3">
-            <div class="menu-level1">
-              <div class="menu-li-contain">
-                <div class="icon-menu-container">
-                  <img src="/images/icons/cat-solid.svg" />
-                </div>
-                <div class="chevron-container">
-                  <i class="fa-solid fa-chevron-down"></i>
-                </div>
-              </div>
-            </div>
-          </router-link>
-          <div class="collapse" id="collapseExample3">
-            <router-link to="/allCharacters"  class="link-collapse" >Personnnages</router-link>
-            <router-link to="/CharacterCreate" class="link-collapse">
-              Nouveau personnage
-            </router-link>
-          </div>
-        </li>
-        <li class="li-level1">
-          <router-link to="/AllClansLayout" data-bs-toggle="collapse" href="#clan" role="button" aria-expanded="false"
-            aria-controls="clans">
-            <div class="menu-level1">
-              <div class="menu-li-contain">
-                <div class="icon-menu-container">
-                  <img src="/images/icons/clan.svg" />
-                </div>
-                <div class="chevron-container">
-                  <i class="fa-solid fa-chevron-down"></i>
-                </div>
-              </div>
-            </div>
-          </router-link>
-          <div class="collapse" id="clan">
-            <router-link class="link-collapse" to="/AllClansLayout">
-              Clans
-            </router-link><br>
-            <router-link class="link-collapse" to="/AllLocationsLayout">
-              Lieux
-            </router-link>
-          </div>
-        </li>
-        <li class="li-level1" v-if="role === 'admin'">
+        <li class="li-level1" v-if="role === 'Administrateur'">
           <router-link to="/admin">
             <div class="menu-level1">
               <div class="icon-menu-container">
@@ -136,9 +120,6 @@
               <div class="chevron-container"></div>
             </div>
           </router-link>
-          <div class="collapse" id="admin">
-
-          </div>
         </li>
         <li class="li-level1">
           <router-link :to="'/user/' + usrId">
@@ -151,15 +132,11 @@
               </div>
             </div>
           </router-link>
-          <div class="collapse" id="user">
-
-          </div>
         </li>
       </ul>
     </div>
   </div>
 </template>
-
 <script>
 import UserService from "../../services/UserService";
 export default {
@@ -178,7 +155,7 @@ export default {
     GetUserById(e) {
       UserService.getUserById(e)
         .then((response) => {
-          this.role = response.data.ob.RoleId
+          this.role = response.data.ob.Role.Name
         })
         .catch((error) => {
           console.error(error);
@@ -186,7 +163,7 @@ export default {
     },
     toggleMenu() {
       this.isMenuOpen = !this.isMenuOpen;
-    }
+    },
   }
 };
 </script>

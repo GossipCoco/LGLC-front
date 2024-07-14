@@ -218,7 +218,6 @@ nav.navbar.navbar-expand-md.navbar-dark.fixed-top{
   font-family: "Assistant", sans-serif;
   font-size: 14px;
   color: rgba(var(--clear-green-02), 1);
-  height: 3rem;
   margin: 0.5rem 0 0.5rem 0;
   display: flex;
   flex-direction: column;

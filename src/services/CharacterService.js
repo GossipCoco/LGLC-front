@@ -2,7 +2,6 @@ import http from '../http/http-common'
 
 class CharacterService {
     getCharacterByName(id){
-        console.log("getCharacterByName : ", id)
         return http.get(`/character/GetCharacterByName/${id}`)
     }
     CountAllCharacters(){
@@ -24,7 +23,6 @@ class CharacterService {
         return http.get('/character/GetAllNamesAndIdsCharacters')
     }
     createANewCharacter(data) {
-        console.log(data)
         return http.post('/character/createANewCharacter', data, {
             headers: {
                 'Content-Type': 'multipart/form-data',
