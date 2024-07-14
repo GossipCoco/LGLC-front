@@ -50,6 +50,9 @@
     "vuex": "^4.1.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.24.8",
+    "@babel/plugin-proposal-optional-chaining": "^7.21.0",
+    "@babel/preset-env": "^7.24.8",
     "@vue/cli-plugin-babel": "~4.5.15",
     "@vue/cli-plugin-eslint": "~4.5.15",
     "@vue/cli-service": "~4.5.15",

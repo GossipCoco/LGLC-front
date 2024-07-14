@@ -20,7 +20,6 @@
                 </p>
                 <p class="card-text" style="color: black">
                   <small class="text-body-secondary">
-                    {{ fiction }}
                     <router-link class="link-text-a" :to="'/fiction/' + fiction.Title">Lire</router-link>
                   </small>
                 </p>
