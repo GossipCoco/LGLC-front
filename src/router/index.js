@@ -23,7 +23,11 @@ import MouseShot from '../components/Game/MouseShot/MouseShot.vue'
 import GooseGameLayout from '../components/Game/GooseGame/GosseGameLayout.vue'
 import CreateChapter from '../components/Fictions/AllMyFictions/CreateChapter.vue'
 import AllExistingFictionsLayout from '../components/Fictions/AllExistingFictionsLayout.vue'
+<<<<<<< HEAD
 import AExistingFictionContain from "../components/Fictions/Fictions/AExistingFictionContain.vue"
+=======
+import AExistingFictionContain from "../components/Fictions/AExistingFictionContain.vue";
+>>>>>>> dev2
 import EditChapter from '../components/Fictions/AllMyFictions/EditChapter.vue'
 import QuestLayout from '../components/Game/Quest/QuestLayout.vue'
 import QuestById from '../components/Game/Quest/QuestById.vue'

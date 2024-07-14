@@ -175,6 +175,10 @@ export default {
           console.log(err);
         });
     },
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:src/components/Game/Fictions/FictionContain.vue
+>>>>>>> dev2
     getFictionByName(id) {
       this.showspinner = true;
       FictionService.getFictionByName(id, this.nav)
@@ -182,6 +186,43 @@ export default {
           this.fiction = response.data.ob;
           console.log(this.fiction);
           this.rating = this.fiction.AverageRating;
+<<<<<<< HEAD
+=======
+========
+    created() {
+        this.url = this.$route.params.id;
+        this.getFictionByName(this.url)
+        // this.GetLastChapterOfAFiction(this.url)
+    },
+    methods: {
+        formatDate(isoDateString) {
+            if (isoDateString) {
+                const date = new Date(isoDateString);
+                const day = date.getDate().toString().padStart(2, '0');
+                const month = (date.getMonth() + 1).toString().padStart(2, '0');
+                const year = date.getFullYear();
+                return `${day}/${month}/${year}`;
+            } else return ""
+        },
+        GetLastChapterOfAFiction(id) {
+            FictionService.GetLastChapterOfAFiction(id)
+                .then((response) => {
+                    const lastChapNum = response.data.ob
+                    this.lastChap = lastChapNum.NumberChapter + 1
+                })
+                .catch(err => {
+                    console.log(err)
+                })
+        },
+        getFictionByName(id) {
+            this.showspinner = true
+            FictionService.getFictionByName(id, this.nav)
+                .then((response) => {
+                    this.fiction = response.data.ob;
+                    console.log(response.data.ob)
+                    this.rating = 5
+>>>>>>>> dev2:src/components/Fictions/AllMyFictions/FictionContain.vue
+>>>>>>> dev2
 
           this.IdFiction = this.fiction.Id;
           this.IdGame = this.fiction.Game.Id;

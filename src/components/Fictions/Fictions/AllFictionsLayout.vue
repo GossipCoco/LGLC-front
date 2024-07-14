@@ -19,8 +19,9 @@
                 <p class="card-text" style="color: black; font-size: 14px" v-html="truncateText(fiction.Summary, 35)">
                 </p>
                 <p class="card-text" style="color: black">
+
                   <small class="text-body-secondary">
-                    <router-link class="link-text-a" :to="'/fiction/' + fiction.Id">Lire</router-link>
+                    <router-link class="link-text-a" :to="'/fiction/' + fiction.Title">Lire{{ fiction.Title }}</router-link>
                   </small>
                 </p>
               </div>

@@ -17,6 +17,7 @@
           v-for="(fiction, index) in game.Fiction"
           :key="index"
         >
+<<<<<<< HEAD
           <div class="row g-0">
             <div class="col-md-6">
               <div
@@ -46,6 +47,44 @@
                     >
                   </small>
                 </p>
+=======
+          <div
+            class="card mb-3"
+            style="max-width: 440px; max-height: 240px"
+            v-for="(fiction, index) in game.Fiction"
+            :key="index"
+          >
+            <div class="row g-0">
+              <div class="col-md-6">
+                <div
+                  class="image-fiction-container"
+                  v-bind:style="{
+                    backgroundImage:
+                      'url(/images/Fictions/' + fiction.Image + ')',
+                  }"
+                ></div>
+              </div>
+              <div class="col-md-6">
+                <div class="card-body">
+                  <h5 class="card-title" style="color: black">
+                    {{ fiction.Title }}
+                  </h5>
+                  <p
+                    class="card-text"
+                    style="color: black; font-size: 14px"
+                    v-html="truncateText(fiction.Summary, 35)"
+                  ></p>
+                  <p class="card-text" style="color: black">
+                    <small class="text-body-secondary">
+                      <router-link
+                        class="link-text-a"
+                        :to="'/fiction/' + fiction.Title"
+                        >Lire</router-link
+                      >
+                    </small>
+                  </p>
+                </div>
+>>>>>>> dev2
               </div>
             </div>
           </div>

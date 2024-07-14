@@ -35,7 +35,7 @@
                                 v-if="usrCurrent === AuthorId">
                                 Editer le chapitre
                             </router-link>
-                            <router-link :to="'/fiction/' + TitleFiction" class="btn btn-primary">
+                            <router-link :to="'/fiction/' + chapter.FictionId" class="btn btn-primary">
                                 Retour à la liste de chapitres
                             </router-link>
                         </div>
@@ -47,7 +47,7 @@
                     </div>
                     <div class="chapter-text-content">
 
-                        <p v-html="chapter.Content"></p>
+                        <p v-html="displayedContent"></p>
                     </div>
                 </div>
             </div>
@@ -60,7 +60,6 @@ export default {
     name: 'ChapterLayout',
     data() {
         return {
-            TitleFiction: null,
             usrCurrent: this.$store.state.auth.user.usrID,
             Author: null,
             AuthorId: null,
@@ -79,7 +78,6 @@ export default {
     },
     created() {
         this.getChapter(this.$route.params.id);
-        console.log(this.$route.params.id)
     },
     watch: {
         '$route.params.id': function (newId) {
@@ -90,13 +88,11 @@ export default {
         getChapter(id) {
             FictionService.getChapter(id, this.nav)
                 .then((response) => {
-                    console.log(response.data.ob)
                     this.chapter = response.data.ob || {};
                     this.Author = this.chapter.Fiction.UserId
                     this.AuthorId = this.chapter.Fiction.UserId
                     this.AllIillustrations = this.chapter.ChapterIllustrations
-                    this.TitleFiction = this.chapter.Fiction.Title
-                    // this.typeText(this.chapter.Content);
+                    this.typeText(this.chapter.Content);
                 })
                 .catch((e) => {
                     console.log(e);
