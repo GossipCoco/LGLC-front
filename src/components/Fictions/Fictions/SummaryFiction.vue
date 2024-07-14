@@ -42,7 +42,7 @@
                     <small class="text-body-secondary">
                       <router-link
                         class="link-text-a"
-                        :to="'/fiction/' + fiction.Id"
+                        :to="'/fiction/' + fiction.Title"
                         >Lire</router-link
                       >
                     </small>

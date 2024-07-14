@@ -146,8 +146,8 @@ export default {
             FictionService.getFictionByName(id, this.nav)
                 .then((response) => {
                     this.fiction = response.data.ob;
-                    console.log(this.fiction)
-                    this.rating = this.fiction.AverageRating
+                    console.log(response.data.ob)
+                    this.rating = 5
 
                     this.IdFiction = this.fiction.Id
                     this.IdGame = this.fiction.Game.Id

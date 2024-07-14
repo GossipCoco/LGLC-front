@@ -145,9 +145,10 @@ export default {
             this.showspinner = true
             FictionService.getFictionByName(id, this.nav)
                 .then((response) => {
-                    this.fiction = response.data.ob[0];
+                    console.log(response)
+                    this.fiction = response.data.ob;
                     console.log(this.fiction)
-                    this.rating = this.fiction.AverageRating
+                    this.rating = 5
 
                     this.IdFiction = this.fiction.Id
                     this.IdGame = this.fiction.Game.Id
