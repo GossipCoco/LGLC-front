@@ -1,7 +1,7 @@
 <template>
   <div class="dashboard-max-card-container card fiction-container">
     <div class="card-header">
-      <h4>Lire mes fictions</h4>
+      <h4>Lire toutes mes fictions</h4>
     </div>
     <div class="row list-fiction-card-container">
       <div class="col-3 col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3 mb-3 mb-sm-3 mb-3 mb-sm-3"

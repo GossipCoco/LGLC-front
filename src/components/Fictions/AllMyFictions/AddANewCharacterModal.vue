@@ -3,7 +3,6 @@
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Ajouter un personnage
     </button>
-
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -15,20 +14,19 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col">
-                            <label for="FirstCharacterId" class="form-label">Sélectionner un
-                                personnage</label>
+                            <label for="FirstCharacterId" class="form-label">
+                                Sélectionner un personnage
+                            </label>
                             <select id="FirstCharacterId" class="form-select" aria-label="Default select example"
                                 v-model="form.CharacterId">
                                 <option selected>Sélectionner le personnage</option>
                                 <option v-for="(character, index) in characters" :value="character.Id" :key="index">
                                     {{ character.CurrentName }}
                                 </option>
-
                             </select>
                         </div>
                         </div>
-                    ...
-                </div>
+                    </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
                     <button type="button" class="btn btn-primary" @click="AddANewCharacterToGameAndFiction">Ajouter le personnage</button>
@@ -58,11 +56,9 @@ export default {
     },
     methods: {
         AddANewCharacterToGameAndFiction(){
-            console.log(this.IdGame)
             const idGame = this.IdGame
             this.form.Id = idGame + ' - ' + this.form.CharacterId
             this.form.GameId = idGame
-            console.log(this.form)
             GameService.AddANewCharacterToGameAndFiction(idGame, this.form)
             .then((response) => {response.data.ob
                     console.log(response.data.ob)

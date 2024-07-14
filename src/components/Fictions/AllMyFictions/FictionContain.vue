@@ -96,7 +96,6 @@
 </template>
 <script>
 import FictionService from "../../../services/FictionService";
-// import GameService from "../../../services/GameService";
 import AddANewCharacterModal from "./AddANewCharacterModal.vue";
 import Rating from "./Rating.vue";
 import CarrouselCharacter from "./CarrouselCharacter.vue";

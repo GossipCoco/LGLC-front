@@ -12,17 +12,13 @@
                 <div class="row">
                     <div class="6">
                         <div style="color: white" v-for="(illustration, index) in AllIillustrations" :key="index">
-                            <!-- {{ illustration.IllustrationId }} -->
                             <div style="height: 150px; width: 150px;">
                                 <img :src="'/images/Fictions/' + illustration.IllustrationId"
                                     :alt="illustration.IllustrationId" style="height: 150px; width: 150px;" />
                             </div>
                         </div>
                     </div>
-
-
                     <div class="6">
-
                         <div class="chapter-button-content">
                             <button @click="speakText" class="btn btn-primary">
                                 Lire à voix haute
@@ -35,7 +31,7 @@
                                 v-if="usrCurrent === AuthorId">
                                 Editer le chapitre
                             </router-link>
-                            <router-link :to="'/fiction/' + chapter.FictionId" class="btn btn-primary">
+                            <router-link :to="'/fiction/' + chapter.Fiction.Title" class="btn btn-primary">
                                 Retour à la liste de chapitres
                             </router-link>
                         </div>
@@ -46,7 +42,6 @@
                         v-bind:style="{ backgroundImage: 'url(/images/Fictions/' + chapter.Image + ')' }">
                     </div>
                     <div class="chapter-text-content">
-
                         <p v-html="displayedContent"></p>
                     </div>
                 </div>
@@ -102,7 +97,6 @@ export default {
             this.displayedContent = '';
             let index = 0;
             const typingSpeed = 10; // Vitesse de frappe (en millisecondes)
-
             const typeChar = () => {
                 if (index < text.length) {
                     this.displayedContent += text.charAt(index);
