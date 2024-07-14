@@ -12,7 +12,7 @@
 .left-side-container{
     display: flex;
     flex-direction: column;
-    flex: 0.45;
+    flex: 0.25;
     width: 15rem;
     height: 50rem;
 }
@@ -53,22 +53,25 @@
     flex-wrap: wrap;
 }
 
-.one-fiction-container .all-characters-list-container{
+/* .one-fiction-container .all-characters-list-container{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     overflow-x: auto;
     overflow-y: hidden;
+} */
+
+.carousel-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
 }
 .character-details-router{
     text-align: justify;
 }
-
-
-
-
-
-.characters-list-container img{
+.carousel__item img{
     width: 120px;
 }
 .dashboard-max-card-container.card.fiction-container table{

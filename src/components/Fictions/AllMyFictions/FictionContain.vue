@@ -5,7 +5,10 @@
         <span class="visually-hidden">Loading...</span>
       </div>
     </div>
-    <div id="card-fiction-container" class="card-header title-chapter-container">
+    <div
+      id="card-fiction-container"
+      class="card-header title-chapter-container"
+    >
       <Rating :fictionId="IdFiction" :rating="rating" />
       <div class="title-author-container">
         <h1>{{ Title }}</h1>
@@ -19,39 +22,10 @@
           <p>{{ formatDate(dateCreation) }}</p>
         </div>
       </div>
-      <div class="create-chapter-btn-container">
-        <p>
-          <router-link
-            type="button"
-            class="btn btn-primary"
-            v-if="AuthorId === usrCurrent"
-            :to="'/fiction/createChapter/' + IdFiction"
-            v-bind="lastChap"
-          >
-            Créer un chapitre {{ lastChap }}
-          </router-link>
-        </p>
-        <div class="dropdown" v-if="nbChapter > 0">
-          <button
-            class="btn btn-primary dropdown-toggle"
-            type="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Liste des chapitres
-          </button>
-          <ul class="dropdown-menu">
-            <li v-for="(chapter, index) in fiction.Chapters" :key="index">
-              <router-link
-                class="dropdown-item"
-                :to="'/chapter/' + chapter.Title"
-              >
-                {{ chapter.Title }}
-              </router-link>
-            </li>
-          </ul>
-        </div>
+      <div class="">
+        <router-link type="button" class="btn btn-primary" :to="'/allFictions/'+Author">Retour à la liste des fictions</router-link>
       </div>
+
     </div>
     <div class="card-body">
       <div class="one-fiction-container">
@@ -70,21 +44,7 @@
                 v-bind:IdGame="IdGame"
               />
             </div>
-            <div class="all-characters-list-container">
-              <div
-                class="characters-list-container"
-                v-for="(character, index) in listOfCharacter"
-                :key="index"
-              >
-                <span v-if="character.Character">
-                  {{ character.Character.CurrentName }}
-                </span>
-                <img
-                  :src="'/images/Characters/' + character.Character.Image"
-                  v-if="character.Character"
-                />
-              </div>
-            </div>
+            <CarrouselCharacter v-bind:Characters="listOfCharacter" />            
           </div>
         </div>
         <div class="character-chapters-fiction-container">
@@ -102,7 +62,32 @@
                 class="background-fiction-contain"
               >
                 <div class="opacity-container">
-                  <!-- List des chapitres -->
+                  <div class="all-chapters-list-container">
+                    <p>
+                      <router-link
+                        type="button"
+                        class="btn btn-primary"
+                        v-if="AuthorId === usrCurrent"
+                        :to="'/fiction/createChapter/' + IdFiction"
+                        v-bind="lastChap"
+                      >
+                        Créer un chapitre {{ lastChap }}
+                      </router-link>
+                    </p>
+                    <ul>
+                      <li
+                        v-for="(chapter, index) in fiction.Chapters"
+                        :key="index"
+                      >
+                        <router-link
+                          class="dropdown-item"
+                          :to="'/chapter/' + chapter.Title"
+                        >
+                          {{ chapter.Title }}
+                        </router-link>
+                      </li>
+                    </ul>
+                  </div>
                   <div class="summary-container" v-html="Summary"></div>
                 </div>
               </div>
@@ -118,6 +103,7 @@ import FictionService from "../../../services/FictionService";
 // import GameService from "../../../services/GameService";
 import AddANewCharacterModal from "./AddANewCharacterModal.vue";
 import Rating from "./Rating.vue";
+import CarrouselCharacter from "./CarrouselCharacter.vue";
 
 export default {
   name: "FictionContain",
@@ -125,6 +111,7 @@ export default {
   components: {
     AddANewCharacterModal,
     Rating,
+    CarrouselCharacter
   },
   data() {
     return {
@@ -184,10 +171,9 @@ export default {
       this.showspinner = true;
       FictionService.getFictionByName(id, this.nav)
         .then((response) => {
+            console.log(response.data.ob)
           this.fiction = response.data.ob;
-          console.log(response.data.ob);
-          this.rating = 5;
-
+          this.rating = response.data.ob.AverageRating;
           this.IdFiction = this.fiction.Id;
           this.IdGame = this.fiction.Game.Id;
           this.Author = this.fiction.User.UserName;
@@ -197,7 +183,7 @@ export default {
           this.listOfCharacter = this.fiction.Game.GameCharacters;
           this.Summary = this.fiction.Summary;
           this.dateCreation = this.fiction.DateCreation;
-          this.nbChapter = this.fiction.Chapters.length;
+          this.nbChapter = this.fiction.lenght;
           this.illustration = this.fiction.FictionIllustrations;
           if (this.fiction.Chapters.length > 0) {
             this.GetLastChapterOfAFiction(this.url);
