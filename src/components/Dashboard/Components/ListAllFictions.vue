@@ -14,7 +14,7 @@
                         <div class="summaray-title-text">
                         <p>
                             <span class="link-to-fiction-text">
-                                <router-link :to="'/fiction/' + fiction.Id">
+                                <router-link :to="'/fiction/' + fiction.Title">
                                     {{ fiction.Title }}
                                 </router-link>
                             </span>:

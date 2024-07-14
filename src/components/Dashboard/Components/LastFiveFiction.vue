@@ -10,7 +10,7 @@
           <div v-for="(fiction, index) in game.Fiction" :key="index" class="list-all-fictions-globale--container">
             <div class="rond-image-illustration"> <img  class="img-fluid"  :src="'/images/Fictions/' + fiction.Image" :alt="fiction.Image" /></div>
             <div class="summaray-title-text">
-              <p><router-link :to="'/fiction/' + fiction.Id">{{ fiction.Title }}</router-link><br>
+              <p><router-link :to="'/fiction/' + fiction.Title">{{ fiction.Title }}</router-link><br>
                 <span v-html="truncateText(fiction.Summary, 55)"></span>
               </p>
             </div>
