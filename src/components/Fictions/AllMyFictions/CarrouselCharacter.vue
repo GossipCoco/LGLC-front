@@ -36,7 +36,6 @@ export default {
   },
   created() {
     this.allCharacters = this.Characters;
-    console.log(this.allCharacters);
   },
 };
 </script>

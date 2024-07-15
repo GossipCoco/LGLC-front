@@ -20,6 +20,7 @@ import CreateFiction from '../components/Fictions/AllMyFictions/CreateFiction.vu
 import AllMyFictionsLayout from '../components/Fictions/AllMyFictions/AllFictionsLayout.vue'
 import CreateChapter from '../components/Fictions/AllMyFictions/CreateChapter.vue'
 import EditChapter from '../components/Fictions/AllMyFictions/EditChapter.vue'
+import CommentLayout from "../components/Fictions/Comments/CommentLayout.vue";
 
 import GameLayout from '../components/Game/GameLayout'
 import MouseShot from '../components/Game/MouseShot/MouseShot.vue'
@@ -178,6 +179,11 @@ const routes = [
         path: '/fiction/:id',
         name: 'FictionContain',
         component: FictionContain,
+      },
+      {
+        path: '/CommentByFiction/:id',
+        name: 'CommentLayout',
+        component: CommentLayout
       },
       {
         path: '/AExistingFictionContain/:id',

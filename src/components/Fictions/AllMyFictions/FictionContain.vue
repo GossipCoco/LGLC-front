@@ -10,6 +10,9 @@
       class="card-header title-chapter-container"
     >
       <Rating :fictionId="IdFiction" :rating="rating" />
+      <div class="Comment-icon">
+        <router-link :to="'/CommentByFiction/'+Title"><img src="../../../../public/images/icons/comments-solid.svg" /></router-link>
+      </div>
       <TitleFiction
         v-bind:Title="Title"
         v-bind:Author="Author"
@@ -131,8 +134,9 @@ export default {
     GetLastChapterOfAFiction(id) {
       FictionService.GetLastChapterOfAFiction(id)
         .then((response) => {
-          const lastChapNum = response.data.ob;
-          this.lastChap = lastChapNum.NumberChapter + 1;
+          console.log(response)
+          const lastChapNum = response.data.ob.NumberChapter;
+          this.lastChap = lastChapNum + 1;
         })
         .catch((err) => {
           console.log(err);

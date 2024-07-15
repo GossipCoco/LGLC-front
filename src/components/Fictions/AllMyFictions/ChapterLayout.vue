@@ -83,6 +83,7 @@ export default {
         getChapter(id) {
             FictionService.getChapter(id, this.nav)
                 .then((response) => {
+                    console.log(response.data.ob)
                     this.chapter = response.data.ob || {};
                     this.Author = this.chapter.Fiction.UserId
                     this.AuthorId = this.chapter.Fiction.UserId

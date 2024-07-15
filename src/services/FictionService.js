@@ -21,6 +21,9 @@ class FictionService {
         console.log(id, data)
         return http.post(`/fiction/GetLastChapterOfAFiction/${id}`, data);
     }
+    GetAllCommentsByFiction(id, data){
+        return http.post(`/fiction/GetAllCommentsByFiction/${id}`, data);
+    }
     CreateANewChapter(id, data) {
         return http.post(`/fiction/createAChapitre/${id}`, data, {
             headers: {
