@@ -3,6 +3,7 @@
     <Carousel>
       <Slide v-for="(character, slide) in Characters" :key="slide">
         <div class="carousel__item">
+          {{character.Character.CurrentName}}
             <img
               class="img-fluid"
               :src="'/images/Characters/' + character.Character.Image"

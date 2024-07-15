@@ -8,13 +8,13 @@
       <div class="row list-fiction-card-container" v-else>
         <!-- <SummaryFiction v-bind:games="games" /> -->
         <div
-          class="col-3 col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3 mb-3 mb-sm-3 mb-3 mb-sm-3"
+          class="col-4 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 mb-4 mb-sm-4 mb-4 mb-sm-4"
           v-for="(game, index) in games"
           :key="index"
         >
           <div
             class="card mb-3"
-            style="max-width: 440px; max-height: 240px"
+            style="max-width: 540px; max-height: 240px"
             v-for="(fiction, index) in game.Fiction"
             :key="index"
           >

@@ -12,9 +12,10 @@
 .left-side-container{
     display: flex;
     flex-direction: column;
-    flex: 0.25;
+    flex: 0.3;
     width: 15rem;
     height: 50rem;
+    margin: 1rem 1rem 0 0;
 }
 
 .one-fiction-container{
@@ -231,10 +232,20 @@ th{
 .character-chapters-fiction-container .character-chapters-container{
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 75rem;
 }
 .illustration-background{
-    width: 100%;
+    width: 75rem;
+}
+.all-chapters-list-container{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 30rem;
+    padding: 1rem;
+    justify-content: left;
+    align-content: center;
+    align-items: center;
 }
 .character-chapters-container img{
     width: 50%;

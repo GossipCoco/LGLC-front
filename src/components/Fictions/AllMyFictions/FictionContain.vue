@@ -10,18 +10,11 @@
       class="card-header title-chapter-container"
     >
       <Rating :fictionId="IdFiction" :rating="rating" />
-      <div class="title-author-container">
-        <h1>{{ Title }}</h1>
-        <div class="info-fan">
-          <h3>
-            par
-            <router-link :to="'/getUserBy/' + Author" class="author-text">
-              {{ Author }}
-            </router-link>
-          </h3>
-          <p>{{ formatDate(dateCreation) }}</p>
-        </div>
-      </div>
+      <TitleFiction
+        v-bind:Title="Title"
+        v-bind:Author="Author"
+        v-bind:dateCreation="dateCreation"
+      />
       <div class="">
         <router-link
           type="button"
@@ -34,103 +27,37 @@
     <div class="card-body">
       <div class="one-fiction-container">
         <div class="left-side-container">
-          <div
-            class="image-fiction-container"
-            v-bind:style="{
-              backgroundImage:
-                'url(/images/Fictions/' + backgroundImageFiction + ')',
-            }"
-          ></div>
+          <div class="image-fiction-container" v-bind:style="{ backgroundImage: 'url(/images/Fictions/' + backgroundImageFiction + ')'}"></div>
           <div class="all-characters-of-fiction">
-            <div class="button-modal">
-              <AddANewCharacterModal
-                v-if="AuthorId === usrCurrent"
-                v-bind:IdGame="IdGame"
-              />
-            </div>
+            <AddANewCharacterModal v-if="AuthorId === usrCurrent" v-bind:IdGame="IdGame"/>            
             <CarrouselCharacter v-bind:Characters="listOfCharacter" />
           </div>
         </div>
         <div class="character-chapters-fiction-container">
           <div class="character-chapters-container">
             <div v-if="nbIllus > 0">
-              <div
-                class="illustration-background"
-                v-for="(illus, index) in illustration"
-                :key="index"
-              >
-                <div
-                  :style="{
-                    backgroundImage:
-                      'url(/images/Fictions/' + illus.IllustrationId + ')',
-                  }"
-                  class="background-fiction-contain"
-                >
-                  <div class="opacity-container">
-                    <div class="all-chapters-list-container">
-                      <p>
-                        <router-link
-                          type="button"
-                          class="btn btn-primary"
-                          v-if="AuthorId === usrCurrent"
-                          :to="'/fiction/createChapter/' + IdFiction"
-                          v-bind="lastChap"
-                        >
-                          Créer un chapitre {{ lastChap }}
-                        </router-link>
-                      </p>
-                      <ul>
-                        <li
-                          v-for="(chapter, index) in fiction.Chapters"
-                          :key="index"
-                        >
-                          <router-link
-                            class="dropdown-item"
-                            :to="'/chapter/' + chapter.Title"
-                          >
-                            {{ chapter.Title }}
-                          </router-link>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="summary-container">
-                      <p v-html="Summary"></p>
-                    </div>
-                  </div>
+              <div class="illustration-background" v-for="(illus, index) in illustration" :key="index">
+                <div :style="{ backgroundImage:'url(/images/Fictions/' + illus.IllustrationId + ')'}" class="background-fiction-contain">
+                  <ListOfChapter
+                    v-bind:AuthorId="AuthorId"
+                    v-bind:usrCurrent="usrCurrent"
+                    v-bind:IdFiction="IdFiction"
+                    v-bind:lastChap="lastChap"
+                    v-bind:fiction="fiction"
+                    v-bind:Summary="Summary"
+                  />
                 </div>
               </div>
             </div>
             <div v-else class="background-fiction-contain">
-              <div class="opacity-container">
-                <div class="all-chapters-list-container">
-                  <p>
-                    <router-link
-                      type="button"
-                      class="btn btn-primary"
-                      v-if="AuthorId === usrCurrent"
-                      :to="'/fiction/createChapter/' + IdFiction"
-                      v-bind="lastChap"
-                    >
-                      Créer un chapitre {{ lastChap }}
-                    </router-link>
-                  </p>
-                  <ul>
-                    <li
-                      v-for="(chapter, index) in fiction.Chapters"
-                      :key="index"
-                    >
-                      <router-link
-                        class="dropdown-item"
-                        :to="'/chapter/' + chapter.Title"
-                      >
-                        {{ chapter.Title }}
-                      </router-link>
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="summary-container"><p v-html="Summary"></p></div>
-              </div>
+              <ListOfChapter
+                v-bind:AuthorId="AuthorId"
+                v-bind:usrCurrent="usrCurrent"
+                v-bind:IdFiction="IdFiction"
+                v-bind:lastChap="lastChap"
+                v-bind:fiction="fiction"
+                v-bind:Summary="Summary"
+              />
             </div>
           </div>
         </div>
@@ -143,6 +70,8 @@ import FictionService from "../../../services/FictionService";
 import AddANewCharacterModal from "./AddANewCharacterModal.vue";
 import Rating from "./Rating.vue";
 import CarrouselCharacter from "./CarrouselCharacter.vue";
+import TitleFiction from "./TitleFiction.vue";
+import ListOfChapter from "./ListOfChapters.vue";
 
 export default {
   name: "FictionContain",
@@ -150,7 +79,9 @@ export default {
   components: {
     AddANewCharacterModal,
     Rating,
+    TitleFiction,
     CarrouselCharacter,
+    ListOfChapter,
   },
   data() {
     return {
@@ -185,7 +116,7 @@ export default {
   created() {
     this.url = this.$route.params.id;
     this.getFictionByName(this.url);
-    // this.GetLastChapterOfAFiction(this.url)
+    this.GetLastChapterOfAFiction(this.url)
   },
   methods: {
     formatDate(isoDateString) {
@@ -211,7 +142,6 @@ export default {
       this.showspinner = true;
       FictionService.getFictionByName(id, this.nav)
         .then((response) => {
-          console.log(response.data.ob);
           this.fiction = response.data.ob;
           this.rating = response.data.ob.AverageRating;
           this.IdFiction = this.fiction.Id;
@@ -225,10 +155,9 @@ export default {
           this.dateCreation = this.fiction.DateCreation;
           this.nbChapter = this.fiction.lenght;
           this.illustration = this.fiction.FictionIllustrations;
-          console.log(Object.keys(this.illustration).length);
           this.nbIllus = Object.keys(this.illustration).length;
           if (this.fiction.Chapters.length > 0) {
-            this.GetLastChapterOfAFiction(this.url);
+            this.GetLastChapterOfAFiction(this.IdFiction);
           }
           this.showspinner = false;
         })
