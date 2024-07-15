@@ -151,6 +151,7 @@ export default {
         CreateANewFiction(usr, formData) {
             GameService.CreateANewGame(usr, formData)
                 .then((response) => {
+                    console.log(response)
                     if (response) {
                         this.$router.push({ path: "/allFictions/" + this.$store.state.auth.user.usrID });
                     }

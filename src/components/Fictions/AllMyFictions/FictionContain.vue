@@ -5,7 +5,10 @@
         <span class="visually-hidden">Loading...</span>
       </div>
     </div>
-    <div id="card-fiction-container" class="card-header title-chapter-container">
+    <div
+      id="card-fiction-container"
+      class="card-header title-chapter-container"
+    >
       <Rating :fictionId="IdFiction" :rating="rating" />
       <div class="title-author-container">
         <h1>{{ Title }}</h1>
@@ -20,7 +23,12 @@
         </div>
       </div>
       <div class="">
-        <router-link type="button" class="btn btn-primary" :to="'/allFictions/'+Author">Retour à la liste des fictions</router-link>
+        <router-link
+          type="button"
+          class="btn btn-primary"
+          :to="'/allFictions/' + Author"
+          >Retour à la liste des fictions</router-link
+        >
       </div>
     </div>
     <div class="card-body">
@@ -40,52 +48,88 @@
                 v-bind:IdGame="IdGame"
               />
             </div>
-            <CarrouselCharacter v-bind:Characters="listOfCharacter" />            
+            <CarrouselCharacter v-bind:Characters="listOfCharacter" />
           </div>
         </div>
         <div class="character-chapters-fiction-container">
           <div class="character-chapters-container">
-            <div
-              class="illustration-background"
-              v-for="(illus, index) in illustration"
-              :key="index"
-            >
+            <div v-if="nbIllus > 0">
               <div
-                :style="{
-                  backgroundImage:
-                    'url(/images/Fictions/' + illus.IllustrationId + ')',
-                }"
-                class="background-fiction-contain"
+                class="illustration-background"
+                v-for="(illus, index) in illustration"
+                :key="index"
               >
-                <div class="opacity-container">
-                  <div class="all-chapters-list-container">
-                    <p>
-                      <router-link
-                        type="button"
-                        class="btn btn-primary"
-                        v-if="AuthorId === usrCurrent"
-                        :to="'/fiction/createChapter/' + IdFiction"
-                        v-bind="lastChap"
-                      >
-                        Créer un chapitre {{ lastChap }}
-                      </router-link>
-                    </p>
-                    <ul>
-                      <li
-                        v-for="(chapter, index) in fiction.Chapters"
-                        :key="index"
-                      >
+                <div
+                  :style="{
+                    backgroundImage:
+                      'url(/images/Fictions/' + illus.IllustrationId + ')',
+                  }"
+                  class="background-fiction-contain"
+                >
+                  <div class="opacity-container">
+                    <div class="all-chapters-list-container">
+                      <p>
                         <router-link
-                          class="dropdown-item"
-                          :to="'/chapter/' + chapter.Title"
+                          type="button"
+                          class="btn btn-primary"
+                          v-if="AuthorId === usrCurrent"
+                          :to="'/fiction/createChapter/' + IdFiction"
+                          v-bind="lastChap"
                         >
-                          {{ chapter.Title }}
+                          Créer un chapitre {{ lastChap }}
                         </router-link>
-                      </li>
-                    </ul>
+                      </p>
+                      <ul>
+                        <li
+                          v-for="(chapter, index) in fiction.Chapters"
+                          :key="index"
+                        >
+                          <router-link
+                            class="dropdown-item"
+                            :to="'/chapter/' + chapter.Title"
+                          >
+                            {{ chapter.Title }}
+                          </router-link>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="summary-container">
+                      <p v-html="Summary"></p>
+                    </div>
                   </div>
-                  <div class="summary-container" v-html="Summary"></div>
                 </div>
+              </div>
+            </div>
+            <div v-else class="background-fiction-contain">
+              <div class="opacity-container">
+                <div class="all-chapters-list-container">
+                  <p>
+                    <router-link
+                      type="button"
+                      class="btn btn-primary"
+                      v-if="AuthorId === usrCurrent"
+                      :to="'/fiction/createChapter/' + IdFiction"
+                      v-bind="lastChap"
+                    >
+                      Créer un chapitre {{ lastChap }}
+                    </router-link>
+                  </p>
+                  <ul>
+                    <li
+                      v-for="(chapter, index) in fiction.Chapters"
+                      :key="index"
+                    >
+                      <router-link
+                        class="dropdown-item"
+                        :to="'/chapter/' + chapter.Title"
+                      >
+                        {{ chapter.Title }}
+                      </router-link>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="summary-container"><p v-html="Summary"></p></div>
               </div>
             </div>
           </div>
@@ -106,7 +150,7 @@ export default {
   components: {
     AddANewCharacterModal,
     Rating,
-    CarrouselCharacter
+    CarrouselCharacter,
   },
   data() {
     return {
@@ -135,6 +179,7 @@ export default {
       nbChapter: 0,
       rating: 0,
       illustration: null,
+      nbIllus: null,
     };
   },
   created() {
@@ -166,7 +211,7 @@ export default {
       this.showspinner = true;
       FictionService.getFictionByName(id, this.nav)
         .then((response) => {
-            console.log(response.data.ob)
+          console.log(response.data.ob);
           this.fiction = response.data.ob;
           this.rating = response.data.ob.AverageRating;
           this.IdFiction = this.fiction.Id;
@@ -180,6 +225,8 @@ export default {
           this.dateCreation = this.fiction.DateCreation;
           this.nbChapter = this.fiction.lenght;
           this.illustration = this.fiction.FictionIllustrations;
+          console.log(Object.keys(this.illustration).length);
+          this.nbIllus = Object.keys(this.illustration).length;
           if (this.fiction.Chapters.length > 0) {
             this.GetLastChapterOfAFiction(this.url);
           }
