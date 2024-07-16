@@ -2,7 +2,6 @@ import conf from '../../server'
 import api from "./api";
 import TokenService from "./token.service";
 const API_URL = conf.Url
-
 class AuthService {
     login(user) {
         return api

@@ -38,7 +38,7 @@
                         <p class="card-text" v-html="genre"></p>
                       </div>
                       <div class="clan-logo-container">
-                        <img :src="'/images/Clans/' + Symbol" class="img-fluid" />
+                        <img :src="'/images/clans/' + Symbol" class="img-fluid" />
                       </div>
                     </div>
                     <p class="card-text" v-html="description"></p>
@@ -106,6 +106,7 @@ export default {
           this.character = response.data.ob
           console.log(this.character)
           this.Symbol = this.character.Clan.Symbol
+          console.log(this.Symbol)
           this.NameClan = this.character.Clan.Name
           this.image = response.data.ob.Image
           this.background = response.data.ob.Clan.Image

@@ -1,5 +1,4 @@
 <template>
-
     <div class="scheduler-container">
         <FullCalendar :options='calendarOptions'>
             <template v-slot:eventContent='arg'>
@@ -8,9 +7,7 @@
             </template>
         </FullCalendar>
     </div>
-
 </template>
-
 <script>
 import FullCalendar from '@fullcalendar/vue3'
 import dayGridPlugin from '@fullcalendar/daygrid'
@@ -59,8 +56,7 @@ export default {
         GetAllEvents(id) {
             EventService.GetAllEvents(id)
                 .then((response) => {
-                    // Assuming response.data contains the events array
-                    console.log(this.calendarOptions)
+                    // Assuming response.data contains the events array                   
                     this.calendarOptions.events = response.data.ob.map(event => {
                         // console.log(event)
                         return {

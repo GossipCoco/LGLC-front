@@ -7,13 +7,14 @@
             </div>
             <div class="card-body">
                 <div class="one-fiction-container">
-                    <div class="image-fiction-container" v-bind:style="{ backgroundImage: 'url(/images/Fictions/' + fiction[0].Image + ')' }"></div>
+                    <div class="image-fiction-container" v-bind:style="{ backgroundImage: 'url(/images/Fictions/' + fiction.Image + ')' }"></div>
                     <div class="character-chapters-fiction-container">
-                        <p v-for="(user, index) in fiction[0].Game.UsersGames" :key="index">
+                        <p v-for="(user, index) in fiction.Game.UsersGames" :key="index">
                             {{ user.User.UserName }}
                         </p>
-                        <p v-html="fiction[0].Summary"></p>
-                        <p v-for="(character, index) in fiction[0].Game.GameCharacters" :key="index">
+                        {{ Summary }}
+                        <p v-html="fiction.Summary"></p>                        
+                        <p v-for="(character, index) in fiction.Game.GameCharacters" :key="index">
                             <span>
                                 {{ character.Character.CurrentName }}<br>
                             </span>
@@ -22,7 +23,7 @@
                             <router-link type="button" class="btn btn-primary" :to="'/chapter/' + chapter.Title">
                                 {{ chapter.Title }}</router-link>
                         </p>
-                        <p  v-for="(user, index) in fiction[0].Game.UsersGames" :key="index">                            
+                        <p  v-for="(user, index) in fiction.Game.UsersGames" :key="index">                            
                             <router-link type="button" class="btn btn-primary" v-if="usrCurrent === user.User.Id"
                                 :to="'/fiction/createChapter/' + contentFiction.Id">
                                 Créer un chaptitre
@@ -50,7 +51,8 @@ export default {
             },
             lastChap: {},
             message: null,
-            Author: null
+            Author: null,
+            Summary: null,
         }
     },
     created() {
@@ -71,8 +73,9 @@ export default {
             FictionService.getFictionByName(id, this.nav)
                 .then((response) => {
                     this.fiction = response.data.ob;
-                    this.Author = this.fiction[0].Game.UsersGames[0].User.UserName
-                    if (this.fiction[0].Chapters.length > 0) {
+                    this.Summary = response.data.ob
+                    this.Author = this.fiction.Game.UsersGames.User.UserName
+                    if (this.fiction.Chapters.length > 0) {
                         this.GetLastChapterOfAFiction(this.url)
                     }
                 })

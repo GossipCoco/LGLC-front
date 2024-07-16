@@ -4,7 +4,7 @@
             <div v-for="(location, index) in allLocations" :key="index">
                 <div class="card" style="width: 30rem">
                     <div class="card-image clan-card" v-bind:style="{
-                backgroundImage: 'url(/images/Backgrounds/' + location.Image + ')',
+                backgroundImage: 'url(/images/Locations/' + location.Image + ')',
             }"></div>
                     <div class="card-header"></div>
                     <div class="card-body">

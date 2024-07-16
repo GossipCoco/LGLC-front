@@ -7,7 +7,7 @@
   </div>
 </template>
 <script>
-import SummaryFiction from './Fictions/SummaryFiction.vue';
+import SummaryFiction from './AllMyFictions/SummaryFiction.vue';
 export default {
   name: "AllExistingFictionsLayout",
   components: { SummaryFiction },  

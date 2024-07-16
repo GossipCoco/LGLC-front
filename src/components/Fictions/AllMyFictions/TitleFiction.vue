@@ -1,0 +1,34 @@
+<template>
+  <div class="title-author-container">
+    <h1>{{ Title }}</h1>
+    <div class="info-fan">
+      <h3>
+        par
+        <router-link :to="'/getUserBy/' + Author" class="author-text">
+          {{ Author }}
+        </router-link>
+      </h3>
+      <p>{{ formatDate(dateCreation) }}</p>
+    </div>
+  </div>
+</template>
+<script>
+export default {
+  name: "TitleFiction",
+  props: ["Title", "Author", "dateCreation"],
+  data() {
+    return {};
+  },
+  methods: {
+    formatDate(isoDateString) {
+      if (isoDateString) {
+        const date = new Date(isoDateString);
+        const day = date.getDate().toString().padStart(2, "0");
+        const month = (date.getMonth() + 1).toString().padStart(2, "0");
+        const year = date.getFullYear();
+        return `${day}/${month}/${year}`;
+      } else return "";
+    },
+  },
+};
+</script>

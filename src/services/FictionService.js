@@ -14,10 +14,15 @@ class FictionService {
         return http.post(`/fiction/chapitre/${id}`, data);
     }
     GetFiveLastChapByUser(id){
+        console.log(id)
         return http.get(`/fiction/GetFiveLastChapByUser/${id}`);
     }
     GetLastChapterOfAFiction(id, data){
+        console.log(id, data)
         return http.post(`/fiction/GetLastChapterOfAFiction/${id}`, data);
+    }
+    GetAllCommentsByFiction(id, data){
+        return http.post(`/fiction/GetAllCommentsByFiction/${id}`, data);
     }
     CreateANewChapter(id, data) {
         return http.post(`/fiction/createAChapitre/${id}`, data, {

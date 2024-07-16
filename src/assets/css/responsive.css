@@ -83,3 +83,16 @@
         width: 43rem;
     }
 }
+@media (max-width: 768px) {
+    .chapter-global-content {
+        flex-direction: column;
+    }
+
+    .chapter-image-content {
+        height: 200px;
+    }
+
+    .chapter-text-content {
+        max-height: none;
+    }
+}

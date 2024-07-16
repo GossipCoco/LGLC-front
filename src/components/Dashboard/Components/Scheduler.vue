@@ -65,7 +65,6 @@ export default {
             EventService.GetAllEvents(id)
                 .then((response) => {
                     // Assuming response.data contains the events array
-                    console.log(this.calendarOptions)
                     this.calendarOptions.events = response.data.ob.map(event => {
                         // console.log(event)
                         return {

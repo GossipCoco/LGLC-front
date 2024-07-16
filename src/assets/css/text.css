@@ -54,3 +54,14 @@ a{ text-decoration: none; }
     align-items: center;
     align-content: center;
   }
+  .modal-body .form-label{
+    color: rgba(var(--main-black), 1)
+  }
+
+  .carousel__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
