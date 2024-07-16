@@ -1,7 +1,6 @@
 import { createWebHistory, createRouter } from "vue-router";
 
 import Accueil from '../components/Page/Accueil'
-<<<<<<< HEAD
 import Home from "../components/Page/Home";
 import DashboardLayout from "../components/Dashboard/DashboardLayout";
 import AllCharactersLayout from "../components/Characters/AllCharactersLayout";
@@ -31,44 +30,12 @@ import QuestById from '../components/Game/Quest/QuestById.vue'
 import EventGlobalLayout from '../components/Event/EventGlobaleLayout.vue'
 import UserCard from '../components/Users/UserCard.vue'
 import AllLocationsLayout from "../components/Locations/AllLocationsLayout.vue"
-=======
->>>>>>> dev2
 import Register from '../components/Page/Register.vue'
 import MentionsLegales from '../components/Page/MentionsLegales.vue'
 import faq from '../components/Page/faq.vue'
-import Login from '../components/Page/Login'
-import Home from "../components/Page/Home";
 
-import DashboardLayout from "../components/Dashboard/DashboardLayout";
-import AllCharactersLayout from "../components/Characters/AllCharactersLayout";
-import CharacterDetails from "../components/Characters/CharacterComponent/CharacterDetails";
-import CharacterCreate from '../components/Characters/CharacterComponent/CharacterCreate'
 
-import AllExistingFictionsLayout from '../components/Fictions/AllExistingFictionsLayout.vue'
-import AExistingFictionContain from "../components/Fictions/AExistingFictionContain.vue";
-import FictionContain from '../components/Fictions/AllMyFictions/FictionContain'
-import ChapterLayout from '../components/Fictions/AllMyFictions/ChapterLayout.vue'
-import CreateFiction from '../components/Fictions/AllMyFictions/CreateFiction.vue'
-import AllMyFictionsLayout from '../components/Fictions/AllMyFictions/AllFictionsLayout.vue'
-import CreateChapter from '../components/Fictions/AllMyFictions/CreateChapter.vue'
-import EditChapter from '../components/Fictions/AllMyFictions/EditChapter.vue'
-import CommentLayout from "../components/Fictions/Comments/CommentLayout.vue";
 
-import GameLayout from '../components/Game/GameLayout'
-import MouseShot from '../components/Game/MouseShot/MouseShot.vue'
-import GooseGameLayout from '../components/Game/GooseGame/GosseGameLayout.vue'
-import QuestLayout from '../components/Game/Quest/QuestLayout.vue'
-import QuestById from '../components/Game/Quest/QuestById.vue'
-import RollOfDiceLayout from '../components/Game/RollOfDice/RollOfDiceLayout.vue'
-import PuzzleLayout from '../components/Game/Puzzle/PuzzleLayout.vue'
-import TreasureHunt from '../components/Game/TreasureHunt/TreasureHunt.vue'
-import EventGlobalLayout from '../components/Event/EventGlobaleLayout.vue'
-import UserLayout from "../components/Users/UserLayout";
-import AllClansLayout from "../components/Locations/AllClansLayout";
-import ClanDetails from "../components/Locations/ClanDetails"
-import AdminLayout from '../components/UserPanel/AdminDashboard'
-import UserCard from '../components/Users/UserCard.vue'
-import AllLocationsLayout from "../components/Locations/AllLocationsLayout.vue"
 
 
 
