@@ -4,8 +4,8 @@
       <h2>Liste des quêtes à réaliser</h2>
     </div>
     <div class="row list-fiction-card-container">
-      <ul class="quest--global-container">
-        <li
+      <div class="quest--global-container">
+        <div
           v-for="(quest, index) in allQuests"
           :key="index"
           class="quest-container"
@@ -33,12 +33,12 @@
                 type="button"
                 class="btn btn-primary"
               >
-                Quête {{ quest.Id }}
+               Relever le défi
               </router-link>
             </p>
           </div>
-        </li>
-      </ul>
+        </div>
+      </div>
     </div>
     <div class="row pagination-container">
       <div class="row">
@@ -81,7 +81,7 @@ export default {
       nav: {
         current: 0,
         pages: 0,
-        step: 4,
+        step: 8,
       },
     };
   },

@@ -51,7 +51,7 @@
   .message__status {
     align-self: flex-end;
     font-size: 12px;
-    color: #888;
+    color: rgba(var(--clear-green-02),1);
     margin-top: 5px;
   }
   
