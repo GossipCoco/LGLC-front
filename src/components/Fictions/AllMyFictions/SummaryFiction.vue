@@ -8,18 +8,18 @@
       <div class="row list-fiction-card-container" v-else>
         <!-- <SummaryFiction v-bind:games="games" /> -->
         <div
-          class="col-4 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 mb-4 mb-sm-4 mb-4 mb-sm-4"
+          class="col-4 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 mb-2 mb-sm-2 mb-2 mb-sm-2"
           v-for="(game, index) in games"
           :key="index"
         >
           <div
-            class="card mb-3"
-            style="max-width: 540px; max-height: 240px"
+            class="fiche-fiction card mb-3"
+            style="max-width: 540px; max-height: 350px"
             v-for="(fiction, index) in game.Fiction"
             :key="index"
           >
             <div class="row g-0">
-              <div class="col-md-6">
+              <div class="col-md-4">
                 <div
                   class="image-fiction-container"
                   v-bind:style="{
@@ -28,17 +28,16 @@
                   }"
                 ></div>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-8">
                 <div class="card-body">
-                  <h5 class="card-title" style="color: black">
+                  <h5 class="card-title">
                     {{ fiction.Title }}
                   </h5>
                   <p
                     class="card-text"
-                    style="color: black; font-size: 14px"
-                    v-html="truncateText(fiction.Summary, 35)"
+                    v-html="truncateText(fiction.Summary, 55)"
                   ></p>
-                  <p class="card-text" style="color: black">
+                  <p class="card-text">
                     <small class="text-body-secondary">
                       <router-link
                         class="link-text-a"

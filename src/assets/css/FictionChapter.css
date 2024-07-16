@@ -29,8 +29,18 @@
     border-radius: 2rem;
     margin-left: 2rem;
     margin-top: 0rem;
+    background-repeat: no-repeat;
 }
-
+.image-fiction-container img {
+    width: 180px;
+    background-repeat: no-repeat;
+}
+.image-fiction-container{
+    background-size: cover;
+    height: 200px;
+    border-radius: 12px;
+    background-repeat: no-repeat;
+}
 .one-fiction-container .all-characters-of-fiction{
     display: flex;
     flex-direction: column;
@@ -235,7 +245,7 @@ th{
     display: flex;
     flex-direction: column;
     flex: 1;
-    width: 30rem;
+    width: 40rem;
     padding: 1rem;
     justify-content: left;
     align-content: center;
@@ -250,7 +260,7 @@ th{
     overflow-x: hidden;
     padding: 0 1rem;
     margin: 1rem;
-    width: 100%;
+    width: 60rem;
 }
 .create-chapter-btn-container .btn{
     width: 15rem;
@@ -285,4 +295,13 @@ th{
 }
 .row.bottom-dashboard{
     margin-top: -0.75rem;
+}
+.fiche-fiction{
+    background-color: rgba(var(--middle-green-01), 1);
+}
+.fiche-fiction h5, .fiche-fiction p{
+    color: rgba(var(--main-white),1)
+}
+.fiche-fiction .link-text-a{
+    color: rgba(var(--active-hover), 1)
 }

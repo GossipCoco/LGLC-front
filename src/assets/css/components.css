@@ -69,14 +69,7 @@
     width: 50%;
 }
 
-.image-fiction-container img {
-    width: 180px;
-}
-.image-fiction-container{
-    background-size: cover;
-    height: 200px;
-    border-radius: 12px;
-}
+
 .avatar-container h2, input#upload-avatar{
     color: rgba(var(--main-white), 1)
 }

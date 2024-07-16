@@ -36,9 +36,22 @@
 }
 .row.pagination-container p{
     color:rgba(var(--dark-green-01),1);
-    font-size: 25px;
+    font-family: 'Roboto';
+    font-size: 16px;
     font-weight: 600;
+    text-align: right;
 }
 .nav-btn-contain button{
     height: 40px;
+}
+.row.pagination-container,.row.pagination-zone-container, .pagination-row-container{
+    width: 100%;
+}
+.pagination{
+    margin: 3rem 0 0 0;
+}
+.pagination .page-link{
+    background-color: rgba(var(--dark-green-01),1);
+    border: 1px solid rgba(var(--dark-green-01),1);
+    color: rgba(var(--main-white),1)
 }
