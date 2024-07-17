@@ -13,7 +13,7 @@ import CharacterDetails from "../components/Characters/CharacterComponent/Charac
 import CharacterCreate from '../components/Characters/CharacterComponent/CharacterCreate'
 
 import AllExistingFictionsLayout from '../components/Fictions/AllExistingFictionsLayout.vue'
-import AExistingFictionContain from "../components/Fictions/AExistingFictionContain.vue";
+import AExistingFictionContain from "../components/Fictions/AllMyFictions/AExistingFictionContain.vue";
 import FictionContain from '../components/Fictions/AllMyFictions/FictionContain'
 import ChapterLayout from '../components/Fictions/AllMyFictions/ChapterLayout.vue'
 import CreateFiction from '../components/Fictions/AllMyFictions/CreateFiction.vue'

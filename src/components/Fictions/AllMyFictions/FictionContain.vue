@@ -116,11 +116,7 @@ export default {
       nbIllus: null,
     };
   },
-  created() {
-    this.url = this.$route.params.id;
-    this.getFictionByName(this.url);
-    this.GetLastChapterOfAFiction(this.url)
-  },
+
     
     created() {
         this.url = this.$route.params.id;
