@@ -8,9 +8,13 @@
       >
         <div class="message__outer">
           <div class="message__avatar">            
-            <img :src="'/images/Avatars/' + comment.User.avatar" class="card-img-top" alt="avatar">
+            <img :src="'/images/Avatars/' + comment.User.avatar" class="card-img-top" alt="avatar"><br>
+            <div class="message__status">
+            <p>{{ comment.User.FirstName }} {{ comment.User.LastName }}</p>
+          </div>
           </div>
           <div class="message__inner">
+
             <div class="message__bubble">
               <p>{{ comment.Content }}</p>
             </div>
@@ -19,7 +23,7 @@
             </div>
           </div>
           <div class="message__status">
-            <!-- Ajoutez un statut ici si nécessaire -->
+            <p></p>
           </div>
         </div>
       </div>

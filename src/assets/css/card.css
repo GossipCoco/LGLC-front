@@ -570,11 +570,18 @@ left: 35%
 li.quest-container{
     margin: 0 1rem;
 }
+.quest-container{
+    margin: 1rem;
+}
+.quest-title{
+    height: 4rem;
+}
 .quest--global-container{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     flex: 1;
+    height: 20rem;
 }
 .quest-container,.quest--global-container p, .quest-image-container, .background-image-quest-image-container{
     display: flex;
@@ -584,11 +591,12 @@ li.quest-container{
 }
 .quest-image-container, .background-image-quest-image-container{
     width: 100%;
-    height: 250px;
+    height: 150px;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 .quest-container .card-body{
-    height: 90vh;
+    height: 25rem;
 }
 .quest-title{
     display: flex;
