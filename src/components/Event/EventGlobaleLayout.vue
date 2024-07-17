@@ -7,8 +7,7 @@
             <div class="row event-container">
                 <div class="col-6 col-sm-12 col-md-6">
                 <ListEvents v-bind:events="events" />
-            </div>
-            
+            </div>            
             <div class="col-6 col-sm-12 col-md-6">
                 <Scheduler />
             </div>
