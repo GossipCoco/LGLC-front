@@ -4,9 +4,9 @@
       <h4>Lire mes fictions</h4>
     </div>
     <div class="row list-fiction-card-container">
-      <div class="col-3 col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3 mb-3 mb-sm-3 mb-3 mb-sm-3"
+      <div class="col-4 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4"
         v-for="(game, index) in games" :key="index">
-        <div class="card mb-3" style="max-width: 440px;" v-for="(fiction, index) in game.Fiction" :key="index">
+        <div class="card mb-3" style="max-width: 540px;" v-for="(fiction, index) in game.Fiction" :key="index">
           <div class="row g-0">
             <div class="col-md-6">
               <div class="image-fiction-container"
@@ -20,7 +20,7 @@
                 </p>
                 <p class="card-text" style="color: black">
                   <small class="text-body-secondary">
-                    <router-link class="link-text-a" :to="'/fiction/' + fiction.Id">Lire</router-link>
+                    <router-link class="link-text-a" :to="'/fiction/' + fiction.Title">Lire</router-link>
                   </small>
                 </p>
               </div>

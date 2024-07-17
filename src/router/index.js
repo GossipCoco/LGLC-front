@@ -25,6 +25,7 @@ import CommentLayout from "../components/Fictions/Comments/CommentLayout.vue";
 import GameLayout from '../components/Game/GameLayout'
 import MouseShot from '../components/Game/MouseShot/MouseShot.vue'
 import GooseGameLayout from '../components/Game/GooseGame/GosseGameLayout.vue'
+
 import QuestLayout from '../components/Game/Quest/QuestLayout.vue'
 import QuestById from '../components/Game/Quest/QuestById.vue'
 import RollOfDiceLayout from '../components/Game/RollOfDice/RollOfDiceLayout.vue'

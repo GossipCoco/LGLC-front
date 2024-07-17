@@ -55,6 +55,7 @@ export default {
     name: 'ChapterLayout',
     data() {
         return {
+            TitleFiction: null,
             usrCurrent: this.$store.state.auth.user.usrID,
             Author: null,
             AuthorId: null,
@@ -73,6 +74,7 @@ export default {
     },
     created() {
         this.getChapter(this.$route.params.id);
+        console.log(this.$route.params.id)
     },
     watch: {
         '$route.params.id': function (newId) {
@@ -84,11 +86,13 @@ export default {
             FictionService.getChapter(id, this.nav)
                 .then((response) => {
                     console.log(response.data.ob)
+                    console.log(response.data.ob)
                     this.chapter = response.data.ob || {};
                     this.Author = this.chapter.Fiction.UserId
                     this.AuthorId = this.chapter.Fiction.UserId
                     this.AllIillustrations = this.chapter.ChapterIllustrations
-                    this.typeText(this.chapter.Content);
+                    this.TitleFiction = this.chapter.Fiction.Title
+                    // this.typeText(this.chapter.Content);
                 })
                 .catch((e) => {
                     console.log(e);

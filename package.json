@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "test:unit": "jest"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.5.2",
@@ -51,6 +52,8 @@
     "vuex": "^4.1.0"
   },
   "devDependencies": {
+    "@types/bootstrap": "^5.2.10",
+    "@types/jquery": "^3.5.30",
     "@babel/core": "^7.24.8",
     "@babel/plugin-proposal-optional-chaining": "^7.21.0",
     "@babel/preset-env": "^7.24.8",
@@ -58,10 +61,15 @@
     "@vue/cli-plugin-eslint": "~4.5.15",
     "@vue/cli-service": "~4.5.15",
     "@vue/compiler-sfc": "^3.4.21",
+    "@vue/test-utils": "^2.4.0-alpha.2",
+    "@vue/vue3-jest": "^29.2.6",
     "babel-eslint": "^10.1.0",
+    "babel-jest": "^29.7.0",
     "browserslist-config-vue": "^1.0.3",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^7.0.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
     "typescript": "^5.5.2",
     "vitest": "^2.0.2",
     "vue-loader": "^17.4.2",
