@@ -3,7 +3,7 @@
 
  R‚pertoire de C:\Users\gossi\OneDrive\Documents\project\Project-Warriors\front-app-v3\public\images\parallax
 
-18/07/2024  09:35    <DIR>          .
+18/07/2024  11:39    <DIR>          .
 16/07/2024  10:28    <DIR>          ..
 16/07/2024  10:28         3ÿ240ÿ902 01longhaired_c_01.png
 16/07/2024  10:28         3ÿ358ÿ769 03_c_0 (3).png
@@ -21,6 +21,7 @@
 16/07/2024  10:28         3ÿ021ÿ901 c_18.png
 18/07/2024  09:25         3ÿ429ÿ808 Default_Digital_illustration_featuring_two_cats_sitting_side_b_0-(6).png
 16/07/2024  10:28         3ÿ060ÿ368 Def_a_majestic_longhaired_c_3-4.png
+18/07/2024  11:04    <DIR>          fond
 13/07/2024  14:06         1ÿ805ÿ802 fond--+++1.png
 16/07/2024  10:28         2ÿ127ÿ254 fond--012.png
 13/07/2024  14:06         2ÿ283ÿ021 fond--1.png
@@ -63,10 +64,12 @@
 14/07/2024  08:36         1ÿ648ÿ005 illustration3.png
 14/07/2024  08:36         1ÿ657ÿ405 illustration4.png
 14/07/2024  08:36         1ÿ646ÿ596 illustration5.png
-18/07/2024  09:36               208 Liste.txt
+18/07/2024  11:27    <DIR>          leve4
+18/07/2024  11:43                 0 Liste.txt
 16/07/2024  10:28                19 ListeFichiers.bat
 16/07/2024  10:28         3ÿ071ÿ574 longhaired_c_0 (3).png
 16/07/2024  10:28           730ÿ964 longhaired_c_12.png
+18/07/2024  11:28    <DIR>          middle
 16/07/2024  10:28         3ÿ044ÿ366 onghaired_c_3-3.png
 16/07/2024  10:28         4ÿ062ÿ303 par2_3.png
 16/07/2024  10:28         3ÿ964ÿ160 par4_0-3.png
@@ -124,5 +127,5 @@
 16/07/2024  10:28         2ÿ964ÿ095 _c_17.png
 16/07/2024  10:28         1ÿ058ÿ572 _c_198.png
 16/07/2024  10:28         2ÿ181ÿ228 _majestic_longhaired_cP4.png
-             119 fichier(s)      310ÿ565ÿ242 octets
-               2 R‚p(s)  226ÿ064ÿ519ÿ168 octets libres
+             119 fichier(s)      310ÿ565ÿ034 octets
+               5 R‚p(s)  225ÿ447ÿ944ÿ192 octets libres
