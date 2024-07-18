@@ -581,7 +581,7 @@ li.quest-container{
     flex-direction: row;
     flex-wrap: wrap;
     flex: 1;
-    height: 20rem;
+    height: 30rem;
 }
 .quest-container,.quest--global-container p, .quest-image-container, .background-image-quest-image-container{
     display: flex;
@@ -589,14 +589,38 @@ li.quest-container{
     flex-wrap: wrap;
     flex: 1;
 }
+.quest-container{
+    height: 30rem;
+}
 .quest-image-container, .background-image-quest-image-container{
     width: 100%;
-    height: 150px;
-    background-size: cover;
+    height: 0rem;
+    background-size: contain;
     background-repeat: no-repeat;
+    background-position: 50% 55%;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    vertical-align: top;
 }
-.quest-container .card-body{
-    height: 52rem;
+.one-quest-container .card-header{
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+}
+.card-header.quest-title{
+    display: flex;
+    justify-content: center;
+}
+.card-body.one-quest{
+display: flex;
+flex-direction: column;
+height: 25rem;
+flex: 1;
+}
+.card-img-top.background-image-quest-image-container img{
+    width: 150px;
+    height: 100px;
 }
 .quest-title{
     display: flex;
@@ -606,10 +630,10 @@ li.quest-container{
 .quest-button-text{
     display: flex;
     flex-direction: column;
-    height: 5rem;
+    height: 17rem;
 }
 .quest-button-text p{
-    height: 4rem;
+    height: 9rem;
 }
 .quest-button-text .btn.btn-primary{
     width: 10rem;

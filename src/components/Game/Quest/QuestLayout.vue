@@ -3,39 +3,46 @@
     <div class="card-header">
       <h2>Liste des quêtes à réaliser</h2>
     </div>
-    <div class="row list-fiction-card-container">
-      <div class="quest--global-container">
+    <div v-if="showspinner" class="d-flex justify-content-center">
+      <div class="spinner-border text-success" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+    <div v-if="!showspinner" class="row list-fiction-card-container">
+      <div
+        class="col-sm-3 mb-3 mb-sm-0 quest--global-container"
+        v-for="(quest, index) in allQuests"
+        :key="index"
+      >
         <div
-          v-for="(quest, index) in allQuests"
+          class="card quest-container mb-3"
+          v-for="(image, index) in quest.QuestImages"
           :key="index"
-          class="quest-container"
         >
-          <div
-            v-for="(image, index) in quest.QuestImages"
-            :key="index"
-            class="quest-image-container"
-          >
-            <div class="quest-title">
+          <div class="quest-image-container">
+            <div class="card-header quest-title">
               <h4>{{ quest.Title }}</h4>
             </div>
-            <div
-              v-bind:style="{
-                backgroundImage: 'url(/images/Fictions/' + image.Image,
-              }"
-              class="background-image-quest-image-container"
-            ></div>
-          </div>
-          <div class="quest-button-text">
-            <p>{{ quest.Description }}</p>
-            <p>
-              <router-link
-                :to="'/QuestById/' + quest.Id"
-                type="button"
-                class="btn btn-primary"
+            <div class="card-body one-quest">
+              <div
+                class="card-img-top background-image-quest-image-container"
               >
-               Relever le défi
-              </router-link>
-            </p>
+              <img :src="'/images/Fictions/'+ image.Image" />
+            </div>
+
+              <div class="quest-button-text">
+                <p class="quest-description">{{ quest.Description }}</p>
+                <p class="quest-button-link">
+                  <router-link
+                    :to="'/QuestById/' + quest.Id"
+                    type="button"
+                    class="btn btn-primary"
+                  >
+                    Relever le défi
+                  </router-link>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -81,7 +88,7 @@ export default {
       nav: {
         current: 0,
         pages: 0,
-        step: 8,
+        step: 6,
       },
     };
   },
@@ -96,7 +103,7 @@ export default {
     this.GetTotalQuest();
   },
   watch: {
-    '$route'() {
+    $route() {
       this.initPage();
     },
   },
