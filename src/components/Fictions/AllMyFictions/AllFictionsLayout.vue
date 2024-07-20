@@ -1,40 +1,12 @@
 <template>
   <div class="dashboard-max-card-container card fiction-container">
-    <div class="card-header">
-      <h4>Lire toutes mes fictions</h4>
-    </div>
+    <CardHeader v-bind:Title="'Lire toutes mes fictions'" />
     <div class="row list-fiction-card-container">
-      <div class="col-4 col-sm-12 col-md-12 col-lg-4 col-xl-34 col-xxl-4 mb-4 mb-sm-4 mb-4 mb-sm-4"
-        v-for="(game, index) in games" :key="index">
-        <div class="card mb-3" style="max-width: 540px;" v-for="(fiction, index) in game.Fiction" :key="index">
-          <div class="row g-0">
-            <div class="col-md-6">
-              <div class="image-fiction-container"
-                v-bind:style="{ backgroundImage: 'url(/images/Fictions/' + fiction.Image + ')' }">
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="card-body">
-                <h5 class="card-title" style="color: black">{{ fiction.Title }}</h5>
-                <p class="card-text" style="color: black; font-size: 14px" v-html="truncateText(fiction.Summary, 35)">
-                </p>
-                <p class="card-text" style="color: black">
-                  <small class="text-body-secondary">
-                    <router-link class="link-text-a" :to="'/fiction/' + fiction.Title">Lire</router-link>
-                  </small>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <AllCardsFictions v-bind:games="games" />      
     </div>
     <div class="row pagination-container">
       <div class="row bottom-top-dashboard">
-        <div v-if="showspinner" class="d-flex justify-content-center">
-          <div class="spinner-border text-success" role="status">
-          </div>
-        </div>
+        <Spinner v-if="showspinner"/>
       </div>
       <Pagination v-if="!showspinner"  v-bind:nav="nav" v-bind:filters="filters" v-bind:getDatas="'GamesPagination'"
         @GamesPagination="GamesPagination" />
@@ -44,11 +16,14 @@
 
 <script>
 import GameService from '../../../services/GameService'
+import CardHeader from '../../Components/GenericComponent/CardHeader.vue';
 import Pagination from '../../Components/GenericComponent/Pagination.vue';
+import AllCardsFictions from './AllCardsFictions.vue';
+import Spinner from '../../Components/GenericComponent/Spinner.vue';
 
 export default {
   name: 'GameLayout',
-  components: { Pagination },
+  components: { Pagination, AllCardsFictions, CardHeader, Spinner },
   data() {
     return {
       usrId: this.$store.state.auth.user.usrID,
@@ -67,9 +42,6 @@ export default {
     this.initData();
   },
   methods: {
-    truncateText(text, maxLength) {
-      return text.length <= maxLength ? text : text.substring(0, maxLength) + '...';
-    },
     async initData() {
       this.showspinner = true;
       await this.countAllGames();

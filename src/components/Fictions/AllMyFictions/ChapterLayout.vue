@@ -10,7 +10,7 @@
             </div>
             <div class="card-body">
                 <div class="row">
-                    <div class="6">
+                    <div class="col-6">
                         <div style="color: white" v-for="(illustration, index) in AllIillustrations" :key="index">
                             <div style="height: 150px; width: 150px;">
                                 <img :src="'/images/Fictions/' + illustration.IllustrationId"
@@ -18,7 +18,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="6">
+                    <div class="col-6">
                         <div class="chapter-button-content">
                             <button @click="speakText" class="btn btn-primary">
                                 Lire à voix haute
