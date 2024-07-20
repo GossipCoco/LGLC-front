@@ -5,8 +5,6 @@
       :key="index"
       class="character-card card"
     >
-    <!-- <h3>{{ character.CurrentName }}</h3> -->
-
       <character-text v-bind:character="character" />
     </div>
   </div>

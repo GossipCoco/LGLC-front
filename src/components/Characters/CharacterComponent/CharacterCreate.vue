@@ -1,9 +1,7 @@
 <template>
     <div class="form-character-container-global">
         <div class="card card-form-create-character  mb-12">
-            <div class="card-header title-chapter-container">
-                <h2>Création de personnage</h2>
-            </div>
+            <CardHeader v-bind:Title="'Création de personnage'" />
             <div class="card-body">
                 <form class="create-character-form" @submit.stop.prevent="onSubmit">
                     <Transition name="slide-fade">
@@ -160,8 +158,11 @@ import CharacterService from '../../../services/CharacterService'
 import ImageCharactersDatas from '../../../Datas/DatasReactives/ImageCharactersDatas'
 import ImageService from '../../../services/ImageService'
 
+import CardHeader from '../../Components/GenericComponent/CardHeader.vue'
+
 export default {
     name: 'CharacterCreate',
+    components:{CardHeader}, 
     data() {
         return {
             characterId: null,

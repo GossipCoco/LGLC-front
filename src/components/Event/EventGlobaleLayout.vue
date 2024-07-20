@@ -1,14 +1,11 @@
 <template>
     <div class="dashboard-max-card-container card fiction-container">
-        <div class="card-header">
-            <h4>évènement</h4>
-        </div>
+        <CardHeader v-bind:Title="'évènement'" />
         <div class="card-body">
             <div class="row event-container">
                 <div class="col-6 col-sm-12 col-md-6">
                 <ListEvents v-bind:events="events" />
-            </div>
-            
+            </div>            
             <div class="col-6 col-sm-12 col-md-6">
                 <Scheduler />
             </div>
@@ -18,11 +15,13 @@
 </template>
 <script>
 import QuestService from "../../services/QuestService"
+import CardHeader from "../Components/GenericComponent/CardHeader.vue";
 import ListEvents from './Components/ListEvents.vue'
 import Scheduler from './Components/Scheduler.vue'
 export default {
     name: 'EventGlobalLayout',
     components: {
+        CardHeader,
         ListEvents,
         Scheduler
     },
