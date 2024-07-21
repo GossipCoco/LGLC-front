@@ -1,9 +1,7 @@
 <template>
   <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12  card-global">
     <div class="card fiction-card">
-      <div class="card-header">
-        <h4>Personnages Aléatoires</h4>
-      </div>
+      <TitleHeaderDashboard v-bind:title="'Personnages aléatoires'"/>
       <div class="card-body dashboard-character-container">
         <div class="row">
           <div class="col-12 character-col">
@@ -30,8 +28,10 @@
   </div>
 </template>
 <script>
+import TitleHeaderDashboard from '../../Components/SpecificComponent/TitleHeaderDashboard.vue';
 export default {
   name: 'CharacterRandom',
+  components:{TitleHeaderDashboard},
   props: ['randomCharacters']
 }
 </script>

@@ -1,40 +1,45 @@
 <template>
-    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12  card-global">
-        <div class="card profil-card fiction-card">
-            <div class="card-header avatar-container-header">
-                <h4>Event à venir</h4>
-                <!-- <div class="avatar-container"><img :src="'/images/Levels/' + level" class="img-fluid card-img-top" alt="avatar"></div> -->
-            </div>
-            <div class="card-body">
-                <div v-for="(event, index) in events" :key="index">
-                    <p>{{ event.Title }}</p>
-                </div>
-            </div>
+  <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12 card-global">
+    <div class="card profil-card fiction-card">
+      <TitleHeaderDashboard v-bind:title="'évènements à venir'" />
+      <div class="card-body">
+        <div v-for="(event, index) in events" :key="index">
+          <p>{{ event.Title }}</p>
         </div>
+      </div>
     </div>
+  </div>
 </template>
 <script>
-import QuestService from "../../../services/EventService"
+import QuestService from "../../../services/EventService";
+
+import TitleHeaderDashboard from "../../Components/SpecificComponent/TitleHeaderDashboard.vue";
 export default {
-    name: 'Event',
-    data() {
-        return {
-            events: {}
-        }
+  name: "Event",
+  components: { TitleHeaderDashboard },
+  data() {
+    return {
+      events: {},
+      nav: {
+        current: 0,
+        pages: 0,
+        step: 5,
+      },
+    };
+  },
+  created() {
+    this.GetAllQuests(this.nav);
+  },
+  methods: {
+    GetAllQuests(nav) {
+      QuestService.GetAllEvents(nav)
+        .then((response) => {
+          this.events = response.data.ob;
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     },
-    created() {
-        this.GetAllQuests()
-    },
-    methods: {
-        GetAllQuests() {
-            QuestService.GetAllEvents()
-                .then((response) => {
-                    this.events = response.data.ob
-                })
-                .catch((err) => {
-                    console.log(err)
-                })
-        }
-    }
-}
+  },
+};
 </script>

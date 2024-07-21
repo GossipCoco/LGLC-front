@@ -1,8 +1,8 @@
 import http from '../http/http-common'
 
 class EventService{
-    GetAllEvents(){
-        return http.get(`/event`)
+    GetAllEvents(nav){
+        return http.post(`/event`, nav)
     }
     saveGameResults(id, data){
         return http.post(`/event/GetPointParId/${id}`, data)

@@ -2,14 +2,12 @@
     <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12 card-global">
         <div class="card fiction-card">
             <div class="border-gradient-decoration-bottom"></div>
-            <div class="card-header">
-                <h4>Lire des fictions</h4>
-            </div>
+            <TitleHeaderDashboard v-bind:title="'Lire des fictions'" />
             <div class="card-body">
                 <div v-for="(game, index) in fiveGames" :key="index">
                     <div class="list-fictions-dashboard list-all-fictions-globale--container" v-for="(fiction, index) in game.Fiction" :key="index">
                         <div class="rond-image-illustration">
-                            <img  class="img-fluid"  :src="'/images/Fictions/' + fiction.Image" :alt="fiction.Image" />
+                            <ImageRondDashboard v-bind:src="'/images/Fictions/' + fiction.Image" v-bind:alt="fiction.Image" />
                         </div>
                         <div class="summaray-title-text">
                         <p>
@@ -17,7 +15,7 @@
                                 <router-link :to="'/fiction/' + fiction.Title">
                                     {{ fiction.Title }}
                                 </router-link>
-                            </span>:
+                            </span><br>
                             <span v-html="truncateText(fiction.Summary, 75)"></span>
                         </p>
                         </div>
@@ -29,7 +27,12 @@
 </template>
 <script>
 import GameService from '../../../services/GameService';
+
+import TitleHeaderDashboard from '../../Components/SpecificComponent/TitleHeaderDashboard.vue';
+import ImageRondDashboard from '../../Components/SpecificComponent/ImageRondDashboard.vue';
 export default {
+    name: 'ListAllFictions',
+    components:{TitleHeaderDashboard, ImageRondDashboard},
     data() {
         return {
             fiveGames: {},
