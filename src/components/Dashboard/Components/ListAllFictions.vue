@@ -1,5 +1,5 @@
 <template>
-    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12  card-global">
+    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12 card-global">
         <div class="card fiction-card">
             <div class="border-gradient-decoration-bottom"></div>
             <div class="card-header">

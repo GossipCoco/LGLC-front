@@ -239,7 +239,7 @@
     height: 85vh;
     overflow-x: hidden;
     overflow-y: auto;
-    padding: 1rem auto;
+    padding: 1rem 0;
 }
 
 .dashboard-fiction-game-card-container.card {

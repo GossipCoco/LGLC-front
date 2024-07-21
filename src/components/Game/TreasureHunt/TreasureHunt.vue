@@ -1,6 +1,6 @@
 <template>
   <div class="dashboard-max-card-container card fiction-container">
-    <div class="card-head"><h2>Chasse au trésor</h2></div>
+    <CardHeader v-bind:Title="'Chasse au trésor'" />
     <div class="card-body">
       <div class="game-container" @keydown="handleKeydown" tabindex="0">
         <div class="score-banner">
@@ -19,9 +19,10 @@
 <script>
 import Swal from 'sweetalert2';
 import EventService from '../../../services/EventService';
-
+import CardHeader from '../../Components/GenericComponent/CardHeader.vue';
 export default {
   name: 'TreasureHunt',
+  components:{CardHeader},
   data() {
     return {
       backgroundImage: '/images/Backgrounds/_3b330c06-8a19-4a0b-8f57-feaa180a9dbf.jpeg', // Path to your background image in the public folder

@@ -1,25 +1,22 @@
 <template>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-1 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-1">
+      <div class="col-1 col-sm-12 col-md-12 col-lg-1 col-xl-1 col-xxl-1">
         <LeftMenu />
       </div>
-      <div class="col-11 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-11">
-        <main class="container-fluid">
-          <!-- <NavBar/> -->
+      <div class="col-11 col-sm-12 col-md-12 col-lg-11 col-xl-11 col-xxl-11">
+        <main class="container-fluid">          
           <router-view></router-view>
         </main>
       </div>
     </div>
   </div>
 </template>
-
 <script>
 import EventBus from "../../http/EventBus";
 import UserService from "../../services/UserService";
 import jwtAPI from "../../api/JwtApi";
 import LeftMenu from "../Navigation/LeftMenu.vue";
-// import NavBar from "../Navigation/NavBar.vue";
 export default {
   name: "Home",
   components: { LeftMenu },

@@ -1,5 +1,4 @@
 <template>
-  <div>
     <div class="burger-menu" @click="toggleMenu">
       <img src="../../../public/images/Logos/logo1.png"/>
     </div>
@@ -66,7 +65,7 @@
               Toutes les fictions
             </router-link>
             <router-link class="link-collapse" :to="'/allFictions/' + usrId">
-              Mes fictions
+              Toutes mes fictions
             </router-link>
           </div>
         </li>
@@ -127,8 +126,7 @@
             <router-link class="link-collapse" to="/TreasureHunt">Chasse au trésor</router-link>
             <router-link class="link-collapse" to="/Quest">Quêtes</router-link>
           </div>
-        </li>
-        
+        </li>        
         <li class="li-level1" v-if="role === 'Administrateur'">
           <router-link to="/admin">
             <div class="menu-level1">
@@ -153,7 +151,6 @@
         </li>
       </ul>
     </div>
-  </div>
 </template>
 <script>
 import UserService from "../../services/UserService";

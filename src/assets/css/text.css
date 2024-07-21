@@ -71,3 +71,7 @@ a{ text-decoration: none; }
     text-transform: capitalize;
     font-size: 42px;
 }
+.user-info-text p span{
+  font-weight: 600;
+  color: rgba(var(--active-hover), 1)
+}
