@@ -13,7 +13,6 @@ import CharacterDetails from "../components/Characters/CharacterComponent/Charac
 import CharacterCreate from '../components/Characters/CharacterComponent/CharacterCreate'
 
 import AllExistingFictionsLayout from '../components/Fictions/AllExistingFictionsLayout.vue'
-import AExistingFictionContain from "../components/Fictions/AExistingFictionContain.vue";
 import FictionContain from '../components/Fictions/AllMyFictions/FictionContain'
 import ChapterLayout from '../components/Fictions/AllMyFictions/ChapterLayout.vue'
 import CreateFiction from '../components/Fictions/AllMyFictions/CreateFiction.vue'
@@ -37,6 +36,7 @@ import ClanDetails from "../components/Locations/ClanDetails"
 import AdminLayout from '../components/UserPanel/AdminDashboard'
 import UserCard from '../components/Users/UserCard.vue'
 import AllLocationsLayout from "../components/Locations/AllLocationsLayout.vue"
+import LocationsDetails from "../components/Locations/LocationsDetails.vue";
 
 
 
@@ -151,6 +151,11 @@ const routes = [
         component: AllLocationsLayout
       },
       {
+        path: ('/LocationsDetails/:id'),
+        name: 'LocationsDetails',
+        component: LocationsDetails
+      },
+      {
         path: '/rollOfDice',
         name: 'RollOfDiceLayout',
         component: RollOfDiceLayout,
@@ -184,11 +189,6 @@ const routes = [
         path: '/CommentByFiction/:id',
         name: 'CommentLayout',
         component: CommentLayout
-      },
-      {
-        path: '/AExistingFictionContain/:id',
-        name: 'AExistingFictionContain',
-        component: AExistingFictionContain
       },
       {
         path: '/createANewFiction',

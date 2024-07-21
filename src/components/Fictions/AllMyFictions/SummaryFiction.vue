@@ -1,74 +1,26 @@
 <template>
-<div class="card-body">
-      <div v-if="showspinner" class="d-flex justify-content-center">
-        <div class="spinner-border text-success" role="status">
-          <span class="visually-hidden">Loading...</span>
-        </div>
-      </div>
-      <div class="row list-fiction-card-container" v-else>
-        <!-- <SummaryFiction v-bind:games="games" /> -->
-        <div
-          class="col-4 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 mb-2 mb-sm-2 mb-2 mb-sm-2"
-          v-for="(game, index) in games"
-          :key="index"
-        >
-          <div
-            class="fiche-fiction card mb-3"
-            style="max-width: 540px; max-height: 350px"
-            v-for="(fiction, index) in game.Fiction"
-            :key="index"
-          >
-            <div class="row g-0">
-              <div class="col-md-4">
-                <div
-                  class="image-fiction-container"
-                  v-bind:style="{
-                    backgroundImage:
-                      'url(/images/Fictions/' + fiction.Image + ')',
-                  }"
-                ></div>
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">
-                    {{ fiction.Title }}
-                  </h5>
-                  <p
-                    class="card-text"
-                    v-html="truncateText(fiction.Summary, 55)"
-                  ></p>
-                  <p class="card-text">
-                    <small class="text-body-secondary">
-                      <router-link
-                        class="link-text-a"
-                        :to="'/fiction/' + fiction.Title"
-                        >Lire</router-link
-                      >
-                    </small>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row pagination-container">
-      <Pagination
-        v-if="!showspinner"
-        :nav="nav"
-        :filters="filters"
-        :getDatas="'GamesPagination'"
-        @GamesPagination="GamesPagination"
-      />
-    </div>
+  <div class="card-body">
+    <spinner v-if="showspinner"/>
+    <AllCardsFictions v-else v-bind:games="games" />    
+  </div>
+  <div class="row pagination-container">
+    <Pagination
+      v-if="!showspinner"
+      :nav="nav"
+      :filters="filters"
+      :getDatas="'GamesPagination'"
+      @GamesPagination="GamesPagination"
+    />
+  </div>
 </template>
 <script>
 import Pagination from "../../Components/GenericComponent/Pagination.vue";
 import GameService from "../../../services/GameService";
+import AllCardsFictions from "./AllCardsFictions.vue";
+import Spinner from "../../Components/GenericComponent/Spinner.vue";
 export default {
   name: "SummaryFiction",
-  components: { Pagination },
+  components: { AllCardsFictions, Pagination, Spinner },
   data() {
     return {
       showspinner: false,

@@ -1,9 +1,7 @@
 <template>
   <div class="dashboard-max-card-container card fiction-container">
     <CardHeader v-bind:Title="'Lire toutes mes fictions'" />
-    <div class="row list-fiction-card-container">
-      <AllCardsFictions v-bind:games="games" />      
-    </div>
+    <AllCardsFictions v-bind:games="games" />
     <div class="row pagination-container">
       <div class="row bottom-top-dashboard">
         <Spinner v-if="showspinner"/>

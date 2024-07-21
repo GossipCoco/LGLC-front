@@ -18,14 +18,12 @@
         v-bind:Author="Author"
         v-bind:dateCreation="dateCreation"
       />
-      <div class="">
-        <router-link
+      <router-link
           type="button"
           class="btn btn-primary"
           :to="'/allFictions/' + Author"
           >Retour à la liste des fictions</router-link
-        >
-      </div>
+      >
     </div>
     <div class="card-body">
       <div class="one-fiction-container">
