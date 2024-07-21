@@ -1,11 +1,15 @@
 <template>
+  <div id="list-events">
     <div v-for="(event, index) in events" :key="index">
-        <p>{{ event.Title }} : {{ event.Description }}</p>
+      <p>
+        <span>{{ event.Title }}</span> : {{ event.Description }}
+      </p>
     </div>
+  </div>
 </template>
 <script>
 export default {
-    name: 'ListEvents',
-    props: ['events']
-}
+  name: "ListEvents",
+  props: ["events"],
+};
 </script>

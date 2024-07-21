@@ -1,15 +1,14 @@
 <template>
   <div class="dashboard-max-card-container card fiction-container">
-    <div class="card-header">
-      <h4>Lire des fictions</h4>
-    </div>
+    <CardHeader v-bind:Title="'Lire des fictions'"/>
     <SummaryFiction/>
   </div>
 </template>
 <script>
+import CardHeader from "../Components/GenericComponent/CardHeader.vue";
 import SummaryFiction from './AllMyFictions/SummaryFiction.vue';
 export default {
   name: "AllExistingFictionsLayout",
-  components: { SummaryFiction },  
+  components: { CardHeader, SummaryFiction },  
 };
 </script>

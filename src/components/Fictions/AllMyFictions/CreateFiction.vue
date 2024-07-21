@@ -1,5 +1,6 @@
 <template>
     <div class="dashboard-max-card-container card fiction-container">
+        <CardHeader v-bind:Title="'Créer une nouvelle fanfiction'" />
         <div class="card-body">
             <form class="create-character-form" @submit.stop.prevent="handleOk" ref="uploadForm">
                 <div class="col-12">
@@ -76,9 +77,11 @@ import GameService from '../../../services/GameService'
 import CharacterService from '../../../services/CharacterService';
 import axios from 'axios';
 import Config from '../../../../server'
+import CardHeader from '../../Components/GenericComponent/CardHeader.vue';
 
 export default {
     name: 'CreateFiction',
+    components: {CardHeader},
     inject: ["user"],
     data() {
         return {

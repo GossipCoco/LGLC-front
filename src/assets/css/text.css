@@ -75,3 +75,6 @@ a{ text-decoration: none; }
   font-weight: 600;
   color: rgba(var(--active-hover), 1)
 }
+#list-events p span{  
+  font-weight: 600;
+}

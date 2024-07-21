@@ -1,8 +1,6 @@
 <template>
   <div class="dashboard-max-card-container card fiction-container">
-    <div>
-      <h2>Chapitre {{ NextChapter }}</h2>
-    </div>
+    <CardHeader v-bind:Title="'Chapitre' + NextChapter" />
     <form class="create-character-form" @submit.stop.prevent="onSubmit" ref="uploadForm">
       <div class="row">
         <div class="col-12">
@@ -55,8 +53,10 @@
 </template>
 <script>
 import FictionService from '../../../services/FictionService';
+import CardHeader from '../../Components/GenericComponent/CardHeader.vue';
 export default {
   name: "CreateChapter",
+  components:{CardHeader},
   props: ['NumberChapter'],
   data() {
     return {
