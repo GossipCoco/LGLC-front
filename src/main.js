@@ -35,6 +35,7 @@ import './assets/css/Form.css'
 import './assets/css/Scheduler.css'
 import './assets/css/Parallax.css'
 import './assets/css/Comment.css'
+import './assets/css/Game.css'
 
 IOController.initSocket(io)
 

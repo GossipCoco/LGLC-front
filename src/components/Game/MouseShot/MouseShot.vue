@@ -1,5 +1,5 @@
 <template>
-    <div class="dashboard-max-card-container card fiction-container">
+    <div id="mouse-shot" class="dashboard-max-card-container card fiction-container">
         <CardHeader v-bind:Title="'Jeu du chat et de la souris'" />
         <div class="game" @keydown="handleKeyPress" tabindex="0">
             <div v-if="gameStarted" ref="gameArea" :style="{ backgroundImage: 'url(' + backgroundImage + ')' }"
@@ -111,34 +111,3 @@ export default {
     }
 };
 </script>
-
-<style scoped>
-.game {
-    outline: none;
-}
-
-.game-area {
-    position: relative;
-    width: 800px;
-    height: 600px;
-    background-size: cover;
-    overflow: hidden;
-    outline: none;
-}
-
-.mouse {
-    position: absolute;
-    width: 100px;
-}
-
-.cat {
-    position: absolute;
-    width: 25%;
-    height: 25%;
-    cursor: pointer;
-}
-
-.score {
-    font-size: 24px;
-}
-</style>

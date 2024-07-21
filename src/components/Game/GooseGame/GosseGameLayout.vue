@@ -1,8 +1,6 @@
 <template>
-    <div class="dashboard-max-card-container card fiction-container">
-        <div class="card-header">
-            <h4>Jeu</h4>
-        </div>
+    <div id="goose-game" class="dashboard-max-card-container card fiction-container">
+        <CardHeader v-bind:Title="'Jeu de l\'oie'" />
         <div class="row list-fiction-card-container">
             <div class="game-map-container">
                 <img src="/images/Game/Forest.OS-2.webp" alt="Map" class="game-map">
@@ -19,10 +17,11 @@
         </div>
     </div>
 </template>
-
 <script>
+import CardHeader from '../../Components/GenericComponent/CardHeader.vue';
 export default {
     name: 'GosseGameLayout',
+    components:{CardHeader},
     data() {
         return {
             usrId: this.$store.state.auth.user.usrID,
@@ -82,36 +81,3 @@ export default {
   }
 };
 </script>
-
-<style>
-.game-map-container {
-  position: relative;
-  width: 800px; /* Same as mapSize width */
-  height: 600px; /* Same as mapSize height */
-  border: 1px solid #000;
-}
-
-.game-map {
-  width: 100%;
-  height: 100%;
-}
-
-.game-square {
-  position: absolute;
-  width: 50px; /* Same as gridSize */
-  height: 50px; /* Same as gridSize */
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  box-sizing: border-box;
-}
-
-.game-cat {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  cursor: grab;
-}
-
-.dice-container {
-  margin-top: 20px;
-}
-</style>

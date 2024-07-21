@@ -1,0 +1,84 @@
+@import './variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* Jeu de l'Oie */
+
+#goose-game .game-map-container {
+    position: relative;
+    width: 800px; /* Same as mapSize width */
+    height: 600px; /* Same as mapSize height */
+    border: 1px solid #000;
+  }
+  
+  #goose-game   .game-map {
+    width: 100%;
+    height: 100%;
+  }
+  
+  #goose-game  .game-square {
+    position: absolute;
+    width: 50px; /* Same as gridSize */
+    height: 50px; /* Same as gridSize */
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+  }
+  
+  #goose-game   .game-cat {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    cursor: grab;
+  }
+  
+  #goose-game  .dice-container {
+    margin-top: 20px;
+  }
+
+/* Jeu de Attrape la Souris */
+  #mouse-shot .game {
+    outline: none;
+}
+
+#mouse-shot .game-area {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    background-size: cover;
+    overflow: hidden;
+    outline: none;
+}
+
+#mouse-shot .mouse {
+    position: absolute;
+    width: 100px;
+}
+
+#mouse-shot .cat {
+    position: absolute;
+    width: 25%;
+    height: 25%;
+    cursor: pointer;
+}
+
+#mouse-shot .score {
+    font-size: 24px;
+}
+
+/* Puzzle */
+.puzzle-container {
+    display: grid;
+}
+
+.puzzle-piece {
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.congrats-message {
+    margin-top: 20px;
+    font-size: 18px;
+    color: green;
+    font-weight: bold;
+}
