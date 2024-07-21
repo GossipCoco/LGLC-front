@@ -2,9 +2,10 @@ import { createWebHistory, createRouter } from "vue-router";
 
 import Accueil from '../components/Page/Accueil'
 import Register from '../components/Page/Register.vue'
-import MentionsLegales from '../components/Page/MentionsLegales.vue'
-import faq from '../components/Page/faq.vue'
+import MentionsLegales from '../components/Page/Accueil/MentionsLegales.vue'
+import faq from '../components/Page/Accueil/faq.vue'
 import Login from '../components/Page/Login'
+import About from "../components/Page/Accueil/About.vue";
 import Home from "../components/Page/Home";
 
 import DashboardLayout from "../components/Dashboard/DashboardLayout";
@@ -58,10 +59,14 @@ const routes = [
   },
   {
     path: '/faq',
-    bame: 'faq',
+    name: 'faq',
     component: faq
   },
-  
+  {
+    path:'/About',
+    name: 'About',
+    component: About
+  },
   {
     path: "/login",
     name: "/login",

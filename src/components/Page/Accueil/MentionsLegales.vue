@@ -4,7 +4,7 @@
             <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
                 <div class="container-fluid">
                     <router-link to="/Accueil" class="navbar-brand">
-                        <img src="../../../public/images/Logos/logo1.png" />
+                        <img src="/images/Logos/logo1.png" />
                     </router-link>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
