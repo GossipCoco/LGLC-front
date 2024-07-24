@@ -2,39 +2,10 @@
   <div class="dashboard-max-card-container card fiction-container">
     <CardHeader v-bind:Title="'Chapitre' + NextChapter" />
     <form class="create-character-form" @submit.stop.prevent="onSubmit" ref="uploadForm">
+      <InputTitle v-bind:Title="'Titre du chapitre'" @input-title="InputTitle"/>
+      <TextAreaComponent v-bind:Title="'Rédigez votre chapitre'" @input-content="getContent"/>
       <div class="row">
-        <div class="col-12">
-          <div class="mb-3">
-            <label for="Title" class="form-label">Titre du chapitre</label>
-            <input id="Title" type="text" class="form-control" v-model="form.Title" />
-          </div>
-        </div>
-        <div class="col-12">
-          <div class="mb-3">
-            <label for="Content" class="form-label">Votre histoire</label>
-            <textarea v-model="form.Content" class="form-control" id="Content" rows="12"></textarea>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-6">
-          <div class="mb-3">
-            Générer une image avec
-            <div class="logo-wrapper-contain">
-              <div class="logo">
-                <router-link to="https://chatgpt.com/"><img src="/images/Logos/ChatGPT-Logo.png" /></router-link>
-              </div>
-              <div class="logo">
-                <router-link to="https://copilot.microsoft.com"><img
-                    src="/images/Logos/copilot-logo-0.png" /></router-link>
-              </div>
-              <div class="logo">
-                <router-link to="https://firefly.adobe.com/"><img
-                    src="/images/Logos/adobe-firefly5419.logowik.com.webp" /></router-link>
-              </div>
-            </div>
-          </div>
-        </div>
+        <LinkGenerateImage />
         <div class="col-6">
           <div class="mb-3">
             <label for="file" class="form-label">Image de couverture</label>
@@ -54,9 +25,14 @@
 <script>
 import FictionService from '../../../services/FictionService';
 import CardHeader from '../../Components/GenericComponent/CardHeader.vue';
+import InputTitle from "../../Components/FormComponent/InputTitle.vue";
+import TextAreaComponent from "../../Components/FormComponent/TextAreaComponent.vue";
+import LinkGenerateImage from "../../Components/FormComponent/LinkGenerateImage.vue";
+
+
 export default {
   name: "CreateChapter",
-  components:{CardHeader},
+  components:{InputTitle, TextAreaComponent, CardHeader, LinkGenerateImage},
   props: ['NumberChapter'],
   data() {
     return {
@@ -81,16 +57,22 @@ export default {
     this.GetLastChapterOfAFiction(this.$route.params.id)
   },
   methods: {
+    getContent(e){
+      this.form.Content = e.split("\n")
+        .filter((paragraph) => paragraph.trim() !== "") // Remove empty lines
+        .map((paragraph) => `<p>${paragraph}</p>`)
+        .join("");
+        console.log(this.form.Content)
+    },
+    InputTitle(e){
+      console.log(e)
+      this.form.Title = e
+    },
     handleFileUpload(event) {
       this.file = event.target.files[0];
     },
     handleOk() {
-      const formattedText = this.form.Content
-        .split('\n')
-        .filter(paragraph => paragraph.trim() !== '') // Remove empty lines
-        .map(paragraph => `<p style="text-align: justify">${paragraph}</p>`)
-        .join('');
-      this.form.Content = formattedText
+      console.log(this.form.Content)
       const formData = new FormData();
       formData.append('Id', 'Chapitre ' + this.NextChapter + ' - ' + this.fictionId);
       formData.append('Title', 'Chapitre ' + this.NextChapter + ' - ' + this.form.Title);

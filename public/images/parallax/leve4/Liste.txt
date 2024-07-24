@@ -1,0 +1,25 @@
+ Le volume dans le lecteur C s'appelle Windows
+ Le num‚ro de s‚rie du volume est 0067-673B
+
+ R‚pertoire de C:\Users\gossi\OneDrive\Documents\project\Project-Warriors\front-app-v3\public\images\parallax\leve4
+
+24/07/2024  09:56    <DIR>          .
+20/07/2024  14:27    <DIR>          ..
+20/07/2024  14:27         1ÿ341ÿ546 a_1.png
+20/07/2024  14:27           632ÿ101 chat-1erplan-02.png
+20/07/2024  14:27         1ÿ422ÿ311 chat01.png
+20/07/2024  14:27           806ÿ330 chat_0.png
+20/07/2024  14:27         3ÿ230ÿ780 c_01.png
+24/07/2024  09:56                 0 Liste.txt
+13/07/2024  14:06                19 ListeFichiers.bat
+20/07/2024  14:27           730ÿ964 longhaired_c_12.png
+20/07/2024  14:27           834ÿ077 warrior-img01-9.png
+20/07/2024  14:27           869ÿ957 warrior-img01-92.png
+20/07/2024  14:27           755ÿ468 warrior-img018.png
+20/07/2024  14:27         3ÿ890ÿ628 Warriors-1180.png
+20/07/2024  14:27           702ÿ194 Warriors-12843.png
+20/07/2024  14:27           410ÿ080 Warriors-253-1erplan.png
+20/07/2024  14:27         1ÿ058ÿ572 _c_198.png
+20/07/2024  14:27         2ÿ181ÿ228 _majestic_longhaired_cP4.png
+              16 fichier(s)       18ÿ866ÿ255 octets
+               2 R‚p(s)  294ÿ591ÿ995ÿ904 octets libres

@@ -7,4 +7,3 @@ Config.Url = "http://192.168.1.14:4047"
 // Config.Url = "http://192.168.189.223:4047"
 Config.secret = 'gossip-coco-key';
 module.exports = Config;
-

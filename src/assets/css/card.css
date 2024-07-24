@@ -238,7 +238,7 @@
     margin: 5rem 2rem 2rem 2rem;
     height: 85vh;
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: hidden;
     padding: 1rem 0;
 }
 

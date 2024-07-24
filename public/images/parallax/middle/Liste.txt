@@ -1,0 +1,18 @@
+ Le volume dans le lecteur C s'appelle Windows
+ Le num‚ro de s‚rie du volume est 0067-673B
+
+ R‚pertoire de C:\Users\gossi\OneDrive\Documents\project\Project-Warriors\front-app-v3\public\images\parallax\middle
+
+24/07/2024  09:41    <DIR>          .
+20/07/2024  14:27    <DIR>          ..
+20/07/2024  14:27         2ÿ127ÿ254 fond--012.png
+20/07/2024  14:27         2ÿ283ÿ021 fond--1.png
+20/07/2024  14:27         1ÿ838ÿ107 fond--12.png
+20/07/2024  14:27         1ÿ829ÿ113 fond-parallax02.png
+24/07/2024  09:41                 0 Liste.txt
+13/07/2024  14:06                19 ListeFichiers.bat
+20/07/2024  14:27         2ÿ724ÿ686 middle01.png
+20/07/2024  14:27         3ÿ116ÿ967 par4_4.png
+20/07/2024  14:27         3ÿ225ÿ005 parallax-02.png
+               9 fichier(s)       17ÿ144ÿ172 octets
+               2 R‚p(s)  294ÿ591ÿ315ÿ968 octets libres
