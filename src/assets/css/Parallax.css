@@ -33,22 +33,17 @@
   }
   
   #quest-by-id .parallax-layer:nth-child(1) {
-    z-index: 1;
-    transform: translateZ(-250px) translateY(20rem) scale(3);
+    transform: translateZ(-13rem) translateY(10rem) scale(2.5);
   }
   
   #quest-by-id .parallax-layer:nth-child(2) {
-    z-index: 2;
-    transform: translateZ(-150px) translateY(8rem)  scale(2);
+    transform: translateZ(-6rem) translateY(8rem)  scale(2);
   }
   
   #quest-by-id .parallax-layer:nth-child(3) {
-    z-index: 3;
-    transform: translateZ(-60px) translateZ(5rem) translateY(15rem) scale(1.25);
+    transform: translateZ(-4rem) translateZ(2rem) translateY(10rem) scale(1.25);
   }
    #quest-by-id .parallax-layer:nth-child(4) {
-    z-index: 4;
-    /* transform: translateZ(-20px)  translateY(20rem) scale(1.05); */
     transform: translateZ(-3rem) translateZ(-8rem) translateY(30rem) scale(1.25)
   }
   #quest-by-id .parallax-layer:nth-child(4):hover {

@@ -3,16 +3,18 @@
 
  R‚pertoire de C:\Users\gossi\OneDrive\Documents\project\Project-Warriors\front-app-v3\public\images\parallax\middle
 
-24/07/2024  09:41    <DIR>          .
+25/07/2024  08:53    <DIR>          .
 20/07/2024  14:27    <DIR>          ..
-20/07/2024  14:27         2ÿ127ÿ254 fond--012.png
-20/07/2024  14:27         2ÿ283ÿ021 fond--1.png
-20/07/2024  14:27         1ÿ838ÿ107 fond--12.png
-20/07/2024  14:27         1ÿ829ÿ113 fond-parallax02.png
-24/07/2024  09:41                 0 Liste.txt
+24/07/2024  10:25         2ÿ134ÿ918 fond--012.png
+24/07/2024  10:24         3ÿ822ÿ687 fond--1.png
+24/07/2024  10:26         3ÿ822ÿ397 fond--12.png
+24/07/2024  10:25         2ÿ568ÿ073 fond-parallax02.png
+25/07/2024  10:12                 0 Liste.txt
 13/07/2024  14:06                19 ListeFichiers.bat
-20/07/2024  14:27         2ÿ724ÿ686 middle01.png
-20/07/2024  14:27         3ÿ116ÿ967 par4_4.png
+24/07/2024  10:25         4ÿ801ÿ445 middle01.png
+24/07/2024  10:20         2ÿ939ÿ075 par4_4.png
 20/07/2024  14:27         3ÿ225ÿ005 parallax-02.png
-               9 fichier(s)       17ÿ144ÿ172 octets
-               2 R‚p(s)  294ÿ591ÿ315ÿ968 octets libres
+25/07/2024  08:53         1ÿ850ÿ367 Warriors--800.png
+24/07/2024  20:08         2ÿ513ÿ642 Warriors-800.png
+              11 fichier(s)       27ÿ677ÿ628 octets
+               2 R‚p(s)  288ÿ839ÿ311ÿ360 octets libres

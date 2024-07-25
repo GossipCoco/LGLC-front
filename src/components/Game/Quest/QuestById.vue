@@ -1,44 +1,52 @@
 <template>
   <div
     id="quest-by-id"
-    class="col-xxl-12 col-xl-12 col-lg-312 col-md-12 col-sm-12 col-xs-12 card-global quest-container"
+    class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 card-global quest-container"
   >
     <div class="card quest-by-id-card">
-      <card-header v-bind:Title="quest.Title"
-        >        
-          <button
-            type="button"
-            class="btn btn-primary"
-            id="liveToastBtn"
-            @click="showToast"
+      <card-header v-bind:Title="quest.Title">
+        <button
+          type="button"
+          class="btn btn-primary"
+          id="liveToastBtn"
+          @click="showToast"
+        >
+          Ma mission
+        </button>
+        <div class="toast-container top-50 end-0 translate-middle-y">
+          <div
+            id="liveToast"
+            class="toast"
+            role="alert"
+            aria-live="assertive"
+            aria-atomic="true"
           >
-            Ma mission
-          </button>
-          <div class="toast-container top-50 end-0 translate-middle-y">
-            <div
-              id="liveToast"
-              class="toast"
-              role="alert"
-              aria-live="assertive"
-              aria-atomic="true"
-            >
-              <div class="toast-header" style="width: 350px">
-                <strong class="me-auto">{{ quest.Title }}</strong>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="toast"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="toast-body">{{ quest.Description }}</div>
+            <div class="toast-header" style="width: 350px">
+              <strong class="me-auto">{{ quest.Title }}</strong>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="toast"
+                aria-label="Close"
+              ></button>
             </div>
+            <div class="toast-body">{{ quest.Description }}</div>
           </div>
-          <p class="card-text">
-            <router-link to="/Quest" type="button" class="btn btn-primary"
-              >Retour à la liste des quêtes</router-link
-            >
-          </p>        
+        </div>
+        
+        <div class="quest-details">
+          <h2>{{ quest.Title }}</h2>
+          <p>{{ quest.Description }}</p>
+          <button class="btn btn-success" @click="completeQuest">Compléter la quête</button>
+          <div v-if="showReward" class="reward-message">
+            <p>Félicitations ! Vous avez gagné 100 points !</p>
+          </div>
+        </div>
+        <p class="card-text">
+          <router-link to="/Quest" type="button" class="btn btn-primary">
+            Retour à la liste des quêtes
+          </router-link>
+        </p>
       </card-header>
       <div class="card-body">
         <div class="parallax-container">
@@ -54,14 +62,24 @@
             class="parallax-layer"
           ></div>
         </div>
+        <div class="quest-details">
+          <h2>{{ quest.Title }}</h2>
+          <p>{{ quest.Description }}</p>
+          <button class="btn btn-success" @click="completeQuest">Compléter la quête</button>
+          <div v-if="showReward" class="reward-message">
+            <p>Félicitations ! Vous avez gagné 100 points !</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
+
 <script>
 import QuestService from "../../../services/QuestService";
 import { Toast } from "bootstrap"; // Import Bootstrap's Toast component
 import CardHeader from "../../Components/GenericComponent/CardHeader.vue";
+
 export default {
   name: "QuestById",
   components: { CardHeader },
@@ -70,6 +88,7 @@ export default {
       quest: {},
       url: null,
       layers: [],
+      showReward: false,
     };
   },
   created() {
@@ -112,6 +131,41 @@ export default {
       const toast = new Toast(toastEl);
       toast.show();
     },
+    completeQuest() {
+      this.showReward = true;
+      // Logic to add points to the user's profile can be added here
+      setTimeout(() => {
+        this.showReward = false;
+      }, 3000);
+    },
   },
 };
 </script>
+
+<style scoped>
+.quest-details {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.reward-message {
+  color: green;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.parallax-container {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+
+.parallax-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: transform 0.1s ease-out;
+}
+</style>
