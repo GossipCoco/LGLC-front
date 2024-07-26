@@ -61,6 +61,7 @@
     max-width: 20rem;
     height: 40rem
 }
+
 #all-characters-container-card .character-card.card {
     background-color: rgba(var(--dark-green-02), 1);
     border: none;
@@ -75,6 +76,7 @@
     max-width: 17rem;
     height: 20rem;
 }
+
 /* Parallax effect */
 .parallax {
     perspective: 1px;
@@ -82,6 +84,7 @@
     overflow-x: hidden;
     overflow-y: auto;
 }
+
 .parallax-layer {
     position: absolute;
     top: 0;
@@ -89,9 +92,11 @@
     right: 0;
     left: 0;
 }
+
 .parallax-layer-back {
     transform: translateZ(-1px) scale(2);
 }
+
 .character-details.card .card-image {
     display: flex;
     justify-content: center;
@@ -292,32 +297,34 @@
     perspective: 5rem;
 
 }
+
 .parallax {
     height: 100%;
     position: relative;
     transform-style: preserve-3d;
-  }
-  
-  .parallax__layer {
+}
+
+.parallax__layer {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-  }
-  
-  .parallax__layer--base {
+}
+
+.parallax__layer--base {
     transform: translateZ(0);
-  }
-  
-  .parallax__layer--back {
+}
+
+.parallax__layer--back {
     transform: translateZ(-1px) scale(2);
-  }
-  
-  .parallax img {
+}
+
+.parallax img {
     display: block;
     width: 100%;
-  }
+}
+
 @keyframes rotate {
     from {
         transform: rotate(0deg) rotateX(0deg);
@@ -326,6 +333,7 @@
     to {
         transform: rotateY(50deg) rotateX(0);
     }
+
     to {
         transform: rotateY(0) rotateX(0);
     }
@@ -337,7 +345,8 @@
     animation: rotate 10s infinite linear;
     /* Animation continue */
 }
-.vegetal-container{
+
+.vegetal-container {
     background-image: url('/images/Backgrounds/herbePNG.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -347,11 +356,12 @@
     position: relative
 }
 
-.vegetal-container img{
-position: absolute;
-top: 15%;
-left: 35%
+.vegetal-container img {
+    position: absolute;
+    top: 15%;
+    left: 35%
 }
+
 /* .card-image img{
     width: 75%;
 } */
@@ -384,10 +394,12 @@ left: 35%
     border-bottom: 1rem solid rgba(var(--clear-green-02), 1);
     border-left: 1rem solid rgba(var(--clear-green-02), 1);
 }
-.clan-detail-layout .card-body{
+
+.clan-detail-layout .card-body {
     height: 45rem;
     background-color: rgba(var(--main-white), 1);
 }
+
 .clans-location-container {
     margin: 0 0 5rem 0;
 }
@@ -561,41 +573,52 @@ left: 35%
 .card-group.clan-group .card {
     margin: 1rem;
 }
-.row.top-dashboard .card{
+
+.row.top-dashboard .card {
     height: 20rem;
 }
-.row.bottom-dashboard .card{
+
+.row.bottom-dashboard .card {
     height: 25rem;
 }
-li.quest-container{
+
+li.quest-container {
     margin: 0 1rem;
 }
-.quest-container{
+
+.quest-container {
     margin: 1rem;
 }
-.quest-title{
+
+.quest-title {
     height: 4rem;
 }
-.quest--global-container{
+
+.quest--global-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     flex: 0.25;
     height: 30rem;
 }
-.quest-container,.quest--global-container p,
+
+.quest-container,
+.quest--global-container p,
 .quest-image-container,
-.background-image-quest-image-container{
+.background-image-quest-image-container {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     flex: 1;
 }
-.quest-container{
+
+.quest-container {
     height: 28rem;
     width: 12rem;
 }
-.quest-image-container, .background-image-quest-image-container{
+
+.quest-image-container,
+.background-image-quest-image-container {
     width: 100%;
     height: 0rem;
     background-size: contain;
@@ -615,56 +638,111 @@ li.quest-container{
     align-content: center;
     align-items: center;
 }
-.one-quest-container .card-header{
+
+.one-quest-container .card-header {
     display: flex;
     justify-content: center;
     vertical-align: middle;
 }
-.card-header.quest-title{
+
+.card-header.quest-title {
     display: flex;
     justify-content: center;
 }
-.card-body.one-quest{
-display: flex;
-flex-direction: column;
-height: 25rem;
-flex: 1;
+
+.card-body.one-quest {
+    display: flex;
+    flex-direction: column;
+    height: 25rem;
+    flex: 1;
 }
-.card-img-top.background-image-quest-image-container img{
+
+.card-img-top.background-image-quest-image-container img {
     width: 75%;
 }
-.quest-title{
+
+.quest-title {
     display: flex;
-    flex:0.25;
+    flex: 0.25;
     text-align: center;
 }
-.quest-button-text{
+
+.quest-button-text {
     display: flex;
     flex-direction: column;
     height: 12rem;
     vertical-align: middle;
     align-items: center;
 }
-.quest-button-text p{
+
+.quest-button-text p {
     height: 9rem;
 }
-.quest-button-text .btn.btn-primary{
+
+.quest-button-text .btn.btn-primary {
     width: 10rem;
 }
-.one-quest-container .pagination-container{
-    margin: 0;
+
+.quest-details {
+    text-align: center;
+    margin-top: 20px;
 }
-.character-of-clan-container{
-    display: flex;
-    flex-direction: row;
-    flex:1
+
+.reward-message {
+    color: green;
+    font-weight: bold;
+    margin-top: 20px;
 }
-.indivual-caracter-container{
+
+.parallax-container {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.parallax-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: transform 0.1s ease-out;
+}
+
+.quest-mission-container-text {
     display: flex;
     flex-direction: column;
-    flex:1;
+}
+
+.quest-mission-container {
+    display: flex;
+    flex-direction: row;
+}
+.quest-mission-container button{
+    height: 3rem;
+}
+.buttons-container{
+    display: flex;
+    flex-direction: column;
+    margin: 0.25rem;
+}
+.one-quest-container .pagination-container {
+    margin: 0;
+}
+
+.character-of-clan-container {
+    display: flex;
+    flex-direction: row;
+    flex: 1
+}
+
+.indivual-caracter-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
     width: 110px;
 }
-.indivual-caracter-container img{
+
+.indivual-caracter-container img {
     width: 100px;
 }

@@ -13,8 +13,8 @@
           v-for="(image, index) in quest.QuestImages"
           :key="index"
         >
-        <QuestCard v-bind:quest="quest" v-bind:image="image"/>
-      </div>
+          <QuestCard v-bind:quest="quest" v-bind:image="image" />
+        </div>
       </div>
     </div>
     <div class="row pagination-container">
@@ -74,7 +74,7 @@ export default {
     this.GetTotalQuest();
   },
   watch: {
-    '$route'() {
+    $route() {
       this.initPage();
     },
   },
