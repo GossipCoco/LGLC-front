@@ -1,22 +1,15 @@
 <template>
   <div class="dashboard-max-card-container card fiction-container">
-<<<<<<< HEAD
     <div class="card-header">
-<<<<<<< HEAD
       <h4>Lire mes fictions de {{ usrId }}</h4>
     </div>
     <div class="row list-fiction-card-container">
-      <div class="col-4 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4"
-=======
-      <h4>Lire toutes mes fictions</h4>
-    </div>
-    <div class="row list-fiction-card-container">
-<<<<<<<< HEAD:src/components/Game/Fictions/AllFictionsLayout.vue
-      <div class="col-4 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4"
-========
+      <div class="col-4 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4"></div>
+
+      <div class="col-4 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4"></div>
+
       <div class="col-4 col-sm-12 col-md-12 col-lg-4 col-xl-34 col-xxl-4 mb-4 mb-sm-4 mb-4 mb-sm-4"
->>>>>>>> dev2:src/components/Fictions/AllMyFictions/AllFictionsLayout.vue
->>>>>>> dev2
+
         v-for="(game, index) in games" :key="index">
         <div class="card mb-3" style="max-width: 540px;" v-for="(fiction, index) in game.Fiction" :key="index">
           <div class="row g-0">
@@ -41,10 +34,6 @@
         </div>
       </div>
     </div>
-=======
-    <CardHeader v-bind:Title="'Lire toutes mes fictions'" />
-    <AllCardsFictions v-bind:games="games" />
->>>>>>> dev3
     <div class="row pagination-container">
       <div class="row bottom-top-dashboard">
         <Spinner v-if="showspinner"/>
