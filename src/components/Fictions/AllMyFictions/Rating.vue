@@ -1,19 +1,6 @@
 <template>
   <div class="rating">
     <div class="rating-chiffre">
-<<<<<<< HEAD
-    <h2>{{ rating }} / 5</h2>
-    </div>
-    
-    <div class="rating-star">
-    <svg v-for="star in 5" :key="star" @click="rate(star)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-      width="24" height="24" :class="{ checked: star <= currentRating }">
-      <path d="M12 .587l3.668 7.431L24 9.587l-6 5.852L19.336 24 12 20.201 4.664 24 6 15.439 0 9.587l8.332-1.569z" />
-    </svg>
-    </div>
-
-
-=======
     <h4>{{ rating }} / 5</h4>
     </div>    
     <div class="rating-star">
@@ -22,7 +9,6 @@
       <path d="M12 .587l3.668 7.431L24 9.587l-6 5.852L19.336 24 12 20.201 4.664 24 6 15.439 0 9.587l8.332-1.569z" />
     </svg>
     </div>
->>>>>>> dev2
   </div>
 </template>
 <script>
