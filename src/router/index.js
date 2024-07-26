@@ -1,14 +1,6 @@
 import { createWebHistory, createRouter } from "vue-router";
 
 import Accueil from '../components/Page/Accueil'
-<<<<<<< HEAD
-=======
-import Register from '../components/Page/Register.vue'
-import MentionsLegales from '../components/Page/Accueil/MentionsLegales.vue'
-import faq from '../components/Page/Accueil/faq.vue'
-import Login from '../components/Page/Login'
-import About from "../components/Page/Accueil/About.vue";
->>>>>>> dev3
 import Home from "../components/Page/Home";
 import DashboardLayout from "../components/Dashboard/DashboardLayout";
 import AllCharactersLayout from "../components/Characters/AllCharactersLayout";
@@ -20,14 +12,9 @@ import GameLayout from '../components/Game/GameLayout'
 import Login from '../components/Page/Login'
 import AdminLayout from '../components/UserPanel/AdminDashboard'
 import CharacterCreate from '../components/Characters/CharacterComponent/CharacterCreate'
-<<<<<<< HEAD
 import RollOfDiceLayout from '../components/Game/RollOfDice/RollOfDiceLayout.vue'
 import PuzzleLayout from '../components/Game/Puzzle/PuzzleLayout.vue'
 import TreasureHunt from '../components/Game/TreasureHunt/TreasureHunt.vue'
-=======
-
-import AllExistingFictionsLayout from '../components/Fictions/AllExistingFictionsLayout.vue'
->>>>>>> dev3
 import FictionContain from '../components/Fictions/AllMyFictions/FictionContain'
 import ChapterLayout from '../components/Fictions/AllMyFictions/ChapterLayout.vue'
 import CreateFiction from '../components/Fictions/AllMyFictions/CreateFiction.vue'
@@ -43,16 +30,12 @@ import QuestById from '../components/Game/Quest/QuestById.vue'
 import EventGlobalLayout from '../components/Event/EventGlobaleLayout.vue'
 import UserCard from '../components/Users/UserCard.vue'
 import AllLocationsLayout from "../components/Locations/AllLocationsLayout.vue"
-<<<<<<< HEAD
 import Register from '../components/Page/Register.vue'
 import MentionsLegales from '../components/Page/MentionsLegales.vue'
 import faq from '../components/Page/faq.vue'
 
 
 
-=======
-import LocationsDetails from "../components/Locations/LocationsDetails.vue";
->>>>>>> dev3
 
 
 
