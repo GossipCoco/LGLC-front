@@ -58,8 +58,8 @@
 }
 .create-character-form, .card-form-create-character .card-body{
     width: 100%;
-    height: 60vh;
-    overflow-y: auto;
+    height: 70vh;
+    overflow-y: hidden;
     overflow-x: hidden;    
     padding: 1rem;
 }
