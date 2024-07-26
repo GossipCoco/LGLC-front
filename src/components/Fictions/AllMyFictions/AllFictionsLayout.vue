@@ -1,5 +1,6 @@
 <template>
   <div class="dashboard-max-card-container card fiction-container">
+<<<<<<< HEAD
     <div class="card-header">
 <<<<<<< HEAD
       <h4>Lire mes fictions de {{ usrId }}</h4>
@@ -40,12 +41,13 @@
         </div>
       </div>
     </div>
+=======
+    <CardHeader v-bind:Title="'Lire toutes mes fictions'" />
+    <AllCardsFictions v-bind:games="games" />
+>>>>>>> dev3
     <div class="row pagination-container">
       <div class="row bottom-top-dashboard">
-        <div v-if="showspinner" class="d-flex justify-content-center">
-          <div class="spinner-border text-success" role="status">
-          </div>
-        </div>
+        <Spinner v-if="showspinner"/>
       </div>
       <Pagination v-if="!showspinner"  v-bind:nav="nav" v-bind:filters="filters" v-bind:getDatas="'GamesPagination'"
         @GamesPagination="GamesPagination" />
@@ -55,11 +57,14 @@
 
 <script>
 import GameService from '../../../services/GameService'
+import CardHeader from '../../Components/GenericComponent/CardHeader.vue';
 import Pagination from '../../Components/GenericComponent/Pagination.vue';
+import AllCardsFictions from './AllCardsFictions.vue';
+import Spinner from '../../Components/GenericComponent/Spinner.vue';
 
 export default {
   name: 'GameLayout',
-  components: { Pagination },
+  components: { Pagination, AllCardsFictions, CardHeader, Spinner },
   data() {
     return {
       usrId: this.$store.state.auth.user.usrID,
@@ -78,9 +83,6 @@ export default {
     this.initData();
   },
   methods: {
-    truncateText(text, maxLength) {
-      return text.length <= maxLength ? text : text.substring(0, maxLength) + '...';
-    },
     async initData() {
       this.showspinner = true;
       await this.countAllGames();

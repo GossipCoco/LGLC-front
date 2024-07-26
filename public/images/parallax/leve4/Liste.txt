@@ -1,0 +1,32 @@
+ Le volume dans le lecteur C s'appelle Windows
+ Le num‚ro de s‚rie du volume est 0067-673B
+
+ R‚pertoire de C:\Users\gossi\OneDrive\Documents\project\Project-Warriors\front-app-v3\public\images\parallax\leve4
+
+25/07/2024  13:47    <DIR>          .
+26/07/2024  04:08    <DIR>          ..
+25/07/2024  11:28         2ÿ474ÿ687 001.png
+25/07/2024  09:34         5ÿ690ÿ000 033332_(1).png
+25/07/2024  09:00           765ÿ460 1_001.png
+25/07/2024  11:31         2ÿ284ÿ156 a_1.png
+25/07/2024  13:47         1ÿ042ÿ893 a_cat_in_3.png
+25/07/2024  09:27         1ÿ673ÿ594 a_stylized_anthropomorp_2 (1).png
+20/07/2024  14:27           632ÿ101 chat-1erplan-02.png
+25/07/2024  11:25         3ÿ018ÿ093 chat01.png
+25/07/2024  11:21           710ÿ402 chat_0.png
+20/07/2024  14:27         3ÿ230ÿ780 c_01.png
+26/07/2024  04:51                 0 Liste.txt
+13/07/2024  14:06                19 ListeFichiers.bat
+20/07/2024  14:27           730ÿ964 longhaired_c_12.png
+25/07/2024  11:21         3ÿ532ÿ226 warrior-img01-9.png
+25/07/2024  11:22         3ÿ619ÿ437 warrior-img01-92.png
+25/07/2024  11:22         3ÿ232ÿ859 warrior-img018.png
+20/07/2024  14:27         3ÿ890ÿ628 Warriors-1180.png
+25/07/2024  11:25         1ÿ920ÿ302 Warriors-12843.png
+25/07/2024  11:29           697ÿ899 Warriors-253-1erplan.png
+24/07/2024  20:01         1ÿ562ÿ787 Warriors-800.png
+25/07/2024  11:29         4ÿ448ÿ979 _2dcc6a30-0c57-43c2-8ef1-46efc1e13391.png
+20/07/2024  14:27         1ÿ058ÿ572 _c_198.png
+25/07/2024  11:30         2ÿ440ÿ346 _majestic_longhaired_cP4.png
+              23 fichier(s)       48ÿ657ÿ184 octets
+               2 R‚p(s)  290ÿ171ÿ760ÿ640 octets libres

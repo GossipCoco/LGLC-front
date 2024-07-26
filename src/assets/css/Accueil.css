@@ -279,3 +279,13 @@
 #accueil .text-body-secondary{
     color: rgba(var(--main-white), 1)!important;
 }
+#mentions-legales-page {
+    margin: 5rem;
+    height: 50vh;
+    overflow-y: hidden;
+}
+#about-page{
+    margin: 5rem 3rem;
+    padding: 2rem 0;
+    overflow: hidden;
+}

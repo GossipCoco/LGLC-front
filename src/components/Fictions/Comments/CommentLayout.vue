@@ -14,12 +14,10 @@
           </div>
           </div>
           <div class="message__inner">
-
             <div class="message__bubble">
               <p>{{ comment.Content }}</p>
             </div>
-            <div class="message__actions">
-              <!-- Ajoutez des actions comme des boutons ici si nécessaire -->
+            <div class="message__actions">              
             </div>
           </div>
           <div class="message__status">
@@ -29,7 +27,6 @@
       </div>
     </div>
   </template>
-  
   <script>
   import FictionService from "../../../services/FictionService";
   export default {

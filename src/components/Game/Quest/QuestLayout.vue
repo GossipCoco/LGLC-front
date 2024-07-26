@@ -1,42 +1,19 @@
 <template>
   <div class="dashboard-max-card-container card one-quest-container">
-    <div class="card-header">
-      <h2>Liste des quêtes à réaliser</h2>
-    </div>
-    <div class="row list-fiction-card-container">
-      <div class="quest--global-container">
+    <CardHeader v-bind:Title="'Liste des quêtes à réaliser'" />
+    <Spinner v-if="showspinner" />
+    <div v-if="!showspinner" class="row list-fiction-card-container">
+      <div
+        class="col-sm-3 mb-3 mb-sm-0 quest--global-container"
+        v-for="(quest, index) in allQuests"
+        :key="index"
+      >
         <div
-          v-for="(quest, index) in allQuests"
+          class="card quest-container mb-3"
+          v-for="(image, index) in quest.QuestImages"
           :key="index"
-          class="quest-container"
         >
-          <div
-            v-for="(image, index) in quest.QuestImages"
-            :key="index"
-            class="quest-image-container"
-          >
-            <div class="quest-title">
-              <h4>{{ quest.Title }}</h4>
-            </div>
-            <div
-              v-bind:style="{
-                backgroundImage: 'url(/images/Fictions/' + image.Image,
-              }"
-              class="background-image-quest-image-container"
-            ></div>
-          </div>
-          <div class="quest-button-text">
-            <p>{{ quest.Description }}</p>
-            <p>
-              <router-link
-                :to="'/QuestById/' + quest.Id"
-                type="button"
-                class="btn btn-primary"
-              >
-               Relever le défi
-              </router-link>
-            </p>
-          </div>
+          <QuestCard v-bind:quest="quest" v-bind:image="image" />
         </div>
       </div>
     </div>
@@ -44,9 +21,7 @@
       <div class="row">
         <div class="pagination-container">
           <div class="row bottom-top-dashboard">
-            <div v-if="showspinner" class="d-flex justify-content-center">
-              <div class="spinner-border text-success" role="status"></div>
-            </div>
+            <Spinner v-if="showspinner" />
           </div>
           <pagination
             v-if="!showspinner"
@@ -60,14 +35,16 @@
     </div>
   </div>
 </template>
-
 <script>
 import QuestService from "../../../services/QuestService";
 import Pagination from "../../Components/GenericComponent/Pagination.vue";
 import functions from "../../../services/functions";
+import CardHeader from "../../Components/GenericComponent/CardHeader.vue";
+import QuestCard from "./QuestCard.vue";
+import Spinner from "../../Components/GenericComponent/Spinner.vue";
 export default {
   name: "Quest",
-  components: { Pagination },
+  components: { Spinner, QuestCard, CardHeader, Pagination },
   data() {
     return {
       userCurrent: null,
@@ -81,7 +58,7 @@ export default {
       nav: {
         current: 0,
         pages: 0,
-        step: 8,
+        step: 4,
       },
     };
   },
@@ -92,35 +69,29 @@ export default {
   },
   created() {
     this.userCurrent = this.$store.state.auth.user.usrID;
+    this.initPage();
     this.GetAllQuests(this.nav);
     this.GetTotalQuest();
   },
   watch: {
-    '$route'() {
+    $route() {
       this.initPage();
     },
   },
   methods: {
     initPage() {
       this.showspinner = true;
-      Promise.all([
-        this.GetTotalQuest(),
-        this.GetAllQuests(this.nav.current),
-      ]).then(() => {
-        this.showspinner = false;
-      });
+      // this.GetTotalQuest()
+      // this.GetAllQuests(this.nav.current)
     },
     QuestPagination(e) {
-      console.log(e);
       this.nav.current = e;
       this.GetAllQuests(this.nav);
     },
     GetTotalQuest() {
       QuestService.GetTotalQuest()
         .then((response) => {
-          console.log(response);
           this.nbQuests = response.data.ob;
-          console.log(this.nbQuests);
         })
         .catch((e) => {
           console.log(e);

@@ -16,7 +16,7 @@
       <ListAllFictions v-if="!showspinner" />
       <AvatarCard v-if="!showspinner" v-bind:Avatar="Avatar" v-bind:UserName="usr" v-bind:LastConnexion="LastConnexion"
         v-bind:Inscription="Inscription" v-bind:level="LvelImf" v-bind:Role="role" v-bind:nBFiction="nBFictionV2"
-        v-bind:totalWords="totalWordsV2" />
+        v-bind:totalWords="totalWordsV2" v-bind:totalPoints="totalPoints" />
     </div>
     <div class="row bottom-dashboard">
       <Scheduler />
@@ -63,6 +63,7 @@ export default {
       totalWordsByFiction: {}, // Objet pour stocker les totaux par fiction
       nBFictionV2: 0, // Nombre de fictions
       totalWordsV2: 0, // Total de mots de toutes les fictions
+      totalPoints:0,
       filters: [],
       nav: {
         current: 0,
@@ -123,10 +124,14 @@ export default {
           console.error('erreur', err);
         });
     },
+    calculateTotalPoints(pointsArray) {
+    return pointsArray.reduce((total, point) => total + point.Points, 0);
+  },
     GetUserById(e) {
       this.showspinner = true
       UserService.getUserById(e)
         .then((response) => {
+          console.log(response.data.ob)
           this.showspinner = false
           this.userInfo = response.data.ob
           this.Avatar = response.data.ob.Avatar
@@ -136,6 +141,7 @@ export default {
           this.Inscription = response.data.ob.Inscription
           this.LvelImf = this.userInfo.Level.Image
           this.role = this.userInfo.Role
+          this.totalPoints = this.calculateTotalPoints(this.userInfo.Points);
         })
         .catch((error) => {
           console.error(error);

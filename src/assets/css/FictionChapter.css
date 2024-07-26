@@ -169,9 +169,7 @@ th{
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.dashboard-max-card-container.card.fiction-container {
-    padding: 0;
-}
+
 .chapter-title-content{
     text-align: center;
 }
@@ -260,7 +258,7 @@ th{
     overflow-x: hidden;
     padding: 0 1rem;
     margin: 1rem;
-    width: 60rem;
+    width: 35rem;
 }
 .create-chapter-btn-container .btn{
     width: 15rem;

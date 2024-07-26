@@ -1,5 +1,6 @@
 <template>
-    <div class="dashboard-max-card-container card fiction-container">
+    <div id="mouse-shot" class="dashboard-max-card-container card fiction-container">
+        <CardHeader v-bind:Title="'Jeu du chat et de la souris'" />
         <div class="game" @keydown="handleKeyPress" tabindex="0">
             <div v-if="gameStarted" ref="gameArea" :style="{ backgroundImage: 'url(' + backgroundImage + ')' }"
                 class="game-area" @mousemove="handleMouseMove">
@@ -13,13 +14,16 @@
     </div>
 </template>
 <script>
+import CardHeader from '../../Components/GenericComponent/CardHeader.vue'
+// import PointService from '../../../services/PointService';
 export default {
-    name: "CardComponent",
+    name: "MouseShot",
+    components:{CardHeader},
     data() {
         return {
             mouseImage: '/images/Game/mouse.png', // Adjust path as necessary
             catImage: '/images/Game/Etoiledefeu.png', // Adjust path as necessary
-            backgroundImage: '/images/Game/trees-8726870_1920.jpg', // Adjust path as necessary
+            backgroundImage: '/images/paysage/_1a57acbc-8027-4a95-b255-01df8a8f214505.png', // Adjust path as necessary
             mouseStyle: { top: '0px', left: '0px' },
             catStyle: { bottom: '20px', left: '50px' },
             score: 0,
@@ -67,9 +71,11 @@ export default {
                     clearInterval(fallInterval);
                     if (Math.abs(parseInt(this.mouseStyle.left) - parseInt(this.catStyle.left)) < 100) {
                         this.score++;
-                    }
+                    }                    
                 }
+                // 
             }, 10);
+            console.log("score :", this.score)
         },
         handleKeyPress(event) {
             if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
@@ -105,34 +111,3 @@ export default {
     }
 };
 </script>
-
-<style scoped>
-.game {
-    outline: none;
-}
-
-.game-area {
-    position: relative;
-    width: 800px;
-    height: 600px;
-    background-size: cover;
-    overflow: hidden;
-    outline: none;
-}
-
-.mouse {
-    position: absolute;
-    width: 100px;
-}
-
-.cat {
-    position: absolute;
-    width: 25%;
-    height: 25%;
-    cursor: pointer;
-}
-
-.score {
-    font-size: 24px;
-}
-</style>

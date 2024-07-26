@@ -10,7 +10,7 @@
             </div>
             <div class="card-body">
                 <div class="row">
-                    <div class="6">
+                    <div class="col-6">
                         <div style="color: white" v-for="(illustration, index) in AllIillustrations" :key="index">
 <<<<<<< HEAD
                             <!-- {{ illustration.IllustrationId }} -->
@@ -23,6 +23,7 @@
                         </div>
                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
                     <div class="6">
@@ -30,6 +31,9 @@
 =======
                     <div class="6">
 >>>>>>> dev2
+=======
+                    <div class="col-6">
+>>>>>>> dev3
                         <div class="chapter-button-content">
                             <button @click="speakText" class="btn btn-primary">
                                 Lire à voix haute

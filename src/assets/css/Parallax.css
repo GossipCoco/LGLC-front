@@ -3,99 +3,92 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 #quest-by-id {
-    width: 100%;
-    height: 95vh;
-    margin: 0.5rem auto;
-  }
-  
-  #quest-by-id .quest-by-id-card {
-    width: 100%;
-    background: linear-gradient(90deg, rgba(var(--dark-green-01), 1), rgba(var(--clear-green-02), 1));
-  }
-  
-  #quest-by-id .parallax-container {
-    position: relative;
-    width: 100%;
-    height: 85vh;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    perspective: 10rem;
-    transform-style: preserve-3d;
-  }
-  
-  #quest-by-id .parallax-layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 105vh;
-    transition: transform 1s ease;
-  }
-  
-  #quest-by-id .parallax-layer:nth-child(1) {
-    z-index: 1;
-    transform: translateZ(-250px) translateY(20rem) scale(3);
-  }
-  
-  #quest-by-id .parallax-layer:nth-child(2) {
-    z-index: 2;
-    transform: translateZ(-150px) translateY(8rem)  scale(2);
-  }
-  
-  #quest-by-id .parallax-layer:nth-child(3) {
-    z-index: 3;
-    transform: translateZ(-60px) translateZ(5rem) translateY(15rem) scale(1.25);
-  }
-   #quest-by-id .parallax-layer:nth-child(4) {
-    z-index: 4;
-    /* transform: translateZ(-20px)  translateY(20rem) scale(1.05); */
-    transform: translateZ(-3rem) translateZ(-8rem) translateY(30rem) scale(1.25)
-  }
-  #quest-by-id .parallax-layer:nth-child(4):hover {
-    
-    /* transform: translateZ(-20px)  translateY(20rem) scale(1.05); */
-    transform: rotateY(-5deg);
-  }
-  
-  #quest-by-id .chat-image {
-    position: absolute;
-    z-index: 4;
-    bottom: -20%;
-    left: 80%;
-    transform: translateX(-50%);
-    width: 400px;
-    /* Adjust size as needed */
-    height: auto;
-  }
-  
-  #quest-by-id .quest-details {
-    position: relative;
-    z-index: 5;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 1rem;
-    border-radius: 8px;
-    text-align: center;
-  }
-  
-  #quest-by-id .interactive-elements .clickable {
-    position: absolute;
-    padding: 0.5rem 1rem;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  #quest-by-id .interactive-elements .clickable:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-  }
+  width: 100%;
+  height: 95vh;
+  margin: 0.5rem auto;
+}
 
-  #quest .toast-container.position-fixed.bottom-0.end-0.p-3{
-    width: 350px;
-    height: 350px;
-    z-index: 9999999;
-    position: fixed ! important;
-    top: 2rem;
-    left: 5rem
-  }
+#quest-by-id .quest-by-id-card {
+  width: 100%;
+  background: linear-gradient(90deg, rgba(var(--dark-green-01), 1), rgba(var(--clear-green-02), 1));
+}
+
+#quest-by-id .parallax-container {
+  position: relative;
+  width: 100%;
+  height: 78vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  perspective: 10rem;
+  transform-style: preserve-3d;
+}
+
+#quest-by-id .parallax-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 105vh;
+  transition: transform 1s ease;
+}
+
+#quest-by-id .parallax-layer:nth-child(1) {
+  transform: translateZ(-13rem) translateY(10rem) scale(2.5);
+}
+
+#quest-by-id .parallax-layer:nth-child(2) {
+  transform: translateZ(-6rem) translateY(8rem) scale(2);
+}
+
+#quest-by-id .parallax-layer:nth-child(3) {
+  transform: translateZ(-4rem) translateZ(2rem) translateY(3rem) scale(1.25);
+}
+#quest-by-id .parallax-layer:nth-child(4) {
+  transform: translateZ(-3rem) translateZ(-8rem) translateY(30rem) scale(1.25)
+}
+#quest-by-id .parallax-layer:nth-child(5){
+  transform: translateZ(-3rem) translateZ(-8rem) translateY(30rem) scale(1.25)
+}
+
+#quest-by-id .chat-image {
+  position: absolute;
+  z-index: 4;
+  bottom: -20%;
+  left: 80%;
+  transform: translateX(-50%);
+  width: 400px;
+  /* Adjust size as needed */
+  height: auto;
+}
+
+#quest-by-id .quest-details {
+  position: relative;
+  z-index: 5;
+  background-color: rgba(var(--main-white), 0.8);
+  padding: 0.05rem 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+#quest-by-id .interactive-elements .clickable {
+  position: absolute;
+  padding: 0.5rem 1rem;
+  background-color: rgba(var(--main-white), 0.5);
+  color: rgba(var(--main-white), 1);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#quest-by-id .interactive-elements .clickable:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#quest .toast-container.position-fixed.bottom-0.end-0.p-3 {
+  width: 350px;
+  height: 350px;
+  z-index: 9999999;
+  position: fixed ! important;
+  top: 2rem;
+  left: 5rem
+}

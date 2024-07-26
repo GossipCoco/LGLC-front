@@ -128,7 +128,7 @@
             <router-link class="link-collapse" to="/Quest">Quêtes</router-link>
           </div>
         </li>
-<<<<<<< HEAD
+
         <li class="li-level1">
           <router-link to="/AllExistingFictionsLayout" data-bs-toggle="collapse" href="#collapseExample1" role="button"
             aria-expanded="false" aria-controls="collapseExample1">
@@ -247,10 +247,7 @@ export default {
       UserService.getUserById(e)
         .then((response) => {
           this.role = response.data.ob.Role.Name
-<<<<<<< HEAD
-          console.log(this.role)
-=======
->>>>>>> dev2
+
         })
         .catch((error) => {
           console.error(error);

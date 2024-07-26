@@ -6,16 +6,16 @@
             col-lg-12 col-md-12 col-sm-12 col-xxl-12 col-xs-12
           ">
         <div class="row pagination-container">
-          <div class="col-8"></div>
-          <div class="col-3">
-            <ul class="pagination" v-if="nav.pages < 12">
+          <div class="col-6"></div>
+          <div class="col-4">
+            <ul class="pagination" v-if="navPage.pages < 6">
               <li class="nav-btn-contain">
                 <button v-for="p in navPage.pages" :key="p" :disabled="navPage.current == p - 1" type="button"
                   class="page-link" @click="getData(p - 1)">{{ p }}
                 </button>
               </li>
             </ul>
-            <ul class="pagination" v-if="navPage.pages >= 12">
+            <ul class="pagination" v-if="navPage.pages >= 6">
               <li class="page-item">
                 <button type="button" class="page-link pagination-text" :disabled="navPage.current == 0"
                   @click="getData(0)">
@@ -57,26 +57,27 @@
                   </button>
                 </span>
               </li>
-
               <div class="pagination" v-if="navPage.current < 3 || navPage.current > navPage.pages - 4
               ">
                 <span class="nav-space-contain">...</span>
                 <li class="page-item">
-                  <button type="button" class="page-link" :disabled="navPage.current == navPage.middle - 2"
-                    @click="getData(navPage.middle - 2)">
-                    {{ navPage.middle - 1 }}
+                  <button type="button" class="page-link" :disabled="navPage.current == getMiddle(navPage) - 2"
+                    @click="getData(getMiddle(navPage) - 2)">
+                    {{ getMiddle(navPage) - 1}}
+                    <!-- {{ navPage }} -->
+                    <!-- {{ navPage.middle - 1 }} -->
                   </button>
                 </li>
                 <li class="page-item">
-                  <button type="button" class="page-link" :disabled="navPage.current == navPage.middle - 1"
-                    @click="getData(navPage.middle - 1)">
-                    {{ navPage.middle }}
+                  <button type="button" class="page-link" :disabled="navPage.current == getMiddle(navPage) - 1"
+                    @click="getData(getMiddle(navPage) - 1)">
+                    {{ getMiddle(navPage) }}
                   </button>
                 </li>
                 <li class="page-item">
                   <button type="button" class="page-link" :disabled="navPage.current == navPage.middle"
-                    @click="getData(navPage.middle)">
-                    {{ navPage.middle + 1 }}
+                    @click="getData(getMiddle(navPage))">
+                    {{ getMiddle(navPage) + 1 }}
                   </button>
                 </li>
                 <span class="nav-space-contain">...</span>
@@ -153,11 +154,10 @@
               </li>
             </ul>
           </div>
-          <div class="col-1">
+          <div class="col-2">
             <p v-if="!nav.current">Page : 1</p>
             <p v-else>Page : {{ nav.current + 1 }}</p>
-          </div>
-          
+          </div>          
         </div>
       </div>
     </div>
@@ -173,12 +173,18 @@ export default {
       navPage: this.nav,
       filtersPage: this.filters,
       typeDatasPage: this.typeDatas,
+      middle: null
     };
   },
   created() {
-
+    // console.log(this.navPage)
   },
   methods: {
+    getMiddle(){
+      const Num = this.navPage.pages      
+      const page = parseInt(Num, 10);
+      return Math.ceil(page / 2)
+    },
     getData(e) {
       const page = parseInt(e);
       this.$emit(this.getDatas, page)

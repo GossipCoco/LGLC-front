@@ -6,11 +6,12 @@ class QuestService{
     GetQuestById(id){
         return http.get(`/quest/${id}`)
     }
-    GetTotalQueries(){
-        return http.get('/quest/GetTotalQueries')
-    }
     GetAllQuests(nav){        
         return http.post(`/quest`, nav)
     }
+    GetTotalQueries(){
+        return http.get('/quest/GetTotalQueries')
+    }
+
 }
 export default new QuestService

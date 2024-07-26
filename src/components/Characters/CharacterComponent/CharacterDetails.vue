@@ -17,14 +17,14 @@
               </div>
             </div>
           </div>
-
           <div class="col-md-8">
             <div class="card-body">
               <div class="row">
                 <div class="col-12">
                   <p class="card-text">
-                    <router-link to="/allCharacters" type="button" class="btn btn-primary">Retour à la liste des
-                      personnages</router-link>
+                    <router-link to="/allCharacters" type="button" class="btn btn-primary">
+                      Retour à la liste des personnages
+                    </router-link>
                   </p>
                 </div>
               </div>

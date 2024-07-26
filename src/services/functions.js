@@ -8,11 +8,14 @@ const getDate = (value) => {
     return date;
 }
 const CalcPagination = (total, showPagination, nav) => {
-    showPagination = true;
     nav.pages =
       Math.trunc(total / nav.step) +
       (total % nav.step ? 1 : 0);
     nav.middle = Math.trunc(nav.pages / 2);
+    if(nav){
+        showPagination = true;
+    }
+   
 }
 const fonctions = {
     getDate,

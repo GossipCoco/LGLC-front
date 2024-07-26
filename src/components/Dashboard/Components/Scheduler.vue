@@ -1,9 +1,7 @@
 <template>
     <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12  card-global">
         <div class="card fiction-card scheduler">
-            <div class="card-header">
-                <h4>Évènement</h4>
-            </div>
+            <TitleHeaderDashboard v-bind:title="'évènements'"/>
             <div class="card-body scheduler-container">
                 <FullCalendar :options='calendarOptions'>
                     <template v-slot:eventContent='arg'>
@@ -25,14 +23,21 @@ import listPlugin from '@fullcalendar/list'
 import frLocale from '@fullcalendar/core/locales/fr'
 import EventService from '../../../services/EventService'
 
+import TitleHeaderDashboard from '../../Components/SpecificComponent/TitleHeaderDashboard.vue';
 export default {
     name: 'Scheduler',
     components: {
+        TitleHeaderDashboard,
         FullCalendar
     },
     data() {
         return {
             event: {},
+            nav: {
+                current: 0,
+                pages: 0,
+                step:20,
+            },
             calendarOptions: {
                 plugins: [dayGridPlugin, timeGridPlugin, interactionPlugin, listPlugin],
                 initialView: 'dayGridMonth',
@@ -55,14 +60,14 @@ export default {
         }
     },
     created() {
-        this.GetAllEvents(this.$store.state.auth.user.usrID)
+        this.GetAllEvents(this.nav)
     },
     methods: {
         handleDateClick(info) {
             alert('Clicked on: ' + info.dateStr);
         },
-        GetAllEvents(id) {
-            EventService.GetAllEvents(id)
+        GetAllEvents(nav) {
+            EventService.GetAllEvents(nav)
                 .then((response) => {
                     // Assuming response.data contains the events array
                     this.calendarOptions.events = response.data.ob.map(event => {
