@@ -1,86 +1,73 @@
 <template>
-    <div class="character-details-chatper card mb-3 fiction-container">
-        <div v-if="chapter && chapter.Title">
-            <div class="card-header">
-                <div class="chapter-title-content">
-                    <h1 class="chapter-title">
-                        {{ chapter.Title }}
-                    </h1>
-                </div>
-            </div>
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-6">
-                        <div style="color: white" v-for="(illustration, index) in AllIillustrations" :key="index">
-<<<<<<< HEAD
-                            <!-- {{ illustration.IllustrationId }} -->
-=======
->>>>>>> dev2
-                            <div style="height: 150px; width: 150px;">
-                                <img :src="'/images/Fictions/' + illustration.IllustrationId"
-                                    :alt="illustration.IllustrationId" style="height: 150px; width: 150px;" />
-                            </div>
-                        </div>
-                    </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-                    <div class="6">
-
-=======
-                    <div class="6">
->>>>>>> dev2
-=======
-                    <div class="col-6">
->>>>>>> dev3
-                        <div class="chapter-button-content">
-                            <button @click="speakText" class="btn btn-primary">
-                                Lire à voix haute
-                            </button>
-                            <router-link type="button" class="btn btn-primary"
-                                :to="'/fiction/createChapter/' + chapter.FictionId" v-if="usrCurrent === AuthorId">
-                                Créer un chapitre
-                            </router-link>
-                            <router-link type="button" class="btn btn-primary" :to="'/EditChapter/' + chapter.Id"
-                                v-if="usrCurrent === AuthorId">
-                                Editer le chapitre
-                            </router-link>
-<<<<<<< HEAD
-                            <router-link :to="'/fiction/' + TitleFiction" class="btn btn-primary">
-=======
-<<<<<<<< HEAD:src/components/Game/Fictions/ChapterLayout.vue
-                            <router-link :to="'/fiction/' + TitleFiction" class="btn btn-primary">
-========
-                            <router-link :to="'/fiction/' + chapter.Fiction.Title" class="btn btn-primary">
->>>>>>>> dev2:src/components/Fictions/AllMyFictions/ChapterLayout.vue
->>>>>>> dev2
-                                Retour à la liste de chapitres
-                            </router-link>
-                        </div>
-                    </div>
-                </div>
-                <div class="chapter-global-content">
-                    <div class="chapter-image-content"
-                        v-bind:style="{ backgroundImage: 'url(/images/Fictions/' + chapter.Image + ')' }">
-                    </div>
-                    <div class="chapter-text-content">
-<<<<<<< HEAD
-
-                        <p v-html="chapter.Content"></p>
-=======
-<<<<<<<< HEAD:src/components/Game/Fictions/ChapterLayout.vue
-
-                        <p v-html="chapter.Content"></p>
-========
-                        <p v-html="displayedContent"></p>
->>>>>>>> dev2:src/components/Fictions/AllMyFictions/ChapterLayout.vue
->>>>>>> dev2
-                    </div>
-                </div>
-            </div>
+  <div class="character-details-chatper card mb-3 fiction-container">
+    <div v-if="chapter && chapter.Title">
+      <div class="card-header">
+        <div class="chapter-title-content">
+          <h1 class="chapter-title">
+            {{ chapter.Title }}
+          </h1>
         </div>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-6">
+            <div
+              style="color: white"
+              v-for="(illustration, index) in AllIillustrations"
+              :key="index"
+            >
+              <div style="height: 150px; width: 150px">
+                <img
+                  :src="'/images/Fictions/' + illustration.IllustrationId"
+                  :alt="illustration.IllustrationId"
+                  style="height: 150px; width: 150px"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="chapter-button-content">
+            <button @click="speakText" class="btn btn-primary">
+              Lire à voix haute
+            </button>
+            <router-link
+              type="button"
+              class="btn btn-primary"
+              :to="'/fiction/createChapter/' + chapter.FictionId"
+              v-if="usrCurrent === AuthorId"
+            >
+              Créer un chapitre
+            </router-link>
+            <router-link
+              type="button"
+              class="btn btn-primary"
+              :to="'/EditChapter/' + chapter.Id"
+              v-if="usrCurrent === AuthorId"
+            >
+              Editer le chapitre
+            </router-link>
+            <router-link
+              :to="'/fiction/' + chapter.Fiction.Title"
+              class="btn btn-primary"
+            >
+              Retour à la liste de chapitres
+            </router-link>
+          </div>
+        </div>
+      </div>
+      <div class="chapter-global-content">
+        <div
+          class="chapter-image-content"
+          v-bind:style="{
+            backgroundImage: 'url(/images/Fictions/' + chapter.Image + ')',
+          }"
+        ></div>
+        <div class="chapter-text-content">
+          <p v-html="chapter.Content"></p>
+          <p v-html="displayedContent"></p>
+        </div>
+      </div>
     </div>
+  </div>
 </template>
 <script>
 import FictionService from '../../../services/FictionService'
@@ -134,10 +121,6 @@ export default {
             this.displayedContent = '';
             let index = 0;
             const typingSpeed = 10; // Vitesse de frappe (en millisecondes)
-<<<<<<< HEAD
-
-=======
->>>>>>> dev2
             const typeChar = () => {
                 if (index < text.length) {
                     this.displayedContent += text.charAt(index);
@@ -162,8 +145,4 @@ export default {
         }
     }
 }
-<<<<<<< HEAD
 </script>
-=======
-</script>
->>>>>>> dev2

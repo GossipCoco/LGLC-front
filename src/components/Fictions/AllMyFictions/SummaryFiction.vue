@@ -1,5 +1,4 @@
 <template>
-<<<<<<< HEAD
 <div class="card-body">
       <div v-if="showspinner" class="d-flex justify-content-center">
         <div class="spinner-border text-success" role="status">
@@ -64,21 +63,6 @@
         @GamesPagination="GamesPagination"
       />
     </div>
-=======
-  <div class="card-body">
-    <spinner v-if="showspinner"/>
-    <AllCardsFictions v-else v-bind:games="games" />    
-  </div>
-  <div class="row pagination-container">
-    <Pagination
-      v-if="!showspinner"
-      :nav="nav"
-      :filters="filters"
-      :getDatas="'GamesPagination'"
-      @GamesPagination="GamesPagination"
-    />
-  </div>
->>>>>>> dev3
 </template>
 <script>
 import Pagination from "../../Components/GenericComponent/Pagination.vue";

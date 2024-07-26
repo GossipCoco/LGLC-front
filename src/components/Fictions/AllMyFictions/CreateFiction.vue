@@ -63,93 +63,6 @@ import LinkGenerateImage from "../../Components/FormComponent/LinkGenerateImage.
 
 
 export default {
-<<<<<<< HEAD
-    name: 'CreateFiction',
-    inject: ["user"],
-    data() {
-        return {
-            userCurrent: this.$store.state.auth.user.usrID,
-            textInput: null,
-            characters: {},
-            form: {
-                Title: null,
-                Summary: null,
-                FirstCharacterId: null,
-                SecondCharacterId: null,                
-                LocationId: null
-            },
-            file: null,
-            prompt: '',
-            imageUrl: null
-        }
-    },
-    created() {
-        this.GetAllNamesAndIdsCharacters()
-    },
-    methods: {
-        async generateImage() {
-            try {
-                const response = await axios.post(Config.Url + '/api/generate-image', {
-                    prompt: this.prompt
-                });
-
-                this.imageUrl = response.data.data[0].url;
-            } catch (error) {
-                console.error('Error generating image:', error);
-            }
-        },
-        GetAllNamesAndIdsCharacters() {
-            CharacterService.GetAllNamesAndIdsCharacters()
-                .then((response) => {
-                    this.characters = response.data.ob
-                })
-                .catch((e) => {
-                    console.log(e);
-                });
-        },
-        handleFileUpload(event) {
-            this.file = event.target.files[0];
-        },
-        handleOk() {
-            const formattedText = this.form.Summary
-                .split('\n')
-                .filter(paragraph => paragraph.trim() !== '') // Remove empty lines
-                .map(paragraph => `<p>${paragraph}</p>`)
-                .join('');
-            this.form.Summary = formattedText;
-
-            const formData = new FormData();
-            formData.append('Title', this.form.Title);
-            formData.append('Summary', this.form.Summary);
-            formData.append('FirstCharacterId', this.form.FirstCharacterId);
-            formData.append('SecondCharacterId', this.form.SecondCharacterId);
-            formData.append('LocationId', this.form.LocationId);
-            if (this.file) {
-                formData.append('image', this.file);
-            }
-
-            // Log formData entries for debugging
-            for (let [key, value] of formData.entries()) {
-                console.log(key, value);
-            }
-            this.CreateANewFiction(this.userCurrent, formData);
-        },
-        CreateANewFiction(usr, formData) {
-            GameService.CreateANewGame(usr, formData)
-                .then((response) => {
-<<<<<<< HEAD
-=======
-                    console.log(response)
->>>>>>> dev2
-                    if (response) {
-                        this.$router.push({ path: "/allFictions/" + this.$store.state.auth.user.usrID });
-                    }
-                })
-                .catch((e) => {
-                    console.log(e);
-                });
-        }
-=======
   name: "CreateFiction",
   components: { CardHeader, InputTitle, TextAreaComponent, SelectCharacterComponent, LinkGenerateImage },
   inject: ["user"],
@@ -180,7 +93,7 @@ export default {
         .filter((paragraph) => paragraph.trim() !== "") // Remove empty lines
         .map((paragraph) => `<p>${paragraph}</p>`)
         .join("");
->>>>>>> dev3
+
     }
     ,
     InputTitle(e){
