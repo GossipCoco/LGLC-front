@@ -580,17 +580,20 @@ li.quest-container{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    flex: 1;
+    flex: 0.25;
     height: 30rem;
 }
-.quest-container,.quest--global-container p, .quest-image-container, .background-image-quest-image-container{
+.quest-container,.quest--global-container p,
+.quest-image-container,
+.background-image-quest-image-container{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     flex: 1;
 }
 .quest-container{
-    height: 30rem;
+    height: 28rem;
+    width: 12rem;
 }
 .quest-image-container, .background-image-quest-image-container{
     width: 100%;
@@ -602,6 +605,15 @@ li.quest-container{
     flex: 1;
     justify-content: center;
     vertical-align: top;
+}
+
+.card-img-top.background-image-quest-image-container {
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
 }
 .one-quest-container .card-header{
     display: flex;
@@ -619,8 +631,7 @@ height: 25rem;
 flex: 1;
 }
 .card-img-top.background-image-quest-image-container img{
-    width: 150px;
-    height: 100px;
+    width: 75%;
 }
 .quest-title{
     display: flex;
@@ -630,7 +641,9 @@ flex: 1;
 .quest-button-text{
     display: flex;
     flex-direction: column;
-    height: 17rem;
+    height: 12rem;
+    vertical-align: middle;
+    align-items: center;
 }
 .quest-button-text p{
     height: 9rem;
@@ -638,11 +651,9 @@ flex: 1;
 .quest-button-text .btn.btn-primary{
     width: 10rem;
 }
-
 .one-quest-container .pagination-container{
     margin: 0;
 }
-
 .character-of-clan-container{
     display: flex;
     flex-direction: row;

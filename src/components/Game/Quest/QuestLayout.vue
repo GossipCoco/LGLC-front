@@ -58,7 +58,7 @@ export default {
       nav: {
         current: 0,
         pages: 0,
-        step: 6,
+        step: 4,
       },
     };
   },
@@ -69,35 +69,29 @@ export default {
   },
   created() {
     this.userCurrent = this.$store.state.auth.user.usrID;
+    this.initPage();
     this.GetAllQuests(this.nav);
     this.GetTotalQuest();
   },
   watch: {
-    $route() {
+    '$route'() {
       this.initPage();
     },
   },
   methods: {
     initPage() {
       this.showspinner = true;
-      Promise.all([
-        this.GetTotalQuest(),
-        this.GetAllQuests(this.nav.current),
-      ]).then(() => {
-        this.showspinner = false;
-      });
+      // this.GetTotalQuest()
+      // this.GetAllQuests(this.nav.current)
     },
     QuestPagination(e) {
-      console.log(e);
       this.nav.current = e;
       this.GetAllQuests(this.nav);
     },
     GetTotalQuest() {
       QuestService.GetTotalQuest()
         .then((response) => {
-          console.log(response);
           this.nbQuests = response.data.ob;
-          console.log(this.nbQuests);
         })
         .catch((e) => {
           console.log(e);
