@@ -101,6 +101,7 @@ export default {
       QuestService.GetAllQuests(nav)
         .then((response) => {
           this.allQuests = response.data.ob;
+          console.log(this.allQuests)
           this.showspinner = false;
           functions.CalcPagination(
             this.nbQuests,
