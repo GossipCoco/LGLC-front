@@ -11,7 +11,7 @@ body {
 #app {
     scroll-behavior: smooth;
     background-color: rgba(var(--main-grey-background), 1);
-    background-image: url('../../../public/images/paysage/paysage_1228.png');
+    background-image: url('../../../public/images/paysage/paysage_1217.png');
     /* background-image: url('../../../public/images/Backgrounds/_95b0d7b9-7130-4e52-a236-0124266a2058.jpg'); */
     background-size: cover;
     background-position: 5%;
@@ -156,8 +156,8 @@ main.container {
 
 /* Works on Firefox */
 * {
-    scrollbar-width: thin;
-    scrollbar-color: rgba(var(--dark-green-01), 1) rgba(var(--dark-green-03), 1);
+
+    scrollbar-color: rgba(var(--dark-green-02),1) rgba(var(--clear-green-02),1);
 }
 
 /* Works on Chrome, Edge, and Safari */
@@ -166,11 +166,11 @@ main.container {
 }
 
 *::-webkit-scrollbar-track {
-    background: rgba(var(--dark-green-03), 1);
+    scrollbar-color: rgba(var(--dark-green-02),1) rgba(var(--clear-green-02),1);
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: rgba(var(--dark-green-01), 1);
+    scrollbar-color: rgba(var(--dark-green-02),1) rgba(var(--clear-green-02),1);
     border-radius: 20px;
     border: 3px solid rgba(var(--dark-green-03), 1);
 }

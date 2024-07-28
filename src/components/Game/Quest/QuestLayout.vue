@@ -70,8 +70,8 @@ export default {
   created() {
     this.userCurrent = this.$store.state.auth.user.usrID;
     this.initPage();
-    this.GetAllQuests(this.nav);
-    this.GetTotalQuest();
+    // this.GetAllQuests(this.nav);
+    // this.GetTotalQuest();
   },
   watch: {
     $route() {
@@ -81,8 +81,8 @@ export default {
   methods: {
     initPage() {
       this.showspinner = true;
-      // this.GetTotalQuest()
-      // this.GetAllQuests(this.nav.current)
+      this.GetTotalQuest()
+      this.GetAllQuests(this.nav)
     },
     QuestPagination(e) {
       this.nav.current = e;
@@ -101,6 +101,7 @@ export default {
       QuestService.GetAllQuests(nav)
         .then((response) => {
           this.allQuests = response.data.ob;
+          console.log(this.allQuests)
           this.showspinner = false;
           functions.CalcPagination(
             this.nbQuests,
