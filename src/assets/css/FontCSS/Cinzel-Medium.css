@@ -3,8 +3,8 @@
     font-family: 'Cinzel';
     font-style: normal;
     font-weight: 400;
-    src: local('../fonts/Cinzel/Cinzel-Medium.ttf'),
-         url('../fonts/Cinzel/Cinzel-Medium.ttf') format('ttf'); /* Super Modern Browsers */
+    src: local('../../fonts/Cinzel/Cinzel-Medium.ttf'),
+         url('../../fonts/Cinzel/Cinzel-Medium.ttf') format('ttf'); /* Super Modern Browsers */
          font-weight:400;
          font-style: 400;
   }

@@ -4,5 +4,5 @@
     font-style: normal;
     font-weight: 600;
     src: local('../fonts/Cinzel/Cinzel-Bold.ttf'),
-         url('../fonts/Cinzel/Cinzel-Bold.ttf') format('ttf'), /* Super Modern Browsers */
+         url('../../fonts/Cinzel/Cinzel-Bold.ttf') format('ttf'), /* Super Modern Browsers */
   }
