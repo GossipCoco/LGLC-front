@@ -382,9 +382,6 @@ main.container {
     flex-direction: column;
     border-radius: 20px;
 }
-<<<<<<< HEAD
-
-=======
 .opacity-container{
     background-color: rgba(var(--dark-green-01), 0.75);
     height: 67vh;
@@ -392,7 +389,6 @@ main.container {
     flex-direction: row;
     border-radius: 20px;
 }
->>>>>>> dev2
 .illustration-background .background-fiction-contain .characters-list-container{
     display: flex;
     flex-direction: row;
