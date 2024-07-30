@@ -1,0 +1,8 @@
+/* Montserrat-Bold */
+@font-face {
+    font-family: 'Montserrat Bold';
+    font-style: normal;
+    font-weight: 400;
+    src: local('../../fonts/Montserrat/Montserrat-Bold.ttf'),
+         url('../../fonts/Montserrat/Montserrat-Bold.ttf') format('ttf'), /* Super Modern Browsers */
+  }

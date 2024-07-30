@@ -1,0 +1,8 @@
+/* Montserrat-Regular */
+@font-face {
+    font-family: 'Cinzel';
+    font-style: normal;
+    font-weight: 400;
+    src: local('../../fonts/Cinzel/Cinzel-Regular.ttf'),
+         url('../../fonts/Cinzel/Cinzel-Regular.ttf') format('ttf'), /* Super Modern Browsers */
+  }
