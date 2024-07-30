@@ -6,12 +6,13 @@ body {
     height: 100vh;
     overflow-y: hidden;
     overflow-x: hidden;
+    background-image: url('/images/paysage/paysage_1305.png');
 }
 
 #app {
     scroll-behavior: smooth;
-    background-color: rgba(var(--main-grey-background), 1);
-    background-image: url('../../../public/images/paysage/paysage_1305.png');
+    /* background-color: rgba(var(--main-grey-background), 0); */
+    /* background-image: url('/images/paysage/paysage_1305.png'); */
     background-size: cover;
     background-position: 5%;
     height: 100vh;
