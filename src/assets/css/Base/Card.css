@@ -6,11 +6,19 @@
     height: 100vh;
     overflow-y: auto;
 }
-
 .character-card-group .card-group {
     display: flex;
     flex-direction: column;
     height: 95vh;
+}
+#all-characters-container-card .character-card.card,
+.character-card.card,
+.dashboard-mini-card-container.card,
+.dashboard-medium-card-container.card {
+    background-color: rgba(var(--dark-green-01), 1);
+    border: none;
+    color: rgba(var(--main-white), 1);
+    font-family: var(--opensans-text);
 }
 
 .character-details.card::after {
@@ -30,28 +38,18 @@
     border-bottom: 1rem solid rgba(var(--clear-green-02), 1);
     border-left: 1rem solid rgba(var(--clear-green-02), 1);
     height: 40rem;
-
 }
-
 .character-card-group {
     display: flex;
     flex-direction: column;
 }
-
 .character-container-global {
     height: 100vh;
     width: 180vh;
     margin-top: 2rem;
 }
-
-
-
 .character-card.card {
     /* background: linear-gradient(90deg, rgba(var(--dark-green-01), 1), rgba(var(--clear-green-02), 1)); */
-    background-color: rgba(var(--dark-green-01), 1);
-    border: none;
-    color: rgba(var(--main-white), 1);
-    font-family: var(--opensans-text);
     margin: 1rem 1rem 0 0;
     width: 20rem;
     flex: 1;
@@ -61,12 +59,7 @@
     max-width: 20rem;
     height: 40rem
 }
-
 #all-characters-container-card .character-card.card {
-    background-color: rgba(var(--dark-green-02), 1);
-    border: none;
-    color: rgba(var(--main-white), 1);
-    font-family: var(--opensans-text);
     margin: 1rem 2rem 0 2rem;
     width: 10rem;
     flex: 1;
@@ -84,7 +77,6 @@
     overflow-x: hidden;
     overflow-y: auto;
 }
-
 .parallax-layer {
     position: absolute;
     top: 0;
@@ -92,11 +84,9 @@
     right: 0;
     left: 0;
 }
-
 .parallax-layer-back {
     transform: translateZ(-1px) scale(2);
 }
-
 .character-details.card .card-image {
     display: flex;
     justify-content: center;
@@ -107,21 +97,14 @@
     border-left: 1rem solid rgba(var(--clear-green-02), 1);
     height: 40rem;
 }
-
 .card-image img {
     width: 75%;
 }
-
 .img-fluid {
     max-width: 100%;
     height: auto;
 }
-
-
 .dashboard-mini-card-container.card {
-    background: linear-gradient(90deg, rgba(var(--dark-green-01), 1), rgba(var(--clear-green-02), 1));
-    border: none;
-    color: rgba(var(--main-white), 1);
     font-family: var(--opensans-text);
     margin: 2rem 2rem 0 0;
     flex: 1;
@@ -150,7 +133,6 @@
     padding: 2rem;
     height: 24vh;
 }
-
 .dashboard-medium-card-container.card::before {
     content: url('/images/icons/cat-corner.svg');
     width: 10px;
@@ -158,15 +140,11 @@
     position: relative;
     top: -4rem;
     left: 22rem;
-
     height: 52vh;
 }
-
 .dashboard-max-card-container.card {
     background: linear-gradient(90deg, rgba(var(--dark-green-01), 1), rgba(var(--clear-green-02), 1));
     border: none;
-    color: rgba(var(--main-white), 1);
-    font-family: var(--opensans-text);
     margin: 3rem 0 0 0;
     flex: 1;
     width: 105rem;
@@ -175,7 +153,6 @@
     height: 53rem;
     overflow-y: hidden;
 }
-
 .form-character-container-global .card {
     background: linear-gradient(90deg, rgba(var(--dark-green-01), 1), rgba(var(--clear-green-02), 1));
     border: none;
@@ -206,7 +183,6 @@
     height: 51rem;
     overflow-y: scroll;
 }
-
 .dashboard-home-max-card-container.card {
     background: none;
     border: none;
@@ -217,7 +193,6 @@
     width: 100%;
     padding: 1.5rem;
     height: 100%;
-    /* overflow-y: auto; */
 }
 
 .fiction-globale-container.card.fiction-container {
@@ -234,13 +209,11 @@
     overflow-y: hidden;
     overflow-x: hidden;
 }
-
 .dashboard-home-max-card-container .row .card {
     background: linear-gradient(90deg, rgba(var(--dark-green-01), 1), rgba(var(--clear-green-02), 1));
     border: none;
     position: relative;
 }
-
 .dashboard-max-card-container.card.fiction-container {
     margin: 5rem 2rem 2rem 2rem;
     height: 85vh;
@@ -248,7 +221,6 @@
     overflow-y: hidden;
     padding: 1rem 0;
 }
-
 .dashboard-fiction-game-card-container.card {
     background: linear-gradient(90deg, rgba(var(--dark-green-01), 1), rgba(var(--clear-green-02), 1));
     border: none;
@@ -262,33 +234,18 @@
     height: 51rem;
     overflow-y: scroll;
 }
-
 .dashboard-max-card-container::before,
 .dashboard-fiction-game-card-container::before,
-.fiction-globale-container::before {
-    content: url('/images/icons/cat-corner.svg');
-    width: 10px;
-    height: 10px;
-    position: relative;
-    top: -4rem;
-    left: 90%
-}
-
+.fiction-globale-container::before,
 .character-card.card::before {
     content: url('/images/icons/cat-corner.svg');
     width: 10px;
     height: 10px;
     position: relative;
-    top: -2rem;
-    left: 14rem;
+    top: -4rem;
+    left: 90%;
     transform: scale(.5);
 }
-
-
-/* 
-.top-dashboard, .bottom-dashboard{
-    height: 45vh;
-} */
 /* Character Details */
 
 .character-details {
@@ -298,15 +255,12 @@
     background: linear-gradient(90deg, rgba(var(--dark-green-01), 0) 0%, rgba(var(--clear-green-02), 0) 100%);
     padding: 1rem 1rem 1rem 1rem;
     perspective: 5rem;
-
 }
-
 .parallax {
     height: 100%;
     position: relative;
     transform-style: preserve-3d;
 }
-
 .parallax__layer {
     position: absolute;
     top: 0;
@@ -314,7 +268,6 @@
     bottom: 0;
     left: 0;
 }
-
 .parallax__layer--base {
     transform: translateZ(0);
 }
@@ -341,14 +294,11 @@
         transform: rotateY(0) rotateX(0);
     }
 }
-
 .character-details.card .card-image img {
     width: 75%;
     transform-style: preserve-3d;
     animation: rotate 10s infinite linear;
-    /* Animation continue */
 }
-
 .vegetal-container {
     background-image: url('/images/Backgrounds/herbePNG.png');
     background-size: contain;
@@ -358,34 +308,24 @@
     background-position: 80% 100%;
     position: relative
 }
-
 .vegetal-container img {
     position: absolute;
     top: 15%;
     left: 35%
 }
-
-/* .card-image img{
-    width: 75%;
-} */
-
 .profil-user-card {
-    background: linear-gradient(90deg, rgba(var(--dark-green-01), 1) 0%, rgba(var(--clear-green-02), 1) 100%);
+    background: var(--linear-greendark-clear);
 }
-
 .clan-card {
     width: 30rem;
     height: 20rem;
     border-radius: 12px 12px 0 0;
     background-position: 50%;
 }
-
 .card-image-layout {
     width: 95rem;
     margin: 4rem 0 0 3rem;
-
 }
-
 .clan-detail-card {
     width: 65rem;
     height: 40rem;
@@ -402,11 +342,9 @@
     height: 45rem;
     background-color: rgba(var(--main-white), 1);
 }
-
 .clans-location-container {
     margin: 0 0 5rem 0;
 }
-
 .character-card.card .card-image {
     display: flex;
     justify-content: center;
@@ -416,17 +354,14 @@
     border-radius: 100% 100% 0 0;
     border: 6px solid rgba(var(--clear-green-02), 1);
 }
-
 .character-container h3 {
     font-variant: small-caps;
 }
-
 .character-list-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .card.card-image-layout.clan-detail-layout.mb-3 {
     width: 95rem;
     display: flex;
@@ -434,12 +369,10 @@
     border-radius: 20px 0 0 20px;
     background-color: rgba(var(--main-white), 0);
 }
-
 .card.card-image-layout.clan-detail-layout.mb-3 .card-image-layout {
     width: 95rem;
     margin: 4rem 0 0 3rem;
 }
-
 .card.card-image-layout.clan-detail-layout.mb-3 .card-body {
     height: 50rem;
     overflow-y: auto;
@@ -447,14 +380,11 @@
     width: 100%;
     border-radius: 20px;
 }
-
 /* USER */
-
 .profil-user-card .card-body {
     display: flex;
     flex-direction: row;
 }
-
 .avatar-container,
 .avatar-container img {
     width: 100px;
@@ -463,9 +393,7 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-
 }
-
 .dashboard-home-max-card-container .avatar-container img {
     width: 100px;
     height: 100px;
@@ -473,33 +401,22 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-
 }
-
 .dashboard-home-max-card-container .avatar-container {
     width: 5vh;
     height: 5vh;
     margin-top: -1.5rem;
 }
-
-/* .avatar-container img {
-    width: 250px;
-    height: 245px;
-} */
 .form-profil-user-card {
     margin-top: 3rem;
     height: 20vh;
 }
-
 .all-clans-cards .card-body {
     height: 35vh;
 }
-
 .character-details .col-md-4 {
     padding-top: 14vh;
 }
-
-
 .card-form-create-character {
     flex-direction: column;
     display: flex;
@@ -511,92 +428,70 @@
     height: 180vh;
     overflow: scroll;
 }
-
 .form-first-part-container {
     overflow: hidden;
 }
 
 .form-first-part-container .col-md-6 {
     height: 10vh;
-
 }
-
 .form-second-part-container {
     height: 80vh;
     overflow-y: scroll;
-
 }
-
 .dashboard-max-card-container.card.fiction-container div.col-sm-4.mb-4.mb-sm-0 {
     margin: 0 0 0 0;
 }
-
 .card.profil-card img {
     border-radius: 100% 100% 0 0;
     border: 10px solid rgba(var(--dark-green-01), 0);
 }
-
-
 .dashboard-home-max-card-container .card.profil-card {
     display: flex;
     flex-direction: column;
 }
-
 .bottom-top-dashboard .card {
     height: 35vh;
 }
-
 .fiction-card .card-header {
     border-bottom: rgba(var(--clear-green-02), 0);
     font-family: var(--montserratRegular);
     font-size: 18px;
-    ;
     z-index: 9999;
     margin-left: 2rem;
     font-variant: small-caps;
 }
-
 .clan-group .card-body {
     display: flex;
     flex-direction: column;
     height: 9rem;
 }
-
 .clan-description {
     display: flex;
     flex: 1;
     padding: 2rem auto;
 }
-
 .clan-description p {
     text-align: justify;
-
 }
-
 .card-group.clan-group .card {
     margin: 1rem;
 }
-
 .row.top-dashboard .card {
     height: 20rem;
 }
-
 .row.bottom-dashboard .card {
     height: 25rem;
 }
-
 li.quest-container {
     margin: 0 1rem;
 }
-
 .quest-container {
     margin: 1rem;
 }
-
 .quest-title {
     height: 4rem;
 }
-
 .quest--global-container {
     display: flex;
     flex-direction: row;
@@ -604,7 +499,6 @@ li.quest-container {
     flex: 0.25;
     height: 30rem;
 }
-
 .quest-container,
 .quest--global-container p,
 .quest-image-container,
@@ -614,12 +508,10 @@ li.quest-container {
     flex-wrap: wrap;
     flex: 1;
 }
-
 .quest-container {
     height: 28rem;
     width: 12rem;
 }
-
 .quest-image-container,
 .background-image-quest-image-container {
     width: 100%;
@@ -631,7 +523,6 @@ li.quest-container {
     justify-content: center;
     vertical-align: top;
 }
-
 .card-img-top.background-image-quest-image-container {
     height: 10rem;
     display: flex;
@@ -640,35 +531,29 @@ li.quest-container {
     align-content: center;
     align-items: center;
 }
-
 .one-quest-container .card-header {
     display: flex;
     justify-content: center;
     vertical-align: middle;
 }
-
 .card-header.quest-title {
     display: flex;
     justify-content: center;
 }
-
 .card-body.one-quest {
     display: flex;
     flex-direction: column;
     height: 25rem;
     flex: 1;
 }
-
 .card-img-top.background-image-quest-image-container img {
     width: 75%;
 }
-
 .quest-title {
     display: flex;
     flex: 0.25;
     text-align: center;
 }
-
 .quest-button-text {
     display: flex;
     flex-direction: column;
@@ -676,32 +561,26 @@ li.quest-container {
     vertical-align: middle;
     align-items: center;
 }
-
 .quest-button-text p {
     height: 9rem;
 }
-
 .quest-button-text .btn.btn-primary {
     width: 10rem;
 }
-
 .quest-details {
     text-align: center;
     margin-top: 20px;
 }
-
 .reward-message {
     color: green;
     font-weight: bold;
     margin-top: 20px;
 }
-
 .parallax-container {
     position: relative;
     height: 400px;
     overflow: hidden;
 }
-
 .parallax-layer {
     position: absolute;
     width: 100%;
@@ -710,12 +589,10 @@ li.quest-container {
     left: 0;
     transition: transform 0.1s ease-out;
 }
-
 .quest-mission-container-text {
     display: flex;
     flex-direction: column;
 }
-
 .quest-mission-container {
     display: flex;
     flex-direction: row;
@@ -731,20 +608,17 @@ li.quest-container {
 .one-quest-container .pagination-container {
     margin: 0;
 }
-
 .character-of-clan-container {
     display: flex;
     flex-direction: row;
     flex: 1
 }
-
 .indivual-caracter-container {
     display: flex;
     flex-direction: column;
     flex: 1;
     width: 110px;
 }
-
 .indivual-caracter-container img {
     width: 100px;
 }

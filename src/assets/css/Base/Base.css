@@ -2,17 +2,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import '../variables.scss';
 
-body {
+*, html, body {
     font-family: 'Open Sans', sans-serif;
-    background-color: rgba(var(--main-white), 1);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* color: rgba(var(--main-white), 1) */
+}
+html,
+body {
+    height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background-image: url('/images/paysage/paysage_1305.png');
 }
 a {
     text-decoration: none;
     color: inherit;
 }
 h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cinzel';
     margin: 0;
+    color: rgba(var(--main-white), 1)
 }

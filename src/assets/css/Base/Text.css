@@ -78,3 +78,9 @@ a{ text-decoration: none; }
 #list-events p span{  
   font-weight: 600;
 }
+.card-header.quest-title{
+  height: 2rem;
+}
+.card-header.quest-title h4{
+  color: rgba(var(--dark-green-01),1)
+}
