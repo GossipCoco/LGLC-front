@@ -11,8 +11,7 @@ body {
 #app {
     scroll-behavior: smooth;
     background-color: rgba(var(--main-grey-background), 1);
-    background-image: url('../../../public/images/paysage/paysage_1217.png');
-    /* background-image: url('../../../public/images/Backgrounds/_95b0d7b9-7130-4e52-a236-0124266a2058.jpg'); */
+    background-image: url('../../../public/images/paysage/paysage_1305.png');
     background-size: cover;
     background-position: 5%;
     height: 100vh;
