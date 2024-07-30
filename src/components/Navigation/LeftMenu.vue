@@ -1,12 +1,12 @@
 <template>
   <div>
     <div class="burger-menu" @click="toggleMenu">
-      <img src="../../../public/images/Logos/logo1.png"/>
+      <img src="/images/Logos/logo1.png"/>
     </div>
     <div :class="['menu-left', { 'menu-hidden': !isMenuOpen }, 'd-flex', 'flex-column', 'flex-shrink-0', 'p-3']">
       <div class="logo-container">
         <router-link to="/dashboard">
-          <img src="../../../public/images/Logos/logo1.png" />
+          <img src="/images/Logos/logo1.png" />
         </router-link>
       </div>
       <ul class="nav nav-pills flex-column mb-auto">

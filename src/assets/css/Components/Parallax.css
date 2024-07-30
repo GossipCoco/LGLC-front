@@ -1,6 +1,8 @@
 @import '../variables.scss';
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 
 #quest-by-id {
   width: 100%;
@@ -10,7 +12,7 @@
 
 #quest-by-id .quest-by-id-card {
   width: 100%;
-  background: linear-gradient(90deg, rgba(var(--dark-green-01), 1), rgba(var(--clear-green-02), 1));
+  background: var(--linear-greendark-clear);
 }
 
 #quest-by-id .parallax-container {
@@ -49,7 +51,6 @@
 #quest-by-id .parallax-layer:nth-child(5){
   transform: translateZ(-3rem) translateZ(-8rem) translateY(30rem) scale(1.25)
 }
-
 #quest-by-id .chat-image {
   position: absolute;
   z-index: 4;

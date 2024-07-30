@@ -1,5 +1,5 @@
 <template>
-  <div class="dashboard-max-card-container card fiction-container">
+  <div class="dashboard-max-card-container card fiction-container game-card">
     <CardHeader v-bind:Title="'Chasse au trésor'" />
     <div class="card-body">
       <div class="game-container" @keydown="handleKeydown" tabindex="0">
@@ -25,7 +25,7 @@ export default {
   components:{CardHeader},
   data() {
     return {
-      backgroundImage: '/images/Backgrounds/_3b330c06-8a19-4a0b-8f57-feaa180a9dbf.jpeg', // Path to your background image in the public folder
+      backgroundImage: '/images/paysage/paysage_1122.png', // Path to your background image in the public folder
       characterImage: '/images/Characters/Ravenpaw.warrior.webp', // Path to your character image in the public folder
       characterPosition: { top: 50, left: 50 }, // Initial position of the character
       treasures: [],
