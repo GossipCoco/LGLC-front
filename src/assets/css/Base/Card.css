@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import './variables.scss';
+@import '../variables.scss';
 
 .col-11.col-lg-11 {
     height: 100vh;
@@ -14,7 +14,7 @@
 }
 
 .character-details.card::after {
-    content: url('../../../public/images/cat2.svg');
+    content: url('/images/cat2.svg');
     position: absolute;
     top: -12%;
     left: 90%;
@@ -131,7 +131,7 @@
 }
 
 .dashboard-mini-card-container.card::before {
-    content: url('../images/icons/cat-corner.svg');
+    content: url('/images/icons/cat-corner.svg');
     width: 10px;
     height: 10px;
     position: relative;
@@ -152,7 +152,7 @@
 }
 
 .dashboard-medium-card-container.card::before {
-    content: url('../images/icons/cat-corner.svg');
+    content: url('/images/icons/cat-corner.svg');
     width: 10px;
     height: 10px;
     position: relative;
@@ -266,7 +266,7 @@
 .dashboard-max-card-container::before,
 .dashboard-fiction-game-card-container::before,
 .fiction-globale-container::before {
-    content: url('../images/icons/cat-corner.svg');
+    content: url('/images/icons/cat-corner.svg');
     width: 10px;
     height: 10px;
     position: relative;
@@ -275,12 +275,13 @@
 }
 
 .character-card.card::before {
-    content: url('../images/icons/cat-corner.svg');
+    content: url('/images/icons/cat-corner.svg');
     width: 10px;
     height: 10px;
     position: relative;
     top: -2rem;
     left: 14rem;
+    transform: scale(.5);
 }
 
 
