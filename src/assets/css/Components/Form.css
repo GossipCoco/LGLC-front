@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import './variables.scss';
+@import '../variables.scss';
 
 .ql-toolbar.ql-snow, .ql-editor.ql-blank {
     background-color: rgba(var(--main-white),1);
