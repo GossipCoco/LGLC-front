@@ -12,7 +12,6 @@
         opacity: 1;
     }
 }
-
 @keyframes slideInLeft {
     0% {
         transform: translateX(-100%);
@@ -23,7 +22,6 @@
         opacity: 1;
     }
 }
-
 @keyframes slideInUp {
     0% {
         transform: translateY(100%);
@@ -35,17 +33,15 @@
     }
 }
 #accueil .parallax {
-    perspective: 1px;
+    perspective: -5px;
     overflow-x: hidden;
     overflow-y: auto;
     height: 100vh;
 }
-
 #accueil .parallax .image-one {
-    transform: translateZ(-1px) scale(2);
+    transform: translateZ(-1px) scale(2.25);
     background-attachment: fixed;
 }
-
 #accueil .parallax img {
     display: block;
     max-width: 100%;
@@ -61,12 +57,10 @@
 }
 #accueil main, #accueil .cover-container {
     height: 100vh;
-    /* background-image: url('../../../public/images/Backgrounds/Warriors-paysage01.png'); */
     background: linear-gradient(90deg, rgba(var(--dark-green-01), 0.5) 0%, rgba(var(--clear-green-02), 0.5) 50%);
     background-size: cover;
     transform: translate3d(0px, 0, 0);
 }
-
 
 #accueil #parallax .video-container{
     background-image: url('/images/paysage/paysage_1300.jpeg');
@@ -75,11 +69,8 @@
     transform: translate3d(0, 0, 0);
     background-position: 20%;
 }
-
-
 #accueil .container.marketing{
     margin-top: 10rem;
-    background: linear-gradient(90deg, rgba(var(--dark-green-01), 0.5) 0%, rgba(var(--clear-green-02), 0.5) 100%);
 }
 #accueil nav.bg-dark, #accueil nav .container-fluid {
     background-color: rgba(var(--main-black), 1);
@@ -101,9 +92,7 @@
     margin: 4rem 0 0 0;
     background-size: cover;
     background-repeat: no-repeat;
-
 }
-
 #accueil video{
     width: 217vh;
     position: absolute;
@@ -118,15 +107,12 @@
     top: 10rem;
     width: 208vh;
 }
-
-#accueil .title-accueil,
-#accueil .image-accueil {
+#accueil .title-accueil, #accueil .image-accueil {
     flex: 1;
     align-items: center;
     display: flex;
     justify-content: center;
-    width: 575vh;
-    
+    width: 575vh;    
 }
 #accueil .title-accueil{
     flex-direction: column;
@@ -143,8 +129,6 @@
     animation: slideInLeft 3s ease-out;
     text-shadow: #FC0 1px 0 10px;
 }
-
-
 #accueil .title-accueil h2 {
     margin: 4rem 0 0 0;
     width: 95%;
@@ -166,21 +150,15 @@
     display: flex;
     width: 10rem;
 }
-/* #accueil .row.featurette{
-    margin: 0 0 0 10rem;
-} */
 #accueil .col-md-5{
     display: grid;
     vertical-align: middle;
 }
 #accueil .image-row-second{
-    /* padding: 0 0 0 18rem; */
     display: flex;
     flex-direction: column;
     flex: 1;
     justify-content: left;
-    /* align-items: end;
-    align-content: end; */
 }
 #accueil .image-row-second img{
     width: 500px;
@@ -193,11 +171,9 @@
     padding-right: 0 !important;
     padding-left: 0 !important;
 }
-
 #accueil .navbar-brand img {
     width: 150px;
 }
-
 #accueil .image-accueil .image-one {
     position: relative;
     animation: slideInRight 2s ease-out;
@@ -206,11 +182,9 @@
     z-index: 1;
     width: 100%;
 }
-
 #accueil .image-accueil .image-one img {
     width: 90%;
 }
-
 #accueil .image-accueil {
     position: relative;
 }
@@ -220,7 +194,6 @@
 #accueil .image-rond img {
     width: 200px;
 }
-
 #accueil .col-image-rond {
     display: flex;
     flex-direction: column;
@@ -229,24 +202,16 @@
     vertical-align: middle;
     margin: 0 0 0 0.2;
 }
-
-/* #rever-container, #jouer-container, #creer-container {
-    opacity: 0;
-    transition: opacity 1s ease-out, transform 1s ease-out;
-} */
-
 .slide-in-left {
     opacity: 1;
     transform: translateX(0);
     animation: slideInLeft 1s forwards;
 }
-
 .slide-in-up {
     opacity: 1;
     transform: translateY(0);
     animation: slideInUp 1s forwards;
 }
-
 .slide-in-right {
     opacity: 1;
     transform: translateX(0);
@@ -254,28 +219,19 @@
 }
 #accueil .accueil-image-one{
     margin: 0 0 0 10rem;
-    width: 400px;
-    height: 400px;
     background-image: url('/images/Accueil/_5b729561-4ede-40d2-8039-7c82b8b47b15.jpeg');
-    background-size: cover;
-    background-position: 50%;
-    border-radius: 50%;
 }
-
 #accueil .accueil-image-two{
     margin: 0rem 10rem 0 2rem;
-    width: 400px;
-    height: 400px;
-    background-size: cover;
     background-image: url('/images/Accueil/_17ff9c3d-444c-44cd-b9fd-559dfd9e87d5.jpg');
-    background-position: 50%;
-    border-radius: 50%;
 }
 #accueil .accueil-image-tree{
     margin: 0 0 0 10rem;
+    background-image: url('/images/Accueil/Warriors_221.jpg');
+}
+#accueil .accueil-image-one, #accueil .accueil-image-two, #accueil .accueil-image-tree{
     width: 400px;
     height: 400px;
-    background-image: url('/images/Accueil/Warriors_221.jpg');
     background-size: cover;
     background-position: 50%;
     border-radius: 50%;
