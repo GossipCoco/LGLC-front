@@ -8,7 +8,10 @@
   color: rgba(var(--main-white),1);
 }
 
-
+.game-map-container{
+  display: flex;
+  flex-direction: column;
+}
 /* Jeu de l'Oie */
 
 #goose-game .game-map-container {
