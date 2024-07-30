@@ -69,7 +69,11 @@
 
 
 #accueil #parallax .video-container{
-    background-image: url('/images/paysage/paysage_1139.png');
+    background-image: url('/images/paysage/paysage_1300.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translate3d(0, 0, 0);
+    background-position: 20%;
 }
 
 
