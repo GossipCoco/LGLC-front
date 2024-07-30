@@ -1,78 +1,67 @@
+@import '../variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 #comment-container {
     width: 100%;
     padding: 20px;
     background-color: rgba(var(--dark-green-01),1);
     overflow-y: scroll;
     overflow-x: hidden;
-  }
-  
+  }  
   .message {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
-  }
-  
+  }  
   .message__outer {
     display: flex;
     align-items: flex-start;
-  }
-  
+  }  
   .message__avatar {
     width: 70px;
     height: 70px;
-
     background-color:  rgba(var(--dark-green-01),0);
     margin-right: 1rem;
-  }
-  
+  }  
   .message__inner {
     display: flex;
     flex-direction: column;
-  }
-  
+  }  
   .message__bubble {
     background-color:  rgba(var(--dark-green-01),1);
     border-radius: 10px;
     padding: 10px 20px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
     max-width: 100vh;
-  }
-  
+  }  
   .message__bubble p {
     margin: 0;
-  }
-  
+  }  
   .message__actions {
     display: flex;
     justify-content: flex-end;
     margin-top: 5px;
   }
-  
-  .message__status {
+    .message__status {
     align-self: flex-end;
     font-size: 12px;
     color: rgba(var(--clear-green-02),1);
     margin-top: 5px;
   }
-  
-  .message__spacer {
+    .message__spacer {
     flex-grow: 1;
   }
-  
-  /* Styles pour les messages alternés */
+    /* Styles pour les messages alternés */
   .message--right .message__outer {
     flex-direction: row-reverse;
   }
-  
   .message--right .message__avatar {
     margin-right: 0;
     margin-left: 10px;
-  }
-  
+  }  
   .message--right .message__bubble {
     background-color:  rgba(var(--dark-green-01),1);
   }
-  
   .message--right .message__actions {
     justify-content: flex-start;
   }
