@@ -41,7 +41,7 @@
 }
 
 #quest-by-id .parallax-layer:nth-child(3) {
-  transform: translateZ(-4rem) translateZ(2rem) translateY(3rem) scale(1.25);
+  transform: translateZ(-4rem) translateZ(3rem) translateY(6rem) scale(1.25);
 }
 #quest-by-id .parallax-layer:nth-child(4) {
   transform: translateZ(-3rem) translateZ(-8rem) translateY(30rem) scale(1.25)
