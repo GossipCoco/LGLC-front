@@ -18,9 +18,12 @@
             </div>
           </div>
           <div class="col-md-8">
-            <div class="card-body">
+            <div class="card-body details-infos-characters">
               <div class="row">
-                <div class="col-12">
+                <div class="col-8">
+                  <h2 class="card-title">{{ currentName }}</h2>
+                </div>
+                <div class="col-4">
                   <p class="card-text">
                     <router-link to="/allCharacters" type="button" class="btn btn-primary">
                       Retour à la liste des personnages
@@ -33,7 +36,7 @@
                   <div class="information-global-character">
                     <div class="character-info-general-container">
                       <div class="identity-character-container">
-                        <h5 class="card-title">{{ currentName }}</h5>
+                        
                         <p>{{ NameClan }}</p>
                         <p class="card-text" v-html="genre"></p>
                       </div>
@@ -42,6 +45,7 @@
                       </div>
                     </div>
                     <p class="card-text" v-html="description"></p>
+                    <p class="card-text" v-html="personnality"></p>
                     <p class="card-text biographie-text" v-html="Biography">
                     </p>
                     <p class="card-text">
@@ -73,6 +77,7 @@ export default {
       description: null,
       grade: null,
       Biography: null,
+      personnality: null,
       NameClan: null,
       symboleClan: null,
     }
@@ -115,6 +120,7 @@ export default {
           this.age = response.data.ob.Age
           this.description = response.data.ob.Description
           this.Biography = response.data.ob.Biography
+          this.personnality = response.data.ob.Personnality
         })
         .catch((e) => {
           console.log(e);
