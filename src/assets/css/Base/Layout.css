@@ -77,7 +77,6 @@ main.container {
 
 .character-card,
 .profil-user-card {
-
     flex: 1;
 }
 
@@ -94,22 +93,9 @@ main.container {
 .profil-text-container {
     flex: 1;
 }
-
 .avatar-container {
     flex: 0.5;
 }
-
-.main-container .row .col {
-    border-right: 1px solid gray;
-}
-
-.themed-grid-col {
-    padding-top: .75rem;
-    padding-bottom: .75rem;
-    background-color: rgba(var(--main-white), 1);
-    border: 1px solid rgba(86, 61, 124, .2);
-}
-
 .character-container {
     margin: -3rem auto;
     height: 90vh;
@@ -132,7 +118,6 @@ main.container {
     flex-wrap: wrap;
     padding: 0
 }
-
 .dashboard-medium-card-container {
     width: 38vh;
     margin: 0 0 2rem 0;
@@ -154,17 +139,14 @@ main.container {
 *::-webkit-scrollbar {
     width: 12px;
 }
-
 *::-webkit-scrollbar-track {
     scrollbar-color: rgba(var(--dark-green-02),1) rgba(var(--clear-green-02),1);
 }
-
 *::-webkit-scrollbar-thumb {
     scrollbar-color: rgba(var(--dark-green-02),1) rgba(var(--clear-green-02),1);
     border-radius: 20px;
     border: 3px solid rgba(var(--dark-green-03), 1);
 }
-
 .search-zone-container1 button,
 .search-zone-container1 a,
 .search-pagination-container button,
@@ -176,8 +158,6 @@ main.container {
     background-color: rgba(var(--dark-green-01), 1);
     color: rgba(var(--main-white), 1)
 }
-
-
 .character-details .card-body {
     height: 85vh;
     overflow-y: auto;
@@ -187,16 +167,13 @@ main.container {
     border: 1rem solid rgba(var(--clear-green-02), 1);
     z-index: -222
 }
-
 .form-character-container-global {
     height: 97vh;
     overflow-y: hidden;
     display: flex;
     flex-direction: column;
 }
-
 .border-gradient-decoration:nth-child(1) {
-    /* Rectangle 72 */
     position: absolute;
     width: 43px;
     height: 270px;
@@ -207,7 +184,6 @@ main.container {
     border-radius: 0px 12px 12px 0px;
     transform: matrix(1, 0, 0, 1, 0, 0);
 }
-
 .border-gradient-decoration-character {
     position: absolute;
     width: 63px;
@@ -220,14 +196,11 @@ main.container {
     transform: matrix(1, 0, 0, 1, 0, 0);
     z-index: 0;
 }
-
 .character-col {
     display: flex;
     flex-direction: row;
 }
-
 .border-gradient-decoration:nth-child(2) {
-    /* Rectangle 72 */
     position: absolute;
     width: 63px;
     height: 270px;
@@ -238,12 +211,10 @@ main.container {
     border-radius: 0px 12px 12px 0px;
     transform: matrix(1, 0, 0, 1, 0, 0);
 }
-
 .character-details-chatper.card.mb-3.fiction-container {
     background: linear-gradient(90deg, rgba(var(--dark-green-02), 1) 0%, rgba(var(--clear-green-02), 1) 100%);
     height: 95vh;
 }
-
 .border-gradient-decoration-bottom {
     position: absolute;
     width: 5rem;
@@ -254,24 +225,20 @@ main.container {
     border-radius: 0px 12px 12px 0px;
     transform: matrix(1, 0, 0, 1, 0, 0);
 }
-
 .row,
 .col-xxl-9.col-xl-9.col-lg-9.col-md-12.col-sm-12.col-xs-12,
 .col-xxl-6.col-xl-6.col-lg-6.col-md-12.col-sm-12.col-xs-12,
 .col-xxl-4.col-xl-4.col-lg-4.col-md-12.col-sm-12.col-xs-12 {
     border: 4px solid rgba(238, 130, 238, 0);
 }
-
 .link-text-a {
     color: rgba(var(--dark-green-01), 1);
     font-family: var(--roboto-text);
 }
-
 .puzzle-container-global {
     display: flex;
     flex-direction: row;
 }
-
 .puzzle-global-game {
     flex: 1;
     align-items: center;
@@ -279,20 +246,17 @@ main.container {
     justify-content: center;
     padding: 1rem auto;
 }
-
 .title-puzzle {
     display: flex;
     flex-direction: column;
     flex: 0.25;
     width: 5rem;
 }
-
 .title-puzzle .shufflePieces {
     height: 37px;
     width: 16rem;
     margin-bottom: 1rem;
 }
-
 .title-dashboard-container-header {
     display: flex;
     flex-direction: row;
