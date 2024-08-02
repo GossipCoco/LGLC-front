@@ -24,7 +24,7 @@
 }
 
 .character-details.card::after {
-    content: url('/images/cat2.svg');
+    content: var(--cat-corner);
     position: absolute;
     top: -12%;
     left: 90%;
@@ -51,7 +51,6 @@
     margin-top: 2rem;
 }
 .character-card.card {
-    /* background: linear-gradient(90deg, rgba(var(--dark-green-01), 1), rgba(var(--clear-green-02), 1)); */
     margin: 1rem 1rem 0 0;
     width: 20rem;
     flex: 1;
@@ -71,7 +70,6 @@
     max-width: 17rem;
     height: 20rem;
 }
-
 /* Parallax effect */
 .parallax {
     perspective: 1px;
@@ -116,7 +114,7 @@
 }
 
 .dashboard-mini-card-container.card::before {
-    content: url('/images/icons/cat-corner.svg');
+    content: var(--second-cat-corner);
     width: 10px;
     height: 10px;
     position: relative;
@@ -136,7 +134,7 @@
     height: 24vh;
 }
 .dashboard-medium-card-container.card::before {
-    content: url('/images/icons/cat-corner.svg');
+    content: var(--second-cat-corner);
     width: 10px;
     height: 10px;
     position: relative;
@@ -144,7 +142,7 @@
     left: 22rem;
     height: 52vh;
 }
-.dashboard-max-card-container.card {
+/* .dashboard-max-card-container.card {
     background: linear-gradient(90deg, rgba(var(--dark-green-01), 1), rgba(var(--clear-green-02), 1));
     border: none;
     margin: 3rem 0 0 0;
@@ -154,7 +152,7 @@
     padding: 2rem;
     height: 53rem;
     overflow-y: hidden;
-}
+} */
 .form-character-container-global .card {
     background: linear-gradient(90deg, rgba(var(--dark-green-01), 1), rgba(var(--clear-green-02), 1));
     border: none;
@@ -221,7 +219,7 @@
     height: 85vh;
     overflow-x: hidden;
     overflow-y: hidden;
-    padding: 1rem 0;
+    padding: 0;
 }
 .dashboard-fiction-game-card-container.card {
     background: linear-gradient(90deg, rgba(var(--dark-green-01), 1), rgba(var(--clear-green-02), 1));
@@ -240,7 +238,7 @@
 .dashboard-fiction-game-card-container::before,
 .fiction-globale-container::before,
 .character-card.card::before {
-    content: url('/images/icons/cat-corner.svg');
+    content: var(--second-cat-corner);
     width: 10px;
     height: 10px;
     position: relative;

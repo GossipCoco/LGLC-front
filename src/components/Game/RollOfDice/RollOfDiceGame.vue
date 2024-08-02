@@ -2,27 +2,53 @@
   <div class="dashboard-max-card-container card fiction-container game-card">
     <CardHeader v-bind:Title="'Lancé de Dés'" />
     <div class="card-body">
-     
-      <div class="result-roll-dice">
-        <p>Utilisateur actuel : {{ userCurrent }}</p>
-        <p>Dé 1: {{ dice1 }}</p>
-        <p>Dé 2: {{ dice2 }}</p>
-        <p>Dé 3: {{ dice3 }}</p>
+      <div class="game-roll-container">
+        <div class="text-game-container">
+          <p>Utilisateur actuel : {{ userCurrent }}</p>
+        </div>
+
+        <div class="result-roll-dice">
+          <div class="dice" :class="diceClass(dice1)">
+            <div class="face face1">1</div>
+            <div class="face face2">2</div>
+            <div class="face face3">3</div>
+            <div class="face face4">4</div>
+            <div class="face face5">5</div>
+            <div class="face face6">6</div>
+          </div>
+          <div class="dice" :class="diceClass(dice2)">
+            <div class="face face1">1</div>
+            <div class="face face2">2</div>
+            <div class="face face3">3</div>
+            <div class="face face4">4</div>
+            <div class="face face5">5</div>
+            <div class="face face6">6</div>
+          </div>
+          <div class="dice" :class="diceClass(dice3)">
+            <div class="face face1">1</div>
+            <div class="face face2">2</div>
+            <div class="face face3">3</div>
+            <div class="face face4">4</div>
+            <div class="face face5">5</div>
+            <div class="face face6">6</div>
+          </div>
+        </div>
+        <div class="text-game-container">
+        <button type="button" class="btn btn-primary" @click="lancerDes">
+          Lancer les dés
+        </button>
       </div>
-      <button type="button" class="btn btn-primary" @click="lancerDes">
-        Lancer les dés
-      </button>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-//   import GameService from '../../services/GameService'
-import CardHeader from '../../Components/GenericComponent/CardHeader.vue'
+import CardHeader from "../../Components/GenericComponent/CardHeader.vue";
+
 export default {
   name: "LancedeDes",
-  inject: ["user"],
-  components: {CardHeader},
+  components: { CardHeader },
   data() {
     return {
       userCurrent: this.$store.state.auth.user.usrID,
@@ -30,9 +56,6 @@ export default {
       dice2: 1,
       dice3: 1,
     };
-  },
-  created() {
-    this.userCurrent = this.$store.state.auth.user.usrID;
   },
   methods: {
     lancerDes() {
@@ -42,6 +65,19 @@ export default {
     },
     getRandomDiceValue() {
       return Math.floor(Math.random() * 6) + 1;
+    },
+    diceClass(value) {
+      return `show-${value}`;
+    },
+    addRollingClass() {
+      document.querySelectorAll(".dice").forEach((die) => {
+        die.classList.add("rolling");
+      });
+    },
+    removeRollingClass() {
+      document.querySelectorAll(".dice").forEach((die) => {
+        die.classList.remove("rolling");
+      });
     },
   },
 };
