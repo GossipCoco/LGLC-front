@@ -55,8 +55,8 @@ a{ text-decoration: none; }
     align-items: center;
     align-content: center;
   }
-  .modal-body .form-label{
-    color: rgba(var(--main-black), 1)
+  .modal-body .form-label, .create-character-form label{
+    color: rgba(var(--main-white), 1)
   }
 
   .carousel__item{

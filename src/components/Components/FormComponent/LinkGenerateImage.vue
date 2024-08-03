@@ -1,21 +1,21 @@
 <template>
-  <div class="col-6">
-    <div class="mb-3">
-      Générer une image avec
+  <div class="col-4">
+    <div class="mb-1">
+      <label>Générer une image avec</label>
       <div class="logo-wrapper-contain">
         <div class="logo">
           <a target="_blank" href="https://chatgpt.com/"
-            ><img src="/images/Logos/chatgpt.png"
+            ><img src="/images/Logos/openai-icon.svg"
           /></a>
         </div>
         <div class="logo">
           <a target="_blank" href="https://copilot.microsoft.com"
-            ><img src="/images/Logos/copilot-logo-0.png"
+            ><img src="/images/Logos/copilot-icon.svg"
           /></a>
         </div>
         <div class="logo">
           <a target="_blank" href="https://firefly.adobe.com/"
-            ><img src="/images/Logos/adobe-firefly5419.logowik.com.webp"
+            ><img src="/images/Logos/firefly.svg"
           /></a>
         </div>
       </div>

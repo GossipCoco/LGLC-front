@@ -1,5 +1,5 @@
 <template>
-  <div class="col">
+  <div class="col-6">
     <label :for="For" class="form-label">
       {{ label }}
     </label>

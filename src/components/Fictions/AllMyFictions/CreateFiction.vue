@@ -2,48 +2,53 @@
   <div class="dashboard-max-card-container card fiction-container">
     <CardHeader v-bind:Title="'Créer une nouvelle fanfiction'" />
     <div class="card-body">
-      <form
-        class="create-character-form"
-        @submit.stop.prevent="handleOk"
-        ref="uploadForm"
-      >
-        <div class="col-12">
+      <form class="create-character-form" @submit.stop.prevent="handleOk" ref="uploadForm">
+        <div class="row">
+          <div class="col-12">
             <InputTitle v-bind:Title="'Titre de la fiction'" @input-title="InputTitle"/>
             <div class="row">
-            <SelectCharacterComponent
+              <!-- <SelectCharacterComponent
                 v-bind:For="'FirstCharacterId'"
                 v-bind:label="'Sélectionner un personnage'"
                 v-bind:characterId="form.FirstCharacterId"
                 v-bind:characters="characters"
                 @form-character="handleFirstCharacterChange"
-            />
-            <SelectCharacterComponent
+              />
+              <SelectCharacterComponent
                 v-bind:For="'SecondCharacterId'"
                 v-bind:label="'Sélectionner un personnage'"
                 v-bind:characterId="form.SecondCharacterId"
                 v-bind:characters="characters"
                 @form-character="handleSecondCharacterChange"
-            />
+              /> -->
             </div>
-            <TextAreaComponent v-bind:Title="'Résumé de la fiction'" @input-content="getContent"/>
-          <div class="row">
-            <LinkGenerateImage />
-            <div class="col-6">
-              <div class="mb-3">
-                <label for="file" class="form-label">Image de couverture</label>
-                <input
-                  type="file"
-                  class="form-control"
-                  @change="handleFileUpload"
-                />
+            <TextAreaComponent
+              v-bind:Title="'Résumé de la fiction'"
+              @input-content="getContent"
+            />
+            <div class="row">
+              <LinkGenerateImage />
+              <div class="col-4">
+                <div class="mb-3">
+                  <label for="file" class="form-label"
+                    >Image de couverture</label
+                  >
+                  <input
+                    type="file"
+                    class="form-control"
+                    @change="handleFileUpload"
+                  />
+                </div>
+              </div>
+              <div class="col-4 button-validate-container">
+                <div class="mb-3">
+                  <button type="submit" class="btn btn-primary">
+                    Créer la fiction
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-12">
-          <button type="submit" class="btn btn-primary">
-            Créer la fiction
-          </button>
         </div>
       </form>
     </div>
@@ -57,14 +62,19 @@ import axios from "axios";
 import Config from "../../../../server";
 import CardHeader from "../../Components/GenericComponent/CardHeader.vue";
 import InputTitle from "../../Components/FormComponent/InputTitle.vue";
-import SelectCharacterComponent from "../../Components/FormComponent/SelectCharacterComponent.vue";
+// import SelectCharacterComponent from "../../Components/FormComponent/SelectCharacterComponent.vue";
 import TextAreaComponent from "../../Components/FormComponent/TextAreaComponent.vue";
 import LinkGenerateImage from "../../Components/FormComponent/LinkGenerateImage.vue";
 
-
 export default {
   name: "CreateFiction",
-  components: { CardHeader, InputTitle, TextAreaComponent, SelectCharacterComponent, LinkGenerateImage },
+  components: {
+    CardHeader,
+    InputTitle,
+    TextAreaComponent,
+    // SelectCharacterComponent,
+    LinkGenerateImage,
+  },
   inject: ["user"],
   data() {
     return {
@@ -87,23 +97,23 @@ export default {
     this.GetAllNamesAndIdsCharacters();
   },
   methods: {
-    getContent(e){
-      console.log(e)
-      this.form.Summary = e.split("\n")
+    getContent(e) {
+      console.log(e);
+      this.form.Summary = e
+        .split("\n")
         .filter((paragraph) => paragraph.trim() !== "") // Remove empty lines
         .map((paragraph) => `<p>${paragraph}</p>`)
         .join("");
-    }
-    ,
-    InputTitle(e){
-      console.log(e)
-      this.form.Title = e
+    },
+    InputTitle(e) {
+      console.log(e);
+      this.form.Title = e;
     },
     handleFirstCharacterChange(field) {
-        this.form.FirstCharacterId = field
+      this.form.FirstCharacterId = field;
     },
     handleSecondCharacterChange(field) {
-        this.form.SecondCharacterId = field
+      this.form.SecondCharacterId = field;
     },
     async generateImage() {
       try {
@@ -129,7 +139,7 @@ export default {
       this.file = event.target.files[0];
     },
     handleOk() {
-      const formattedText = this.form.Summary
+      const formattedText = this.form.Summary;
       this.form.Summary = formattedText;
 
       const formData = new FormData();
@@ -146,7 +156,7 @@ export default {
       for (let [key, value] of formData.entries()) {
         console.log(key, value);
       }
-      console.log(formData)
+      console.log(formData);
       this.CreateANewFiction(this.userCurrent, formData);
     },
     CreateANewFiction(usr, formData) {
