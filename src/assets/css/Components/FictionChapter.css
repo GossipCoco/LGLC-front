@@ -288,6 +288,7 @@ th{
     width: 70px;
     height: 60px;    
     border-radius: 100%;
+    aspect-ratio: 16 / 9;
 }
 .row.bottom-top-dashboard{
     margin-top: 1rem;

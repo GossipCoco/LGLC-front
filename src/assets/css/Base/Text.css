@@ -36,13 +36,13 @@ a{ text-decoration: none; }
     flex: 1
 }
 .rating svg {
-    fill: #d3d3d3;
+    fill: rgba(var(--main-white), 1);
     cursor: pointer;
     width: 2rem;
     height: 2rem;
   }
   .rating svg.checked {
-    fill: rgb(255, 215, 1);
+    fill: rgba(var(--active-hover), 1);
   }
   .card.quest-by-id-card h2{
     color: rgba(var(--main-white), 1);
@@ -55,8 +55,8 @@ a{ text-decoration: none; }
     align-items: center;
     align-content: center;
   }
-  .modal-body .form-label{
-    color: rgba(var(--main-black), 1)
+  .modal-body .form-label, .create-character-form label{
+    color: rgba(var(--main-white), 1)
   }
 
   .carousel__item{

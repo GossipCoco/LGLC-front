@@ -142,7 +142,11 @@
     left: 22rem;
     height: 52vh;
 }
-/* .dashboard-max-card-container.card {
+.details-infos-characters {
+    background: linear-gradient(90deg, rgba(var(--dark-green-01), 1), rgba(var(--clear-green-02), 1));
+    color: rgba(var(--main-white), 1)
+}
+.dashboard-max-card-container.card {
     background: linear-gradient(90deg, rgba(var(--dark-green-01), 1), rgba(var(--clear-green-02), 1));
     border: none;
     margin: 3rem 0 0 0;
@@ -152,7 +156,7 @@
     padding: 2rem;
     height: 53rem;
     overflow-y: hidden;
-} */
+}
 .form-character-container-global .card {
     background: linear-gradient(90deg, rgba(var(--dark-green-01), 1), rgba(var(--clear-green-02), 1));
     border: none;
@@ -298,6 +302,7 @@
     width: 75%;
     transform-style: preserve-3d;
     animation: rotate 10s infinite linear;
+    aspect-ratio: 3 / 4;
 }
 .vegetal-container {
     background-image: url('/images/Backgrounds/herbePNG.png');

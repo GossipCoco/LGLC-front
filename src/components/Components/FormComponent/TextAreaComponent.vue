@@ -1,6 +1,6 @@
 <template>
   <div class="mb-3">
-    <label for="Summary" class="form-label">{{ Title }} inspiré de "La Guerre des Clans"</label>
+    <label for="Summary" class="form-label">{{ Title }} inspirée de "La Guerre des Clans"</label>
     <textarea
       v-model="content"
       class="form-control"
