@@ -5,7 +5,7 @@
         <LeftMenu />
       </div>
       <div class="col-11 col-sm-12 col-md-12 col-lg-11 col-xl-11 col-xxl-11">
-        <main class="container-fluid">          
+        <main class="container-fluid main-global-container">          
           <router-view></router-view>
         </main>
       </div>

@@ -3,8 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 @media (min-width: 1200px) and (max-width: 1600px) {
-    .container-fluid {
-        overflow-y: hidden;
+    .container-fluid.main-global-container {
+        overflow-y: scroll;
     }
     .dashboard-home-max-card-container.card {
         padding: 0;
@@ -33,6 +33,12 @@
     }
     .menu-left ul li {
         margin: 0.5rem 0;
+    }
+    .list-all-fictions-globale--container {
+        width: 18rem;
+    }
+    .row.top-dashboard .card {
+        height: 23rem;
     }
 }
 
