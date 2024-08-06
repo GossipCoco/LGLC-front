@@ -261,6 +261,7 @@ main.container {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    height: 6rem;
 }
 
 .title-dashboard-container-header img {

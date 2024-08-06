@@ -1,13 +1,13 @@
 <template>
   <div class="row list-fiction-card-container">
     <div
-      class="col-4 col-sm-12 col-md-12 col-lg-4 col-xl-34 col-xxl-4 mb-4 mb-sm-4 mb-4 mb-sm-4"
+      class="col-3 col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-4 mb-2 mb-sm-2 mb-2 mb-sm-2"
       v-for="(game, index) in games"
       :key="index"
     >
       <div
-        class="card mb-3"
-        style="max-width: 540px"
+        class="card mb-3 game-card-global-container"
+        style=""
         v-for="(fiction, index) in game.Fiction"
         :key="index"
       >
