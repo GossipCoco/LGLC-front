@@ -3,7 +3,7 @@
         <div class="card-body title-dashboard-container-header">
             <h1>Bienvenue sur votre tableau de bord</h1>
              <ImageRondDashboard v-bind:src="'/images/Avatars/' + Avatar" v-bind:alt="Avatar" v-bind:classe="'card-img-top'"/>
-             <img src="/images/icons/envelope-solid.svg" />
+             <div class="image-messenger-container"><img src="/images/icons/envelope-solid.svg" /></div>
         </div>
     </div>
 </template>
