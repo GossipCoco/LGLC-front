@@ -261,6 +261,7 @@ main.container {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    height: 6rem;
 }
 
 .title-dashboard-container-header img {
@@ -268,7 +269,11 @@ main.container {
     border-radius: 100%;
     margin: 0 0 0 1rem;
 }
-
+.title-dashboard-container-header .image-messenger-container img {
+    width: 20%;
+    border-radius: 0;
+    margin: 0 0 0 1rem;
+}
 .title-dashboard-container-header h1 {
     font-family: 'Cinzel';
     font-variant: small-caps;

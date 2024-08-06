@@ -31,7 +31,7 @@
       <character-card v-bind:characters_props="allCharacters" v-if="!showMyCharacter" />
     </div>
   </div>
-  <div class="row">
+  <div class="row pagination-container-row">
     <div class="pagination-container">
       <div class="row bottom-top-dashboard">
         <div v-if="showspinner" class="d-flex justify-content-center">

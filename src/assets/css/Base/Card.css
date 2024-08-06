@@ -6,7 +6,7 @@
 
 .col-11.col-lg-11 {
     height: 100vh;
-    overflow-y: auto;
+    /* overflow-y: auto; */
 }
 .character-card-group .card-group {
     display: flex;
