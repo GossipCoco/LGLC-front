@@ -4,20 +4,35 @@
 
 @media (min-width: 1200px) and (max-width: 1600px) {
     .container-fluid.main-global-container {
-        overflow-y: scroll;
+        overflow-y: auto;
         display: flex;
         flex-direction: column;
         height: 97vh;
+    }
+    .dashboard-max-card-container.card{
+        width: 200vh;
+        min-width: 200vh;
+    }
+    .character-container-global {
+        height: 90vh;
+        width: 180vh;
+        margin-top: 1rem;
     }
     .dashboard-home-max-card-container.card {
         padding: 0;
         margin: 1rem 0 0 0;
     }
     .game-card-global-container{
-        max-width: 340px
+        max-width: 30rem;
     }
     .character-card.card {
         height: 60vh;
+    }
+    .dashboard-max-card-container.card.fiction-container .row.pagination-container{
+        margin-top: -5rem;    
+    }
+    .image-fiction-container{
+        background-position: 50%;
     }
     .icon-menu-container {
         width: 50px;
@@ -59,7 +74,7 @@
         margin-top: 0rem;
     }
     .character-container{
-        margin: 3rem auto;
+        margin: -1rem auto;
         height: 150vh;
         overflow-y: hidden;
     }
@@ -69,10 +84,31 @@
     .row.list-fiction-card-container{
         width: 80rem;
     }
+    .dashboard-max-card-container.card.fiction-container{
+        margin: 0;
+    }
     .dashboard-max-card-container.card.fiction-container > .card-body{
         height: 40rem;
-        overflow-y: scroll;
+        width: 80%;
     }
+    .card-form-create-character .card-body {
+        width: 80%;
+        height: 70vh;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        padding: 1rem;
+    }
+    .form-character-container-global {
+        height: 97vh;
+        overflow-y: hidden;
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+    }
+    .create-character-form .text-area-container {
+        height: 25rem;
+    }
+    .row.list-fiction-card-container 
     .fiction-globale-container.card.fiction-container{
         width: 83rem;
         min-width: 80rem;
@@ -87,10 +123,11 @@
         text-align: justify;
         width: 35rem;
     }   
+    .character-chapters-fiction-container .character-chapters-container,
     .illustration-background {
-        width: 62rem;
+        width: 59rem;
     }
-    .carousel.is-hover{
+    .carousel{
         width: 15rem;
     }
     .rating {
@@ -102,16 +139,49 @@
         margin: 0 0 0 2rem;
     }
     .illustration-background .background-fiction-contain{
-        height: 65vh;
+        height: 60vh;
+    }
+    .all-chapters-list-container ul{
+        width: 21rem;
+        max-width: 21rem;
+    }
+    .all-chapters-list-container ul li a{
+        max-width: 20rem;
+        overflow-wrap: break-word;
+        white-space: normal;
+    }
+    .opacity-container{
+        height: 60vh;
     }
     .row.list-fiction-card-container .col-3.col-sm-12.col-md-12.col-lg-3.col-xl-3.col-xxl-4.mb-2.mb-sm-2.mb-2.mb-sm-2{
-        height: 14rem;
-    width: 20rem;
+        height: 10rem;
+        width: 25rem;
+        margin: 0 0 0.5rem 0;
+    }
+    .left-side-container{
+        width: 10rem;
+        flex: 0.25;
+        margin: 0;
+    }
+    .fiction-globale-container.card.fiction-container{
+        width: 82rem;
+        min-width: 82rem;
+    }
+    .character-chapters-fiction-container.background-summary-global-container{
+        margin: 0 0 0 5rem;
+    }
+    .all-chapters-list-container{
+        width: 21rem;
     }
     .row.pagination-container, .row.pagination-zone-container, .pagination-row-container {
         width: 80%;
     }
-
+    .character-details{
+        width: 85rem;
+    }
+    .character-details.card .card-image{
+        margin: 0;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
@@ -134,7 +204,9 @@
     }
     .dashboard-max-card-container.card.fiction-container{
         overflow-y: auto;
+        margin:0;
     }
+
     .title-dashboard-container-header{
         justify-content: left;
     }
@@ -147,6 +219,9 @@
     }
     .list-fictions-dashboard{
         width: 43rem;
+    }
+    .character-details .col-md-4{
+        padding: 0;
     }
 }
 @media (max-width: 768px) {

@@ -61,7 +61,7 @@
             </div>
           </div>
         </div>
-        <div class="character-chapters-fiction-container">
+        <div class="character-chapters-fiction-container  background-summary-global-container">
           <div class="character-chapters-container">
             <div
               class="illustration-background"
