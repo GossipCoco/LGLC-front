@@ -9,6 +9,10 @@
         flex-direction: column;
         height: 97vh;
     }
+    .dashboard-max-card-container.card{
+        width: 200vh;
+        min-width: 200vh;
+    }
     .character-container-global {
         height: 90vh;
         width: 180vh;
@@ -119,8 +123,9 @@
         text-align: justify;
         width: 35rem;
     }   
+    .character-chapters-fiction-container .character-chapters-container,
     .illustration-background {
-        width: 62rem;
+        width: 59rem;
     }
     .carousel{
         width: 15rem;
@@ -134,8 +139,16 @@
         margin: 0 0 0 2rem;
     }
     .illustration-background .background-fiction-contain{
-        height: 50vh;
-        width: 86vh;
+        height: 60vh;
+    }
+    .all-chapters-list-container ul{
+        width: 21rem;
+        max-width: 21rem;
+    }
+    .all-chapters-list-container ul li a{
+        max-width: 20rem;
+        overflow-wrap: break-word;
+        white-space: normal;
     }
     .opacity-container{
         height: 60vh;
@@ -144,6 +157,18 @@
         height: 10rem;
         width: 25rem;
         margin: 0 0 0.5rem 0;
+    }
+    .left-side-container{
+        width: 10rem;
+        flex: 0.25;
+        margin: 0;
+    }
+    .fiction-globale-container.card.fiction-container{
+        width: 82rem;
+        min-width: 82rem;
+    }
+    .character-chapters-fiction-container.background-summary-global-container{
+        margin: 0 0 0 5rem;
     }
     .all-chapters-list-container{
         width: 21rem;

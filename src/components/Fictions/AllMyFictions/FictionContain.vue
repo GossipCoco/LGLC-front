@@ -34,7 +34,7 @@
             <CarrouselCharacter v-bind:Characters="listOfCharacter" />
           </div>
         </div>
-        <div class="character-chapters-fiction-container">
+        <div class="character-chapters-fiction-container  background-summary-global-container">
           <div class="character-chapters-container">
             <div v-if="nbIllus > 0">
               <div class="illustration-background" v-for="(illus, index) in illustration" :key="index">
