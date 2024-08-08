@@ -19,10 +19,16 @@
         margin: 1rem 0 0 0;
     }
     .game-card-global-container{
-        max-width: 340px
+        max-width: 30rem;
     }
     .character-card.card {
         height: 60vh;
+    }
+    .dashboard-max-card-container.card.fiction-container .row.pagination-container{
+        margin-top: -5rem;    
+    }
+    .image-fiction-container{
+        background-position: 50%;
     }
     .icon-menu-container {
         width: 50px;
@@ -116,7 +122,7 @@
     .illustration-background {
         width: 62rem;
     }
-    .carousel.is-hover{
+    .carousel{
         width: 15rem;
     }
     .rating {
@@ -128,12 +134,16 @@
         margin: 0 0 0 2rem;
     }
     .illustration-background .background-fiction-contain{
-        height: 65vh;
+        height: 50vh;
+        width: 86vh;
+    }
+    .opacity-container{
+        height: 60vh;
     }
     .row.list-fiction-card-container .col-3.col-sm-12.col-md-12.col-lg-3.col-xl-3.col-xxl-4.mb-2.mb-sm-2.mb-2.mb-sm-2{
-        height: 14rem;
-        width: 23rem;
-        margin: 0 0 1rem 0;
+        height: 10rem;
+        width: 25rem;
+        margin: 0 0 0.5rem 0;
     }
     .all-chapters-list-container{
         width: 21rem;
@@ -145,8 +155,7 @@
         width: 85rem;
     }
     .character-details.card .card-image{
-        width: 86rem;
-        margin: 3rem 0;
+        margin: 0;
     }
 }
 
