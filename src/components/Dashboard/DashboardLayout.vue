@@ -131,7 +131,7 @@ export default {
       this.showspinner = true
       UserService.getUserById(e)
         .then((response) => {
-          console.log(response.data.ob)
+  
           this.showspinner = false
           this.userInfo = response.data.ob
           this.Avatar = response.data.ob.Avatar
@@ -141,6 +141,7 @@ export default {
           this.Inscription = response.data.ob.Inscription
           this.LvelImf = this.userInfo.Level.Image
           this.role = this.userInfo.Role
+          console.log(this.userInfo)
           this.totalPoints = this.calculateTotalPoints(this.userInfo.Points);
         })
         .catch((error) => {
