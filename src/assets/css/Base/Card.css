@@ -305,7 +305,7 @@
     aspect-ratio: 3 / 4;
 }
 .vegetal-container {
-    background-image: url('/images/Backgrounds/herbePNG.png');
+    /* background-image: url('/images/Backgrounds/herbePNG.png'); */
     background-size: contain;
     background-repeat: no-repeat;
     width: 100%;
@@ -316,7 +316,7 @@
 .vegetal-container img {
     position: absolute;
     top: 15%;
-    left: 35%
+    left: 15%
 }
 .profil-user-card {
     background: var(--linear-greendark-clear);
