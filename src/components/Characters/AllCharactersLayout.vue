@@ -39,8 +39,11 @@
           </div>
         </div>
       </div>
-      <pagination v-if="!showspinner" v-bind:nav="nav" v-bind:filters="filters" v-bind:getDatas="'CharacterPagination'"
-        @CharacterPagination="CharacterPagination" />
+      <pagination v-if="!showspinner && nav.pages > 0" 
+                  v-bind:nav="nav" 
+                  v-bind:filters="filters" 
+                  v-bind:getDatas="'CharacterPagination'"
+                  @CharacterPagination="CharacterPagination" />
     </div>
   </div>
 </template>
@@ -79,17 +82,23 @@ export default {
     this.userCurrent = this.$store.state.auth.user.usrID;
     this.initPage();
   },
-  watch: {
-    '$route'() {
-      // This will trigger when the route changes, ensuring the data is refreshed
-      this.initPage();
-    }
-  },
+  // watch: {
+  //   '$route'() {
+  //     // This will trigger when the route changes, ensuring the data is refreshed
+  //     this.initPage();
+  //   }
+  // },
   methods: {
-    initPage() {
+    async initPage() {
       this.showspinner = true;
-      this.getAllCharacters(this.nav);
-      this.countAllCharacter();
+      try {
+        await this.countAllCharacter();
+        await this.getAllCharacters(this.nav);
+      } catch (error) {
+        console.error("Error initializing page:", error);
+      } finally {
+        this.showspinner = false;
+      }
     },
     showMyCharacters(e) {
       console.log("showMyCharacters")
@@ -101,20 +110,27 @@ export default {
           console.log(e);
         });
     },
-    CharacterPagination(e) {
-      // console.log("e", e);
-      this.nav.current = e;
-      this.getAllCharacters(this.nav);
+    async CharacterPagination(page) {
+      this.nav.current = page;
+      try {
+        await this.getAllCharacters(this.nav);
+      } catch (error) {
+        console.error("Error in pagination:", error);
+      }
     },
-    countAllCharacter() {
-      CharacterService.CountAllCharacters()
-        .then((response) => {
-          console.log('NbAllCharacters', response)
-          this.NbAllCharacters = response.data.ob.count;
-        })
-        .catch((e) => {
-          console.log(e);
-        });
+
+        async countAllCharacter() {
+      try {
+        const response = await CharacterService.CountAllCharacters();
+        this.NbAllCharacters = response.data.ob.count;
+        functions.CalcPagination(
+          this.NbAllCharacters,
+          this.nav,
+          this.nav.step
+        );
+      } catch (error) {
+        console.error("Error counting characters:", error);
+      }
     },
     getAllCharacters(nav) {
       CharacterService.getAllCharacters({ nav })

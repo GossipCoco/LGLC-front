@@ -2,7 +2,7 @@
   <div id ="dashboard" class="dashboard-home-max-card-container card">
     <div class="row title-dashboard">
       <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <TitleHeader v-if="!showspinner" v-bind:UserName="UserName" v-bind:Avatar="Avatar" />
+        <TitleHeader v-if="!showspinner" v-bind:UserName="UserName" v-bind:Avatar="Avatar" v-bind:User="usrId"/>
       </div>
     </div>
     <div v-if="showspinner" class="d-flex justify-content-center">

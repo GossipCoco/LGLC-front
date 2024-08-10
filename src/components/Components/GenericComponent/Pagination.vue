@@ -6,8 +6,8 @@
             col-lg-12 col-md-12 col-sm-12 col-xxl-12 col-xs-12
           ">
         <div class="row pagination-container">
-          <!-- <div class="col-1 col-md-1 col-sm-1 col-xxl-1 col-xs-6"></div> -->
-          <div class="col-10 col-md-10 col-sm-10 col-xxl-10 col-xs-10">
+          <div class="col-6 col-md-6 col-sm-6 col-xxl-6 col-xs-6"></div>
+          <div class="col-5 col-md-5 col-sm-5 col-xxl-5 col-xs-5 col-pagination-container">
             <ul class="pagination" v-if="navPage.pages < 6">
               <li class="nav-btn-contain">
                 <button v-for="p in navPage.pages" :key="p" :disabled="navPage.current == p - 1" type="button"
@@ -154,9 +154,11 @@
               </li>
             </ul>
           </div>
-          <div class="col-2">
-            <p v-if="!nav.current">Page : 1</p>
-            <p v-else>Page : {{ nav.current + 1 }}</p>
+          <div class="col-1  col-md-1 col-sm-1 col-xxl-1 col-xs-1">
+            <div class="number-page-container">
+              <p v-if="!nav.current">Page : 1</p>
+              <p v-else>Page : {{ nav.current + 1 }}</p>
+            </div>
           </div>          
         </div>
       </div>
