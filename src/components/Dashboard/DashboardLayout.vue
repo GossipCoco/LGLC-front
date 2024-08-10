@@ -130,8 +130,7 @@ export default {
     GetUserById(e) {
       this.showspinner = true
       UserService.getUserById(e)
-        .then((response) => {
-  
+        .then((response) => {  
           this.showspinner = false
           this.userInfo = response.data.ob
           this.Avatar = response.data.ob.Avatar

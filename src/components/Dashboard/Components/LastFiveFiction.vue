@@ -35,6 +35,7 @@ export default {
     }
   },
   created() {
+    console.log(this.usrId)
     this.GetFiveLastGameByUser(this.usrId);
   },
   methods: {
