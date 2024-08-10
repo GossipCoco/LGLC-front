@@ -78,7 +78,6 @@
     background-color: rgba(var(--main-black), 1);
 }
 #accueil .accueil-header {
-    padding: 0 auto;
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -91,7 +90,7 @@
     width: 105%;
     height: 105vh;
     position: relative;
-    margin: 4rem 0 0 0;
+    margin: -0.5rem 0 0 0;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -150,7 +149,9 @@
 #accueil li.nav-item{
     flex: 1;
     display: flex;
-    width: 10rem;
+    width: 15rem;
+    text-transform: capitalize;
+    font-variant: small-caps;
 }
 #accueil .col-md-5{
     display: grid;
@@ -247,7 +248,18 @@
     overflow-y: hidden;
 }
 #about-page{
-    margin: 5rem 3rem;
+    margin: 0 3rem -5rem 3rem;
     padding: 2rem 0;
     overflow: hidden;
 }
+#accueil footer.container{
+    background-color: rgba(var(--main-black), 1);
+}
+ #accueil .nav.justify-content-center.pb-3.mb-3 li{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+ }
+ main#footer-link{
+    height: 70vh;
+ }

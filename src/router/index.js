@@ -4,6 +4,7 @@ import Accueil from '../components/Page/Accueil'
 import Register from '../components/Page/Register.vue'
 import MentionsLegales from '../components/Page/Accueil/MentionsLegales.vue'
 import faq from '../components/Page/Accueil/faq.vue'
+import Contact from '../components/Page/Accueil/Contact.vue'
 import Login from '../components/Page/Login'
 import About from "../components/Page/Accueil/About.vue";
 import Home from "../components/Page/Home";
@@ -66,6 +67,11 @@ const routes = [
     path:'/About',
     name: 'About',
     component: About
+  },
+  {
+    path:'/Contact',
+    name: 'Contact',
+    component: Contact
   },
   {
     path: "/login",
