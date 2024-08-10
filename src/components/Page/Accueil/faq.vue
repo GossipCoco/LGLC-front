@@ -1,7 +1,7 @@
 <template>
   <div id="accueil">
     <HeaderAccueil />
-    <main>
+    <main class="link-faq-about-contact-container">
       <div id="mentions-legales-page">
         <div class="mentions-legales-text">
           <h2>Foire aux questions</h2>
@@ -13,9 +13,9 @@
           </div>
           
         </div>
-      </div>
-      <FooterAccueil />
+      </div>      
     </main>
+    <FooterAccueil />
   </div>
 </template>
 <script>

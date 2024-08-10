@@ -4,14 +4,21 @@ import Accueil from '../components/Page/Accueil'
 import Register from '../components/Page/Register.vue'
 import MentionsLegales from '../components/Page/Accueil/MentionsLegales.vue'
 import faq from '../components/Page/Accueil/faq.vue'
+import Contact from '../components/Page/Accueil/Contact.vue'
 import Login from '../components/Page/Login'
 import About from "../components/Page/Accueil/About.vue";
 import Home from "../components/Page/Home";
 
 import DashboardLayout from "../components/Dashboard/DashboardLayout";
+
 import AllCharactersLayout from "../components/Characters/AllCharactersLayout";
 import CharacterDetails from "../components/Characters/CharacterComponent/CharacterDetails";
 import CharacterCreate from '../components/Characters/CharacterComponent/CharacterCreate'
+
+import AllClansLayout from "../components/Locations/AllClansLayout";
+import AllLocationsLayout from "../components/Locations/AllLocationsLayout.vue"
+import ClanDetails from "../components/Locations/ClanDetails"
+import LocationsDetails from "../components/Locations/LocationsDetails.vue";
 
 import AllExistingFictionsLayout from '../components/Fictions/AllExistingFictionsLayout.vue'
 import FictionContain from '../components/Fictions/AllMyFictions/FictionContain'
@@ -30,16 +37,14 @@ import QuestById from '../components/Game/Quest/QuestById.vue'
 import RollOfDiceLayout from '../components/Game/RollOfDice/RollOfDiceLayout.vue'
 import PuzzleLayout from '../components/Game/Puzzle/PuzzleLayout.vue'
 import TreasureHunt from '../components/Game/TreasureHunt/TreasureHunt.vue'
+
 import EventGlobalLayout from '../components/Event/EventGlobaleLayout.vue'
+
 import UserLayout from "../components/Users/UserLayout";
-import AllClansLayout from "../components/Locations/AllClansLayout";
-import ClanDetails from "../components/Locations/ClanDetails"
-import AdminLayout from '../components/UserPanel/AdminDashboard'
 import UserCard from '../components/Users/UserCard.vue'
-import AllLocationsLayout from "../components/Locations/AllLocationsLayout.vue"
-import LocationsDetails from "../components/Locations/LocationsDetails.vue";
+import Messagerie from "../components/UserPanel/UserMessagerie/Messagerie.vue";
 
-
+import AdminLayout from '../components/UserPanel/AdminDashboard'
 
 const routes = [
   {
@@ -68,6 +73,11 @@ const routes = [
     component: About
   },
   {
+    path:'/Contact',
+    name: 'Contact',
+    component: Contact
+  },
+  {
     path: "/login",
     name: "/login",
     component: Login,
@@ -86,6 +96,11 @@ const routes = [
         path: "/user/:id",
         name: "UserLayout",
         component: UserLayout,
+      },
+      {
+        path: "/user/messagerie/:id",
+        name: "Messagerie",
+        component: Messagerie,
       },
       {
         path: '/getUserBy/:id',

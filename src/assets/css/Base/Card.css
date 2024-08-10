@@ -69,6 +69,7 @@
     text-align: center;
     max-width: 17rem;
     height: 20rem;
+    border-radius: 8rem 8rem 2rem 2rem;
 }
 /* Parallax effect */
 .parallax {
@@ -240,14 +241,22 @@
 }
 .dashboard-max-card-container::before,
 .dashboard-fiction-game-card-container::before,
-.fiction-globale-container::before,
-.character-card.card::before {
+.fiction-globale-container::before{
     content: var(--second-cat-corner);
     width: 10px;
     height: 10px;
     position: relative;
     top: -4rem;
     left: 90%;
+    transform: scale(.5);
+}
+.character-card.card::before {
+    content: var(--second-cat-corner);
+    width: 10px;
+    height: 10px;
+    position: relative;
+    top: -1rem;
+    left: -20%;
     transform: scale(.5);
 }
 /* Character Details */
@@ -305,7 +314,7 @@
     aspect-ratio: 3 / 4;
 }
 .vegetal-container {
-    background-image: url('/images/Backgrounds/herbePNG.png');
+    /* background-image: url('/images/Backgrounds/herbePNG.png'); */
     background-size: contain;
     background-repeat: no-repeat;
     width: 100%;
@@ -316,7 +325,7 @@
 .vegetal-container img {
     position: absolute;
     top: 15%;
-    left: 35%
+    left: 15%
 }
 .profil-user-card {
     background: var(--linear-greendark-clear);

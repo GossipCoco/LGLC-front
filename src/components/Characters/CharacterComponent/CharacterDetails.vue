@@ -3,7 +3,7 @@
     <div class="parallax">
       <div class="parallax-layer parallax-layer-back">
         <div class="row g-0">
-          <div class="col-md-4">
+          <div class="col-4 col-md-4">
             <div class="parallax">
               <div class="parallax__layer parallax__layer--back">
                 <div class="card-image"
@@ -17,7 +17,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-8">
+          <div class="col-8 col-md-8">
             <div class="card-body details-infos-characters">
               <div class="row">
                 <div class="col-8">

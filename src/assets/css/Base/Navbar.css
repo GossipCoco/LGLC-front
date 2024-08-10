@@ -1,15 +1,18 @@
 @import "../variables.scss";
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 .header-container.container {
   max-width: 100%;
 }
-.menu-left.menu-hidden.d-flex.flex-column.flex-shrink-0.p-3{
+
+.menu-left.menu-hidden.d-flex.flex-column.flex-shrink-0.p-3 {
   overflow-y: auto;
   overflow-x: hidden;
-  scrollbar-color: rgba(var(--dark-green-02),1) rgba(var(--clear-green-02),1);
+  scrollbar-color: rgba(var(--dark-green-02), 1) rgba(var(--clear-green-02), 1);
   scrollbar-width: thin;
 }
+
 .b-example-divider {
   height: 3rem;
   background-color: rgba(var(--main-black), 0.1);
@@ -49,26 +52,45 @@
   padding: 1rem 0 0 0;
 }
 
+#accueil header {
+  height: 7rem;
+}
+
+.navbar {
+  margin-top: -0.5rem
+}
+
 .logo-navbar {
   width: 300px;
   display: flex;
   justify-content: center;
 }
-.logo-container{
+
+.logo-container {
   margin: 0rem 0 0 0.5rem;
 }
-.logo-container img{
+
+.logo-container img {
   width: 100%;
 }
+
 #navbarCollapse {
-  height: 75px;
-  padding: 0;
-  margin-top: -0.5rem;
-  margin-left: 1rem;
+  height: 5rem;
+  margin-left: 87rem;
+  /* display: flex; */
+  flex-direction: row;
+  flex: 1;
+  justify-content: right;
+  width: 90vh;
+  margin-right: -5rem;
 }
-.menu-left .menu-left ul{
+.nav-item a{
+  font-size: 18px;
+}
+.menu-left .menu-left ul {
   margin-top: 2rem;
 }
+
 /* MENU LEFT */
 .side-bar {
   display: flex;
@@ -80,6 +102,7 @@
 .li-level1 {
   margin-left: -1rem;
 }
+
 /* .li-level1::after {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
@@ -94,7 +117,8 @@
   margin: 0.5rem 0rem;
 
 }
-.icon-menu-container svg.svg-inline--fa.fa-chevron-down{
+
+.icon-menu-container svg.svg-inline--fa.fa-chevron-down {
   color: rgba(var(--clear-green-02), 1);
 }
 
@@ -119,10 +143,12 @@
   text-align: center;
   margin: 0 0 0 2rem;
 }
-.menu-li-contain{
+
+.menu-li-contain {
   display: flex;
   flex-direction: row;
 }
+
 .link-menu-container a,
 .sub-menu a {
   color: rgba(var(--main-white), 1);
@@ -138,10 +164,12 @@
   align-content: center;
   align-items: center;
 }
+
 .icon-menu-container:hover {
   background-color: rgba(var(--active-hover), 1);
 
 }
+
 .icon-menu-container svg,
 .icon-menu-container i,
 .icon-menu-container img {
@@ -169,10 +197,12 @@ ul {
   color: rgba(var(--main-white), 1);
   font-variant: small-caps;
 }
-.li-level1:hover{
-  
+
+.li-level1:hover {
+
   color: rgba(var(--active-hove), 1);
 }
+
 .menu-left {
   height: 98vh;
   position: fixed;
@@ -182,57 +212,74 @@ ul {
   margin: 0.5rem 0rem;
   transition: transform 0.3s ease-in-out;
 }
+
 .bg-dark {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-dark-rgb), 0) !important;
 }
+
 .menu-hidden {
   display: none;
 }
-.navbar > .container-fluid{
-  height: 5rem;
+
+.navbar>.container-fluid {
+  height: 7rem;
 }
-nav.navbar.navbar-expand-md.navbar-dark.fixed-top{
-  height: 5rem;
+
+nav.navbar.navbar-expand-md.navbar-dark.fixed-top {
+  height: 8rem;
 }
-.avatar-navabar{
+
+.avatar-navabar {
   width: 100px;
   height: 100px;
   padding: 1.5rem 0 0 0;
 }
-.avatar-navabar img{
+
+.avatar-navabar img {
   width: 50px;
   height: 50px;
   border-radius: 100%;
 }
 
-.li-level1 .collapse{
+.li-level1 .collapse {
   text-align: center;
-  font-family:  var(--roboto-text);
+  font-family: var(--roboto-text);
   font-size: 14px;
 }
-.menu-li-contain svg{
+
+.menu-li-contain svg {
   margin: 1rem -1rem 0 1rem;
 }
-.link-collapse{
+
+.link-collapse {
   font-family: "Assistant", sans-serif;
   font-size: 14px;
   color: rgba(var(--clear-green-02), 1);
   margin: 0.5rem 0 0.5rem 0;
   display: flex;
   flex-direction: column;
-}.link-collapse .link-collapse{
-  display: flex;
-  flex:1
 }
-.link-collapse:hover{
+
+.link-collapse .link-collapse {
+  display: flex;
+  flex: 1
+}
+
+.link-collapse:hover {
   color: rgba(var(--active-hover), 1)
 }
-/* responsive.css */
-.chevron-container{
+
+.chevron-container {
   width: 1rem;
   flex: 1;
 }
+
+.logout-li-container {
+  display: flex;
+  flex-direction: row;
+}
+/* responsive.css */
 @media (max-width: 1200px) {
   .menu-left {
     width: 250px;
