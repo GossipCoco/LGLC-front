@@ -4,10 +4,11 @@
       class="card-image"
       v-bind:style="{
         backgroundImage:
-          'url(/images/Backgrounds/' + character.Warrior.Clan.Image + ')',
+          'url(/images/Backgrounds/' + character.Clan.Image + ')',
       }"
     >
-      <img :src="'/images/Characters/' + character.Image" />
+    <!-- {{ character.Image }} -->
+      <img v-if="character.Image" :src="'/images/Characters/' + character.Image" />
     </div>
     <div class="card-body">
       <p style="text-align: center;">
@@ -23,5 +24,9 @@
 export default {
   name: "CharacterText",
   props: ["character"],
+  created(){
+    // console.log(this.character)
+    // console.log(this.character.Image)
+  }
 };
 </script>
