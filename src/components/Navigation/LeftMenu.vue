@@ -164,7 +164,6 @@ export default {
     }
   },
   created() {
-    console.log(this.usrId)
     this.GetUserById(this.usrId);
   },
   methods: {

@@ -141,7 +141,7 @@ export default {
           this.Inscription = response.data.ob.Inscription
           this.LvelImf = this.userInfo.Level.Image
           this.role = this.userInfo.Role
-          console.log(this.userInfo.Messages.length)
+          console.log(this.userInfo)
           this.Nbmessages = this.userInfo.Messages.length
           this.totalPoints = this.calculateTotalPoints(this.userInfo.Points);
         })

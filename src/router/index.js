@@ -171,7 +171,7 @@ const routes = [
         component: AllLocationsLayout
       },
       {
-        path: ('/LocationsDetails/:id'),
+        path: '/LocationsDetails/:id',
         name: 'LocationsDetails',
         component: LocationsDetails
       },

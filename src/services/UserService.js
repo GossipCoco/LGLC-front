@@ -4,7 +4,6 @@ class UserService {
         return http.get('/user', )
     }
     getUserById(id){
-        // console.log(id)
         return http.get(`/user/${id}`)
     }
     loginUser(data){

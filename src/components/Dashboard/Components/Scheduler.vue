@@ -1,5 +1,5 @@
 <template>
-    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12  card-global">
+    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 card-global">
         <div class="card fiction-card scheduler">
             <TitleHeaderDashboard v-bind:title="'évènements'"/>
             <div class="card-body scheduler-container">
