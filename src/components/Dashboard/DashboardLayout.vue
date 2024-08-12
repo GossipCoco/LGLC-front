@@ -2,7 +2,7 @@
   <div id ="dashboard" class="dashboard-home-max-card-container card">
     <div class="row title-dashboard">
       <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <TitleHeader v-if="!showspinner" v-bind:UserName="UserName" v-bind:Avatar="Avatar" v-bind:User="usrId"/>
+        <TitleHeader v-if="!showspinner" v-bind:UserName="UserName" v-bind:Avatar="Avatar" v-bind:User="usrId" v-bind:NbMessages="Nbmessages"/>
       </div>
     </div>
     <div v-if="showspinner" class="d-flex justify-content-center">
@@ -60,6 +60,7 @@ export default {
       LastConnexion: null,
       role: null,
       level: null,
+      Nbmessages: null,
       totalWordsByFiction: {}, // Objet pour stocker les totaux par fiction
       nBFictionV2: 0, // Nombre de fictions
       totalWordsV2: 0, // Total de mots de toutes les fictions
@@ -130,8 +131,7 @@ export default {
     GetUserById(e) {
       this.showspinner = true
       UserService.getUserById(e)
-        .then((response) => {
-  
+        .then((response) => {  
           this.showspinner = false
           this.userInfo = response.data.ob
           this.Avatar = response.data.ob.Avatar
@@ -142,6 +142,7 @@ export default {
           this.LvelImf = this.userInfo.Level.Image
           this.role = this.userInfo.Role
           console.log(this.userInfo)
+          this.Nbmessages = this.userInfo.Messages.length
           this.totalPoints = this.calculateTotalPoints(this.userInfo.Points);
         })
         .catch((error) => {
