@@ -35,9 +35,11 @@
                 <div class="col-12">
                   <div class="information-global-character">
                     <div class="character-info-general-container">
-                      <div class="identity-character-container">
-                        
-                        <p>{{ NameClan }}</p>
+                      <div class="identity-character-container">                        
+                        <p><span>Clan : </span>{{ NameClan }}</p>
+                        <p><span>Chaton : </span>{{ kitty }}</p>
+                        <p><span>Apprenti : </span>{{ apprentice }}</p>
+                        <p><span>Guerrier : </span>{{ warrior }}</p>
                         <p class="card-text" v-html="genre"></p>
                       </div>
                       <div class="clan-logo-container">
@@ -72,6 +74,9 @@ export default {
       image: null,
       background: null,
       currentName: null,
+      kitty: null,
+      apprentice: null,
+      warrior: null,
       genre: null,
       age: null,
       description: null,
@@ -104,20 +109,20 @@ export default {
       });
     },
     getCharacter(id ){
-      console.log(id)
       CharacterService.getCharacterByName(id)
         .then((response) => {
-          console.log(response)
           this.character = response.data.ob
           console.log(this.character)
           this.Symbol = this.character.Clan.Symbol
-          console.log(this.Symbol)
           this.NameClan = this.character.Clan.Name
           this.image = response.data.ob.Image
           this.background = response.data.ob.Clan.Image
           this.currentName = response.data.ob.CurrentName
           this.genre = response.data.ob.Genre
           this.age = response.data.ob.Age
+          this.kitty = response.data.ob.KitName
+          this.apprentice = response.data.ob.ApprenticeName
+          this.warrior = response.data.ob.WarriorName
           this.description = response.data.ob.Description
           this.Biography = response.data.ob.Biography
           this.personnality = response.data.ob.Personnality
