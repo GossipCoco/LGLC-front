@@ -164,7 +164,6 @@ th{
 }
 .left-fiction-summary-container{
     display: flex;
-<<<<<<< HEAD
     flex-direction: column;
     width: 20rem;
     justify-content: center;
@@ -210,20 +209,4 @@ th{
 }
 .left-fiction-summary-container .characters-list-container img{
     width: 100px;
-=======
-    justify-content: right;
-    vertical-align: bottom;
-}
-.message-sent-container{
-    display: flex;
-    flex-direction: row;
-}
-.mini-rond-messages{
-    height: 25px;
-    width: 25px;
-    border-radius: 100%;
-    background: rgba(var(--active-hover), 1);
-    padding: 0 0 0 0.5rem;
-    margin: 2rem 0 0 -1rem;
->>>>>>> dev3
 }
