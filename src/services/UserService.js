@@ -10,6 +10,10 @@ class UserService {
         console.log(id, data)
         return http.post(`/user/GetMessageByReceiverId/${id}`, data)
     }
+    ChangeStatusMessage(id, status){
+        console.log(id, status)
+        return http.post(`/user/ChangeStatusMessage/${id}`, { status })
+    }
     loginUser(data){
         return http.post('/user/login', data)
     }

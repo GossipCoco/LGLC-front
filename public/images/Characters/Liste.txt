@@ -3,42 +3,16 @@
 
  R‚pertoire de C:\Users\gossi\OneDrive\Documents\project\Project-Warriors\front-app-v3\public\images\Characters
 
-25/06/2024  16:44            38ÿ127 AileBlanche.Line.png
-13/06/2024  13:39            32ÿ268 AileBlanche.Line.webp
-25/06/2024  16:44            38ÿ371 AileBlanche.Line2.png
-05/07/2024  10:26            43ÿ203 AiledeColombe-Line-GuerriŠre.png
-25/06/2024  16:44            45ÿ140 AiledeColombe-Line-GuerriŠre1.png
-13/06/2024  13:39            33ÿ820 Alderheart1.webp
-25/06/2024  16:44            28ÿ704 Aurore_Violette_GuerriŠre (1).png
-25/06/2024  16:44            27ÿ255 Aurore_Violette_GuerriŠre.png
-25/06/2024  16:44            13ÿ078 Barley.kit.webp
-26/07/2024  14:45            21ÿ134 Barley.loner.png
-25/06/2024  16:44            13ÿ934 Barley.rogue.webp
-07/05/2022  06:34            50ÿ150 belle-de-jour.png
-25/06/2024  16:44            36ÿ846 Blazefire.webp
-05/07/2024  10:26            56ÿ394 Bluestar-warrior.png
-07/05/2022  06:34            42ÿ991 Bone.bc.png
-09/03/2021  10:27            59ÿ635 bouton-d-or.png
-13/07/2024  14:06            51ÿ190 Brightheart.elder.png
-25/06/2024  16:44            52ÿ237 caramel.png
-07/03/2021  13:11            59ÿ054 caramel2.png
-07/05/2022  06:34           112ÿ291 cat-model1.psd
-0
-26/07/2024  14:45            17ÿ718 Cherrytail.webp
+
 25/06/2024  16:44            69ÿ954 Chester.warrior.png
 07/05/2022  06:34            35ÿ347 Chipiet.png
-07/05/2022  06:34            50ÿ389 coeur-d-aulne.png
-07/05/2022  06:34            48ÿ114 Coeur_Blanc (1).png
-07/03/2021  13:11            52ÿ192 Coeur_Blanc.png
+
 07/03/2021  13:11            36ÿ974 Conteur-des-Pointes-Rocheuses.png
 25/06/2024  16:44            38ÿ226 conteur-grive.png
 09/03/2021  10:27            56ÿ539 corbeau-grive.png
 25/06/2024  16:44            47ÿ364 cro-de-vipere.png
 07/05/2022  06:34            72ÿ532 croc-de-vipere.png
-07/05/2022  06:34            60ÿ717 Croc-jaune-0 (1).png
-16/07/2024  10:28            50ÿ416 Croc-jaune-0(2).png
-07/03/2021  13:11            60ÿ716 Croc-jaune-0.png
-13/06/2024  13:39            60ÿ716 Croc-jaune.png
+
 25/06/2024  16:44            18ÿ680 Crookedstar.star.webp
 13/06/2024  13:39            36ÿ256 Dewnose.webp
 07/03/2021  13:11            70ÿ627 Ecureuil.png
