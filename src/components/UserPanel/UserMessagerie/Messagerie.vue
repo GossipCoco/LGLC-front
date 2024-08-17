@@ -3,33 +3,40 @@
     <CardHeader v-bind:Title="'Ma messagerie'" />
     <div class="card-body">
       <div class="row">
-        <div class="col-6">
+        <div class="col-4">
           <ul class="list-group">
             <li
-              class="list-group-item"
+              class="list-group-item messagerie-list-container"
               v-for="(message, index) in allMessages"
               :key="index"
               @click="selectMessage(message)"
               style="cursor: pointer"
             >
-              {{ message.Title }}
+              <span class="badge text-bg-primary rounded-pill">{{
+                new Date(message.DateSend).toLocaleString()
+              }}</span>
+              <p>{{ message.Title }}</p>
             </li>
           </ul>
         </div>
-        <div class="col-6" v-if="selectedMessage">
+        <div class="col-8 select-message-container" v-if="selectedMessage">
           <h3>{{ selectedMessage.Title }}</h3>
-          <p>
-            <strong>Envoyé par :</strong>
-            {{ selectedMessage.Sender.FirstName }}
-            {{ selectedMessage.Sender.LastName }} ({{
-              selectedMessage.Sender.UserName
-            }})
+          <div class="send--message-by-container">
+            <p>
+              <strong>Envoyé par :</strong>
+              {{ selectedMessage.Sender.FirstName }}
+              {{ selectedMessage.Sender.LastName }} ({{
+                selectedMessage.Sender.UserName
+              }})
+            </p>
+            <p>
+              <strong>Date :</strong>
+              {{ new Date(selectedMessage.DateSend).toLocaleString() }}
+            </p>
+          </div>
+          <p class="message-container">
+            <strong>Contenu :</strong> {{ selectedMessage.Content }}
           </p>
-          <p>
-            <strong>Date :</strong>
-            {{ new Date(selectedMessage.DateSend).toLocaleString() }}
-          </p>
-          <p><strong>Contenu :</strong> {{ selectedMessage.Content }}</p>
         </div>
       </div>
     </div>

@@ -92,3 +92,22 @@ a{ text-decoration: none; }
 .login-card h2{
   color: rgba(var(--dark-green-01), 1)
 }
+.select-message-container h3{
+  text-align: center;
+  color: rgba(var(--main-white), 1);
+}
+.send--message-by-container{
+  display: flex;
+  flex-direction: row;
+  margin: 1rem 1rem;
+  color: rgba(var(--main-white), 1);
+}
+.send--message-by-container p{
+  flex: 1;
+  margin: 1rem 1rem;
+  color: rgba(var(--main-white), 1);
+
+}
+.message-container{
+  color: rgba(var(--main-white), 1)
+}
