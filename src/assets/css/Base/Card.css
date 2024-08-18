@@ -215,7 +215,8 @@
     overflow-x: hidden;
 }
 .dashboard-home-max-card-container .row .card {
-    background: linear-gradient(90deg, rgba(var(--dark-green-01), 1), rgba(var(--clear-green-02), 1));
+    background: linear-gradient(90deg, rgba(var(--dark-green-01), 1), rgba(var(--clear-green-01), 1));
+    /* background-color:rgba(var(--dark-green-01), 1); */
     border: none;
     position: relative;
 }
@@ -635,4 +636,64 @@ li.quest-container {
 }
 .indivual-caracter-container img {
     width: 100px;
+}
+
+.card-image img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.card-image img:hover {
+    transform: scale(1.05);
+}
+
+.details-infos-characters {
+    box-shadow: 0 4px 8px rgba(var(--main-black), 0.1);
+    background-color: rgba(var(--main-white), 0.8);
+    border-radius: 10px;
+    padding: 15px;
+}
+.card-title {
+    font-family: 'Cinzel', serif;
+    font-size: 2em;
+
+    margin-bottom: 0.5em;
+}
+
+.card-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+
+    line-height: 1.6;
+}
+.parallax__layer.parallax__layer--background {
+    /* filter: blur(5px); */
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/images/Backgrounds/forest.jpg');
+}
+
+.btn-primary.file-character-btn {
+    background-color: #27ae60;
+    border-color: #27ae60;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary.file-character-btn:hover {
+    background-color: #2ecc71;
+    transform: scale(1.05);
+}
+.table>:not(caption)>*>*{
+    background-color: rgba(var(--main-white), 0);
+    color: rgba(var(--main-white), 0.8);
+}
+
+.accordion-button.collapsed,
+.accordion-item:first-of-type>.accordion-header .accordion-button,
+.accordion-button:not(.collapsed),
+.accordion-item:last-of-type>.accordion-header .accordion-button.collapsed,
+.accordion-button:focus{
+    background-color: rgb(var(--clear-green-02), 0.6);
+}
+.table.table-borderless{
+    width: 25rem;
 }
