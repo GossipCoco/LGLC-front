@@ -656,15 +656,13 @@ li.quest-container {
 }
 .card-title {
     font-family: 'Cinzel', serif;
-    font-size: 2em;
-
+    font-size: 1.5em;
     margin-bottom: 0.5em;
 }
 
 .card-text {
     font-family: 'Roboto', sans-serif;
     font-size: 1.2em;
-
     line-height: 1.6;
 }
 .parallax__layer.parallax__layer--background {
