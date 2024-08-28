@@ -111,7 +111,7 @@
 .menu-left {
   height: 98vh;
   position: fixed;
-  background-color: rgba(var(--dark-green-01), 1);
+  background-color: rgba(var(--dark-green-02), 1);
   border-radius: 8px;
   width: 8%;
   margin: 0.5rem 0rem;
@@ -206,7 +206,7 @@ ul {
 .menu-left {
   height: 98vh;
   position: fixed;
-  background-color: rgba(var(--dark-green-01), 1);
+  background-color: rgba(var(--dark-green-02), 1);
   border-radius: 8px;
   width: 8%;
   margin: 0.5rem 0rem;

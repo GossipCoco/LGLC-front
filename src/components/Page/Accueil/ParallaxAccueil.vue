@@ -4,7 +4,7 @@
         <div class="accueil-title-image-container">
             <div class="image-accueil parallax">
                 <div class="image-one">
-                    <img src="/images/perso-detoure/00jh.png" />
+                    <img src="/images/perso-detoure/Detoure-Character-005.png" />
                 </div>
             </div>
             <div class="title-accueil">
