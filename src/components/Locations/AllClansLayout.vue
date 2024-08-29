@@ -1,6 +1,6 @@
 <template>
     <div class="character-container-global clans-location-container" style="overflow-y: scroll;">
-      <div class="card-group clan-group">
+      <div class="display-flex-row card-group clan-group">
         <div v-for="(clan, index) in clans" :key="index">
           <div class="card" style="width: 30rem">
             <div

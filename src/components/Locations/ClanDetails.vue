@@ -1,5 +1,5 @@
 <template>
-  <div class="card card-image-layout  clan-detail-layout mb-3">
+  <div class="card card-image-layout  clan-detail-layout display-flex-row mb-3">
     <div class="card-image clan-detail-card" v-bind:style="{
       backgroundImage: 'url(/images/Backgrounds/' + clan.Image + ')',
     }"></div>
@@ -8,7 +8,7 @@
       <div class="card-text">
         <p>{{ clan.Description }}</p>
         <div class="all-characters-list-containers">
-          <div class="character-of-clan-container" v-for="(character, index) in clan.Warriors" :key="index">
+          <div class="character-of-clan-container display-flex-column" v-for="(character, index) in clan.Warriors" :key="index">
             <div class="indivual-caracter-container">
               <img class="img-fluid" :src="'/images/Characters/' + character.Character.Image"
                 :alt="character.Character.Image" /><br>
