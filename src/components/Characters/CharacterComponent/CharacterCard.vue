@@ -1,5 +1,5 @@
 <template>
-  <div class="col-12  mb-3 mb-sm-0 character-container">
+  <div class="col-12  mb-3 mb-sm-0 display-flex-row character-container">
     <div
       v-for="(character, index) in characters_props"
       :key="index"

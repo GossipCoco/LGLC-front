@@ -4,12 +4,12 @@
 
 @import '../variables.scss';
 
-.display-flay-column{
+.display-flex-column{
     display: flex;
     flex-direction: column;
 }
 
-.display-flay-row{
+.display-flex-row{
     display: flex;
     flex-direction: row;
 }

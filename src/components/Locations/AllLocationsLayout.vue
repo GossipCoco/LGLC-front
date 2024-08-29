@@ -3,7 +3,7 @@
     class="character-container-global clans-location-container"
     style="overflow-y: auto"
   >
-    <div class="card-group clan-group">
+    <div class="display-flex-row card-group clan-group">
       <div v-for="(location, index) in allLocations" :key="index">
         <div class="card" style="width: 30rem">
           <div

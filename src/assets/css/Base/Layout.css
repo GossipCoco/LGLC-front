@@ -43,49 +43,34 @@ main.container {
 .container {
     max-width: 100%;
 }
-
-
-
 .container-fluid {
     height: 100vh;
 }
-
 .container-fluid>.row>.col-10.col-sm-10.col-md-10.col-lg-10.col-xl-10.col-xxl-10 {
     margin: 0 0 0 0;
 }
-
 .container {
     background-color: rgba(var(--main-white), 0);
 }
-
 .right-container {
     display: flex;
     flex-direction: column;
 }
-
 .main-container {
     display: flex;
     flex-direction: row;
     padding: 0.5rem;
 }
-
 .main-container .container {
     max-width: 100%;
 }
-
 .character-card,
 .profil-user-card {
     flex: 1;
 }
-
 .profil-user-card {
     height: 600px;
     margin-top: 5rem;
-}
-
-.profil-user-card-body {
-    display: flex;
-    flex-direction: column;
 }
 
 .profil-text-container {
@@ -97,16 +82,13 @@ main.container {
 .character-container {
     margin: -3rem auto;
     height: 90vh;
-    display: flex;
     overflow-x: hidden;
-    flex-direction: row;
     flex-wrap: wrap;
     padding: 0;
     align-items: center;
     align-content: center;
     justify-content: center;
 }
-
 .dashboard-mini-card-container {
     width: 38vh;
     margin: 0 0 2rem 0;
@@ -124,7 +106,6 @@ main.container {
     flex-wrap: wrap;
     padding: 0;
 }
-
 /* Scroll bar */
 
 /* Works on Firefox */
