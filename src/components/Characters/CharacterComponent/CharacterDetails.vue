@@ -79,8 +79,32 @@
                       </div>
                     </div>
                     <div class="accordion" id="characterDetailsAccordion">
-
                       <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                          <button
+                            class="accordion-button"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo"
+                            aria-expanded="true"
+                            aria-controls="collapseTwo"
+                          >
+                            Description
+                          </button>
+                        </h2>
+                        <div
+                          id="collapseTwo"
+                          class="accordion-collapse collapse show"
+                          aria-labelledby="headingTwo"
+                          data-bs-parent="#characterDetailsAccordion"
+                        >
+                          <div
+                            class="accordion-body"
+                            v-html="description"
+                          ></div>
+                        </div>
+                      </div>
+                      <div class="accordion-item" v-if="personnality != null">
                         <h2 class="accordion-header" id="headingZero">
                           <button
                             class="accordion-button collapsed"
@@ -93,7 +117,7 @@
                             Personnalité
                           </button>
                         </h2>
-                        <div
+                        <div 
                           id="collapseZero"
                           class="accordion-collapse collapse"
                           aria-labelledby="headingZero"
@@ -105,42 +129,14 @@
                           ></div>
                         </div>
                       </div>
-
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingTwo">
-                          <button
-                            class="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseTwo"
-                            aria-expanded="false"
-                            aria-controls="collapseTwo"
-                          >
-                            Description
-                          </button>
-                        </h2>
-                        <div
-                          id="collapseTwo"
-                          class="accordion-collapse collapse"
-                          aria-labelledby="headingTwo"
-                          data-bs-parent="#characterDetailsAccordion"
-                        >
-                          <div
-                            class="accordion-body"
-                            v-html="description"
-                          ></div>
-                        </div>
-                      </div>
-
-                      
                       <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
                           <button
-                            class="accordion-button"
+                            class="accordion-button  collapsed"
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target="#collapseOne"
-                            aria-expanded="true"
+                            aria-expanded="false"
                             aria-controls="collapseOne"
                           >
                             Biographie
@@ -148,14 +144,13 @@
                         </h2>
                         <div
                           id="collapseOne"
-                          class="accordion-collapse collapse show"
+                          class="accordion-collapse collapse"
                           aria-labelledby="headingOne"
                           data-bs-parent="#characterDetailsAccordion"
                         >
                           <div class="accordion-body" v-html="Biography"></div>
                         </div>
-                      </div>
-                      
+                      </div>                      
                     </div>
                   </div>
                 </div>
@@ -228,6 +223,7 @@ export default {
           this.description = response.data.ob.Description;
           this.Biography = response.data.ob.Biography;
           this.personnality = response.data.ob.Personnality;
+          console.log(this.personnality)
         })
         .catch((e) => {
           console.log(e);

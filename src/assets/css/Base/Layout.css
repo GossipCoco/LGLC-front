@@ -149,8 +149,6 @@ main.container {
 .form-character-container-global {
     height: 97vh;
     overflow-y: hidden;
-    display: flex;
-    flex-direction: column;
 }
 .border-gradient-decoration:nth-child(1) {
     position: absolute;

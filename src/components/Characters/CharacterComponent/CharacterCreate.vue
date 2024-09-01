@@ -1,6 +1,6 @@
 <template>
-    <div class="form-character-container-global">
-        <div class="card card-form-create-character  mb-12">
+    <div class="display-flex-column form-character-container-global">
+        <div class="card display-flex-column card-form-create-character  mb-12">
             <CardHeader v-bind:Title="'Création de personnage'" />
             <div class="card-body">
                 <form class="create-character-form" @submit.stop.prevent="onSubmit">

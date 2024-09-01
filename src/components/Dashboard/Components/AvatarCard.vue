@@ -1,6 +1,6 @@
 <template>
     <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12 card-global">
-        <div class="card profil-card fiction-card">
+        <div class="card display-flex-column profil-card fiction-card">
             <TitleHeaderDashboard v-bind:title="UserName"/>
             <div class="card-body user-info-text">
                 <!-- <p><span v-if="Role"></span>Role : {{ Role.Name }}</p> -->

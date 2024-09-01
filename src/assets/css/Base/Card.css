@@ -70,23 +70,7 @@
     height: 20rem;
     border-radius: 8rem 8rem 2rem 2rem;
 }
-/* Parallax effect */
-.parallax {
-    perspective: 1px;
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-.parallax-layer {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-}
-.parallax-layer-back {
-    transform: translateZ(-1px) scale(2);
-}
+
 .character-details.card .card-image {
     display: flex;
     justify-content: center;
@@ -269,44 +253,7 @@
     padding: 1rem 1rem 1rem 1rem;
     perspective: 5rem;
 }
-.parallax {
-    height: 100%;
-    position: relative;
-    transform-style: preserve-3d;
-}
-.parallax__layer {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
-.parallax__layer--base {
-    transform: translateZ(0);
-}
 
-.parallax__layer--back {
-    transform: translateZ(-1px) scale(2);
-}
-
-.parallax img {
-    display: block;
-    width: 100%;
-}
-
-@keyframes rotate {
-    from {
-        transform: rotate(0deg) rotateX(0deg);
-    }
-
-    to {
-        transform: rotateY(50deg) rotateX(0);
-    }
-
-    to {
-        transform: rotateY(0) rotateX(0);
-    }
-}
 .character-details.card .card-image img {
     width: 75%;
     transform-style: preserve-3d;
@@ -401,8 +348,6 @@
     height: 100px;
     border-radius: 100%;
     align-items: center;
-    display: flex;
-    flex-direction: column;
 }
 .dashboard-home-max-card-container .avatar-container img {
     width: 100px;
@@ -428,8 +373,6 @@
     padding-top: 14vh;
 }
 .card-form-create-character {
-    flex-direction: column;
-    display: flex;
     align-items: center;
     align-content: baseline;
     flex: 1;
@@ -455,10 +398,6 @@
 .card.profil-card img {
     border-radius: 100% 100% 0 0;
     border: 10px solid rgba(var(--dark-green-01), 0);
-}
-.dashboard-home-max-card-container .card.profil-card {
-    display: flex;
-    flex-direction: column;
 }
 .bottom-top-dashboard .card {
     height: 35vh;
@@ -501,8 +440,6 @@ li.quest-container {
     height: 4rem;
 }
 .quest--global-container {
-    display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     flex: 0.25;
     height: 30rem;
