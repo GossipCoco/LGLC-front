@@ -11,8 +11,10 @@
     display: flex;
     flex-direction: column;
 }
-
 .display-flex-row{
     display: flex;
     flex-direction: row;
+}
+.flex-one{
+    flex: 1;
 }

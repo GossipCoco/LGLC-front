@@ -4,12 +4,12 @@
 
 @import '../variables.scss';
 
-.col-11.col-lg-11 {
+.col-11.col-lg-11,
+.character-container-global {
     height: 100vh;
 }
 #all-characters-container-card .character-card.card,
 .character-card.card,
-.dashboard-mini-card-container.card,
 .dashboard-medium-card-container.card {
     background-color: rgba(var(--dark-green-01), 1);
     border: none;
@@ -35,14 +35,12 @@
 }
 
 .character-container-global {
-    height: 100vh;
     width: 180vh;
     margin-top: 2rem;
 }
 .character-card.card {
     margin: 1rem 1rem 0 0;
     width: 20rem;
-    flex: 1;
     min-width: 20rem;
     padding: 0rem 1rem 1rem 1.5rem;
     text-align: center;
@@ -52,7 +50,6 @@
 #all-characters-container-card .character-card.card {
     margin: 1rem 2rem 0 2rem;
     width: 10rem;
-    flex: 1;
     min-width: 17rem;
     padding: 0rem 1rem 1rem 1.5rem;
     text-align: center;
@@ -77,7 +74,7 @@
     max-width: 100%;
     height: auto;
 }
-.dashboard-mini-card-container.card {
+/* .dashboard-mini-card-container.card {
     font-family: var(--opensans-text);
     margin: 2rem 2rem 0 0;
     flex: 1;
@@ -93,7 +90,7 @@
     position: relative;
     top: -4rem;
     left: 22rem
-}
+} */
 
 .dashboard-medium-card-container.card {
     background: linear-gradient(90deg, rgba(var(--dark-green-01), 1), rgba(var(--clear-green-02), 1));
@@ -188,7 +185,6 @@
 }
 .dashboard-home-max-card-container .row .card {
     background: linear-gradient(90deg, rgba(var(--dark-green-01), 1), rgba(var(--clear-green-01), 1));
-    /* background-color:rgba(var(--dark-green-01), 1); */
     border: none;
     position: relative;
 }
@@ -468,7 +464,6 @@ li.quest-container {
     width: 75%;
 }
 .quest-title {
-    display: flex;
     flex: 0.25;
     text-align: center;
 }
@@ -551,7 +546,7 @@ li.quest-container {
 }
 .parallax__layer.parallax__layer--background {
     /* filter: blur(5px); */
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/images/Backgrounds/forest.jpg');
+    background: linear-gradient(rgba(var(--main-black), 0.3), rgba(var(--main-black) 0.3)), url('/images/Backgrounds/forest.jpg');
 }
 
 .btn-primary.file-character-btn {
