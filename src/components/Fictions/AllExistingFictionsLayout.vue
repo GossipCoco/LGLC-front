@@ -1,5 +1,5 @@
 <template>
-  <div class="dashboard-max-card-container card fiction-container">
+  <div class="dashboard-max-card-container flex-one   card fiction-container">
     <CardHeader v-bind:Title="'Lire des fictions'"/>
     <SummaryFiction/>
   </div>
