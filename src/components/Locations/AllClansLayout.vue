@@ -11,7 +11,7 @@
             ></div>
             <div class="card-header">{{ clan.Name }}</div>
             <div class="card-body">
-              <div class="clan-description">
+              <div class="display-flex clan-description">
                 <p v-html="truncateText(clan.Description, 100)">
 
               </p>

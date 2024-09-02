@@ -397,7 +397,6 @@
     height: 9rem;
 }
 .clan-description {
-    display: flex;
     flex: 1;
     padding: 0;
 }
@@ -444,7 +443,6 @@ li.quest-container {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 50% 55%;
-    display: flex;
     flex: 1;
     justify-content: center;
     vertical-align: top;
@@ -456,12 +454,10 @@ li.quest-container {
     align-items: center;
 }
 .one-quest-container .card-header {
-    display: flex;
     justify-content: center;
     vertical-align: middle;
 }
 .card-header.quest-title {
-    display: flex;
     justify-content: center;
 }
 .card-body.one-quest {

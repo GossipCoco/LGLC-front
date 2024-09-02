@@ -1,5 +1,5 @@
 <template>
-  <div class="card-header title-chapter-container">
+  <div class="display-flex card-header title-chapter-container">
     <h2>{{ Title }}</h2>
     <slot></slot>
   </div>

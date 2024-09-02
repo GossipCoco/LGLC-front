@@ -1,6 +1,6 @@
 <template>
   <div class="display-flex-column quest-image-container">
-    <div class="card-header quest-title">
+    <div class="display-flex card-header quest-title">
       <h4>{{ quest.Title }}</h4>
     </div>
     <div class="card-body display-flex-column one-quest">
