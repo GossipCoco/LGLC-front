@@ -1,5 +1,5 @@
 <template>
-  <div class="character-list-wrapper display-flay-column">
+  <div class="character-list-wrapper display-flex-column">
     <div
       class="card-image"
       v-bind:style="{

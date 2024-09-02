@@ -4,6 +4,9 @@
 
 @import '../variables.scss';
 
+.diaplay-flex{
+    display: flex;
+}
 .display-flex-column{
     display: flex;
     flex-direction: column;

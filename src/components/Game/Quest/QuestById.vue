@@ -6,14 +6,14 @@
     <div class="card quest-by-id-card">
       <card-header v-bind:Title="''">
         <div class="quest-details">
-          <div class="quest-mission-container">
-            <div class="quest-mission-container-text">
+          <div class="display-flex-column">
+            <div class="display-flex-column">
               <h2>{{ quest.Title }}</h2>
               <p>{{ quest.Description }}</p>
             </div>
           </div>
         </div>
-        <div class="buttons-container">
+        <div class="display-flex-column">
           <p class="card-text">
             <router-link to="/Quest" type="button" class="btn btn-primary">
               Retour à la liste des quêtes

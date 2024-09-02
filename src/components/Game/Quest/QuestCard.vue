@@ -1,19 +1,19 @@
 <template>
-  <div class="quest-image-container">
+  <div class="display-flex-column quest-image-container">
     <div class="card-header quest-title">
       <h4>{{ quest.Title }}</h4>
     </div>
-    <div class="card-body one-quest">
-      <div class="card-img-top background-image-quest-image-container">
+    <div class="card-body display-flex-column one-quest">
+      <div class="card-img-top display-flex-column background-image-quest-image-container display-flex-row">
         <img :src="'/images/Fictions/' + image.Image" />
       </div>
-      <div class="quest-button-text">
-        <p class="quest-description">{{ quest.Description }}</p>
-        <p class="quest-button-link">
+      <div class="display-flex-column quest-button-text">
+        <p class="display-flex-column quest-description">{{ quest.Description }}</p>
+        <p class="display-flex-column quest-button-link">
           <router-link
             :to="'/QuestById/' + quest.Id"
             type="button"
-            class="btn btn-primary"
+            class="display-flex-column btn btn-primary"
           >
             Relever le défi
           </router-link>

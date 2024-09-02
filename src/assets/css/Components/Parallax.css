@@ -93,3 +93,58 @@
   top: 2rem;
   left: 5rem
 }
+/* Parallax effect */
+.parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.parallax-layer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.parallax-layer-back {
+  transform: translateZ(-1px) scale(2);
+}
+.parallax {
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+}
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.parallax__layer--base {
+  transform: translateZ(0);
+}
+
+.parallax__layer--back {
+  transform: translateZ(-1px) scale(2);
+}
+
+.parallax img {
+  display: block;
+  width: 100%;
+}
+
+@keyframes rotate {
+  from {
+      transform: rotate(0deg) rotateX(0deg);
+  }
+
+  to {
+      transform: rotateY(50deg) rotateX(0);
+  }
+
+  to {
+      transform: rotateY(0) rotateX(0);
+  }
+}
