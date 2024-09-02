@@ -7,9 +7,9 @@
       <h5 class="card-title">{{ clan.Name }}</h5>
       <div class="card-text">
         <p>{{ clan.Description }}</p>
-        <div class="all-characters-list-containers">
-          <div class="character-of-clan-container display-flex-column" v-for="(character, index) in clan.Warriors" :key="index">
-            <div class="display-flex-column indivual-caracter-container">
+        <div class="display-flex-row flex-one all-characters-list-containers">
+          <div class="flex-one display-flex-column" v-for="(character, index) in clan.Warriors" :key="index">
+            <div class="display-flex-column flex-one indivual-caracter-container">
               <img class="img-fluid" :src="'/images/Characters/' + character.Character.Image"
                 :alt="character.Character.Image" /><br>
               <p>{{ character.Character.CurrentName }}</p>

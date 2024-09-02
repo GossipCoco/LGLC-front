@@ -19,7 +19,7 @@
                         </div>
                     </div>
                     <div class="col-6">
-                        <div class="chapter-button-content">
+                        <div class="display-flex chapter-button-content">
                             <button @click="speakText" class="btn btn-primary">
                                 Lire à voix haute
                             </button>
@@ -37,7 +37,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="chapter-global-content">
+                <div class="display-flex-row chapter-global-content">
                     <div class="chapter-image-content"
                         v-bind:style="{ backgroundImage: 'url(/images/Fictions/' + chapter.Image + ')' }">
                     </div>

@@ -7,7 +7,7 @@
     </div>
     <div
       id="card-fiction-container"
-      class="card-header title-chapter-container"
+      class="card-header display-flex-row"
     >
       <Rating :fictionId="IdFiction" :rating="rating" />
       <div class="Comment-icon">
@@ -26,16 +26,16 @@
       >
     </div>
     <div class="card-body">
-      <div class="one-fiction-container">
-        <div class="left-side-container">
+      <div class="display-flex-row flex-one">
+        <div class="display-flex-column left-side-container">
           <div class="image-fiction-container" v-bind:style="{ backgroundImage: 'url(/images/Fictions/' + backgroundImageFiction + ')'}"></div>
-          <div class="all-characters-of-fiction">
+          <div class="display-flex-column all-characters-of-fiction">
             <AddANewCharacterModal v-if="AuthorId === usrCurrent" v-bind:IdGame="IdGame"/>            
             <CarrouselCharacter v-bind:Characters="listOfCharacter" />
           </div>
         </div>
         <div class="character-chapters-fiction-container  background-summary-global-container">
-          <div class="character-chapters-container">
+          <div class="display-flex-row character-chapters-container">
             <div v-if="nbIllus > 0">
               <div class="illustration-background" v-for="(illus, index) in illustration" :key="index">
                 <div :style="{ backgroundImage:'url(/images/Fictions/' + illus.IllustrationId + ')'}" class="background-fiction-contain">

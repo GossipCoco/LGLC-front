@@ -1,7 +1,7 @@
 <template>
   <div
     id="quest-by-id"
-    class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 card-global quest-container"
+    class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 card-global quest-container flex-one"
   >
     <div class="card quest-by-id-card">
       <card-header v-bind:Title="''">
@@ -9,7 +9,7 @@
           <div class="display-flex-column">
             <div class="display-flex-column">
               <h2>{{ quest.Title }}</h2>
-              <p>{{ quest.Description }}</p>
+              <p class="flex-one">{{ quest.Description }}</p>
             </div>
           </div>
         </div>
