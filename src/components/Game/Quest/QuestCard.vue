@@ -1,10 +1,10 @@
 <template>
-  <div class="display-flex-column quest-image-container">
+  <div class="display-flex-column  flex-one">
     <div class="display-flex card-header quest-title">
       <h4>{{ quest.Title }}</h4>
     </div>
     <div class="card-body display-flex-column one-quest">
-      <div class="card-img-top display-flex-column background-image-quest-image-container display-flex-row">
+      <div class="card-img-top display-flex-column background-image-quest-image-container display-flex-row flex-one">
         <img :src="'/images/Fictions/' + image.Image" />
       </div>
       <div class="display-flex-column quest-button-text">

@@ -1,5 +1,5 @@
 <template>
-  <div class="fiction-globale-container card fiction-container">
+  <div class="fiction-globale-container card fiction-container flex-one">
     <div v-if="showspinner" class="d-flex justify-content-center">
       <div class="spinner-border text-success" role="status">
         <span class="visually-hidden">Loading...</span>
@@ -8,7 +8,7 @@
 
     <div
       id="card-fiction-container"
-      class="card-header title-chapter-container"
+      class="card-header display-flex-row"
     >
       <Rating :fictionId="IdFiction" :rating="rating" />
       <div class="Comment-icon">

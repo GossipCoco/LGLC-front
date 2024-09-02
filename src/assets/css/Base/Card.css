@@ -74,44 +74,6 @@
     max-width: 100%;
     height: auto;
 }
-/* .dashboard-mini-card-container.card {
-    font-family: var(--opensans-text);
-    margin: 2rem 2rem 0 0;
-    flex: 1;
-    min-width: 25rem;
-    padding: 2rem;
-    height: 20vh;
-}
-
-.dashboard-mini-card-container.card::before {
-    content: var(--second-cat-corner);
-    width: 10px;
-    height: 10px;
-    position: relative;
-    top: -4rem;
-    left: 22rem
-} */
-
-.dashboard-medium-card-container.card {
-    background: linear-gradient(90deg, rgba(var(--dark-green-01), 1), rgba(var(--clear-green-02), 1));
-    border: none;
-    color: rgba(var(--main-white), 1);
-    font-family: var(--opensans-text);
-    margin: 2rem 2rem 0 0;
-    flex: 1;
-    min-width: 25rem;
-    padding: 2rem;
-    height: 24vh;
-}
-.dashboard-medium-card-container.card::before {
-    content: var(--second-cat-corner);
-    width: 10px;
-    height: 10px;
-    position: relative;
-    top: -4rem;
-    left: 22rem;
-    height: 52vh;
-}
 .details-infos-characters {
     background: linear-gradient(90deg, rgba(var(--dark-green-01), 1), rgba(var(--clear-green-02), 1));
     color: rgba(var(--main-white), 1)
@@ -120,7 +82,6 @@
     background: linear-gradient(90deg, rgba(var(--dark-green-01), 1), rgba(var(--clear-green-02), 1));
     border: none;
     margin: 3rem 0 0 0;
-    flex: 1;
     width: 105rem;
     min-width: 105rem;
     padding: 2rem;
@@ -133,7 +94,6 @@
     color: rgba(var(--main-white), 1);
     font-family: var(--opensans-text);
     margin: 3rem 0 0 0;
-    flex: 1;
     width: 105rem;
     min-width: 105rem;
     padding: 0rem;
@@ -144,26 +104,13 @@
 .card-header.title-chapter-container{
     width: 100%;
 }
-.dashboard-fiction-game-card-container.card {
-    background: linear-gradient(90deg, rgba(var(--dark-green-01), 1), rgba(var(--clear-green-02), 1));
-    border: none;
-    color: rgba(var(--main-white), 1);
-    font-family: var(--opensans-text);
-    margin: 0rem 10rem 0 -4rem;
-    flex: 1;
-    width: 120rem;
-    min-width: 100rem;
-    padding: 2rem;
-    height: 51rem;
-    overflow-y: scroll;
-}
+
 .dashboard-home-max-card-container.card {
     background: none;
     border: none;
     color: rgba(var(--main-white), 1);
     font-family: var(--opensans-text);
     margin: 1rem 1rem 0rem 0rem;
-    flex: 1;
     width: 100%;
     padding: 1.5rem;
     height: 100%;
@@ -175,7 +122,6 @@
     color: rgba(var(--main-white), 1);
     font-family: var(--opensans-text);
     margin: 4.5rem 5rem 0 1rem;
-    flex: 1;
     width: 105rem;
     min-width: 105rem;
     padding: 0rem;
@@ -195,21 +141,8 @@
     overflow-y: hidden;
     padding: 0;
 }
-.dashboard-fiction-game-card-container.card {
-    background: linear-gradient(90deg, rgba(var(--dark-green-01), 1), rgba(var(--clear-green-02), 1));
-    border: none;
-    color: rgba(var(--main-white), 1);
-    font-family: var(--opensans-text);
-    margin: 0rem 10rem 0 -4rem;
-    flex: 1;
-    width: 120rem;
-    min-width: 100rem;
-    padding: 2rem;
-    height: 51rem;
-    overflow-y: scroll;
-}
+
 .dashboard-max-card-container::before,
-.dashboard-fiction-game-card-container::before,
 .fiction-globale-container::before{
     content: var(--second-cat-corner);
     width: 10px;
@@ -354,7 +287,6 @@
 .card-form-create-character {
     align-items: center;
     align-content: baseline;
-    flex: 1;
     margin: 2rem 0 0 2rem;
     padding: 2rem;
     height: 180vh;
@@ -393,7 +325,6 @@
     height: 9rem;
 }
 .clan-description {
-    flex: 1;
     padding: 0;
 }
 .clan-description p {
@@ -427,11 +358,9 @@ li.quest-container {
 .quest-image-container,
 .background-image-quest-image-container {
     flex-wrap: wrap;
-    flex: 1;
 }
 .quest-container {
     height: 33rem;
-    width: 12rem;
 }
 .quest-image-container,
 .background-image-quest-image-container {
@@ -439,7 +368,6 @@ li.quest-container {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 50% 55%;
-    flex: 1;
     justify-content: center;
     vertical-align: top;
 }
@@ -458,7 +386,6 @@ li.quest-container {
 }
 .card-body.one-quest {
     height: 25rem;
-    flex: 1;
 }
 .card-img-top.background-image-quest-image-container img {
     width: 75%;
@@ -500,8 +427,6 @@ li.quest-container {
     left: 0;
     transition: transform 0.1s ease-out;
 }
-
-
 .display-flex-column button{
     height: 3rem;
 }
@@ -511,11 +436,7 @@ li.quest-container {
 .one-quest-container .pagination-container {
     margin: 0;
 }
-.character-of-clan-container {
-    flex: 1
-}
 .indivual-caracter-container {
-    flex: 1;
     width: 110px;
 }
 .card-image img {
@@ -545,7 +466,6 @@ li.quest-container {
     line-height: 1.6;
 }
 .parallax__layer.parallax__layer--background {
-    /* filter: blur(5px); */
     background: linear-gradient(rgba(var(--main-black), 0.3), rgba(var(--main-black) 0.3)), url('/images/Backgrounds/forest.jpg');
 }
 

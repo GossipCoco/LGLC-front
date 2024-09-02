@@ -1,5 +1,5 @@
 <template>
-    <div class="dashboard-max-card-container card fiction-container">
+    <div class="dashboard-max-card-container  flex-one  ard fiction-container">
         <div class="row">
             <div class="col-4"></div>
             <div class="col-4"><h2>Panel administrateur</h2></div>

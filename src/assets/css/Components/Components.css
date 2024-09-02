@@ -17,30 +17,29 @@
 
 /* CARD */
 .card-image{
-    display: flex;
+
     justify-content: center;
     background-size: cover;
 }
 .card-image img{
     width: 75%;
 }
-.character-list-wrapper .card-header{
-    display: flex;
-    flex-direction: column;
-}
-.character-info-general-container, .select-character-container,
-.info-fanfiction-container, .game-container, .one-fiction-container
+.character-info-general-container,
+.select-character-container,
+.info-fanfiction-container,
+.game-container
 {    
     display: flex;
     flex-direction: row;
 }
-.fiction-container, .identity-character-container{
+.fiction-container,
+.identity-character-container{
     display: flex;
     flex-direction: column;
 }
 .identity-character-container,
 .character-chapters-fiction-container,
-.game-container, .one-fiction-container{
+.game-container{
     flex: 1;
 }
 .name-characatrer-text-card{

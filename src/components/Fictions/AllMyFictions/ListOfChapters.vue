@@ -1,6 +1,6 @@
 <template>
   <div class="opacity-container">
-    <div class="all-chapters-list-container">
+    <div class="display-flex-column flex-one all-chapters-list-container">
       <p>
         <router-link
           type="button"
