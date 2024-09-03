@@ -1,5 +1,5 @@
 <template>
-  <div class="dashboard-max  flex-one  card display-flex-column fiction-container">
+  <div class="dashboard-max flex-one card display-flex-column height-fixed background-color-main-lineart">
     <CardHeader v-bind:Title="'Ma messagerie'" />
     <div class="card-body">
       <div class="row">

@@ -7,12 +7,14 @@
 
 .left-side-container {
     flex: 0.3;
-    width: 15rem;
+    width: 20rem;
     height: 50rem;
     margin: 1rem 1rem 0 0;
 }
 
-
+.character-chapters.display-flex-column.fiction-container.background-summary-global-container{
+    width: 75vh;
+}
 .image-fiction-container img {
     width: 180px;
     background-repeat: no-repeat;
