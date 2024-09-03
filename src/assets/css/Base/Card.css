@@ -176,7 +176,6 @@
     width: 75%;
     transform-style: preserve-3d;
     animation: rotate 10s infinite linear;
-    aspect-ratio: 3 / 4;
 }
 .vegetal-container {
     /* background-image: url('/images/Backgrounds/herbePNG.png'); */
@@ -441,7 +440,6 @@ li.quest-container {
 }
 .card-image img {
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(var(--main-black), 0.2);
     transition: transform 0.3s ease;
 }
 .card-image img:hover {
