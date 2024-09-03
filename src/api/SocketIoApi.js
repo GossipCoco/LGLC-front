@@ -5,17 +5,17 @@ const IOController = {};
 IOController.SocketIOInstance = undefined;
 
 
-const LocalData = {
-  socket: {
-    emitter: undefined,
-    subscriber: undefined,
-  },
-};
+// const LocalData = {
+//   socket: {
+//     emitter: undefined,
+//     subscriber: undefined,
+//   },
+// };
 
 IOController.initSocket = () => {
   socket.on("connect", () => {
-    console.log("socketIOClient", socket.id);
-    console.log(LocalData);
+    console.log("socketIOClient");
+    // console.log(LocalData);
   });
   socket.on("disconnect", () => {
     console.log("Disconnect Client");
