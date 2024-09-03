@@ -1,5 +1,5 @@
 <template>
-  <div class="dashboard-max-card-container  flex-one card display-flex-column fiction-container game-card">
+  <div class="dashboard-max-card-container background-color-main-lineart flex-one card display-flex-column fiction-container game-card">
     <CardHeader v-bind:Title="'Chasse au trésor'" />
     <div class="card-body height-90">
       <div class="display-flex-row game-container" @keydown="handleKeydown" tabindex="0">

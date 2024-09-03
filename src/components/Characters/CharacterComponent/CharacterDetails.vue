@@ -27,7 +27,7 @@
             </div>
           </div>
           <div class="col-8 col-md-8">
-            <div class="card-body details-infos-characters">
+            <div class="card-body background-color-main-lineart details-infos-characters">
               <div class="row">
                 <div class="col-8">
                   <h2 class="card-title">{{ currentName }}</h2>
