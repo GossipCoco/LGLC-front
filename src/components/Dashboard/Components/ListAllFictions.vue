@@ -1,7 +1,6 @@
 <template>
     <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12 card-global">
         <div class="card fiction-card">
-            <div class="border-gradient-decoration-bottom"></div>
             <TitleHeaderDashboard v-bind:title="'Lire des fictions'" />
             <div class="card-body">
                 <div v-for="(game, index) in fiveGames" :key="index">

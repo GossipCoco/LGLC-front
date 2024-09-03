@@ -3,7 +3,7 @@
     <div class="rating-chiffre">
     <h4>{{ rating }} / 5</h4>
     </div>    
-    <div class="rating-star">
+    <div class="display-flex-row">
     <svg v-for="star in 5" :key="star" @click="rate(star)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
       width="18" height="18" :class="{ checked: star <= currentRating }">
       <path d="M12 .587l3.668 7.431L24 9.587l-6 5.852L19.336 24 12 20.201 4.664 24 6 15.439 0 9.587l8.332-1.569z" />

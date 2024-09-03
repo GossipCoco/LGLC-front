@@ -64,8 +64,8 @@
     width: 100%;
 }
 .pagination .page-link{
-    background-color: rgba(var(--dark-green-01),1);
-    border: 1px solid rgba(var(--dark-green-01),1);
+    background-color: rgba(var(--middle-green-01),1);
+    border: 1px solid rgba(var(--middle-green-01),1);
     color: rgba(var(--main-white),1)
 }
 

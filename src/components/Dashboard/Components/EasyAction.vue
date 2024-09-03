@@ -1,7 +1,6 @@
 <template>
   <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12">
-    <div class="card  fiction-card">
-      <!-- <div class="border-gradient-decoration-bottom"></div> -->
+    <div class="card  fiction-card">     
       <div class="card-header">
         <h4>Actions rapides</h4>
       </div>

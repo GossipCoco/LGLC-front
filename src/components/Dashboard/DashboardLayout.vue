@@ -134,14 +134,14 @@ export default {
         .then((response) => {  
           this.showspinner = false
           this.userInfo = response.data.ob
+          // console.log(this.userInfo)
           this.Avatar = response.data.ob.Avatar
           this.usr = response.data.ob.UserName
           this.UserName = this.usr
           this.LastConnexion = response.data.ob.LastConnexion
           this.Inscription = response.data.ob.Inscription
           this.LvelImf = this.userInfo.Level.Image
-          this.role = this.userInfo.Role
-          console.log(this.userInfo)
+          this.role = this.userInfo.Role          
           this.Nbmessages = this.userInfo.Messages.length
           this.totalPoints = this.calculateTotalPoints(this.userInfo.Points);
         })

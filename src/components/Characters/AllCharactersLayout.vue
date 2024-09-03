@@ -1,5 +1,5 @@
 <template>
-  <div class="character-container-global">
+  <div class="height-fixe character-container-global">
     <div class="row row-filter">
       <div class="col-2">
         <router-link to="/CharacterCreate" type="button" class="btn btn-primary">

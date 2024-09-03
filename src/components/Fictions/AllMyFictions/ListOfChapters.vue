@@ -9,7 +9,7 @@
           :to="'/fiction/createChapter/' + IdFiction"
           v-bind="lastChap"
         >
-          Créer un chapitre {{ lastChap }}
+          Créer le chapitre {{ lastChap }}
         </router-link>
       </p>
       <ul class="list-group">
