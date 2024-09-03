@@ -1,5 +1,5 @@
 <template>
-  <div class="dashboard-max-card-container flex-one  card fiction-container">
+  <div class="dashboard-max-card-container flex-one  card display-flex-column fiction-container">
     <CardHeader v-bind:Title="'Créer une nouvelle fanfiction'" />
     <div class="card-body">
       <form class="create-character-form" @submit.stop.prevent="handleOk" ref="uploadForm">
@@ -40,7 +40,7 @@
                   />
                 </div>
               </div>
-              <div class="col-4 button-validate-container">
+              <div class="col-4 display-flex button-validate-container">
                 <div class="mb-3">
                   <button type="submit" class="btn btn-primary">
                     Créer la fiction

@@ -47,7 +47,7 @@
               <div class="row">
                 <div class="col-12">
                   <div class="information-global-character">
-                    <div class="character-info-general-container">
+                    <div class="display-flex-row character-info-general-container">
                       <div class="identity-character-container">
                         <table class="table table-borderless">
                           <tr>

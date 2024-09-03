@@ -1,5 +1,5 @@
 <template>
-    <div class="character-details-chatper card mb-3 fiction-container">
+    <div class="character-details-chatper card mb-3 display-flex-column fiction-container">
         <div v-if="chapter && chapter.Title">
             <div class="card-header">
                 <div class="chapter-title-content">

@@ -1,5 +1,5 @@
 <template>
-    <div class="dashboard-max-card-container  flex-one card fiction-container">
+    <div class="dashboard-max-card-container  flex-one card display-flex-column fiction-container">
         <PuzzleGame />
     </div>
 

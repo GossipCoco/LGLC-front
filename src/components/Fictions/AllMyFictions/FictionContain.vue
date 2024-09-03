@@ -1,12 +1,12 @@
 <template>
-  <div class="fiction-globale-container card fiction-container flex-one">
+  <div class="fiction-globale-container card display-flex-column fiction-container flex-one">
     <div v-if="showspinner" class="d-flex justify-content-center">
       <div class="spinner-border text-success" role="status">
         <span class="visually-hidden">Loading...</span>
       </div>
     </div>
     <div
-      id="card-fiction-container"
+      id="card-display-flex-column fiction-container"
       class="card-header display-flex-row"
     >
       <Rating :fictionId="IdFiction" :rating="rating" />
@@ -28,13 +28,13 @@
     <div class="card-body">
       <div class="display-flex-row flex-one">
         <div class="display-flex-column left-side-container">
-          <div class="image-fiction-container" v-bind:style="{ backgroundImage: 'url(/images/Fictions/' + backgroundImageFiction + ')'}"></div>
+          <div class="image-display-flex-column fiction-container" v-bind:style="{ backgroundImage: 'url(/images/Fictions/' + backgroundImageFiction + ')'}"></div>
           <div class="display-flex-column all-characters-of-fiction">
             <AddANewCharacterModal v-if="AuthorId === usrCurrent" v-bind:IdGame="IdGame"/>            
             <CarrouselCharacter v-bind:Characters="listOfCharacter" />
           </div>
         </div>
-        <div class="character-chapters-fiction-container  background-summary-global-container">
+        <div class="character-chapters-display-flex-column fiction-container  background-summary-global-container">
           <div class="display-flex-row character-chapters-container">
             <div v-if="nbIllus > 0">
               <div class="illustration-background" v-for="(illus, index) in illustration" :key="index">

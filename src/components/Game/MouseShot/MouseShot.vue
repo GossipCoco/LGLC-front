@@ -1,7 +1,7 @@
 <template>
   <div
     id="mouse-shot"
-    class="dashboard-max-card-container  flex-one card fiction-container"
+    class="dashboard-max-card-container  flex-one card display-flex-column fiction-container"
   >
     <CardHeader v-bind:Title="'Jeu du chat et de la souris'" />
     <div class="game" @keydown="handleKeyPress" tabindex="0">

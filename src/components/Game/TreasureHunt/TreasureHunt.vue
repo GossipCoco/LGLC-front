@@ -1,8 +1,8 @@
 <template>
-  <div class="dashboard-max-card-container  flex-one card fiction-container game-card">
+  <div class="dashboard-max-card-container  flex-one card display-flex-column fiction-container game-card">
     <CardHeader v-bind:Title="'Chasse au trésor'" />
     <div class="card-body">
-      <div class="game-container" @keydown="handleKeydown" tabindex="0">
+      <div class="display-flex-row game-container" @keydown="handleKeydown" tabindex="0">
         <div class="score-banner">
           <div>Treasures: {{ foundTreasures }}</div>
           <div>Points: {{ points }}</div>

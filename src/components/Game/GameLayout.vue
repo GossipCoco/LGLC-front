@@ -1,6 +1,6 @@
 <template>
   <div class="dashboard-max-card-container card">
-    <div class="game-container">
+    <div class="display-flex-row game-container">
       <div class="button-container">
         <div class="d-grid gap-2 col-12 mx-auto">
         <router-link type="button" class="btn btn-primary" to="/rollOfDice">Jeu de dé</router-link>
