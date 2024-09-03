@@ -25,7 +25,7 @@
     <div class="card-body">
       <div class="display-flex-row flex-one">
         <div class="display-flex-column left-side-container">
-          <div class="image-display-flex-column fiction-container" v-bind:style="{ backgroundImage: 'url(/images/Fictions/' + backgroundImageFiction + ')'}"></div>
+          <div class="display-flex-column image-fiction-container" v-bind:style="{ backgroundImage: 'url(/images/Fictions/' + backgroundImageFiction + ')'}"></div>
           <div class="display-flex-column all-characters-of-fiction">
             <AddANewCharacterModal v-if="AuthorId === usrCurrent" v-bind:IdGame="IdGame"/>            
             <CarrouselCharacter v-bind:Characters="listOfCharacter" />
@@ -129,7 +129,6 @@ export default {
     GetLastChapterOfAFiction(id) {
       FictionService.GetLastChapterOfAFiction(id)
         .then((response) => {
-          console.log(response)
           const lastChapNum = response.data.ob.NumberChapter;
           this.lastChap = lastChapNum + 1;
         })
