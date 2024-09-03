@@ -2,7 +2,7 @@
   <div class="col-4">
     <div class="mb-1">
       <label>Générer une image avec</label>
-      <div class="logo-wrapper-contain">
+      <div class="display-flex-row logo-wrapper-contain">
         <div class="logo">
           <a target="_blank" href="https://chatgpt.com/"
             ><img src="/images/Logos/openai-icon.svg"

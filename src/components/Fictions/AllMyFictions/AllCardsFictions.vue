@@ -14,7 +14,7 @@
         <div class="row g-0">
           <div class="col-md-6">
             <div
-              class="image-fiction-container"
+              class="image-display-flex-column fiction-container"
               v-bind:style="{
                 backgroundImage: 'url(/images/Fictions/' + fiction.Image + ')',
               }"

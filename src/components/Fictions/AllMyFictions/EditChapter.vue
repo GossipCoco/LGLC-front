@@ -1,6 +1,6 @@
 <template>
     <div id="edit-chapter-contain">
-        <div class="character-details-chatper card mb-3 fiction-container">
+        <div class="character-details-chatper card mb-3 display-flex-column fiction-container">
             <div class="card-body">
                 <form class="create-character-form" @submit.stop.prevent="handleOk" ref="uploadForm">
                     <div class="row">

@@ -1,5 +1,5 @@
 <template>
-    <div id="comment-container" class="fiction-globale-container card fiction-container">
+    <div id="comment-container" class="fiction-globale-container card display-flex-column fiction-container">
       <div
         class="message"
         v-for="(comment, index) in allComments"

@@ -5,7 +5,7 @@
       <TitleHeaderDashboard v-bind:title="'Mes 2 dernières fiction'" />
       <div class="card-body">
         <div v-for="(game, index) in GamesAndFictions" :key="index">
-          <div v-for="(fiction, index) in game.Fiction" :key="index" class="list-all-fictions-globale--container">
+          <div v-for="(fiction, index) in game.Fiction" :key="index" class="display-flex-row list-all-fictions-globale--container">
             <div class="rond-image-illustration">
               <ImageRondDashboard v-bind:src="'/images/Fictions/' + fiction.Image" v-bind:alt="fiction.Image" />
             </div>
