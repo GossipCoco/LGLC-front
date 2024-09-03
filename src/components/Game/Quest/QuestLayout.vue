@@ -1,5 +1,5 @@
 <template>
-  <div class="dashboard-max-card-container  flex-one card one-quest-container">
+  <div class="dashboard-max-card-container background-color-main-lineart flex-one card one-quest-container">
     <CardHeader v-bind:Title="'Liste des quêtes à réaliser'" />
     <Spinner v-if="showspinner" />
     <div v-if="!showspinner" class="row list-fiction-card-container">

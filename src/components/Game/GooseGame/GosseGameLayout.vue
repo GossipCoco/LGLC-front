@@ -1,19 +1,23 @@
 <template>
-    <div id="goose-game" class="dashboard-max-card-container  flex-one card display-flex-column fiction-container">
+    <div id="goose-game" class="dashboard-max-card-container background-color-main-lineart flex-one card display-flex-column fiction-container">
         <CardHeader v-bind:Title="'Jeu de l\'oie'" />
         <div class="row list-fiction-card-container game-map-container-global">
-            <div class="game-map-container">
+          <div class="col-6">
+            <div class="game-map-container">             
                 <img src="/images/Game/Forest.OS-2.webp" alt="Map" class="game-map">
                 <div v-for="(square, index) in squares" :key="index" class="game-square"
                     :style="{ top: square.y + 'px', left: square.x + 'px' }" @click="moveCatToSquare(square)"></div>
                 <img v-for="cat in cats" :key="cat.id" :src="cat.image"
                     :style="{ top: cat.position.y + 'px', left: cat.position.x + 'px' }" class="game-cat">
             </div>
+          </div>
+          <div class="col-6">
             <div class="dice-container">
                 <button @click="rollDice">Lancer le dé</button>
                 <p>Résultat du dé: {{ diceResult }}</p>
                 <p>Joueur actuel: {{ currentPlayerIndex + 1 }}</p>
             </div>
+          </div>
         </div>
     </div>
 </template>

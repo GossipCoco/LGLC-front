@@ -1,5 +1,5 @@
 <template>
-  <div class="dashboard-max-card-container card">
+  <div class="dashboard-max-card-container background-color-main-lineart card">
     <div class="display-flex-row game-container">
       <div class="button-container">
         <div class="d-grid gap-2 col-12 mx-auto">
