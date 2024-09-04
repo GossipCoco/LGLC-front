@@ -119,7 +119,6 @@ th {
     font-family: var(--roboto-text);
     font-variant: small-caps;
 }
-
 .dashboard-max-card-container {
     background:  var(--linear-greendark-clear);
     padding: 20px;
