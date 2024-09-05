@@ -7,7 +7,7 @@
           <div class="col-12">
             <InputTitle v-bind:Title="'Titre de la fiction'" @input-title="InputTitle"/>
             <div class="row">
-              <!-- <SelectCharacterComponent
+              <SelectCharacterComponent
                 v-bind:For="'FirstCharacterId'"
                 v-bind:label="'Sélectionner un personnage'"
                 v-bind:characterId="form.FirstCharacterId"
@@ -20,7 +20,7 @@
                 v-bind:characterId="form.SecondCharacterId"
                 v-bind:characters="characters"
                 @form-character="handleSecondCharacterChange"
-              /> -->
+              />
             </div>
             <TextAreaComponent
               v-bind:Title="'Résumé de la fiction'"
