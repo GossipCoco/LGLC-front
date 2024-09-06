@@ -38,6 +38,8 @@
               backgroundRepeat: 'no-repeat',
               backgroundSize: 'cover',
               zIndex: layer.Position,
+              //transform: `translateZ(${translateZ})` `translateY(${translateY})` `translateX(${translateX})`  `scale(${scale})`
+              transform: `translateZ(${layer.translateZ}) translateY(${layer.translateY}) translateX(${layer.translateX}) scale(${layer.scale})`
             }"
             class="parallax-layer"
           ></div>
@@ -61,6 +63,10 @@ export default {
       url: null,
       layers: [],
       showReward: false,
+      translateZ: null,
+      translateY: null,
+      translateX: null,
+      scale: null
     };
   },
   created() {
@@ -82,7 +88,12 @@ export default {
           this.layers = response.data.ob.QuestParallaxes.map((item) => ({
             Image: `/images/parallax/${item.Parallax.Image}`,
             Position: item.Parallax.Position,
+            translateZ: item.Parallax.translateZ,
+            translateY: item.Parallax.translateY,
+            translateX: item.Parallax.translateX,
+            scale: item.Parallax.scale,
           }));
+          console.log(this.layers)
         })
         .catch((err) => {
           console.log(err);

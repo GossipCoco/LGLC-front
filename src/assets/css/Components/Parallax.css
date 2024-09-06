@@ -34,19 +34,19 @@
   transition: transform 1s ease;
 }
 
-#quest-by-id .parallax-layer:nth-child(1) {
+/* #quest-by-id .parallax-layer:nth-child(1) {
   transform: translateZ(-13rem) translateY(10rem) scale(2.5);
-}
+} */
 
 #quest-by-id .parallax-layer:nth-child(2) {
-  transform: translateZ(-6rem) translateY(8rem) scale(2);
+  transform: translateZ(-5rem) translateY(14rem) scale(1.25);
 }
 
 #quest-by-id .parallax-layer:nth-child(3) {
-  transform: translateZ(-4rem) translateZ(3rem) translateY(6rem) scale(1.25);
+  transform: translateZ(-4rem)  translateY(1rem) scale(1.5);
 }
 #quest-by-id .parallax-layer:nth-child(4) {
-  transform: translateZ(-3rem) translateZ(-8rem) translateY(30rem) scale(1.25)
+  transform: translateZ(-3rem)  translateY(-30rem) scale(1.25)
 }
 #quest-by-id .parallax-layer:nth-child(5){
   transform: translateZ(-3rem) translateZ(-8rem) translateY(30rem) scale(1.25)
