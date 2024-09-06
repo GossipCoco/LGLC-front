@@ -213,7 +213,6 @@ main.container-fluid {
     color: rgba(var(--main-white), 1)
 }
 .illustration-background .background-fiction-contain{
-    background-size: cover;
     background-repeat: no-repeat;
     height: 38rem;
     display: flex;

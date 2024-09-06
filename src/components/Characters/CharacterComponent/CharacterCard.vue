@@ -3,7 +3,7 @@
     <div
       v-for="(character, index) in characters_props"
       :key="index"
-      class="character-card card flex-one"
+      class="character-card background-size-cover card flex-one"
     >
       <character-text v-bind:character="character" />
     </div>

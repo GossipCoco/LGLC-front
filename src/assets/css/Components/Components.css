@@ -17,7 +17,6 @@
 
 /* CARD */
 .card-image{
-    justify-content: center;
     background-size: cover;
 }
 .card-image img{

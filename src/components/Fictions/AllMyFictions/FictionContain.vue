@@ -35,7 +35,7 @@
           <div class="display-flex-row character-chapters-container">
             <div v-if="nbIllus > 0">
               <div class="illustration-background" v-for="(illus, index) in illustration" :key="index">
-                <div :style="{ backgroundImage:'url(/images/Fictions/' + illus.IllustrationId + ')'}" class="background-fiction-contain">
+                <div :style="{ backgroundImage:'url(/images/Fictions/' + illus.IllustrationId + ')'}" class="background-size-cover background-fiction-contain">
                   <ListOfChapter
                     v-bind:AuthorId="AuthorId"
                     v-bind:usrCurrent="usrCurrent"

@@ -1,7 +1,7 @@
 <template>
   <div class="character-list-wrapper display-flex-column">
     <div
-      class="card-image"
+      class="background-size-cover card-image"
       v-bind:style="{
         backgroundImage:
           'url(/images/Backgrounds/' + character.Clan.Image + ')',
