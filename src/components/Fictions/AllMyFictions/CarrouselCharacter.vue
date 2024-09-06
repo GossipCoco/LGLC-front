@@ -2,7 +2,7 @@
   <div>
     <Carousel>
       <Slide v-for="(character, slide) in Characters" :key="slide">
-        <div class="carousel__item">
+        <div class="display-flex-column carousel__item">
           {{character.Character.CurrentName}}
             <img
               class="img-fluid"

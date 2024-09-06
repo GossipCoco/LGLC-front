@@ -27,3 +27,6 @@
 .background-color-main-lineart{
     background: var(--linear-greendark-clear);
 }
+.background-size-cover{
+    background-size: cover
+}
