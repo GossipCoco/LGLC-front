@@ -38,7 +38,7 @@
   transform: translateZ(-13rem) translateY(10rem) scale(2.5);
 } */
 
-#quest-by-id .parallax-layer:nth-child(2) {
+/* #quest-by-id .parallax-layer:nth-child(2) {
   transform: translateZ(-5rem) translateY(14rem) scale(1.25);
 }
 
@@ -50,7 +50,7 @@
 }
 #quest-by-id .parallax-layer:nth-child(5){
   transform: translateZ(-3rem) translateZ(-8rem) translateY(30rem) scale(1.25)
-}
+} */
 #quest-by-id .chat-image {
   position: absolute;
   z-index: 4;
