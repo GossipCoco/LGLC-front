@@ -103,9 +103,9 @@ export default {
       const layers = document.querySelectorAll(".parallax-layer");
       const scrollTop = window.scrollY;
       layers.forEach((layer, index) => {
-        const speed = (index + 1) * 0.25;
+        const speed = (index + 1) * 0.75;
         const yPos = -(scrollTop * speed);
-        layer.style.transform = `translate3d(0px, ${yPos}px, 0px)`;
+        layer.style.transform = `translate3d(0rem, ${yPos}px, 0rem)`;
       });
     },
     showToast() {
