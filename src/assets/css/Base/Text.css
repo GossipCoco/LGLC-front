@@ -128,3 +128,7 @@ a {
   font-family: 'Roboto';
   color: rgba(var(--main-white), 1)
 }
+.informations-gamer-container{
+  height: 85vh;
+  overflow-y: scroll;
+}
