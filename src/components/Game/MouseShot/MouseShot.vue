@@ -42,6 +42,7 @@
 <script>
 import CardHeader from "../../Components/GenericComponent/CardHeader.vue";
 // import PointService from '../../../services/PointService';
+import EventService from '../../../services/EventService';
 export default {
   name: "MouseShot",
   components: { CardHeader },
@@ -102,11 +103,22 @@ export default {
             ) < 100
           ) {
             this.score++;
+            console.log("score :", this.score);
           }
         }
         //
       }, 10);
-      console.log("score :", this.score);
+      const results = {
+        foundTreasures: "ShotMouse",
+        points: this.score
+      };
+      EventService.saveGameResults(this.$store.state.auth.user.usrID, results)
+        .then(response => {
+          console.log('Results saved:', response.data);
+        })
+        .catch(error => {
+          console.error('Error saving results:', error);
+        });
     },
     handleKeyPress(event) {
       if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
