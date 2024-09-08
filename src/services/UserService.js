@@ -6,6 +6,9 @@ class UserService {
     getUserById(id){
         return http.get(`/user/${id}`)
     }
+    GetUserByUsername(id){
+        return http.get(`/user/UserName/${id}`)
+    }
     GetMessageByReceiverId(id, data){
         console.log(id, data)
         return http.post(`/user/GetMessageByReceiverId/${id}`, data)
