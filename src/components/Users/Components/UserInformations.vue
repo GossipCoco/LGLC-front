@@ -1,10 +1,10 @@
 <template>
   <div class="padding-2-rem">
     <div class="display-flex-column">
-      <p class="user-information-paragraph">
+      <div class="user-information-paragraph">
         {{ usrInformation.LastName }} {{ usrInformation.FirstName }} -
         {{ usrInformation.UserName }}
-      </p>
+      </div>
       <p class="user-information-paragraph">{{ usrInformation.Description }}</p>
       <p class="user-information-paragraph">
         {{ usrInformation.Biography }} <br />
