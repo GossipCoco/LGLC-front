@@ -124,3 +124,7 @@ a {
   display: flex;
   flex-direction: row;
 }
+.user-information-paragraph{
+  font-family: 'Roboto';
+  color: rgba(var(--main-white), 1)
+}
