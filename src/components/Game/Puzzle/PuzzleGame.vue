@@ -19,8 +19,15 @@
         </button>
       </div>
       <div class="puzzle-global-game">
-        <div v-if="isSolved" class="congrats-message">
-          Félicitations! Vous avez réussi le puzzle.
+        <div class="alert alert-success" role="alert">
+          <div v-if="isSolved" class="congrats-message">
+            Félicitations! Vous avez réussi le puzzle. Vous avez gagné
+            {{ points }} points en {{ elapsedTime }} secondes.
+          </div>
+          <div v-else>
+            <p>Temps écoulé : {{ elapsedTime }} secondes</p>
+            <p>Points actuels : {{ points }}</p>
+          </div>
         </div>
         <div class="puzzle-container" :style="containerStyle">
           <div
@@ -58,6 +65,11 @@ export default {
       imageHeight: 0,
       draggedIndex: null,
       isSolved: false,
+      startTime: null, // Pour enregistrer l'heure de début
+      elapsedTime: 0, // Temps écoulé en secondes
+      timerInterval: null, // Référence pour le setInterval du timer
+      points: 1000, // Points de départ
+      pointReductionRate: 10, // Réduction des points par seconde
     };
   },
   created() {
@@ -81,23 +93,28 @@ export default {
     },
   },
   methods: {
-    GetAllIllustrations() {
-      ImageService.GetAllIllustrations()
-        .then((response) => {
-          this.imagesByRequest = response.data.ob.map(
-            (item) => "/images/Fictions/" + item.Id
-          );
-        })
-        .catch((err) => {
-          console.error(err);
-        });
+    startTimer() {
+      this.startTime = Date.now();
+      this.timerInterval = setInterval(() => {
+        const currentTime = Date.now();
+        this.elapsedTime = Math.floor((currentTime - this.startTime) / 1000);
+        this.calculatePoints();
+      }, 1000); // Mise à jour toutes les secondes
     },
-    getRandomImage() {
-      const randomIndex = Math.floor(
-        Math.random() * this.imagesByRequest.length
+
+    stopTimer() {
+      clearInterval(this.timerInterval);
+      this.timerInterval = null;
+    },
+
+    calculatePoints() {
+      this.points = Math.max(
+        0,
+        1000 - this.elapsedTime * this.pointReductionRate
       );
-      return this.imagesByRequest[randomIndex];
     },
+
+    // Appeler startTimer au début du jeu
     createPieces() {
       this.pieces = [];
       this.shuffledPieces = [];
@@ -123,7 +140,37 @@ export default {
       }
       this.shuffledPieces = [...this.pieces];
       this.shufflePieces();
+      this.startTimer(); // Démarrer le timer quand les pièces sont prêtes
     },
+
+    // Appeler stopTimer quand le puzzle est résolu
+    checkIfSolved() {
+      this.isSolved = this.shuffledPieces.every((piece, index) => {
+        const correctPiece = this.pieces[index];
+        return piece.row === correctPiece.row && piece.col === correctPiece.col;
+      });
+      if (this.isSolved) {
+        this.stopTimer(); // Arrêter le timer si le puzzle est résolu
+      }
+    },
+    GetAllIllustrations() {
+      ImageService.GetAllIllustrations()
+        .then((response) => {
+          this.imagesByRequest = response.data.ob.map(
+            (item) => "/images/Fictions/" + item.Id
+          );
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+    },
+    getRandomImage() {
+      const randomIndex = Math.floor(
+        Math.random() * this.imagesByRequest.length
+      );
+      return this.imagesByRequest[randomIndex];
+    },
+
     shufflePieces() {
       this.shuffledPieces = this.shuffledPieces.sort(() => Math.random() - 0.5);
       this.isSolved = false;
@@ -141,12 +188,7 @@ export default {
       this.draggedIndex = null;
       this.checkIfSolved();
     },
-    checkIfSolved() {
-      this.isSolved = this.shuffledPieces.every((piece, index) => {
-        const correctPiece = this.pieces[index];
-        return piece.row === correctPiece.row && piece.col === correctPiece.col;
-      });
-    },
+
     changeImage() {
       this.selectedImage = this.getRandomImage();
       this.loadImage(this.selectedImage);
