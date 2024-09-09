@@ -2,7 +2,7 @@
   <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12  card-global">
     <div class="card fiction-card">
       <TitleHeaderDashboard v-bind:title="'Personnages aléatoires'"/>
-      <div class="card-body dashboard-character-container">
+      <div class="card-body display-flex-column">
         <div class="row">
           <div class="col-12 character-col">
             <div class="character-l1" v-for="character in randomCharacters" :key="character.Id">

@@ -224,9 +224,6 @@
 .character-container h3 {
     font-variant: small-caps;
 }
-.character-list-wrapper {
-    align-items: center;
-}
 .card.card-image-layout.clan-detail-layout.mb-3 {
     width: 95rem;
     border-radius: 20px 0 0 20px;
