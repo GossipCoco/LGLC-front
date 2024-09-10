@@ -360,6 +360,8 @@ li.quest-container {
 }
 .card-header.quest-title {
     justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 .card-body.one-quest {
     height: 25rem;
