@@ -8,15 +8,15 @@
     />
     <spinner v-if="showspinner" />
     <AllCardsFictions v-else v-bind:games="games" />
-  </div>
-  <div class="row pagination-container">
-    <Pagination
-      v-if="!showspinner"
-      :nav="nav"
-      :filters="filters"
-      :getDatas="'GamesPagination'"
-      @GamesPagination="GamesPagination"
-    />
+    <div class="row pagination-container">
+      <Pagination
+        v-if="!showspinner"
+        :nav="nav"
+        :filters="filters"
+        :getDatas="'GamesPagination'"
+        @GamesPagination="GamesPagination"
+      />
+    </div>
   </div>
 </template>
 <script>

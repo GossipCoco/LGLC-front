@@ -19,36 +19,24 @@
     border-radius: 12px;
     background-repeat: no-repeat;
 }
-
-.carousel__item {
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-}
-
 .character-details-router {
     text-align: justify;
 }
-
 .carousel__item img {
     width: 120px;
 }
-
 th {
     font-weight: 200;
 }
-
 .title-dashboard-container {
     flex: 1;
     justify-content: right;
     text-align: right;
 }
-
 .bottom-dashboard .card {
     height: 40vh;
     margin: 1rem auto;
 }
-
 .chapter-image-content,
 .chapter-text-content {
     flex: 1
@@ -90,18 +78,15 @@ th {
     font-weight: 600;
     font-family: 'Montserrat';
 }
-
 .card-header.fiction-chapter-container h3 {
     margin-left: 2rem;
     font-variant: small-caps;
 }
-
 .character-chapters-fiction-container {
     margin: 0rem 0 0 2rem;
     text-align: justify;
     width: 75rem;
 }
-
 .link-to-fiction-text {
     font-family: var(--roboto-text);
     font-variant: small-caps;
@@ -112,11 +97,9 @@ th {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(var(--main-black), 0.1);
 }
-
 .chapter-title-content {
     text-align: center;
 }
-
 .chapter-title {
     font-size: 2em;
     color: rgba(var(--main-white), 1);
@@ -124,36 +107,31 @@ th {
     font-family: 'Cinzel';
     font-size: 3rem;
 }
-
 .chapter-global-content {
     height: 70vh;
 }
-
 .chapter-image-content {
     margin: 0;
     flex: 1;
     background-size: cover;
-    background-position: 35%;
+    background-position: 50%;
     border-radius: 1rem 0 0 1rem;
-    height: 70vh;
+    height: 67vh;
 }
-
 .chapter-text-content {
     flex: 2;
     overflow: auto;
-    height: 39.75rem;
+    height: 38rem;
     padding: 1rem;
     background-color: rgba(var(--main-white), 1);
     border-radius: 0 0 3rem 0;
     box-shadow: inset 0 0 10px rgba(var(--main-black), 0.1);
 }
-
 .chapter-text-content p {
     line-height: 1.6;
     font-size: 1.1em;
     color: rgba(var(--main-black), 1);
 }
-
 .chapter-button-content {
     margin: 2rem 0 2rem 0;
     gap: 2rem;
@@ -161,20 +139,15 @@ th {
     align-content: center;
     justify-content: right;
 }
-
 .character-chapters-fiction-container .character-chapters-container {
     width: 75rem;
 }
-
 .illustration-background {
     width: 75rem;
 }
 .all-chapters-list-container {    
     width: 40rem;
     padding: 1rem;
-    justify-content: left;
-    align-content: center;
-    align-items: center;
 }
 .character-chapters-container img {
     width: 50%;

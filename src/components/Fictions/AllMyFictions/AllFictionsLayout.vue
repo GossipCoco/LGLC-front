@@ -1,31 +1,53 @@
 <template>
-  <div class="dashboard-max-card-container background-color-main-lineart flex-one card display-flex-column fiction-container">
+  <div
+    class="dashboard-max-card-container background-color-main-lineart flex-one card display-flex-column fiction-container"
+  >
     <CardHeader v-bind:Title="'Lire toutes mes fictions'" />
-    <SearchBarComponent />
-    <AllCardsFictions v-bind:games="games" />
-    <div class="row pagination-container">
-      <div class="row bottom-top-dashboard">
-        <Spinner v-if="showspinner"/>
+    <div class="card-body">
+      <SearchBarComponent 
+        v-bind:For="'SearchCharacter'"
+        v-bind:label="'Sélectionner un personnage'"
+        v-bind:characters="characters"
+        @form-character="getSearchedCharacter"
+      />
+      <AllCardsFictions v-bind:games="games" />
+      <div class="row pagination-container">
+        <div class="row bottom-top-dashboard">
+          <Spinner v-if="showspinner" />
+        </div>
+        <Pagination
+          v-if="!showspinner"
+          v-bind:nav="nav"
+          v-bind:filters="filters"
+          v-bind:getDatas="'GamesPagination'"
+          @GamesPagination="GamesPagination"
+        />
       </div>
-      <Pagination v-if="!showspinner"  v-bind:nav="nav" v-bind:filters="filters" v-bind:getDatas="'GamesPagination'"
-        @GamesPagination="GamesPagination" />
     </div>
   </div>
 </template>
 <script>
-import GameService from '../../../services/GameService'
-import CardHeader from '../../Components/GenericComponent/CardHeader.vue';
-import SearchBarComponent from '../Components/SearchBarComponent.vue';
-import Pagination from '../../Components/GenericComponent/Pagination.vue';
-import AllCardsFictions from './AllCardsFictions.vue';
-import Spinner from '../../Components/GenericComponent/Spinner.vue';
+import CharacterService from "../../../services/CharacterService";
+import GameService from "../../../services/GameService";
+import CardHeader from "../../Components/GenericComponent/CardHeader.vue";
+import SearchBarComponent from "../Components/SearchBarComponent.vue";
+import Pagination from "../../Components/GenericComponent/Pagination.vue";
+import AllCardsFictions from "./AllCardsFictions.vue";
+import Spinner from "../../Components/GenericComponent/Spinner.vue";
 
 export default {
-  name: 'GameLayout',
-  components: { Pagination, SearchBarComponent, AllCardsFictions, CardHeader, Spinner },
+  name: "GameLayout",
+  components: {
+    Pagination,
+    SearchBarComponent,
+    AllCardsFictions,
+    CardHeader,
+    Spinner,
+  },
   data() {
     return {
       usrId: this.$store.state.auth.user.usrID,
+      characters: {},
       NbAllMyGamesFictions: 0,
       games: [],
       filters: [],
@@ -39,8 +61,21 @@ export default {
   },
   created() {
     this.initData();
+    this.GetAllNamesAndIdsCharacters();
   },
   methods: {
+    getSearchedCharacter(e) {
+      console.log(e);
+    },
+    GetAllNamesAndIdsCharacters() {
+      CharacterService.GetAllNamesAndIdsCharacters()
+        .then((response) => {
+          this.characters = response.data.ob;
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+    },
     async initData() {
       this.showspinner = true;
       await this.countAllGames();
@@ -53,7 +88,9 @@ export default {
     },
     async countAllGames() {
       try {
-        const response = await GameService.CountAllMyFictions(this.$store.state.auth.user.usrID);
+        const response = await GameService.CountAllMyFictions(
+          this.$store.state.auth.user.usrID
+        );
         // console.log(response.data)
         this.NbAllMyGamesFictions = response.data.ob;
         // console.log(this.NbAllMyGamesFictions)
@@ -64,13 +101,16 @@ export default {
     },
     async getAllGames(nav) {
       try {
-        const response = await GameService.getAllGamesByUser(this.$store.state.auth.user.usrID, nav);
+        const response = await GameService.getAllGamesByUser(
+          this.$store.state.auth.user.usrID,
+          nav
+        );
         this.games = response.data.ob;
         // console.log(this.games)
       } catch (error) {
         console.error(error);
       }
-    }
-  }
-}
+    },
+  },
+};
 </script>

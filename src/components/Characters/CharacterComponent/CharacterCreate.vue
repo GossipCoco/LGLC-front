@@ -1,6 +1,6 @@
 <template>
     <div class="display-flex-column form-character-container-global flex-one">
-        <div class="card display-flex-column card-form-create-character flex-one mb-12">
+        <div class="card display-flex-column card-form-create-character align-items-content-justify-content flex-one mb-12">
             <CardHeader v-bind:Title="'Création de personnage'" />
             <div class="card-body">
                 <form class="create-character-form" @submit.stop.prevent="onSubmit">
@@ -18,8 +18,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <label for="inputName" class="form-label">Nom actuel du personnage</label>
-                                    <input type="text" class="form-control" id="inputName" v-model="form.CurrentName"
-                                        required>
+                                    <input type="text" class="form-control" id="inputName" v-model="form.CurrentName" required>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="inputGrade" class="form-label">Grade</label>
