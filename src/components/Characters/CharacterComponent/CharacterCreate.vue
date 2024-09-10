@@ -18,8 +18,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <label for="inputName" class="form-label">Nom actuel du personnage</label>
-                                    <input type="text" class="form-control" id="inputName" v-model="form.CurrentName"
-                                        required>
+                                    <input type="text" class="form-control" id="inputName" v-model="form.CurrentName" required>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="inputGrade" class="form-label">Grade</label>

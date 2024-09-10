@@ -133,15 +133,15 @@ th {
     margin: 0;
     flex: 1;
     background-size: cover;
-    background-position: 35%;
+    background-position: 50%;
     border-radius: 1rem 0 0 1rem;
-    height: 70vh;
+    height: 67vh;
 }
 
 .chapter-text-content {
     flex: 2;
     overflow: auto;
-    height: 39.75rem;
+    height: 38rem;
     padding: 1rem;
     background-color: rgba(var(--main-white), 1);
     border-radius: 0 0 3rem 0;

@@ -23,9 +23,10 @@
             Compléter la quête
           </button>
           <div v-if="showReward" class="reward-message">
-            <p>Félicitations ! Vous avez gagné 100 points !</p>
+            <div class="alert alert-success" role="alert">
+              <p>Félicitations ! Vous avez gagné 100 points !</p>
+            </div>
           </div>
-          
         </div>
       </card-header>
       <div class="card-body">
@@ -37,9 +38,8 @@
               backgroundImage: `url(${layer.Image})`,
               backgroundRepeat: 'no-repeat',
               backgroundSize: 'cover',
-              zIndex: layer.Position,
-              //transform: `translateZ(${translateZ})` `translateY(${translateY})` `translateX(${translateX})`  `scale(${scale})`
-              transform: `translateZ(${layer.translateZ}) translateY(${layer.translateY}) translateX(${layer.translateX}) scale(${layer.scale})`
+              zIndex: layer.Position,             
+              transform: `translateZ(${layer.translateZ}) translateY(${layer.translateY}) translateX(${layer.translateX}) scale(${layer.scale})`,
             }"
             class="parallax-layer"
           ></div>
@@ -66,7 +66,7 @@ export default {
       translateZ: null,
       translateY: null,
       translateX: null,
-      scale: null
+      scale: null,
     };
   },
   created() {
@@ -93,7 +93,7 @@ export default {
             translateX: item.Parallax.translateX,
             scale: item.Parallax.scale,
           }));
-          console.log(this.layers)
+          console.log(this.layers);
         })
         .catch((err) => {
           console.log(err);
