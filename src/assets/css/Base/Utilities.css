@@ -46,3 +46,12 @@
     align-content: center;
     justify-content: center;
 }
+.overflowY-hidden{
+    overflow-y: hidden;
+}
+.overflowY-scroll{
+    overflow-y: scroll;
+}
+.overflowY-auto{
+    overflow-y: auto;
+}

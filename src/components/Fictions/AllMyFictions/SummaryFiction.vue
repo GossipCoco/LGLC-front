@@ -1,7 +1,13 @@
 <template>
   <div class="card-body">
-    <spinner v-if="showspinner"/>
-    <AllCardsFictions v-else v-bind:games="games" />    
+    <SearchBarComponent
+      v-bind:For="'SearchCharacter'"
+      v-bind:label="'Sélectionner un personnage'"
+      v-bind:characters="characters"
+      @form-character="getSearchedCharacter"
+    />
+    <spinner v-if="showspinner" />
+    <AllCardsFictions v-else v-bind:games="games" />
   </div>
   <div class="row pagination-container">
     <Pagination
@@ -14,15 +20,18 @@
   </div>
 </template>
 <script>
+import CharacterService from "../../../services/CharacterService";
+import SearchBarComponent from "../Components/SearchBarComponent.vue";
 import Pagination from "../../Components/GenericComponent/Pagination.vue";
 import GameService from "../../../services/GameService";
 import AllCardsFictions from "./AllCardsFictions.vue";
 import Spinner from "../../Components/GenericComponent/Spinner.vue";
 export default {
   name: "SummaryFiction",
-  components: { AllCardsFictions, Pagination, Spinner },
+  components: { AllCardsFictions, SearchBarComponent, Pagination, Spinner },
   data() {
     return {
+      characters: {},
       showspinner: false,
       usrId: "",
       NbAllMyGamesFictions: 0,
@@ -38,8 +47,21 @@ export default {
   created() {
     this.usrId = ""; // Assurez-vous de définir ou récupérer l'ID utilisateur
     this.initData();
+    this.GetAllNamesAndIdsCharacters();
   },
   methods: {
+    getSearchedCharacter(e) {
+      console.log(e);
+    },
+    GetAllNamesAndIdsCharacters() {
+      CharacterService.GetAllNamesAndIdsCharacters()
+        .then((response) => {
+          this.characters = response.data.ob;
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+    },
     truncateText(text, maxLength) {
       return text.length <= maxLength
         ? text

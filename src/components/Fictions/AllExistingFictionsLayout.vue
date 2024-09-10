@@ -5,10 +5,11 @@
   </div>
 </template>
 <script>
+
 import CardHeader from "../Components/GenericComponent/CardHeader.vue";
 import SummaryFiction from './AllMyFictions/SummaryFiction.vue';
 export default {
   name: "AllExistingFictionsLayout",
-  components: { CardHeader, SummaryFiction },  
+  components: { CardHeader, SummaryFiction},  
 };
 </script>
