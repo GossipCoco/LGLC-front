@@ -51,9 +51,14 @@
 .card-form-create-character .card-body{
     width: 100%;
     height: 70vh;
-    overflow-y: auto;
     overflow-x: hidden;    
     padding: 1rem;
+}
+.card-form-create-character .card-body{
+    overflow-y: auto;
+}
+.create-character-form{
+    overflow-y: hidden;
 }
 .create-character-form .text-area-container{
     height: 30rem;

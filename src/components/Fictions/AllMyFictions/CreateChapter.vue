@@ -6,17 +6,18 @@
       <TextAreaComponent v-bind:Title="'Rédigez votre chapitre'" @input-content="getContent"/>
       <div class="row">
         <LinkGenerateImage />
-        <div class="col-6">
+        <div class="col-4">
           <div class="mb-3">
             <label for="file" class="form-label">Image de couverture</label>
             <input type="file" class="form-control" @change="handleFileUpload" />
           </div>
         </div>
+        <div class="col-4"> <button type="button" class="btn btn-primary" @click="handleOk">Enregistrer</button></div>
       </div>
       <div class="row">
         <div class="col-11"></div>
         <div class="col-1  btn-validate-container">
-          <button type="button" class="btn btn-primary" @click="handleOk">Enregistrer</button>
+         
         </div>
       </div>
     </form>

@@ -28,7 +28,7 @@
             />
             <div class="row">
               <LinkGenerateImage />
-              <div class="col-4">
+              <div class="col-6">
                 <div class="mb-3">
                   <label for="file" class="form-label"
                     >Image de couverture</label
@@ -40,7 +40,7 @@
                   />
                 </div>
               </div>
-              <div class="col-4 display-flex button-validate-container">
+              <div class="col-2 display-flex button-validate-container">
                 <div class="mb-3">
                   <button type="submit" class="btn btn-primary">
                     Créer la fiction
@@ -62,7 +62,7 @@ import axios from "axios";
 import Config from "../../../../server";
 import CardHeader from "../../Components/GenericComponent/CardHeader.vue";
 import InputTitle from "../../Components/FormComponent/InputTitle.vue";
-// import SelectCharacterComponent from "../../Components/FormComponent/SelectCharacterComponent.vue";
+import SelectCharacterComponent from "../../Components/FormComponent/SelectCharacterComponent.vue";
 import TextAreaComponent from "../../Components/FormComponent/TextAreaComponent.vue";
 import LinkGenerateImage from "../../Components/FormComponent/LinkGenerateImage.vue";
 
@@ -72,7 +72,7 @@ export default {
     CardHeader,
     InputTitle,
     TextAreaComponent,
-    // SelectCharacterComponent,
+    SelectCharacterComponent,
     LinkGenerateImage,
   },
   inject: ["user"],

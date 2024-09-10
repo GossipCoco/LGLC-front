@@ -18,6 +18,11 @@
             ><img src="/images/Logos/firefly.svg"
           /></a>
         </div>
+        <div class="logo"> <a target="_blank" href="https://app.leonardo.ai/"
+          >
+          <img src="/images/Logos/leonardo-logo.webp" >
+          </a>
+        </div>
       </div>
     </div>
   </div>
