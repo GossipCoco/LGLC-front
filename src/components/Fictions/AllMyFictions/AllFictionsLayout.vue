@@ -1,6 +1,7 @@
 <template>
   <div class="dashboard-max-card-container background-color-main-lineart flex-one card display-flex-column fiction-container">
     <CardHeader v-bind:Title="'Lire toutes mes fictions'" />
+    <SearchBarComponent />
     <AllCardsFictions v-bind:games="games" />
     <div class="row pagination-container">
       <div class="row bottom-top-dashboard">
@@ -15,13 +16,14 @@
 <script>
 import GameService from '../../../services/GameService'
 import CardHeader from '../../Components/GenericComponent/CardHeader.vue';
+import SearchBarComponent from '../Components/SearchBarComponent.vue';
 import Pagination from '../../Components/GenericComponent/Pagination.vue';
 import AllCardsFictions from './AllCardsFictions.vue';
 import Spinner from '../../Components/GenericComponent/Spinner.vue';
 
 export default {
   name: 'GameLayout',
-  components: { Pagination, AllCardsFictions, CardHeader, Spinner },
+  components: { Pagination, SearchBarComponent, AllCardsFictions, CardHeader, Spinner },
   data() {
     return {
       usrId: this.$store.state.auth.user.usrID,
