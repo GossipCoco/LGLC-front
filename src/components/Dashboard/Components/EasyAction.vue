@@ -5,7 +5,7 @@
         <h4>Actions rapides</h4>
       </div>
       <div class="card-body">
-        <div class="btn-container">
+        <div class="display-flex-column flex-one">
         <router-link to="/CharacterCreate" type="button" class="btn btn-primary">
           Créer un nouveau personnage
         </router-link>

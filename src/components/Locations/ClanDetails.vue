@@ -1,18 +1,39 @@
 <template>
-  <div class="card card-image-layout  clan-detail-layout display-flex-row mb-3">
-    <div class="card-image clan-detail-card" v-bind:style="{
-      backgroundImage: 'url(/images/Backgrounds/' + clan.Image + ')',
-    }"></div>
+  <div class="card card-image-layout clan-detail-layout display-flex-row mb-3">
+    <div
+      class="card-image clan-detail-card"
+      v-bind:style="{
+        backgroundImage: 'url(/images/Backgrounds/' + clan.Image + ')',
+      }"
+    ></div>
     <div class="card-body">
       <h5 class="card-title">{{ clan.Name }}</h5>
       <div class="card-text">
         <p>{{ clan.Description }}</p>
-        <div class="display-flex-row flex-one all-characters-list-containers">
-          <div class="flex-one display-flex-column" v-for="(character, index) in clan.Warriors" :key="index">
-            <div class="display-flex-column flex-one indivual-caracter-container">
-              <img class="img-fluid" :src="'/images/Characters/' + character.Character.Image"
-                :alt="character.Character.Image" /><br>
-              <p>{{ character.Character.CurrentName }}</p>
+        <div
+          class="display-flex-row flex-one align-items-content-justify-content all-characters-list-containers"
+        >
+          <div
+            class="flex-one display-flex-column"
+            v-for="(character, index) in clan.Warriors"
+            :key="index"
+          >
+            <div
+              class="display-flex-column flex-one indivual-caracter-container"
+            >
+              <img
+                class="img-fluid"
+                :src="'/images/Characters/' + character.Character.Image"
+                :alt="character.Character.Image"
+              /><br />
+
+              <router-link
+                :to="'/characterDetails/' + character.Character.Id"
+                type="button"
+                class="btn"
+              >
+                {{ character.Character.CurrentName }}
+              </router-link>
             </div>
           </div>
         </div>
@@ -29,11 +50,11 @@ export default {
       url: "",
       clan: {},
       CurrentName: null,
-      Image: null
+      Image: null,
     };
   },
   created() {
-    this.url = this.$route.params.id
+    this.url = this.$route.params.id;
   },
   mounted() {
     this.getClan();
