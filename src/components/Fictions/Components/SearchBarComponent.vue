@@ -1,6 +1,6 @@
 <template>
   <div class="row">
-    <div class="col-2">
+    <div class="col-4">
       <SelectCharacterComponent
         v-bind:For="'SearchCharacter'"
         v-bind:label="'Chercher un personnage'"       
@@ -9,11 +9,8 @@
       />
       <!-- {{ characters }} -->
     </div>
-    <div class="col-2"></div>
-    <div class="col-2"></div>
-    <div class="col-2"></div>
-    <div class="col-2"></div>
-    <div class="col-2">
+    <div class="col-4"></div>
+    <div class="col-4">
       <button type="button" class="btn btn-primary">Rechercher</button>
     </div>
   </div>
@@ -30,8 +27,8 @@ export default {
     };
   },
   methods: {
-    getCharacter() {
-      this.$emit("form-character", this.CharacterId);
+    getCharacter(CharacterId) {
+      this.$emit("form-character", CharacterId);
     },
   },
 };

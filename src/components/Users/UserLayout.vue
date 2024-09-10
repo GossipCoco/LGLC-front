@@ -4,9 +4,9 @@
       <div class="col-12">
         <div class="flex-one profil-user-card card">
           <div class="card-body display-flex-row">
-            <div class="display-flex-column avatar-container">
+            <div class="display-flex-column align-items-content-justify-content avatar-container">
               <h2>{{ Role }}</h2>
-              <img :src="'/images/Avatars/' + form.Avatar" /><br>
+              <img class="align-items-content-justify-content" :src="'/images/Avatars/' + form.Avatar" /><br>
               <label class="btn btn-default p-0" for="upload-avatar">
                 <input id="upload-avatar" type="file" accept="image/png, image/jpeg, image/jpg" ref="file"
                   @change="selectImage" />
