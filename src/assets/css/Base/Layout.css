@@ -215,11 +215,6 @@ main.container-fluid {
     border-radius: 20px;
 }
 .illustration-background .background-fiction-contain .characters-list-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
     padding: 1rem 0 0 0;
 }
 .all-characters-of-fiction{
@@ -231,12 +226,14 @@ main.container-fluid {
     width: 150px;
 }
 .all-characters-list-container{
-    display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     overflow-x: auto;
     overflow-y: hidden;
 }
 .character-details-router{
     text-align: justify;
+}
+.all-characters-list-containers{
+    width: 90vh;
+    flex-wrap: wrap;
 }

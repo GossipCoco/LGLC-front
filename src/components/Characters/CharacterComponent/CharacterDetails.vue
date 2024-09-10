@@ -29,10 +29,10 @@
           <div class="col-8 col-md-8">
             <div class="card-body background-color-main-lineart details-infos-characters">
               <div class="row">
-                <div class="col-8">
-                  <h2 class="card-title">{{ currentName }}</h2>
+                <div class="col-10">
+                  <h1 class="card-title">{{ currentName }}</h1>
                 </div>
-                <div class="col-4">
+                <div class="col-2">
                   <p class="card-text">
                     <router-link
                       to="/allCharacters"
@@ -72,10 +72,13 @@
                         </table>
                       </div>
                       <div class="clan-logo-container">
-                        <img
+                        <router-link type="button" class="btn btn-primary" :to="'/clan/'+ClanId">
+                          <img
                           :src="'/images/clans/' + Symbol"
                           class="img-fluid"
                         />
+                      </router-link>
+
                       </div>
                     </div>
                     <div class="accordion" id="characterDetailsAccordion">
@@ -184,6 +187,7 @@ export default {
       personnality: null,
       NameClan: null,
       symboleClan: null,
+      ClanId: null,
     };
   },
   created() {},
@@ -209,8 +213,8 @@ export default {
       CharacterService.getCharacterByName(id)
         .then((response) => {
           this.character = response.data.ob;
-          console.log(this.character);
           this.Symbol = this.character.Clan.Symbol;
+          this.ClanId = this.character.Clan.Id
           this.NameClan = this.character.Clan.Name;
           this.image = response.data.ob.Image;
           this.background = response.data.ob.Clan.Image;
@@ -223,7 +227,6 @@ export default {
           this.description = response.data.ob.Description;
           this.Biography = response.data.ob.Biography;
           this.personnality = response.data.ob.Personnality;
-          console.log(this.personnality)
         })
         .catch((e) => {
           console.log(e);
