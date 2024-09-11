@@ -7,7 +7,7 @@
             <div class="parallax">
               <div class="parallax__layer parallax__layer--back">
                 <div
-                  class=" character-details-card background-size-coverdiaplay-flex background-size-cover card-image"
+                  class=" character-details-card background-size-cover diaplay-flex background-size-cover card-image border-card-color"
                   v-bind:style="{
                     backgroundImage:
                       'url(/images/Backgrounds/' + background + ')',
