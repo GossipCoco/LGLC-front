@@ -168,7 +168,6 @@
 }
 #accueil p.lead{
     text-align: justify;
-    font-family: var(--opensans-text);
 }
 .px-3 {
     padding-right: 0 !important;

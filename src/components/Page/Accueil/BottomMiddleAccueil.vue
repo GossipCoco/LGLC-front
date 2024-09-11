@@ -5,7 +5,7 @@
             <h2 class="featurette-heading fw-normal lh-1">
                 <span class="text-body-secondary">Un univers fascinant</span>
             </h2>
-            <p class="lead">
+            <p class="lead opensans-text">
                 Plongez-vous dans l'aventure passionnante des quatre clans de chats sauvages qui se
                 partagent la forêt des Quatre Chênes. Que vous soyez un fan de longue date de la série
                 d'Erin Hunter ou un nouveau venu curieux, notre application vous offre une expérience
@@ -29,7 +29,7 @@
             <h2 class="featurette-heading fw-normal lh-1">
                 <span class="text-body-secondary">Continuez l'aventure</span>
             </h2>
-            <p class="lead">
+            <p class="lead opensans-text">
                 Notre application ne se contente pas de vous offrir un espace de création. Pour les amateurs
                 de défis, découvrez nos jeux interactifs tels que le puzzle des clans ou l'attrape-souris,
                 conçus pour tester votre habileté et votre connaissance de l'univers de "La Guerre des
@@ -52,7 +52,7 @@
             <h2 class="featurette-heading fw-normal lh-1">
                 <span class="text-body-secondary">Rejoignez-nous dès aujourd'hui</span>
             </h2>
-            <p class="lead">
+            <p class="lead opensans-text">
                 Devenez une partie intégrante de l'univers de "La Guerre des Clans". Créez, jouez, et vivez
                 des aventures extraordinaires au cœur de la forêt des Quatre Chênes. Que les étoiles guident
                 vos pas !
