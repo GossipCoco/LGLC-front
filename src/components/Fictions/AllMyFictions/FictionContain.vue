@@ -1,18 +1,21 @@
 <template>
-  <div class="fiction-globale-container background-lineart card display-flex-column fiction-container flex-one opensans-text">
+  <div
+    class="fiction-globale-container background-lineart card display-flex-column fiction-container flex-one opensans-text"
+  >
     <div v-if="showspinner" class="d-flex justify-content-center">
       <div class="spinner-border text-success" role="status">
         <span class="visually-hidden">Loading...</span>
       </div>
     </div>
-
     <div
       id="card-display-flex-column fiction-container"
       class="card-header display-flex-row"
     >
       <Rating :fictionId="IdFiction" :rating="rating" />
       <div class="Comment-icon">
-        <router-link :to="'/CommentByFiction/'+Title"><img src="../../../../public/images/icons/comments-solid.svg" /></router-link>
+        <router-link :to="'/CommentByFiction/' + Title"
+          ><img src="../../../../public/images/icons/comments-solid.svg"
+        /></router-link>
       </div>
       <TitleFiction
         v-bind:Title="Title"
