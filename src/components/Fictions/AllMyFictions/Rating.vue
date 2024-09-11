@@ -1,5 +1,5 @@
 <template>
-  <div class="rating">
+  <div class="rating display-flex-column">
     <div class="rating-chiffre">
     <h4>{{ rating }} / 5</h4>
     </div>    

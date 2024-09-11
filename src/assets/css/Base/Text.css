@@ -22,8 +22,6 @@ a {
 .rating {
   width: 10rem;
   height: 4rem;
-  display: flex;
-  flex-direction: column;
 }
 .rating svg {
   flex: 1
