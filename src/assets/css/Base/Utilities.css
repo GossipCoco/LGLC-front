@@ -55,3 +55,9 @@
 .overflowY-auto{
     overflow-y: auto;
 }
+
+/* FONTS */
+
+.opensans-text{
+    font-family: var(--opensans-text);
+}

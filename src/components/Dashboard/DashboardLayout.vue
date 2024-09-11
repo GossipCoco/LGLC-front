@@ -1,5 +1,5 @@
 <template>
-  <div id ="dashboard" class="dashboard-home-max-card-container flex-one card">
+  <div id ="dashboard" class="dashboard-home-max-card-container flex-one card opensans-text">
     <div class="row title-dashboard">
       <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <TitleHeader v-if="!showspinner" v-bind:UserName="UserName" v-bind:Avatar="Avatar" v-bind:User="usrId" v-bind:NbMessages="Nbmessages"/>
@@ -19,7 +19,8 @@
         v-bind:totalWords="totalWordsV2" v-bind:totalPoints="totalPoints" />
     </div>
     <div class="row bottom-dashboard">
-      <Scheduler />
+      <!-- <Scheduler /> -->
+       <MusicPlayer />
       <Event />
       <CharacterRandom v-if="!showspinner" v-bind:randomCharacters="randomCharacters" />
     </div>
@@ -35,8 +36,9 @@ import LastFiveFiction from './Components/LastFiveFiction.vue';
 import ExtractLastChap from './Components/ExtractLastChap.vue';
 import CharacterRandom from './Components/CharacterRandom.vue';
 import ListAllFictions from './Components/ListAllFictions.vue';
-import Scheduler from './Components/Scheduler.vue';
+// import Scheduler from './Components/Scheduler.vue';
 import Event from './Components/Event.vue'
+import MusicPlayer from './Components/MusicPlayer.vue';
 
 export default {
   name: "DashboardLayout",
@@ -47,8 +49,9 @@ export default {
     TitleHeader,
     CharacterRandom,
     ListAllFictions,
-    Scheduler,
+    // Scheduler,
     Event,
+    MusicPlayer
   },
   data() {
     return {

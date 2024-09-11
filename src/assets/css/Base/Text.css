@@ -7,19 +7,14 @@ a {
   text-decoration: none;
 }
 .title-author-container h1 {
-  font-size: 2.5rem;
-  font-variant-caps: petite-caps;
-  font-weight: 500;
-  font-family: 'Cinzel';
+  font : 500 2.5rem 'Cinzel' petite-caps;
 }
 .info-fan .author-text {
   font-family: 'Montserrat';
 }
 .summaray-title-text p a {
   color: rgba(var(--clear-green-02), 1);
-  font-variant: small-caps;
-  font-size: 1.25rem;
-  font-weight: 600;
+  font: 600 1.25rem small-caps;
 }
 .summaray-title-text p a:hover {
   color: rgba(var(--active-hover), 1);
@@ -66,9 +61,7 @@ a {
   align-content: center;
 }
 .card-header h2 {
-  font-variant: all-petite-caps;
-  text-transform: capitalize;
-  font-size: 42px;
+  font: 42px capitalize all-petite-caps;
 }
 .user-info-text p span {
   font-weight: 600;
