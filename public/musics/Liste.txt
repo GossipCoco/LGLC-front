@@ -1,0 +1,52 @@
+ Le volume dans le lecteur C s'appelle Windows
+ Le num‚ro de s‚rie du volume est 0067-673B
+
+ R‚pertoire de C:\Users\gossi\OneDrive\Documents\project\Project-Warriors\front-app-v3\public\musics
+
+10/09/2024  15:09    <DIR>          .
+10/09/2024  15:04    <DIR>          ..
+31/07/2024  16:23         4ÿ628ÿ781 Etoile Bleue (1).mp3
+31/07/2024  16:23         5ÿ761ÿ197 Etoile Bleue.mp3
+31/07/2024  16:22         4ÿ073ÿ517 Etoile de Feu (1).mp3
+31/07/2024  16:22         4ÿ958ÿ829 Etoile de Feu (2).mp3
+31/07/2024  16:22         4ÿ388ÿ589 Etoile de Feu (3).mp3
+31/07/2024  16:23         4ÿ021ÿ677 Etoile de Feu (4).mp3
+31/07/2024  16:23         5ÿ242ÿ221 Etoile de Feu (5).mp3
+31/07/2024  16:21         4ÿ806ÿ189 Etoile de Feu.mp3
+31/07/2024  16:26         5ÿ761ÿ197 La destin‚e d'Etoile Bleue (1).mp3
+31/07/2024  16:26         3ÿ503ÿ277 La destin‚e d'Etoile Bleue (2).mp3
+31/07/2024  16:26         4ÿ876ÿ461 La destin‚e d'Etoile Bleue (3).mp3
+31/07/2024  16:26         5ÿ761ÿ197 La destin‚e d'Etoile Bleue.mp3
+31/07/2024  16:25         4ÿ792ÿ941 La Trag‚die de Fl‚au (1).mp3
+31/07/2024  16:25         4ÿ561ÿ389 La Trag‚die de Fl‚au (2).mp3
+31/07/2024  16:25         4ÿ204ÿ269 La Trag‚die de Fl‚au (3).mp3
+31/07/2024  16:25         3ÿ478ÿ509 La Trag‚die de Fl‚au.mp3
+31/07/2024  17:42         3ÿ655ÿ917 Le courage de Plume Grise (1).mp3
+31/07/2024  17:42         3ÿ471ÿ597 Le courage de Plume Grise.mp3
+31/07/2024  16:26         3ÿ749ÿ229 Le destin bris‚ de Fl‚au (1).mp3
+31/07/2024  16:25         4ÿ026ÿ861 Le destin bris‚ de Fl‚au.mp3
+10/09/2024  15:09                 0 Liste.txt
+13/07/2024  14:06                19 ListeFichiers.bat
+31/07/2024  16:23         5ÿ761ÿ197 L‚gendes des Clans (1).mp3
+31/07/2024  16:24         4ÿ005ÿ549 L‚gendes des Clans (2).mp3
+31/07/2024  16:23         2ÿ909ÿ997 L‚gendes des Clans.mp3
+31/07/2024  17:42         4ÿ105ÿ197 Plume Grise en Quˆte (1).mp3
+31/07/2024  17:41         3ÿ419ÿ757 Plume Grise en Quˆte.mp3
+31/07/2024  17:42         4ÿ272ÿ237 Princesse GuerriŠre (1).mp3
+31/07/2024  17:42         3ÿ101ÿ229 Princesse GuerriŠre.mp3
+31/07/2024  16:22         4ÿ463ÿ469 Romance toil‚e (1).mp3
+31/07/2024  16:22         5ÿ761ÿ197 Romance toil‚e (2).mp3
+31/07/2024  16:23         4ÿ439ÿ277 Romance toil‚e (3).mp3
+31/07/2024  16:22         5ÿ017ÿ581 Romance toil‚e.mp3
+31/07/2024  16:24         5ÿ095ÿ917 Tango des Trois Cours (1).mp3
+31/07/2024  16:24         4ÿ908ÿ717 Tango des Trois Cours (2).mp3
+31/07/2024  16:24         5ÿ761ÿ197 Tango des Trois Cours (3).mp3
+31/07/2024  16:24         3ÿ297ÿ069 Tango des Trois Cours (4).mp3
+31/07/2024  16:25         3ÿ985ÿ389 Tango des Trois Cours (5).mp3
+31/07/2024  16:24         3ÿ806ÿ829 Tango des Trois Cours.mp3
+31/07/2024  16:20         3ÿ375ÿ981 toile de Feu (1).mp3
+31/07/2024  16:20         3ÿ029ÿ229 toile de Feu (2).mp3
+31/07/2024  16:20         3ÿ494ÿ637 toile de Feu (3).mp3
+31/07/2024  16:19         4ÿ860ÿ909 toile de Feu.mp3
+              43 fichier(s)      178ÿ596ÿ424 octets
+               2 R‚p(s)  260ÿ792ÿ311ÿ808 octets libres
