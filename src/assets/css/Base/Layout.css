@@ -53,6 +53,8 @@ main.container-fluid {
 .profil-user-card {
     height: 600px;
     margin-top: 5rem;
+    padding: 10rem 0 0 0;
+    background: var(--linear-greendark-clear);
 }
 
 .profil-text-container {

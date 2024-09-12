@@ -169,9 +169,6 @@
     top: 15%;
     left: 15%
 }
-.profil-user-card {
-    background: var(--linear-greendark-clear);
-}
 .clan-card {
     width: 30rem;
     height: 20rem;
