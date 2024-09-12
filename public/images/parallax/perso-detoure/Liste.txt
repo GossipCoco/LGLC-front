@@ -1,70 +1,16 @@
-INSERT INTO Parallax (Id, Image, Position) VALUES ('309', 'perso-detoure/Detoure-Character-001.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('310', 'perso-detoure/Detoure-Character-002.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('311', 'perso-detoure/Detoure-Character-003.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('312', 'perso-detoure/Detoure-Character-004.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('313', 'perso-detoure/Detoure-Character-005.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('314', 'perso-detoure/Detoure-Character-006.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('315', 'perso-detoure/Detoure-Character-007.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('316', 'perso-detoure/Detoure-Character-008.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('317', 'perso-detoure/Detoure-Character-009.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('318', 'perso-detoure/Detoure-Character-010.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('319', 'perso-detoure/Detoure-Character-011.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('320', 'perso-detoure/Detoure-Character-012.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('321', 'perso-detoure/Detoure-Character-013.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('322', 'perso-detoure/Detoure-Character-014.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('323', 'perso-detoure/Detoure-Character-015.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('324', 'perso-detoure/Detoure-Character-016.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('325', 'perso-detoure/Detoure-Character-017.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('326', 'perso-detoure/Detoure-Character-018.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('327', 'perso-detoure/Detoure-Character-019.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('328', 'perso-detoure/Detoure-Character-020.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('329', 'perso-detoure/Detoure-Character-021.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('330', 'perso-detoure/Detoure-Character-022.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('331', 'perso-detoure/Detoure-Character-023.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('332', 'perso-detoure/Detoure-Character-024.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('333', 'perso-detoure/Detoure-Character-025.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('334', 'perso-detoure/Detoure-Character-026.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('335', 'perso-detoure/Detoure-Character-027.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('336', 'perso-detoure/Detoure-Character-028.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('337', 'perso-detoure/Detoure-Character-029.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('338', 'perso-detoure/Detoure-Character-030.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('339', 'perso-detoure/Detoure-Character-031.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('340', 'perso-detoure/Detoure-Character-032.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('341', 'perso-detoure/Detoure-Character-033.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('342', 'perso-detoure/Detoure-Character-034.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('343', 'perso-detoure/Detoure-Character-035.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('344', 'perso-detoure/Detoure-Character-036.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('345', 'perso-detoure/Detoure-Character-037.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('346', 'perso-detoure/Detoure-Character-038.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('347', 'perso-detoure/Detoure-Character-039.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('348', 'perso-detoure/Detoure-Character-040.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('349', 'perso-detoure/Detoure-Character-041.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('350', 'perso-detoure/Detoure-Character-042.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('351', 'perso-detoure/Detoure-Character-043.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('352', 'perso-detoure/Detoure-Character-044.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('353', 'perso-detoure/Detoure-Character-045.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('354', 'perso-detoure/Detoure-Character-046.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('355', 'perso-detoure/Detoure-Character-047.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('356', 'perso-detoure/Detoure-Character-048.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('357', 'perso-detoure/Detoure-Character-049.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('358', 'perso-detoure/Detoure-Character-050.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('359', 'perso-detoure/Detoure-Character-051.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('360', 'perso-detoure/Detoure-Character-052.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('361', 'perso-detoure/Detoure-Character-053.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('362', 'perso-detoure/Detoure-Character-054.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('363', 'perso-detoure/Detoure-Character-055.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('364', 'perso-detoure/Detoure-Character-056.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('365', 'perso-detoure/Detoure-Character-057.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('366', 'perso-detoure/Detoure-Character-058.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('367', 'perso-detoure/Detoure-Character-059.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('368', 'perso-detoure/Detoure-Character-060.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('369', 'perso-detoure/Detoure-Character-061.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('370', 'perso-detoure/Detoure-Character-062.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('371', 'perso-detoure/Detoure-Character-063.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('372', 'perso-detoure/Detoure-Character-064.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('373', 'perso-detoure/Detoure-Character-065.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('374', 'perso-detoure/Detoure-Character-066.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('375', 'perso-detoure/Detoure-Character-067.png', '5');
-INSERT INTO Parallax (Id, Image, Position) VALUES ('376', 'perso-detoure/Detoure-Character-068.png', '5');
 
 
+
+
+
+
+
+Warriors_01.png
+Warriors_02.png
+Warriors_1659.png
+Warriors_1673.png
+Warriors_1705.png
+Warriors_1946.png
+Warriors_258.png
+
+             
