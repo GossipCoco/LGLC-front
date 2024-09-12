@@ -16,7 +16,7 @@
           </div>
           <div class="summaray-title-text">
             <p>
-              {{ chapter.Fiction.Title }}
+              <span class="font-title-fiction-dasboard">{{ chapter.Fiction.Title }}</span>
             </p>
             <p>
               <router-link :to="'/chapter/' + chapter.Title">
