@@ -3,7 +3,7 @@
     id="quest-by-id"
     class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 card-global quest-container flex-one"
   >
-    <div class="card quest-by-id-card">
+    <div class="card quest-by-id-card background-color-main-lineart">
       <card-header v-bind:Title="''">
         <div class="quest-details">
           <div class="display-flex-column">
