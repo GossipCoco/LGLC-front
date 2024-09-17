@@ -45,7 +45,7 @@ main.container-fluid {
     height: 100vh;
 }
 .container-fluid>.row>.col-10.col-sm-10.col-md-10.col-lg-10.col-xl-10.col-xxl-10 {
-    margin: 0 0 0 0;
+    margin: 0;
 }
 .container {
     background-color: rgba(var(--main-white), 0);
