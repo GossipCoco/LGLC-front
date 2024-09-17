@@ -48,7 +48,7 @@
                 <div class="col-12">
                   <div class="information-global-character">
                     <div class="display-flex-row character-info-general-container">
-                      <div class="identity-character-container">
+                      <div class="display-flex-column flex-one">
                         <table class="table table-borderless">
                           <tr>
                             <td><strong>Clan:</strong></td>

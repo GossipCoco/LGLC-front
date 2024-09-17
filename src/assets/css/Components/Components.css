@@ -22,13 +22,10 @@
 .card-image img{
     width: 75%;
 }
-.fiction-container,
-.identity-character-container{
+.fiction-container{
     display: flex;
     flex-direction: column;
 }
-
-.identity-character-container,
 .character-chapters-fiction-container,
 .game-container{
     flex: 1;
