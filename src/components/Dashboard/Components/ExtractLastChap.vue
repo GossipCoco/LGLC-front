@@ -19,7 +19,7 @@
               <span class="font-title-fiction-dasboard">{{ chapter.Fiction.Title }}</span>
             </p>
             <p>
-              <router-link :to="'/chapter/' + chapter.Title">
+              <router-link class="last-chapter-text" :to="'/chapter/' + chapter.Title">
                 {{ chapter.Title }}
               </router-link>
             </p>

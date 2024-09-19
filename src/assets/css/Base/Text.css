@@ -15,10 +15,14 @@ a {
 }
 .summaray-title-text p a {
   color: rgba(var(--dark-green-01), 1);
-  font: 400 1.05em small-caps;
+  font: 600 1.5em small-caps;
 }
 .summaray-title-text p a:hover {
   color: rgba(var(--active-hover), 1);
+}
+.summaray-title-text p a.last-chapter-text{
+  color: rgba(var(--clear-green-01), 1);
+  font: 6400 .75em small-caps;
 }
 .rating {
   width: 10rem;

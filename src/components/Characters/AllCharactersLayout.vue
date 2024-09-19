@@ -2,7 +2,11 @@
   <div class="height-fixe character-container-global">
     <div class="row row-filter">
       <div class="col-2">
-        <router-link to="/CharacterCreate" type="button" class="btn btn-primary">
+        <router-link
+          to="/CharacterCreate"
+          type="button"
+          class="btn btn-primary"
+        >
           Créer un nouveau personnage
         </router-link>
       </div>
@@ -11,39 +15,52 @@
           Afficher mes personnages
         </button>
       </div>
-      <div class="col-1">
-        Filtrer :
-      </div>
+      <div class="col-1">Filtrer :</div>
       <div class="col-2">
         <input type="text" class="form-control" placeholder="personnage" />
       </div>
       <div class="col-2">
-        <input type="text" class="form-control" placeholder="Personnage par clan" />
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Personnage par clan"
+        />
       </div>
       <div class="col-2">
-        <input type="text" class="form-control" placeholder="Personnage par grade" />
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Personnage par grade"
+        />
       </div>
       <div class="col-1">
         <button type="button" class="btn btn-primary">Rechercher</button>
       </div>
     </div>
-    <div class="row all-characters-container-card" id="all-characters-container-card">
-      <character-card v-bind:characters_props="allCharacters" v-if="!showMyCharacter" />
+    <div
+      class="row all-characters-container-card"
+      id="all-characters-container-card"
+    >
+      <character-card
+        v-bind:characters_props="allCharacters"
+        v-if="!showMyCharacter"
+      />
     </div>
-  </div>
-  <div class="row pagination-container-row">
-    <div class="pagination-container">
-      <div class="row bottom-top-dashboard">
-        <div v-if="showspinner" class="d-flex justify-content-center">
-          <div class="spinner-border text-success" role="status">
+    <div class="row pagination-container-row">
+      <div class="pagination-container">
+        <div class="row bottom-top-dashboard">
+          <div v-if="showspinner" class="d-flex justify-content-center">
+            <div class="spinner-border text-success" role="status"></div>
           </div>
         </div>
+        <pagination
+          v-if="!showspinner && nav.pages > 0"
+          v-bind:nav="nav"
+          v-bind:filters="filters"
+          v-bind:getDatas="'CharacterPagination'"
+          @CharacterPagination="CharacterPagination"
+        />
       </div>
-      <pagination v-if="!showspinner && nav.pages > 0" 
-                  v-bind:nav="nav" 
-                  v-bind:filters="filters" 
-                  v-bind:getDatas="'CharacterPagination'"
-                  @CharacterPagination="CharacterPagination" />
     </div>
   </div>
 </template>
@@ -70,7 +87,7 @@ export default {
         pages: 0,
         step: 8,
       },
-      showspinner: false
+      showspinner: false,
     };
   },
   provide() {
@@ -101,10 +118,10 @@ export default {
       }
     },
     showMyCharacters(e) {
-      console.log("showMyCharacters")
+      console.log("showMyCharacters");
       CharacterService.GetAllCharactersByUser(e)
         .then((response) => {
-          console.log(response.data.ob)
+          console.log(response.data.ob);
         })
         .catch((e) => {
           console.log(e);
@@ -119,15 +136,11 @@ export default {
       }
     },
 
-        async countAllCharacter() {
+    async countAllCharacter() {
       try {
         const response = await CharacterService.CountAllCharacters();
         this.NbAllCharacters = response.data.ob.count;
-        functions.CalcPagination(
-          this.NbAllCharacters,
-          this.nav,
-          this.nav.step
-        );
+        functions.CalcPagination(this.NbAllCharacters, this.nav, this.nav.step);
       } catch (error) {
         console.error("Error counting characters:", error);
       }
@@ -135,7 +148,7 @@ export default {
     getAllCharacters(nav) {
       CharacterService.getAllCharacters({ nav })
         .then((response) => {
-          console.log(response)
+          console.log(response);
           this.allCharacters = response.data.ob;
           this.showspinner = false;
           functions.CalcPagination(

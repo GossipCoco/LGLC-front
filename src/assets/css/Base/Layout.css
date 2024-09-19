@@ -65,7 +65,7 @@ main.container-fluid {
 }
 .character-container {
     margin: -3rem auto;
-    height: 90vh;
+    height: 86vh;
     overflow-x: hidden;
     flex-wrap: wrap;
     padding: 0;

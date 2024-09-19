@@ -58,6 +58,11 @@
                             <td>{{ genre }}</td>
                           </tr>
                           <tr>
+                            <td><strong>Grade:</strong></td>
+                            <td>{{ Grade }}</td>
+                          </tr>
+                          <tr></tr>
+                          <tr>
                             <td><strong>Chaton:</strong></td>
                             <td>{{ kitty }}</td>
                           </tr>
@@ -188,6 +193,7 @@ export default {
       NameClan: null,
       symboleClan: null,
       ClanId: null,
+      Grade: null,
     };
   },
   created() {},
@@ -213,6 +219,7 @@ export default {
       CharacterService.getCharacterByName(id)
         .then((response) => {
           this.character = response.data.ob;
+          console.log(this.character)
           this.Symbol = this.character.Clan.Symbol;
           this.ClanId = this.character.Clan.Id
           this.NameClan = this.character.Clan.Name;
@@ -227,6 +234,7 @@ export default {
           this.description = response.data.ob.Description;
           this.Biography = response.data.ob.Biography;
           this.personnality = response.data.ob.Personnality;
+          this.Grade = response.data.ob.Grade.Name
         })
         .catch((e) => {
           console.log(e);
