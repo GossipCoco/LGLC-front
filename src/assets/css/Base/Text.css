@@ -150,7 +150,7 @@ h1.card-title{
 }
 .user-info-text p span {
   font-weight: 600;
-  color: rgba(var(--dark-green-02), 1);
+  color: rgba(var(--clear-green-02), 1);
 }
 .user-info-text p span.label-profil{
   flex: 1;
