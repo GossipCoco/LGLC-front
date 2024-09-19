@@ -61,8 +61,9 @@
     font-family: var(--opensans-text);
 }
 .font-title-fiction-dasboard{
-    color: rgba(var(--dark-green-01), 1);
-    font: 600 1.5em small-cap;
+    color: rgba(var(--clear-green-02), 1);
+    font: 600 1.5em 'Poppins';
+    font-variant: small-caps ;
 }
 /* BACKGROUND */
 .background-lineart{

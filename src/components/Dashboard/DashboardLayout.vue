@@ -19,7 +19,7 @@
         v-bind:totalWords="totalWordsV2" v-bind:totalPoints="totalPoints" />
     </div>
     <div class="row bottom-dashboard">
-      <!-- <Scheduler /> -->
+
        <MusicPlayer />
       <Event />
       <CharacterRandom v-if="!showspinner" v-bind:randomCharacters="randomCharacters" />
@@ -36,7 +36,7 @@ import LastFiveFiction from './Components/LastFiveFiction.vue';
 import ExtractLastChap from './Components/ExtractLastChap.vue';
 import CharacterRandom from './Components/CharacterRandom.vue';
 import ListAllFictions from './Components/ListAllFictions.vue';
-// import Scheduler from './Components/Scheduler.vue';
+
 import Event from './Components/Event.vue'
 import MusicPlayer from './Components/MusicPlayer.vue';
 
@@ -49,7 +49,6 @@ export default {
     TitleHeader,
     CharacterRandom,
     ListAllFictions,
-    // Scheduler,
     Event,
     MusicPlayer
   },

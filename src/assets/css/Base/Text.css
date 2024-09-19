@@ -14,15 +14,20 @@ a {
   font-family: 'Montserrat';
 }
 .summaray-title-text p a {
-  color: rgba(var(--dark-green-01), 1);
-  font: 600 1.5em small-caps;
+  color: rgba(var(--clear-green-02), 1);
+  font: 600 1.5em 'Poppins';
+  font-variant: small-caps ;
 }
 .summaray-title-text p a:hover {
   color: rgba(var(--active-hover), 1);
 }
 .summaray-title-text p a.last-chapter-text{
-  color: rgba(var(--clear-green-01), 1);
-  font: 6400 .75em small-caps;
+  color: rgba(var(--active-hover), 1);
+  font: 500 1.25em 'Poppins';
+  font-variant: small-caps ;
+}
+.summaray-title-text p a.last-chapter-text:hover{
+  color: rgba(var(--clear-green-02), 1);
 }
 .rating {
   width: 10rem;
@@ -66,10 +71,7 @@ a {
 .card-header h2 {
   font: 42px capitalize all-petite-caps;
 }
-.user-info-text p span {
-  font-weight: 600;
-  color: rgba(var(--active-hover), 1)
-}
+
 #list-events p span {
   font-weight: 600;
 }
@@ -130,4 +132,28 @@ a {
 }
 h1.card-title{
   font-size: 2.75em;
+}
+.star {
+  fill: #ccc; /* Couleur des étoiles non sélectionnées */
+  cursor: pointer; /* Indique que les étoiles sont cliquables */
+  transition: fill 0.3s ease;
+}
+
+.star.checked {
+  fill: rgba(var(--active-hover), 1); /* Couleur des étoiles sélectionnées (rating) */
+}
+.user-info-text p{
+  display: flex;
+  flex-direction: row;
+}
+.user-info-text p span {
+  font-weight: 600;
+  color: rgba(var(--clear-green-02), 1);
+}
+.user-info-text p span.label-profil{
+  flex: 1;
+  font-weight: 400;
+  font-family: 'Poppins';
+  color: rgba(var(--main-white), 1);
+  text-transform: capitalize;
 }
