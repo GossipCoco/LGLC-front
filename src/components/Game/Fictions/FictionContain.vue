@@ -34,7 +34,7 @@
       </div>
     </div>
     <div class="card-body">
-      <div class="one-fiction-container">
+      <div class="one-fiction-container display-flex-row">
         <div class="left-fiction-summary-container">
           <div
             class="image-fiction-container"
