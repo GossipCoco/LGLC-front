@@ -421,13 +421,13 @@ li.quest-container {
 }
 
 .btn-primary.file-character-btn {
-    background-color: #27ae60;
-    border-color: #27ae60;
+    background-color:  rgb(var(--clear-green-02), 0.6);
+    border-color:  rgb(var(--clear-green-02), 0.6);
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn-primary.file-character-btn:hover {
-    background-color: #2ecc71;
+    background-color:  rgb(var(--clear-green-02), 0.6);
     transform: scale(1.05);
 }
 .table>:not(caption)>*>*{
