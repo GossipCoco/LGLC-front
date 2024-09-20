@@ -19,6 +19,9 @@
 .card-image{
     background-size: cover;
 }
+.illustration-arc-container.card-image{
+    background-size: contain;
+}
 .card-image img{
     width: 75%;
 }
@@ -163,37 +166,15 @@ th{
     flex-direction: column;
     flex-wrap: wrap;
 }
-.all-characters-of-fiction .button-modal{
-    margin: 0.25rem auto;
+.fiction-container{
+    height: 20vh;
+    background-size: cover;
 }
-.characters-list-container span{
-    font-family: "Roboto";
-    font-size: 12px;
+.book-container{
+    height: 85vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
-.opacity-container{
-    background-color: rgba(var(--dark-green-01), 0.75);
-    height: 67vh;
-    display: flex;
-    flex-direction: row;
-    width: 80rem;
-}
-.all-characters-list-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    flex-wrap: wrap;
-}
-.left-fiction-summary-container .characters-list-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    flex-wrap: wrap;
-    flex: 0.5;
-}
-.left-fiction-summary-container .characters-list-container img{
-    width: 100px;
+.illustration-arc-container img{
+    width: 100%;
 }

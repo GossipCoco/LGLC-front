@@ -200,7 +200,7 @@ main.container-fluid {
 .card {
     border: none;
 }
-#dashboard p, #dashboard h1,#dashboard h4{
+#dashboard p, #dashboard h1,#dashboard h4, #arc-book-container p{
     color: rgba(var(--main-white), 1)
 }
 .illustration-background .background-fiction-contain{
@@ -239,4 +239,9 @@ main.container-fluid {
 .all-characters-list-containers{
     width: 90vh;
     flex-wrap: wrap;
+}
+.illustration-arc-container{
+    height: 60vh;
+    background-position: 2%;
+    background-repeat: no-repeat;
 }

@@ -19,6 +19,7 @@ import AllClansLayout from "../components/Locations/AllClansLayout";
 import AllLocationsLayout from "../components/Locations/AllLocationsLayout.vue"
 import ClanDetails from "../components/Locations/ClanDetails"
 import LocationsDetails from "../components/Locations/LocationsDetails.vue";
+import ArcBookLayout from '../components/ArcBook/ArcBookLayout.vue'
 
 import AllExistingFictionsLayout from '../components/Fictions/AllExistingFictionsLayout.vue'
 import FictionContain from '../components/Fictions/AllMyFictions/FictionContain'
@@ -174,6 +175,11 @@ const routes = [
         path: '/LocationsDetails/:id',
         name: 'LocationsDetails',
         component: LocationsDetails
+      },
+      {
+        path: '/ArcBookLayout',
+        name: 'ArcBookLayout',
+        component: ArcBookLayout
       },
       {
         path: '/rollOfDice',
