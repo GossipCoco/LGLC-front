@@ -19,6 +19,9 @@
 .card-image{
     background-size: cover;
 }
+.illustration-arc-container.card-image{
+    background-size: contain;
+}
 .card-image img{
     width: 75%;
 }
@@ -114,4 +117,12 @@
 .fiction-container{
     height: 20vh;
     background-size: cover;
+}
+.book-container{
+    height: 85vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.illustration-arc-container img{
+    width: 100%;
 }
