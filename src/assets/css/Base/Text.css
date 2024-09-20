@@ -157,3 +157,6 @@ h1.card-title{
   color: rgba(var(--main-white), 1);
   text-transform: capitalize;
 }
+.accordion-body p{
+  text-align: justify;
+}
