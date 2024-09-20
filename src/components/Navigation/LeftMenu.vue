@@ -44,6 +44,9 @@
             <router-link class="link-collapse" to="/AllLocationsLayout">
               Lieux
             </router-link>
+            <router-link class="link-collapse" to="/ArcBookLayout">
+              Livres
+            </router-link>
           </div>
         </li>
         <li class="li-level1">
