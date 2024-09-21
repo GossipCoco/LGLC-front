@@ -126,3 +126,13 @@
 .illustration-arc-container img{
     width: 100%;
 }
+.image-book-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.image-book{
+    width: 90%;
+}

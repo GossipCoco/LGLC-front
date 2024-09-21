@@ -23,7 +23,7 @@ a {
 }
 .summaray-title-text p a.last-chapter-text{
   color: rgba(var(--active-hover), 1);
-  font: 500 1.25em 'Poppins';
+  font: 500 1.05em 'Roboto';
   font-variant: small-caps ;
 }
 .summaray-title-text p a.last-chapter-text:hover{

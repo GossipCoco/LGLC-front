@@ -10,10 +10,10 @@
         <span class="visually-hidden">Loading...</span>
       </div>
     </div>
-    <div class="row top-dashboard">
+    <div class="row top-dashboard">      
+      <ListAllFictions v-if="!showspinner" />
       <LastFiveFiction />
       <ExtractLastChap v-if="!showspinner"/>
-      <ListAllFictions v-if="!showspinner" />
       <AvatarCard v-if="!showspinner" v-bind:Avatar="Avatar" v-bind:UserName="usr" v-bind:LastConnexion="LastConnexion"
         v-bind:Inscription="Inscription" v-bind:level="LvelImf" v-bind:Role="role" v-bind:nBFiction="nBFictionV2"
         v-bind:totalWords="totalWordsV2" v-bind:totalPoints="totalPoints" />
