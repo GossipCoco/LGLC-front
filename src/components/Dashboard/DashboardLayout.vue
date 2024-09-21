@@ -15,14 +15,14 @@
       <LastFiveFiction />
       <ExtractLastChap v-if="!showspinner"/>
       <AvatarCard v-if="!showspinner" v-bind:Avatar="Avatar" v-bind:UserName="usr" v-bind:LastConnexion="LastConnexion"
-        v-bind:Inscription="Inscription" v-bind:level="LvelImf" v-bind:Role="role" v-bind:nBFiction="nBFictionV2"
+        v-bind:Inscription="Inscription" v-bind:level="level" v-bind:Role="role" v-bind:nBFiction="nBFictionV2"
         v-bind:totalWords="totalWordsV2" v-bind:totalPoints="totalPoints" />
     </div>
     <div class="row bottom-dashboard">
-
-       <MusicPlayer />
-      <Event />
       <CharacterRandom v-if="!showspinner" v-bind:randomCharacters="randomCharacters" />
+      <MusicPlayer />
+      <Event />
+      
     </div>
   </div>
 </template>
@@ -61,7 +61,6 @@ export default {
       Inscription: null,
       LastConnexion: null,
       role: null,
-      level: null,
       Nbmessages: null,
       totalWordsByFiction: {}, // Objet pour stocker les totaux par fiction
       nBFictionV2: 0, // Nombre de fictions
@@ -74,6 +73,7 @@ export default {
         step: 3,
       },
       randomCharacters: [],
+      level: {}
     }
   },
   created() {
@@ -91,7 +91,7 @@ export default {
           this.showspinner = false
           if (response && response.data) {
             const characters = response.data.ob;
-            const randomCharacters = this.getRandomCharacters(characters, 2);
+            const randomCharacters = this.getRandomCharacters(characters, 3);
             this.randomCharacters = randomCharacters;
           }
         })
@@ -136,7 +136,7 @@ export default {
         .then((response) => {  
           this.showspinner = false
           this.userInfo = response.data.ob
-          // console.log(this.userInfo)
+          console.log(this.userInfo)
           this.Avatar = response.data.ob.Avatar
           this.usr = response.data.ob.UserName
           this.UserName = this.usr
@@ -146,6 +146,7 @@ export default {
           this.role = this.userInfo.Role          
           this.Nbmessages = this.userInfo.Messages.length
           this.totalPoints = this.calculateTotalPoints(this.userInfo.Points);
+          this.level = this.userInfo.Level
         })
         .catch((error) => {
           console.error(error);

@@ -1,5 +1,5 @@
 <template>
-  <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12 card-global">
+  <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12 card-global">
     <div class="card profil-card fiction-card">
       <TitleHeaderDashboard v-bind:title="'évènements à venir'" />
       <div class="card-body">
@@ -23,7 +23,7 @@ export default {
       nav: {
         current: 0,
         pages: 0,
-        step: 5,
+        step: 2,
       },
     };
   },
