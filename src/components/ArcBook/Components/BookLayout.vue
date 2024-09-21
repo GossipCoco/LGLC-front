@@ -7,7 +7,7 @@
         <h2>{{ arc.Title }}</h2>
         <div v-html="arc.Summary" class="text-align-justify"></div>
         <div v-for="(book, index) in arc.Books" :key="index">
-            <p>{{ book.Title }}</p>
+            <p><router-link :to="'/BookByTitle/'+ book.Title">{{ book.Title }}</router-link></p>
         </div>        
     </div>    
   </div>
