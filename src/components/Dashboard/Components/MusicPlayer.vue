@@ -1,12 +1,9 @@
 <template>
-  <div
-    class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 card-global"
-  >
+  <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12 card-global">
     <div class="card fiction-card scheduler">
         <TitleHeaderDashboard v-bind:title="'Musique'"/>
         <div class="card-body scheduler-container">
       <div class="music-player">
-        <h3>{{ currentTrack.name }}</h3>
         <audio ref="audioPlayer" controls @ended="nextTrack">
           <source :src="currentTrack.url" type="audio/mpeg" />
           Your browser does not support the audio element.

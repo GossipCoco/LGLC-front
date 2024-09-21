@@ -19,10 +19,10 @@
         v-bind:totalWords="totalWordsV2" v-bind:totalPoints="totalPoints" />
     </div>
     <div class="row bottom-dashboard">
-
-       <MusicPlayer />
-      <Event />
       <CharacterRandom v-if="!showspinner" v-bind:randomCharacters="randomCharacters" />
+      <MusicPlayer />
+      <Event />
+      
     </div>
   </div>
 </template>
