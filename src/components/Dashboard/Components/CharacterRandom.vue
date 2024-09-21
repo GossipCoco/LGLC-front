@@ -4,7 +4,7 @@
       <TitleHeaderDashboard v-bind:title="'Personnages aléatoires'"/>
       <div class="card-body display-flex-column">
         <div class="row">
-          <div class="col-12 character-col">
+          <div class="col-12 character-col display-flex-row align-items-content-justify-content">
             <div class="character-l1" v-for="character in randomCharacters" :key="character.Id">
               <img class="img-fluid" :src="'/images/Characters/' + character.Image" :alt="character.Image" />
               <br>
@@ -17,7 +17,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-12">
+          <div class="col-12  display-flex-row align-items-content-justify-content">
             <router-link to="/CharacterCreate" type="button" class="btn btn-primary">
               Créer un nouveau personnage
             </router-link>

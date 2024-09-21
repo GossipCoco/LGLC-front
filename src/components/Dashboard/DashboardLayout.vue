@@ -16,7 +16,7 @@
       <ExtractLastChap v-if="!showspinner"/>
       <AvatarCard v-if="!showspinner" v-bind:Avatar="Avatar" v-bind:UserName="usr" v-bind:LastConnexion="LastConnexion"
         v-bind:Inscription="Inscription" v-bind:level="level" v-bind:Role="role" v-bind:nBFiction="nBFictionV2"
-        v-bind:totalWords="totalWordsV2" v-bind:totalPoints="totalPoints" />
+        v-bind:totalWords="totalWordsV2" v-bind:totalPoints="totalPoints" v-bind:roleImage="roleImage" />
     </div>
     <div class="row bottom-dashboard">
       <CharacterRandom v-if="!showspinner" v-bind:randomCharacters="randomCharacters" />
@@ -73,7 +73,8 @@ export default {
         step: 3,
       },
       randomCharacters: [],
-      level: {}
+      level: {},
+      roleImage: null
     }
   },
   created() {
@@ -143,7 +144,8 @@ export default {
           this.LastConnexion = response.data.ob.LastConnexion
           this.Inscription = response.data.ob.Inscription
           this.LvelImf = this.userInfo.Level.Image
-          this.role = this.userInfo.Role          
+          this.role = this.userInfo.Role
+          this.roleImage = this.userInfo.Role.Image
           this.Nbmessages = this.userInfo.Messages.length
           this.totalPoints = this.calculateTotalPoints(this.userInfo.Points);
           this.level = this.userInfo.Level
