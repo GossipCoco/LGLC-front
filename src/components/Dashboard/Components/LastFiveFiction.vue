@@ -1,8 +1,8 @@
 <template>
   <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12  card-global">
     <div class="card  fiction-card">      
-      <TitleHeaderDashboard v-bind:title="'Mes 2 dernières fiction'" />
-      <div class="card-body">
+      <TitleHeaderDashboard v-bind:title="'Mes 3 dernières fictions'" />
+      <div class="card-body display-flex-column align-items-content-justify-content">
         <div v-for="(game, index) in GamesAndFictions" :key="index">
           <div v-for="(fiction, index) in game.Fiction" :key="index" class="display-flex-row list-all-fictions-globale--container">
             <div class="rond-image-illustration">
@@ -12,9 +12,11 @@
               <p><router-link :to="'/fiction/' + fiction.Title">{{ fiction.Title }}</router-link><br>
                 <span v-html="truncateText(fiction.Summary, 55)"></span>
               </p>
+
             </div>
           </div>
         </div>
+        <p><router-link type="button" class="btn btn-primary" to="/createANewFiction">Créer une nouvelle fiction</router-link></p>
       </div>
     </div>
   </div>

@@ -2,7 +2,7 @@
   <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-12 col-sm-12 col-xs-12 card-global">
     <div class="card fiction-card">
       <TitleHeaderDashboard v-bind:title="'Mes derniers chapitres'" />
-      <div class="card-body">
+      <div class="card-body display-flex-column align-items-content-justify-content">
         <div
           class="display-flex-row list-all-fictions-globale--container"
           v-for="(chapter, index) in FiveLastChapters"

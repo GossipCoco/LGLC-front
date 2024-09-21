@@ -2,7 +2,7 @@
     <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12 card-global">
         <div class="card fiction-card">
             <TitleHeaderDashboard v-bind:title="'Lire des fictions'" />
-            <div class="card-body">
+            <div class="card-body display-flex-column align-items-content-justify-content">
                 <div v-for="(game, index) in fiveGames" :key="index">
                     <div class="list-fictions-dashboard display-flex-row list-all-fictions-globale--container" v-for="(fiction, index) in game.Fiction" :key="index">
                         <div class="rond-image-illustration">
@@ -20,6 +20,7 @@
                         </div>
                     </div>
                 </div>
+                <p><router-link type="button" class="btn btn-primary" to="/AllExistingFictionsLayout">Lire des fictions</router-link></p>
             </div>
         </div>
     </div>
@@ -38,7 +39,7 @@ export default {
             nav: {
                 current: 0,
                 pages: 0,
-                step:2,
+                step:3,
             },
         };
     },

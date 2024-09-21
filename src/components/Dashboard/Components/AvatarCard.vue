@@ -4,10 +4,13 @@
             <TitleHeaderDashboard v-bind:title="UserName" v-bind:type="'username'"/>
             <div class="card-body user-info-text">
                 <!-- <p><span v-if="Role"></span>Role : {{ Role.Name }}</p> -->
+                 <p><img :src="'/images/Levels/' + level.Image" />
+
+                 </p>
                 <p><span class="label-profil">Inscription</span> <span>{{ formatDate(Inscription) }}</span></p>
                 <p><span class="label-profil">Dernière connextion</span> <span>{{ formatDate(LastConnexion) }}</span></p>
                 <p><span class="label-profil">Vous avez écrit</span> <span>{{ nBFiction }}</span> &nbsp; fictions et &nbsp;<span>{{ totalWords }}</span>&nbsp; mots.</p>                <p><span class="label-profil">Vous avez</span> <span>{{ totalPoints }}</span> points.</p>
-                <p><router-link type="button" class="btn btn-primary" to="/createANewFiction">Créer une nouvelle fiction</router-link></p>
+                
             </div>
         </div>
     </div>
