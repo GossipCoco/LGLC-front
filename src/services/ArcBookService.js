@@ -1,5 +1,4 @@
 import http from '../http/http-common'
-
 class ArcBook{
     GetBookByTitle(id){
         console.log(id)
