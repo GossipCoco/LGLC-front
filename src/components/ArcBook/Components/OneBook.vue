@@ -3,13 +3,30 @@
     id="book-container"
     class="dashboard-max-card-container background-color-main-lineart flex-one card display-flex-column fiction-container"
   >
-    <div>{{ book }}</div>
+    <CardHeader v-bind:Title="book.Title" />
+    <div class="card-body">
+      <div class="row">
+        <div class="col-2">
+          <img :src="'/images/Books/' + book.Image" :alt="book.Title" class="image-book"/>
+        </div>
+        <div class="col-10">
+          <div class="white-text" v-html="book.Summary"></div>
+          <div class="white-text">
+            <div v-for="(characters, index) in book.BookCharacters" :key="index">
+              {{ characters.Character.CurrentName }}
+            </div>
+          </div>
+        </div>
+      </div>      
+    </div>
   </div>
 </template>
 <script>
 import ArcBookService from "../../../services/ArcBookService";
+import CardHeader from "../../Components/GenericComponent/CardHeader.vue";
 export default {
   name: "OneBook",
+  components: { CardHeader },
   data() {
     return {
       url: null,
