@@ -20,6 +20,7 @@ import AllLocationsLayout from "../components/Locations/AllLocationsLayout.vue"
 import ClanDetails from "../components/Locations/ClanDetails"
 import LocationsDetails from "../components/Locations/LocationsDetails.vue";
 import ArcBookLayout from '../components/ArcBook/ArcBookLayout.vue'
+import OneBook from "../components/ArcBook/Components/OneBook.vue";
 
 import AllExistingFictionsLayout from '../components/Fictions/AllExistingFictionsLayout.vue'
 import FictionContain from '../components/Fictions/AllMyFictions/FictionContain'
@@ -235,6 +236,12 @@ const routes = [
         path: '/chapter/:id',
         name: 'ChapterLayout',
         component: ChapterLayout,
+        props: true
+      },
+      {
+        path: '/BookByTitle/:id',
+        name: 'OneBook',
+        component: OneBook,
         props: true
       },
       {
