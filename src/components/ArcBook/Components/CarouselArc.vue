@@ -4,21 +4,21 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img
-              :src="'/images/Books/' + arc.IllustrationOne"
+              :src="arc.IllustrationOne"
               :alt="arc.Title"
               class="image-book"
             />
           </div>
           <div class="carousel-item">
             <img
-              :src="'/images/Books/' + arc.IllustrationTwo"
+              :src="arc.IllustrationTwo"
               :alt="arc.Title"
               class="d-block w-100"
             />
           </div>
           <div class="carousel-item">
             <img
-              :src="'/images/Books/' + arc.IllustrationThree"
+              :src="arc.IllustrationThree"
               :alt="arc.Title"
               class="d-block w-100"
             />

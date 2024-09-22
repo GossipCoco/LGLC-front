@@ -8,7 +8,7 @@
       <div class="row">
         <div class="col-2">
           <img
-            :src="'/images/Books/' + book.Image"
+            :src="book.Image"
             :alt="book.Title"
             class="image-book"
           />
