@@ -23,7 +23,7 @@
               <span class="white-text">{{ characters.Character.CurrentName }}</span><br />
               <img
                 class="img-fluid"
-                :src="'/images/Characters/' + characters.Character.Image"
+                :src="characters.Character.Image"
                 :alt="image"
               />
             </div>

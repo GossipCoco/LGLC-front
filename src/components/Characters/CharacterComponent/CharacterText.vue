@@ -7,7 +7,7 @@
           'url(/images/Backgrounds/' + character.Clan.Image + ')',
       }"
     >
-      <img v-if="character.Image" :src="'/images/Characters/' + character.Image" />
+      <img v-if="character.Image" :src="character.Image" />
     </div>
     <div class="card-body">
       <p style="text-align: center;">

@@ -17,7 +17,7 @@
                     <div class="parallax__layer parallax__layer--base">
                       <img
                         class="img-fluid"
-                        :src="'/images/Characters/' + image"
+                        :src="image"
                         :alt="image"
                       />
                     </div>

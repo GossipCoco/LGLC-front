@@ -23,7 +23,7 @@
             >
               <img
                 class="img-fluid"
-                :src="'/images/Characters/' + character.Character.Image"
+                :src="character.Character.Image"
                 :alt="character.Character.Image"
               /><br />
 
