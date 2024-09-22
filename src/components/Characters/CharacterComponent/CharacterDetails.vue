@@ -107,9 +107,9 @@
                           data-bs-parent="#characterDetailsAccordion"
                         >
                           <div
-                            class="accordion-body"
-                            v-html="description"
-                          ></div>
+                            class="accordion-body">
+                            <div v-html="description"></div>                            
+                          </div>
                         </div>
                       </div>
                       <div class="accordion-item" v-if="personnality != null">
@@ -131,10 +131,9 @@
                           aria-labelledby="headingZero"
                           data-bs-parent="#characterDetailsAccordion"
                         >
-                          <div
-                            class="accordion-body"
-                            v-html="personnality"
-                          ></div>
+                          <div class="accordion-body">
+                            <div v-html="personnality"></div>
+                          </div>
                         </div>
                       </div>
                       <div class="accordion-item">
@@ -156,7 +155,9 @@
                           aria-labelledby="headingOne"
                           data-bs-parent="#characterDetailsAccordion"
                         >
-                          <div class="accordion-body" v-html="Biography"></div>
+                          <div class="accordion-body">
+                            <div v-html="Biography"></div>
+                        </div>
                         </div>
                       </div>                      
                     </div>
