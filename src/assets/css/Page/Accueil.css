@@ -253,6 +253,9 @@
 }
 #accueil footer.container{
     background-color: rgba(var(--main-black), 1);
+    /* position: fixed;
+    bottom: -50rem;
+    left: 0; */
 }
  #accueil .nav.justify-content-center.pb-3.mb-3 li{
     text-align: center;
