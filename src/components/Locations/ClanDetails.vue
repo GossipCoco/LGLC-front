@@ -3,7 +3,7 @@
     <div
       class="card-image clan-detail-card border-card-color"
       v-bind:style="{
-        backgroundImage: 'url(/images/Backgrounds/' + clan.Image + ')',
+        backgroundImage: 'url(' + clan.Image + ')',
       }"
     ></div>
     <div class="card-body">
@@ -23,7 +23,7 @@
             >
               <img
                 class="img-fluid"
-                :src="'/images/Characters/' + character.Character.Image"
+                :src="character.Character.Image"
                 :alt="character.Character.Image"
               /><br />
 

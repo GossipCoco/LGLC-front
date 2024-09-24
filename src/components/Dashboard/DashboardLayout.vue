@@ -21,8 +21,7 @@
     <div class="row bottom-dashboard">
       <CharacterRandom v-if="!showspinner" v-bind:randomCharacters="randomCharacters" />
       <MusicPlayer />
-      <Event />
-      
+      <CharacterByGamer v-bind:gamer="gamer"/>      
     </div>
   </div>
 </template>
@@ -36,9 +35,8 @@ import LastFiveFiction from './Components/LastFiveFiction.vue';
 import ExtractLastChap from './Components/ExtractLastChap.vue';
 import CharacterRandom from './Components/CharacterRandom.vue';
 import ListAllFictions from './Components/ListAllFictions.vue';
-
-import Event from './Components/Event.vue'
 import MusicPlayer from './Components/MusicPlayer.vue';
+import CharacterByGamer from './Components/CharacterByGamer.vue';
 
 export default {
   name: "DashboardLayout",
@@ -49,8 +47,8 @@ export default {
     TitleHeader,
     CharacterRandom,
     ListAllFictions,
-    Event,
-    MusicPlayer
+    MusicPlayer,
+    CharacterByGamer
   },
   data() {
     return {
@@ -67,6 +65,7 @@ export default {
       totalWordsV2: 0, // Total de mots de toutes les fictions
       totalPoints:0,
       filters: [],
+      gamer: {},
       nav: {
         current: 0,
         pages: 0,
@@ -149,6 +148,7 @@ export default {
           this.Nbmessages = this.userInfo.Messages.length
           this.totalPoints = this.calculateTotalPoints(this.userInfo.Points);
           this.level = this.userInfo.Level
+          this.gamer = this.userInfo.Gamers
         })
         .catch((error) => {
           console.error(error);

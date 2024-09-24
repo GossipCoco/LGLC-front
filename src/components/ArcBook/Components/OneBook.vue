@@ -8,7 +8,7 @@
       <div class="row">
         <div class="col-2">
           <img
-            :src="'/images/Books/' + book.Image"
+            :src="book.Image"
             :alt="book.Title"
             class="image-book"
           />
@@ -23,7 +23,7 @@
               <span class="white-text">{{ characters.Character.CurrentName }}</span><br />
               <img
                 class="img-fluid"
-                :src="'/images/Characters/' + characters.Character.Image"
+                :src="characters.Character.Image"
                 :alt="image"
               />
             </div>

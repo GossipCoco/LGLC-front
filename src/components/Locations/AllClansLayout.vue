@@ -6,15 +6,13 @@
             <div
               class="card-image clan-card"
               v-bind:style="{
-                backgroundImage: 'url(/images/Backgrounds/' + clan.Image + ')',
+                backgroundImage: 'url(' + clan.Image + ')',
               }"
             ></div>
             <div class="card-header">{{ clan.Name }}</div>
             <div class="card-body">
               <div class="display-flex flex-one clan-description">
-                <p v-html="truncateText(clan.Description, 100)">
-
-              </p>
+                <p v-html="truncateText(clan.Description, 100)"></p>
             </div>
             <div class="clan-link">
               <router-link type="button" class="btn btn-primary" :to="'/clan/'+clan.Id">Plus de détails</router-link>

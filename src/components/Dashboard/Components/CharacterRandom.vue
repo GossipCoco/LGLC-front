@@ -6,7 +6,7 @@
         <div class="row">
           <div class="col-12 character-col display-flex-row align-items-content-justify-content">
             <div class="character-l1" v-for="character in randomCharacters" :key="character.Id">
-              <img class="img-fluid" :src="'/images/Characters/' + character.Image" :alt="character.Image" />
+              <img class="img-fluid" :src="character.Image" :alt="character.Image" />
               <br>
               <span class="character-details-router">
                 <router-link :to="'/characterDetails/' + character.Id">

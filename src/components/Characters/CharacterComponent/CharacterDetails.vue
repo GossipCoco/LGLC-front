@@ -10,14 +10,14 @@
                   class=" character-details-card background-size-cover diaplay-flex background-size-cover card-image border-card-color"
                   v-bind:style="{
                     backgroundImage:
-                      'url(/images/Backgrounds/' + background + ')',
+                      'url(' + background + ')',
                   }"
                 >
                   <div class="vegetal-container">
                     <div class="parallax__layer parallax__layer--base">
                       <img
                         class="img-fluid"
-                        :src="'/images/Characters/' + image"
+                        :src="image"
                         :alt="image"
                       />
                     </div>
@@ -226,6 +226,7 @@ export default {
           this.NameClan = this.character.Clan.Name;
           this.image = response.data.ob.Image;
           this.background = response.data.ob.Clan.Image;
+          console.log(this.background)
           this.currentName = response.data.ob.CurrentName;
           this.genre = response.data.ob.Genre;
           this.age = response.data.ob.Age;

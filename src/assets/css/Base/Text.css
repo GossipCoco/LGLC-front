@@ -160,3 +160,14 @@ h1.card-title{
 .accordion-body p{
   text-align: justify;
 }
+.character-description-container{
+  height: 10rem;
+  overflow-y: scroll;
+}
+.character-description-container p {
+  text-align: justify;
+}
+.character-illustration-container img{
+  width: 100%;
+  border-radius: 100%;
+}
