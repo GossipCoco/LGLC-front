@@ -16,7 +16,7 @@
             <div
               class="image-display-flex-column fiction-container"
               v-bind:style="{
-                backgroundImage: 'url(/images/Fictions/' + fiction.Image + ')',
+                backgroundImage: 'url(' + fiction.Image + ')',
               }"
             ></div>
           </div>

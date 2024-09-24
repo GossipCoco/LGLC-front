@@ -6,7 +6,7 @@
         <div v-for="(game, index) in GamesAndFictions" :key="index">
           <div v-for="(fiction, index) in game.Fiction" :key="index" class="display-flex-row list-all-fictions-globale--container">
             <div class="rond-image-illustration">
-              <ImageRondDashboard v-bind:src="'/images/Fictions/' + fiction.Image" v-bind:alt="fiction.Image" />
+              <ImageRondDashboard v-bind:src=" fiction.Image" v-bind:alt="fiction.Image" />
             </div>
             <div class="summaray-title-text">
               <p><router-link :to="'/fiction/' + fiction.Title">{{ fiction.Title }}</router-link><br>

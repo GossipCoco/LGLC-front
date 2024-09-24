@@ -13,7 +13,7 @@
                     <div class="col-6">
                         <div style="color: white" v-for="(illustration, index) in AllIillustrations" :key="index">
                             <div style="height: 150px; width: 150px;">
-                                <img :src="'/images/Fictions/' + illustration.IllustrationId"
+                               <img :src=" illustration.IllustrationId"
                                     :alt="illustration.IllustrationId" style="height: 150px; width: 150px;" />
                             </div>
                         </div>
@@ -38,8 +38,9 @@
                     </div>
                 </div>
                 <div class="display-flex-row chapter-global-content">
+                    <!-- {{ chapter }} -->
                     <div class="chapter-image-content"
-                        v-bind:style="{ backgroundImage: 'url(/images/Fictions/' + chapter.Image + ')' }">
+                        v-bind:style="{ backgroundImage: 'url(' + chapter.Image + ')' }">
                     </div>
                     <div class="chapter-text-content">
                         <p v-html="displayedContent"></p>

@@ -9,13 +9,13 @@
           <div
             class="card-image clan-card"
             v-bind:style="{
-              backgroundImage: 'url(/images/Locations/' + location.Image + ')',
+              backgroundImage: 'url(' + location.Image + ')',
             }"
           ></div>
           <div class="card-header"></div>
           <div class="card-body">
             <div class="clan-description">
-              <p v-html="truncateText(location.Description, 100)"></p>
+              <div v-html="truncateText(location.Description, 100)"></div>
             </div>
             <div class="clan-link">
               <router-link type="button" class="btn btn-primary" :to="'/LocationsDetails/'+location.Id">Plus de détails</router-link>

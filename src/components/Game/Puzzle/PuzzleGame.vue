@@ -161,7 +161,7 @@ export default {
       ImageService.GetAllIllustrations()
         .then((response) => {
           this.imagesByRequest = response.data.ob.map(
-            (item) => "/images/Fictions/" + item.Id
+            (item) => item.Id
           );
         })
         .catch((err) => {
