@@ -6,7 +6,7 @@
                 <div v-for="(game, index) in fiveGames" :key="index">
                     <div class="list-fictions-dashboard display-flex-row list-all-fictions-globale--container" v-for="(fiction, index) in game.Fiction" :key="index">
                         <div class="rond-image-illustration">
-                            <ImageRondDashboard v-bind:src="'/images/Fictions/' + fiction.Image" v-bind:alt="fiction.Image" />
+                            <ImageRondDashboard v-bind:src=" fiction.Image" v-bind:alt="fiction.Image" />
                         </div>
                         <div class="summaray-title-text">
                         <p>

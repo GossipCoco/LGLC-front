@@ -10,7 +10,7 @@
         >
           <div class="rond-image-illustration">
             <ImageRondDashboard
-              v-bind:src="'/images/Fictions/' + chapter.Image"
+              v-bind:src=" chapter.Image"
               v-bind:alt="chapter.Image"
             />
           </div>

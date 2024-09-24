@@ -5,7 +5,7 @@
     </div>
     <div class="card-body display-flex-column one-quest">
       <div class="card-img-top display-flex-column align-items-content-justify-content background-image-quest-image-container display-flex-row flex-one">
-        <img :src="'/images/Fictions/' + image.Image" />
+        <img :src=" image.Image" />
       </div>
       <div class="display-flex-column quest-button-text">
         <p class="display-flex-column quest-description">{{ quest.Description }}</p>

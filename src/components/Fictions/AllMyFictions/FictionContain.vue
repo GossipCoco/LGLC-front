@@ -36,7 +36,7 @@
             class="display-flex-column image-fiction-container"
             v-bind:style="{
               backgroundImage:
-                'url(/images/Fictions/' + backgroundImageFiction + ')',
+                'url(' + backgroundImageFiction + ')',
             }"
           ></div>
           <div class="display-flex-column all-characters-of-fiction">
@@ -57,13 +57,7 @@
                 v-for="(illus, index) in illustration"
                 :key="index"
               >
-                <div
-                  :style="{
-                    backgroundImage:
-                      'url(/images/Fictions/' + illus.IllustrationId + ')',
-                  }"
-                  class="background-size-cover background-fiction-contain"
-                >
+                <div :style="{ backgroundImage: 'url(' + illus.IllustrationId + ')'}" class="background-size-cover background-fiction-contain">
                   <ListOfChapter
                     v-bind:AuthorId="AuthorId"
                     v-bind:usrCurrent="usrCurrent"

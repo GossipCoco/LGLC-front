@@ -50,6 +50,7 @@
   </div>
 </template>
 <script>
+import EventService from "../../../services/EventService";
 import Images from "../../../Datas/DatasReactives/ImagesPuzzle";
 import ImageService from "../../../services/ImageService";
 import CardHeader from "../../Components/GenericComponent/CardHeader.vue";
@@ -116,6 +117,17 @@ export default {
         0,
         1000 - this.elapsedTime * this.pointReductionRate
       );
+      const results = {
+        foundTreasures: "Puzzle",
+        points: this.points
+      };
+      EventService.saveGameResults(this.userCurrent, results)
+        .then(response => {
+          console.log('Results saved:', response.data);
+        })
+        .catch(error => {
+          console.error('Error saving results:', error);
+        });
     },
 
     // Appeler startTimer au début du jeu
@@ -161,7 +173,7 @@ export default {
       ImageService.GetAllIllustrations()
         .then((response) => {
           this.imagesByRequest = response.data.ob.map(
-            (item) => "/images/Fictions/" + item.Id
+            (item) => item.Id
           );
         })
         .catch((err) => {
@@ -174,7 +186,6 @@ export default {
       );
       return this.imagesByRequest[randomIndex];
     },
-
     shufflePieces() {
       this.shuffledPieces = this.shuffledPieces.sort(() => Math.random() - 0.5);
       this.isSolved = false;
@@ -192,7 +203,6 @@ export default {
       this.draggedIndex = null;
       this.checkIfSolved();
     },
-
     changeImage() {
       this.selectedImage = this.getRandomImage();
       this.loadImage(this.selectedImage);

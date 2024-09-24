@@ -3,13 +3,13 @@
     <div
       class="card-image clan-detail-card border-card-color"
       v-bind:style="{
-        backgroundImage: 'url(/images/Backgrounds/' + location.Image + ')',
+        backgroundImage: 'url(' + location.Image + ')',
       }"
     ></div>
     <div class="card-body">
       <h5 class="card-title">{{ location.Name }}</h5>
       <div class="card-text">
-        <p>{{ location.Description }}</p>
+        <div v-html="location.Description"></div>
       </div>
     </div>
   </div>
