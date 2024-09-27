@@ -135,6 +135,7 @@
 }
 .image-book{
     width: 90%;
+    border-radius: 20px;
 }
 .user-info-text img{
     width: 50%;
