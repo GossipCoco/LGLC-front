@@ -1,5 +1,5 @@
 <template>
-  <div class="col-6">
+  <div :class="col">
     <label :for="For" class="form-label">
       {{ label }}
     </label>
@@ -24,7 +24,7 @@
 <script>
 export default {
   name: "SelectCharacterComponent",
-  props: ["For", "label", "characterId", "characters"],
+  props: ["For", "label", "characterId", "characters", "col"],
   data() {
     return {
       form: null,

@@ -12,6 +12,7 @@
                 v-bind:label="'Sélectionner un personnage'"
                 v-bind:characterId="form.FirstCharacterId"
                 v-bind:characters="characters"
+                v-bind:col="'col-6'"
                 @form-character="handleFirstCharacterChange"
               />
               <SelectCharacterComponent
@@ -19,6 +20,7 @@
                 v-bind:label="'Sélectionner un personnage'"
                 v-bind:characterId="form.SecondCharacterId"
                 v-bind:characters="characters"
+                v-bind:col="'col-6'"
                 @form-character="handleSecondCharacterChange"
               />
             </div>
