@@ -19,12 +19,12 @@
       </div>
       <div class="col-10 col-sm-12 col-md-10 col-lg-10 col-xxl-10">
         <div class="row">
-          <div class="col-12">
+          <div class="col-12 display-flex-row align-items-content-justify-content">
             <h2>{{ arc.Title }}</h2>
           </div>
         </div>
         <div class="row">
-          <div class="col-12 col-md-6 col-lg-4">
+          <div class="col-12 col-md-6 col-lg-6">
             <div
               class="single-timeline-content d-flex wow fadeInLeft"
               data-wow-delay="0.3s"
@@ -39,7 +39,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-6 col-lg-4">
+          <div class="col-12 col-md-6 col-lg-6">
             <div
               class="single-timeline-content d-flex wow fadeInLeft"
               data-wow-delay="0.3s"
@@ -50,6 +50,7 @@
               "
             >
               <div class="timeline-text">
+                <h4>Liste des romans</h4>
                 <div v-for="(book, index) in arc.Books" :key="index">
                   <p>
                     <router-link :to="'/BookByTitle/' + book.Title">{{
