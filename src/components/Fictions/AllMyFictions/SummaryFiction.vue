@@ -4,7 +4,9 @@
       v-bind:For="'SearchCharacter'"
       v-bind:label="'Sélectionner un personnage'"
       v-bind:characters="characters"
+      v-bind:clans="clans"
       @form-character="getSearchedCharacter"
+      @form-clan="getclans"
     />
     <spinner v-if="showspinner" />
     <AllCardsFictions v-else v-bind:games="games" />
@@ -21,6 +23,7 @@
 </template>
 <script>
 import CharacterService from "../../../services/CharacterService";
+import ClansServices from "../../../services/ClansServices";
 import SearchBarComponent from "../Components/SearchBarComponent.vue";
 import Pagination from "../../Components/GenericComponent/Pagination.vue";
 import GameService from "../../../services/GameService";
@@ -32,6 +35,7 @@ export default {
   data() {
     return {
       characters: {},
+      clans:{},
       showspinner: false,
       usrId: "",
       NbAllMyGamesFictions: 0,
@@ -48,10 +52,21 @@ export default {
     this.usrId = ""; // Assurez-vous de définir ou récupérer l'ID utilisateur
     this.initData();
     this.GetAllNamesAndIdsCharacters();
+    this.getAllClans()
   },
   methods: {
     getSearchedCharacter(e) {
       console.log(e);
+    },
+    getAllClans(){
+      ClansServices.getAllClans()
+        .then((response) => {
+          console.log(response)
+          this.clans = response.data.ob;
+        })
+        .catch((e) => {
+          console.log(e);
+        });
     },
     GetAllNamesAndIdsCharacters() {
       CharacterService.GetAllNamesAndIdsCharacters()

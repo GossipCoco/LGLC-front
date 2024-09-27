@@ -4,6 +4,9 @@ class FictionService {
     getAllFictions() {
         return http.get('/fiction')
     }
+    GetAllFictionsOnBase(nav){
+        return http.post(`/fiction/GetAllFictionsOnBase`, nav)
+    }
     CountAllMyFictions(id){
         return http.post(`/fiction/countAllMyFictions/${id}`)
     }

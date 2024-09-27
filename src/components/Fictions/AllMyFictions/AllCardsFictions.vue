@@ -1,5 +1,5 @@
 <template>
-  <div class="row list-fiction-card-container">
+  <div class="row list-fiction-card-container">    
     <div
       class="col-3 col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-4 mb-2 mb-sm-2 mb-2 mb-sm-2"
       v-for="(game, index) in games"
@@ -49,7 +49,10 @@
 <script>
 export default {
   name: "AllCardsFictions",
-  props: ["games"],
+  props: ["fictions"],
+  created(){
+    this.fictions
+  },
   methods: {
     truncateText(text, maxLength) {
       return text.length <= maxLength

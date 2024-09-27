@@ -1,8 +1,6 @@
 <template>
-  <div
-    class="dashboard-max-card-container background-color-main-lineart flex-one card display-flex-column fiction-container"
-  >
-    <CardHeader v-bind:Title="'Lire toutes mes fictions'" />
+  <div class="dashboard-max-card-container background-color-main-lineart flex-one card display-flex-column fiction-container">
+    <CardHeader v-bind:Title="'Mes fictions'" />
     <div class="card-body">
       <SearchBarComponent 
         v-bind:For="'SearchCharacter'"
@@ -10,7 +8,7 @@
         v-bind:characters="characters"
         @form-character="getSearchedCharacter"
       />
-      <AllCardsFictions v-bind:games="games" />
+      <AllCardsFictions v-bind:fictions="fictions" />
       <div class="row pagination-container">
         <div class="row bottom-top-dashboard">
           <Spinner v-if="showspinner" />
@@ -30,6 +28,7 @@
 <script>
 import CharacterService from "../../../services/CharacterService";
 import GameService from "../../../services/GameService";
+import FictionService from "../../../services/FictionService";
 import CardHeader from "../../Components/GenericComponent/CardHeader.vue";
 import SearchBarComponent from "../Components/SearchBarComponent.vue";
 import Pagination from "../../Components/GenericComponent/Pagination.vue";
@@ -47,8 +46,10 @@ export default {
   },
   data() {
     return {
+      url: null,
       usrId: this.$store.state.auth.user.usrID,
       characters: {},
+      fictions:{},
       NbAllMyGamesFictions: 0,
       games: [],
       filters: [],
@@ -63,8 +64,20 @@ export default {
   created() {
     this.initData();
     this.GetAllNamesAndIdsCharacters();
+    this.GetAllFictionsOnBase(this.nav)
   },
   methods: {
+    GetAllFictionsOnBase(nav){
+      FictionService.GetAllFictionsOnBase(nav)
+      .then((response) => {
+        console.log(response.data.ob)
+          this.fictions = response.data.ob;
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+    },
+
     getSearchedCharacter(e) {
       console.log(e);
     },
