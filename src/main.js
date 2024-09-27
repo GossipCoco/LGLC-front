@@ -40,6 +40,7 @@ import './assets/css/Components/Parallax.css'
 import './assets/css/Components/Comment.css'
 import './assets/css/Components/Game.css'
 import './assets/css/Components/Dice.css'
+import './assets/css/Components/Timeline.css'
 
 IOController.initSocket(io)
 
