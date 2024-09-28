@@ -1,15 +1,16 @@
 import http from '../http/http-common'
 
-class FictionService {
-    CountAllFictionsOnBases(){
-        return http.get('/fiction/CountAllFictionsOnBases')
+class AllMyFictionService {
+    GetAllFictionsByUser(id, data){
+        console.log("service", data)
+        return http.post(`/fiction/GetAllFictionsByUserId/${id}`, data);
     }
-    countAllMyFictions(id){
-        return http.get(`/fiction/CountAllMyFictions/${id}`);
+    CountAllMyFictions(id){
+        return http.get(`/fiction/countAllMyFictions/${id}`);
     }
-    getFictionByName(id, data){
+    GetFictionByName(id, data){
         console.log(id, data)
-        return http.post(`/fiction/GetAllFictionsByName/${id}`, data);
+        return http.post(`/fiction/getFictionByName/${id}`, data);
     }
     CountTotalWordBuUser(id, data){
         return http.post(`/fiction/CountTotalWordBuUser/${id}`, data);
@@ -20,18 +21,14 @@ class FictionService {
     GetAllCommentsByFiction(id, data){
         return http.post(`/fiction/GetAllCommentsByFiction/${id}`, data);
     }
-    GetAllFictionsOnBase(nav){
-        console.log(nav)
-        return http.post('/fiction/GetAllFictionsOfALlUsers', nav)
-    }
     GetFiveLastChapByUser(id){
         return http.get(`/fiction/GetFiveLastChapByUser/${id}`);
     }
     getChapter(id, data){
-        return http.post(`/fiction/Chapitre/${id}`, data);
+        return http.post(`/fiction/chapitre/${id}`, data);
     }
     CreateANewChapter(id, data) {
-        return http.post(`/fiction/CreateAChapitre/${id}`, data, {
+        return http.post(`/fiction/createAChapitre/${id}`, data, {
             headers: {
                 'Content-Type': 'multipart/form-data',
             },
@@ -40,7 +37,6 @@ class FictionService {
     GetLastChapterOfAFiction(id, data){
         return http.post(`/fiction/GetLastChapterOfAFiction/${id}`, data);
     }
-
 }
 
-export default new FictionService()
+export default new AllMyFictionService()

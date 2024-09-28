@@ -1,34 +1,40 @@
+
 <template>
-  <div class="dashboard-max-card-container background-color-main-lineart flex-one card display-flex-column fiction-container">
-    <CardHeader v-bind:Title="'Mes fictions'" />
+
+
+  <div
+    class="dashboard-max-card-container background-color-main-lineart flex-one card display-flex-column fiction-container"
+  >
+  <!-- LAYOUT MES FICTIONS -->
+    <CardHeader v-bind:Title="'Lire toutes mes fictions'" />
     <div class="card-body">
+      <p style="color: #FFF">
+        J'ai écrit {{ NbAllMyGamesFictions }} fictions
+      </p>
       <SearchBarComponent 
         v-bind:For="'SearchCharacter'"
         v-bind:label="'Sélectionner un personnage'"
         v-bind:characters="characters"
         @form-character="getSearchedCharacter"
       />
-      <AllCardsFictions v-bind:fictions="fictions" />
+      <Spinner v-if="showspinner" />
+      <AllCardsFictions v-else :allFictions="allFictions" />
       <div class="row pagination-container">
-        <div class="row bottom-top-dashboard">
-          <Spinner v-if="showspinner" />
-        </div>
-        <Pagination
-          v-if="!showspinner"
-          v-bind:nav="nav"
-          v-bind:filters="filters"
-          v-bind:getDatas="'GamesPagination'"
-          @GamesPagination="GamesPagination"
-        />
-      </div>
+      <Pagination
+        v-if="!showspinner"
+        :nav="nav"
+        :filters="filters"
+        :getDatas="'FictionPagination'"
+        @FictionPagination="FictionPagination"
+      />
+    </div>
     </div>
   </div>
 </template>
 
 <script>
 import CharacterService from "../../../services/CharacterService";
-import GameService from "../../../services/GameService";
-import FictionService from "../../../services/FictionService";
+import AllMyFictionService from "../../../services/AllMyFictionService";
 import CardHeader from "../../Components/GenericComponent/CardHeader.vue";
 import SearchBarComponent from "../Components/SearchBarComponent.vue";
 import Pagination from "../../Components/GenericComponent/Pagination.vue";
@@ -46,14 +52,12 @@ export default {
   },
   data() {
     return {
-      url: null,
-      usrId: this.$store.state.auth.user.usrID,
+      userCurrent: this.$store.state.auth.user.usrID,
       characters: {},
-      fictions:{},
-      NbAllMyGamesFictions: 0,
-      games: [],
-      filters: [],
+      allFictions:{},
+      NbAllMyGamesFictions: 0,      
       showspinner: false,
+      filters: [],
       nav: {
         current: 0,
         pages: 0,
@@ -62,22 +66,11 @@ export default {
     };
   },
   created() {
-    this.initData();
+    this.usrId = this.userCurrent; 
+    this.initData(); 
     this.GetAllNamesAndIdsCharacters();
-    this.GetAllFictionsOnBase(this.nav)
   },
   methods: {
-    GetAllFictionsOnBase(nav){
-      FictionService.GetAllFictionsOnBase(nav)
-      .then((response) => {
-        console.log(response.data.ob)
-          this.fictions = response.data.ob;
-        })
-        .catch((e) => {
-          console.log(e);
-        });
-    },
-
     getSearchedCharacter(e) {
       console.log(e);
     },
@@ -89,38 +82,42 @@ export default {
         .catch((e) => {
           console.log(e);
         });
-    },
+    },    
     async initData() {
       this.showspinner = true;
-      await this.countAllGames();
-      await this.getAllGames(this.nav);
-      this.showspinner = false;
+      console.log("Démarrage du chargement des fictions...", this.nav);
+      try{
+        await this.countAllMyFictions();    
+        await this.GetAllFictionsByUser(this.userCurrent, this.nav);
+        console.log("Fictions chargées :", this.allFictions); // Vérifiez ici si les fictions sont bien chargées
+      }catch (error) {
+        console.error("Erreur lors du chargement des fictions :", error);
+      }
+        this.showspinner = false;
     },
-    async GamesPagination(page) {
+    async FictionPagination(page) {
+      console.log("Page : ", page)
       this.nav.current = page;
-      await this.getAllGames(this.nav);
+      console.log("FictionPagination", this.nav)
+      this.GetAllFictionsByUser(this.userCurrent, this.nav);
     },
-    async countAllGames() {
+
+    async countAllMyFictions() {
       try {
-        const response = await GameService.CountAllMyFictions(
-          this.$store.state.auth.user.usrID
-        );
-        // console.log(response.data)
+        const response = await AllMyFictionService.CountAllMyFictions(this.userCurrent);
         this.NbAllMyGamesFictions = response.data.ob;
-        // console.log(this.NbAllMyGamesFictions)
         this.nav.pages = Math.ceil(this.NbAllMyGamesFictions / this.nav.step);
+        console.log("countAllMyFictions", this.nav)
       } catch (error) {
         console.error(error);
       }
     },
-    async getAllGames(nav) {
+
+    async GetAllFictionsByUser(usr) {     
       try {
-        const response = await GameService.getAllGamesByUser(
-          this.$store.state.auth.user.usrID,
-          nav
-        );
-        this.games = response.data.ob;
-        // console.log(this.games)
+        const response = await AllMyFictionService.GetAllFictionsByUser(usr, this.nav);       
+        this.allFictions = response.data.ob;
+        
       } catch (error) {
         console.error(error);
       }

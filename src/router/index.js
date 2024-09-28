@@ -258,30 +258,6 @@ const routes = [
     ],
   },
 
-  //{
-  //     path: '/character/create',
-  //     name: 'characterCreate',
-  //     component: CharacterCreate
-  // },{
-  //     path: '/dashboard',
-  //     name: 'Dashboard',
-  //     component: DashboardLayout
-  // },{
-  //     path: '/game',
-  //     name: 'Game',
-  //     component: GameLayout
-  // },
-  // {
-  //     path: '/allClans',
-  //     name: 'allClans',
-  //     component: AllClans
-  // },
-  //{
-  //     path: '/admin',
-  //     name: 'Admin',
-  //     component: AdminLayout
-  // }
-
   // { path: '/404', name: 'Page 404', component: PageError },
 ];
 const router = createRouter({
