@@ -140,3 +140,10 @@
 .user-info-text img{
     width: 50%;
 }
+.image-fiction-container-background{
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 25vh;
+    height: 25vh;
+    background-position: 25%;
+}

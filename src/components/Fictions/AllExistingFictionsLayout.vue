@@ -19,9 +19,8 @@ export default {
     };
   },
   created() {
-
     this.title = 'Lire des fictions';
     this.typePage = 'allFictions';
-  }
+}
 }
 </script>

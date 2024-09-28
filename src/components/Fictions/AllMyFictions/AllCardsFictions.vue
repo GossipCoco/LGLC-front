@@ -1,24 +1,32 @@
 <template>
-<div class="row">
-  <div class="col" v-for="(fiction, index) in allFictions" :key="index">
-    <div class="card">
-      <div class="row g-0">
-        <div class="col-md-4">
-          <img :src="fiction.Image" class="img-fluid rounded-start" :alt="fiction.Image" />
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
+  <div class="row  row-cols-md-3 g-3">
+    <div class="col" v-for="(fiction, index) in allFictions" :key="index">
+      <div class="card" style="height: 20vh">
+        <div class="row">
+          <div
+            class="col-2 image-fiction-container-background"
+            v-bind:style="{
+              backgroundImage: 'url(' + fiction.Image + ')',
+            }"
+          ></div>
+          <div class="col-8">
             <h5 class="card-title">{{ fiction.Title }}</h5>
-            <div class="card-text" v-html="truncateText(fiction.Summary, 10)">              
-            </div>
+            <div
+              class="card-text"
+              v-html="truncateText(fiction.Summary, 10)"
+            ></div>
             <p class="card-text">
-              <small class="text-body-secondary"><router-link :to="'/fiction/'+fiction.Title">Lire la fiction</router-link></small>
+              <router-link
+                type="button"
+                class="btn btn-primary"
+                :to="'/fiction/' + fiction.Title"
+                >Lire la fiction</router-link
+              >
             </p>
           </div>
         </div>
       </div>
     </div>
-  </div>
   </div>
 </template>
 
@@ -32,8 +40,10 @@ export default {
   },
   methods: {
     truncateText(text, maxLength) {
-      return text.length <= maxLength ? text : text.substring(0, maxLength) + '...';
-    }
+      return text.length <= maxLength
+        ? text
+        : text.substring(0, maxLength) + "...";
+    },
   },
 };
 </script>
