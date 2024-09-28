@@ -141,9 +141,15 @@
     width: 50%;
 }
 .image-fiction-container-background{
-    background-size: contain;
+    padding: 0.5rem;
+    background-size: cover;
     background-repeat: no-repeat;
-    width: 25vh;
+    height: 24vh;
+    background-position: 50%;
+    border-radius: 20px;
+}
+
+.fiction-summary-card{
     height: 25vh;
-    background-position: 25%;
+    padding: 0 1rem 0 0.75rem;
 }

@@ -1,7 +1,5 @@
 <template>
   <div class="card-body">
-    <p style="color: #FFF">Lire les {{ NbAllFictions }} fictions</p>
-
     <SearchBarComponent
       :For="'SearchCharacter'"
       :label="'Sélectionner un personnage'"
