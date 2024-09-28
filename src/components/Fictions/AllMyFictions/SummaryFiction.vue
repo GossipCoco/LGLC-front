@@ -1,20 +1,22 @@
 <template>
   <div class="card-body">
+    <p style="color: #FFF">Lire les {{ NbAllFictions }} fictions</p>
+
     <SearchBarComponent
-      v-bind:For="'SearchCharacter'"
-      v-bind:label="'Sélectionner un personnage'"
-      v-bind:characters="characters"
+      :For="'SearchCharacter'"
+      :label="'Sélectionner un personnage'"
+      :characters="characters"
       @form-character="getSearchedCharacter"
-    />
-    <spinner v-if="showspinner" />
-    <AllCardsFictions v-else v-bind:games="games" />
+    />   
+    <Spinner v-if="showspinner" />
+    <AllCardsFictions v-else :allFictions="allFictions" />
     <div class="row pagination-container">
       <Pagination
         v-if="!showspinner"
         :nav="nav"
         :filters="filters"
-        :getDatas="'GamesPagination'"
-        @GamesPagination="GamesPagination"
+        :getDatas="'FictionPagination'"
+        @FictionPagination="FictionPagination"
       />
     </div>
   </div>
@@ -23,19 +25,20 @@
 import CharacterService from "../../../services/CharacterService";
 import SearchBarComponent from "../Components/SearchBarComponent.vue";
 import Pagination from "../../Components/GenericComponent/Pagination.vue";
-import GameService from "../../../services/GameService";
+import FictionService from "../../../services/FictionService";
 import AllCardsFictions from "./AllCardsFictions.vue";
 import Spinner from "../../Components/GenericComponent/Spinner.vue";
 export default {
   name: "SummaryFiction",
+  props: ["typePage"],
   components: { AllCardsFictions, SearchBarComponent, Pagination, Spinner },
   data() {
     return {
+      userCurrent: this.$store.state.auth.user.usrID,
       characters: {},
-      showspinner: false,
-      usrId: "",
+      allFictions: {},
       NbAllMyGamesFictions: 0,
-      games: [],
+      showspinner: false,
       filters: [],
       nav: {
         current: 0,
@@ -45,8 +48,8 @@ export default {
     };
   },
   created() {
-    this.usrId = ""; // Assurez-vous de définir ou récupérer l'ID utilisateur
-    this.initData();
+    this.usrId = this.userCurrent; 
+    this.initData();   
     this.GetAllNamesAndIdsCharacters();
   },
   methods: {
@@ -62,36 +65,36 @@ export default {
           console.log(e);
         });
     },
-    truncateText(text, maxLength) {
-      return text.length <= maxLength
-        ? text
-        : text.substring(0, maxLength) + "...";
-    },
     async initData() {
       this.showspinner = true;
-      await this.countAllGames();
-      await this.getAllGames(this.nav);
+      console.log("Démarrage du chargement des fictions...");
+      try {
+        await this.countAllFictions();
+        await this.getAllFictions(this.nav);
+        console.log("Fictions chargées :", this.allFictions); // Vérifiez ici si les fictions sont bien chargées
+      } catch (error) {
+        console.error("Erreur lors du chargement des fictions :", error);
+      }
       this.showspinner = false;
     },
-    async GamesPagination(page) {
+    async FictionPagination(page) {
       this.nav.current = page;
-      await this.getAllGames(this.nav);
+      await this.getAllFictions(this.nav);
     },
-    async countAllGames() {
+    async countAllFictions() {
       try {
-        const response = await GameService.countAllGames();
-        console.log(response.data.ob);
-        this.NbAllMyGamesFictions = response.data.ob;
-        this.nav.pages = Math.ceil(this.NbAllMyGamesFictions / this.nav.step);
+        const response = await FictionService.CountAllFictionsOnBases();
+        this.NbAllFictions = response.data.ob;
+        this.nav.pages = Math.ceil(this.NbAllFictions / this.nav.step);
       } catch (error) {
         console.error(error);
       }
     },
-    async getAllGames(nav) {
+    async getAllFictions(nav) {
       try {
-        const response = await GameService.getAllGames(nav);
-        this.games = response.data.ob;
-        console.log(this.games);
+        const response = await FictionService.GetAllFictionsOnBase(nav);
+        console.log(response)
+        this.allFictions = response.data.ob;
       } catch (error) {
         console.error(error);
       }

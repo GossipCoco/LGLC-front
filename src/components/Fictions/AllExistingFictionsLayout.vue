@@ -1,15 +1,27 @@
 <template>
   <div class="dashboard-max-card-container background-color-main-lineart flex-one card display-flex-column fiction-container">
-    <CardHeader v-bind:Title="'Lire des fictions'"/>
-    <SummaryFiction/>
+    <CardHeader :Title="title"/>
+    <SummaryFiction :typePage="typePage" />
   </div>
 </template>
-<script>
 
+<script>
 import CardHeader from "../Components/GenericComponent/CardHeader.vue";
 import SummaryFiction from './AllMyFictions/SummaryFiction.vue';
+
 export default {
   name: "AllExistingFictionsLayout",
-  components: { CardHeader, SummaryFiction},  
-};
+  components: { CardHeader, SummaryFiction },
+  data() {
+    return {
+      title: null,
+      typePage: null
+    };
+  },
+  created() {
+
+    this.title = 'Lire des fictions';
+    this.typePage = 'allFictions';
+  }
+}
 </script>
