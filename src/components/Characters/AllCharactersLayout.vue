@@ -1,15 +1,7 @@
 <template>
   <div class="height-fixe character-container-global">
     <div class="row row-filter">
-      <div class="col-2">
-        <router-link
-          to="/CharacterCreate"
-          type="button"
-          class="btn btn-primary"
-        >
-          Créer un nouveau personnage
-        </router-link>
-      </div>
+      <ButtonCreationCharacter />
       <div class="col-2">
         <button @click="showMyCharacters" type="button" class="btn btn-primary">
           Afficher mes personnages
@@ -36,7 +28,7 @@
       <div class="col-1">
         <button type="button" class="btn btn-primary">Rechercher</button>
       </div>
-    </div>
+    
     <div
       class="row all-characters-container-card"
       id="all-characters-container-card"
@@ -63,16 +55,19 @@
       </div>
     </div>
   </div>
+  </div>
+  
 </template>
 <script>
 import CharacterService from "../../services/CharacterService";
 import CharacterCard from "./CharacterComponent/CharacterCard.vue";
 import Pagination from "../Components/GenericComponent/Pagination.vue";
 import functions from "../../services/functions";
+import ButtonCreationCharacter from "../Components/FormComponent/ButtonCreationCharacter.vue";
 
 export default {
   name: "AllCharacters",
-  components: { CharacterCard, Pagination },
+  components: { CharacterCard, Pagination, ButtonCreationCharacter },
   data() {
     return {
       usr: this.$store.state.auth.user.usrID,
