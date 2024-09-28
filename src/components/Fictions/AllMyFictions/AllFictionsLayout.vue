@@ -1,16 +1,8 @@
 
 <template>
-
-
-  <div
-    class="dashboard-max-card-container background-color-main-lineart flex-one card display-flex-column fiction-container"
-  >
-  <!-- LAYOUT MES FICTIONS -->
+  <div class="dashboard-max-card-container background-color-main-lineart flex-one card display-flex-column fiction-container">
     <CardHeader v-bind:Title="'Lire toutes mes fictions'" />
     <div class="card-body">
-      <p style="color: #FFF">
-        J'ai écrit {{ NbAllMyGamesFictions }} fictions
-      </p>
       <SearchBarComponent 
         v-bind:For="'SearchCharacter'"
         v-bind:label="'Sélectionner un personnage'"
@@ -66,7 +58,7 @@ export default {
   },
   created() {
     this.usrId = this.userCurrent; 
-    this.initData(); 
+    this.initDataMyFictions(); 
     this.GetAllNamesAndIdsCharacters();
   },
   methods: {
@@ -82,7 +74,7 @@ export default {
           console.log(e);
         });
     },    
-    async initData() {
+    async initDataMyFictions() {
       this.showspinner = true;
       console.log("Démarrage du chargement des fictions...", this.nav);
       try{

@@ -192,3 +192,16 @@ th{
 .user-info-text img{
     width: 50%;
 }
+.image-fiction-container-background{
+    padding: 0.5rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 24vh;
+    background-position: 50%;
+    border-radius: 20px;
+}
+
+.fiction-summary-card{
+    height: 25vh;
+    padding: 0 1rem 0 0.75rem;
+}
