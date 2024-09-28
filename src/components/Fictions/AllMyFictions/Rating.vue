@@ -49,7 +49,7 @@ export default {
       const newId = this.generateRandomId(10);
       console.log(this.fictionId);
       axios
-        .post(Config.Url + "/fiction/AddRating/" + this.fictionId, {
+        .post(Config.Url + "/rating/AddRating/" + this.fictionId, {
           Id: this.fictionId + "-" + newId,
           FictionId: this.fictionId,
           Rating: star,

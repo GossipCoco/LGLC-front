@@ -28,7 +28,7 @@ class FictionService {
         return http.get(`/fiction/GetFiveLastChapByUser/${id}`);
     }
     getChapter(id, data){
-        return http.post(`/fiction/Chapitre/${id}`, data);
+        return http.post(`/chapter/Chapitre/${id}`, data);
     }
     CreateANewChapter(id, data) {
         return http.post(`/fiction/CreateAChapitre/${id}`, data, {
@@ -38,7 +38,7 @@ class FictionService {
         });
     }
     GetLastChapterOfAFiction(id, data){
-        return http.post(`/fiction/GetLastChapterOfAFiction/${id}`, data);
+        return http.post(`/chapter/GetLastChapterOfAFiction/${id}`, data);
     }
 
 }
