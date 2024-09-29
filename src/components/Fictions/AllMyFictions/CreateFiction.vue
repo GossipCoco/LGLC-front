@@ -194,20 +194,29 @@ export default {
       console.log(formData);
       this.CreateANewFiction(this.userCurrent, formData);
     },
-    CreateANewFiction(usr, formData) {
-      GameService.CreateANewGame(usr, formData)
-        .then((response) => {
-          console.log(response);
-          if (response) {
-            this.$router.push({
-              path: "/allFictions/" + this.$store.state.auth.user.usrID,
-            });
-          }
-        })
-        .catch((e) => {
-          console.log(e);
+    async CreateANewFiction(usr, formData) {
+    try {
+      const response = await GameService.CreateANewGame(usr, formData);
+      console.log('Réponse de la création de fiction :', response);
+      
+      if (response && response.data) { // Assure-toi que la réponse contient bien les données attendues
+        console.log('Fiction créée avec succès, redirection...');
+        this.$router.push({
+          path: "/allFictions/" + this.$store.state.auth.user.usrID,
         });
-    },
+      } else {
+        console.error('Erreur lors de la création de la fiction, réponse inattendue :', response);
+        this.$router.push({
+          path: "/allFictions/" + this.$store.state.auth.user.usrID,
+        });
+      }
+    } catch (error) {
+      console.error('Erreur lors de la création de la fiction :', error);
+      this.$router.push({
+          path: "/allFictions/" + this.$store.state.auth.user.usrID,
+        });
+    }
+  }
   },
 };
 </script>
