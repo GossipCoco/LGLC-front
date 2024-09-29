@@ -36,7 +36,7 @@
     justify-content: right;
 }
 .pagination-container{
-    margin-top: -5rem;
+    margin-top: 5rem;
 }
 .row.search-pagination-container{
     height: 50px;
@@ -74,4 +74,7 @@
 .pagination li{
     height: 40px;
     margin: 0;
+}
+.row.pagination-container-row{
+    margin: -6rem 0 0 0;
 }

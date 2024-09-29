@@ -96,7 +96,7 @@ export default {
     async countAllMyFictions() {
       try {
         const response = await AllMyFictionService.CountAllMyFictions(this.userCurrent);
-        this.NbAllMyGamesFictions = response.data.ob;
+        this.NbAllMyGamesFictions = response.data.ob.count;
         this.nav.pages = Math.ceil(this.NbAllMyGamesFictions / this.nav.step);
         console.log("countAllMyFictions", this.nav)
       } catch (error) {
