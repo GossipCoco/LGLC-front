@@ -47,8 +47,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-      
+        </div>      
 </template>
 <script>
 import FictionService from '../../../services/FictionService'

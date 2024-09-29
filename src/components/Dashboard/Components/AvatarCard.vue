@@ -2,7 +2,7 @@
     <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12 card-global">
         <div class="card display-flex-column profil-card fiction-card">
             <TitleHeaderDashboard v-bind:title="UserName" v-bind:type="'username'"/>
-            <div class="card-body user-info-text">                
+            <div class="card-body user-info-text">
                 <p><span class="label-profil">Inscription</span> <span>{{ formatDate(Inscription) }}</span></p>
                 <p><span class="label-profil">Dernière connextion</span> <span>{{ formatDate(LastConnexion) }}</span></p>
                 <p><span class="label-profil">Vous avez écrit</span> <span>{{ nBFiction }}</span> &nbsp; fictions et &nbsp;<span>{{ totalWords }}</span>&nbsp; mots.</p>
