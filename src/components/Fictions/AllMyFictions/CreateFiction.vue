@@ -1,11 +1,20 @@
 <template>
-  <div class="dashboard-max-card-container background-color-main-lineart flex-one  card display-flex-column fiction-container">
+  <div
+    class="dashboard-max-card-container background-color-main-lineart flex-one card display-flex-column fiction-container"
+  >
     <CardHeader v-bind:Title="'Créer une nouvelle fanfiction'" />
     <div class="card-body">
-      <form class="create-character-form" @submit.stop.prevent="handleOk" ref="uploadForm">
+      <form
+        class="create-character-form"
+        @submit.stop.prevent="handleOk"
+        ref="uploadForm"
+      >
         <div class="row">
           <div class="col-12">
-            <InputTitle v-bind:Title="'Titre de la fiction'" @input-title="InputTitle"/>
+            <InputTitle
+              v-bind:Title="'Titre de la fiction'"
+              @input-title="InputTitle"
+            />
             <div class="row">
               <SelectCharacterComponent
                 v-bind:For="'FirstCharacterId'"
@@ -23,30 +32,42 @@
                 v-bind:col="'col-6'"
                 @form-character="handleSecondCharacterChange"
               />
-            </div>
-            <TextAreaComponent
-              v-bind:Title="'Résumé de la fiction'"
-              @input-content="getContent"
-            />
-            <div class="row">
-              <LinkGenerateImage />
-              <div class="col-6">
-                <div class="mb-3">
-                  <label for="file" class="form-label"
-                    >Image de couverture</label
+
+              <div class="row">
+                <div clas="col-6">
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    @click="'/CharacterCreate'"
                   >
-                  <input
-                    type="file"
-                    class="form-control"
-                    @change="handleFileUpload"
-                  />
+                    Créer un personnage
+                  </button>
                 </div>
               </div>
-              <div class="col-2 display-flex button-validate-container">
-                <div class="mb-3">
-                  <button type="submit" class="btn btn-primary">
-                    Créer la fiction
-                  </button>
+              <TextAreaComponent
+                v-bind:Title="'Résumé de la fiction'"
+                @input-content="getContent"
+              />
+              <div class="row">
+                <LinkGenerateImage />
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label for="file" class="form-label"
+                      >Image de couverture</label
+                    >
+                    <input
+                      type="file"
+                      class="form-control"
+                      @change="handleFileUpload"
+                    />
+                  </div>
+                </div>
+                <div class="col-2 display-flex button-validate-container">
+                  <div class="mb-3">
+                    <button type="submit" class="btn btn-primary">
+                      Créer la fiction
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -106,12 +127,10 @@ export default {
         .filter((paragraph) => paragraph.trim() !== "") // Remove empty lines
         .map((paragraph) => `<p>${paragraph}</p>`)
         .join("");
-
-    }
-    ,
-    InputTitle(e){
-      console.log(e)
-      this.form.Title = e
+    },
+    InputTitle(e) {
+      console.log(e);
+      this.form.Title = e;
     },
     handleFirstCharacterChange(field) {
       this.form.FirstCharacterId = field;
@@ -143,6 +162,18 @@ export default {
       this.file = event.target.files[0];
     },
     handleOk() {
+          // Soumettre le formulaire de création de personnage
+          CharacterService.createANewCharacter(this.form)
+        .then((response) => {
+          const newCharacterId = response.data.ob.Id;
+          const redirectTo = this.$route.query.redirectTo || "/allCharacters";
+          this.$router.push({ path: redirectTo, query: { newCharacterId } });
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+
+
       const formattedText = this.form.Summary;
       this.form.Summary = formattedText;
 

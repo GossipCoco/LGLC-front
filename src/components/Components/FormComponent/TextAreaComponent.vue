@@ -5,7 +5,7 @@
       v-model="content"
       class="form-control"
       id="Summary"
-      rows="12"
+      rows="6"
       @change="getData"
     ></textarea>
   </div>
