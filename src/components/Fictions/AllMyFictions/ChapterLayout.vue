@@ -40,7 +40,7 @@
                 <div class="display-flex-row chapter-global-content">
                     <!-- {{ chapter }} -->
                     <div class="chapter-image-content"
-                        v-bind:style="{ backgroundImage: 'url(' + chapter.Image + ')' }">
+                        v-bind:style="{ backgroundImage: 'url(' + ImageChapter + ')' }">
                     </div>
                     <div class="chapter-text-content">
                         <p v-html="Content"></p>
@@ -62,6 +62,7 @@ export default {
             AuthorId: null,
             chapter: {},
             AllIillustrations: {},
+            ImageChapter:null,
             Content: null,
             nav: {
                 current: 0,
@@ -88,6 +89,8 @@ export default {
             FictionService.getChapter(id, this.nav)
                 .then((response) => {
                     this.chapter = response.data.ob;
+                    console.log(this.chapter)
+                    this.ImageChapter = response.data.ob.Image
                     this.Author = this.chapter.Fiction.UserId
                     this.AuthorId = this.chapter.Fiction.UserId
                     this.AllIillustrations = this.chapter.ChapterIllustrations
