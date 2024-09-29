@@ -99,6 +99,7 @@ export default {
           this.$router.push({
             path: "/CommentByFiction/" + this.fanfiction,
           });
+          location.reload()
         })
         .catch((e) => {
           console.log(e);
