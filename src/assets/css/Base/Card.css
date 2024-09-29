@@ -3,12 +3,11 @@
 
 #all-characters-container-card .character-card.card,
 .character-card.card,
-.dashboard-medium-card-container.card {
+.dashboard-medium-card-container.card{
     background-color: rgba(var(--dark-green-01), 1);
     border: none;
     color: rgba(var(--main-white), 1);
 }
-
 .character-details.card::after {
     content: var(--cat-corner);
     position: absolute;
@@ -16,8 +15,6 @@
     left: 90%;
     z-index: 99999;
 }
-
-
 .character-container-global {
     width: 180vh;
     margin-top: 2rem;

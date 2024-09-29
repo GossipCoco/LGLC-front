@@ -16,6 +16,11 @@
         <router-link :to="'/CommentByFiction/' + Title"
           ><img src="../../../../public/images/icons/comments-solid.svg"
         /></router-link>
+        <br>
+        <CreateCommentModal 
+          v-bind:fanfiction="Title"
+          v-bind:fictionId="IdFiction"                                
+        />
       </div>
       <TitleFiction
         v-bind:Title="Title"
@@ -92,6 +97,7 @@ import Rating from "./Rating.vue";
 import CarrouselCharacter from "./CarrouselCharacter.vue";
 import TitleFiction from "./TitleFiction.vue";
 import ListOfChapter from "./ListOfChapters.vue";
+import CreateCommentModal from "../Comments/CreateCommentModal.vue";
 
 export default {
   name: "FictionContain",
@@ -102,6 +108,7 @@ export default {
     TitleFiction,
     CarrouselCharacter,
     ListOfChapter,
+    CreateCommentModal
   },
   data() {
     return {

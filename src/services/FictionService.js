@@ -40,6 +40,9 @@ class FictionService {
     GetLastChapterOfAFiction(id, data){
         return http.post(`/chapter/GetLastChapterOfAFiction/${id}`, data);
     }
+    CreateCommentForAFiction(id, data){
+        return http.post(`/fiction/CreateCommentForAFiction/${id}`, data)
+    }
 
 }
 

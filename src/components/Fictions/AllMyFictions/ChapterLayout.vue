@@ -10,16 +10,21 @@
             </div>
             <div class="card-body">
                 <div class="row">
-                    <div class="col-6">
+                    <!-- <div class="col-6">
                         <div style="color: white" v-for="(illustration, index) in AllIillustrations" :key="index">
                             <div style="height: 150px; width: 150px;">
                                <img :src=" illustration.IllustrationId"
                                     :alt="illustration.IllustrationId" style="height: 150px; width: 150px;" />
                             </div>
                         </div>
-                    </div>
-                    <div class="col-6">
+                    </div> -->
+                    <div class="col-12">
                         <div class="display-flex chapter-button-content">
+                            <CreateCommentModal
+                                v-bind:fanfiction="TitleFiction"
+                                v-bind:fictionId="FictionId"
+                                v-bind:chapterId="chapterId"
+                                v-bind:chapterTitle="chapter.Title"/>
                             <button @click="speakText" class="btn btn-primary">
                                 Lire à voix haute
                             </button>
@@ -37,8 +42,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="display-flex-row chapter-global-content">
-                    <!-- {{ chapter }} -->
+                <div class="display-flex-row chapter-global-content">                   
                     <div class="chapter-image-content"
                         v-bind:style="{ backgroundImage: 'url(' + ImageChapter + ')' }">
                     </div>
@@ -51,14 +55,18 @@
 </template>
 <script>
 import FictionService from '../../../services/FictionService'
+import CreateCommentModal from '../Comments/CreateCommentModal.vue';
 export default {
     name: 'ChapterLayout',
+    components: {CreateCommentModal},
     data() {
         return {
             TitleFiction: null,
             usrCurrent: this.$store.state.auth.user.usrID,
             Author: null,
             AuthorId: null,
+            FictionId: null,
+            chapterId: null,
             chapter: {},
             AllIillustrations: {},
             ImageChapter:null,
@@ -88,13 +96,14 @@ export default {
             FictionService.getChapter(id, this.nav)
                 .then((response) => {
                     this.chapter = response.data.ob;
-                    console.log(this.chapter)
+                    this.chapterId = this.chapter.Id
                     this.ImageChapter = response.data.ob.Image
                     this.Author = this.chapter.Fiction.UserId
                     this.AuthorId = this.chapter.Fiction.UserId
                     this.AllIillustrations = this.chapter.ChapterIllustrations
                     this.TitleFiction = this.chapter.Fiction.Title
                     this.Content = this.chapter.Content
+                    this.FictionId = this.chapter.Fiction.Id
                 })
                 .catch((e) => {
                     console.log(e);
