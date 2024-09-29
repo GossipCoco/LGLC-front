@@ -238,7 +238,8 @@ export default {
     },
     logout() {
       this.$store.dispatch("auth/logout");
-      this.$router.push("/login");
+    // Redirection vers la page de login après déconnexion
+      this.$router.push("/Accueil");
     },
   },
 };

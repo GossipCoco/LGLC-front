@@ -1,6 +1,25 @@
 import AuthService from '../services/auth.service'
 import UserAPI from '../api/UserAPI'
-
+import TokenService from '../services/token.service'
+const state = {
+  user: null,
+  isAuthenticated: false,
+};
+const actions = {
+  logout({ commit }) {
+    // Supprime les informations utilisateur du store
+    commit('logout');
+    
+    // Nettoie les cookies via TokenService
+    TokenService.removeUser();
+  },
+};
+const mutations = {
+  logout(state) {
+    state.user = null;
+    state.isAuthenticated = false;
+  },
+};
 const user = JSON.parse(localStorage.getItem('user'))
 const initialState = user
   ? { status: { loggedIn: true }, user }
@@ -37,7 +56,11 @@ export const auth = {
     },
     logout ({ commit }) {
       AuthService.logout()
-      commit('logout')
+      // Supprime les informations utilisateur du store
+      commit('logout');
+    
+      // Nettoie les cookies via TokenService
+      TokenService.removeUser();
     },
     allUsers ({ commit }) {
       return AuthService.allUsers().then(
@@ -63,8 +86,8 @@ export const auth = {
       state.user = null
     },
     logout (state) {
-      state.status.loggedIn = false
-      state.user = null
+      state.user = null;
+      state.isAuthenticated = false;
     },
     refreshToken(state, accessToken) {
       state.status.loggedIn = true;
@@ -72,3 +95,8 @@ export const auth = {
     }
   }
 }
+export default {
+  state,
+  actions,
+  mutations,
+};
