@@ -73,7 +73,6 @@ export default {
       this.file = event.target.files[0];
     },
     handleOk() {
-      console.log(this.form.Content)
       const formData = new FormData();
       formData.append('Id', 'Chapitre ' + this.NextChapter + ' - ' + this.fictionId);
       formData.append('Title', 'Chapitre ' + this.NextChapter + ' - ' + this.form.Title);

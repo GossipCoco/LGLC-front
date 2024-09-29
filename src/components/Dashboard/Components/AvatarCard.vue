@@ -10,8 +10,8 @@
                 <p><span class="label-profil">Mes badges</span></p>
                 <div class="display-flex-row">
                     <p>
-                        <img :src="'/images/Levels/' + level.Image" />
-                        <img :src="'/images/Levels/' + roleImage" />
+                        <img :src="'/images/Levels/' + level.Image" :alt="level.Image"/>
+                        <img :src="'/images/Levels/' + roleImage" :alt="roleImage"/>
                     </p>
                 </div>
             </div>

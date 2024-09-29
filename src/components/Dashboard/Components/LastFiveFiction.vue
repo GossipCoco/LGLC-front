@@ -12,7 +12,6 @@
               <p><router-link :to="'/fiction/' + fiction.Title">{{ fiction.Title }}</router-link><br>
                 <span v-html="truncateText(fiction.Summary, 55)"></span>
               </p>
-
             </div>
           </div>
         </div>
@@ -48,7 +47,7 @@ export default {
     GetFiveLastGameByUser(e) {
       GameService.GetFiveLastGameByUser(e)
         .then((response) => {
-          this.GamesAndFictions = response.data.data
+          this.GamesAndFictions = response.data.ob
         })
         .catch((error) => {
           console.error(error);

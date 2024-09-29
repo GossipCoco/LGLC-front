@@ -31,7 +31,7 @@ class FictionService {
         return http.post(`/chapter/Chapitre/${id}`, data);
     }
     CreateANewChapter(id, data) {
-        return http.post(`/fiction/CreateAChapitre/${id}`, data, {
+        return http.post(`/chapter/CreateAChapitre/${id}`, data, {
             headers: {
                 'Content-Type': 'multipart/form-data',
             },
