@@ -1,10 +1,10 @@
 import http from '../http/http-common'
 
-class GradeService {
-    getAllGrade() {
+class GradeServices {
+    getAllGrades() {
         return http.get('/grade')
     }
 
 }
 
-export default new GradeService()
+export default new GradeServices()

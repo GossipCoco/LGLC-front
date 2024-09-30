@@ -9,6 +9,9 @@
   overflow-x: hidden;
   scrollbar-color: rgba(var(--dark-green-02), 1) rgba(var(--clear-green-02), 1);
   scrollbar-width: thin;
+  margin: -2rem 0 -2rem -2rem;
+  width: 11rem;
+  height: 103vh;
 }
 
 .b-example-divider {
@@ -48,6 +51,7 @@
 
 .logo-container {
   padding: 1rem 0 0 0;
+  margin: 2rem 0 0 1rem;
 }
 
 #accueil header {
@@ -64,9 +68,7 @@
   justify-content: center;
 }
 
-.logo-container {
-  margin: 0rem 0 0 0.5rem;
-}
+
 
 .logo-container img {
   width: 100%;
@@ -121,13 +123,14 @@
 }
 
 .menu-left ul {
-  margin-top: 2rem;
+  margin: 1rem 0 0 1.5rem;
+  width: 9rem;
 }
 
 .menu-left ul li {
   font-family: var(--roboto-text);
   color: rgba(var(--main-white), 1);
-  margin: 0.5rem 0;
+  margin: 0.3rem 0;
   text-align: center;
 }
 
