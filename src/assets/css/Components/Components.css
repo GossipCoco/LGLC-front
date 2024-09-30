@@ -139,7 +139,7 @@ th{
     margin: 0 0 0 0.5rem;
 }
 .pagination-container{
-    margin-top: -2rem;
+    margin-top: 0;
 }
 .row.list-fiction-card-container{
     height: 35rem;
@@ -147,6 +147,9 @@ th{
 }
 #dashboard .row.top-dashboard .card-global{
     margin: 0 auto;
+}
+.h5-container{
+    height: 9vh;
 }
 .left-fiction-summary-container{
     display: flex;
@@ -200,4 +203,18 @@ th{
 .fiction-summary-card{
     height: 25vh;
     padding: 0 1rem 0 0.75rem;
+}
+.mini-rond-messages{
+    background-color: rgba(var(--active-hover), 1);
+    height: 2rem;
+    width: 2rem;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 1rem 0 0 0;
+}
+.mini-rond-messages p{
+    color: rgba(var(--dark-green-02), 1)
 }

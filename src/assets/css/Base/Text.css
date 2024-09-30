@@ -17,6 +17,13 @@ a {
 .summaray-title-text p a:hover {
   color: rgba(var(--active-hover), 1);
 }
+.mini-rond-messages p{
+  color: rgba(var(--dark-green-02), 1)
+}
+.summary-text-font p{
+  font-size: 0.9em;
+  text-align: justify;
+}
 .summaray-title-text p a.last-chapter-text{
   color: rgba(var(--active-hover), 1);
   font: 500 1.05em 'Roboto';

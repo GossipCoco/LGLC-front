@@ -119,24 +119,12 @@
         </router-link>
         <div class="collapse" id="creation">
           <router-link class="link-collapse" to="/createANewFiction">
-            Créer une nouvelle fiction
+            Nouvelle fiction
           </router-link>
           <router-link to="/CharacterCreate" class="link-collapse">
-            Créer un nouveau personnage
+            Nouveau personnage
           </router-link>
         </div>
-      </li>
-      <li class="li-level1">
-        <router-link to="/EventGlobal">
-          <div class="menu-level1">
-            <div class="menu-li-contain">
-              <div class="icon-menu-container">
-                <img src="/images/icons/calendar-days-solid.svg" />
-              </div>
-              <div class="chevron-container"></div>
-            </div>
-          </div>
-        </router-link>
       </li>
       <li class="li-level1">
         <router-link
@@ -175,6 +163,18 @@
           <router-link class="link-collapse" to="/Quest">Quêtes</router-link>
         </div>
       </li>
+      <li class="li-level1">
+        <router-link to="/EventGlobal">
+          <div class="menu-level1">
+            <div class="menu-li-contain">
+              <div class="icon-menu-container">
+                <img src="/images/icons/calendar-days-solid.svg" />
+              </div>
+              <div class="chevron-container"></div>
+            </div>
+          </div>
+        </router-link>
+      </li>      
       <li class="li-level1" v-if="role === 'Administrateur'">
         <router-link to="/admin">
           <div class="menu-level1">

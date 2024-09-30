@@ -200,6 +200,10 @@ main.container-fluid {
     color: rgba(var(--main-white), 1);
     text-align: justify;
 }
+#dashboard .mini-rond-messages p{
+    color: rgba(var(--dark-green-02), 1);
+    font-weight: 600;
+}
 .illustration-background .background-fiction-contain{
     background-repeat: no-repeat;
     height: 38rem;
