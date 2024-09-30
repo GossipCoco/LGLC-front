@@ -197,7 +197,8 @@ main.container-fluid {
     border: none;
 }
 #dashboard p, #dashboard h1,#dashboard h4, #arc-book-container p{
-    color: rgba(var(--main-white), 1)
+    color: rgba(var(--main-white), 1);
+    text-align: justify;
 }
 .illustration-background .background-fiction-contain{
     background-repeat: no-repeat;

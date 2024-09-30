@@ -7,6 +7,10 @@
                     <Transition name="slide-fade">
                         <div v-if="formPart1" class="character-detail-form">
                             <div class="row form-first-part-container">
+                                <div class="col-12 col-md-12">
+                                    <label for="inputName" class="form-label">Nom actuel du personnage</label>
+                                    <input type="text" class="form-control" id="inputName" v-model="form.CurrentName" required>
+                                </div>                                
                                 <SelectClanComponent
                                     v-bind:For="'SearchClan'"
                                     v-bind:label="'Clan'"
@@ -14,25 +18,18 @@
                                     v-bind:col="'col-6'"
                                     @form-clans="getclans"
                                 />
-                                <div class="col-md-6">
-                                    <label for="inputName" class="form-label">Nom actuel du personnage</label>
-                                    <input type="text" class="form-control" id="inputName" v-model="form.CurrentName" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="inputGrade" class="form-label">Grade</label>
-                                    <select class="form-select" v-model="form.Grade" required>
-                                        <option v-for="(grades, index) in grades" :value="grades.Id" :key="index"
-                                            id="inputGrade">
-                                            {{ grades.Name }}
-                                        </option>
-                                    </select>
-                                </div>
+                                <SelectGadeComponent 
+                                v-bind:For="'SearchGrade'"
+                                    v-bind:label="'Grade'"
+                                    v-bind:grades="grades"
+                                    v-bind:col="'col-6'"
+                                    @form-grades="getgrades"
+                                />
                                 <div class="col-md-6">
                                     <label for="inputKitty" class="form-label">Nom de chaton</label>
                                     <input type="text" class="form-control" id="inputKitty" v-model="form.KitName">
                                 </div>
                                 <div class="col-md-6">
-                                    <!-- {{ form.Clan }} {{ form.Grade }} -->
                                     <label for="inputapprenti" class="form-label">Nom d'apprenti</label>
                                     <input type="text" class="form-control" id="inputapprenti"
                                         v-model="form.ApprenticeName"
@@ -98,11 +95,6 @@
                         <div class="col-12">
                             <div class="mb-12">
                                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                    <!-- <button class="btn btn-primary" v-on:click="NextToPart3"
-                                    v-if="formPart1 === true && form.CurrentName && form.Clan && form.Grade"
-                                    title="Next3">
-                                    Suivant
-                                </button> -->
                                     <button class="btn btn-primary" v-on:click="NextToPart3" title="Next3">
                                         Suivant
                                     </button>
@@ -137,12 +129,12 @@ import ImageCharactersDatas from '../../../Datas/DatasReactives/ImageCharactersD
 
 import CardHeader from '../../Components/GenericComponent/CardHeader.vue'
 import SelectClanComponent from '../../Components/FormComponent/SelectClanComponent.vue'
-
+import SelectGadeComponent from '../../Components/FormComponent/SelectGadeComponent.vue'
 
 
 export default {
     name: 'CharacterCreate',
-    components:{CardHeader, SelectClanComponent}, 
+    components:{CardHeader, SelectClanComponent, SelectGadeComponent}, 
     data() {
         return {
             characterId: null,
@@ -184,7 +176,10 @@ export default {
     methods: {
         getclans(e){
             console.log(e)
-        },  
+        },
+        getgrades(e){
+            console.log(e)
+        },
         onFileChange(e) {
             const file = e.target.files[0];
             this.form.Image = file;

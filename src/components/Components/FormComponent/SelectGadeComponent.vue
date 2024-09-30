@@ -1,14 +1,19 @@
 <template>
-  <div class="col-md-6">
-    <label for="inputClans" class="form-label">Grade</label>
-    <select class="form-select" v-model="gradeSelected" required>
-      <option
+  <div :class="col">
+    <label :for="For" class="white-text form-label">
+      {{ label }}
+    </label>
+    <select
+      :id="For"
+      class="form-select"
+      aria-label="Default select example"
+      v-model="gradeId"
+      @change="getGrades"
+    >
+    <option
         v-for="(grade, index) in grades"
         :value="grade.Id"
-
         :key="index"
-        id="inputClans"
-        @change="SelectGrade"
       >
         {{ grade.Name }}
       </option>
@@ -16,23 +21,20 @@
   </div>
 </template>
 <script>
-import GradeServices from "../../../services/GradeService";
 export default {
-  name: 'SelectGrade',
+  name: "SelectCharacterComponent",
+  props: ["For", "label",  "grades", "col"],
   data() {
     return {
-      grades: {},
-      gradeSelected: null
+      form: null,
+      gradeId: null,
     };
   },
-  mounted() {
-    this.GetAllGrade();
-  },
   methods: {
-    SelectGrade(){
-      console.log("SelectGade", this.gradeSelected)
-      this.$emit("SelectGade", this.gradeSelected)
-    }
+    getGrades() {
+      console.log("form-grades", this.gradeId)
+      this.$emit("form-grades", this.gradeId);
+    },
   },
 };
 </script>
