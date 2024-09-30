@@ -178,7 +178,8 @@ main.container-fluid {
     flex: 1
 }
 .character-l1 img {
-    height: 150px;
+   width: 75%;
+   height: 75%;
 }
 .flex-one .btn {
     margin-bottom: 1rem;
@@ -198,7 +199,11 @@ main.container-fluid {
 }
 #dashboard p, #dashboard h1,#dashboard h4, #arc-book-container p{
     color: rgba(var(--main-white), 1);
+}
+#arc-book-container p{
     text-align: justify;
+    font-size: 1.05em;
+    font-family: 'Poppins';
 }
 #dashboard .mini-rond-messages p{
     color: rgba(var(--dark-green-02), 1);

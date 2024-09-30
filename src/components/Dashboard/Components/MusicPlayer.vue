@@ -1,16 +1,16 @@
 <template>
-  <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12 card-global">
+  <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12 card-global">
     <div class="card fiction-card scheduler">
         <TitleHeaderDashboard v-bind:title="'Musique'"/>
         <div class="card-body scheduler-container">
       <div class="music-player">
-        <audio ref="audioPlayer" controls @ended="nextTrack">
+        <audio ref="audioPlayer" controls @ended="nextTrack" width="14rem">
           <source :src="currentTrack.url" type="audio/mpeg" />
           Your browser does not support the audio element.
         </audio>
-        <div class="controls">
-          <button @click="previousTrack">Précédent</button>
-          <button @click="nextTrack">Suivant</button>
+        <div class="controls display-flex-column">
+          <button class="btn btn-primary" @click="previousTrack">Précédent</button>
+          <button class="btn btn-primary" @click="nextTrack">Suivant</button>
           </div>
         </div>
       </div>
@@ -56,22 +56,11 @@ export default {
   },
 };
 </script>
-  
-  <style scoped>
+<style scoped>
 .music-player {
   text-align: center;
   margin-top: 20px;
 }
-.controls button {
-  margin: 10px;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-.controls button:hover {
-  background-color: #0056b3;
-}
+
 </style>
   

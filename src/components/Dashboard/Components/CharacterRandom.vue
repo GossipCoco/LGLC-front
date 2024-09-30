@@ -1,12 +1,14 @@
 <template>
-  <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12  card-global">
+  <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12  card-global">
     <div class="card fiction-card">
       <TitleHeaderDashboard v-bind:title="'Personnages aléatoires'"/>
       <div class="card-body display-flex-column">
         <div class="row">
           <div class="col-12 character-col display-flex-row align-items-content-justify-content">
             <div class="character-l1" v-for="character in randomCharacters" :key="character.Id">
-              <img class="img-fluid" :src="character.Image" :alt="character.Image" />
+              <div class="rond-character-background"  v-bind:style="{ backgroundImage: 'url(' + character.Clan.Image + ')' }">
+                <img class="img-fluid" :src="character.Image" :alt="character.Image" />
+              </div>
               <br>
               <span class="character-details-router">
                 <router-link :to="'/characterDetails/' + character.Id">
@@ -14,13 +16,6 @@
                 </router-link>
               </span>
             </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12  display-flex-row align-items-content-justify-content">
-            <router-link to="/CharacterCreate" type="button" class="btn btn-primary">
-              Créer un nouveau personnage
-            </router-link>
           </div>
         </div>
       </div>

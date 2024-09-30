@@ -11,7 +11,7 @@ a {
 }
 .summaray-title-text p a {
   color: rgba(var(--clear-green-02), 1);
-  font: 600 1.5em 'Poppins';
+  font: 600 1.25em 'Poppins';
   font-variant: small-caps ;
 }
 .summaray-title-text p a:hover {
@@ -27,7 +27,6 @@ a {
 .summaray-title-text p a.last-chapter-text{
   color: rgba(var(--active-hover), 1);
   font: 500 1.05em 'Roboto';
-  font-variant: small-caps ;
 }
 .summaray-title-text p a.last-chapter-text:hover{
   color: rgba(var(--clear-green-02), 1);
@@ -176,4 +175,7 @@ h1.card-title{
 }
 h5.card-title{
   font-size: 1.25em;
+}
+.name-characatrer-link .btn{
+  font-family: 'Poppins';
 }

@@ -133,10 +133,11 @@ th{
     flex: 0.25
 }
 .list-all-fictions-globale--container{
-    width: 22rem;
+    width: 24rem;
 }
 .summaray-title-text{
     margin: 0 0 0 0.5rem;
+    flex: 1;
 }
 .pagination-container{
     margin-top: 0;
@@ -217,4 +218,25 @@ th{
 }
 .mini-rond-messages p{
     color: rgba(var(--dark-green-02), 1)
+}
+audio{
+    width: 14rem;
+}
+.rond-character-background{
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 100%;
+    background-position: 50%;
+}
+.character-details-router a {
+    font-size: 0.85em;
+}
+
+.all-characters-by-user-container{
+    height: 20rem;
+    overflow-y: scroll;
+}
+.image-width{
+    width: 45%;
+    height: 45%;
 }

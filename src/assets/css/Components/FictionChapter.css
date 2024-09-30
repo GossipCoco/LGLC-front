@@ -175,12 +175,11 @@ th {
     font-family: var(--montserratRegular);
 }
 .rond-image-illustration {
-    width: 80px;
-    height: 50px;
+    flex: 0.25
 }
 .rond-image-illustration img {
     width: 70px;
-    height: 60px;
+    height: 70px;
     border-radius: 100%;
     aspect-ratio: 16 / 9;
 }
