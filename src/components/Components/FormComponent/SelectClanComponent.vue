@@ -7,11 +7,10 @@
         :id="For"
         class="form-select"
         aria-label="Default select example"
-        v-model="ClanId"
-        @change="getClanr"
+        v-model="clanId"
+        @change="getClan"
       >
-        <option selected disabled>{{ label }}</option>
-        <option
+      <option
           v-for="(clan, index) in clans"
           :value="clan.Id"
           :key="index"
@@ -32,8 +31,9 @@
       };
     },
     methods: {
-      getCharacter() {
-        this.$emit("form-clan", this.clanId);
+      getClan() {
+        console.log("form-clans", this.clanId)
+        this.$emit("form-clans", this.clanId);
       },
     },
   };

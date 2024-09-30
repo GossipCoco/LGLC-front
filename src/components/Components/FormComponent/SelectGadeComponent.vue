@@ -29,18 +29,8 @@ export default {
     this.GetAllGrade();
   },
   methods: {
-    GetAllGrade() {
-      GradeServices.getAllGrades()
-        .then((response) => {
-          console.log(response.data.ob)
-          this.grades = response.data.ob;
-        })
-        .catch((e) => {
-          console.log(e);
-        });
-    },
     SelectGrade(){
-      console.log(this.gradeSelected)
+      console.log("SelectGade", this.gradeSelected)
       this.$emit("SelectGade", this.gradeSelected)
     }
   },

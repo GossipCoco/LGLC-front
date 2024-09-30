@@ -7,15 +7,13 @@
                     <Transition name="slide-fade">
                         <div v-if="formPart1" class="character-detail-form">
                             <div class="row form-first-part-container">
-                                <div class="col-md-6">
-                                    <label for="inputClans" class="form-label">Clans</label>
-                                    <select class="form-select" v-model="form.Clan" required>
-                                        <option v-for="(clans, index) in clans" :value="clans.Id" :key="index"
-                                            id="inputClans">
-                                            {{ clans.Name }}
-                                        </option>
-                                    </select>
-                                </div>
+                                <SelectClanComponent
+                                    v-bind:For="'SearchClan'"
+                                    v-bind:label="'Clan'"
+                                    v-bind:clans="clans"
+                                    v-bind:col="'col-6'"
+                                    @form-clans="getclans"
+                                />
                                 <div class="col-md-6">
                                     <label for="inputName" class="form-label">Nom actuel du personnage</label>
                                     <input type="text" class="form-control" id="inputName" v-model="form.CurrentName" required>
@@ -70,25 +68,6 @@
                             </div>
                         </div>
                     </Transition>
-                    <!-- <Transition name="slide-fade">
-                        <div v-if="formPart2" class="character-radio-button-container">
-                            <div class="row form-second-part-container">
-                                <div class="col-md-12">
-                                    <label class="form-label">Sélectionner une image de personnage</label>
-                                    <div class="select-character-container">
-                                        <div class="form-check" v-for="(Image, index) in ImageAllCharacters"
-                                            :key="index">
-                                            <input class="form-check-input" type="radio" :id="'image' + index"
-                                                :value="Image" v-model="form.Image">
-                                            <label class="form-check-label" :for="'image' + index">
-                                                <img class="list-cararcter-image" :src="Image" alt="Character Image">
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </Transition> -->
                     <Transition name="slide-fade">
                         <div class="text-area-container" v-if="formPart3">
                             <div class="col-12">
@@ -155,13 +134,15 @@ import GradeService from '../../../services/GradeService'
 import ClansService from '../../../services/ClansServices'
 import CharacterService from '../../../services/CharacterService'
 import ImageCharactersDatas from '../../../Datas/DatasReactives/ImageCharactersDatas'
-import ImageService from '../../../services/ImageService'
 
 import CardHeader from '../../Components/GenericComponent/CardHeader.vue'
+import SelectClanComponent from '../../Components/FormComponent/SelectClanComponent.vue'
+
+
 
 export default {
     name: 'CharacterCreate',
-    components:{CardHeader}, 
+    components:{CardHeader, SelectClanComponent}, 
     data() {
         return {
             characterId: null,
@@ -196,11 +177,14 @@ export default {
     },
 
     mounted() {
-        this.GetAllGrade();
-        this.GetAllClans();
-        this.GetAllImages()
+        this.GetAllGrade()
+        this.GetAllClans()
+
     },
     methods: {
+        getclans(e){
+            console.log(e)
+        },  
         onFileChange(e) {
             const file = e.target.files[0];
             this.form.Image = file;
@@ -229,20 +213,9 @@ export default {
             this.formPart3 = false;
             this.progression = 2;
         },
-        GetAllImages() {
-            ImageService.GetAllImages()
-                .then((response) => {
-                    console.log(response.data.ob);
-                    this.ImageAllCharacters = response.data.ob.map(item => '/images/Characters/' + item.Id);
-                })
-                .catch((e) => {
-                    console.log(e);
-                });
-        },
         GetAllClans() {
             ClansService.getAllClans()
                 .then((response) => {
-                    console.log(response.data.ob);
                     this.clans = response.data.ob;
                 })
                 .catch((e) => {
@@ -250,9 +223,8 @@ export default {
                 });
         },
         GetAllGrade() {
-            GradeService.getAllGrade()
+            GradeService.getAllGrades()
                 .then((response) => {
-                    console.log(response.data.ob);
                     this.grades = response.data.ob;
                 })
                 .catch((e) => {
@@ -262,10 +234,8 @@ export default {
         handleOk() {
             const Biography = this.form.Biography ? this.form.Biography.split('\n').map(paragraph => `<p>${paragraph}</p>`).join('') : '';
             this.form.Biography = Biography;
-
             const Description = this.form.Description ? this.form.Description.split('\n').map(paragraph => `<p>${paragraph}</p>`).join('') : '';
             this.form.Description = Description;
-
             const Personnality = this.form.Personnality ? this.form.Personnality.split('\n').map(paragraph => `<p>${paragraph}</p>`).join('') : '';
             this.form.Personnality = Personnality;
             const formData = new FormData();
@@ -289,7 +259,6 @@ export default {
             this.CreateCharacter(formData);
         },
         CreateCharacter(form) {
-
             CharacterService.createANewCharacter(form)
                 .then((response) => {
                     this.$router.push({ path: '/characterDetails/' + response.data.ob[0].Id });
