@@ -8,7 +8,7 @@
                 </div>
             </div>
             <div class="title-accueil">
-                <h1>La Guerre des Clans</h1>
+                <h1>La Guerre des Clans</h1>                
                 <h2>Bienvenue dans l'univers captivant de <br>"La Guerre des Clans" !</h2>
             </div>
             

@@ -52,6 +52,9 @@
 .overflowY-auto{
     overflow-y: auto;
 }
+.vertical-align-middle {
+    vertical-align: middle;
+}
 /* FONTS */
 .opensans-text{
     font-family: var(--opensans-text);

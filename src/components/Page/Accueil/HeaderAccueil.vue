@@ -1,10 +1,12 @@
 <template>
     <header data-bs-theme="dark">
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <div class="container-fluid">
+        <div class="container-fluid header-container">
+          <div class="logo-accueil-container">
           <router-link to="/Accueil" class="navbar-brand">
-            <img src="../../../../public/images/Logos/logo1.png" />
+            <img src="../../../../public/images/Logos/Mini_logo_5.png" />
           </router-link>
+          </div>
           <button
             class="navbar-toggler"
             type="button"

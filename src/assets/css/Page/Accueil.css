@@ -171,7 +171,7 @@
     padding-left: 0 !important;
 }
 #accueil .navbar-brand img {
-    width: 150px;
+    width: 30rem;
 }
 #accueil .image-accueil .image-one {
     position: relative;
@@ -262,3 +262,18 @@
  main#footer-link{
     height: 70vh;
  }
+
+ #accueil #summary-container p{
+    text-align: justify;
+    word-wrap: normal;
+    word-break: normal;
+    font-family: 'Open Sans';
+    font-size: 1.5em;
+ }
+ footer p{
+    margin: -2rem 0 0 0;
+}
+
+footer .col-2.display-flex-row.align-items-content-justify-content.vertical-align-middle img{
+    width: 55%;
+}

@@ -56,7 +56,7 @@
 }
 
 #accueil header {
-  height: 7rem;
+  height: 10rem;
 }
 
 .navbar {
@@ -77,13 +77,13 @@
 
 #navbarCollapse {
   height: 5rem;
-  margin-left: 87rem;
+  margin-left: 60rem;
   /* display: flex; */
   flex-direction: row;
   flex: 1;
   justify-content: right;
   width: 90vh;
-  margin-right: -5rem;
+  margin-right: 5rem;
 }
 
 .nav-item a {
@@ -225,11 +225,11 @@ ul {
 }
 
 .navbar>.container-fluid {
-  height: 7rem;
+  height: 10rem;
 }
 
 nav.navbar.navbar-expand-md.navbar-dark.fixed-top {
-  height: 8rem;
+  height: 10rem;
 }
 
 .avatar-navabar {
@@ -309,4 +309,14 @@ nav.navbar.navbar-expand-md.navbar-dark.fixed-top {
   .col-11 {
     width: 100%;
   }
+}
+.container-fluid.header-container{
+  display: flex;
+  flex-direction: row;
+}
+.logo-accueil-container{
+    flex: 1;
+    width: 18rem;
+    height: 20vh;
+    padding: 2rem 0 0 0;
 }
