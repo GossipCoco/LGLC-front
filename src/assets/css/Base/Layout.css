@@ -175,12 +175,21 @@ main.container-fluid {
 }
 
 .character-l1 {
-    flex: 1
+    flex: 1;
+    margin: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
 }
 .character-l1 img {
    width: 75%;
    height: 75%;
 }
+.character-l1 img:hover {
+    transform: scale(1.05);
+ }
 .flex-one .btn {
     margin-bottom: 1rem;
 }

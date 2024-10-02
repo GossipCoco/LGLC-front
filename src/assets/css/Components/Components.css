@@ -226,7 +226,13 @@ audio{
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 100%;
-    background-position: 50%;
+    background-position: 50%;display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    vertical-align: bottom;
 }
 .character-details-router a {
     font-size: 0.85em;
