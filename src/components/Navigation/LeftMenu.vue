@@ -1,6 +1,6 @@
 <template>
   <div class="burger-menu" @click="toggleMenu">
-    <img src="/images/Logos/logo1.png" />
+    <img src="/images/Logos/Logo_1.png" />
   </div>
   <div
     :class="[
@@ -14,7 +14,7 @@
   >
     <div class="logo-container">
       <router-link to="/dashboard">
-        <img src="/images/Logos/logo1.png" />
+        <img src="/images/Logos/Logo_1.png" />
       </router-link>
     </div>
     <ul class="nav nav-pills flex-column mb-auto">
