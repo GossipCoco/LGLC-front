@@ -214,6 +214,11 @@
     height: 100px;
     border-radius: 100%;
 }
+.profil-user-card.card .avatar-container img {
+    width: 200px;
+    height: 250px;
+    border-radius: 100%;
+}
 .dashboard-home-max-card-container .avatar-container {
     width: 5vh;
     height: 5vh;

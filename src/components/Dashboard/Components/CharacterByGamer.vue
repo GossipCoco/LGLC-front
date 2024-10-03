@@ -4,7 +4,8 @@
   >
     <div class="card profil-card fiction-card">
       <TitleHeaderDashboard v-bind:title="'Mes personnages'" />
-      <div class="card-body">        
+      <div class="card-body">
+        <router-link to="/OriginaleCharacterByUser" >Mes personnages</router-link>
         <div v-for="(character, index) in gamer" :key="index">
           <p>{{ character.UserName }}</p>
           <div class="display-flex-row">

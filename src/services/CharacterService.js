@@ -4,6 +4,10 @@ class CharacterService {
     getCharacterByName(id){
         return http.get(`/character/GetCharacterByName/${id}`)
     }
+    GetOriginaleCharacterByUser(id) {
+        console.log("Id", id)
+        return http.get(`/character/GetOriginaleCharacterByUser/${id}`)
+    }
     CountAllCharacters(){
         return http.get('/character/countAllcharacters')
     }    

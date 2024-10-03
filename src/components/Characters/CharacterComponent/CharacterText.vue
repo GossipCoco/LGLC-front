@@ -23,9 +23,5 @@
 export default {
   name: "CharacterText",
   props: ["character"],
-  created(){
-    // console.log(this.character)
-    // console.log(this.character.Image)
-  }
 };
 </script>
