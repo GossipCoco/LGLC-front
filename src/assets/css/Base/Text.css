@@ -71,9 +71,11 @@ a {
   align-content: center;
 }
 .card-header h2 {
-  font: 42px capitalize all-petite-caps;
+  font: 2em capitalize all-petite-caps;
 }
-
+.card-header h2 {
+  font-variant-caps: small-caps;
+}
 #list-events p span {
   font-weight: 600;
 }

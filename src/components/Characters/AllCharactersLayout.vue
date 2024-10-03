@@ -1,5 +1,5 @@
 <template>
-  <div class="height-fixe character-container-global">
+  <div class="height-fixe character-container-global list-all-characters-container">
     <div class="row row-filter">
       <ButtonCreationCharacter />
       <div class="col-2">

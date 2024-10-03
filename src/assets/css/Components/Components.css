@@ -202,6 +202,7 @@ th{
 }
 
 .fiction-summary-card{
+    width: 30rem;
     height: 25vh;
     padding: 0 1rem 0 0.75rem;
 }
@@ -245,4 +246,7 @@ audio{
 .image-width{
     width: 45%;
     height: 45%;
+}
+.list-all-characters-container{
+    padding: 0rem 2rem 0 4rem;
 }
