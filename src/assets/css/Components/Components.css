@@ -255,4 +255,9 @@ audio{
     height: 100vh;
     overflow-y: scroll;
     overflow-x: hidden;
+    padding: 3rem;
+    margin: 1rem;
+}
+.card.individual-character-card{
+    height: 45vh;
 }

@@ -28,6 +28,9 @@
     max-width: 20rem;
     height: 40rem
 }
+.card-character-container{
+    margin: 0 0 1rem 0;
+}
 #all-characters-container-card .character-card.card {
     margin: 1rem 2rem 0 2rem;
     width: 10rem;
