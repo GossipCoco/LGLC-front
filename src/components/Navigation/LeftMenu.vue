@@ -14,7 +14,7 @@
   >
     <div class="logo-container">
       <router-link to="/dashboard">
-        <img src="/images/Logos/Logo_1.png" />
+        <img src="/images/Logos/Automne_Logo1.png" />
       </router-link>
     </div>
     <ul class="nav nav-pills flex-column mb-auto">
