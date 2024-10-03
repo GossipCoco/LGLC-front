@@ -8,14 +8,15 @@
       <div class="card-group">
         <div class="card individual-character-card">
           <img :src="character.Image" class="card-img-top" :alt="character.UserNam" />
-          <div class="card-body">
-            <h5 class="card-title">{{ character.UserName }}</h5>
-            <div class="card-text">
-              <div
-                class="card-text summary-text-font"
-                v-html="truncateText(character.Description, 50)"
-              ></div>
-            </div>
+          <div class="card-body display-flex-row">
+
+              <div class="col-6">
+                <h5 class="card-title">{{ character.UserName }}</h5>
+              </div>
+              <div class="col-6 btn-position">
+                <router-link class="btn btn-primary" :to="'OriginaleCharacterDetails/'+character.UserName">Lire</router-link>
+              </div>
+
           </div>
         </div>
       </div>

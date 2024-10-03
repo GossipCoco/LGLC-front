@@ -4,6 +4,9 @@ class CharacterService {
     getCharacterByName(id){
         return http.get(`/character/GetCharacterByName/${id}`)
     }
+    GetOneOriginaleCharacterByName(id){
+        return http.get(`/character/GetOneOriginaleCharacterByName/${id}`)
+    }
     GetOriginaleCharacterByUser(id, data) {
         console.log("Id", id)
         return http.post(`/character/GetOriginaleCharacterByUser/${id}`, data)

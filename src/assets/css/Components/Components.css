@@ -261,3 +261,14 @@ audio{
 .card.individual-character-card{
     height: 45vh;
 }
+.original-character-contain.card-image{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+.btn-position{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}

@@ -15,7 +15,7 @@ import AllCharactersLayout from "../components/Characters/AllCharactersLayout";
 import CharacterDetails from "../components/Characters/CharacterComponent/CharacterDetails";
 import CharacterCreate from '../components/Characters/CharacterComponent/CharacterCreate'
 import OriginaleCharacterByUser from "../components/Characters/CharacterComponent/OriginaleCharacterByUser.vue";
-
+import OriginaleCharacterDetails from "../components/Characters/CharacterComponent/OriginaleCharacterDetails.vue";
 import AllClansLayout from "../components/Locations/AllClansLayout";
 import AllLocationsLayout from "../components/Locations/AllLocationsLayout.vue"
 import ClanDetails from "../components/Locations/ClanDetails"
@@ -130,6 +130,11 @@ const routes = [
         name: "characterDetails",
         component: CharacterDetails,
       },{
+        path: "/OriginaleCharacterDetails/:id",
+        name: "OriginaleCharacterDetails",
+        component: OriginaleCharacterDetails
+      }, 
+      {
         path: "/OriginaleCharacterByUser",
         name: 'OriginaleCharacterByUser',
         component: OriginaleCharacterByUser
