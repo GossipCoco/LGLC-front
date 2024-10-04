@@ -130,11 +130,17 @@
 
 .menu-left ul li {
   font-family: var(--roboto-text);
-  color: rgba(var(--main-white), 1);
-  margin: 0.3rem 0;
+  color: rgba(var(--clear-green-02), 1);
+  margin: 0.3rem 0 0.2rem -0.2rem;
   text-align: center;
 }
-
+#collapseExample3 p {
+  font-size: 0.865em;
+  font-variant-caps: all-small-caps;
+  color: rgba(var(--clear-green-02), 1);
+  margin: 0;
+  font-weight: 800;
+}
 .menu-level1 {
   display: flex;
   flex-direction: row;
@@ -250,7 +256,7 @@ nav.navbar.navbar-expand-md.navbar-dark.fixed-top {
   font-size: 1.75em;
   word-wrap: normal;
   word-break: break-word;
-  width: 7rem;
+  width: 7.5rem;
   /* padding: 0 0 0 3rem; */
   display: flex;
   flex-direction: column;
@@ -263,13 +269,13 @@ nav.navbar.navbar-expand-md.navbar-dark.fixed-top {
 }
 
 .link-collapse {
-  font-family: "Assistant", sans-serif;
-  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.45em;
   color: rgba(var(--clear-green-02), 1);
     display: flex;
     flex-direction: column;
     flex: 1;
-    width: 6rem;
+    width: 7rem;
 }
 
 .link-collapse .link-collapse {

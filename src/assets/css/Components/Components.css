@@ -272,3 +272,17 @@ audio{
     align-items: center;
     align-content: center;
 }
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    color: rgba(var(--clear-green-01), 1);
+    background-color: rgba(var(--dark-green-01), 1);
+}
+.nav-pills .nav-link.active:hover, .nav-pills .show>.nav-link:hover{
+    color: rgba(var(--clear-green-01), 1);
+    background-color: var(--active-hover);
+}
+.nav-link{
+    color: rgba(var(--clear-green-01), 1);
+}
+.nav-link:focus, .nav-link:hover {
+    color: var(--active-hover);
+}

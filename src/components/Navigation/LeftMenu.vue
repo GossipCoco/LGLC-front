@@ -3,13 +3,13 @@
     <img src="/images/Logos/Logo_1.png" />
   </div>
   <div
-    :class="[
-      'menu-left',
-      { 'menu-hidden': !isMenuOpen },
-      'd-flex',
-      'flex-column',
-      'flex-shrink-0',
-      'p-3',
+    :class="[ 
+      'menu-left', 
+      { 'menu-hidden': !isMenuOpen }, 
+      'd-flex', 
+      'flex-column', 
+      'flex-shrink-0', 
+      'p-3' 
     ]"
   >
     <div class="logo-container">
@@ -17,6 +17,8 @@
         <img src="/images/Logos/Automne_Logo1.png" />
       </router-link>
     </div>
+
+    
     <ul class="nav nav-pills flex-column mb-auto">
       <li class="li-level1">
         <router-link to="/dashboard">
@@ -43,8 +45,8 @@
             <div class="menu-li-contain">
               <div class="icon-menu-container">
                 <img
-                  src="/images/icons/35699773_1129.svg"
-                  style="width: 2rem"
+                  src="/images/icons/Logo-thunderclan-textless.png"
+                  style="width: 1.25rem"
                 />
               </div>
               <div class="chevron-container">
@@ -54,9 +56,10 @@
           </div>
         </router-link>
         <div class="collapse" id="collapseExample3">
+          <p>Univers LGDC</p>
           <router-link to="/allCharacters" class="link-collapse">
-            Personnnages</router-link
-          >
+            Personnnages
+            </router-link>
           <router-link class="link-collapse" to="/AllClansLayout">
             Clans
           </router-link>
@@ -80,7 +83,7 @@
           <div class="menu-level1">
             <div class="menu-li-contain">
               <div class="icon-menu-container">
-                <img src="/images/icons/book-solid.svg" />
+                <img src="/images/icons/cloud-solid.svg" />
               </div>
               <div class="chevron-container">
                 <i class="fa-solid fa-chevron-down"></i>
@@ -89,12 +92,13 @@
           </div>
         </router-link>
         <div class="collapse" id="collapseExample1">
-          <router-link class="link-collapse" to="/OriginaleCharacterByUser" >Mes personnages</router-link>
-          <router-link class="link-collapse" to="/AllExistingFictionsLayout">
-            Toutes les fictions
-          </router-link>
+          <router-link class="link-collapse" to="/OriginaleCharacterByUser" >
+            Mes personnages</router-link>
           <router-link class="link-collapse" :to="'/allFictions/' + usrId">
-            Toutes mes fictions
+            Mes fictions
+          </router-link>
+          <router-link class="link-collapse" to="/AllExistingFictionsLayout">
+            Lire des fictions
           </router-link>
         </div>
       </li>
@@ -153,7 +157,7 @@
           >
           <router-link class="link-collapse" to="/puzzle">Puzzle</router-link>
           <router-link class="link-collapse" to="/mouseShot"
-            >Jeu du chat et de la souris</router-link
+            >Attrape la souris !</router-link
           >
           <router-link class="link-collapse" to="/GooseGameLayout"
             >Jeu de l'oie</router-link

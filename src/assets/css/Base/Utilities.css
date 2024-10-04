@@ -43,6 +43,9 @@
     align-content: center;
     justify-content: center;
 }
+.justify-content-right{
+    justify-content: right;
+}
 .overflowY-hidden{
     overflow-y: hidden;
 }
