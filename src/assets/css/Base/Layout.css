@@ -88,17 +88,6 @@ main.container-fluid {
     border-radius: 20px;
     border: 3px solid rgba(var(--dark-green-03), 1);
 }
-.search-zone-container1 button,
-.search-zone-container1 a,
-.search-pagination-container button,
-.search-pagination-container a,
-.card-container.quick-action-card button,
-.card-container.quick-action-card a,
-.softDashbord,
-#softDashbord .card-container .card-body {
-    background-color: rgba(var(--dark-green-01), 1);
-    color: rgba(var(--main-white), 1)
-}
 .character-details .card-body {
     height: 85vh;
     overflow-y: auto;

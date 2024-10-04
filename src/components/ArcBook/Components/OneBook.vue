@@ -22,7 +22,7 @@
             >
               <span class="white-text">{{ characters.Character.CurrentName }}</span><br />
               <img
-                class="img-fluid"
+                class="height-auto width-100-percent"
                 :src="characters.Character.Image"
                 :alt="image"
               />

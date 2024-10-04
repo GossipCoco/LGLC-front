@@ -187,7 +187,6 @@ h5.card-title{
 }
 .col-8.col-md-8.background-color-main-lineart.details-infos-characters{
   color: rgba(var(--main-white), 1);
-  background: var(--linear-greendark-clear);
   text-align: justify;
   padding: 1rem;
   font-family: 'Poppins', sans-serif;

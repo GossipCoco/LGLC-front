@@ -8,7 +8,7 @@
             <div class="character-l1" v-for="character in randomCharacters" :key="character.Id">
               <div class="rond-character-background"  v-bind:style="{ backgroundImage: 'url(' + character.Clan.Image + ')' }">
                 <router-link :to="'/characterDetails/' + character.Id">
-                <img class="img-fluid" :src="character.Image" :alt="character.Image" />
+                <img class="height-auto width-100-percent" :src="character.Image" :alt="character.Image" />
                 </router-link>
               </div>
               <p class="character-details-router">

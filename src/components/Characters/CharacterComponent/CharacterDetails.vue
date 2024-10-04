@@ -7,16 +7,16 @@
             <div class="parallax">
               <div class="parallax__layer parallax__layer--back">
                 <div
-                  class=" character-details-card background-size-cover diaplay-flex background-size-cover card-image border-card-color"
+                  class=" character-details-card background-size-cover display-flex background-size-cover card-image background-size-cover border-card-color"
                   v-bind:style="{
                     backgroundImage:
                       'url(' + background + ')',
                   }"
                 >
-                  <div class="vegetal-container">
+                  <div class="vegetal-container background-size-contain width-100-percent">
                     <div class="parallax__layer parallax__layer--base">
                       <img
-                        class="img-fluid"
+                        class="height-auto width-100-percent"
                         :src="image"
                         :alt="image"
                       />
@@ -82,7 +82,7 @@
                         <router-link type="button" class="btn btn-primary" :to="'/clan/'+ClanId">
                           <img
                           :src="'/images/clans/' + Symbol"
-                          class="img-fluid"
+                          class="height-auto width-100-percent"
                         />
                       </router-link>
 

@@ -5,7 +5,7 @@
         <div class="display-flex-column align-items-content-justify-content carousel__item">
           {{character.Character.CurrentName}}
             <img
-              class="img-fluid"
+              class="height-auto width-100-percent"
               :src="character.Character.Image"
               :alt="character.Character.CurrentName"
             />

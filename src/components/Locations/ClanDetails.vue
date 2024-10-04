@@ -22,7 +22,7 @@
               class="display-flex-column flex-one indivual-caracter-container"
             >
               <img
-                class="img-fluid"
+                class="height-auto width-100-percent"
                 :src="character.Character.Image"
                 :alt="character.Character.Image"
               /><br />

@@ -2,9 +2,7 @@
 @import '../variables.scss';
 
 #all-characters-container-card .character-card.card,
-.character-card.card,
-.dashboard-medium-card-container.card{
-    background-color: rgba(var(--dark-green-01), 1);
+.character-card.card{    
     border: none;
     color: rgba(var(--main-white), 1);
 }
@@ -49,10 +47,6 @@
 }
 .card-image img {
     width: 75%;
-}
-.img-fluid {
-    max-width: 100%;
-    height: auto;
 }
 .details-infos-characters {
     color: rgba(var(--main-white), 1)
@@ -148,11 +142,9 @@
 
 .character-details.card .card-image img {
     width: 75%;
+    overflow: hidden;
 }
 .vegetal-container {
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 100%;
     border-radius: 0 20%;
     background-position: 80% 100%;
     position: relative

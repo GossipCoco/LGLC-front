@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import '../variables.scss';
 
-
+/* DISPLAY & ALIGNEMENT */
 .display-flex{
     display: flex;
 }
@@ -16,29 +16,6 @@
 .flex-one{
     flex: 1;
 }
-.height-fixed{
-    height: 100vh;
-}
-.height-90{
-    height: 90vh
-}
-.background-color-main-lineart{
-    background: var(--linear-greendark-clear);
-}
-.background-size-cover{
-    background-size: cover
-}
-.margin-3-rem{
-    margin: 3rem;
-}
-.padding-2-rem{
-    padding: 2rem;
-}
-.avatar-gamer{
-    width: 200px;
-    height: 150px;
-    margin: 1rem;
-}
 .align-items-content-justify-content{
     align-items: center;
     align-content: center;
@@ -47,6 +24,51 @@
 .justify-content-right{
     justify-content: right;
 }
+/* HEIGHT and WIDTH*/
+.height-auto{
+    height: auto;
+}
+.height-100{
+    height: 100vh;
+}
+.height-90{
+    height: 90vh
+}
+
+.width-100-percent{
+    width: 100%;
+}
+/* Background-color & color  */
+.background-color-main-lineart{
+    background: var(--linear-greendark-clear);
+}
+.background-lineart{
+    background: linear-gradient(90deg, rgba(var(--dark-green-01), 1), rgba(var(--clear-green-02), 1));
+}
+.white-text{
+    color: rgba(var(--main-white), 1)
+}
+.background-color-dark-green-01{
+    background-color: rgba(var(--dark-green-01), 1);
+}
+/* Background */
+.background-size-cover{
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.background-size-contain{
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/* MARGIN */
+.margin-3-rem{
+    margin: 3rem;
+}
+.padding-2-rem{
+    padding: 2rem;
+}
+
+
 .overflowY-hidden{
     overflow-y: hidden;
 }
@@ -63,6 +85,9 @@
 .opensans-text{
     font-family: var(--opensans-text);
 }
+.poppins-text{
+    font-family: 'Poppins';
+}
 .font-title-fiction-dasboard{
     color: rgba(var(--clear-green-02), 1);
     font: 600 1.5em 'Poppins';
@@ -71,14 +96,8 @@
 .text-align-justify{
     text-align: justify;
 }
-.white-text{
-    color: rgba(var(--main-white), 1)
-}
-/* BACKGROUND */
-.background-lineart{
-    background: linear-gradient(90deg, rgba(var(--dark-green-01), 1), rgba(var(--clear-green-02), 1));
-}
-/* BORDER CARD */
+
+/* SPECIFIC */
 .border-card-color{
     height: 40rem;
     justify-content: center;
@@ -86,4 +105,9 @@
     border-top: 1rem solid rgba(var(--clear-green-02), 1);
     border-bottom: 1rem solid rgba(var(--clear-green-02), 1);
     border-left: 1rem solid rgba(var(--clear-green-02), 1);
+}
+.avatar-gamer{
+    width: 200px;
+    height: 150px;
+    margin: 1rem;
 }
