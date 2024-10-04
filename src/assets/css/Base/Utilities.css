@@ -107,12 +107,22 @@
     border-left: 1rem solid rgba(var(--clear-green-02), 1);
 }
 
-#original-characters-list .border-card-color,#original-characters-list  .card.individual-character-card{
+#original-characters-list .border-card-color,
+#original-characters-list  .card.individual-character-card{
     margin: 0.5rem;
     height: 30rem;
     border: none;
     border-radius: 20%;
+    background-position: 50%;
+    aspect-ratio: 16 / 9;
 }
+ #original-characters-list  .card-title{
+    color: rgba(var(--main-white), 1);
+ }
+#original-characters-list  .card.individual-character-card {
+    background-color: rgba(var(--dark-green-01), 1);
+    border: rgba(var(--dark-green-01), 1) 5px solid;
+ }
 #original-characters-list  .card.individual-character-card{
     border-radius: 20% 20% 0 0; 
 }
@@ -129,4 +139,8 @@
     text-align: center;
     margin: 4rem 0 0 0;
     padding-top: 24rem;
+}
+
+#original-characters-list.border {
+    
 }

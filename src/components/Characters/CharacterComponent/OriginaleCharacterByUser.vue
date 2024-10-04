@@ -1,5 +1,5 @@
 <template>
-  <div id="original-characters-list" class="row row-cols-1 row-cols-md-3 g- all-my-characters-container">
+  <div id="original-characters-list" class="row row-cols-1 row-cols-md-3 g- all-my-characters-container ">
     <div
       class="col card-character-container"
       v-for="(character, index) in allMyCharacters"
