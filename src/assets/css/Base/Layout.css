@@ -100,6 +100,8 @@ main.container-fluid {
 .form-character-container-global {
     height: 97vh;
     overflow-y: hidden;
+    width: 105rem;
+    margin: 2rem;
 }
 .character-col {
     display: flex;

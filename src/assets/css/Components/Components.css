@@ -254,11 +254,12 @@ audio{
     padding: 0rem 2rem 0 4rem;
 }
 .all-my-characters-container{
-    height: 100vh;
+    height: 110vh;
     overflow-y: scroll;
     overflow-x: hidden;
     padding: 3rem;
-    margin: 1rem;
+    margin: 0 auto;
+
 }
 .card.individual-character-card{
     height: 45vh;

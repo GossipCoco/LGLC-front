@@ -26,7 +26,7 @@
                     {{ fiction.Title }}
                   </router-link> </span
                 ><br />
-                <span v-html="truncateText(fiction.Summary, 75)"></span>
+                <span v-html="truncateText(fiction.Summary, 35)"></span>
               </p>
             </div>
           </div>

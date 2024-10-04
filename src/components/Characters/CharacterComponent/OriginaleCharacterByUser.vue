@@ -1,5 +1,5 @@
 <template>
-  <div class="row row-cols-1 row-cols-md-3 g- all-my-characters-container">
+  <div id="original-characters-list" class="row row-cols-1 row-cols-md-3 g- all-my-characters-container">
     <div
       class="col card-character-container"
       v-for="(character, index) in allMyCharacters"
@@ -7,16 +7,24 @@
     >
       <div class="card-group">
         <div class="card individual-character-card">
-          <img :src="character.Image" class="card-img-top" :alt="character.UserNam" />
+          <div
+            class="character-details-card background-size-cover display-flex background-size-cover card-image background-size-cover border-card-color"
+            v-bind:style="{
+              backgroundImage: 'url(' + character.Image + ')',
+            }"
+          ></div>
+
           <div class="card-body display-flex-row">
-
-              <div class="col-6">
-                <h5 class="card-title">{{ character.UserName }}</h5>
-              </div>
-              <div class="col-6 btn-position">
-                <router-link class="btn btn-primary" :to="'OriginaleCharacterDetails/'+character.UserName">Lire</router-link>
-              </div>
-
+            <div class="col-6">
+              <h5 class="card-title">{{ character.UserName }}</h5>
+            </div>
+            <div class="col-6 btn-position">
+              <router-link
+                class="btn btn-primary"
+                :to="'OriginaleCharacterDetails/' + character.UserName"
+                >Lire</router-link
+              >
+            </div>
           </div>
         </div>
       </div>

@@ -22,6 +22,7 @@ import ClanDetails from "../components/Locations/ClanDetails"
 import LocationsDetails from "../components/Locations/LocationsDetails.vue";
 import ArcBookLayout from '../components/ArcBook/ArcBookLayout.vue'
 import OneBook from "../components/ArcBook/Components/OneBook.vue";
+import CreateAnOriginalCharacter from '../components/Characters/CharacterForm/CreateAnOriginalCharacter.vue'
 
 import AllExistingFictionsLayout from '../components/Fictions/AllExistingFictionsLayout.vue'
 import FictionContain from '../components/Fictions/AllMyFictions/FictionContain'
@@ -133,7 +134,11 @@ const routes = [
         path: "/OriginaleCharacterDetails/:id",
         name: "OriginaleCharacterDetails",
         component: OriginaleCharacterDetails
-      }, 
+      },{
+        path: 'CreateAnOriginalCharacter',
+        name: 'CreateAnOriginalCharacter',
+        component:CreateAnOriginalCharacter
+      },
       {
         path: "/OriginaleCharacterByUser",
         name: 'OriginaleCharacterByUser',
