@@ -82,11 +82,8 @@ export default {
     async countAllFictions() {
       try {
         const response = await FictionService.CountAllFictionsOnBases();
-        console.log("Nombre total de fictions :", response.data.ob); 
         this.NbAllFictions = response.data.ob.count;
-        console.log("NbAllFictions", this.NbAllFictions)
         this.nav.pages = Math.ceil(this.NbAllFictions / this.nav.step);
-        console.log("Après calcul:", this.nav.pages)
       } catch (error) {
         console.error(error);
       }
@@ -94,7 +91,6 @@ export default {
     async getAllFictions(nav) {
       try {
         const response = await FictionService.GetAllFictionsOnBase(nav);
-        console.log(response)
         this.allFictions = response.data.ob;
       } catch (error) {
         console.error(error);

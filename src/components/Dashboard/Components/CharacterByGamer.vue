@@ -9,10 +9,9 @@
         <div v-for="(character, index) in gamer" :key="index">
           <p>{{ character.UserName }}</p>
           <div class="display-flex-row">
-            <div class="character-illustration-container">
-              <img :src="character.Image" class="image-width" />
+            <div class="character-illustration-container" v-bind:style="{ backgroundImage: 'url(' + character.Image + ')' }">              
             </div>
-            <div class="character-description-container" v-html="character.Description"></div>
+            <div class="character-description-container flex-one" v-html="character.Description"></div>
           </div>
         </div>
       </div>

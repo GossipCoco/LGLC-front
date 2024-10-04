@@ -134,9 +134,6 @@ main.container-fluid {
 
 
 .title-dashboard-container-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
     height: 6rem;
 }
 
