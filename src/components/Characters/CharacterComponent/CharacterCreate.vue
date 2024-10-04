@@ -7,28 +7,10 @@
                     <Transition name="slide-fade">
                         <div v-if="formPart1" class="character-detail-form">
                             <div class="row form-first-part-container">
-                                <div class="col-12 col-md-12">
-                                    <label for="inputName" class="form-label">Nom actuel du personnage</label>
-                                    <input type="text" class="form-control" id="inputName" v-model="form.CurrentName" required>
-                                </div>                                
-                                <SelectClanComponent
-                                    v-bind:For="'SearchClan'"
-                                    v-bind:label="'Clan'"
-                                    v-bind:clans="clans"
-                                    v-bind:col="'col-6'"
-                                    @form-clans="getclans"
-                                />
-                                <SelectGadeComponent 
-                                v-bind:For="'SearchGrade'"
-                                    v-bind:label="'Grade'"
-                                    v-bind:grades="grades"
-                                    v-bind:col="'col-6'"
-                                    @form-grades="getgrades"
-                                />
-                                <div class="col-md-6">
-                                    <label for="inputKitty" class="form-label">Nom de chaton</label>
-                                    <input type="text" class="form-control" id="inputKitty" v-model="form.KitName">
-                                </div>
+                                <InputName v-bind:col="'col-12 col-md-12'" v-bind:forId="'inputName'" v-bind:label="'Nom actuel du personnage'" v-bind:getNameData="'getCurrentName'" @getCurrentName="getCurrentName"/>                              
+                                <SelectClanComponent v-bind:For="'SearchClan'" v-bind:label="'Clan'" v-bind:clans="clans" v-bind:col="'col-6'" @form-clans="getclans" />
+                                <SelectGadeComponent v-bind:For="'SearchGrade'" v-bind:label="'Grade'" v-bind:grades="grades" v-bind:col="'col-6'" @form-grades="getgrades" />
+                                <InputName v-bind:col="'col-md-6'" v-bind:forId="'inputKitty'" v-bind:label="'Nom de chaton'" v-bind:getNameData="'getKittyName'" @getKittyName="getKittyName"/>
                                 <div class="col-md-6">
                                     <label for="inputapprenti" class="form-label">Nom d'apprenti</label>
                                     <input type="text" class="form-control" id="inputapprenti"
@@ -130,11 +112,14 @@ import ImageCharactersDatas from '../../../Datas/DatasReactives/ImageCharactersD
 import CardHeader from '../../Components/GenericComponent/CardHeader.vue'
 import SelectClanComponent from '../../Components/FormComponent/SelectClanComponent.vue'
 import SelectGadeComponent from '../../Components/FormComponent/SelectGadeComponent.vue'
-
+import InputName from '../../Components/FormComponent/InputName.vue'
 
 export default {
     name: 'CharacterCreate',
-    components:{CardHeader, SelectClanComponent, SelectGadeComponent}, 
+    components:{CardHeader,
+        SelectClanComponent,
+        SelectGadeComponent,
+        InputName}, 
     data() {
         return {
             characterId: null,
@@ -167,19 +152,23 @@ export default {
             }
         }
     },
-
     mounted() {
         this.GetAllGrade()
         this.GetAllClans()
-
     },
     methods: {
+        getCurrentName(e){
+            console.log(e)
+        },
         getclans(e){
             console.log(e)
         },
         getgrades(e){
             console.log(e)
         },
+        getKittyName(e){
+            console.log(e)
+        },  
         onFileChange(e) {
             const file = e.target.files[0];
             this.form.Image = file;
