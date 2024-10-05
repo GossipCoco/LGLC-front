@@ -51,7 +51,6 @@
 </template>
 <script>
 import EventService from "../../../services/EventService";
-import Images from "../../../Datas/DatasReactives/ImagesPuzzle";
 import ImageService from "../../../services/ImageService";
 import CardHeader from "../../Components/GenericComponent/CardHeader.vue";
 export default {
@@ -63,7 +62,6 @@ export default {
       userCurrent: this.$store.state.auth.user.usrID,
       pieces: [],
       shuffledPieces: [],
-      images: Images,
       imagesByRequest: {},
       selectedImage: "",
       imageWidth: 0,
