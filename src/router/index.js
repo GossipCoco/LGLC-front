@@ -135,7 +135,7 @@ const routes = [
         name: "OriginaleCharacterDetails",
         component: OriginaleCharacterDetails
       },{
-        path: 'CreateAnOriginalCharacter',
+        path: '/CreateAnOriginalCharacter',
         name: 'CreateAnOriginalCharacter',
         component:CreateAnOriginalCharacter
       },

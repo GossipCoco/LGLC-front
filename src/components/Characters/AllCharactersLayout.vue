@@ -1,43 +1,18 @@
 <template>
   <div class="height-fixe character-container-global list-all-characters-container">
-    <div class="row row-filter">
-      <ButtonCreationCharacter />
-      <div class="col-2">
-        <button @click="showMyCharacters" type="button" class="btn btn-primary">
-          Afficher mes personnages
-        </button>
+    <div class="row row-filter background-color-dark-green-01 display-flex vertical-align-middle">
+      <div class="col-2 display-flex-row align-items-content-justify-content vertical-align-middle">
+        <p class="white-text">{{ labelFilter }}</p>
       </div>
-      <div class="col-1">Filtrer :</div>
-      <div class="col-2">
-        <input type="text" class="form-control" placeholder="personnage" />
-      </div>
-      <div class="col-2">
-        <input
-          type="text"
-          class="form-control"
-          placeholder="Personnage par clan"
-        />
-      </div>
-      <div class="col-2">
-        <input
-          type="text"
-          class="form-control"
-          placeholder="Personnage par grade"
-        />
-      </div>
+      <InputName v-bind:col="'col-2'" v-bind:forId="'inputName'" v-bind:label="'Nom actuel du personnage'" v-bind:getNameData="'getCurrentName'" @getCurrentName="getCurrentName"/>
+      <SelectClanComponent v-bind:For="'SearchClan'" v-bind:label="'par clans'" v-bind:clans="clans" v-bind:col="'col-2'" @form-clans="getclans" />
+      <SelectGadeComponent v-bind:For="'SearchGrade'" v-bind:label="'par Grade'" v-bind:grades="grades" v-bind:col="'col-2'" @form-grades="getgrades" />
       <div class="col-1">
-        <button type="button" class="btn btn-primary">Rechercher</button>
+        <!-- <button type="button" class="btn btn-primary">Rechercher</button> -->
       </div>
-    
-    <div
-      class="row all-characters-container-card"
-      id="all-characters-container-card"
-    >
-      <character-card
-        v-bind:characters_props="allCharacters"
-        v-if="!showMyCharacter"
-      />
+      <div class="col-2"></div>
     </div>
+    <character-card v-bind:characters_props="allCharacters" v-if="!showMyCharacter" />
     <div class="row pagination-container-row">
       <div class="pagination-container">
         <div class="row bottom-top-dashboard">
@@ -55,27 +30,37 @@
       </div>
     </div>
   </div>
-  </div>
-  
 </template>
 <script>
-import CharacterService from "../../services/CharacterService";
-import CharacterCard from "./CharacterComponent/CharacterCard.vue";
-import Pagination from "../Components/GenericComponent/Pagination.vue";
 import functions from "../../services/functions";
-import ButtonCreationCharacter from "../Components/FormComponent/ButtonCreationCharacter.vue";
+import CharacterService from "../../services/CharacterService";
+import ClansService from "../../services/ClansServices";
+import GradeService from "../../services/GradeService";
+
+
+
+import SelectGadeComponent from '../../components/Components/FormComponent/SelectGadeComponent.vue'
+import SelectClanComponent from "../../components/Components/FormComponent/SelectClanComponent.vue";
+import InputName from "../Components/FormComponent/InputName.vue";
+
+import CharacterCard from "./CharacterComponent/CharacterCard.vue";
+
+import Pagination from "../Components/GenericComponent/Pagination.vue";
+
 
 export default {
   name: "AllCharacters",
-  components: { CharacterCard, Pagination, ButtonCreationCharacter },
+  components: { CharacterCard, Pagination, SelectClanComponent, InputName, SelectGadeComponent},
   data() {
     return {
+      labelFilter: "Chercher des fictions par",
       usr: this.$store.state.auth.user.usrID,
       userCurrent: this.$store.state.auth.user.usrID,
       showMyCharacter: false,
       allMyCharacter: {},
       NbAllCharacters: null,
       allCharacters: {},
+      grades: {},
       filters: [],
       nav: {
         current: 0,
@@ -93,14 +78,40 @@ export default {
   created() {
     this.userCurrent = this.$store.state.auth.user.usrID;
     this.initPage();
+    this.GetAllClans();
+    this.GetAllGrade();
   },
-  // watch: {
-  //   '$route'() {
-  //     // This will trigger when the route changes, ensuring the data is refreshed
-  //     this.initPage();
-  //   }
-  // },
   methods: {
+    getCurrentName(e) {
+      console.log(e);
+    },
+    getclans(e) {
+      console.log(e);
+    },
+    getgrades(e){
+      console.log(e)
+    },
+
+
+    GetAllClans() {
+      ClansService.getAllClans()
+        .then((response) => {
+          this.clans = response.data.ob;
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+    },
+    GetAllGrade() {
+      GradeService.getAllGrades()
+        .then((response) => {
+          this.grades = response.data.ob;
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+    },
+
     async initPage() {
       this.showspinner = true;
       try {
@@ -112,16 +123,7 @@ export default {
         this.showspinner = false;
       }
     },
-    showMyCharacters(e) {
-      console.log("showMyCharacters");
-      CharacterService.GetAllCharactersByUser(e)
-        .then((response) => {
-          console.log(response.data.ob);
-        })
-        .catch((e) => {
-          console.log(e);
-        });
-    },
+
     async CharacterPagination(page) {
       this.nav.current = page;
       try {
@@ -130,7 +132,6 @@ export default {
         console.error("Error in pagination:", error);
       }
     },
-
     async countAllCharacter() {
       try {
         const response = await CharacterService.CountAllCharacters();

@@ -92,6 +92,8 @@
           </div>
         </router-link>
         <div class="collapse" id="collapseExample1">
+          <router-link class="link-collapse" to="/CreateAnOriginalCharacter" >
+            Nouveau personnages</router-link>
           <router-link class="link-collapse" to="/OriginaleCharacterByUser" >
             Mes personnages</router-link>
           <router-link class="link-collapse" :to="'/allFictions/' + usrId">

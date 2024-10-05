@@ -1,4 +1,7 @@
-<template>
+<template> 
+
+  <div class="row all-characters-container-card" id="all-characters-container-card">
+      
   <div class="col-12 mb-3 mb-sm-0 display-flex-row align-items-content-justify-content character-container">
     <div
       v-for="(character, index) in characters_props"
@@ -7,6 +10,7 @@
     >
       <character-text v-bind:character="character" />
     </div>
+  </div>
   </div>
 </template>
 <script>

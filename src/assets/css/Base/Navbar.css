@@ -239,4 +239,9 @@ nav.navbar.navbar-expand-md.navbar-dark.fixed-top {
     height: 20vh;
     padding: 2rem 0 0 0;
 }
+/* FITLER */
+.row-filter{
+  height: 6rem;
+  padding: 1rem 0;
+}
 /* responsive.css */
