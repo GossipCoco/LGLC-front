@@ -14,7 +14,8 @@
     z-index: 99999;
 }
 .character-container-global {
-    width: 180vh;
+    width: 185vh;
+    padding: 1rem;
 }
 .character-card.card {
     margin: 1rem 1rem 0 0;
@@ -173,7 +174,8 @@
     background-color: rgba(var(--main-white), 1);
 }
 .clans-location-container {
-    margin: 0 0 5rem 0;
+    margin: 1rem auto;
+    padding: 5rem 0 0 8rem;
 }
 .character-card.card .card-image {
     align-items: center;
