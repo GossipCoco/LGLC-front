@@ -13,7 +13,7 @@ body {
     overflow-y: hidden;
     overflow-x: hidden;
     background-image: var(--background-image);
-    background-position: 25% 75%;
+    background-position: 100% auto;
     background-size: cover;
     background-repeat: no-repeat;
 }
