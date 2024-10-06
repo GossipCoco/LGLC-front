@@ -7,10 +7,7 @@
       <InputName v-bind:col="'col-2'" v-bind:forId="'inputName'" v-bind:label="'Nom actuel du personnage'" v-bind:getNameData="'getCurrentName'" @getCurrentName="getCurrentName"/>
       <SelectClanComponent v-bind:For="'SearchClan'" v-bind:label="'par clans'" v-bind:clans="clans" v-bind:col="'col-2'" @form-clans="getclans" />
       <SelectGadeComponent v-bind:For="'SearchGrade'" v-bind:label="'par Grade'" v-bind:grades="grades" v-bind:col="'col-2'" @form-grades="getgrades" />
-      <div class="col-1">
-        <!-- <button type="button" class="btn btn-primary">Rechercher</button> -->
-      </div>
-      <div class="col-2"></div>
+      <div class="col-3"></div>
     </div>
     <character-card v-bind:characters_props="allCharacters" v-if="!showMyCharacter" />
     <div class="row pagination-container-row">

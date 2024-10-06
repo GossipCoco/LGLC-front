@@ -5,20 +5,23 @@
   >
     <div class="display-flex-row card-group clan-group">
       <div v-for="(location, index) in allLocations" :key="index">
-        <div class="card" style="width: 30rem">
+        <div class="card location-clan-background-width-container">
           <div
-            class="card-image clan-card"
+            class="card-image clan-card background-size-cover"
             v-bind:style="{
               backgroundImage: 'url(' + location.Image + ')',
             }"
           ></div>
-          <div class="card-header"></div>
-          <div class="card-body">
-            <div class="clan-description">
-              <div v-html="truncateText(location.Description, 100)"></div>
-            </div>
-            <div class="clan-link">
-              <router-link type="button" class="btn btn-primary" :to="'/LocationsDetails/'+location.Id">Plus de détails</router-link>
+          <div class="card-header">
+            <div class="display-flex align-items-content-justify-content">
+              <div class="d-grid gap-2 col-8 mx-auto">
+                <router-link
+                  type="button"
+                  class="btn btn-primary"
+                  :to="'/LocationsDetails/' + location.Id"
+                  >{{ location.Name }}</router-link
+                >
+              </div>
             </div>
           </div>
         </div>

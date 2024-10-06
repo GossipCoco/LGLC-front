@@ -15,7 +15,6 @@
 }
 .character-container-global {
     width: 180vh;
-    margin-top: 2rem;
 }
 .character-card.card {
     margin: 1rem 1rem 0 0;
@@ -157,10 +156,12 @@
     left: 15%
 }
 .clan-card {
-    width: 30rem;
+    width: 20rem;
     height: 20rem;
-    border-radius: 12px 12px 0 0;
+    border-radius: 50% 50% 0 0;
     background-position: 50%;
+    border: 6px solid rgba(var(--middle-green-02), 1);
+    background-color: rgba(var(--dark-green-02), 1);
 }
 .card-image-layout {
     width: 95rem;

@@ -289,3 +289,8 @@ audio{
 .nav-link:focus, .nav-link:hover {
     color: var(--active-hover);
 }
+.card.location-clan-background-width-container{
+    width: 20rem;
+    border-radius: 50% 50% 0 0;
+    background-color: rgba(var(--dark-green-02), 1);
+}
