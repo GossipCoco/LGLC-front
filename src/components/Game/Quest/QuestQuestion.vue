@@ -24,25 +24,28 @@
 <script>
 export default {
   name: "QuestQuestion",
-  props:['questData'],
+  props: ["questData"],
   data() {
     return {
       quest: {},
       feedback: null,
+      nbPoints: null
     };
   },
-  created(){
-    console.log(this.questData.QuestQuestions)
+  created() {
+    console.log(this.questData.QuestQuestions);
   },
   methods: {
     submitAnswer() {
-      if (this.selectedOption === this.questData.QuestQuestions[0].CorrectAnswer.Id
-) {
+      if (
+        this.selectedOption ===
+        this.questData.QuestQuestions[0].CorrectAnswer.Id
+      ) {
         this.feedback = "Bonne réponse !";
       } else {
         this.feedback = "Mauvaise réponse. Réessayez !";
       }
     },
-    }
+  },
 };
 </script>
