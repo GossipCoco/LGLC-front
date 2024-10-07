@@ -10,9 +10,12 @@
             <div class="display-flex-column">
               <h2>{{ quest.Title }}</h2>
               <p class="flex-one">{{ quest.Description }}</p>
+              <p class="flex-one">{{ quest.Hint }}</p>
+              <p class="flex-one">{{ quest.ObjectiveDescription }}</p>
             </div>
           </div>
         </div>
+        <div class="display-flex-column"></div>
         <div class="display-flex-column">
           <p class="card-text">
             <router-link to="/Quest" type="button" class="btn btn-primary">
@@ -31,6 +34,13 @@
       </card-header>
       <div class="card-body">
         <div class="parallax-container">
+          <div class="card-container-parallax">
+            <div class="card" width="250px" height="250px">
+              <div v-if="quest.TypeQuest === 'question'">
+                <QuestQuestion v-bind:questData="quest"/>                
+              </div>
+            </div>
+          </div>
           <div
             v-for="(layer, index) in layers"
             :key="index"
@@ -38,7 +48,7 @@
               backgroundImage: `url(${layer.Image})`,
               backgroundRepeat: 'no-repeat',
               backgroundSize: 'cover',
-              zIndex: layer.Position,             
+              zIndex: layer.Position,
               transform: `translateZ(${layer.translateZ}) translateY(${layer.translateY}) translateX(${layer.translateX}) scale(${layer.scale})`,
             }"
             class="parallax-layer"
@@ -53,10 +63,11 @@
 import QuestService from "../../../services/QuestService";
 import { Toast } from "bootstrap"; // Import Bootstrap's Toast component
 import CardHeader from "../../Components/GenericComponent/CardHeader.vue";
+import QuestQuestion from "./QuestQuestion.vue";
 
 export default {
   name: "QuestById",
-  components: { CardHeader },
+  components: { CardHeader, QuestQuestion },
   data() {
     return {
       quest: {},
@@ -67,6 +78,8 @@ export default {
       translateY: null,
       translateX: null,
       scale: null,
+      selectedOption: null,
+      feedback: null,
     };
   },
   created() {
@@ -78,12 +91,20 @@ export default {
     window.removeEventListener("scroll", this.handleScroll);
   },
   methods: {
+    submitAnswer() {
+      if (this.selectedOption === this.quest.Question.CorrectAnswerId) {
+        this.feedback = "Bonne réponse !";
+      } else {
+        this.feedback = "Mauvaise réponse. Réessayez !";
+      }
+    },
     handleClick(element) {
       console.log(`Action: ${element.action}`);
     },
     GetQuestById(id) {
       QuestService.GetQuestById(id)
         .then((response) => {
+          console.log(response.data.ob);
           this.quest = response.data.ob;
           this.layers = response.data.ob.QuestParallaxes.map((item) => ({
             Image: `/images/parallax/${item.Parallax.Image}`,
@@ -93,7 +114,6 @@ export default {
             translateX: item.Parallax.translateX,
             scale: item.Parallax.scale,
           }));
-          console.log(this.layers);
         })
         .catch((err) => {
           console.log(err);

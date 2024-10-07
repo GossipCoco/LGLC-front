@@ -1,6 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import '../variables.scss';
 
+.card-container-parallax {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  vertical-align: middle;
+  margin: 5rem 20rem 0 0;
+
+}
+
+.card-container-parallax .card {
+  width: 450px;
+  height: 250px;
+  background-color: aliceblue;
+  position: relative;
+  z-index: 99999999;
+}
 
 #quest-by-id {
   width: 100%;
@@ -73,6 +89,7 @@
   top: 2rem;
   left: 5rem
 }
+
 /* Parallax effect */
 .parallax {
   perspective: 1px;
@@ -80,6 +97,7 @@
   overflow-x: hidden;
   overflow-y: auto;
 }
+
 .parallax-layer {
   position: absolute;
   top: 0;
@@ -87,14 +105,17 @@
   right: 0;
   left: 0;
 }
+
 .parallax-layer-back {
   transform: translateZ(-1px) scale(2);
 }
+
 .parallax {
   height: 100%;
   position: relative;
   transform-style: preserve-3d;
 }
+
 .parallax__layer {
   position: absolute;
   top: 0;
@@ -102,6 +123,7 @@
   bottom: 0;
   left: 0;
 }
+
 .parallax__layer--base {
   transform: translateZ(0);
 }
@@ -117,14 +139,14 @@
 
 @keyframes rotate {
   from {
-      transform: rotate(0deg) rotateX(0deg);
+    transform: rotate(0deg) rotateX(0deg);
   }
 
   to {
-      transform: rotateY(50deg) rotateX(0);
+    transform: rotateY(50deg) rotateX(0);
   }
 
   to {
-      transform: rotateY(0) rotateX(0);
+    transform: rotateY(0) rotateX(0);
   }
 }
