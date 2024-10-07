@@ -4,7 +4,7 @@
         <div class="container-fluid header-container">
           <div class="logo-accueil-container">
           <router-link to="/Accueil" class="navbar-brand">
-            <img src="../../../../public/images/Logos/Mini_logo_5.png" />
+            <img src="../../../../public/images/Logos/Automne_Logo1.png" />
           </router-link>
           </div>
           <button

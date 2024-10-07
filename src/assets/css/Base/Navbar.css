@@ -40,7 +40,8 @@
   margin: 0 0 0 -1rem;
 }
 #accueil header {
-  height: 10rem;
+  height: 14rem;
+  background-color: rgba(var(--main-black), 1);
 }
 .navbar {
   margin-top: -0.5rem
@@ -177,9 +178,7 @@ ul {
 .navbar>.container-fluid {
   height: 10rem;
 }
-nav.navbar.navbar-expand-md.navbar-dark.fixed-top {
-  height: 10rem;
-}
+
 .avatar-navabar {
   width: 100px;
   height: 100px;
@@ -235,9 +234,15 @@ nav.navbar.navbar-expand-md.navbar-dark.fixed-top {
 }
 .logo-accueil-container{
     flex: 1;
-    width: 18rem;
-    height: 20vh;
-    padding: 2rem 0 0 0;
+    width: 20rem;
+    height: 18vh;
+    padding: 0;
+    margin-top: -1rem;
+}
+#accueil .navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark{
+  padding: 0;
+  margin: -1.5rem 0 0rem 0;
+  height: 13rem;
 }
 /* FITLER */
 .row-filter{
