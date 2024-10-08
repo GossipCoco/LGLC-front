@@ -4,52 +4,70 @@
 a {
   text-decoration: none;
 }
+
 .title-author-container h1 {
-  font : 500 2.5rem 'Cinzel' petite-caps;
+  font: 500 2.5rem 'Cinzel' petite-caps;
 }
+
 .info-fan .author-text {
   font-family: 'Montserrat';
 }
+
 .summaray-title-text p a {
   color: rgba(var(--clear-green-02), 1);
   font: 600 1.25em 'Poppins';
-  font-variant: small-caps ;
+  font-variant: small-caps;
 }
+
 .summaray-title-text p a:hover {
   color: rgba(var(--active-hover), 1);
 }
-.mini-rond-messages p{
+
+.mini-rond-messages p {
   color: rgba(var(--dark-green-02), 1)
 }
-.summary-text-font p{
+
+.summary-text-font p {
   font-size: 0.9em;
   text-align: justify;
 }
-.summaray-title-text p a.last-chapter-text{
+
+.summaray-title-text p a.last-chapter-text {
   color: rgba(var(--active-hover), 1);
   font: 500 1.05em 'Roboto';
 }
-.summaray-title-text p a.last-chapter-text:hover{
+
+.summaray-title-text p a.last-chapter-text:hover {
   color: rgba(var(--clear-green-02), 1);
 }
+
 .rating {
   width: 10rem;
   height: 4rem;
 }
+
 .rating svg {
   flex: 1
 }
+
 .rating svg {
   fill: rgba(var(--main-white), 1);
   cursor: pointer;
   width: 2rem;
   height: 2rem;
 }
+
 .rating svg.checked {
   fill: rgba(var(--active-hover), 1);
 }
+
 .card.quest-by-id-card h2 {
   color: rgba(var(--main-white), 1);
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 }
 
 #quest-by-id .card-header.quest-container-header {
@@ -60,10 +78,12 @@ a {
   align-items: center;
   align-content: center;
 }
+
 .modal-body .form-label,
 .create-character-form label {
   color: rgba(var(--main-white), 1)
 }
+
 .carousel__item {
   display: flex;
   flex-direction: column;
@@ -71,127 +91,160 @@ a {
   align-items: center;
   align-content: center;
 }
+
 .card-header h2 {
   font: 2em capitalize all-petite-caps;
 }
+
 .card-header h2 {
   font-variant-caps: small-caps;
 }
+
 #list-events p span {
   font-weight: 600;
 }
+
 .card-header.quest-title {
   height: 2rem;
 }
+
 .card-header.quest-title h4 {
   color: rgba(var(--dark-green-01), 1)
 }
+
 #list-events p {
   color: rgba(var(--main-white), 1);
   font-family: 'Roboto';
 }
+
 .login-card h2 {
   color: rgba(var(--dark-green-01), 1)
 }
+
 .select-message-container h3 {
   text-align: center;
   color: rgba(var(--dark-green-01), 1);
 }
+
 .send--message-by-container {
   display: flex;
   flex-direction: row;
   margin: 1rem 1rem;
   color: rgba(var(--dark-green-01), 1);
 }
+
 .send--message-by-container p {
   flex: 1;
   margin: 1rem 1rem;
   color: rgba(var(--dark-green-01), 1);
 }
+
 .message-container {
   color: rgba(var(--dark-green-01), 1)
 }
+
 .text-bg-primary {
   background-color: rgba(var(--dark-green-01), 1) !important;
   display: flex;
   justify-content: center;
   vertical-align: middle;
-  flex:1;
+  flex: 1;
   font-weight: 600;
 }
-.list-group-item.messagerie-list-container p{
+
+.list-group-item.messagerie-list-container p {
   margin: 0 0 0 1rem;
-  flex:1;
+  flex: 1;
 }
+
 .list-group-item.messagerie-list-container {
   display: flex;
   flex-direction: row;
 }
-.user-information-paragraph{
+
+.user-information-paragraph {
   font-family: 'Roboto';
   color: rgba(var(--main-white), 1)
 }
-.informations-gamer-container{
+
+.informations-gamer-container {
   height: 45vh;
   overflow-y: scroll;
 }
-h1.card-title{
+
+h1.card-title {
   font-size: 2.75em;
 }
+
 .star {
-  fill: #ccc; /* Couleur des étoiles non sélectionnées */
-  cursor: pointer; /* Indique que les étoiles sont cliquables */
+  fill: #ccc;
+  /* Couleur des étoiles non sélectionnées */
+  cursor: pointer;
+  /* Indique que les étoiles sont cliquables */
   transition: fill 0.3s ease;
 }
 
 .star.checked {
-  fill: rgba(var(--active-hover), 1); /* Couleur des étoiles sélectionnées (rating) */
+  fill: rgba(var(--active-hover), 1);
+  /* Couleur des étoiles sélectionnées (rating) */
 }
-.user-info-text p{
+
+.user-info-text p {
   display: flex;
   flex-direction: row;
 }
+
 .user-info-text p span {
   font-weight: 600;
   color: rgba(var(--clear-green-02), 1);
 }
-.user-info-text p span.label-profil{
+
+.user-info-text p span.label-profil {
   flex: 1;
   font-weight: 400;
   font-family: 'Poppins';
   color: rgba(var(--main-white), 1);
   text-transform: capitalize;
 }
-.accordion-body p{
+
+.accordion-body p {
   text-align: justify;
 }
-.character-description-container{
+
+.character-description-container {
   height: 10rem;
   overflow-y: scroll;
 }
+
 .character-description-container p {
   text-align: justify;
 }
-.character-illustration-container img{
+
+.character-illustration-container img {
   width: 100%;
   border-radius: 100%;
 }
-h5.card-title{
+
+h5.card-title {
   font-size: 1.25em;
 }
-.name-characatrer-link .btn{
+
+.name-characatrer-link .btn {
   font-family: 'Poppins';
 }
-.character-details .card-body{
+
+.character-details .card-body {
   background-color: rgba(var(--main-white), 0);
 }
-.col-8.col-md-8.background-color-main-lineart.details-infos-characters{
+
+.col-8.col-md-8.background-color-main-lineart.details-infos-characters {
   color: rgba(var(--main-white), 1);
   text-align: justify;
   padding: 1rem;
   font-family: 'Poppins', sans-serif;
 }
-.col-8.col-md-8.background-color-main-lineart.details-infos-characters p{
+
+.col-8.col-md-8.background-color-main-lineart.details-infos-characters p {
   text-align: justify;
   padding: 1rem;
   font-family: 'Poppins', sans-serif;

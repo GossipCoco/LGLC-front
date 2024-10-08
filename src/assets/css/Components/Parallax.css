@@ -157,7 +157,13 @@
   border-color: rgba(255, 255, 255, 1) transparent;
   transform: rotate(45deg);
 }
-
+img.key-object-img{
+  position: relative;
+  z-index: 999999;  
+  transform: scale(.25);
+  top: -35rem;
+  left: 2rem
+}
 @keyframes rotate {
   from {
     transform: rotate(0deg) rotateX(0deg);
