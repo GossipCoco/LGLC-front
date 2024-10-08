@@ -11,7 +11,7 @@
           :value="option.Id"
           v-model="selectedOption"
         />
-        <label :for="'option' + index">{{ option.OptionText }}</label>
+        <label :for="'option' + indexdeux">{{ option.OptionText }}</label>
       </div>
     </div>
     <button class="btn btn-primary" @click="submitAnswer">
