@@ -1,4 +1,5 @@
-<template><div class="card-container-parallax" >
+<template>
+<div class="card-container-parallax" >
   <div  class="card bubble-dialog">
     <div v-for="(text, index) in questData.QuestQuestions" :key="index">
       <p>{{ text.QuestionText }}</p>
@@ -18,7 +19,8 @@
       Valider la réponse
     </button>
     <div v-if="feedback">{{ feedback }}</div>
-  </div></div>
+  </div>
+</div>
 </template>
 <script>
 export default {

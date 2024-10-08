@@ -24,7 +24,7 @@
   margin: 0.5rem auto;
 }
 
-#quest-by-id .quest-by-id-card.card.quest-by-id-card.background-color-main-lineart{
+#quest-by-id .quest-by-id-card.card.quest-by-id-card.background-color-main-lineart {
   width: 100%;
   height: 106vh;
   margin: 1rem;
@@ -138,6 +138,7 @@
   display: block;
   width: 100%;
 }
+
 .bubble-dialog {
   position: relative;
   background: rgba(255, 255, 255, 1);
@@ -147,6 +148,7 @@
   text-align: center;
   font-family: 'Cinzel', serif;
 }
+
 .bubble-dialog:after {
   content: '';
   position: absolute;
@@ -157,13 +159,15 @@
   border-color: rgba(255, 255, 255, 1) transparent;
   transform: rotate(45deg);
 }
-img.key-object-img{
+
+img.key-object-img {
   position: relative;
-  z-index: 999999;  
+  z-index: 999999;
   transform: scale(.25);
   top: -35rem;
   left: 2rem
 }
+
 @keyframes rotate {
   from {
     transform: rotate(0deg) rotateX(0deg);
@@ -176,4 +180,52 @@ img.key-object-img{
   to {
     transform: rotateY(0) rotateX(0);
   }
+}
+
+.highlight-effect {
+  animation: flash 5s ease-out;
+  background-color: rgba(var(--dark-green-01), 1);
+  height: 16rem;
+  width: 20rem;
+  color: rgba(var(--main-white), 1);
+  position: relative;
+  z-index: 99999999999;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  padding: 1rem 0;
+  vertical-align: middle;
+}
+
+@keyframes flash {
+
+  0%{
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-out {
+  animation: fadeOut 0.5s forwards;
+
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+.card.card-object-container {
+  display: flex;
+  flex-direction: column;
+  height: 6rem;
 }

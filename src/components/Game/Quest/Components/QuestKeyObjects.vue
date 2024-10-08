@@ -1,7 +1,10 @@
 <template>
     <div class="card card-object-container" v-for="(object, index) in findobjects" :key="index">
+        <div v-if="objectClicked" class="highlight-effect">
+            <p>Objet trouvé</p>
+        </div>
         <img :src="object.KeyObjectId" @click="checkForKeyObject()" class="key-object-img"/>
-    </div>
+    </div>    
 </template>
 <script>
 export default {
