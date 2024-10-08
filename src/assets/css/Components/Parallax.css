@@ -11,8 +11,8 @@
 }
 
 .card-container-parallax .card {
-  width: 300px;
-  height: 200px;
+  width: 325px;
+  height: 350px;
   background-color: aliceblue;
   position: relative;
   z-index: 99999999;
@@ -137,6 +137,25 @@
 .parallax img {
   display: block;
   width: 100%;
+}
+.bubble-dialog {
+  position: relative;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 15px;
+  padding: 15px;
+  max-width: 300px;
+  text-align: center;
+  font-family: 'Cinzel', serif;
+}
+.bubble-dialog:after {
+  content: '';
+  position: absolute;
+  bottom: 80px;
+  left: -30px;
+  border-width: 0 100px 100px 0;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 1) transparent;
+  transform: rotate(45deg);
 }
 
 @keyframes rotate {

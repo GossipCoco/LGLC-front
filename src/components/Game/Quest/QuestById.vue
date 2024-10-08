@@ -6,7 +6,7 @@
         <div class="parallax-container">
           <QuestMissionTarget v-bind:questDatas="quest"/>
           <div class="card-container-parallax">
-            <div class="card" width="200px" height="200px">
+            <div class="card bubble-dialog">
               <div v-if="quest.TypeQuest === 'question'">
                 <QuestQuestion v-bind:questData="quest"/>                
               </div>
