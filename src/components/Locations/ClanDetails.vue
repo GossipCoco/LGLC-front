@@ -1,7 +1,7 @@
 <template>
   <div class="card card-image-layout clan-detail-layout display-flex-row mb-3">
     <div
-      class="card-image clan-detail-card border-card-color"
+      class="card-image clan-detail-card background-color-white border-card-color"
       v-bind:style="{
         backgroundImage: 'url(' + clan.Image + ')',
       }"

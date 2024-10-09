@@ -4,7 +4,7 @@
 #all-characters-container-card .character-card.card,
 .character-card.card{    
     border: none;
-    color: rgba(var(--main-white), 1);
+
 }
 .character-details.card::after {
     content: var(--cat-corner);
@@ -44,7 +44,6 @@
 .clan-detail-card {
     width: 65rem;   
     background-position: 50%;
-    background-color: rgba(var(--main-white), 0);
     margin: 5rem 0 0 0;
 }
 .card-image img {
@@ -192,7 +191,6 @@
 .card.card-image-layout.clan-detail-layout.mb-3 {
     width: 95rem;
     border-radius: 20px 0 0 20px;
-    background-color: rgba(var(--main-white), 0);
 }
 .card.card-image-layout.clan-detail-layout.mb-3 .card-image-layout {
     width: 95rem;
@@ -426,10 +424,8 @@ li.quest-container {
     transform: scale(1.05);
 }
 .table>:not(caption)>*>*{
-    background-color: rgba(var(--main-white), 0);
     color: rgba(var(--main-white), 0.8);
 }
-
 .accordion-button.collapsed,
 .accordion-item:first-of-type>.accordion-header .accordion-button,
 .accordion-button:not(.collapsed),
