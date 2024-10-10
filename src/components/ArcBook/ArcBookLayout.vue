@@ -9,7 +9,7 @@
         <div class="col-12 col-sm-12 col-md-12">
           <div class="apland-timeline-area">
             <div v-for="(arc, index) in allBooks" :key="index">
-              <BookLayout v-bind:arc="arc" />
+              <TimeLayout v-bind:arc="arc" />
             </div>
           </div>
         </div>
@@ -19,11 +19,11 @@
 </template>
 <script>
 import CardHeader from "../Components/GenericComponent/CardHeader.vue";
-import BookLayout from "./Components/BookLayout.vue";
+import TimeLayout from "./Components/TimeLayout.vue";
 import ArcBookService from "../../services/ArcBookService";
 export default {
   name: "ArcBookLayout",
-  components: { CardHeader, BookLayout },
+  components: { CardHeader, TimeLayout },
   data() {
     return {
       allBooks: {},

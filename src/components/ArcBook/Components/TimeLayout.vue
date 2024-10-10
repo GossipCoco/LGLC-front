@@ -21,7 +21,7 @@ import SummaryArc from './TimelineComponent/SummaryArc.vue'
 import ListAllBooksByArc from './TimelineComponent/ListAllBooksByArc.vue'
 import CharacterByArc from './TimelineComponent/CharactersByArc.vue'
 export default {
-  name: "BookLayout",
+  name: "TimeLayout",
   props: ["arc"],
   components: {TimelineArc, BookImage, SummaryArc, ListAllBooksByArc, CharacterByArc},
   data(){
