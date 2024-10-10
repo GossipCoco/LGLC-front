@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12 card-global"
-  >
+  <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12 card-global">
     <div class="card display-flex-column profil-card fiction-card">
       <TitleHeaderDashboard v-bind:title="UserName" v-bind:type="'username'" />
       <div class="card-body user-info-text">
@@ -40,7 +38,6 @@
               <span>{{ totalPoints }}</span
               >&nbsp; points.
             </p>
-           
           </div>
         </div>
       </div>
@@ -70,9 +67,6 @@ export default {
       lev: this.level,
       roleUser: this.Role,
     };
-  },
-  created() {
-    // this.roleImage = this.Role.Image
   },
   methods: {
     formatDate(isoDateString) {

@@ -6,16 +6,12 @@
         <div class="row">
           <div class="col-12 character-col display-flex-row align-items-content-justify-content">
             <div class="character-l1" v-for="character in randomCharacters" :key="character.Id">
-              <div class="rond-character-background"  v-bind:style="{ backgroundImage: 'url(' + character.Clan.Image + ')' }">
-                <router-link :to="'/characterDetails/' + character.Id">
-                <img class="height-auto width-100-percent" :src="character.Image" :alt="character.Image" />
+              <router-link :to="'/characterDetails/' + character.Id" class="display-flex-column">
+                <p>{{ character.CurrentName }}</p>
+                <div class="rond-character-background"  v-bind:style="{ backgroundImage: 'url(' + character.Clan.Image + ')' }">
+                  <img class="height-auto width-100-percent" :src="character.Image" :alt="character.Image" />                  
+                </div>
                 </router-link>
-              </div>
-              <p class="character-details-router">
-                <router-link :to="'/characterDetails/' + character.Id">
-                  {{ character.CurrentName }}
-                </router-link>
-              </p>
             </div>
           </div>
         </div>

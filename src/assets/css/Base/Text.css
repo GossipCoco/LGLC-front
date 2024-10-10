@@ -214,6 +214,7 @@ h1.card-title {
 .character-description-container {
   height: 10rem;
   overflow-y: scroll;
+  padding: 0 1rem;
 }
 
 .character-description-container p {
