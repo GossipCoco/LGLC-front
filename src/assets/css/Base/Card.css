@@ -26,9 +26,9 @@
     text-align: center;
 }
 .card-character-container{
-    margin: 2rem;
-    width: 25rem;
-    height: 30rem;
+    margin: 1rem;
+    width: 20rem;
+    height: 25rem;
 }
 #all-characters-container-card .character-card.card {
     margin: 1rem 2rem 0 2rem;
@@ -440,5 +440,5 @@ li.quest-container {
 #original-characters-list .card-group {
     display: flex;
     flex-flow: row wrap;
-    width: 28rem;
+    width: 20rem;
 }

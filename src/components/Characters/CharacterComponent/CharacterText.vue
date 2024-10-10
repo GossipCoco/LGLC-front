@@ -1,14 +1,8 @@
 <template>
   <div class="character-list-wrapper display-flex-column">
-    <div
-      class="background-size-cover card-image"
-      v-bind:style="{
-        backgroundImage:
-          'url(' + character.Clan.Image + ')',
-      }"
-    >
+     <BackgroundImage v-bind:Image="character.Clan.Image">
       <img v-if="character.Image" :src="character.Image" />
-    </div>
+    </BackgroundImage>
     <div class="card-body">
       <p style="text-align: center;">
       <span class="name-characatrer-link">
@@ -20,8 +14,10 @@
   </div>
 </template>
 <script>
+import BackgroundImage from './BackgroundImage.vue';
 export default {
   name: "CharacterText",
   props: ["character"],
+  components: {BackgroundImage}
 };
 </script>

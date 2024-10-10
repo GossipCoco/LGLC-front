@@ -121,9 +121,9 @@ table.table-borderless, .table.table-borderless>:not(caption)>*>*, .table-border
 #original-characters-list .border-card-color,
 #original-characters-list  .card.individual-character-card{
     margin: 0.5rem;
-    height: 30rem;
+    height: 25rem;
     border: none;
-    border-radius: 20%;
+    border-radius: 100% 100% 0 0;
     background-position: 50%;
     aspect-ratio: 16 / 9;
 }
@@ -135,7 +135,7 @@ table.table-borderless, .table.table-borderless>:not(caption)>*>*, .table-border
     border: rgba(var(--dark-green-01), 1) 5px solid;
  }
 #original-characters-list  .card.individual-character-card{
-    border-radius: 20% 20% 0 0; 
+    border-radius: 45% 45% 0 0; 
 }
 .avatar-gamer{
     width: 200px;
@@ -148,8 +148,8 @@ table.table-borderless, .table.table-borderless>:not(caption)>*>*, .table-border
     align-items: center;
     align-content: center;
     text-align: center;
-    margin: 4rem 0 0 0;
-    padding-top: 24rem;
+    margin: 2rem 0 0 0;
+    padding-top: 8rem;
 }
 
 #original-characters-list.border {

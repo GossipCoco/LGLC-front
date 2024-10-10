@@ -1,5 +1,8 @@
 <template>
-  <div id="original-characters-list" class="row row-cols-1 row-cols-md-3 g- all-my-characters-container ">
+  <div
+    id="original-characters-list"
+    class="row row-cols-1 row-cols-md-2 g-4 all-my-characters-container"
+  >
     <div
       class="col card-character-container"
       v-for="(character, index) in allMyCharacters"
@@ -7,24 +10,19 @@
     >
       <div class="card-group">
         <div class="card individual-character-card">
-          <div
-            class="character-details-card background-size-cover display-flex background-size-cover card-image background-size-cover border-card-color"
-            v-bind:style="{
-              backgroundImage: 'url(' + character.Image + ')',
-            }"
-          ></div>
-
-          <div class="card-body display-flex-row">
-            <div class="col-6">
-              <h5 class="card-title">{{ character.UserName }}</h5>
-            </div>
-            <div class="col-6 btn-position">
-              <router-link
-                class="btn btn-primary"
-                :to="'OriginaleCharacterDetails/' + character.UserName"
-                >Lire</router-link
+          <BackgroundImage v-bind:Image="character.Image" />
+          <div class="card-body">
+            <p style="text-align: center">
+              <span class="name-characatrer-link">
+                <router-link
+                  :to="'/characterDetails/' + character.Id"
+                  type="button"
+                  class="btn btn-outline-light"
+                >
+                  {{ character.UserName }}
+                </router-link></span
               >
-            </div>
+            </p>
           </div>
         </div>
       </div>
@@ -43,12 +41,13 @@
   </div>
 </template>
 <script>
+import functions from "../../../services/functions";
 import CharacterService from "../../../services/CharacterService";
 import Pagination from "../../Components/GenericComponent/Pagination.vue";
-import functions from "../../../services/functions";
+import BackgroundImage from "./BackgroundImage.vue";
 export default {
   name: "OriginaleCharacterByUser",
-  components: { Pagination },
+  components: { Pagination, BackgroundImage },
   data() {
     return {
       usr: this.$store.state.auth.user.usrID,
@@ -58,7 +57,7 @@ export default {
       nav: {
         current: 0,
         pages: 0,
-        step: 6,
+        step: 8,
       },
       showspinner: false,
     };
