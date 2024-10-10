@@ -10,32 +10,8 @@
       <h5 class="card-title">{{ clan.Name }}</h5>
       <div class="card-text">
         <p>{{ clan.Description }}</p>
-        <div
-          class="display-flex-row flex-one align-items-content-justify-content all-characters-list-containers"
-        >
-          <div
-            class="flex-one display-flex-column"
-            v-for="(character, index) in clan.Warriors"
-            :key="index"
-          >
-            <div
-              class="display-flex-column flex-one indivual-caracter-container"
-            >
-              <img
-                class="height-auto width-100-percent"
-                :src="character.Character.Image"
-                :alt="character.Character.Image"
-              /><br />
-
-              <router-link
-                :to="'/characterDetails/' + character.Character.Id"
-                type="button"
-                class="btn"
-              >
-                {{ character.Character.CurrentName }}
-              </router-link>
-            </div>
-          </div>
+        <div class="display-flex-row flex-one align-items-content-justify-content all-characters-list-containers">
+          <CharactersListe v-bind:characters="clan.Warriors" />
         </div>
       </div>
     </div>
@@ -43,8 +19,10 @@
 </template>
 <script>
 import ClanService from "../../services/ClansServices";
+import CharactersListe from "../Components/GenericComponent/CharactersListe.vue";
 export default {
   name: "ClanDetails",
+  components:{ CharactersListe }, 
   data() {
     return {
       url: "",

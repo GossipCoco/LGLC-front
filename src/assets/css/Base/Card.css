@@ -190,6 +190,7 @@
 .card.card-image-layout.clan-detail-layout.mb-3 {
     width: 95rem;
     border-radius: 20px 0 0 20px;
+    background: none;
 }
 .card.card-image-layout.clan-detail-layout.mb-3 .card-image-layout {
     width: 95rem;

@@ -1,8 +1,5 @@
 <template>
-  <div
-    id="book-container"
-    class="dashboard-max-card-container background-color-main-lineart flex-one card display-flex-column fiction-container"
-  >
+  <div id="book-container" class="dashboard-max-card-container background-color-main-lineart flex-one card display-flex-column fiction-container">
     <CardHeader v-bind:Title="book.Title" />
     <div class="card-body">
       <div class="row">
@@ -15,19 +12,7 @@
         </div>
         <div class="col-10">
           <div class="white-text" v-html="book.Summary"></div>
-          <div class="row">
-            <div class="col-2"
-              v-for="(characters, index) in book.BookCharacters"
-              :key="index"
-            >
-              <span class="white-text">{{ characters.Character.CurrentName }}</span><br />
-              <img
-                class="height-auto width-100-percent"
-                :src="characters.Character.Image"
-                :alt="image"
-              />
-            </div>
-          </div>
+          <CharactersByBook v-bind:characters="book.BookCharacters" />
         </div>
       </div>
     </div>
@@ -36,9 +21,10 @@
 <script>
 import ArcBookService from "../../../services/ArcBookService";
 import CardHeader from "../../Components/GenericComponent/CardHeader.vue";
+import CharactersByBook from "./BookComponent/CharactersByBook.vue";
 export default {
   name: "OneBook",
-  components: { CardHeader },
+  components: { CardHeader, CharactersByBook },
   data() {
     return {
       url: null,
