@@ -2,42 +2,36 @@
   <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12 card-global">
     <div class="card display-flex-column profil-card fiction-card">
       <TitleHeaderDashboard v-bind:title="UserName" v-bind:type="'username'" />
-      <div class="card-body user-info-text">
+      <div class="card-body user-info-text">        
+        <p><span class="label-profil">Mes badges</span></p>
         <div class="row">
-          <div class="col-4">
-            <p><span class="label-profil">Mes badges</span></p>
-            <div class="display-flex-column">
-              <div class="image_user_grade_level">
+          <div class="col-6">
+            <div class="image_user_grade_level">
                 <img
                   :src="'/images/Levels/' + level.Image"
                   :alt="level.Image"
                 />
               </div>
-              <div class="image_user_grade_level">
+          </div>
+          <div class="col-6">
+            <div class="image_user_grade_level">
                 <img :src="'/images/Levels/' + roleImage" :alt="roleImage" />
-              </div>
             </div>
           </div>
-          <div class="col-8">
-            <p>
-              <span class="label-profil">Inscription</span>
-              <span>{{ formatDate(Inscription) }}</span>
-            </p>
-            <p>
-              <span class="label-profil">Dernière connextion</span>
-              <span>{{ formatDate(LastConnexion) }}</span>
-            </p>
-            <p>
-              <span class="label-profil">Vous avez écrit</span>
-              <span>{{ nBFiction }}</span
-              >fictions &<span><br />{{ totalWords }}</span
-              >&nbsp; mots.
-            </p>
-            <p>
-              <span class="label-profil">Vous avez</span>
-              <span>{{ totalPoints }}</span
-              >&nbsp; points.
-            </p>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <p><span class="label-profil">Inscription</span></p>
+            <!-- <p><span class="label-profil">Dernière connextion</span></p> -->
+            <p><span class="label-profil">Nb de fictions</span></p>
+            <p><span class="label-profil">Vous avez</span></p>
+          </div>
+          <div class="col-6">
+            <p> <span>{{ formatDate(Inscription) }}</span> </p>
+            <!-- <p> <span>{{ formatDate(LastConnexion) }}</span></p> -->
+            <p><span>{{ nBFiction }}</span>fictions</p>
+            <!-- <p><span> {{ totalWords }}</span>mots.</p> -->
+            <p><span>{{ totalPoints }}</span> points.</p>
           </div>
         </div>
       </div>

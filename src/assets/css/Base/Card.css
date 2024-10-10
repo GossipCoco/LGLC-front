@@ -4,7 +4,6 @@
 #all-characters-container-card .character-card.card,
 .character-card.card{    
     border: none;
-
 }
 .character-details.card::after {
     content: var(--cat-corner);
@@ -98,7 +97,7 @@
     overflow-x: hidden;
 }
 .dashboard-home-max-card-container .row .card {
-    background: linear-gradient(90deg, rgba(var(--dark-green-01), 1), rgba(var(--middle-green-01), 1));
+    background: linear-gradient(90deg, rgba(var(--dark-green-01), 1), rgba(var(--middle-green-02), 1));
     border: none;
     position: relative;
 }
