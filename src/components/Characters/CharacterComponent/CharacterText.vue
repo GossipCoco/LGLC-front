@@ -3,21 +3,15 @@
      <BackgroundImage v-bind:Image="character.Clan.Image">
       <img v-if="character.Image" :src="character.Image" />
     </BackgroundImage>
-    <div class="card-body">
-      <p style="text-align: center;">
-      <span class="name-characatrer-link">
-        <router-link :to="'/characterDetails/' + character.Id" type="button" class="btn btn-outline-light">
-         {{ character.CurrentName }}
-        </router-link></span>
-      </p>
-    </div>
+    <CharacterCardBody v-bind:id="character.Id" v-bind:name="character.CurrentName" v-bind:route="'/characterDetails/'"/>
   </div>
 </template>
 <script>
 import BackgroundImage from './BackgroundImage.vue';
+import CharacterCardBody from './CharacterCardBody.vue';
 export default {
   name: "CharacterText",
   props: ["character"],
-  components: {BackgroundImage}
+  components: {BackgroundImage, CharacterCardBody}
 };
 </script>

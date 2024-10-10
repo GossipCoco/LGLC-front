@@ -1,29 +1,10 @@
 <template>
-  <div
-    id="original-characters-list"
-    class="row row-cols-1 row-cols-md-2 g-4 all-my-characters-container"
-  >
-    <div
-      class="col card-character-container"
-      v-for="(character, index) in allMyCharacters"
-      :key="index"
-    >
+  <div id="original-characters-list" class="row row-cols-1 row-cols-md-2 g-4 all-my-characters-container">
+    <div class="col card-character-container" v-for="(character, index) in allMyCharacters" :key="index">
       <div class="card-group">
         <div class="card individual-character-card">
           <BackgroundImage v-bind:Image="character.Image" />
-          <div class="card-body">
-            <p style="text-align: center">
-              <span class="name-characatrer-link">
-                <router-link
-                  :to="'/characterDetails/' + character.Id"
-                  type="button"
-                  class="btn btn-outline-light"
-                >
-                  {{ character.UserName }}
-                </router-link></span
-              >
-            </p>
-          </div>
+          <CharacterCardBody v-bind:id="character.Id" v-bind:name="character.UserName" v-bind:route="'/OriginaleCharacterDetails/'"/>
         </div>
       </div>
     </div>
@@ -45,9 +26,10 @@ import functions from "../../../services/functions";
 import CharacterService from "../../../services/CharacterService";
 import Pagination from "../../Components/GenericComponent/Pagination.vue";
 import BackgroundImage from "./BackgroundImage.vue";
+import CharacterCardBody from "./CharacterCardBody.vue";
 export default {
   name: "OriginaleCharacterByUser",
-  components: { Pagination, BackgroundImage },
+  components: { Pagination, BackgroundImage, CharacterCardBody },
   data() {
     return {
       usr: this.$store.state.auth.user.usrID,
