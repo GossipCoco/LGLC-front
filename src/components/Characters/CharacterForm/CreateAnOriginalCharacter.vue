@@ -1,29 +1,21 @@
 <template>
-  <div
-    class="display-flex-column form-character-container-global flex-one opensans-text"
-  >
-    <div
-      class="card display-flex-column card-form-create-character align-items-content-justify-content flex-one mb-12"
-    ></div>
+  <div class="display-flex-column form-character-container-global flex-one opensans-text">
+    <div class="card display-flex-column card-form-create-character align-items-content-justify-content flex-one mb-12">
+      <CardHeader :Title="title" style="width: 100%;"/>
+      <OriginalCharacterForm />
+    </div>
   </div>
 </template>
 <script>
+
+import CardHeader from '../../Components/GenericComponent/CardHeader.vue'
+import OriginalCharacterForm from './OriginalCharacterForm.vue';
 export default {
   name: "CreateAnOriginalCharacter",
+  components:{CardHeader, OriginalCharacterForm},
   data() {
     return {
-      form: {   
-        UserId: this.$store.state.auth.user.usrID,
-        UserName: null,
-        imageChar: null,
-        Description: null,
-        Biography: null,
-        ClanId: null,
-        Status: null,
-        Genre: null,
-        GradeId: null,
-        Personnality: null,
-      },
+      title: 'Créer votre chat guerrier',
     };
   },
 };
