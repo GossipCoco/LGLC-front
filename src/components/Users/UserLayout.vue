@@ -15,7 +15,7 @@
                 Choisir un avatar
               </button>
             </div>
-            <div class="profil-text-container">
+            <div class="flex-one">
               <div class="card-text">
                 <div class="row">
                   <form @submit.prevent="edit">

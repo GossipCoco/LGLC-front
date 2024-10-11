@@ -7,7 +7,8 @@
 .container-fluid,.container-fluid,
 .container-fluid.row  {
     margin-top: 0rem;
-    overflow-y: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
     width: 100%;
 }
 .dashboard-layout-container {
@@ -29,9 +30,6 @@
     padding: 10rem 0 0 0;
     background: var(--linear-greendark-clear);
 }
-.profil-text-container {
-    flex: 1;
-}
 .avatar-container {
     flex: 0.5;
 }
@@ -42,8 +40,6 @@
     flex-wrap: wrap;
     padding: 0;
 }
-
-
 .character-details .card-body {
     height: 85vh;
     overflow-y: auto;
@@ -67,13 +63,12 @@
     background: linear-gradient(90deg, rgba(var(--dark-green-02), 1) 0%, rgba(var(--clear-green-02), 1) 100%);
     height: 95vh;
 }
-
-.row,
+/* .row,
 .col-xxl-9.col-xl-9.col-lg-9.col-md-12.col-sm-12.col-xs-12,
 .col-xxl-6.col-xl-6.col-lg-6.col-md-12.col-sm-12.col-xs-12,
 .col-xxl-4.col-xl-4.col-lg-4.col-md-12.col-sm-12.col-xs-12 {
-    border: 4px solid rgba(238, 130, 238, 0);
-}
+    border: none;
+} */
 .link-text-a {
     color: rgba(var(--dark-green-01), 1);
     font-family: var(--roboto-text);
