@@ -1,7 +1,7 @@
 <template>
     <header data-bs-theme="dark">
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <div class="container-fluid header-container">
+        <div class="container-fluid height-100 header-container">
           <div class="logo-accueil-container">
           <router-link to="/Accueil" class="navbar-brand">
             <img src="../../../../public/images/Logos/Automne_Logo1.png" />

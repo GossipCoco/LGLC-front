@@ -80,7 +80,7 @@
                   backgroundImage:
                     'url(/images/Fictions/' + illus.IllustrationId + ')',
                 }"
-                class="background-fiction-contain"
+                class="background-fiction-contain display-flex-column"
               >
                 <div class="opacity-container">
                   <div class="list-of-chapters-content">

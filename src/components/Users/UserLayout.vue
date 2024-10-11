@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid">
+  <div class="container-fluid height-100">
     <div class="row">
       <div class="col-12">
         <div class="flex-one profil-user-card card">

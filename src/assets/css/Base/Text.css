@@ -4,7 +4,24 @@
 a {
   text-decoration: none;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
+h1, h2, h3, h4, h5, h6, h4 a {
+  font-family: 'Cinzel';
+  margin: 0;
+  color: rgba(var(--main-white), 1)
+}
 
+h2,h3 {
+  font-family: var(--montserratRegular);
+  font-weight: 600;
+}
+a {
+  color: rgba(var(--main-white), 1);
+  font-family: var(--opensans-text);
+}
 .title-author-container h1 {
   font: 500 2.5rem 'Cinzel' petite-caps;
 }
@@ -212,7 +229,7 @@ h1.card-title {
 }
 
 .character-description-container {
-  height: 10rem;
+  height: 8rem;
   overflow-y: scroll;
   padding: 0 1rem;
 }

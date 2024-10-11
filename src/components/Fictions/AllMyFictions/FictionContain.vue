@@ -62,7 +62,7 @@
                 v-for="(illus, index) in illustration"
                 :key="index"
               >
-                <div :style="{ backgroundImage: 'url(' + illus.IllustrationId + ')'}" class="background-size-cover background-fiction-contain">
+                <div :style="{ backgroundImage: 'url(' + illus.IllustrationId + ')'}" class="background-size-cover display-flex-column background-fiction-contain">
                   <ListOfChapter
                     v-bind:AuthorId="AuthorId"
                     v-bind:usrCurrent="usrCurrent"

@@ -2,11 +2,11 @@
   <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12 card-global">
     <div class="card display-flex-column profil-card fiction-card">
       <TitleHeaderDashboard v-bind:title="UserName" v-bind:type="'username'" />
-      <div class="card-body user-info-text">        
-        <p><span class="label-profil">Mes badges</span></p>
+      <div class="card-body user-info-text">
         <div class="row">
           <div class="col-6">
             <div class="image_user_grade_level">
+              <!-- <span class="text-white">{{ level.Name }}</span><br> -->
                 <img
                   :src="'/images/Levels/' + level.Image"
                   :alt="level.Image"
@@ -15,6 +15,7 @@
           </div>
           <div class="col-6">
             <div class="image_user_grade_level">
+              <!-- <span class="text-white">{{ Role.Name }}</span><br> -->
                 <img :src="'/images/Levels/' + roleImage" :alt="roleImage" />
             </div>
           </div>
