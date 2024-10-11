@@ -4,11 +4,11 @@
 .card-body h1 {
     text-align: center;
 }
-main.container-fluid,.container-fluid,
+.container-fluid,.container-fluid,
 .container-fluid.row  {
     margin-top: 0rem;
     overflow-y: hidden;
-    max-width: 100%;
+    width: 100%;
 }
 .dashboard-layout-container {
     margin-top: 5rem;

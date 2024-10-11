@@ -1,6 +1,6 @@
 <template>
     <header data-bs-theme="dark">
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <nav class="navbar align-items-content-justify-content navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid height-100 header-container">
           <div class="logo-accueil-container">
           <router-link to="/Accueil" class="navbar-brand">

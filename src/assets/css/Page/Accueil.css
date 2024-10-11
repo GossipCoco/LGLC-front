@@ -74,6 +74,10 @@
 #accueil nav.bg-dark, #accueil nav .container-fluid {
     background-color: rgba(var(--main-black), 1);
 }
+#accueil header {
+    height: 11rem;
+    background-color: rgba(var(--main-black), 1);
+  }
 #accueil .accueil-header {
     display: flex;
     flex-direction: column;
@@ -250,15 +254,9 @@
 }
 #accueil footer.container{
     background-color: rgba(var(--main-black), 1);
-    /* position: fixed;
-    bottom: -50rem;
-    left: 0; */
+    min-width: 209vh;
 }
- #accueil .nav.justify-content-center.pb-3.mb-3 li{
-    text-align: center;
-    display: flex;
-    justify-content: center;
- }
+
  main#footer-link{
     height: 70vh;
  }

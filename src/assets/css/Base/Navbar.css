@@ -39,10 +39,7 @@
   padding: 0;
   margin: 0 0 0 -1rem;
 }
-#accueil header {
-  height: 14rem;
-  background-color: rgba(var(--main-black), 1);
-}
+
 .navbar {
   margin-top: -0.5rem
 }
