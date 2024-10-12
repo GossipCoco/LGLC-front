@@ -27,16 +27,14 @@
           v-bind:col="'col-3 col-md-3'"
           v-bind:forId="'inputWarriorName'"
           v-bind:label="'Nom de Guerrier/Guérisseur'"
-          v-bind:getNameData="'getKitName'"
-          @WarriorName="WarriorName"
+          v-bind:getNameData="'getWarriorName'"
+          @getWarriorName="getWarriorName"
         />
       </div>
-      <div class="row">
-        <!-- {{ Allclans }} -->         
+      <div class="row">   
         <SelectClanComponent
           v-bind:For="'SearchClan'"
           v-bind:label="'Clan'"
-          v-bind:Clans="Allclans"
           v-bind:formdata="''"
           v-bind:col="'col-3'"
           @form-clans="getclan"
@@ -44,7 +42,6 @@
         <SelectGadeComponent
           v-bind:For="'SearchGrade'"
           v-bind:label="'Grade'"
-          v-bind:Grades="grades"
           v-bind:formdata="''"
           v-bind:col="'col-3'"
           @form-grades="getgrade"
@@ -52,10 +49,16 @@
         <GerenicSelect
           v-bind:For="'SearchGenre'"
           v-bind:label="'Genre'"
-          v-bind:grades="genres"
           v-bind:col="'col-3'"
           v-bind:formdata="''"
           @form-grades="getgenre"
+        />
+        <StatusSelect
+        v-bind:For="'SearchStatus'"
+          v-bind:label="'Status'"
+          v-bind:col="'col-3'"
+          v-bind:formdata="''"
+          @form-Status="getStatus"
         />
       </div>
     </form>
@@ -65,10 +68,11 @@
 import InputName from "../../Components/FormComponent/InputName.vue";
 import SelectClanComponent from "../../Components/FormComponent/SelectClanComponent.vue";
 import SelectGadeComponent from "../../Components/FormComponent/SelectGadeComponent.vue";
-import GerenicSelect from "../../Components/FormComponent/GerenicSelect.vue";
+import GerenicSelect from "../../Components/FormComponent/GenericSelect.vue";
+import StatusSelect from "../../Components/FormComponent/StatusSelect.vue";
 export default {
   name: "OriginalCharacterForm",
-  components: { InputName, SelectClanComponent, SelectGadeComponent, GerenicSelect },
+  components: { InputName, SelectClanComponent, SelectGadeComponent, GerenicSelect, StatusSelect },
   date() {
     return {
       genres: [
@@ -111,12 +115,15 @@ export default {
     NameKitty(e) {
       console.log(e);
     },
-    WarriorName(e) {
+    getWarriorName(e) {
       console.log(e);
     },
     getgenre(e){
         console.log(e)
-    },    
+    },
+    getStatus(e){
+        console.log(e)
+    },
     handleOk(e) {
       console.log(e);
     },
