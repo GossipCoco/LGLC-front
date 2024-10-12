@@ -1,15 +1,43 @@
 <template>
-  <div class="height-fixe character-container-global list-all-characters-container">
-    <div class="row row-filter background-color-dark-green-01 display-flex vertical-align-middle">
-      <div class="col-2 display-flex-row align-items-content-justify-content vertical-align-middle">
+  <div
+    class="height-fixe character-container-global list-all-characters-container"
+  >
+    <div
+      class="row row-filter background-color-dark-green-01 display-flex vertical-align-middle"
+    >
+      <div
+        class="col-2 display-flex-row align-items-content-justify-content vertical-align-middle"
+        style="height: 5rem"
+      >
         <p class="white-text">{{ labelFilter }}</p>
       </div>
-      <InputName v-bind:col="'col-2'" v-bind:forId="'inputName'" v-bind:label="'Nom actuel du personnage'" v-bind:getNameData="'getCurrentName'" @getCurrentName="getCurrentName"/>
-      <SelectClanComponent v-bind:For="'SearchClan'" v-bind:label="'par clans'" v-bind:clans="clans" v-bind:col="'col-2'" @form-clans="getclans" />
-      <SelectGadeComponent v-bind:For="'SearchGrade'" v-bind:label="'par Grade'" v-bind:grades="grades" v-bind:col="'col-2'" @form-grades="getgrades" />
-      <div class="col-3"></div>
+      <InputName
+        v-bind:col="'col-2'"
+        v-bind:forId="'inputName'"
+        v-bind:label="'Nom actuel du personnage'"
+        v-bind:getNameData="'getCurrentName'"
+        @getCurrentName="getCurrentName"
+      />
+      <GenericSelect
+        v-bind:col="'col-2'"
+        v-bind:For="'SearchClan'"
+        v-bind:label="'Clan'"
+        v-bind:formdata="'getclans'"
+        v-bind:clans="clans"
+        @getclans="getclans"
+      />
+      <GenericSelect
+        v-bind:col="'col-2'"
+        v-bind:For="'SearchGrade'"
+        v-bind:label="'Grade'"
+        v-bind:formdata="'getgrade'"
+        @getgrade="getgrades"
+      />
     </div>
-    <character-card v-bind:characters_props="allCharacters" v-if="!showMyCharacter" />
+    <character-card
+      v-bind:characters_props="allCharacters"
+      v-if="!showMyCharacter"
+    />
     <div class="row pagination-container-row">
       <div class="pagination-container">
         <div class="row bottom-top-dashboard">
@@ -34,20 +62,18 @@ import CharacterService from "../../services/CharacterService";
 import ClansService from "../../services/ClansServices";
 import GradeService from "../../services/GradeService";
 
-
-
-import SelectGadeComponent from '../../components/Components/FormComponent/SelectGadeComponent.vue'
-import SelectClanComponent from "../../components/Components/FormComponent/SelectClanComponent.vue";
+// import SelectGadeComponent from '../../components/Components/FormComponent/SelectGadeComponent.vue'
+// import SelectClanComponent from "../../components/Components/FormComponent/SelectClanComponent.vue";
+import GenericSelect from "../Components/FormComponent/GenericSelect.vue";
 import InputName from "../Components/FormComponent/InputName.vue";
 
 import CharacterCard from "./CharacterComponent/CharacterCard.vue";
 
 import Pagination from "../Components/GenericComponent/Pagination.vue";
 
-
 export default {
   name: "AllCharacters",
-  components: { CharacterCard, Pagination, SelectClanComponent, InputName, SelectGadeComponent},
+  components: { CharacterCard, Pagination, GenericSelect, InputName },
   data() {
     return {
       labelFilter: "Chercher des fictions par",
@@ -85,10 +111,9 @@ export default {
     getclans(e) {
       console.log(e);
     },
-    getgrades(e){
-      console.log(e)
+    getgrades(e) {
+      console.log(e);
     },
-
 
     GetAllClans() {
       ClansService.getAllClans()

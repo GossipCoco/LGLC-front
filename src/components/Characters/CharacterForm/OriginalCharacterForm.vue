@@ -20,8 +20,8 @@
           v-bind:col="'col-3 col-md-3'"
           v-bind:forId="'inputApprenticeName'"
           v-bind:label="'Nom d\'apprenti'"
-          v-bind:getNameData="'getNameKitty'"
-          @getNameKitty="getNameKittye"
+          v-bind:getNameData="'getNameApprentice'"
+          @getNameApprentice="getNameApprentice"
         />
         <InputName
           v-bind:col="'col-3 col-md-3'"
@@ -31,48 +31,58 @@
           @getWarriorName="getWarriorName"
         />
       </div>
-      <div class="row">   
-        <SelectClanComponent
+      <div class="row">
+        <GerenicSelect
           v-bind:For="'SearchClan'"
           v-bind:label="'Clan'"
-          v-bind:formdata="''"
+          v-bind:formdata="'getclan'"
           v-bind:col="'col-3'"
-          @form-clans="getclan"
+          @getclan="getclan"
         />
-        <SelectGadeComponent
+        <GerenicSelect
           v-bind:For="'SearchGrade'"
           v-bind:label="'Grade'"
-          v-bind:formdata="''"
+          v-bind:formdata="'getgrade'"
           v-bind:col="'col-3'"
-          @form-grades="getgrade"
+          @getgrade="getgrade"
         />
         <GerenicSelect
           v-bind:For="'SearchGenre'"
           v-bind:label="'Genre'"
           v-bind:col="'col-3'"
-          v-bind:formdata="''"
-          @form-grades="getgenre"
+          v-bind:formdata="'getgenre'"
+          @getgenre="getgenre"
         />
-        <StatusSelect
-        v-bind:For="'SearchStatus'"
+        <GerenicSelect
+          v-bind:For="'SearchStatus'"
           v-bind:label="'Status'"
           v-bind:col="'col-3'"
-          v-bind:formdata="''"
-          @form-Status="getStatus"
+          v-bind:formdata="'getStatus'"
+          @getStatus="getStatus"
         />
+      </div>
+      <div class="col-12">
+        <button
+          class="btn btn-primary"
+          type="submit"
+          v-on:click="handleOk"
+          title="endpart"
+        >
+          Créer le personnage
+        </button>
       </div>
     </form>
   </div>
 </template>
 <script>
 import InputName from "../../Components/FormComponent/InputName.vue";
-import SelectClanComponent from "../../Components/FormComponent/SelectClanComponent.vue";
-import SelectGadeComponent from "../../Components/FormComponent/SelectGadeComponent.vue";
 import GerenicSelect from "../../Components/FormComponent/GenericSelect.vue";
-import StatusSelect from "../../Components/FormComponent/StatusSelect.vue";
 export default {
   name: "OriginalCharacterForm",
-  components: { InputName, SelectClanComponent, SelectGadeComponent, GerenicSelect, StatusSelect },
+  components: {
+    InputName,
+    GerenicSelect,
+  },
   date() {
     return {
       genres: [
@@ -98,34 +108,83 @@ export default {
         WarriorName: null,
       },
     };
-},
+  },
+  mounted(){
+    if (!this.form) {
+    this.form = {
+      UserId: this.$store.state.auth.user.usrID,
+      UserName: null,
+      KitName: null,
+      ApprenticeName: null,
+      WarriorName: null,
+      ClanId: null,
+      Status: null,
+      Genre: null,
+      GradeId: null,
+      Personnality: null,
+    };
+  }
+  },
   methods: {
     getUserName(e) {
-      console.log(e);
+      if (this.form) {
+        this.form.UserName = e;
+      } else {
+        console.error("L'objet `form` n'est pas défini.");
+      }      
     },
     getKitName(e) {
-      console.log(e);
+      if (this.form) {
+        this.form.KitName = e;
+      } else {
+        console.error("L'objet `form` n'est pas défini.");
+      }
     },
     getclan(e) {
-      console.log(e);
+        if (this.form) {
+        this.form.ClanId = e;
+      } else {
+        console.error("L'objet `form` n'est pas défini.");
+      }
     },
     getgrade(e) {
-      console.log(e);
+        if (this.form) {
+            this.form.GradeId = e;
+        } else {
+            console.error("L'objet `form` n'est pas défini.");
+        }
     },
-    NameKitty(e) {
-      console.log(e);
+    getNameApprentice(e) {
+        if (this.form) {
+            this.form.ApprenticeName = e;
+        } else {
+            console.error("L'objet `form` n'est pas défini.");
+        }      
     },
     getWarriorName(e) {
-      console.log(e);
+        if (this.form) {
+            this.form.WarriorName = e;
+        } else {
+            console.error("L'objet `form` n'est pas défini.");
+        }
     },
-    getgenre(e){
-        console.log(e)
+    getgenre(e) {
+        if (this.form) {
+            this.form.Genre = e;
+        } else {
+            console.error("L'objet `form` n'est pas défini.");
+        }
     },
-    getStatus(e){
-        console.log(e)
+    getStatus(e) {
+        if (this.form) {
+            this.form.Status = e;
+        } else {
+            console.error("L'objet `form` n'est pas défini.");
+        }
     },
-    handleOk(e) {
-      console.log(e);
+    handleOk() {
+      console.log(this.form);
+
     },
   },
 };
