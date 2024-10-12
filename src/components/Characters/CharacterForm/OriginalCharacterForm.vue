@@ -1,6 +1,9 @@
 <template>
   <div class="card-body" style="height: 80vh">
-    <form class="create-character-form" @submit.stop.prevent="onSubmit">
+    <form
+      class="create-original-character-form"
+      @submit.stop.prevent="onSubmit"
+    >
       <div class="row">
         <InputName
           v-bind:col="'col-3 col-md-3'"
@@ -61,15 +64,50 @@
           @getStatus="getStatus"
         />
       </div>
-      <div class="col-12">
-        <button
-          class="btn btn-primary"
-          type="submit"
-          v-on:click="handleOk"
-          title="endpart"
-        >
-          Créer le personnage
-        </button>
+      <div class="row">
+        <GenericTextarea
+          v-bind:col="'col-12'"
+          v-bind:md="'md-6'"
+          v-bind:forId="'description'"
+          v-bind:label="'Description'"
+          v-bind:rows="3"
+          v-bind:getData="'getDescription'"
+          @getDescription="getDescription"
+        />
+      </div>
+      <div class="row">
+        <GenericTextarea
+          v-bind:col="'col-12'"
+          v-bind:md="'md-6'"
+          v-bind:forId="'personnality'"
+          v-bind:label="'Personnalité'"
+          v-bind:rows="3"
+          v-bind:getData="'getPersonnality'"
+          @getPersonnality="getPersonnality"
+        />
+      </div>
+      <div class="row">
+        <GenericTextarea
+          v-bind:col="'col-12'"
+          v-bind:md="'md-6'"
+          v-bind:forId="'biography'"
+          v-bind:label="'Biographie'"
+          v-bind:rows="3"
+          v-bind:getData="'getbiography'"
+          @getbiography="getbiography"
+        />
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <button
+            class="btn btn-primary"
+            type="submit"
+            v-on:click="handleOk"
+            title="endpart"
+          >
+            Créer le personnage
+          </button>
+        </div>
       </div>
     </form>
   </div>
@@ -77,11 +115,13 @@
 <script>
 import InputName from "../../Components/FormComponent/InputName.vue";
 import GerenicSelect from "../../Components/FormComponent/GenericSelect.vue";
+import GenericTextarea from "../../Components/FormComponent/GenericTextarea.vue";
 export default {
   name: "OriginalCharacterForm",
   components: {
     InputName,
     GerenicSelect,
+    GenericTextarea,
   },
   date() {
     return {
@@ -109,21 +149,23 @@ export default {
       },
     };
   },
-  mounted(){
+  mounted() {
     if (!this.form) {
-    this.form = {
-      UserId: this.$store.state.auth.user.usrID,
-      UserName: null,
-      KitName: null,
-      ApprenticeName: null,
-      WarriorName: null,
-      ClanId: null,
-      Status: null,
-      Genre: null,
-      GradeId: null,
-      Personnality: null,
-    };
-  }
+      this.form = {
+        UserId: this.$store.state.auth.user.usrID,
+        UserName: null,
+        KitName: null,
+        ApprenticeName: null,
+        WarriorName: null,
+        ClanId: null,
+        Status: null,
+        Genre: null,
+        GradeId: null,
+        Personnality: null,
+        Biography: null,
+        Description: null,
+      };
+    }
   },
   methods: {
     getUserName(e) {
@@ -131,7 +173,7 @@ export default {
         this.form.UserName = e;
       } else {
         console.error("L'objet `form` n'est pas défini.");
-      }      
+      }
     },
     getKitName(e) {
       if (this.form) {
@@ -141,50 +183,71 @@ export default {
       }
     },
     getclan(e) {
-        if (this.form) {
+      if (this.form) {
         this.form.ClanId = e;
       } else {
         console.error("L'objet `form` n'est pas défini.");
       }
     },
     getgrade(e) {
-        if (this.form) {
-            this.form.GradeId = e;
-        } else {
-            console.error("L'objet `form` n'est pas défini.");
-        }
+      if (this.form) {
+        this.form.GradeId = e;
+      } else {
+        console.error("L'objet `form` n'est pas défini.");
+      }
     },
     getNameApprentice(e) {
-        if (this.form) {
-            this.form.ApprenticeName = e;
-        } else {
-            console.error("L'objet `form` n'est pas défini.");
-        }      
+      if (this.form) {
+        this.form.ApprenticeName = e;
+      } else {
+        console.error("L'objet `form` n'est pas défini.");
+      }
     },
     getWarriorName(e) {
-        if (this.form) {
-            this.form.WarriorName = e;
-        } else {
-            console.error("L'objet `form` n'est pas défini.");
-        }
+      if (this.form) {
+        this.form.WarriorName = e;
+      } else {
+        console.error("L'objet `form` n'est pas défini.");
+      }
     },
     getgenre(e) {
-        if (this.form) {
-            this.form.Genre = e;
-        } else {
-            console.error("L'objet `form` n'est pas défini.");
-        }
+      if (this.form) {
+        this.form.Genre = e;
+      } else {
+        console.error("L'objet `form` n'est pas défini.");
+      }
     },
     getStatus(e) {
-        if (this.form) {
-            this.form.Status = e;
-        } else {
-            console.error("L'objet `form` n'est pas défini.");
-        }
+      if (this.form) {
+        this.form.Status = e;
+      } else {
+        console.error("L'objet `form` n'est pas défini.");
+      }
+    },
+    getDescription(e) {
+      if (this.form) {
+        this.form.Description = e;
+      } else {
+        console.error("L'objet `form` n'est pas défini.");
+      }
+    },
+    getPersonnality(e) {
+      if (this.form) {
+        this.form.Personnality = e;
+      } else {
+        console.error("L'objet `form` n'est pas défini.");
+      }
+    },
+    getbiography(e) {
+      console.log(e);
+      if (this.form) {
+        this.form.Biography = e;
+      } else {
+        console.error("L'objet `form` n'est pas défini.");
+      }
     },
     handleOk() {
       console.log(this.form);
-
     },
   },
 };

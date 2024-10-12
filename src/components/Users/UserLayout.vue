@@ -52,7 +52,6 @@
                     <button type="submit" class="btn btn-primary">Modifier</button>
                   </form>
                 </div>
-                <!-- {{ userInfo }} -->
               </div>
             </div>
           </div>
