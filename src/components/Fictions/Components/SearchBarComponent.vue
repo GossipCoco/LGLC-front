@@ -7,13 +7,13 @@
       v-bind:col="'col-2'"
       @form-character="getCharacter"
     />
-    <SelectClanComponent
-      v-bind:For="'SearchClan'"
-      v-bind:label="'Chercher les fictions d\'un clan'"
-      v-bind:clans="clans"
-      v-bind:col="'col-2'"
-      @form-clans="getclans"
-      />
+    <GenericSelect
+          v-bind:For="'SearchClan'"
+          v-bind:label="'Clan'"
+          v-bind:formdata="'getclan'"
+          v-bind:col="'col-3'"
+          @getclan="getclan"
+        />
 
     <div class="col-2">
 
@@ -30,12 +30,12 @@
   </div>
 </template>
 <script>
+import GenericSelect from "../../Components/FormComponent/GenericSelect.vue";
 import SelectCharacterComponent from "../../Components/FormComponent/SelectCharacterComponent.vue";
-import SelectClanComponent from "../../Components/FormComponent/SelectClanComponent.vue";
 export default {
   name: "SearchBarComponent",
   props: ["For", "label", "characterId", "characters", "clans"],
-  components: { SelectCharacterComponent, SelectClanComponent },
+  components: { SelectCharacterComponent, GenericSelect },
   data() {
     return {
       allCharacters: this.characters,

@@ -62,13 +62,9 @@ import CharacterService from "../../services/CharacterService";
 import ClansService from "../../services/ClansServices";
 import GradeService from "../../services/GradeService";
 
-// import SelectGadeComponent from '../../components/Components/FormComponent/SelectGadeComponent.vue'
-// import SelectClanComponent from "../../components/Components/FormComponent/SelectClanComponent.vue";
 import GenericSelect from "../Components/FormComponent/GenericSelect.vue";
 import InputName from "../Components/FormComponent/InputName.vue";
-
 import CharacterCard from "./CharacterComponent/CharacterCard.vue";
-
 import Pagination from "../Components/GenericComponent/Pagination.vue";
 
 export default {
