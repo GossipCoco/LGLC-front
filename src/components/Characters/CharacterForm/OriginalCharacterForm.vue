@@ -98,7 +98,16 @@
         />
       </div>
       <div class="row">
-        <div class="col-12">
+        <div class="col-md-6">
+          <label for="inputImage" class="form-label">Envoyer une image</label>
+          <input
+            type="file"
+            class="form-control"
+            id="inputImage"
+            @change="onFileChange"
+          />
+        </div>
+        <div class="col-md-6">
           <button
             class="btn btn-primary"
             type="submit"
@@ -107,12 +116,18 @@
           >
             Créer le personnage
           </button>
+      </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          
         </div>
       </div>
     </form>
   </div>
 </template>
 <script>
+import CharacterService from "../../../services/CharacterService";
 import InputName from "../../Components/FormComponent/InputName.vue";
 import GerenicSelect from "../../Components/FormComponent/GenericSelect.vue";
 import GenericTextarea from "../../Components/FormComponent/GenericTextarea.vue";
@@ -135,17 +150,17 @@ export default {
       form: {
         UserId: this.$store.state.auth.user.usrID,
         UserName: null,
-        imageChar: null,
-        Description: null,
-        Biography: null,
+        KitName: null,
+        ApprenticeName: null,
+        WarriorName: null,
         ClanId: null,
         Status: null,
         Genre: null,
         GradeId: null,
         Personnality: null,
-        KitName: null,
-        ApprenticeName: null,
-        WarriorName: null,
+        Biography: null,
+        Description: null,
+        Image: null,
       },
     };
   },
@@ -164,6 +179,7 @@ export default {
         Personnality: null,
         Biography: null,
         Description: null,
+        Image: null,
       };
     }
   },
@@ -227,6 +243,12 @@ export default {
     getDescription(e) {
       if (this.form) {
         this.form.Description = e;
+        const Description = this.form.Description
+        ? this.form.Description.split("\n")
+            .map((paragraph) => `<p>${paragraph}</p>`)
+            .join("")
+        : "";
+      this.form.Description = Description;
       } else {
         console.error("L'objet `form` n'est pas défini.");
       }
@@ -234,21 +256,94 @@ export default {
     getPersonnality(e) {
       if (this.form) {
         this.form.Personnality = e;
+        const Personnality = this.form.Personnality
+        ? this.form.Personnality.split("\n")
+            .map((paragraph) => `<p>${paragraph}</p>`)
+            .join("")
+        : "";
+        this.form.Personnality = Personnality;
       } else {
         console.error("L'objet `form` n'est pas défini.");
       }
     },
     getbiography(e) {
-      console.log(e);
+
       if (this.form) {
         this.form.Biography = e;
+        const Biography = this.form.Biography
+        ? this.form.Biography.split("\n")
+            .map((paragraph) => `<p>${paragraph}</p>`)
+            .join("")
+        : "";
+        this.form.Biography = Biography;
       } else {
         console.error("L'objet `form` n'est pas défini.");
       }
     },
+    onFileChange(e) {
+      if (this.form) {
+        const file = e.target.files[0];
+        this.form.Image = file;
+        
+      }else {
+        console.error("L'objet `form` n'est pas défini.");
+      }
+
+    },
     handleOk() {
       console.log(this.form);
+      const formData = new FormData();
+  formData.append('image', this.form.Image); // Utilisez le nom de champ `image` comme dans votre route
+  formData.append('UserId', this.form.UserId);
+  formData.append('UserName', this.form.UserName);
+  formData.append('KitName', this.form.KitName);
+  formData.append('ApprenticeName', this.form.ApprenticeName);
+  formData.append('WarriorName', this.form.WarriorName);
+  formData.append('ClanId', this.form.ClanId);
+  formData.append('Status', this.form.Status);
+  formData.append('Genre', this.form.Genre);
+  formData.append('GradeId', this.form.GradeId);
+  formData.append('Personnality', this.form.Personnality);
+  formData.append('Biography', this.form.Biography);
+  formData.append('Description', this.form.Description);
+      this.CreateAnOriginalCharacter(this.form.UserId, this.form);
     },
+    async CreateAnOriginalCharacter(id, formData){
+      console.log(id, formData);
+      try{
+        const response = await CharacterService.CreateAnOriginalCharacter(id, formData)
+        console.log('Réponse de la création de fiction :', response);
+      
+      if (response && response.data) { // Assure-toi que la réponse contient bien les données attendues
+        console.log('Fiction créée avec succès, redirection...');
+        this.$router.push({
+          path: "/OriginaleCharacterByUser",
+        });
+      } else {
+        console.error('Erreur lors de la création de la fiction, réponse inattendue :', response);
+        this.$router.push({
+          path: "/OriginaleCharacterByUser",
+        });
+      }
+      }
+      catch (error) {
+      console.error('Erreur lors de la création de la fiction :', error);
+      this.$router.push({
+          path: "/OriginaleCharacterByUser",
+        });
+    }
+      // CharacterService.CreateAnOriginalCharacter(form.UserId, this.form)
+      // .then((response) => {
+      //   console.log(response)
+      //     this.$router.push({
+      //       path: "/OriginaleCharacterByUser",
+      //     });
+      //   })
+      //   .catch((e) => {
+      //     console.log(e);
+      //   });
+
+    }
   },
 };
 </script>
