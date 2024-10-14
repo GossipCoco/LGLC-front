@@ -62,7 +62,8 @@ export default {
           this.form.Content = this.chapter.Content;
           this.Author = this.chapter.Fiction.UserId;
           this.AuthorId = this.chapter.Fiction.UserId;
-
+          this.form.Id = this.chapter.Id
+          this.form.Title = this.chapter.Title
           //this.typeText(this.chapter.Content);
         })
         .catch((e) => {
