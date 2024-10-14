@@ -332,17 +332,6 @@ export default {
           path: "/OriginaleCharacterByUser",
         });
     }
-      // CharacterService.CreateAnOriginalCharacter(form.UserId, this.form)
-      // .then((response) => {
-      //   console.log(response)
-      //     this.$router.push({
-      //       path: "/OriginaleCharacterByUser",
-      //     });
-      //   })
-      //   .catch((e) => {
-      //     console.log(e);
-      //   });
-
     }
   },
 };

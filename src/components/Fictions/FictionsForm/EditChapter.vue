@@ -12,13 +12,14 @@
           <div class="row">
             <div class="col-12">
               <div class="mb-12">
-                <label for="Content" class="form-label">Votre histoire</label>
+                <label for="Content" class="form-label">Votre Chapitre {{ form.Name }}</label>
                 <textarea
                   v-model="form.Content"
                   class="form-control"
                   id="Content"
-                  rows="12"
-                ></textarea>
+                  rows="12"                  
+                >              
+              </textarea>
               </div>
             </div>
           </div>
@@ -56,6 +57,7 @@ export default {
     getChapter(id) {
       FictionService.getChapter(id, this.nav)
         .then((response) => {
+          console.log(response.data.ob)
           this.chapter = response.data.ob || {};
           this.form.Content = this.chapter.Content;
           this.Author = this.chapter.Fiction.UserId;
@@ -74,7 +76,30 @@ export default {
     },
     onSubmit() {
       console.log(this.form);
+      const paragraphs = this.form.Content
+      .split(/\n+/)
+      .map((paragraph) => `<p>${paragraph.trim()}</p>`)
+      .join("");
+    
+      this.form.Content = paragraphs;
+      console.log(this.form.Content)
+      this.EditChapter(this.AuthorId, this.form)
+
     },
+    EditChapter(id, form){
+      FictionService.EditChapter(id, form)
+      .then(() => {
+        this.$router.push({
+            path:'/chapter/' + this.form.Title
+          });
+      })      
+      .catch((e) => {
+          console.log(e);
+          this.$router.push({
+            path:'/chapter/' + this.form.Title
+          });
+        });
+    }
   },
 };
 </script>

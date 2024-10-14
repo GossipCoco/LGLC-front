@@ -2,7 +2,7 @@
 <div class="card-body">
       <p style="text-align: center;">
       <span class="name-characatrer-link">
-        <router-link :to="route + id" type="button" class="btn btn-outline-light">
+        <router-link :to="route + name" type="button" class="btn btn-outline-light">
          {{ name }}
         </router-link></span>
       </p>

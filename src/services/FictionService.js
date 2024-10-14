@@ -43,6 +43,9 @@ class FictionService {
     CreateCommentForAFiction(id, data){
         return http.post(`/fiction/CreateCommentForAFiction/${id}`, data)
     }
+    EditChapter(id, data){
+        return http.post(`/Chapter/EditChapter/${id}`, data)
+    }
 
 }
 

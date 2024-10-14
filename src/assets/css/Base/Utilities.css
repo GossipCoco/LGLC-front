@@ -99,6 +99,14 @@
 .text-align-justify{
     text-align: justify;
 }
+/* Margin */
+
+.margin-1-0{
+    margin: 1rem 0;
+}
+
+
+/* TABLE */
 table.table tr th, table.table tr td{
     color: rgba(var(--main-black), 1);
 }

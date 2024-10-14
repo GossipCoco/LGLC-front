@@ -1,5 +1,5 @@
 <template>
-  <div class="row row-cols-md-3 g-3">
+  <div class="row row-cols-md-3 g-3 margin-1-0">
     <div class="col" v-for="(fiction, index) in allFictions" :key="index">
       <div class="card fiction-summary-card">
         <div class="row">
@@ -33,6 +33,7 @@
 </template>
 
 <script>
+
 export default {
   props: {
     allFictions: {

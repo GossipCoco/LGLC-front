@@ -30,7 +30,7 @@ import ChapterLayout from '../components/Fictions/AllMyFictions/ChapterLayout.vu
 import CreateFiction from '../components/Fictions/AllMyFictions/CreateFiction.vue'
 import AllMyFictionsLayout from '../components/Fictions/AllMyFictions/AllFictionsLayout.vue'
 import CreateChapter from '../components/Fictions/AllMyFictions/CreateChapter.vue'
-import EditChapter from '../components/Fictions/AllMyFictions/EditChapter.vue'
+import EditChapter from '../components/Fictions/FictionsForm/EditChapter.vue'
 import CommentLayout from "../components/Fictions/Comments/CommentLayout.vue";
 
 import GameLayout from '../components/Game/GameLayout'
