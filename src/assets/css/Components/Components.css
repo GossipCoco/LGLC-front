@@ -294,3 +294,8 @@ audio{
     border-radius: 50% 50% 0 0;
     background-color: rgba(var(--dark-green-02), 1);
 }
+.create-character-button{
+    margin: 1.5rem 0 0 0;
+    display: flex;
+    justify-content: right;
+}

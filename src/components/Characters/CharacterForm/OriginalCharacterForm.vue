@@ -98,6 +98,7 @@
         />
       </div>
       <div class="row">
+        <LinkGenerateImage />
         <div class="col-md-6">
           <label for="inputImage" class="form-label">Envoyer une image</label>
           <input
@@ -107,7 +108,7 @@
             @change="onFileChange"
           />
         </div>
-        <div class="col-md-6">
+        <div class="col-md-2 create-character-button">
           <button
             class="btn btn-primary"
             type="submit"
@@ -118,11 +119,11 @@
           </button>
       </div>
       </div>
-      <div class="row">
+      <!-- <div class="row">
         <div class="col-12">
           
         </div>
-      </div>
+      </div> -->
     </form>
   </div>
 </template>
@@ -131,12 +132,14 @@ import CharacterService from "../../../services/CharacterService";
 import InputName from "../../Components/FormComponent/InputName.vue";
 import GerenicSelect from "../../Components/FormComponent/GenericSelect.vue";
 import GenericTextarea from "../../Components/FormComponent/GenericTextarea.vue";
+import LinkGenerateImage from "../../Components/FormComponent/LinkGenerateImage.vue";
 export default {
   name: "OriginalCharacterForm",
   components: {
     InputName,
     GerenicSelect,
     GenericTextarea,
+    LinkGenerateImage
   },
   date() {
     return {
