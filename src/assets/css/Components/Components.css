@@ -195,10 +195,10 @@ th{
     width: 100%;
 }
 .image-fiction-container-background{
-    padding: 0.5rem;
+    padding: 1rem 0 0.5rem 0;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 24vh;
+    height: 25vh;
     background-position: 50%;
     border-radius: 20px;
 }

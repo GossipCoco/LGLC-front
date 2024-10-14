@@ -23,15 +23,16 @@
         <div class="row">
           <div class="col-6">
             <p><span class="label-profil">Inscription</span></p>
-            <!-- <p><span class="label-profil">Dernière connextion</span></p> -->
+            <p><span class="label-profil">Dernière connextion</span></p>
             <p><span class="label-profil">Nb de fictions</span></p>
+            <p><span class="label-profil">Nb de mots écrits</span></p>
             <p><span class="label-profil">Vous avez</span></p>
           </div>
           <div class="col-6">
             <p> <span>{{ formatDate(Inscription) }}</span> </p>
-            <!-- <p> <span>{{ formatDate(LastConnexion) }}</span></p> -->
+            <p> <span>{{ formatDate(LastConnexion) }}</span></p>
             <p><span>{{ nBFiction }}</span>fictions</p>
-            <!-- <p><span> {{ totalWords }}</span>mots.</p> -->
+            <p><span> {{ totalWords }}</span>mots.</p>
             <p><span>{{ totalPoints }}</span> points.</p>
           </div>
         </div>
