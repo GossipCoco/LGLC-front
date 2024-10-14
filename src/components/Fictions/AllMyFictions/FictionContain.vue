@@ -11,10 +11,9 @@
       id="card-display-flex-column fiction-container"
       class="card-header display-flex-row"
     >
-      <Rating :fictionId="IdFiction" :rating="rating" />
       <div class="Comment-icon">
         <router-link :to="'/CommentByFiction/' + Title"
-          ><img src="../../../../public/images/icons/comments-solid.svg"
+          ><img src="../../../../public/images/icons/comments-solid.svg" width="45%"
         /></router-link>
         <br>
         <CreateCommentModal 
@@ -22,6 +21,7 @@
           v-bind:fictionId="IdFiction"                                
         />
       </div>
+      <Rating :fictionId="IdFiction" :rating="rating" />
       <TitleFiction
         v-bind:Title="Title"
         v-bind:Author="Author"
@@ -169,6 +169,7 @@ export default {
       this.showspinner = true;
       FictionService.getFictionByName(id, this.nav)
         .then((response) => {
+          console.log(response.data.ob)
           this.fiction = response.data.ob;
           this.rating = response.data.ob.AverageRating;
           this.IdFiction = this.fiction.Id;
