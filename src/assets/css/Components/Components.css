@@ -207,6 +207,7 @@ th{
     width: 25rem;
     height: 25vh;
     padding: 0 1rem 0 0.75rem;
+    border-radius: 20% 12px 12px 20%;
 }
 .mini-rond-messages{
     background-color: rgba(var(--active-hover), 1);
@@ -255,7 +256,7 @@ audio{
 }
 .all-my-characters-container{
     height: 110vh;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
     padding: 3rem;
     margin: 0 auto;

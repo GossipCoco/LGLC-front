@@ -25,9 +25,9 @@
     text-align: center;
 }
 .card-character-container{
-    margin: 1rem;
+    margin: 0.25rem;
     width: 20rem;
-    height: 25rem;
+    height: 20rem;
 }
 #all-characters-container-card .character-card.card {
     margin: 1rem 2rem 0 2rem;
@@ -465,7 +465,7 @@ li.quest-container {
 #original-characters-list .border-card-color,
 #original-characters-list  .card.individual-character-card{
     margin: 0.5rem;
-    height: 25rem;
+    height: 20em;
     border: none;
     border-radius: 100% 100% 0 0;
     background-position: 50%;
@@ -492,8 +492,9 @@ li.quest-container {
     align-items: center;
     align-content: center;
     text-align: center;
-    margin: 2rem 0 0 0;
-    padding-top: 8rem;
+    margin: 0 0 0 0;
+    padding-top: 7rem;
+    height: 83vh;
 }
 
 #original-characters-list.border {

@@ -34,15 +34,24 @@
               />
 
               <div class="row">
-                <div clas="col-6">
-                  <button
-                    type="button"
-                    class="btn btn-primary"
-                    @click="'/CharacterCreate'"
-                  >
-                    Créer un personnage
-                  </button>
-                </div>
+                  <SelectOriginalCharacterComponent
+                  v-bind:For="'OriginalFirstCharacterId'"
+                  v-bind:label="'Sélectionner un de vos personnages'"
+                  v-bind:characterId="form.OriginalFirstCharacterId"
+                  v-bind:characters="myAllCharacters"
+                  v-bind:col="'col-6'"
+                  v-bind:getDatas="'getOriginalFirstCharacter'"
+                  @getOriginalFirstCharacter="getOriginalFirstCharacter"
+                  />
+                  <SelectOriginalCharacterComponent
+                  v-bind:For="'OriginalSecondCharacterId'"
+                  v-bind:label="'Sélectionner un de vos personnages'"
+                  v-bind:characterId="form.OriginalSecondCharacterId"
+                  v-bind:characters="myAllCharacters"
+                  v-bind:col="'col-6'"
+                  v-bind:getDatas="'getOriginalSecondCharacter'"
+                  @getOriginalSecondCharacter="getOriginalSecondCharacter"
+                  />
               </div>
               <TextAreaComponent
                 v-bind:Title="'Résumé de la fiction'"
@@ -86,6 +95,7 @@ import Config from "../../../../server";
 import CardHeader from "../../Components/GenericComponent/CardHeader.vue";
 import InputTitle from "../../Components/FormComponent/InputTitle.vue";
 import SelectCharacterComponent from "../../Components/FormComponent/SelectCharacterComponent.vue";
+import SelectOriginalCharacterComponent from "../../Components/FormComponent/SelectOriginalCharacterComponent.vue";
 import TextAreaComponent from "../../Components/FormComponent/TextAreaComponent.vue";
 import LinkGenerateImage from "../../Components/FormComponent/LinkGenerateImage.vue";
 
@@ -97,6 +107,7 @@ export default {
     TextAreaComponent,
     SelectCharacterComponent,
     LinkGenerateImage,
+    SelectOriginalCharacterComponent
   },
   inject: ["user"],
   data() {
@@ -104,11 +115,14 @@ export default {
       userCurrent: this.$store.state.auth.user.usrID,
       textInput: null,
       characters: {},
+      myAllCharacters:{},
       form: {
         Title: null,
         Summary: null,
         FirstCharacterId: null,
         SecondCharacterId: null,
+        OriginalFirstCharacterId: null,
+        OriginalSecondCharacterId: null,
         LocationId: null,
       },
       file: null,
@@ -118,6 +132,7 @@ export default {
   },
   created() {
     this.GetAllNamesAndIdsCharacters();
+    this.GetAllNamesAndIdsOriginaCharacters(this.userCurrent)
   },
   methods: {
     getContent(e) {
@@ -158,6 +173,17 @@ export default {
           console.log(e);
         });
     },
+    GetAllNamesAndIdsOriginaCharacters(usr){
+      CharacterService.GetAllNamesAndIdsOriginaCharacters(usr)
+      .then((response) => {
+          this.myAllCharacters = response.data.ob;
+          console.log(this.myAllCharacters)
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+      
+    },
     handleFileUpload(event) {
       this.file = event.target.files[0];
     },
@@ -183,6 +209,8 @@ export default {
       formData.append("FirstCharacterId", this.form.FirstCharacterId);
       formData.append("SecondCharacterId", this.form.SecondCharacterId);
       formData.append("LocationId", this.form.LocationId);
+      formData.append('OriginalFirstCharacterId', this.form.OriginalFirstCharacterId)
+      formData.append('OriginalSecondCharacterId', this.form.OriginalSecondCharacterId)
       if (this.file) {
         formData.append("image", this.file);
       }
