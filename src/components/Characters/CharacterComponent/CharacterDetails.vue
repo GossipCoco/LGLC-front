@@ -3,29 +3,13 @@
     <div class="parallax">
       <div class="parallax-layer parallax-layer-back width-100-percent">
         <div class="row g-0">
-          <div class="col-4 col-md-4">
-            <div class="parallax">
-              <div class="parallax__layer parallax__layer--back">
-                <div
-                  class=" character-details-card background-size-cover display-flex background-size-cover card-image background-size-cover border-card-color"
-                  v-bind:style="{
-                    backgroundImage:
-                      'url(' + background + ')',
-                  }"
-                >
-                  <div class="vegetal-container background-size-contain width-100-percent">
-                    <div class="parallax__layer parallax__layer--base">
-                      <img
-                        class="height-auto width-100-percent"
-                        :src="image"
-                        :alt="image"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <CharacterImageDetail v-bind:Image="background">
+            <img
+                class="height-auto width-100-percent"
+                :src="image"
+                :alt="image"
+              />
+          </CharacterImageDetail>
           <div class="col-8 col-md-8">
             <div class="card-body background-color-main-lineart details-infos-characters">
               <div class="row">
@@ -42,8 +26,7 @@
                     >
                       Retour à la liste des personnages
                     </router-link>
-                  </p>
-                  
+                  </p>                  
                 </div>
               </div>
               <div class="row">
@@ -53,27 +36,28 @@
                       <div class="display-flex-column flex-one">
                         <table class="table table-borderless text-white">
                           <tr>
-                            <td><strong>Clan:</strong></td>
+                            <td><span class="text-white"><strong>Clan:</strong></span></td>
                             <td>{{ NameClan }}</td>
-                          </tr>                          <tr>
-                            <td><strong>Genre:</strong></td>
+                          </tr>
+                          <tr>
+                            <td><span class="text-white"><strong>Genre:</strong></span></td>
                             <td>{{ genre }}</td>
                           </tr>
                           <tr>
-                            <td><strong>Grade:</strong></td>
+                            <td><span class="text-white"><strong>Grade:</strong></span></td>
                             <td>{{ Grade }}</td>
                           </tr>
                           <tr></tr>
                           <tr>
-                            <td><strong>Chaton:</strong></td>
+                            <td><span class="text-white"><strong>Chaton:</strong></span></td>
                             <td>{{ kitty }}</td>
                           </tr>
                           <tr>
-                            <td><strong>Apprenti:</strong></td>
+                            <td><span class="text-white"><strong>Apprenti:</strong></span></td>
                             <td>{{ apprentice }}</td>
                           </tr>
                           <tr>
-                            <td><strong>Guerrier:</strong></td>
+                            <td><span class="text-white"><strong>Guerrier:</strong></span></td>
                             <td>{{ warrior }}</td>
                           </tr>
                         </table>
@@ -104,11 +88,12 @@
 </template>
 <script>
 import CharacterService from "../../../services/CharacterService";
+import CharacterImageDetail from "../GenericComponent/CharacterImageDetail.vue";
 import CharacterTabs from "../GenericComponent/CharacterTabs.vue";
 import ButtonCreationCharacter from "../../Components/FormComponent/ButtonCreationCharacter.vue";
 export default {
   name: "CharacterDetails",
-  components: {ButtonCreationCharacter, CharacterTabs},
+  components: {ButtonCreationCharacter, CharacterTabs, CharacterImageDetail},
   data() {
     return {
       url: "",

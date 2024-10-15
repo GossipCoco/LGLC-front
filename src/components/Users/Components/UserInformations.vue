@@ -21,11 +21,10 @@
         :key="index"
       >
         <div class="card h-100">
-          <img
-            lass="avatar-gamer"
+          <img            
             :src="gamer.Image"
-            class="card-img-top"
-            alt="..."
+            class="card-img-top avatar-gamer"
+            :alt="gamer.UserName"
           />
           <div class="card-body">
             <h3 class="card-title">{{ gamer.UserName }}</h3>

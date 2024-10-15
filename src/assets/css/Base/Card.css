@@ -401,17 +401,12 @@ li.quest-container {
     font-size: 1.2em;
     line-height: 1.6;
 }
-.parallax__layer.parallax__layer--background {
-    background: linear-gradient(rgba(var(--main-black), 0.3), rgba(var(--main-black) 0.3)),
-    url('/images/Backgrounds/forest.jpg');
-}
 
 .btn-primary.file-character-btn {
     background-color:  rgb(var(--clear-green-02), 0.6);
     border-color:  rgb(var(--clear-green-02), 0.6);
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
-
 .btn-primary.file-character-btn:hover {
     background-color:  rgb(var(--clear-green-02), 0.6);
     transform: scale(1.05);
@@ -430,11 +425,9 @@ li.quest-container {
     flex-flow: row wrap;
     width: 20rem;
 }
-
 .card-body.user-info-text{
     padding: 0 0 0 0.5rem
 }
-
 /* SPECIFIC */
 .border-card-color{
     height: 40rem;
@@ -444,9 +437,8 @@ li.quest-container {
     border-bottom: 1rem solid rgba(var(--clear-green-02), 1);
     border-left: 1rem solid rgba(var(--clear-green-02), 1);
 }
-
 #original-characters-list .border-card-color,
-#original-characters-list  .card.individual-character-card{
+#original-characters-list .card.individual-character-card{
     margin: 0.5rem;
     height: 20em;
     border: none;
@@ -454,7 +446,6 @@ li.quest-container {
     background-position: 50%;
     aspect-ratio: 16 / 9;
     border: 6px solid rgba(var(--clear-green-02), 1);
-
 }
  #original-characters-list  .card-title{
     color: rgba(var(--main-white), 1);
@@ -472,16 +463,10 @@ li.quest-container {
     margin: 1rem;
 }
 #original-characters-list{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    text-align: center;
-    margin: 0 0 0 0;
+    margin:00;
     padding-top: 7rem;
     height: 83vh;
 }
-
 #original-characters-list.border {
     border: none
 }

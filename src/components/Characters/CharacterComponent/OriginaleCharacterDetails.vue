@@ -4,7 +4,9 @@
     class="character-details card mb-3"
   >
     <div class="row g-0">
-      <CharacterImageDetail v-bind:Image="character.Image" />
+      <CharacterImageDetail v-bind:Image="character.Image">
+        
+      </CharacterImageDetail>
       <div class="col-8 col-md-8">
         <div class="card-body background-color-main-lineart details-infos-characters">
           <div class="display-flex-row">
