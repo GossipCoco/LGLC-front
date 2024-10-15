@@ -21,6 +21,11 @@
             </div>
           </div>
           <div class="row">
+            <div class="col-12">
+              <p>{{ character.Genre }}</p>
+            </div>
+          </div>
+          <div class="row">
             <CharacterTabs
               v-bind:Description="character.Description"
               v-bind:Personnality="character.Personnality"
