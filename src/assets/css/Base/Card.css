@@ -164,7 +164,7 @@
 }
 
 .clan-detail-layout .card-body {
-    height: 48em;
+    height: 44em;
     flex:1;
 }
 .clans-location-container {
@@ -184,7 +184,7 @@
     font-variant: small-caps;
 }
 .card.card-image-layout.clan-detail-layout.mb-3 {
-    width: 95rem;
+    width: 100rem;
     border-radius: 20px 0 0 20px;
     background: none;
 }
