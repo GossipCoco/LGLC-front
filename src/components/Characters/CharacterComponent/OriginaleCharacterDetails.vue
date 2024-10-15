@@ -21,8 +21,13 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-12">
+            <div class="col-4">
               <p>{{ character.Genre }}</p>
+              <p>{{ grade }}</p>
+            </div>
+            <div class="col-4"></div>
+            <div class="col-4">
+              <img :src="'/images/clans/' + symbol" />
             </div>
           </div>
           <div class="row">
@@ -51,6 +56,8 @@ export default {
     return {
       character: {},
       url: this.$route.params.id,
+      symbol: null,
+      grade: null
     };
   },
   created() {
@@ -61,7 +68,8 @@ export default {
       CharacterService.GetOneOriginaleCharacterByName(name)
         .then((response) => {
           this.character = response.data.ob;
-          console.log(this.character);
+          this.symbol = response.data.ob.Clan.Symbol
+          this.grade = response.data.ob.Grade.Name
         })
         .catch((e) => {
           console.log(e);
