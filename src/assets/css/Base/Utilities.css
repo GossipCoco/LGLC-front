@@ -99,20 +99,15 @@
 .text-align-justify{
     text-align: justify;
 }
+.text-white{
+    color: rgba(var(--main-white), 1);
+}
 /* Margin */
-
 .margin-1-0{
     margin: 1rem 0;
 }
-
-
 /* TABLE */
-table.table tr th, table.table tr td{
-    color: rgba(var(--main-black), 1);
-}
+
 table.table-borderless, .table.table-borderless>:not(caption)>*>*, .table-borderl {
     background-color: rgba(var(--main-white), 0);
-}
-.text-white{
-    color: rgba(var(--main-white), 1);
 }

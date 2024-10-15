@@ -7,7 +7,7 @@
       <div v-for="(clan, index) in clans" :key="index">
         <div class="card location-clan-background-width-container">
           <div
-            class="card-image clan-card background-size-contain"
+            class="card-image clan-card background-size-cover"
             v-bind:style="{
               backgroundImage: 'url(' + clan.Image + ')',
             }"

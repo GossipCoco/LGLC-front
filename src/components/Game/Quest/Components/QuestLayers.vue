@@ -9,7 +9,7 @@
       zIndex: layer.Position,
       transform: `translateZ(${layer.translateZ}) translateY(${layer.translateY}) translateX(${layer.translateX}) scale(${layer.scale})`,
     }"
-    class="parallax-layer"
+    class="parallax-layer width-100-percent"
   ></div>
 </template>
 <script>

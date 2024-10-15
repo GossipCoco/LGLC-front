@@ -7,7 +7,7 @@
           :alt="image"
           />
           <router-link
-          :to="'/characterDetails/' + character.Character.Id"
+          :to="'/characterDetails/' + character.Character.CurrentName"
           type="button"
           class="btn btn-primary"
           >

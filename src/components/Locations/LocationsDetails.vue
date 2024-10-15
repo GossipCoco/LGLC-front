@@ -1,12 +1,12 @@
 <template>
   <div class="card card-image-layout clan-detail-layout mb-3 background-color-white display-flex-row ">
     <div
-      class="card-image clan-detail-card background-color-white border-card-color"
+      class="card-image clan-detail-card background-color-white border-card-color background-size-cover"
       v-bind:style="{
         backgroundImage: 'url(' + location.Image + ')',
       }"
     ></div>
-    <div class="card-body">
+    <div class="card-body background-color-main-lineart details-infos-characters">
       <h5 class="card-title">{{ location.Name }}</h5>
       <div class="card-text">
         <div v-html="location.Description"></div>

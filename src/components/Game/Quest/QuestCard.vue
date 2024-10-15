@@ -4,7 +4,7 @@
       <h4>{{ quest.Title }}</h4>
     </div>
     <div class="card-body display-flex-column one-quest">
-      <div class="card-img-top display-flex-column align-items-content-justify-content background-image-quest-image-container display-flex-row flex-one">
+      <div class="card-img-top display-flex-column align-items-content-justify-content width-100-percent background-image-quest-image-container display-flex-row flex-one background-size-contain width-100-percent">
         <img :src=" image.Image" />
       </div>
       <div class="display-flex-column quest-button-text">

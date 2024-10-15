@@ -71,10 +71,6 @@
     overflow-y: hidden;
     overflow-x: hidden;
 }
-.card-header.title-chapter-container{
-    width: 100%;
-}
-
 .dashboard-home-max-card-container.card {
     background: none;
     border: none;
@@ -195,11 +191,10 @@
     width: 95rem;
     margin: 4rem 0 0 3rem;
 }
-.card.card-image-layout.clan-detail-layout.mb-3 .card-body {
+.card.card-image-layout.title-chapter-container.mb-3 .card-body {
     height: 50rem;
     overflow-y: auto;
     overflow-x: hidden;
-    width: 100%;
     border-radius: 20px;
 }
 /* USER */
@@ -309,9 +304,6 @@ li.quest-container {
 }
 .quest-image-container,
 .background-image-quest-image-container {
-    width: 100%;
-    background-size: contain;
-    background-repeat: no-repeat;
     background-position: 50% 55%;
     justify-content: center;
     align-items: center;
@@ -367,7 +359,6 @@ li.quest-container {
 }
 .parallax-layer {
     position: absolute;
-    width: 100%;
     height: 100%;
     top: 0;
     left: 0;
@@ -411,7 +402,8 @@ li.quest-container {
     line-height: 1.6;
 }
 .parallax__layer.parallax__layer--background {
-    background: linear-gradient(rgba(var(--main-black), 0.3), rgba(var(--main-black) 0.3)), url('/images/Backgrounds/forest.jpg');
+    background: linear-gradient(rgba(var(--main-black), 0.3), rgba(var(--main-black) 0.3)),
+    url('/images/Backgrounds/forest.jpg');
 }
 
 .btn-primary.file-character-btn {
@@ -424,9 +416,6 @@ li.quest-container {
     background-color:  rgb(var(--clear-green-02), 0.6);
     transform: scale(1.05);
 }
-.table>:not(caption)>*>*{
-    color: rgba(var(--main-white), 0.8);
-}
 .accordion-button.collapsed,
 .accordion-item:first-of-type>.accordion-header .accordion-button,
 .accordion-button:not(.collapsed),
@@ -437,17 +426,11 @@ li.quest-container {
 .table.table-borderless{
     width: 25rem;
 }
-
 #original-characters-list .card-group {
-    display: flex;
     flex-flow: row wrap;
     width: 20rem;
 }
-.card-header .title-header.display-flex-row,
-.card-header  .title-header.display-flex-row .row
-{
-    width: 100%;
-}
+
 .card-body.user-info-text{
     padding: 0 0 0 0.5rem
 }

@@ -1,12 +1,12 @@
 <template>
   <div class="card card-image-layout clan-detail-layout display-flex-row mb-3">
     <div
-      class="card-image clan-detail-card background-color-white border-card-color"
+      class="card-image clan-detail-card background-color-white border-card-color background-size-cover"
       v-bind:style="{
         backgroundImage: 'url(' + clan.Image + ')',
       }"
     ></div>
-    <div class="card-body">
+    <div class="card-body background-color-main-lineart details-infos-characters">
       <h5 class="card-title">{{ clan.Name }}</h5>
       <div class="card-text">
         <p>{{ clan.Description }}</p>
@@ -42,6 +42,7 @@ export default {
       ClanService.getClanByName(this.url)
         .then((response) => {
           this.clan = response.data.ob;
+          console.log(this.clan)
         })
         .catch((e) => {
           console.log(e);

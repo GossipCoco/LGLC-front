@@ -1,7 +1,7 @@
 <template>
   <div id="original-characters-list" class="row row-cols-1 row-cols-md-2 g-4 all-my-characters-container">
     <div class="col card-character-container" v-for="(character, index) in allMyCharacters" :key="index">
-      <div class="card-group">
+      <div class="card-group display-flex">
         <div class="card individual-character-card">
           <BackgroundImage v-bind:Image="character.Image" />
           <CharacterCardBody v-bind:id="character.Id" v-bind:name="character.UserName" v-bind:route="'/OriginaleCharacterDetails/'"/>

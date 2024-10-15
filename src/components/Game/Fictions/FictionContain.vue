@@ -5,7 +5,7 @@
         <span class="visually-hidden">Loading...</span>
       </div>
     </div>
-    <div class="card-header title-chapter-container">
+    <div class="card-header title-chapter-container width-100-percent">
       <Rating :fictionId="IdFiction" :rating="rating" />
       <div class="title-author-container">
         <h1>{{ Title }}</h1>

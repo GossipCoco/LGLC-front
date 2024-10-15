@@ -11,8 +11,8 @@
       </div>
 
     </div>
-    <div v-else class="title-header display-flex-row">
-      <div class="row">
+    <div v-else class="title-header width-100-percent display-flex-row">
+      <div class="row width-100-percent">
         <div class="col-8"><h4>{{ title }}</h4></div>
         <div class="col-4"><slot></slot></div>
       </div>

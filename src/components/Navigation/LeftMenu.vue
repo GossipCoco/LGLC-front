@@ -93,7 +93,7 @@
         </router-link>
         <div class="collapse" id="collapseExample1">
           <router-link class="link-collapse" to="/CreateAnOriginalCharacter" >
-            Nouveau personnages</router-link>
+            Nouveau personnage original</router-link>
           <router-link class="link-collapse" to="/OriginaleCharacterByUser" >
             Mes personnages</router-link>
           <router-link class="link-collapse" :to="'/allFictions/' + usrId">
@@ -128,9 +128,9 @@
           <router-link class="link-collapse" to="/createANewFiction">
             Nouvelle fiction
           </router-link>
-          <router-link to="/CharacterCreate" class="link-collapse">
+          <router-link v-if="role === 'Administrateur'" to="/CharacterCreate" class="link-collapse">
             Nouveau personnage
-          </router-link>
+          </router-link> 
         </div>
       </li>
       <li class="li-level1">

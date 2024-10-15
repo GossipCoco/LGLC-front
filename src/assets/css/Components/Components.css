@@ -14,9 +14,9 @@
 }
 
 /* CARD */
-.card-image{
+/* .card-image{
     background-size: cover;
-}
+} */
 .illustration-arc-container.card-image{
     background-size: contain;
 }

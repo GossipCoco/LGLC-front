@@ -1,7 +1,7 @@
 <template>
   <div class="character-details card mb-3">
     <div class="parallax">
-      <div class="parallax-layer parallax-layer-back">
+      <div class="parallax-layer parallax-layer-back width-100-percent">
         <div class="row g-0">
           <div class="col-4 col-md-4">
             <div class="parallax">
@@ -51,7 +51,7 @@
                   <div class="information-global-character">
                     <div class="display-flex-row character-info-general-container">
                       <div class="display-flex-column flex-one">
-                        <table class="table table-borderless">
+                        <table class="table table-borderless text-white">
                           <tr>
                             <td><strong>Clan:</strong></td>
                             <td>{{ NameClan }}</td>
@@ -81,88 +81,17 @@
                       <div class="clan-logo-container">
                         <router-link type="button" class="btn btn-primary" :to="'/clan/'+ClanId">
                           <img
-                          :src="'/images/clans/' + Symbol"
-                          class="height-auto width-100-percent"
-                        />
-                      </router-link>
-
+                            :src="'/images/clans/' + Symbol"
+                            class="height-auto width-100-percent"
+                          />
+                        </router-link>
                       </div>
                     </div>
-                    <div class="accordion" id="characterDetailsAccordion">
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingTwo">
-                          <button
-                            class="accordion-button"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseTwo"
-                            aria-expanded="true"
-                            aria-controls="collapseTwo"
-                          >
-                            Description
-                          </button>
-                        </h2>
-                        <div
-                          id="collapseTwo"
-                          class="accordion-collapse collapse show"
-                          aria-labelledby="headingTwo"
-                          data-bs-parent="#characterDetailsAccordion"
-                        >
-                          <div
-                            class="accordion-body">
-                            <div v-html="description"></div>                            
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item" v-if="personnality != null">
-                        <h2 class="accordion-header" id="headingZero">
-                          <button
-                            class="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseZero"
-                            aria-expanded="false"
-                            aria-controls="collapseZero"
-                          >
-                            Personnalité
-                          </button>
-                        </h2>
-                        <div 
-                          id="collapseZero"
-                          class="accordion-collapse collapse"
-                          aria-labelledby="headingZero"
-                          data-bs-parent="#characterDetailsAccordion"
-                        >
-                          <div class="accordion-body">
-                            <div v-html="personnality"></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne">
-                          <button
-                            class="accordion-button  collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseOne"
-                            aria-expanded="false"
-                            aria-controls="collapseOne"
-                          >
-                            Biographie
-                          </button>
-                        </h2>
-                        <div
-                          id="collapseOne"
-                          class="accordion-collapse collapse"
-                          aria-labelledby="headingOne"
-                          data-bs-parent="#characterDetailsAccordion"
-                        >
-                          <div class="accordion-body">
-                            <div v-html="Biography"></div>
-                        </div>
-                        </div>
-                      </div>                      
-                    </div>
+                    <CharacterTabs
+                    v-bind:Description="description"
+                    v-bind:Personnality="personnality"
+                    v-bind:Biography="character.Biography"
+                    />                    
                   </div>
                 </div>
               </div>
@@ -175,10 +104,11 @@
 </template>
 <script>
 import CharacterService from "../../../services/CharacterService";
+import CharacterTabs from "../GenericComponent/CharacterTabs.vue";
 import ButtonCreationCharacter from "../../Components/FormComponent/ButtonCreationCharacter.vue";
 export default {
   name: "CharacterDetails",
-  components: {ButtonCreationCharacter},
+  components: {ButtonCreationCharacter, CharacterTabs},
   data() {
     return {
       url: "",
@@ -223,14 +153,13 @@ export default {
     getCharacter(id) {
       CharacterService.getCharacterByName(id)
         .then((response) => {
+          console.log(response.data)
           this.character = response.data.ob;
-          console.log(this.character)
           this.Symbol = this.character.Clan.Symbol;
           this.ClanId = this.character.Clan.Id
           this.NameClan = this.character.Clan.Name;
           this.image = response.data.ob.Image;
           this.background = response.data.ob.Clan.Image;
-          console.log(this.background)
           this.currentName = response.data.ob.CurrentName;
           this.genre = response.data.ob.Genre;
           this.age = response.data.ob.Age;
