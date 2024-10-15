@@ -11,11 +11,11 @@ class UserService {
     }
     GetMessageByReceiverId(id, data){
         console.log(id, data)
-        return http.post(`/user/GetMessageByReceiverId/${id}`, data)
+        return http.post(`/message/GetMessageByReceiverId/${id}`, data)
     }
     ChangeStatusMessage(id, status){
         console.log(id, status)
-        return http.post(`/user/ChangeStatusMessage/${id}`, { status })
+        return http.post(`/message/ChangeStatusMessage/${id}`, { status })
     }
     loginUser(data){
         return http.post('/user/login', data)

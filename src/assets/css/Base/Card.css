@@ -470,3 +470,9 @@ li.quest-container {
 #original-characters-list.border {
     border: none
 }
+.card-text.summary-text-font{
+    height: 6rem;
+}
+.summary-container p{
+    text-align: justify;
+}
