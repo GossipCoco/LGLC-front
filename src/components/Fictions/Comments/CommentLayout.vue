@@ -1,7 +1,7 @@
 <template>
   <div
     id="comment-container"
-    class="fiction-globale-container card display-flex-column fiction-container opensans-text"
+    class="fiction-globale-container white-text card display-flex-column fiction-container opensans-text"
   >
     <div class="row">
       <div class="col-12">

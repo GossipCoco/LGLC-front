@@ -291,12 +291,17 @@ audio{
     color: var(--active-hover);
 }
 .card.location-clan-background-width-container{
-    width: 20rem;
-    border-radius: 50% 50% 0 0;
+    width: 22rem;
+    border-radius: 70% 70% 0 0;
     background-color: rgba(var(--dark-green-02), 1);
 }
 .create-character-button{
     margin: 1.5rem 0 0 0;
     display: flex;
     justify-content: right;
+}
+
+.character-container-global.clans-location-container{
+    overflow-y: auto;
+    overflow-x: hidden;
 }

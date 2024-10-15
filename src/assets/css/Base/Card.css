@@ -40,7 +40,7 @@
     border-radius: 8rem 8rem 2rem 2rem;
 }
 .clan-detail-card {
-    width: 65rem;   
+    width: 80rem;   
     background-position: 50%;
     margin: 5rem 0 0 0;
 }
@@ -62,7 +62,6 @@
 .form-character-container-global .card {
     background: linear-gradient(90deg, rgba(var(--dark-green-01), 1), rgba(var(--clear-green-02), 1));
     border: none;
-    color: rgba(var(--main-white), 1);
     margin: 3rem 0 0 0;
     width: 105rem;
     min-width: 105rem;
@@ -74,7 +73,6 @@
 .dashboard-home-max-card-container.card {
     background: none;
     border: none;
-    color: rgba(var(--main-white), 1);
     margin: 0;
     width: 101%;
     padding: 1rem;
@@ -83,7 +81,6 @@
 
 .fiction-globale-container.card.fiction-container {    
     border: none;
-    color: rgba(var(--main-white), 1);
     margin: 3rem 5rem 2rem 1rem;
     width: 105rem;
     min-width: 105rem;
@@ -106,7 +103,9 @@
 }
 
 .dashboard-max-card-container::before,
-.fiction-globale-container::before{
+.fiction-globale-container::before,
+.character-card.card::before,
+.display-flex-row.card-group.clan-group .card.location-clan-background-width-container::before {
     content: var(--second-cat-corner);
     width: 10px;
     height: 10px;
@@ -115,11 +114,12 @@
     left: 90%;
     transform: scale(.5);
 }
+.display-flex-row.card-group.clan-group .card.location-clan-background-width-container::before {
+    left: 80%
+}
+
+.display-flex-row.card-group.clan-group
 .character-card.card::before {
-    content: var(--second-cat-corner);
-    width: 10px;
-    height: 10px;
-    position: relative;
     top: -1rem;
     left: -20%;
     transform: scale(.5);
@@ -152,10 +152,11 @@
 .clan-card {
     width: 20rem;
     height: 20rem;
-    border-radius: 50% 50% 0 0;
+    border-radius: 70% 70% 0 0;
     background-position: 50%;
     border: 6px solid rgba(var(--middle-green-02), 1);
     background-color: rgba(var(--dark-green-02), 1);
+    margin: 0.25rem 0 0 1rem;
 }
 .card-image-layout {
     width: 95rem;
@@ -163,8 +164,8 @@
 }
 
 .clan-detail-layout .card-body {
-    height: 45rem;
-    background-color: rgba(var(--main-white), 1);
+    height: 48em;
+    flex:1;
 }
 .clans-location-container {
     margin: 1rem auto;
@@ -431,6 +432,7 @@ li.quest-container {
 /* SPECIFIC */
 .border-card-color{
     height: 40rem;
+    flex: 1;
     justify-content: center;
     border-radius: 20% 0 0 20%;
     border-top: 1rem solid rgba(var(--clear-green-02), 1);
@@ -447,9 +449,7 @@ li.quest-container {
     aspect-ratio: 16 / 9;
     border: 6px solid rgba(var(--clear-green-02), 1);
 }
- #original-characters-list  .card-title{
-    color: rgba(var(--main-white), 1);
- }
+
 #original-characters-list  .card.individual-character-card {
     background-color: rgba(var(--dark-green-01), 1);
     border: rgba(var(--dark-green-01), 1) 5px solid;
@@ -473,6 +473,9 @@ li.quest-container {
 .card-text.summary-text-font{
     height: 6rem;
 }
-.summary-container p{
+.summary-container,.card-text p{
     text-align: justify;
+}
+.card-text{
+    padding: 1.5rem;
 }

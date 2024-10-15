@@ -1,17 +1,16 @@
 <template>
   <div class="card card-image-layout clan-detail-layout display-flex-row mb-3">
-    <div
-      class="card-image clan-detail-card background-color-white border-card-color background-size-cover"
-      v-bind:style="{
-        backgroundImage: 'url(' + clan.Image + ')',
-      }"
-    ></div>
-    <div class="card-body background-color-main-lineart details-infos-characters">
-      <h5 class="card-title">{{ clan.Name }}</h5>
-      <div class="card-text">
-        <p>{{ clan.Description }}</p>
-        <div class="display-flex-row flex-one align-items-content-justify-content all-characters-list-containers">
-          <CharactersListe v-bind:characters="clan.Warriors" />
+    <div class="row g-0">
+      <cardImageBackground v-bind:Image="Image"/>
+      <div class="col-8 col-md-8 flex-one">
+        <div class="card-body white-text background-color-main-lineart details-infos-characters">
+          <h5 class="card-header">{{ clan.Name }}</h5>
+          <div class="card-text">
+            <div v-html="clan.Description"></div>
+            <div class="display-flex-row flex-one align-items-content-justify-content all-characters-list-containers">
+              <CharactersListe v-bind:characters="clan.Warriors" />
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -20,9 +19,10 @@
 <script>
 import ClanService from "../../services/ClansServices";
 import CharactersListe from "../Components/GenericComponent/CharactersListe.vue";
+import cardImageBackground from "../Components/GenericComponent/cardImageBackground.vue";
 export default {
   name: "ClanDetails",
-  components:{ CharactersListe }, 
+  components: { CharactersListe, cardImageBackground },
   data() {
     return {
       url: "",
@@ -42,7 +42,8 @@ export default {
       ClanService.getClanByName(this.url)
         .then((response) => {
           this.clan = response.data.ob;
-          console.log(this.clan)
+          this.Image = response.data.ob.Image
+          console.log(this.clan);
         })
         .catch((e) => {
           console.log(e);
