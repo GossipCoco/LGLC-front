@@ -4,7 +4,9 @@
       v-bind:style="{
         backgroundImage: 'url(' + Image + ')',
       }"
-    ></div>
+    >
+    <slot></slot>
+    </div>
 </template>
 <script>
 export default {

@@ -432,6 +432,8 @@ li.quest-container {
 /* SPECIFIC */
 .border-card-color{
     height: 40rem;
+    flex-direction: row;
+    display: flex;
     flex: 1;
     justify-content: center;
     border-radius: 20% 0 0 20%;
@@ -478,4 +480,8 @@ li.quest-container {
 }
 .card-text{
     padding: 1.5rem;
+}
+.clan-detail-layout .card-image img{
+    width: 75%;
+    height: 25%;
 }
