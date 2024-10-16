@@ -482,6 +482,13 @@ li.quest-container {
     padding: 1.5rem;
 }
 .clan-detail-layout .card-image img{
-    width: 75%;
-    height: 25%;
+    width: 150%;
+    position: relative;
+    top: 5rem;
+}
+.clan-detail-card > .col-2{
+    margin: 0 2rem;;
+}
+.card-image.clan-detail > .col-8{
+    border-radius: 20%;
 }
