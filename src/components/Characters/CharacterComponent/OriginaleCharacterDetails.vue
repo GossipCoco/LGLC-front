@@ -37,6 +37,7 @@
               v-bind:Description="character.Description"
               v-bind:Personnality="character.Personnality"
               v-bind:Biography="character.Biography"
+              v-bind:Relation="relation"
             />
           </div>
         </div>
@@ -59,7 +60,8 @@ export default {
       character: {},
       url: this.$route.params.id,
       symbol: null,
-      grade: null
+      grade: null,
+      relation: {}
     };
   },
   created() {
@@ -72,6 +74,7 @@ export default {
           this.character = response.data.ob;
           this.symbol = response.data.ob.Clan.Symbol
           this.grade = response.data.ob.Grade.Name
+
         })
         .catch((e) => {
           console.log(e);

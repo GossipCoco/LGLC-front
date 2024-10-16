@@ -75,6 +75,7 @@
                     v-bind:Description="description"
                     v-bind:Personnality="personnality"
                     v-bind:Biography="character.Biography"
+                    v-bind:Relation="Relation"
                     />                    
                   </div>
                 </div>
@@ -114,6 +115,7 @@ export default {
       symboleClan: null,
       ClanId: null,
       Grade: null,
+      Relation: {}
     };
   },
   created() {},
@@ -155,6 +157,8 @@ export default {
           this.Biography = response.data.ob.Biography;
           this.personnality = response.data.ob.Personnality;
           this.Grade = response.data.ob.Grade.Name
+          this.Relation = response.data.ob.RelationsOne
+
         })
         .catch((e) => {
           console.log(e);

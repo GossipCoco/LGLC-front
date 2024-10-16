@@ -43,6 +43,20 @@
           Histoire
         </button>
       </li>
+      <li class="nav-item" role="family">
+        <button
+          class="nav-link"
+          id="pills-family-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#pills-family"
+          type="button"
+          role="tab"
+          aria-controls="pills-family"
+          aria-selected="false"
+        >
+          Famille
+        </button>
+      </li>
     </ul>
     <div class="tab-content" id="pills-tabContent">
       <div
@@ -59,7 +73,7 @@
         id="pills-profile"
         role="tabpanel"
         aria-labelledby="pills-profile-tab"
-        tabindex="0"
+        tabindex="1"
       >
         <div v-html="Personnality"></div>
       </div>
@@ -68,17 +82,28 @@
         id="pills-contact"
         role="tabpanel"
         aria-labelledby="pills-contact-tab"
-        tabindex="0"
+        tabindex="2"
       >
         <div v-html="Biography"></div>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="pills-family"
+        role="tabpanel"
+        aria-labelledby="pills-family-tab"
+        tabindex="3"
+      >
+        <RelationCharacterComponent v-bind:Relation="Relation" />
       </div>
     </div>
   </div>
 </template>
 <script>
+import RelationCharacterComponent from './RelationCharacterComponent.vue';
 export default {
     name: "CharacterTabs",
-    props: ["Description","Personnality","Biography"]
+    props: ["Description","Personnality","Biography", "Relation"],
+    components:{ RelationCharacterComponent}
 
 }
 </script>
