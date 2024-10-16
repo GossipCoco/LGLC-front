@@ -36,7 +36,7 @@
     </div>
     <div class="card-body">
       <div class="display-flex-row flex-one">
-        <div class="display-flex-column left-side-container">
+        <div class="display-flex-column flex-one">
           <div
             class="display-flex-column image-fiction-container"
             v-bind:style="{
@@ -169,7 +169,6 @@ export default {
       this.showspinner = true;
       FictionService.getFictionByName(id, this.nav)
         .then((response) => {
-          console.log(response.data.ob)
           this.fiction = response.data.ob;
           this.rating = response.data.ob.AverageRating;
           this.IdFiction = this.fiction.Id;

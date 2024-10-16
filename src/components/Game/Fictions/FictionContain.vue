@@ -33,9 +33,9 @@
         </p>
       </div>
     </div>
-    <div class="card-body">
+    <div class="card-body display-flex">
       <div class="one-fiction-container display-flex-row">
-        <div class="left-fiction-summary-container">
+        <div class="left-fiction-summary-container display-flex align-items-content-justify-content">
           <div
             class="image-fiction-container"
             v-bind:style="{
@@ -43,7 +43,7 @@
                 'url(/images/Fictions/' + backgroundImageFiction + ')',
             }"
           ></div>
-          <div class="all-characters-of-fiction">
+          <div class="all-characters-of-fiction display-flex-column">
             <div class="button-modal">
               <AddANewCharacterModal
                 v-if="AuthorId === usrCurrent"
@@ -110,7 +110,6 @@
 </template>
 <script>
 import FictionService from "../../../services/FictionService";
-// import GameService from "../../../services/GameService";
 import AddANewCharacterModal from "./AddANewCharacterModal.vue";
 import Rating from "./Rating.vue";
 
@@ -180,9 +179,7 @@ export default {
       FictionService.getFictionByName(id, this.nav)
         .then((response) => {
           this.fiction = response.data.ob;
-          console.log(this.fiction);
           this.rating = this.fiction.AverageRating;
-
           this.IdFiction = this.fiction.Id;
           this.IdGame = this.fiction.Game.Id;
           this.Author = this.fiction.User.UserName;

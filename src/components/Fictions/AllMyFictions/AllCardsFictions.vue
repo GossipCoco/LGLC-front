@@ -12,11 +12,13 @@
           <div class="col-7">
             <div class="h5-container">
             <h5 class="card-title">{{ fiction.Title }}</h5>
+            <h6>par {{ fiction.User.UserName }}</h6>
           </div>
             <div
               class="card-text summary-text-font"
               v-html="truncateText(fiction.Summary, 50)"
-            ></div>
+            >            
+          </div>
             <p class="card-text">
               <router-link
                 type="button"
@@ -31,16 +33,11 @@
     </div>
   </div>
 </template>
-
 <script>
 
 export default {
-  props: {
-    allFictions: {
-      type: Array,
-      required: true,
-    },
-  },
+  name: "AllCardsFictions",
+  props:['allFictions'],
   methods: {
     truncateText(text, maxLength) {
       return text.length <= maxLength

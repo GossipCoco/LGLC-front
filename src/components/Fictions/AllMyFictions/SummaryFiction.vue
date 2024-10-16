@@ -65,11 +65,11 @@ export default {
     },
     async initData() {
       this.showspinner = true;
-      console.log("Démarrage du chargement des fictions...");
+
       try {
         await this.countAllFictions();
         await this.getAllFictions(this.nav);
-        console.log("Fictions chargées :", this.allFictions); // Vérifiez ici si les fictions sont bien chargées
+
       } catch (error) {
         console.error("Erreur lors du chargement des fictions :", error);
       }
@@ -92,6 +92,7 @@ export default {
       try {
         const response = await FictionService.GetAllFictionsOnBase(nav);
         this.allFictions = response.data.ob;
+
       } catch (error) {
         console.error(error);
       }

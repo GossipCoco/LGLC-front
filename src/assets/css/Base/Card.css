@@ -8,8 +8,8 @@
 .character-details.card::after {
     content: var(--cat-corner);
     position: absolute;
-    top: -12%;
-    left: 90%;
+    top: -2%;
+    left: 94%;
     z-index: 99999;
 }
 .character-container-global {
@@ -127,7 +127,7 @@
 /* Character Details */
 
 .character-details {
-    margin: 2rem 1rem 0 0;
+    margin: 5rem 1rem 0 2rem;
     width: 100rem;
     height: 51rem;
     background: linear-gradient(90deg, rgba(var(--dark-green-01), 0) 0%, rgba(var(--clear-green-02), 0) 100%);
@@ -138,16 +138,6 @@
 .character-details.card .card-image img {
     width: 75%;
     overflow: hidden;
-}
-.vegetal-container {
-    border-radius: 0 20%;
-    background-position: 80% 100%;
-    position: relative
-}
-.vegetal-container img {
-    position: absolute;
-    top: 15%;
-    left: 15%
 }
 .clan-card {
     width: 20rem;
@@ -473,7 +463,7 @@ li.quest-container {
     border: none
 }
 .card-text.summary-text-font{
-    height: 6rem;
+    height: 3rem;
 }
 .summary-container,.card-text p{
     text-align: justify;

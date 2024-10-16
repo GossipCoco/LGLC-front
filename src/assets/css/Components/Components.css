@@ -152,20 +152,12 @@ th{
     margin: 0 auto;
 }
 .h5-container{
-    height: 9vh;
+    height: 11vh;
 }
 .left-fiction-summary-container{
-    display: flex;
-    flex-direction: column;
     width: 20rem;
-    justify-content: center;
-    width: 20rem;
-    align-content: center;
-    align-items: center;
 }
 .left-fiction-summary-container .all-characters-of-fiction{
-    display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
 }
 .fiction-container{
