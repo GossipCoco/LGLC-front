@@ -27,8 +27,11 @@ class FictionService {
     GetFiveLastChapByUser(id){
         return http.get(`/chapter/GetFiveLastChapByUser/${id}`);
     }
-    getChapter(id, data){
-        return http.post(`/chapter/Chapitre/${id}`, data);
+    getChapter(id){
+        return http.get(`/chapter/GetAChapterByName/${id}`);
+    }
+    GetAChapterById(id){
+        return http.get(`/chapter/GetAChapterById/${id}`);
     }
     CreateANewChapter(id, data) {
         return http.post(`/chapter/CreateAChapitre/${id}`, data, {

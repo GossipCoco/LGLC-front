@@ -51,14 +51,15 @@ export default {
     };
   },
   created() {
-    this.getChapter(this.$route.params.id);
+    this.GetAChapterById(this.$route.params.id);
+    console.log(this.$route.params.id)
   },
   methods: {
-    getChapter(id) {
-      FictionService.getChapter(id, this.nav)
+    GetAChapterById(id) {
+      FictionService.GetAChapterById(id)
         .then((response) => {
-          console.log(response.data.ob)
-          this.chapter = response.data.ob || {};
+          console.log(response)
+          this.chapter = response.data.ob
           this.form.Content = this.chapter.Content;
           this.Author = this.chapter.Fiction.UserId;
           this.AuthorId = this.chapter.Fiction.UserId;

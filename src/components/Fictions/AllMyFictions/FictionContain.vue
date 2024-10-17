@@ -13,12 +13,14 @@
     >
       <div class="Comment-icon">
         <router-link :to="'/CommentByFiction/' + Title"
-          ><img src="../../../../public/images/icons/comments-solid.svg" width="45%"
+          ><img
+            src="../../../../public/images/icons/comments-solid.svg"
+            width="45%"
         /></router-link>
-        <br>
-        <CreateCommentModal 
+        <br />
+        <CreateCommentModal
           v-bind:fanfiction="Title"
-          v-bind:fictionId="IdFiction"                                
+          v-bind:fictionId="IdFiction"
         />
       </div>
       <Rating :fictionId="IdFiction" :rating="rating" />
@@ -35,13 +37,12 @@
       >
     </div>
     <div class="card-body">
-      <div class="display-flex-row flex-one">
-        <div class="display-flex-column flex-one">
+      <div class="row">
+        <div class="col-3">
           <div
             class="display-flex-column image-fiction-container"
             v-bind:style="{
-              backgroundImage:
-                'url(' + backgroundImageFiction + ')',
+              backgroundImage: 'url(' + backgroundImageFiction + ')',
             }"
           ></div>
           <div class="display-flex-column all-characters-of-fiction">
@@ -52,17 +53,36 @@
             <CarrouselCharacter v-bind:Characters="listOfCharacter" />
           </div>
         </div>
-        <div
-          class="character-chapters display-flex-column fiction-container background-summary-global-container"
-        >
-          <div class="display-flex-row character-chapters-container">
-            <div v-if="nbIllus > 0">
-              <div
-                class="illustration-background"
-                v-for="(illus, index) in illustration"
-                :key="index"
-              >
-                <div :style="{ backgroundImage: 'url(' + illus.IllustrationId + ')'}" class="background-size-cover display-flex-column background-fiction-contain">
+        <div class="col-7">
+          <div class="display-flex-column flex-one">
+            <div
+              class="character-chapters display-flex-column fiction-container background-summary-global-container"
+            >
+              <div class="display-flex-row character-chapters-container">
+                <div v-if="nbIllus > 0">
+                  <div
+                    class="illustration-background"
+                    v-for="(illus, index) in illustration"
+                    :key="index"
+                  >
+                    <div
+                      :style="{
+                        backgroundImage: 'url(' + illus.IllustrationId + ')',
+                      }"
+                      class="background-size-cover display-flex-column background-fiction-contain"
+                    >
+                      <ListOfChapter
+                        v-bind:AuthorId="AuthorId"
+                        v-bind:usrCurrent="usrCurrent"
+                        v-bind:IdFiction="IdFiction"
+                        v-bind:lastChap="lastChap"
+                        v-bind:fiction="fiction"
+                        v-bind:Summary="Summary"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div v-else class="background-fiction-contain">
                   <ListOfChapter
                     v-bind:AuthorId="AuthorId"
                     v-bind:usrCurrent="usrCurrent"
@@ -73,16 +93,6 @@
                   />
                 </div>
               </div>
-            </div>
-            <div v-else class="background-fiction-contain">
-              <ListOfChapter
-                v-bind:AuthorId="AuthorId"
-                v-bind:usrCurrent="usrCurrent"
-                v-bind:IdFiction="IdFiction"
-                v-bind:lastChap="lastChap"
-                v-bind:fiction="fiction"
-                v-bind:Summary="Summary"
-              />
             </div>
           </div>
         </div>
@@ -109,6 +119,7 @@ export default {
     CarrouselCharacter,
     ListOfChapter,
     CreateCommentModal
+
   },
   data() {
     return {

@@ -179,6 +179,7 @@
 }
 .all-characters-of-fiction{
     margin: 1rem 1rem 0rem 1rem;
+    width: 25rem;
 }
 .illustration-background .background-fiction-contain .characters-list-container img{
     width: 150px;
