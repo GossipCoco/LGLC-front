@@ -1,35 +1,39 @@
 <template>
-  <div class="dashboard-max-card-container background-color-main-lineart flex-one card one-quest-container align-items-content-justify-content">
+  <div
+    class="dashboard-max-card-container background-color-main-lineart flex-one card one-quest-container align-items-content-justify-content padding-zero"
+  >
     <CardHeader v-bind:Title="'Liste des quêtes à réaliser'" />
-    <Spinner v-if="showspinner" />
-    <div v-if="!showspinner" class="row list-fiction-card-container">
-      <div
-        class="col-sm-3 mb-3 mb-sm-0 display-flex-row quest--global-container"
-        v-for="(quest, index) in allQuests"
-        :key="index"
-      >
+    <div class="card-body">
+      <Spinner v-if="showspinner" />
+      <div v-if="!showspinner" class="row list-fiction-card-container">
         <div
-          class="card display-flex-column quest-container mb-3"
-          v-for="(image, index) in quest.QuestImages"
+          class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 mb-4 mb-sm-2 display-flex-row quest--global-container"
+          v-for="(quest, index) in allQuests"
           :key="index"
         >
-          <QuestCard v-bind:quest="quest" v-bind:image="image" />
+          <div
+            class="card display-flex-column quest-container mb-4 background-color-main-lineart"
+            v-for="(image, index) in quest.QuestImages"
+            :key="index"
+          >
+            <QuestCard v-bind:quest="quest" v-bind:image="image" />
+          </div>
         </div>
       </div>
-    </div>
-    <div class="row pagination-container">
-      <div class="row">
-        <div class="pagination-container">
-          <div class="row bottom-top-dashboard">
-            <Spinner v-if="showspinner" />
+      <div class="row pagination-container">
+        <div class="row">
+          <div class="pagination-container">
+            <div class="row bottom-top-dashboard">
+              <Spinner v-if="showspinner" />
+            </div>
+            <pagination
+              v-if="!showspinner"
+              v-bind:nav="nav"
+              v-bind:filters="filters"
+              v-bind:getDatas="'QuestPagination'"
+              @QuestPagination="QuestPagination"
+            />
           </div>
-          <pagination
-            v-if="!showspinner"
-            v-bind:nav="nav"
-            v-bind:filters="filters"
-            v-bind:getDatas="'QuestPagination'"
-            @QuestPagination="QuestPagination"
-          />
         </div>
       </div>
     </div>
@@ -58,7 +62,7 @@ export default {
       nav: {
         current: 0,
         pages: 0,
-        step: 4,
+        step: 8,
       },
     };
   },
@@ -79,8 +83,8 @@ export default {
   methods: {
     initPage() {
       this.showspinner = true;
-      this.GetTotalQuest()
-      this.GetAllQuests(this.nav)
+      this.GetTotalQuest();
+      this.GetAllQuests(this.nav);
     },
     QuestPagination(e) {
       this.nav.current = e;

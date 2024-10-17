@@ -58,11 +58,14 @@
     color: rgba(var(--main-white), 1)
 }
 .dashboard-max-card-container.card {
-    margin: 3rem;
+    margin: 1rem 2rem 1rem 2rem;
     padding: 2rem;
     height: 53rem;
     overflow-y: hidden;
     overflow-x: hidden;
+}
+.dashboard-max-card-container.card.padding-zero{
+    padding: 0;
 }
 .form-character-container-global .card {
     background: linear-gradient(90deg, rgba(var(--dark-green-01), 1), rgba(var(--clear-green-02), 1));
@@ -272,7 +275,7 @@ li.quest-container {
 .quest--global-container {
     flex-wrap: wrap;
     flex: 0.25;
-    height: 30rem;
+    height: 20rem;
 }
 .quest-container,
 .quest--global-container p,
@@ -281,18 +284,23 @@ li.quest-container {
     flex-wrap: wrap;
 }
 .quest-container {
-    height: 33rem;
+    height: 20rem;
+    width: 20rem;
 }
 .quest-image-container,
 .background-image-quest-image-container {
     background-position: 50% 55%;
     vertical-align: top;
 }
+.background-image-quest{
+    height: 8rem;
+    background-position: 50%;
+}
 .card-img-top.background-image-quest-image-container {
     height: 10rem;
 }
 .one-quest-container .card-header {
-    vertical-align: middle;
+    width: 100%;
 }
 .card-body.one-quest {
     height: 25rem;
@@ -340,7 +348,7 @@ li.quest-container {
     margin: 0.25rem;
 }
 .one-quest-container .pagination-container {
-    margin: 0;
+    margin: 3rem 0 0 0;
 }
 .indivual-caracter-container {
     width: 110px;
@@ -352,7 +360,6 @@ li.quest-container {
 .card-image img:hover {
     transform: scale(1.05);
 }
-
 .details-infos-characters {
     box-shadow: 0 4px 8px rgba(var(--main-black), 0.1);
     background-color: rgba(var(--main-white), 0.8);
@@ -364,13 +371,11 @@ li.quest-container {
     font-size: 1.5em;
     margin-bottom: 0.5em;
 }
-
 .card-text {
     font-family: 'Roboto', sans-serif;
     font-size: 1.2em;
     line-height: 1.6;
 }
-
 .btn-primary.file-character-btn {
     background-color:  rgb(var(--clear-green-02), 0.6);
     border-color:  rgb(var(--clear-green-02), 0.6);
