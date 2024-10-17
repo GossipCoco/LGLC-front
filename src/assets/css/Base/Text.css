@@ -7,7 +7,7 @@ a {
   color: rgba(var(--main-white), 1);
   font-family: var(--opensans-text);
 }
-h1, h2, h3, h4, h5, h6, h4 a, .h5-container a {
+a, h1, h2, h3, h4, h5, h6, h4 a, .h5-container a {
   font-family: 'Cinzel';
   margin: 0;
   color: rgba(var(--main-white), 1)
@@ -98,11 +98,6 @@ h2,h3 {
 #list-events p span {
   font-weight: 600;
 }
-
-.card-header.quest-title {
-  height: 2rem;
-}
-
 .card-header.quest-title h4 {
   color: rgba(var(--dark-green-01), 1)
 }
@@ -234,8 +229,10 @@ h5.card-title {
 .col-8.col-md-8.background-color-main-lineart.details-infos-characters p {
   color: rgba(var(--main-white), 1);
   text-align: justify;
-  padding: 1rem;
   font-family: 'Poppins', sans-serif;
+}
+.name-characatrer-link .btn:hover{
+  color: rgba(var(--active-hover), 1);
 }
 .h5-container h6{
   color:rgba(var(--main-black), 1)

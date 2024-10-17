@@ -58,12 +58,11 @@
     color: rgba(var(--main-white), 1)
 }
 .dashboard-max-card-container.card {
-    margin: 3rem 0 0 0;
-    width: 105rem;
-    min-width: 105rem;
+    margin: 3rem;
     padding: 2rem;
     height: 53rem;
     overflow-y: hidden;
+    overflow-x: hidden;
 }
 .form-character-container-global .card {
     background: linear-gradient(90deg, rgba(var(--dark-green-01), 1), rgba(var(--clear-green-02), 1));
@@ -265,7 +264,10 @@ li.quest-container {
     margin: 1rem;
 }
 .quest-title {
-    height: 4rem;
+    width: 100%;
+    height: 2rem;
+    flex: 0.25;
+    text-align: center;
 }
 .quest--global-container {
     flex-wrap: wrap;
@@ -284,22 +286,13 @@ li.quest-container {
 .quest-image-container,
 .background-image-quest-image-container {
     background-position: 50% 55%;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
     vertical-align: top;
 }
 .card-img-top.background-image-quest-image-container {
     height: 10rem;
 }
 .one-quest-container .card-header {
-    justify-content: center;
     vertical-align: middle;
-}
-.card-header.quest-title {
-    justify-content: center;
-    align-items: center;
-    align-content: center;
 }
 .card-body.one-quest {
     height: 25rem;
@@ -307,10 +300,7 @@ li.quest-container {
 .card-img-top.background-image-quest-image-container img {
     width: 75%;
 }
-.quest-title {
-    flex: 0.25;
-    text-align: center;
-}
+
 .quest-button-text {
     height: 12rem;
     vertical-align: middle;
