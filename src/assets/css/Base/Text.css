@@ -244,7 +244,8 @@ h1.card-title {
 }
 
 h5.card-title {
-  font-size: 1.25em;
+  font-size: 1.5em;
+  font-weight: 600;
 }
 
 .name-characatrer-link .btn {
@@ -269,4 +270,16 @@ h5.card-title {
 }
 .h5-container h6{
   color:rgba(var(--main-black), 1)
+}
+.card-text.summary-text-font p{
+  line-height: 1.2;
+}
+
+.h5-container a{
+  color:rgba(var(--dark-green-02), 1);
+  font-family: 'Cinzel';
+  font-weight: 600;
+}
+.h5-container a:hover{
+  color:rgba(var(--active-hover), 1)
 }

@@ -152,7 +152,10 @@ th{
     margin: 0 auto;
 }
 .h5-container{
-    height: 11vh;
+    height: 14vh;
+    padding: 0.25rem;
+    font-size: 0.85em;
+    font-weight: 800;
 }
 .left-fiction-summary-container{
     width: 20rem;
@@ -184,19 +187,17 @@ th{
     border-radius: 20px;
 }
 .user-info-text img{
-    width: 100%;
+    width: 75%;
 }
 .image-fiction-container-background{
     padding: 1rem 0 0.5rem 0;
-    background-size: cover;
-    background-repeat: no-repeat;
     height: 25vh;
     background-position: 50%;
-    border-radius: 20px;
+    border-radius: 20px 0 0 20px;
 }
 
 .fiction-summary-card{
-    width: 25rem;
+    width: 40vh;
     height: 25vh;
     padding: 0 1rem 0 0.75rem;
     border-radius: 20% 12px 12px 20%;

@@ -4,29 +4,22 @@
       <div class="card fiction-summary-card">
         <div class="row">
           <div
-            class="col-5 image-fiction-container-background"
+            class="col-4 image-fiction-container-background background-size-cover"
             v-bind:style="{
               backgroundImage: 'url(' + fiction.Image + ')',
             }"
           ></div>
-          <div class="col-7">
+          <div class="col-8">
             <div class="h5-container">
-            <h5 class="card-title">{{ fiction.Title }}</h5>
-            <h6>par {{ fiction.User.UserName }}</h6>
+            <h5 class="card-title">
+              <router-link :to="'/fiction/' + fiction.Title">{{ fiction.Title }}</router-link></h5>
+            <div class="display-flex-row">par &nbsp; &nbsp;<h6>{{ fiction.User.UserName }}</h6></div>
           </div>
             <div
               class="card-text summary-text-font"
-              v-html="truncateText(fiction.Summary, 50)"
+              v-html="truncateText(fiction.Summary, 100)"
             >            
           </div>
-            <p class="card-text">
-              <router-link
-                type="button"
-                class="btn btn-primary"
-                :to="'/fiction/' + fiction.Title"
-                >Lire la fiction</router-link
-              >
-            </p>
           </div>
         </div>
       </div>
