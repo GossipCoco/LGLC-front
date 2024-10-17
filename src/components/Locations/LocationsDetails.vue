@@ -4,7 +4,7 @@
   >
     <div class="row g-0">
       <div
-        class="card-image clan-detail-card background-color-white border-card-color background-size-cover"
+        class="card-image clan-detail-card background-color-white border-card-color  display-flex-row align-items-content-justify-content background-size-cover"
         v-bind:style="{ backgroundImage: 'url(' + location.Image + ')' }"
       ></div>
       <div class="col-8 col-md-8 flex-one">

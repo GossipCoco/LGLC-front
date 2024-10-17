@@ -4,12 +4,15 @@
 .character-chapters.display-flex-column.fiction-container.background-summary-global-container{
     flex: 0.75;
 }
+.all-characters-of-fiction > button{
+    width: 35vh;
+}
 .image-fiction-container {
-    background-size: cover;
-    height: 30vh;
-    width: 45vh;
+
+    height: 20vh;
+    width: 35vh;
     border-radius: 12px;
-    background-repeat: no-repeat;
+
 }
 .character-details-router {
     text-align: justify;
@@ -203,4 +206,12 @@ th {
 }
 .card-text.summary-text-font{
     padding: 0;
+}
+#edit-chapter-contain{
+    width: 140vh;
+    height: 80vh;
+    margin: 5rem auto;
+}
+#edit-chapter-contain .character-details-chatper.card.mb-3.fiction-container{
+    height: 75vh;
 }

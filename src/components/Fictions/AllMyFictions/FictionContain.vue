@@ -40,7 +40,7 @@
       <div class="row">
         <div class="col-3">
           <div
-            class="display-flex-column image-fiction-container"
+            class="display-flex-column image-fiction-container background-size-cover"
             v-bind:style="{
               backgroundImage: 'url(' + backgroundImageFiction + ')',
             }"

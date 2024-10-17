@@ -37,7 +37,7 @@
       <div class="one-fiction-container display-flex-row">
         <div class="left-fiction-summary-container display-flex align-items-content-justify-content">
           <div
-            class="image-fiction-container"
+            class="image-fiction-container background-size-cover"
             v-bind:style="{
               backgroundImage:
                 'url(/images/Fictions/' + backgroundImageFiction + ')',

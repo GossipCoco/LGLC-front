@@ -17,7 +17,7 @@
           </div>
             <div
               class="card-text summary-text-font"
-              v-html="truncateText(fiction.Summary, 100)"
+              v-html="truncateText(fiction.Summary, 50)"
             >            
           </div>
           </div>

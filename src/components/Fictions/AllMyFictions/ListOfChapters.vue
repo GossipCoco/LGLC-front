@@ -1,10 +1,19 @@
 <template>
   <div class="opacity-container">
-    <div class="display-flex-column flex-one align-items-content-justify-content all-chapters-list-container">
+    <div class="display-flex-column flex-one all-chapters-list-container">
+      <div class="display-flex-column">     
       <p>
-        <EditSummary v-bind:FictionId="IdFiction" v-bind:Summary="Summary" />
+        <label class="btn btn-default p-0" for="upload-illustration fiction">
+          <input id="upload-illustration fiction" type="file" accept="image/png, image/jpeg, image/jpg, image/webp" ref="file"
+                  @change="selectImage" />
+        </label>
       </p>
-      
+      <p>
+        <button class="btn btn-primary" :disabled="!currentImage" @click="upload">
+          Changer l'illustration
+        </button>
+      </p>
+    </div>
       <ul class="list-group">
         <li
           class="list-group-item"
@@ -28,7 +37,10 @@
         </router-link>
       </p>
     </div>
-    <div class="summary-container"><p v-html="Summary"></p></div>
+    <div class="summary-container">
+      <EditSummary v-bind:FictionId="IdFiction" v-bind:Summary="Summary" />
+      <p v-html="Summary"></p>
+    </div>
   </div>
 </template>
 <script>
@@ -43,6 +55,21 @@ export default {
     "fiction",
     "Summary",
   ],
-  components:{EditSummary}
+  components:{EditSummary},
+  data(){
+    return{
+      NewImage: null,
+      currentImage: undefined,
+      previewImage: undefined,
+    }
+  },
+  methods:{
+    selectImage(){
+      this.currentImage = this.$refs.file.files.item(0);
+      this.previewImage = URL.createObjectURL(this.currentImage);
+      this.progress = 0;
+      this.message = "";
+    }
+  }
 };
 </script>

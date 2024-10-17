@@ -1,7 +1,7 @@
 <template>
   <div class="col-4 col-md-4">
     <div
-      class="character-details-card background-size-cover display-flex background-size-cover card-image border-card-color original-character-contain"
+      class="character-details-card background-size-cover display-flex background-size-cover card-image border-card-color display-flex-row align-items-content-justify-content original-character-contain"
       v-bind:style="{
         backgroundImage: 'url(' + Image + ')',
       }"
