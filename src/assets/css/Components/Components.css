@@ -297,3 +297,9 @@ audio{
     overflow-y: auto;
     overflow-x: hidden;
 }
+.mini-rond-avatar-image{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}

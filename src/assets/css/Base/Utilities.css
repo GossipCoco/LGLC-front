@@ -65,7 +65,10 @@
     background-size: contain;
     background-repeat: no-repeat;
 }
-/* MARGIN */
+/* MARGIN PADDING*/
+.margin-1-0{
+    margin: 1rem 0;
+}
 .margin-3-rem{
     margin: 3rem;
 }
@@ -102,10 +105,12 @@
 .text-white{
     color: rgba(var(--main-white), 1);
 }
-/* Margin */
-.margin-1-0{
-    margin: 1rem 0;
+/* BORDER */
+
+.border-100{
+    border-radius: 100%
 }
+
 /* TABLE */
 
 table.table-borderless, .table.table-borderless>:not(caption)>*>*, .table-borderl {
