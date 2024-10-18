@@ -21,19 +21,14 @@
         </div>
       </div>
       <div class="row pagination-container">
-        <div class="row">
-          <div class="pagination-container">
-            <div class="row bottom-top-dashboard">
-              <Spinner v-if="showspinner" />
-            </div>
+        <div class="col-12">         
             <pagination
               v-if="!showspinner"
               v-bind:nav="nav"
               v-bind:filters="filters"
               v-bind:getDatas="'QuestPagination'"
               @QuestPagination="QuestPagination"
-            />
-          </div>
+            />          
         </div>
       </div>
     </div>
