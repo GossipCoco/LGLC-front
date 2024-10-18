@@ -205,10 +205,10 @@
     padding-top: 14vh;
 }
 .card-form-create-character {
-    margin: 2rem 0 0 2rem;
+    margin: 2rem 0 2rem 2rem;
     padding: 2rem;
-    height: 180vh;
-    overflow: scroll;
+    height: 90vh;
+    overflow: hidden;
 }
 .form-first-part-container {
     overflow: hidden;

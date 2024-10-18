@@ -1,6 +1,6 @@
 <template>
   <div class="display-flex-column form-character-container flex-one opensans-text">
-    <div class="card border-none white-text display-flex-column card-form-create-character align-items-content-justify-content flex-one mb-12">
+    <div class="card border-none background-color-main-lineart overflowY-X-hidden white-text display-flex-column card-form-create-character align-items-content-justify-content flex-one mb-12">
       <CardHeader :Title="title" style="width: 100%;"/>
       <OriginalCharacterForm />
     </div>
