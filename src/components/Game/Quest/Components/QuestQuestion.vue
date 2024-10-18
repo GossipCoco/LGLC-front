@@ -1,5 +1,5 @@
 <template>
-<div class="card-container-parallax" >
+<div class="card-container-parallax display-flex-column" >
   <div  class="card bubble-dialog">
     <div v-for="(text, index) in questData.QuestQuestions" :key="index">
       <p>{{ text.QuestionText }}</p>

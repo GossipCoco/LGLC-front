@@ -1,9 +1,9 @@
 <template>
-  <div id="quest-by-id" class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 card-global quest-container flex-one">
-    <div class="card quest-by-id-card background-color-main-lineart">
+  <div id="quest-by-id" class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 card-global quest-container flex-one width-100-percent">
+    <div class="card quest-by-id-card background-color-main-lineart width-100-percent">
       <card-header v-bind:Title="quest.Title"><router-link class="btn btn-primary" to="/Quest">Retour à la liste de quêtes</router-link></card-header> />
       <div class="card-body">
-        <div class="parallax-container">
+        <div class="parallax-container width-100-percent">
           <QuestMissionTarget v-bind:questDatas="quest" />
           <QuestQuestion v-if="quest.TypeQuest === 'question'" v-bind:questData="quest" />
           <QuestKeyObjects v-if="quest.TypeQuest === 'object'" v-bind:findobjects="quest.QuestKeyObjects"/>

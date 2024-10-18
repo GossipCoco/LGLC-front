@@ -2,18 +2,15 @@
 @import '../variables.scss';
 
 .card-container-parallax {
-  display: flex;
-  flex-direction: column;
   align-items: flex-end;
   vertical-align: middle;
   margin: 5rem 20rem 0 0;
 
 }
-
 .card-container-parallax .card {
   width: 325px;
   height: 350px;
-  background-color: aliceblue;
+  background-color: rg;
   position: relative;
   z-index: 99999999;
 }
@@ -21,19 +18,22 @@
 #quest-by-id {
   width: 100%;
   height: 95vh;
-  margin: 0.5rem auto;
+  margin: 1rem;
+  padding: 1rem;
+  overflow: hidden;
 }
-
+.quest-by-id-card .card-body{
+  height: 82vh;
+}
 #quest-by-id .quest-by-id-card.card.quest-by-id-card.background-color-main-lineart {
-  width: 100%;
+
   height: 106vh;
   margin: 1rem;
 }
 
 #quest-by-id .parallax-container {
   position: relative;
-  width: 100%;
-  height: 84vh;
+  height: 74vh;
   overflow-y: scroll;
   overflow-x: hidden;
   perspective: 10rem;
@@ -44,7 +44,6 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   height: 105vh;
   transition: transform 1s ease;
 }
@@ -56,7 +55,6 @@
   left: 80%;
   transform: translateX(-50%);
   width: 400px;
-  /* Adjust size as needed */
   height: auto;
 }
 
@@ -80,7 +78,7 @@
 }
 
 #quest-by-id .interactive-elements .clickable:hover {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(var(--main-black), 0.7);
 }
 
 #quest .toast-container.position-fixed.bottom-0.end-0.p-3 {
@@ -141,7 +139,7 @@
 
 .bubble-dialog {
   position: relative;
-  background: rgba(255, 255, 255, 1);
+  background: rgba(var(--main-white), 1);
   border-radius: 15px;
   padding: 15px;
   max-width: 300px;
@@ -156,7 +154,7 @@
   left: -30px;
   border-width: 0 100px 100px 0;
   border-style: solid;
-  border-color: rgba(255, 255, 255, 1) transparent;
+  border-color: rgba(var(--main-white), 1) transparent;
   transform: rotate(45deg);
 }
 
