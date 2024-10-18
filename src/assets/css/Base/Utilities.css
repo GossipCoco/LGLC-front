@@ -106,11 +106,12 @@
     color: rgba(var(--main-white), 1);
 }
 /* BORDER */
-
 .border-100{
     border-radius: 100%
 }
-
+.border-none{
+    border: none;
+}
 /* TABLE */
 
 table.table-borderless, .table.table-borderless>:not(caption)>*>*, .table-borderl {

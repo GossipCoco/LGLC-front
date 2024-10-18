@@ -5,7 +5,7 @@
     <div
       v-for="(character, index) in characters_props"
       :key="index"
-      class="character-card text-white background-color-dark-green-01 background-size-cover card flex-one opensans-text"
+      class="character-card border-none text-white background-color-dark-green-01 background-size-cover card flex-one opensans-text"
     >
       <character-text v-bind:character="character" />
     </div>

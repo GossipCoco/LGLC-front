@@ -1,5 +1,5 @@
 <template>
-  <div id="book-container" class="dashboard-max-card-container background-color-main-lineart flex-one card display-flex-column fiction-container">
+  <div id="book-container" class="dashboard-max-card-container border-none background-color-main-lineart flex-one card display-flex-column fiction-container">
     <CardHeader v-bind:Title="book.Title" />
     <div class="card-body">
       <div class="row">

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="dashboard-max-card-container background-color-main-lineart flex-one card one-quest-container align-items-content-justify-content padding-zero"
+    class="dashboard-max-card-container border-none background-color-main-lineart flex-one card one-quest-container align-items-content-justify-content padding-zero"
   >
     <CardHeader v-bind:Title="'Liste des quêtes à réaliser'" />
     <div class="card-body">
@@ -103,6 +103,7 @@ export default {
       QuestService.GetAllQuests(nav)
         .then((response) => {
           this.allQuests = response.data.ob;
+          console.log(this.allQuests)
           this.showspinner = false;
           functions.CalcPagination(
             this.nbQuests,
