@@ -28,7 +28,7 @@
           />
           <div class="card-body">
             <h3 class="card-title">{{ gamer.UserName }}</h3>
-            <div class="information-character-container">
+            <div class="information-character-container  overflowY-X-hidden">
               <p>Clan de naissance : {{ gamer.ClanId }}</p>
               <p>Statut actuel : {{ gamer.Status }}</p>
               <p>Genre du personnage : {{ gamer.Genre }}</p>

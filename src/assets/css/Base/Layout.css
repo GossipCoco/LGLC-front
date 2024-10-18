@@ -36,7 +36,6 @@
 .character-container {
     margin: -3rem auto;
     height: 86vh;
-    overflow-x: hidden;
     flex-wrap: wrap;
     padding: 0;
 }

@@ -75,8 +75,9 @@
 .padding-2-rem{
     padding: 2rem;
 }
-.overflowY-hidden{
+.overflowY-X-hidden{
     overflow-y: hidden;
+    overflow-x: hidden;
 }
 .overflowY-scroll{
     overflow-y: scroll;

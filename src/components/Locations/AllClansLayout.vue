@@ -1,6 +1,6 @@
 <template>
   <div
-    class="character-container-global clans-location-container"
+    class="character-container  overflowY-X-hidden clans-location-container"
     style="overflow-y: scroll"
   >
     <div class="display-flex-row card-group clan-group">

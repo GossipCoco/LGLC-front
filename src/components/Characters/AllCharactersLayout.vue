@@ -1,6 +1,6 @@
 <template>
   <div
-    class="height-fixe character-container-global list-all-characters-container"
+    class="height-fixe character-container list-all-characters-container"
   >
     <div
       class="row row-filter background-color-dark-green-01 display-flex vertical-align-middle"
