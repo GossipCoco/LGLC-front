@@ -1,5 +1,5 @@
 <template>
-    <div class="card">
+    <div class="card border-none">
         <div class="card-body display-flex-row align-items-content-justify-content  title-dashboard-container-header">
             <h1>Bienvenue sur votre tableau de bord</h1>
              <ImageRondDashboard v-bind:src="'/images/Avatars/' + Avatar" v-bind:alt="Avatar" v-bind:classe="'card-img-top mini-rond-avatar-image'"/>

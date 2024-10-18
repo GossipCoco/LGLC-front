@@ -1,6 +1,6 @@
 <template>
   <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12 card-global">
-    <div class="card display-flex-column profil-card fiction-card">
+    <div class="card border-none display-flex-column profil-card fiction-card">
       <TitleHeaderDashboard v-bind:title="UserName" v-bind:type="'username'" />
       <div class="card-body user-info-text">
         <div class="row">

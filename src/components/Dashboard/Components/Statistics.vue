@@ -1,6 +1,6 @@
 <template>
   <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12  card-global">
-    <div class="card fiction-card">      
+    <div class="card border-none fiction-card">      
       <div class="card-header">
         <h4>Quelques chiffres</h4>
       </div>

@@ -1,6 +1,6 @@
 <template>
   <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12 card-global">
-    <div class="card profil-card fiction-card">
+    <div class="card border-none profil-card fiction-card">
       <TitleHeaderDashboard v-bind:title="'event à venir'" />
       <div class="card-body">
         <div v-for="(event, index) in events" :key="index">
