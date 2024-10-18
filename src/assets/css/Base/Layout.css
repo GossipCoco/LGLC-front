@@ -55,30 +55,19 @@
     width: 105rem;
     margin: 2rem;
 }
-.character-col {
-    display: flex;
-    flex-direction: row;
-}
+
 .character-details-chatper.card.mb-3.fiction-container {
     background: linear-gradient(90deg, rgba(var(--dark-green-02), 1) 0%, rgba(var(--clear-green-02), 1) 100%);
     height: 95vh;
 }
-/* .row,
-.col-xxl-9.col-xl-9.col-lg-9.col-md-12.col-sm-12.col-xs-12,
-.col-xxl-6.col-xl-6.col-lg-6.col-md-12.col-sm-12.col-xs-12,
-.col-xxl-4.col-xl-4.col-lg-4.col-md-12.col-sm-12.col-xs-12 {
-    border: none;
-} */
+
 .link-text-a {
     color: rgba(var(--dark-green-01), 1);
     font-family: var(--roboto-text);
 }
-
-
 .title-dashboard-container-header {
     height: 6rem;
 }
-
 .title-dashboard-container-header img {
     width: 5%;
     border-radius: 100%;
@@ -94,32 +83,11 @@
     font-variant: small-caps;
     margin-top: 0.25rem;
 }
-
-.h1-title-dashboard {
-    display: flex;
-    flex-direction: row;
-}
-
-.h1-title-dashboard {
-    display: flex;
-    flex-direction: row;
-    flex: 1;
-    font-family: var(--montserrat);
-    font-variant: small-caps;
-    font-weight: 600;
-    font-size: 30px;
-}
-
 .all-characters-container-card {
     margin-top: 1rem;
 }
-
 .character-l1 {
-    flex: 1;
     margin: 0 1rem;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
 }
 .character-l1 img {
    width: 75%;
@@ -131,10 +99,6 @@
  }
 .flex-one .btn {
     margin-bottom: 1rem;
-}
-.avatar-container-header {
-    display: flex;
-    flex-direction: row;
 }
 .avatar-container {
     height: 8vh;
@@ -170,11 +134,6 @@
     border-radius: 20px;
 }
 .illustration-background .background-fiction-contain .characters-list-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
     padding: 0.5rem 0 0.5rem 0;
 }
 .all-characters-of-fiction{

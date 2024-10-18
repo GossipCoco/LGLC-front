@@ -52,7 +52,7 @@
             </div>
             <div class="all-characters-list-container">
               <div
-                class="characters-list-container"
+                class="characters-list-container display-flex-row align-items-content-justify-content"
                 v-for="(character, index) in listOfCharacter"
                 :key="index"
               >               
