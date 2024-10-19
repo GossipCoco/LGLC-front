@@ -7,9 +7,10 @@
 .container-fluid,.container-fluid,
 .container-fluid.row  {
     margin-top: 0rem;
-    overflow-y: auto;
+    overflow-y: hidden;
     overflow-x: hidden;
     width: 100%;
+    padding: 1rem 2rem;
 }
 .dashboard-layout-container {
     margin-top: 5rem;
@@ -147,4 +148,10 @@
     height: 60vh;
     background-position: 2%;
     background-repeat: no-repeat;
+}
+.row.title-dashboard{
+    margin: -0.25rem 0.25rem;
+}
+.row.top-dashboard, .row.bottom-dashboard{
+    margin: 0.5rem;
 }

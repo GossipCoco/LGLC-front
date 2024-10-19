@@ -46,15 +46,11 @@
 .card-image img {
     width: 75%;
 }
-.dashboard-max-card-container.card {
-    margin: 1rem 2rem 1rem 2rem;
-    padding: 2rem;
-    height: 53rem;
-    overflow-y: hidden;
-    overflow-x: hidden;
-}
-.dashboard-max-card-container.card.padding-zero{
-    padding: 0;
+.dashboard-max-card-container,
+.character-details-chatper.card,
+.dashboard-max-card-container.card.one-quest-container
+{
+    margin: 2rem;
 }
 .form-character-container-global .card {
     background: linear-gradient(90deg, rgba(var(--dark-green-01), 1), rgba(var(--clear-green-02), 1));
@@ -66,15 +62,8 @@
     overflow-y: hidden;
     overflow-x: hidden;
 }
-.dashboard-home-max-card-container.card {
-    background: none;
-    margin: 0;
-    width: 101%;
-    padding: 1rem;
-    height: 100%;
-}
 .fiction-globale-container.card.fiction-container {
-    margin: 3rem 5rem 2rem 1rem;
+    margin: 3rem 5rem 2rem 2rem;
     width: 105rem;
     min-width: 105rem;
     padding: 0rem;
@@ -86,13 +75,7 @@
     background: linear-gradient(90deg, rgba(var(--dark-green-01), 1), rgba(var(--middle-green-02), 1));
     position: relative;
 }
-.dashboard-max-card-container.card.fiction-container {
-    margin: 5rem 2rem 2rem 2rem;
-    height: 85vh;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    padding: 0;
-}
+
 .dashboard-max-card-container::before,
 .fiction-globale-container::before,
 .character-card.card::before,
@@ -383,7 +366,7 @@ li.quest-container {
     width: 17rem;
 }
 .card-body.user-info-text{
-    padding: 0 0 0 0.5rem
+    padding: 1rem;
 }
 /* SPECIFIC */
 .border-card-color{

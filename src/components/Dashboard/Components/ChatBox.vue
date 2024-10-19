@@ -1,6 +1,6 @@
 <template>
       <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
-    <div class="card border-none fiction-card">
+    <div class="card border-none background-lineart fiction-card">
     <div class="chatbox">
       <div class="messages">
         <div v-for="(message, index) in messages" :key="index" :class="{'user-message': message.user, 'bot-message': !message.user}">

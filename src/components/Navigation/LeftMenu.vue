@@ -57,16 +57,16 @@
         </router-link>
         <div class="collapse display-flex-column align-items-content-justify-content " id="collapseExample3">
           <p>Univers LGDC</p>
-          <router-link to="/allCharacters" class="link-collapse display-flex-column flex-one align-items-content-justify-content ">
+          <router-link to="/allCharacters" class="link-collapse display-flex-column align-items-content-justify-content ">
             Personnnages
             </router-link>
-          <router-link class="link-collapse display-flex-column flex-one align-items-content-justify-content " to="/AllClansLayout">
+          <router-link class="link-collapse display-flex-column align-items-content-justify-content " to="/AllClansLayout">
             Clans
           </router-link>
-          <router-link class="link-collapse display-flex-column flex-one align-items-content-justify-content " to="/AllLocationsLayout">
+          <router-link class="link-collapse display-flex-column align-items-content-justify-content " to="/AllLocationsLayout">
             Lieux
           </router-link>
-          <router-link class="link-collapse display-flex-column flex-one align-items-content-justify-content " to="/ArcBookLayout">
+          <router-link class="link-collapse display-flex-column align-items-content-justify-content " to="/ArcBookLayout">
             Arcs & Livres
           </router-link>
         </div>
@@ -92,14 +92,14 @@
           </div>
         </router-link>
         <div class="collapse display-flex-column align-items-content-justify-content " id="collapseExample1">
-          <router-link class="link-collapse display-flex-column flex-one align-items-content-justify-content " to="/CreateAnOriginalCharacter" >
+          <router-link class="link-collapse display-flex-column align-items-content-justify-content " to="/CreateAnOriginalCharacter" >
             Nouveau personnage original</router-link>
-          <router-link class="link-collapse display-flex-column flex-one align-items-content-justify-content " to="/OriginaleCharacterByUser" >
+          <router-link class="link-collapse display-flex-column align-items-content-justify-content " to="/OriginaleCharacterByUser" >
             Mes personnages</router-link>
-          <router-link class="link-collapse display-flex-column flex-one align-items-content-justify-content " :to="'/allFictions/' + usrId">
+          <router-link class="link-collapse display-flex-column align-items-content-justify-content " :to="'/allFictions/' + usrId">
             Mes fictions
           </router-link>
-          <router-link class="link-collapse display-flex-column flex-one align-items-content-justify-content " to="/AllExistingFictionsLayout">
+          <router-link class="link-collapse display-flex-column align-items-content-justify-content " to="/AllExistingFictionsLayout">
             Lire des fictions
           </router-link>
         </div>
@@ -125,10 +125,10 @@
           </div>
         </router-link>
         <div class="collapse display-flex-column align-items-content-justify-content " id="creation">
-          <router-link class="link-collapse display-flex-column flex-one align-items-content-justify-content " to="/createANewFiction">
+          <router-link class="link-collapse display-flex-column align-items-content-justify-content " to="/createANewFiction">
             Nouvelle fiction
           </router-link>
-          <router-link v-if="role === 'Administrateur'" to="/CharacterCreate" class="link-collapse display-flex-column flex-one align-items-content-justify-content ">
+          <router-link v-if="role === 'Administrateur'" to="/CharacterCreate" class="link-collapse display-flex-column align-items-content-justify-content ">
             Nouveau personnage
           </router-link> 
         </div>
@@ -154,20 +154,20 @@
           </div>
         </router-link>
         <div class="collapse display-flex-column align-items-content-justify-content " id="collapseExample0">
-          <router-link class="link-collapse display-flex-column flex-one align-items-content-justify-content " to="/rollOfDice"
+          <router-link class="link-collapse display-flex-column align-items-content-justify-content " to="/rollOfDice"
             >Jeu de dé</router-link
           >
-          <router-link class="link-collapse display-flex-column flex-one align-items-content-justify-content " to="/puzzle">Puzzle</router-link>
-          <router-link class="link-collapse display-flex-column flex-one align-items-content-justify-content " to="/mouseShot"
+          <router-link class="link-collapse display-flex-column align-items-content-justify-content " to="/puzzle">Puzzle</router-link>
+          <router-link class="link-collapse display-flex-column align-items-content-justify-content " to="/mouseShot"
             >Attrape la souris !</router-link
           >
-          <router-link class="link-collapse display-flex-column flex-one align-items-content-justify-content " to="/GooseGameLayout"
+          <router-link class="link-collapse display-flex-column align-items-content-justify-content " to="/GooseGameLayout"
             >Jeu de l'oie</router-link
           >
-          <router-link class="link-collapse display-flex-column flex-one align-items-content-justify-content " to="/TreasureHunt"
+          <router-link class="link-collapse display-flex-column align-items-content-justify-content " to="/TreasureHunt"
             >Chasse au trésor</router-link
           >
-          <router-link class="link-collapse display-flex-column flex-one align-items-content-justify-content " to="/Quest">Quêtes</router-link>
+          <router-link class="link-collapse display-flex-column align-items-content-justify-content " to="/Quest">Quêtes</router-link>
         </div>
       </li>
       <li class="li-level1">

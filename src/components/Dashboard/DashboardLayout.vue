@@ -1,5 +1,5 @@
 <template>
-  <div id ="dashboard" class="dashboard-home-max-card-container border-none flex-one card white-text opensans-text">
+  
     <div class="row title-dashboard">
       <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <TitleHeader v-if="!showspinner" v-bind:UserName="UserName" v-bind:Avatar="Avatar" v-bind:User="usrId" v-bind:NbMessages="Nbmessages"/>
@@ -23,7 +23,7 @@
       <CharacterByGamer v-bind:gamer="gamer"/>
       <MusicPlayer />
     </div>
-  </div>
+
 </template>
 <script>
 import UserService from '../../services/UserService';

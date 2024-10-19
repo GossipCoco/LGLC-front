@@ -1,6 +1,6 @@
 <template>
   <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12  card-global">
-    <div class="card border-none fiction-card">
+    <div class="card border-none background-lineart fiction-card">
       <TitleHeaderDashboard v-bind:title="'Personnages aléatoires'"/>
       <div class="card-body display-flex-column">
         <div class="row">

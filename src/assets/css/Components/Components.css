@@ -125,7 +125,7 @@ th{
     flex: 0.25
 }
 .list-all-fictions-globale--container{
-    width: 24rem;
+    width: 22rem;
 }
 .summaray-title-text{
     margin: 0 0 0 0.5rem;
@@ -158,7 +158,7 @@ th{
     background-size: cover;
 }
 .book-container{
-    height: 85vh;
+    height: 75vh;
     overflow-y: scroll;
     overflow-x: hidden;
 }
@@ -178,6 +178,9 @@ th{
 }
 .user-info-text img{
     width: 75%;
+}
+.card-body.user-info-text .row{
+    margin: 1rem 0;
 }
 .image-fiction-container-background{
     padding: 1rem 0 0.5rem 0;

@@ -1,6 +1,6 @@
 <template>
     <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
-        <div class="card fiction-card">
+        <div class="card background-lineart fiction-card">
             <div class="image-gen">
                 <h2>Générateur d'images</h2>
                 <div v-if="imageUrl">
