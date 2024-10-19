@@ -2,14 +2,14 @@
   <div class="quest-details">
     <div class="display-flex-column">
       <div class="display-flex-column">
-        <p class="flex-one">{{ questDatas.Description }}</p>
-        <p class="flex-one">{{ questDatas.Hint }}</p>
-        <p class="flex-one">{{ questDatas.ObjectiveDescription }}</p>
+        <p class="text-align-justify flex-one">{{ questDatas.Description }}</p>
+        <p class="text-align-justify flex-one">{{ questDatas.Hint }}</p>
+        <p class="text-align-justify flex-one">{{ questDatas.ObjectiveDescription }}</p>
       </div>
     </div>
   </div>
   <div class="display-flex-column">
-    <p class="card-text">
+    <p class="card-text text-align-justify">
       <router-link to="/Quest" type="button" class="btn btn-primary">
         Retour à la liste des quêtes
       </router-link>
@@ -19,7 +19,7 @@
     </button>
     <div v-if="showReward" class="reward-message">
       <div class="alert alert-success" role="alert">
-        <p>Félicitations ! Vous avez gagné 100 points !</p>
+        <p class="text-align-justify">Félicitations ! Vous avez gagné 100 points !</p>
       </div>
     </div>
   </div>

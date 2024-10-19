@@ -36,7 +36,6 @@ h2,h3 {
 }
 .summary-text-font p {
   font-size: 0.9em;
-  text-align: justify;
 }
 .summaray-title-text p a.last-chapter-text {
   color: rgba(var(--active-hover), 1);
@@ -187,18 +186,10 @@ h1.card-title {
   text-transform: capitalize;
 }
 
-.accordion-body p {
-  text-align: justify;
-}
-
 .character-description-container {
   height: 8rem;
   overflow-y: scroll;
   padding: 0 1rem;
-}
-
-.character-description-container p {
-  text-align: justify;
 }
 
 .character-illustration-container img {
@@ -218,7 +209,6 @@ h5.card-title {
 .col-8.col-md-8.background-color-main-lineart.details-infos-characters,
 .col-8.col-md-8.background-color-main-lineart.details-infos-characters p {
   color: rgba(var(--main-white), 1);
-  text-align: justify;
   font-family: 'Poppins', sans-serif;
 }
 .name-characatrer-link .btn:hover{

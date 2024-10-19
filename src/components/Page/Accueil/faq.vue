@@ -9,7 +9,7 @@
 
           <div v-for="(faq, index) in AllFaq" :key="index">
             <div v-html="faq.Title"></div>
-            <p v-html="faq.Content"></p>
+            <p class="text-align-justify" v-html="faq.Content"></p>
           </div>
           
         </div>

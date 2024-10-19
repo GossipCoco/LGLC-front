@@ -11,7 +11,7 @@
           />
         </div>
         <div class="col-10">
-          <div class="white-text" v-html="book.Summary"></div>
+          <div class="white-text text-align-justify" v-html="book.Summary"></div>
           <CharactersByBook v-bind:characters="book.BookCharacters" />
         </div>
       </div>

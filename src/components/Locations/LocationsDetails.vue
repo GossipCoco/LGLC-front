@@ -12,8 +12,8 @@
           class="card-body white-text background-color-main-lineart details-infos-characters"
         >
           <h5 class="card-header">{{ location.Name }}</h5>
-          <div class="card-text">
-            <div v-html="location.Description"></div>
+          <div class="card-text text-align-justify">
+            <div class="text-align-justify"  v-html="location.Description"></div>
           </div>
         </div>
       </div>

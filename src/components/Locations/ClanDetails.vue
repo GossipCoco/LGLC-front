@@ -23,8 +23,8 @@
         <div
           class="card-body white-text background-color-main-lineart details-infos-characters"
         >
-          <div class="card-text">
-            <div v-html="clan.Description"></div>
+          <div class="card-text text-align-justify">
+            <div class="text-align-justify" v-html="clan.Description"></div>
             <CharactersListe v-bind:characters="clan.Warriors" />
           </div>
         </div>

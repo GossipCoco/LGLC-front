@@ -118,3 +118,6 @@
 table.table-borderless, .table.table-borderless>:not(caption)>*>*, .table-borderl {
     background-color: rgba(var(--main-white), 0);
 }
+.card-body{
+    height: 80vh;
+}

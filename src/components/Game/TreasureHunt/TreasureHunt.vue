@@ -2,7 +2,7 @@
   <div class="dashboard-max-card-container border-none background-color-main-lineart flex-one card display-flex-column fiction-container game-card">
     <CardHeader v-bind:Title="'Chasse au trésor'" />
     <div class="card-body height-90">
-      <div class="display-flex-row game-container" @keydown="handleKeydown" tabindex="0">
+      <div class="display-flex-row game-container  flex-one" @keydown="handleKeydown" tabindex="0">
         <div class="score-banner">
           <div>Treasures: {{ foundTreasures }}</div>
           <div>Points: {{ points }}</div>

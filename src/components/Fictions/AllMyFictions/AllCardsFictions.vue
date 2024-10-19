@@ -16,7 +16,7 @@
             <div class="display-flex-row">par &nbsp; &nbsp;<h6>{{ fiction.User.UserName }}</h6></div>
           </div>
             <div
-              class="card-text summary-text-font"
+              class="card-text text-align-justify summary-text-font"
               v-html="truncateText(fiction.Summary, 50)"
             >            
           </div>

@@ -18,7 +18,7 @@
                 </div>
                 <ButtonCreationCharacter v-bind:class="'col-3'"/>
                 <div class="col-4">                  
-                  <p class="card-text">
+                  <p class="card-text text-align-justify">
                     <router-link
                       to="/allCharacters"
                       type="button"

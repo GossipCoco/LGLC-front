@@ -47,7 +47,7 @@
                         v-bind:style="{ backgroundImage: 'url(' + ImageChapter + ')' }">
                     </div>
                     <div class="chapter-text-content">
-                        <p v-html="Content"></p>
+                        <p class="text-align-justify" v-html="Content"></p>
                     </div>
                 </div>
             </div>

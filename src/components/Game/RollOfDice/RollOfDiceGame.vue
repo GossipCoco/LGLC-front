@@ -3,7 +3,7 @@
     <CardHeader v-bind:Title="'Lancé de Dés'" />
     <div class="card-body">
       <div class="game-roll-container">
-        <div class="text-game-container">
+        <div class="text-game-container  flex-one">
           <p>Utilisateur actuel : {{ userCurrent }}</p>
         </div>
 
@@ -33,7 +33,7 @@
             <div class="face face6">6</div>
           </div>
         </div>
-        <div class="text-game-container">
+        <div class="text-game-container  flex-one">
         <button type="button" class="btn btn-primary" @click="lancerDes">
           Lancer les dés
         </button>

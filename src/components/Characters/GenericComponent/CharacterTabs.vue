@@ -66,7 +66,7 @@
         aria-labelledby="pills-home-tab"
         tabindex="0"
       >
-        <div v-html="Description"></div>
+        <div  class="text-align-justify" v-html="Description"></div>
       </div>
       <div
         class="tab-pane fade"
@@ -75,7 +75,7 @@
         aria-labelledby="pills-profile-tab"
         tabindex="1"
       >
-        <div v-html="Personnality"></div>
+        <div  class="text-align-justify" v-html="Personnality"></div>
       </div>
       <div
         class="tab-pane fade"
@@ -84,7 +84,7 @@
         aria-labelledby="pills-contact-tab"
         tabindex="2"
       >
-        <div v-html="Biography"></div>
+        <div class="text-align-justify" v-html="Biography"></div>
       </div>
       <div
         class="tab-pane fade"

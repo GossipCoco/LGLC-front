@@ -240,9 +240,7 @@
 .clan-description {
     padding: 0;
 }
-.clan-description p {
-    text-align: justify;
-}
+
 .card-group.clan-group .card {
     margin: 1rem;
 }
@@ -432,9 +430,7 @@ li.quest-container {
 .card-text.summary-text-font{
     height: 3rem;
 }
-.summary-container,.card-text p{
-    text-align: justify;
-}
+
 .card-text{
     padding: 1.5rem;
 }

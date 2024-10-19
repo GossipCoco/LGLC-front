@@ -112,7 +112,6 @@
     color: rgba(var(--main-white), 1);
 }
 #arc-book-container p{
-    text-align: justify;
     font-size: 1.05em;
     font-family: 'Poppins';
 }
@@ -142,9 +141,7 @@
 .illustration-background .background-fiction-contain .characters-list-container img{
     width: 150px;
 }
-.character-details-router{
-    text-align: justify;
-}
+
 .all-characters-list-containers{
     width: 90vh;
     flex-wrap: wrap;

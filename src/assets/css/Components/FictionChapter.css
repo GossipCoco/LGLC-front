@@ -14,9 +14,7 @@
     border-radius: 12px;
 
 }
-.character-details-router {
-    text-align: justify;
-}
+
 .carousel {
     width: 19rem;
 }
@@ -49,9 +47,6 @@ th {
 .chapter-text-content {
     padding: 0.5rem;
 }
-.chapter-text-content p {
-    text-align: justify;
-}
 .Comment-icon {
     width: 13rem;
     margin: 0 2rem 0 0;
@@ -79,11 +74,6 @@ th {
 .card-header.fiction-chapter-container h3 {
     margin-left: 2rem;
     font-variant: small-caps;
-}
-.character-chapters-fiction-container {
-    margin: 0rem 0 0 2rem;
-    text-align: justify;
-    width: 75rem;
 }
 .link-to-fiction-text {
     font-family: var(--roboto-text);

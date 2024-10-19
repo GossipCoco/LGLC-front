@@ -1,5 +1,5 @@
 <template>
-    <div class="display-flex-row game-container">
+    <div class="display-flex-row game-container flex-one">
       <canvas ref="gameCanvas" width="800" height="600"></canvas>
     </div>
   </template>

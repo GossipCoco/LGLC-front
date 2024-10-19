@@ -5,7 +5,7 @@
   >
     <div class="row">
       <div class="col-12">
-        <p class="card-text">
+        <p class="card-text text-align-justify">
               <router-link
                 type="button"
                 class="btn btn-primary"
@@ -36,7 +36,7 @@
             </div>
             <div class="message__inner">
               <div class="message__bubble">
-                <p>{{ comment.Content }}</p>
+                <p class="text-align-justify">{{ comment.Content }}</p>
               </div>
               <div class="message__actions"></div>
             </div>

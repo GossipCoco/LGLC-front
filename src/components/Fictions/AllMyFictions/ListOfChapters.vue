@@ -39,7 +39,7 @@
     </div>
     <div class="summary-container">
       <EditSummary v-bind:FictionId="IdFiction" v-bind:Summary="Summary" />
-      <p v-html="Summary"></p>
+      <p class="text-align-justify" v-html="Summary"></p>
     </div>
   </div>
 </template>
