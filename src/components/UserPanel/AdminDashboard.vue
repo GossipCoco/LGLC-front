@@ -1,5 +1,5 @@
 <template>
-    <div class="dashboard-max-card-container border-none background-color-main-lineart flex-one ard display-flex-column height-100 background-color-main-lineart">
+    <div class="dashboard-max-card-container admin-dashboard border-none background-color-main-lineart flex-one ard display-flex-column height-100 background-color-main-lineart">
         <div class="row">
             <div class="col-4"></div>
             <div class="col-4"><h2>Panel administrateur</h2></div>
@@ -10,7 +10,7 @@
             <div class="col-4"><h3>Liste de vos {{ nbUser }} utilisateurs</h3></div>
             <div class="col-"></div>
         </div>
-        <div class="row">
+        <div class="row table-row">
         <table class="table">
             <thead>
                 <tr>

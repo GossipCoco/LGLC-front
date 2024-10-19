@@ -48,7 +48,7 @@
 .create-character-form,
 .card-form-create-character .card-body{
     width: 100%;
-    height: 60vh;
+    height: 77vh;
     overflow-x: hidden;    
     padding: 1rem;
 }
@@ -303,4 +303,14 @@ audio{
     height: 70px;
     border-radius: 50%;
     object-fit: cover;
+}
+.table-row{
+    padding: 0 2rem;
+}
+.table-row th, .table-row table td{
+    font-family: 'Roboto';
+    font-weight: 500;
+}
+.admin-dashboard{
+    margin: 2rem;
 }

@@ -17,6 +17,9 @@
 .character-details-router {
     text-align: justify;
 }
+.carousel {
+    width: 19rem;
+}
 .carousel__item img {
     width: 120px;
 }
@@ -179,7 +182,7 @@ th {
     width: 70px;
     height: 70px;
     border-radius: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 1;
 }
 .row.bottom-top-dashboard {
     margin-top: 1rem;
