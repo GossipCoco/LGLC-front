@@ -10,7 +10,7 @@
       "
     >
       <div class="timeline-text">
-        <div v-html="Summary" class="text-align-justify"></div>
+        <div v-html="Summary" class="white-text text-align-justify"></div>
       </div>
     </div>
   </div>

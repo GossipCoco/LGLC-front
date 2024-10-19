@@ -7,17 +7,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-* {
-
-    scrollbar-color: rgba(var(--dark-green-02),1) rgba(var(--clear-green-02),1);
-}
-
-*::-webkit-scrollbar {
-    width: 12px;
-}
-*::-webkit-scrollbar-track {
-    scrollbar-color: rgba(var(--dark-green-02),1) rgba(var(--clear-green-02),1);
-}
+* { scrollbar-color: rgba(var(--dark-green-02),1) rgba(var(--clear-green-02),1);}
+*::-webkit-scrollbar { width: 12px;}
+*::-webkit-scrollbar-track {scrollbar-color: rgba(var(--dark-green-02),1) rgba(var(--clear-green-02),1);}
 *::-webkit-scrollbar-thumb {
     scrollbar-color: rgba(var(--dark-green-02),1) rgba(var(--clear-green-02),1);
     border-radius: 20px;

@@ -9,7 +9,7 @@
       ></div>
       <div class="col-8 col-md-8 flex-one">
         <div
-          class="card-body white-text background-color-main-lineart details-infos-characters"
+          class="card-body white-text background-color-main-lineart details-infos-characters text-white"
         >
           <h5 class="card-header">{{ location.Name }}</h5>
           <div class="card-text text-align-justify">

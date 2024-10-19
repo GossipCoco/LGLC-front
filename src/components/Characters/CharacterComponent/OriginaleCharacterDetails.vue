@@ -8,7 +8,7 @@
         
       </CharacterImageDetail>
       <div class="col-8 col-md-8">
-        <div class="card-body background-color-main-lineart details-infos-characters">
+        <div class="card-body background-color-main-lineart details-infos-characters text-white">
           <div class="display-flex-row">
             <div class="display-flex flex-one">
               <h1>{{ character.UserName }}</h1>

@@ -108,9 +108,6 @@
 .card {
     border: none;
 }
-#dashboard p, #dashboard h1,#dashboard h4, #arc-book-container p{
-    color: rgba(var(--main-white), 1);
-}
 #arc-book-container p{
     font-size: 1.05em;
     font-family: 'Poppins';

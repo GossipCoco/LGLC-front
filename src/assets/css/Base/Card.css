@@ -46,9 +46,6 @@
 .card-image img {
     width: 75%;
 }
-.details-infos-characters {
-    color: rgba(var(--main-white), 1)
-}
 .dashboard-max-card-container.card {
     margin: 1rem 2rem 1rem 2rem;
     padding: 2rem;

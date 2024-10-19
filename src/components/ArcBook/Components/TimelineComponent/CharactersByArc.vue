@@ -9,7 +9,7 @@
         animation-name: fadeInLeft;
       "
     >
-      <div class="timeline-text">Liste des personnages principaux</div>
+      <div class="timeline-text white-text">Liste des personnages principaux</div>
     </div>
   </div>
 </template>

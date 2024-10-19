@@ -58,7 +58,7 @@
   flex: 1;
   justify-content: right;
   width: 90vh;
-  margin-right: 5rem;
+  margin-right: -5rem;
 }
 .nav-item a {
   font-size: 18px;
