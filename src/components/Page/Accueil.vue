@@ -8,9 +8,13 @@
                 </main>
             </div>
             <div class="container marketing">
-                <TopMiddleAccueil />
+                <div class="top-middle-accueil hidden">
+                    <TopMiddleAccueil />
+                </div>
                 <hr class="featurette-divider">
-                <BottomMiddleAccueil />
+                <div class="bottom-middle-accueil hidden">
+                    <BottomMiddleAccueil />
+                </div>
             </div>
             <FooterAccueil />
         </main>
@@ -25,6 +29,23 @@ import FooterAccueil from './Accueil/FooterAccueil'
 export default {
     name: 'Accueil',
     components:{HeaderAccueil, ParallaxAccueil, TopMiddleAccueil, BottomMiddleAccueil, FooterAccueil},
-    
-}
+    mounted() {
+    // Initialisation du détecteur de scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('slide-in'); // Ajoute la classe quand l'élément est visible
+        }
+      });
+    });
+
+    // Cibler les éléments TopMiddleAccueil et BottomMiddleAccueil
+    const topElement = document.querySelector('.top-middle-accueil');
+    const bottomElement = document.querySelector('.bottom-middle-accueil');
+
+    // Observer les deux éléments
+    if (topElement) observer.observe(topElement);
+    if (bottomElement) observer.observe(bottomElement);
+  },
+};
 </script>

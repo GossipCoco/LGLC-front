@@ -79,6 +79,9 @@
     overflow-y: hidden;
     overflow-x: hidden;
 }
+.overflow-hidden{
+    overflow: hidden;
+}
 .overflowY-scroll{
     overflow-y: scroll;
 }

@@ -1,6 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import '../variables.scss';
-
+.hidden {
+    opacity: 0;
+    transform: translateX(-100%); /* Initialement, les éléments sont hors de l'écran */
+    transition: all 2s ease-in-out;
+  }
+  
+  .slide-in {
+    opacity: 1;
+    transform: translateX(0); /* Les éléments glissent vers leur position initiale */
+  }
+  
 @keyframes slideInRight {
     0% {
         transform: translateX(120%);
@@ -198,25 +208,20 @@
     width: 200px;
 }
 #accueil .col-image-rond {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    vertical-align: middle;
     margin: 0 0 0 0.2;
 }
-.slide-in-left {
+.slide-in-left, .slide-in-up, .slide-in-right{
     opacity: 1;
+}
+.slide-in-left {
     transform: translateX(0);
     animation: slideInLeft 1s forwards;
 }
 .slide-in-up {
-    opacity: 1;
     transform: translateY(0);
     animation: slideInUp 1s forwards;
 }
 .slide-in-right {
-    opacity: 1;
     transform: translateX(0);
     animation: slideInRight 1s forwards;
 }
@@ -235,7 +240,6 @@
 #accueil .accueil-image-one, #accueil .accueil-image-two, #accueil .accueil-image-tree{
     width: 400px;
     height: 400px;
-    background-size: cover;
     background-position: 50%;
     border-radius: 50%;
 }
@@ -256,22 +260,19 @@
     background-color: rgba(var(--main-black), 1);
     min-width: 209vh;
 }
-
  main#footer-link{
     height: 70vh;
  }
-
  #accueil #summary-container p{
     text-align: justify;
     word-wrap: normal;
     word-break: normal;
     font-family: 'Open Sans';
     font-size: 1.5em;
- }
+}
  footer p{
     margin: -2rem 0 0 0;
 }
-
 footer .col-2.display-flex-row.align-items-content-justify-content.vertical-align-middle img{
     width: 55%;
 }

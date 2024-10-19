@@ -39,14 +39,8 @@
   padding: 0;
   margin: 0 0 0 -1rem;
 }
-
 .navbar {
   margin-top: -0.5rem
-}
-.logo-navbar {
-  width: 300px;
-  display: flex;
-  justify-content: center;
 }
 .logo-container img {
   width: 135%;
@@ -54,11 +48,9 @@
 #navbarCollapse {
   height: 5rem;
   margin-left: 60rem;
-  flex-direction: row;
-  flex: 1;
   justify-content: right;
   width: 90vh;
-  margin-right: -5rem;
+  margin-right: -65rem;
 }
 .nav-item a {
   font-size: 18px;
@@ -115,19 +107,12 @@
   display: flex;
   flex-direction: row;
 }
-.link-menu-container a,
-.sub-menu a {
-  color: rgba(var(--main-white), 1);
-}
+
 .icon-menu-container {
   width: 48px;
   height: 48px;
   background-color: rgba(var(--clear-green-02), 1);
   border-radius: 100%;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
 }
 .icon-menu-container:hover {
   background-color: rgba(var(--active-hover), 1);
@@ -137,22 +122,14 @@
 .icon-menu-container img {
   color: rgba(var(--dark-green-02), 1);
 }
-.link-menu-container {
-  flex: 1;
-  padding: 0 0 0 0;
-  margin-top: 0.5rem;
-}
+
 ul {
   list-style: none;
 }
 .icon-menu-container img {
   width: 1.25rem;
 }
-.link-menu-container {
-  font-size: 18px;
-  color: rgba(var(--main-white), 1);
-  font-variant: small-caps;
-}
+
 .li-level1:hover {
   color: rgba(var(--active-hove), 1);
 }
@@ -193,10 +170,6 @@ ul {
   word-wrap: normal;
   word-break: break-word;
   width: 7.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 .menu-li-contain svg {
   margin: 1rem -1rem 0 1rem;
@@ -205,9 +178,6 @@ ul {
   font-family: "Poppins", sans-serif;
   font-size: 0.45em;
   color: rgba(var(--clear-green-02), 1);
-  display: flex;
-  flex-direction: column;
-  flex: 1;
   width: 7rem;
 }
 .link-collapse .link-collapse {
@@ -246,4 +216,3 @@ ul {
   height: 6rem;
   padding: 1rem 0;
 }
-/* responsive.css */

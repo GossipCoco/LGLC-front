@@ -24,7 +24,7 @@
         <router-link to="/dashboard">
           <div class="menu-level1">
             <div class="menu-li-contain">
-              <div class="icon-menu-container">
+              <div class="icon-menu-container display-flex align-items-content-justify-content">
                 <img src="/images/icons/home.svg" />
               </div>
               <div class="chevron-container"></div>
@@ -43,7 +43,7 @@
         >
           <div class="menu-level1">
             <div class="menu-li-contain">
-              <div class="icon-menu-container">
+              <div class="icon-menu-container display-flex align-items-content-justify-content">
                 <img
                   src="/images/icons/Logo-thunderclan-textless.png"
                   style="width: 1.25rem"
@@ -55,18 +55,18 @@
             </div>
           </div>
         </router-link>
-        <div class="collapse" id="collapseExample3">
+        <div class="collapse display-flex-column align-items-content-justify-content " id="collapseExample3">
           <p>Univers LGDC</p>
-          <router-link to="/allCharacters" class="link-collapse">
+          <router-link to="/allCharacters" class="link-collapse display-flex-column flex-one align-items-content-justify-content ">
             Personnnages
             </router-link>
-          <router-link class="link-collapse" to="/AllClansLayout">
+          <router-link class="link-collapse display-flex-column flex-one align-items-content-justify-content " to="/AllClansLayout">
             Clans
           </router-link>
-          <router-link class="link-collapse" to="/AllLocationsLayout">
+          <router-link class="link-collapse display-flex-column flex-one align-items-content-justify-content " to="/AllLocationsLayout">
             Lieux
           </router-link>
-          <router-link class="link-collapse" to="/ArcBookLayout">
+          <router-link class="link-collapse display-flex-column flex-one align-items-content-justify-content " to="/ArcBookLayout">
             Arcs & Livres
           </router-link>
         </div>
@@ -82,7 +82,7 @@
         >
           <div class="menu-level1">
             <div class="menu-li-contain">
-              <div class="icon-menu-container">
+              <div class="icon-menu-container display-flex align-items-content-justify-content">
                 <img src="/images/icons/cloud-solid.svg" />
               </div>
               <div class="chevron-container">
@@ -91,15 +91,15 @@
             </div>
           </div>
         </router-link>
-        <div class="collapse" id="collapseExample1">
-          <router-link class="link-collapse" to="/CreateAnOriginalCharacter" >
+        <div class="collapse display-flex-column align-items-content-justify-content " id="collapseExample1">
+          <router-link class="link-collapse display-flex-column flex-one align-items-content-justify-content " to="/CreateAnOriginalCharacter" >
             Nouveau personnage original</router-link>
-          <router-link class="link-collapse" to="/OriginaleCharacterByUser" >
+          <router-link class="link-collapse display-flex-column flex-one align-items-content-justify-content " to="/OriginaleCharacterByUser" >
             Mes personnages</router-link>
-          <router-link class="link-collapse" :to="'/allFictions/' + usrId">
+          <router-link class="link-collapse display-flex-column flex-one align-items-content-justify-content " :to="'/allFictions/' + usrId">
             Mes fictions
           </router-link>
-          <router-link class="link-collapse" to="/AllExistingFictionsLayout">
+          <router-link class="link-collapse display-flex-column flex-one align-items-content-justify-content " to="/AllExistingFictionsLayout">
             Lire des fictions
           </router-link>
         </div>
@@ -115,7 +115,7 @@
         >
           <div class="menu-level1">
             <div class="menu-li-contain">
-              <div class="icon-menu-container">
+              <div class="icon-menu-container display-flex align-items-content-justify-content">
                 <img src="/images/icons/pen-nib-solid.svg" />
               </div>
               <div class="chevron-container">
@@ -124,11 +124,11 @@
             </div>
           </div>
         </router-link>
-        <div class="collapse" id="creation">
-          <router-link class="link-collapse" to="/createANewFiction">
+        <div class="collapse display-flex-column align-items-content-justify-content " id="creation">
+          <router-link class="link-collapse display-flex-column flex-one align-items-content-justify-content " to="/createANewFiction">
             Nouvelle fiction
           </router-link>
-          <router-link v-if="role === 'Administrateur'" to="/CharacterCreate" class="link-collapse">
+          <router-link v-if="role === 'Administrateur'" to="/CharacterCreate" class="link-collapse display-flex-column flex-one align-items-content-justify-content ">
             Nouveau personnage
           </router-link> 
         </div>
@@ -144,7 +144,7 @@
         >
           <div class="menu-level1">
             <div class="menu-li-contain">
-              <div class="icon-menu-container">
+              <div class="icon-menu-container display-flex align-items-content-justify-content">
                 <img src="/images/icons/gamepad-solid.svg" />
               </div>
               <div class="chevron-container">
@@ -153,28 +153,28 @@
             </div>
           </div>
         </router-link>
-        <div class="collapse" id="collapseExample0">
-          <router-link class="link-collapse" to="/rollOfDice"
+        <div class="collapse display-flex-column align-items-content-justify-content " id="collapseExample0">
+          <router-link class="link-collapse display-flex-column flex-one align-items-content-justify-content " to="/rollOfDice"
             >Jeu de dé</router-link
           >
-          <router-link class="link-collapse" to="/puzzle">Puzzle</router-link>
-          <router-link class="link-collapse" to="/mouseShot"
+          <router-link class="link-collapse display-flex-column flex-one align-items-content-justify-content " to="/puzzle">Puzzle</router-link>
+          <router-link class="link-collapse display-flex-column flex-one align-items-content-justify-content " to="/mouseShot"
             >Attrape la souris !</router-link
           >
-          <router-link class="link-collapse" to="/GooseGameLayout"
+          <router-link class="link-collapse display-flex-column flex-one align-items-content-justify-content " to="/GooseGameLayout"
             >Jeu de l'oie</router-link
           >
-          <router-link class="link-collapse" to="/TreasureHunt"
+          <router-link class="link-collapse display-flex-column flex-one align-items-content-justify-content " to="/TreasureHunt"
             >Chasse au trésor</router-link
           >
-          <router-link class="link-collapse" to="/Quest">Quêtes</router-link>
+          <router-link class="link-collapse display-flex-column flex-one align-items-content-justify-content " to="/Quest">Quêtes</router-link>
         </div>
       </li>
       <li class="li-level1">
         <router-link to="/EventGlobal">
           <div class="menu-level1">
             <div class="menu-li-contain">
-              <div class="icon-menu-container">
+              <div class="icon-menu-container display-flex align-items-content-justify-content">
                 <img src="/images/icons/calendar-days-solid.svg" />
               </div>
               <div class="chevron-container"></div>
@@ -185,7 +185,7 @@
       <li class="li-level1" v-if="role === 'Administrateur'">
         <router-link to="/admin">
           <div class="menu-level1">
-            <div class="icon-menu-container">
+            <div class="icon-menu-container display-flex align-items-content-justify-content">
               <img src="/images/icons/profil.svg" />
             </div>
             <div class="chevron-container"></div>
@@ -195,7 +195,7 @@
       <li class="li-level1">
         <router-link :to="'/user/' + usrId">
           <div class="menu-level1">
-            <div class="icon-menu-container">
+            <div class="icon-menu-container display-flex align-items-content-justify-content">
               <img src="/images/icons/user.svg" />
             </div>
             <div class="chevron-container">
@@ -206,7 +206,7 @@
       </li>
       <li class="li-level1">
         <div class="menu-level1">
-          <div class="icon-menu-container">
+          <div class="icon-menu-container display-flex align-items-content-justify-content">
             <a href="#" @click.prevent="logout" class="logout-li-container">
               <img
                 src="../../../public//images//icons/right-from-bracket-solid-colored.svg"
