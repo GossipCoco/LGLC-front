@@ -124,9 +124,12 @@
     margin: 4rem 0 0 3rem;
 }
 .clan-detail-layout .card-body {
-    height: 44em;
-    flex:1;
+    height: 30em;
+
 }
+/* .location-clan-card-details{
+    height: 55vh;
+} */
 .clans-location-container {
     margin: 1rem auto;
     padding: 5rem 0 0 8rem;

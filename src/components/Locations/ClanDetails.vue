@@ -16,12 +16,12 @@
           />
         </div>
       </cardImageBackground>
-      <div class="col-8 col-md-8 flex-one background-color-main-lineart">
+      <div class="col-8 col-md-8 flex-one background-color-main-lineart display-flex-column">
         <CardHeader v-bind:Title="clan.Name"
           ><img :src="'/images/clans/' + clan.Symbol"
         /></CardHeader>
         <div
-          class="card-body white-text background-color-main-lineart details-infos-characters text-white"
+          class="card-body white-text background-color-main-lineart details-infos-characters text-white location-clan-card-details"
         >
           <div class="card-text text-align-justify">
             <div class="text-align-justify" v-html="clan.Description"></div>

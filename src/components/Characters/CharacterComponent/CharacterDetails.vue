@@ -140,7 +140,6 @@ export default {
     getCharacter(id) {
       CharacterService.getCharacterByName(id)
         .then((response) => {
-          console.log(response.data)
           this.character = response.data.ob;
           this.Symbol = this.character.Clan.Symbol;
           this.ClanId = this.character.Clan.Id

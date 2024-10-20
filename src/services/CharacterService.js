@@ -11,7 +11,6 @@ class CharacterService {
         return http.get(`/character/GetAllNamesAndIdsOriginaCharacters/${id}`)
     }
     GetOriginaleCharacterByUser(id, data) {
-        console.log("Id", id)
         return http.post(`/character/GetOriginaleCharacterByUser/${id}`, data)
     }
     CountNbOriginaleCharacterByUser(id){
