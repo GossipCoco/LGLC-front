@@ -1,7 +1,11 @@
 <template>
   <div class="opacity-container">
+    <div class="summary-container">
+      <EditSummary v-bind:FictionId="IdFiction" v-bind:Summary="Summary" />
+      <p class="text-align-justify" v-html="Summary"></p>
+    </div>
     <div class="display-flex-column flex-one all-chapters-list-container">
-      <div class="display-flex-column">     
+      <!-- <div class="display-flex-column">     
       <p>
         <label class="btn btn-default p-0" for="upload-illustration fiction">
           <input id="upload-illustration fiction" type="file" accept="image/png, image/jpeg, image/jpg, image/webp" ref="file"
@@ -13,7 +17,7 @@
           Changer l'illustration
         </button>
       </p>
-    </div>
+    </div> -->
       <ul class="list-group">
         <li
           class="list-group-item"
@@ -37,10 +41,7 @@
         </router-link>
       </p>
     </div>
-    <div class="summary-container">
-      <EditSummary v-bind:FictionId="IdFiction" v-bind:Summary="Summary" />
-      <p class="text-align-justify" v-html="Summary"></p>
-    </div>
+    
   </div>
 </template>
 <script>

@@ -1,22 +1,20 @@
 <template>
-  <div>
-    <Carousel>
-      <Slide v-for="(character, slide) in Characters" :key="slide">
-        <div class="display-flex-column align-items-content-justify-content carousel__item">
+  <Carousel>
+    <Slide v-for="(character, slide) in Characters" :key="slide">
+      <div class="display-flex-column align-items-content-justify-content carousel__item">
+        <img
+            class="height-auto width-100-percent"
+            :src="character.Character.Image"
+            :alt="character.Character.CurrentName"
+          />
           {{character.Character.CurrentName}}
-            <img
-              class="height-auto width-100-percent"
-              :src="character.Character.Image"
-              :alt="character.Character.CurrentName"
-            />
-        </div>
-      </Slide>
-      <template #addons>
-        <Navigation />
-        <Pagination />
-      </template>
-    </Carousel>
-  </div>
+      </div>
+    </Slide>
+    <template #addons>
+      <Navigation />
+      <Pagination />
+    </template>
+  </Carousel>
 </template>
 <script>
 import { Carousel, Navigation, Slide } from "vue3-carousel";

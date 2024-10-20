@@ -177,7 +177,6 @@ export default {
       CharacterService.GetAllNamesAndIdsOriginaCharacters(usr)
       .then((response) => {
           this.myAllCharacters = response.data.ob;
-          console.log(this.myAllCharacters)
         })
         .catch((e) => {
           console.log(e);
@@ -189,7 +188,7 @@ export default {
     },
     handleOk() {
           // Soumettre le formulaire de création de personnage
-          CharacterService.createANewCharacter(this.form)
+        CharacterService.createANewCharacter(this.form)
         .then((response) => {
           const newCharacterId = response.data.ob.Id;
           const redirectTo = this.$route.query.redirectTo || "/allCharacters";
@@ -219,14 +218,11 @@ export default {
       for (let [key, value] of formData.entries()) {
         console.log(key, value);
       }
-      console.log(formData);
       this.CreateANewFiction(this.userCurrent, formData);
     },
     async CreateANewFiction(usr, formData) {
     try {
-      const response = await GameService.CreateANewGame(usr, formData);
-      console.log('Réponse de la création de fiction :', response);
-      
+      const response = await GameService.CreateANewGame(usr, formData);    
       if (response && response.data) { // Assure-toi que la réponse contient bien les données attendues
         console.log('Fiction créée avec succès, redirection...');
         this.$router.push({

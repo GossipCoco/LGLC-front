@@ -61,7 +61,6 @@ export default {
     CountNbOriginaleCharacterByUser(user) {
       CharacterService.CountNbOriginaleCharacterByUser(user)
         .then((response) => {
-          console.log(response.data.ob);
           this.showspinner = false;
           this.NbAllCharacters = response.data.ob.count;
         })
@@ -71,7 +70,6 @@ export default {
     },
     CharacterPagination(page) {
       this.nav.current = page;
-      console.log(this.nav);
       this.GetOriginaleCharacterByUser(this.usr, this.nav);
     },
     GetOriginaleCharacterByUser(user, nav) {
@@ -84,7 +82,6 @@ export default {
             this.nav,
             this.loading
           );
-          console.log(this.nav);
         })
         .catch((err) => {
           console.log(err);

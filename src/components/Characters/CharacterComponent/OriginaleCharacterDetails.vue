@@ -74,7 +74,6 @@ export default {
           this.character = response.data.ob;
           this.symbol = response.data.ob.Clan.Symbol
           this.grade = response.data.ob.Grade.Name
-
         })
         .catch((e) => {
           console.log(e);

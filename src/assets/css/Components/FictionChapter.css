@@ -2,24 +2,21 @@
 @import '../variables.scss';
 
 .character-chapters.display-flex-column.fiction-container.background-summary-global-container{
-    flex: 0.75;
+    flex: 1;
 }
 .all-characters-of-fiction > button{
-    width: 35vh;
+    width: 25vh;
 }
 .image-fiction-container {
-
     height: 20vh;
-    width: 35vh;
+    width: 25vh;
     border-radius: 12px;
-
 }
-
 .carousel {
     width: 19rem;
 }
 .carousel__item img {
-    width: 120px;
+    width: 100px;
 }
 th {
     font-weight: 200;
@@ -131,10 +128,11 @@ th {
     width: 75rem;
 }
 .illustration-background {
-    width: 77rem;
+    width: 79rem;
+    margin: 1rem 0 0 2rem;  
 }
 .all-chapters-list-container {    
-    width: 40rem;
+    width: 30rem;
     padding: 1rem;
 }
 .character-chapters-container img {
@@ -146,7 +144,7 @@ th {
     overflow-x: hidden;
     padding: 0 1rem;
     margin: 1rem;
-    width: 35rem;
+    width: 45rem;
 }
 .create-chapter-btn-container .btn {
     width: 15rem;

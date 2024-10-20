@@ -38,7 +38,7 @@
     </div>
     <div class="card-body">
       <div class="row">
-        <div class="col-3">
+        <div class="col-2">
           <div
             class="display-flex-column image-fiction-container background-size-cover"
             v-bind:style="{
@@ -53,7 +53,7 @@
             <CarrouselCharacter v-bind:Characters="listOfCharacter" />
           </div>
         </div>
-        <div class="col-7">
+        <div class="col-8">
           <div class="display-flex-column flex-one">
             <div
               class="character-chapters display-flex-column fiction-container background-summary-global-container"

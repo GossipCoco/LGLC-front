@@ -63,10 +63,10 @@
     overflow-x: hidden;
 }
 .fiction-globale-container.card.fiction-container {
-    margin: 3rem 5rem 2rem 2rem;
-    width: 105rem;
-    min-width: 105rem;
-    padding: 0rem;
+    margin: 1rem 2rem 2rem 2rem;
+    width: 100rem;
+    min-width: 100rem;
+    padding: 0;
     height: 51rem;
     overflow-y: hidden;
     overflow-x: hidden;
@@ -84,9 +84,9 @@
     width: 10px;
     height: 10px;
     position: relative;
-    top: -4rem;
-    left: 90%;
-    transform: scale(.5);
+    top: 4rem;
+    left: 95%;
+    transform: scale(0.45);
 }
 .display-flex-row.card-group.clan-group .card.location-clan-background-width-container::before {
     left: 80%

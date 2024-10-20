@@ -8,7 +8,6 @@ class FictionService {
         return http.get(`/fiction/CountAllMyFictions/${id}`);
     }
     getFictionByName(id, data){
-        console.log(id, data)
         return http.post(`/fiction/GetAllFictionsByName/${id}`, data);
     }
     CountTotalWordBuUser(id, data){
@@ -21,7 +20,6 @@ class FictionService {
         return http.post(`/fiction/GetAllCommentsByFiction/${id}`, data);
     }
     GetAllFictionsOnBase(nav){
-        console.log(nav)
         return http.post('/fiction/GetAllFictionsOfALlUsers', nav)
     }
     GetFiveLastChapByUser(id){
