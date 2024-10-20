@@ -127,9 +127,13 @@
     height: 30em;
 
 }
-/* .location-clan-card-details{
-    height: 55vh;
-} */
+.location-clan-card-details{
+    border-radius: 5% 5% 5% 0;
+    border-top: 1rem solid rgba(var(--clear-green-02), 1);
+    border-bottom: 1rem solid rgba(var(--clear-green-02), 1);
+    border-left: 1rem solid rgba(var(--clear-green-02), 1);
+    border-right: 1rem solid rgba(var(--clear-green-02), 1);
+}
 .clans-location-container {
     margin: 1rem auto;
     padding: 5rem 0 0 8rem;
