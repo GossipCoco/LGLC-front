@@ -7,15 +7,15 @@
         class="card-image clan-detail-card background-color-white border-card-color  display-flex-row align-items-content-justify-content background-size-cover"
         v-bind:style="{ backgroundImage: 'url(' + location.Image + ')' }"
       ></div>
-      <div class="col-8 col-md-8 flex-one">
-        <div
-          class="card-body white-text background-color-main-lineart details-infos-characters text-white"
-        >
-          <h5 class="card-header">{{ location.Name }}</h5>
+      <div class="col-8 col-md-8 display-flex-column flex-one location-clan-card-details">
+        <div class="card background-color-main-lineart location-clan-card">
+        <div class="card-header">{{ location.Name }}</div>
+        <div class="card-body background-color-main-lineart details-infos-characters text-white location-clan-body card-details-body">         
           <div class="card-text text-align-justify">
             <div class="text-align-justify"  v-html="location.Description"></div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   </div>
