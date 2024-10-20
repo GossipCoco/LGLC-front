@@ -27,16 +27,6 @@ const Navigation = {
       backgroundColor:
         "background-image:linear-gradient(45deg,rgba(var(--gradient-accueil1), 1), rgba(var(--gradient-accueil2), 1));",
     },
-    // {
-    //     classIconMenu: 'icon-menu-container',
-    //     classRond: 'rond-icon',
-    //     classRouterLink: 'link-menu-container nav-link',
-    //     route: "/call",
-    //     icon: "fa-solid fa-list",
-    //     title: "Appels",
-    //     acces: "all",
-    //     backgroundColor: 'background-image:linear-gradient(45deg,rgba(var(--gradient-appel1), 1), rgba(var(--gradient-appel2), 1));'
-    // },
     {
       classIconMenu: "icon-menu-container",
       classRond: "rond-icon",

@@ -184,14 +184,14 @@ th{
 }
 .image-fiction-container-background{
     padding: 1rem 0 0.5rem 0;
-    height: 25vh;
+    height: 20vh;
     background-position: 50%;
     border-radius: 20px 0 0 20px;
 }
 
 .fiction-summary-card{
     width: 40vh;
-    height: 25vh;
+    height: 20vh;
     padding: 0 1rem 0 0.75rem;
     border-radius: 20% 12px 12px 20%;
 }

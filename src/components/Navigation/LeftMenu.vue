@@ -1,6 +1,6 @@
 <template>
   <div class="burger-menu" @click="toggleMenu">
-    <img src="/images/Logos/Logo_1.png" />
+    <img :src="logo" />
   </div>
   <div
     :class="[ 
@@ -12,13 +12,7 @@
       'p-3' 
     ]"
   >
-    <div class="logo-container">
-      <router-link to="/dashboard">
-        <img src="/images/Logos/Automne_Logo1.png" />
-      </router-link>
-    </div>
-
-    
+    <Logo v-bind:img="logo" />    
     <ul class="nav nav-pills flex-column mb-auto">
       <li class="li-level1">
         <router-link to="/dashboard">
@@ -33,8 +27,7 @@
         </router-link>
       </li>
       <li class="li-level1">
-        <router-link
-          to="/allCharacters"
+        <div
           data-bs-toggle="collapse"
           href="#collapseExample3"
           role="button"
@@ -54,7 +47,7 @@
               </div>
             </div>
           </div>
-        </router-link>
+        </div>
         <div class="collapse display-flex-column align-items-content-justify-content " id="collapseExample3">
           <p>Univers LGDC</p>
           <router-link to="/allCharacters" class="link-collapse display-flex-column align-items-content-justify-content ">
@@ -72,8 +65,7 @@
         </div>
       </li>
       <li class="li-level1">
-        <router-link
-          to="/AllExistingFictionsLayout"
+        <div
           data-bs-toggle="collapse"
           href="#collapseExample1"
           role="button"
@@ -90,7 +82,7 @@
               </div>
             </div>
           </div>
-        </router-link>
+        </div>
         <div class="collapse display-flex-column align-items-content-justify-content " id="collapseExample1">
           <router-link class="link-collapse display-flex-column align-items-content-justify-content " to="/CreateAnOriginalCharacter" >
             Nouveau personnage original</router-link>
@@ -105,8 +97,7 @@
         </div>
       </li>
       <li class="li-level1">
-        <router-link
-          to="/createANewFiction"
+        <div
           data-bs-toggle="collapse"
           href="#creation"
           role="button"
@@ -123,7 +114,7 @@
               </div>
             </div>
           </div>
-        </router-link>
+        </div>
         <div class="collapse display-flex-column align-items-content-justify-content " id="creation">
           <router-link class="link-collapse display-flex-column align-items-content-justify-content " to="/createANewFiction">
             Nouvelle fiction
@@ -134,7 +125,7 @@
         </div>
       </li>
       <li class="li-level1">
-        <router-link
+        <div
           to="/game"
           data-bs-toggle="collapse"
           href="#collapseExample0"
@@ -152,7 +143,7 @@
               </div>
             </div>
           </div>
-        </router-link>
+        </div>
         <div class="collapse display-flex-column align-items-content-justify-content " id="collapseExample0">
           <router-link class="link-collapse display-flex-column align-items-content-justify-content " to="/rollOfDice"
             >Jeu de dé</router-link
@@ -221,13 +212,64 @@
 </template>
 <script>
 import UserService from "../../services/UserService";
+import Logo from "./Components/Logo.vue";
+
 export default {
   name: "LeftMenu",
+  components: { Logo },
   data() {
     return {
       usrId: this.$store.state.auth.user.usrID,
       role: null,
       isMenuOpen: false,
+      logo: "/images/Logos/Automne_Logo1.png",
+      menuItems: [
+        {
+          title: "Dashboard",
+          icon: "/images/icons/home.svg",
+          link: "/dashboard",
+        },
+        {
+          title: "Univers LGDC",
+          icon: "/images/icons/Logo-thunderclan-textless.png",
+          link: "/allCharacters",
+          submenu: [
+            { title: "Personnages", link: "/allCharacters" },
+            { title: "Clans", link: "/AllClansLayout" },
+            { title: "Lieux", link: "/AllLocationsLayout" },
+            { title: "Arcs & Livres", link: "/ArcBookLayout" },
+          ],
+        },
+        {
+          title: "Fictions",
+          icon: "/images/icons/cloud-solid.svg",
+          link: "/AllExistingFictionsLayout",
+          submenu: [
+            { title: "Nouveau personnage original", link: "/CreateAnOriginalCharacter" },
+            { title: "Mes personnages", link: "/OriginaleCharacterByUser" },
+            { title: "Mes fictions", link: "/allFictions/" + this.usrId },
+            { title: "Lire des fictions", link: "/AllExistingFictionsLayout" },
+          ],
+        },
+        {
+          title: "Jeux",
+          icon: "/images/icons/gamepad-solid.svg",
+          link: "/game",
+          submenu: [
+            { title: "Jeu de dé", link: "/rollOfDice" },
+            { title: "Puzzle", link: "/puzzle" },
+            { title: "Attrape la souris", link: "/mouseShot" },
+            { title: "Jeu de l'oie", link: "/GooseGameLayout" },
+            { title: "Chasse au trésor", link: "/TreasureHunt" },
+            { title: "Quêtes", link: "/Quest" },
+          ],
+        },
+        {
+          title: "Événements",
+          icon: "/images/icons/calendar-days-solid.svg",
+          link: "/EventGlobal",
+        },
+      ],
     };
   },
   created() {
@@ -248,43 +290,8 @@ export default {
     },
     logout() {
       this.$store.dispatch("auth/logout");
-    // Redirection vers la page de login après déconnexion
       this.$router.push("/Accueil");
     },
   },
 };
 </script>
-
-<style scoped>
-.burger-menu {
-  display: none;
-  cursor: pointer;
-}
-
-.menu-hidden {
-  display: none;
-}
-
-@media (max-width: 1400px) {
-  .burger-menu {
-    display: block;
-    font-size: 1.5rem;
-    padding: 1rem;
-  }
-
-  .menu-left {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 150px;
-    height: 100%;
-    background-color: rgba(var(--dark-green-01), 1);
-    transform: translateX(-250px);
-    transition: transform 0.3s ease-in-out;
-  }
-
-  .menu-left.menu-hidden {
-    transform: translateX(0);
-  }
-}
-</style>

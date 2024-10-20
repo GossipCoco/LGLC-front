@@ -1,0 +1,12 @@
+[
+    {
+      "icon": "/images/icons/home.svg",
+      "link": "/dashboard",
+      "title": "Dashboard"
+    },
+    {
+      "icon": "/images/icons/Logo-thunderclan-textless.png",
+      "link": "/ldgc",
+      "title": "Univers Lgdc"
+    }
+  ]

@@ -1,5 +1,5 @@
 <template>
-  <div class="dashboard-max-card-container border-none background-color-main-lineart card display-flex-column fiction-container">
+  <div class="dashboard-max-card-container border-none background-color-main-lineart card display-flex-column fiction-container create-chapter-card-container">
     <CardHeader v-bind:Title="'Chapitre' + NextChapter" />
     <form class="create-character-form" @submit.stop.prevent="onSubmit" ref="uploadForm">
       <InputTitle v-bind:Title="'Titre du chapitre'" @input-title="InputTitle"/>

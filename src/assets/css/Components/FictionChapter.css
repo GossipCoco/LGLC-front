@@ -206,3 +206,6 @@ th {
 #edit-chapter-contain .character-details-chatper.card.mb-3.fiction-container{
     height: 75vh;
 }
+.create-chapter-card-container{
+    height: 85vh;
+}

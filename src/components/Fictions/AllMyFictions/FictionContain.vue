@@ -180,6 +180,7 @@ export default {
       this.showspinner = true;
       FictionService.getFictionByName(id, this.nav)
         .then((response) => {
+          console.log(response.data.ob)
           this.fiction = response.data.ob;
           this.rating = response.data.ob.AverageRating;
           this.IdFiction = this.fiction.Id;
@@ -188,6 +189,7 @@ export default {
           this.AuthorId = this.fiction.User.Id;
           this.Title = this.fiction.Title;
           this.backgroundImageFiction = this.fiction.Image;
+          console.log(this.backgroundImageFiction)
           this.listOfCharacter = this.fiction.Game.GameCharacters;
           this.Summary = this.fiction.Summary;
           this.dateCreation = this.fiction.DateCreation;
