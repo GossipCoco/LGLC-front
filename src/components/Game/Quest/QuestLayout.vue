@@ -7,7 +7,7 @@
       <Spinner v-if="showspinner" />
       <div v-if="!showspinner" class="row list-fiction-card-container">
         <div
-          class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 mb-4 mb-sm-2 display-flex-row quest--global-container"
+          class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 mb-5 mb-sm-2 display-flex-row quest--global-container"
           v-for="(quest, index) in allQuests"
           :key="index"
         >

@@ -1,5 +1,5 @@
 <template>
-  <div class="display-flex-column flex-one ">
+  <div class="display-flex-row flex-one ">
     <div class="background-image-quest background-size-cover" v-bind:style="{ backgroundImage: 'url(' + image.Image + ')',}"></div>
     <div class="card-body display-flex-column one-quest ">
       <div class="display-flex-column quest-button-text">
