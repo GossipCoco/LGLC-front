@@ -1,42 +1,61 @@
 <template>
-  
-    <div class="row title-dashboard">
-      <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <TitleHeader v-if="!showspinner" v-bind:UserName="UserName" v-bind:Avatar="Avatar" v-bind:User="usrId" v-bind:NbMessages="Nbmessages"/>
-      </div>
+  <div class="row title-dashboard">
+    <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <TitleHeader
+        v-if="!showspinner"
+        v-bind:UserName="UserName"
+        v-bind:Avatar="Avatar"
+        v-bind:User="usr"
+        v-bind:NbMessages="Nbmessages"
+      />
     </div>
-    <div v-if="showspinner" class="d-flex justify-content-center">
-      <div class="spinner-border text-success" role="status">
-        <span class="visually-hidden">Loading...</span>
-      </div>
+  </div>
+  <div v-if="showspinner" class="d-flex justify-content-center">
+    <div class="spinner-border text-success" role="status">
+      <span class="visually-hidden">Loading...</span>
     </div>
-    <div class="row top-dashboard">      
-      <ListAllFictions v-if="!showspinner" />
-      <LastFiveFiction />
-      <ExtractLastChap v-if="!showspinner"/>
-      <AvatarCard v-if="!showspinner" v-bind:Avatar="Avatar" v-bind:UserName="usr" v-bind:LastConnexion="LastConnexion"
-        v-bind:Inscription="Inscription" v-bind:level="level" v-bind:Role="role" v-bind:nBFiction="nBFictionV2"
-        v-bind:totalWords="totalWordsV2" v-bind:totalPoints="totalPoints" v-bind:roleImage="roleImage" />
-    </div>
-    <div class="row bottom-dashboard">
-      <CharacterRandom v-if="!showspinner" v-bind:randomCharacters="randomCharacters" />      
-      <CharacterByGamer v-bind:gamer="gamer"/>
-      <MusicPlayer />
-    </div>
-
+  </div>
+  <div class="row top-dashboard">
+    <AvatarCard
+      v-if="!showspinner"
+      v-bind:Avatar="Avatar"
+      v-bind:UserName="usr"
+      v-bind:LastConnexion="LastConnexion"
+      v-bind:Inscription="Inscription"
+      v-bind:level="level"
+      v-bind:Role="role"
+      v-bind:nBFiction="nBFictionV2"
+      v-bind:totalWords="totalWordsV2"
+      v-bind:totalPoints="totalPoints"
+      v-bind:roleImage="roleImage"
+      v-bind:NameRole="NameRole"
+      v-bind:LevelName="LevelName"
+    />
+    <CharacterByGamer v-bind:gamer="gamer" />
+    <LastFiveFiction />
+    <ExtractLastChap v-if="!showspinner" />
+  </div>
+  <div class="row bottom-dashboard">
+    <MusicPlayer />
+    <CharacterRandom
+      v-if="!showspinner"
+      v-bind:randomCharacters="randomCharacters"
+    />
+    <ListAllFictions v-if="!showspinner" />
+  </div>
 </template>
 <script>
-import UserService from '../../services/UserService';
-import FictionService from '../../services/FictionService';
-import CharacterService from '../../services/CharacterService';
-import TitleHeader from './Components/TitleHeader.vue';
-import AvatarCard from './Components/AvatarCard.vue';
-import LastFiveFiction from './Components/LastFiveFiction.vue';
-import ExtractLastChap from './Components/ExtractLastChap.vue';
-import CharacterRandom from './Components/CharacterRandom.vue';
-import ListAllFictions from './Components/ListAllFictions.vue';
-import MusicPlayer from './Components/MusicPlayer.vue';
-import CharacterByGamer from './Components/CharacterByGamer.vue';
+import UserService from "../../services/UserService";
+import FictionService from "../../services/FictionService";
+import CharacterService from "../../services/CharacterService";
+import TitleHeader from "./Components/TitleHeader.vue";
+import AvatarCard from "./Components/AvatarCard.vue";
+import LastFiveFiction from "./Components/LastFiveFiction.vue";
+import ExtractLastChap from "./Components/ExtractLastChap.vue";
+import CharacterRandom from "./Components/CharacterRandom.vue";
+import ListAllFictions from "./Components/ListAllFictions.vue";
+import MusicPlayer from "./Components/MusicPlayer.vue";
+import CharacterByGamer from "./Components/CharacterByGamer.vue";
 
 export default {
   name: "DashboardLayout",
@@ -48,7 +67,7 @@ export default {
     CharacterRandom,
     ListAllFictions,
     MusicPlayer,
-    CharacterByGamer
+    CharacterByGamer,
   },
   data() {
     return {
@@ -59,11 +78,13 @@ export default {
       Inscription: null,
       LastConnexion: null,
       role: null,
+      NameRole: null,
+      LevelName:null,
       Nbmessages: null,
       totalWordsByFiction: {}, // Objet pour stocker les totaux par fiction
       nBFictionV2: 0, // Nombre de fictions
       totalWordsV2: 0, // Total de mots de toutes les fictions
-      totalPoints:0,
+      totalPoints: 0,
       filters: [],
       gamer: {},
       nav: {
@@ -73,22 +94,22 @@ export default {
       },
       randomCharacters: [],
       level: {},
-      roleImage: null
-    }
+      roleImage: null,
+    };
   },
   created() {
     this.GetUserById(this.usrId);
-    this.CountTotalWordByUserV2(this.usrId)
-    this.GetAllCharactersDashboard(this.nav)
+    this.CountTotalWordByUserV2(this.usrId);
+    this.GetAllCharactersDashboard(this.nav);
   },
   methods: {
     GetAllCharactersDashboard(nav) {
-      this.showspinner = true
+      this.showspinner = true;
       CharacterService.GetAllCharactersDashboard({
         nav: nav,
       })
         .then((response) => {
-          this.showspinner = false
+          this.showspinner = false;
           if (response && response.data) {
             const characters = response.data.ob;
             const randomCharacters = this.getRandomCharacters(characters, 3);
@@ -96,7 +117,7 @@ export default {
           }
         })
         .catch((err) => {
-          console.error('erreur', err);
+          console.error("erreur", err);
         });
     },
 
@@ -105,17 +126,20 @@ export default {
       return shuffled.slice(0, count);
     },
     CountTotalWordByUserV2(e) {
-      this.showspinner = true
+      this.showspinner = true;
       FictionService.CountTotalWordBuUserV2(e)
         .then((response) => {
-          this.showspinner = false
+          this.showspinner = false;
           if (response && response.data) {
             const fictions = response.data.ob;
             let totalWords = 0;
             // Parcourir les fictions et calculer la somme des mots pour toutes les fictions
-            fictions.forEach(fictionEntry => {
-              fictionEntry.Fiction.forEach(fiction => {
-                const fictionWords = fiction.Chapters.reduce((sum, chapter) => sum + parseInt(chapter.NbWords, 10), 0);
+            fictions.forEach((fictionEntry) => {
+              fictionEntry.Fiction.forEach((fiction) => {
+                const fictionWords = fiction.Chapters.reduce(
+                  (sum, chapter) => sum + parseInt(chapter.NbWords, 10),
+                  0
+                );
                 totalWords += fictionWords;
               });
             });
@@ -124,36 +148,38 @@ export default {
           }
         })
         .catch((err) => {
-          console.error('erreur', err);
+          console.error("erreur", err);
         });
     },
     calculateTotalPoints(pointsArray) {
-    return pointsArray.reduce((total, point) => total + point.Points, 0);
-  },
+      return pointsArray.reduce((total, point) => total + point.Points, 0);
+    },
     GetUserById(e) {
-      this.showspinner = true
+      this.showspinner = true;
       UserService.getUserById(e)
-        .then((response) => {  
-          this.showspinner = false
-          this.userInfo = response.data.ob
-          console.log(this.userInfo)
-          this.Avatar = response.data.ob.Avatar
-          this.usr = response.data.ob.UserName
-          this.UserName = this.usr
-          this.LastConnexion = response.data.ob.LastConnexion
-          this.Inscription = response.data.ob.Inscription
-          this.LvelImf = this.userInfo.Level.Image
-          this.role = this.userInfo.Role
-          this.roleImage = this.userInfo.Role.Image
-          this.Nbmessages = this.userInfo.Messages.length
+        .then((response) => {
+          this.showspinner = false;
+          this.userInfo = response.data.ob;
+          this.Avatar = response.data.ob.Avatar;
+          this.usr = response.data.ob.UserName;
+          this.UserName = this.usr;
+          this.LastConnexion = response.data.ob.LastConnexion;
+          this.Inscription = response.data.ob.Inscription;
+          this.LvelImf = this.userInfo.Level.Image;
+          this.LevelName = this.userInfo.Level.Name
+          this.role = this.userInfo.Role;
+          this.NameRole = this.userInfo.Role.Name
+          this.roleImage = this.userInfo.Role.Image;
+          this.Nbmessages = this.userInfo.Messages.length;
           this.totalPoints = this.calculateTotalPoints(this.userInfo.Points);
-          this.level = this.userInfo.Level
-          this.gamer = this.userInfo.Gamers
+          this.level = this.userInfo.Level;
+          this.gamer = this.userInfo.Gamers;
+          this
         })
         .catch((error) => {
           console.error(error);
         });
     },
-  }
+  },
 };
 </script>

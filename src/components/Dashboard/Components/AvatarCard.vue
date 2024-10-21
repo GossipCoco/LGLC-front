@@ -6,7 +6,7 @@
         <div class="row display-flex align-items-content-justify-content">
           <div class="col-6">
             <div class="image_user_grade_level">
-              <!-- <span class="text-white">{{ level.Name }}</span><br> -->
+              <span class="text-white">{{ NameRole }}</span><br>
                 <img
                   :src="'/images/Levels/' + level.Image"
                   :alt="level.Image"
@@ -15,7 +15,7 @@
           </div>
           <div class="col-6">
             <div class="image_user_grade_level">
-              <!-- <span class="text-white">{{ Role.Name }}</span><br> -->
+              <span class="text-white">{{ LevelName }}</span><br>
                 <img :src="'/images/Levels/' + roleImage" :alt="roleImage" />
             </div>
           </div>
@@ -55,6 +55,8 @@ export default {
     "totalWords",
     "totalPoints",
     "roleImage",
+    "NameRole",
+    "LevelName"
   ],
   components: { TitleHeaderDashboard },
   data() {

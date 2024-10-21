@@ -77,14 +77,17 @@
   color: rgba(var(--clear-green-02), 1);
 }
 .menu-left ul {
-  margin: 1rem 0 0 2rem;
-  width: 10rem;
+  width: 13rem;
 }
 .menu-left ul li {
   font-family: var(--roboto-text);
   color: rgba(var(--clear-green-02), 1);
-  margin: 0.3rem 0 0.2rem -0.2rem;
+  margin: 0.3rem 0 0 -3rem;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 #collapseExample3 p {
   font-size: 0.865em;

@@ -21,6 +21,7 @@
     align-items: center;
     align-content: center;
     justify-content: center;
+    text-align: center;
 }
 .vertical-align-middle{
     vertical-align: middle;
@@ -124,4 +125,8 @@ table.table-borderless, .table.table-borderless>:not(caption)>*>*, .table-border
 }
 .card-body{
     height: 80vh;
+}
+
+.card-body.all-last-three-fictions-container .list-all-fictions-globale--container{
+    width: 30rem;
 }

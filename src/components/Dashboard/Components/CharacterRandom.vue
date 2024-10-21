@@ -1,5 +1,5 @@
 <template>
-  <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12  card-global">
+  <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12  card-global">
     <div class="card border-none background-lineart fiction-card">
       <TitleHeaderDashboard v-bind:title="'Personnages aléatoires'" v-bind:type="'myCharacters'"/>
       <div class="card-body display-flex-column">
@@ -7,7 +7,7 @@
           <div class="col-12 display-flex-row align-items-content-justify-content">
             <div class="character-l1 display-flex-column align-items-content-justify-content flex-one" v-for="character in randomCharacters" :key="character.Id">
               <router-link :to="'/characterDetails/' + character.CurrentName" class="display-flex-column">
-                <p>{{ character.CurrentName }}</p>
+                <div class="name_character"><p>{{ character.CurrentName }}</p></div>
                 <div class="rond-character-background"  v-bind:style="{ backgroundImage: 'url(' + character.Clan.Image + ')' }">
                   <img class="height-auto width-100-percent" :src="character.Image" :alt="character.Image" />                  
                 </div>

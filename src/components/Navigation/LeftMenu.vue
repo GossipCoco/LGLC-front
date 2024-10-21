@@ -13,8 +13,8 @@
     ]"
   >
     <Logo v-bind:img="logo" />    
-    <ul class="nav nav-pills flex-column mb-auto">
-      <li class="li-level1">
+    <ul class="nav nav-pills flex-column mb-auto display-flex align-items-content-justify-content">
+      <li class="li-level1 display-flex-column align-items-content-justify-content">
         <router-link to="/dashboard">
           <div class="menu-level1">
             <div class="menu-li-contain">
@@ -26,7 +26,7 @@
           </div>
         </router-link>
       </li>
-      <li class="li-level1">
+      <li class="li-level1 display-flex-column align-items-content-justify-content">
         <div
           data-bs-toggle="collapse"
           href="#collapseExample3"
@@ -64,7 +64,7 @@
           </router-link>
         </div>
       </li>
-      <li class="li-level1">
+      <li class="li-level1 display-flex-column align-items-content-justify-content">
         <div
           data-bs-toggle="collapse"
           href="#collapseExample1"
@@ -85,7 +85,7 @@
         </div>
         <div class="collapse display-flex-column align-items-content-justify-content " id="collapseExample1">
           <router-link class="link-collapse display-flex-column align-items-content-justify-content " to="/CreateAnOriginalCharacter" >
-            Nouveau personnage original</router-link>
+            Nouvel OC</router-link>
           <router-link class="link-collapse display-flex-column align-items-content-justify-content " to="/OriginaleCharacterByUser" >
             Mes personnages</router-link>
           <router-link class="link-collapse display-flex-column align-items-content-justify-content " :to="'/allFictions/' + usrId">
@@ -96,7 +96,7 @@
           </router-link>
         </div>
       </li>
-      <li class="li-level1">
+      <li class="li-level1 display-flex-column align-items-content-justify-content">
         <div
           data-bs-toggle="collapse"
           href="#creation"
@@ -124,7 +124,7 @@
           </router-link> 
         </div>
       </li>
-      <li class="li-level1">
+      <li class="li-level1 display-flex-column align-items-content-justify-content">
         <div
           to="/game"
           data-bs-toggle="collapse"
@@ -161,7 +161,7 @@
           <router-link class="link-collapse display-flex-column align-items-content-justify-content " to="/Quest">Quêtes</router-link>
         </div>
       </li>
-      <li class="li-level1">
+      <li class="li-level1 display-flex-column align-items-content-justify-content">
         <router-link to="/EventGlobal">
           <div class="menu-level1">
             <div class="menu-li-contain">
@@ -183,7 +183,7 @@
           </div>
         </router-link>
       </li>
-      <li class="li-level1">
+      <li class="li-level1 display-flex-column align-items-content-justify-content">
         <router-link :to="'/user/' + usrId">
           <div class="menu-level1">
             <div class="icon-menu-container display-flex align-items-content-justify-content">
@@ -195,7 +195,7 @@
           </div>
         </router-link>
       </li>
-      <li class="li-level1">
+      <li class="li-level1 display-flex-column align-items-content-justify-content">
         <div class="menu-level1">
           <div class="icon-menu-container display-flex align-items-content-justify-content">
             <a href="#" @click.prevent="logout" class="logout-li-container">

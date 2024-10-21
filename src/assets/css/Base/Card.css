@@ -343,6 +343,7 @@ li.quest-container {
 }
 .display-flex-column button{
     height: 3rem;
+    margin: 0.5rem 0;
 }
 .buttons-container{
     margin: 0.25rem;
@@ -460,6 +461,18 @@ li.quest-container {
     width: 30rem;
     margin: 0 0 1rem 0;
 }
-.row.top-dashboard .card-body div{
+.row.top-dashboard .card-body > div{
     margin: 0 0 0.25rem 0;
+}
+.character-l1{
+    width: 110px;
+}
+.name_character{
+    height: 3rem;
+}
+.card-body.last-chapter-card{
+    margin: -6rem 0 0 0;
+}
+.summaray-title-text p{
+    margin: 0.5rem 0 0.5rem 0;
 }

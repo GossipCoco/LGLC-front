@@ -124,9 +124,7 @@ th{
 .logo-wrapper-contain .logo{
     flex: 0.25
 }
-.list-all-fictions-globale--container{
-    width: 22rem;
-}
+
 .summaray-title-text{
     margin: 0 0 0 0.5rem;
     flex: 1;
@@ -186,8 +184,9 @@ th{
     border-radius: 20px;
 }
 .user-info-text img{
-    width: 75%;
+    width: 55%;
 }
+
 .card-body.user-info-text .row{
     margin: 1rem 0;
 }
@@ -233,7 +232,7 @@ audio{
     justify-content: center;
     text-align: center;
     vertical-align: bottom;
-    width: 150px;
+    width: 100px;
 }
 .character-details-router a {
     font-size: 0.85em;

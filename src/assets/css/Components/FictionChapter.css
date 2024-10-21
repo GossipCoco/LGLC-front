@@ -188,11 +188,7 @@ th {
 .fiche-fiction .link-text-a {
     color: rgba(var(--active-hover), 1)
 }
-.character-illustration-container{
-    flex: 0.5;
-    border-radius: 20px 20px 20px 20px;
-    height: 9rem;
-}
+
 .card-text.summary-text-font{
     padding: 0;
 }
