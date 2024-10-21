@@ -16,14 +16,14 @@
 }
 
 #quest-by-id {
-  width: 100%;
+  width: 185vh;
   height: 95vh;
   margin: 1rem;
-  padding: 1rem;
+  padding: 0;
   overflow: hidden;
 }
 .quest-by-id-card .card-body{
-  height: 82vh;
+  height: 85vh;
 }
 #quest-by-id .quest-by-id-card.card.quest-by-id-card.background-color-main-lineart {
 

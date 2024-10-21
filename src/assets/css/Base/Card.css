@@ -281,6 +281,10 @@ li.quest-container {
     height: 16rem;
     width: 20rem;
 }
+.dashboard-max-card-container.one-quest-container{
+    margin: 1rem 0 1rem 1rem;
+    padding: 0;
+}
 .quest-image-container,
 .background-image-quest-image-container {
     background-position: 50% 55%;
