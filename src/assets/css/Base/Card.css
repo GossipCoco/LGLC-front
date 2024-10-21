@@ -88,8 +88,17 @@
     left: 95%;
     transform: scale(0.45);
 }
+.dashboard-max-card-container::before{
+    top: -1rem;
+    left: 96%;
+}
+.character-card.card::before{
+    top: -2rem;
+    left: 75%;
+}
 .display-flex-row.card-group.clan-group .card.location-clan-background-width-container::before {
-    left: 80%
+    left: 66%;
+    top: -2rem;
 }
 .display-flex-row.card-group.clan-group
 .character-card.card::before {
@@ -259,7 +268,7 @@ li.quest-container {
 .quest--global-container {
     flex-wrap: wrap;
     flex: 0.25;
-    height: 20rem;
+    height: 18rem;
 }
 .quest-container,
 .quest--global-container p,
@@ -268,7 +277,7 @@ li.quest-container {
     flex-wrap: wrap;
 }
 .quest-container {
-    height: 20rem;
+    height: 16rem;
     width: 20rem;
 }
 .quest-image-container,
@@ -277,7 +286,7 @@ li.quest-container {
     vertical-align: top;
 }
 .background-image-quest{
-    height: 8rem;
+    height: 5rem;
     background-position: 50%;
 }
 .card-img-top.background-image-quest-image-container {
@@ -287,7 +296,7 @@ li.quest-container {
     width: 100%;
 }
 .card-body.one-quest {
-    height: 25rem;
+    height: 13rem;
 }
 .card-img-top.background-image-quest-image-container img {
     width: 75%;

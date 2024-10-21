@@ -9,9 +9,9 @@
   overflow-x: hidden;
   scrollbar-color: rgba(var(--clear-green-02), 1) rgba(var(--dark-green-02), 1);
   scrollbar-width: thin;
-  margin: -1rem 0 0rem -2rem;
+  margin: 0.5rem 0 1rem -1.75rem;
   width: 13rem;
-  height: 100vh;
+  height: 98vh;
 }
 .form-control-dark {
   color: rgba(var(--main-black), 1);

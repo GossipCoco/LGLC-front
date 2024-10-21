@@ -162,6 +162,10 @@ th{
     height: 20vh;
     background-size: cover;
 }
+.fiction-container.game-card{
+    height: 90vh;
+    background-size: cover;
+}
 .book-container{
     height: 75vh;
     overflow-y: scroll;
@@ -324,8 +328,8 @@ audio{
     margin: -1rem 1rem 0 -1rem;
 }
 .all-fictions-container-global{
-    height: 96vh;
-    margin: -1rem 0 2rem 0;
+    height: 95vh;
+    margin: 0rem 0 1rem 0;
 }
 .row.bottom-dashboard .card-header > div{
     width: 100%;
