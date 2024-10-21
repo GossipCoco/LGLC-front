@@ -6,7 +6,7 @@
             col-lg-12 col-md-12 col-sm-12 col-xxl-12 col-xs-12
           ">
         <div class="row pagination-container">
-          <div class="col-6 col-md-6 col-sm-6 col-xxl-6 col-xs-6"></div>
+          <div class="col-2 col-md-2 col-sm-2 col-xxl- 2col-xs-"></div>
           <div class="col-5 col-md-5 col-sm-5 col-xxl-5 col-xs-5 col-pagination-container">
             <ul class="pagination" v-if="navPage.pages < 6">
               <li class="nav-btn-contain">
@@ -154,12 +154,13 @@
               </li>
             </ul>
           </div>
-          <div class="col-1  col-md-1 col-sm-1 col-xxl-1 col-xs-1">
+          <div class="col-2 col-md-2 col-sm-2 col-xxl-2 col-xs-2">
             <div class="number-page-container">
               <p v-if="!nav.current">Page : 1</p>
               <p v-else>Page : {{ nav.current + 1 }}</p>
             </div>
-          </div>          
+          </div>
+          <div class="col-3 col-md-3 col-sm-3 col-xxl-3 col-xs-3"></div>          
         </div>
       </div>
     </div>
