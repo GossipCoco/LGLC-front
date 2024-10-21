@@ -46,7 +46,7 @@
     background: var(--linear-greendark-clear);
 }
 .background-lineart{
-    background: linear-gradient(90deg, rgba(var(--dark-green-01), 1), rgba(var(--clear-green-02), 1));
+    background: var(--linear-greendark-clear);
 }
 .white-text, .row-filter label{
     color: rgba(var(--main-white), 1)
@@ -100,7 +100,7 @@
     font-family: 'Poppins';
 }
 .font-title-fiction-dasboard{
-    color: rgba(var(--clear-green-02), 1);
+    color: rgba(var(--dark-green-01), 1);
     font: 600 1.5em 'Poppins';
     font-variant: small-caps ;
 }

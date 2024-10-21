@@ -50,18 +50,25 @@
 
 
 
-    --dark-green-01: 14, 30, 23;
+    --dark-green-01: 6, 38, 38;
     --dark-green-02: 2, 38, 1;
-    --middle-green-01: 83, 112, 29;
+    --middle-green-01: 95, 123, 65;
     --middle-green-02: 58, 106, 72;
-    --clear-green-01: 133, 162, 48;
-    --clear-green-02: 195, 217, 150;
-    --active-hover: 224, 186, 34;
+    --clear-green-01: 59, 82, 28;
+    --clear-green-02: 152, 180, 106;
+    --active-hover: 235, 140, 58;
 
 
     /* Lineart */
-    --linear-greendark-clear: linear-gradient(90deg, rgba(var(--dark-green-01), 1), rgba(var(--clear-green-02), 1));
+    --linear-greendark-clear: linear-gradient(90deg, rgba(var(--dark-green-01), 1) 0%, rgba(var(--clear-green-02), 1) 75%, rgba(var(--middle-green-01), 1) 100%);
+
     --lineart-other01: linear-gradient(90deg, rgba(var(--dark-green-01), 1) 0%, rgba(var(--clear-green-02), 1) 100%);
+
+    --lineart-other03: linear-gradient(rgba(var(--dark-green-01), 1) 0%, rgba(var(--dark-green-01), 1) 50%, rgba(var(--middle-green-01), 1) 100%);
+
+    --lineart-menu: linear-gradient(217deg, rgba(var(--dark-green-01), 1), rgba(255,0,0,0) 70.71%),
+    linear-gradient(127deg, rgba(rgba(var(--clear-green-01), 1), rgba(0,255,0,0) 70.71%)),
+    linear-gradient(336deg, rgba(var(--middle-green-01), 1), rgba(0,0,255,0) 70.71%);
 
     /* Image */
     --background-image: url('/images/Backgrounds/background-site-10.png');

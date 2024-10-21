@@ -24,7 +24,7 @@ h2,h3 {
   font-family: 'Montserrat';
 }
 .summaray-title-text p a {
-  color: rgba(var(--clear-green-02), 1);
+  color: rgba(var(--clear-dark-01), 1);
   font: 600 1.25em 'Poppins';
   font-variant: small-caps;
 }
@@ -175,7 +175,7 @@ h1.card-title {
 
 .user-info-text p span {
   font-weight: 600;
-  color: rgba(var(--clear-green-02), 1);
+  color: rgba(var(--dark-green-01), 1);
 }
 
 .user-info-text p span.label-profil {

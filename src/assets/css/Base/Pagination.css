@@ -64,12 +64,12 @@
 .pagination .page-link{
     background-color: rgba(var(--dark-green-01),1);
     border: 1px solid rgba(var(--dark-green-01),1);
-    color: rgba(var(--clear-green-01),1)
+    color: rgba(var(--main-white),1)
 }
 .pagination .page-link:hover{
     background-color: rgba(var(--clear-green-01),1);
     border: 1px solid rgba(var(--clear-green-01),1);
-    color: rgba(var(--dark-green-01),1)
+    color: rgba(var(--active-hover),1)
 }
 .pagination li{
     height: 40px;

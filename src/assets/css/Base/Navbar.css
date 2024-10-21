@@ -68,7 +68,7 @@
 .menu-left {
   height: 98vh;
   position: fixed;
-  background-color: rgba(var(--dark-green-02), 1);
+  background: var(--lineart-other03);
   border-radius: 8px;
   width: 8%;
   margin: 0.5rem 0rem;
@@ -135,8 +135,7 @@ ul {
 }
 .menu-left {
   height: 98vh;
-  position: fixed;
-  background-color: rgba(var(--dark-green-02), 1);
+  position: fixed;  
   border-radius: 8px;
   width: 8%;
   margin: 0.5rem 0rem;
@@ -238,7 +237,6 @@ ul {
     left: 0;
     width: 150px;
     height: 100%;
-    background-color: rgba(var(--dark-green-01), 1);
     transform: translateX(-250px);
     transition: transform 0.3s ease-in-out;
   }

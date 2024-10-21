@@ -357,8 +357,8 @@ li.quest-container {
     line-height: 1.6;
 }
 .btn-primary.file-character-btn {
-    background-color:  rgb(var(--clear-green-02), 0.6);
-    border-color:  rgb(var(--clear-green-02), 0.6);
+    background-color:  rgb(var(--dark-green-01), 0.6);
+    border-color:  rgb(var(--dark-green-01), 0.6);
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .btn-primary.file-character-btn:hover {
