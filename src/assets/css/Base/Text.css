@@ -223,9 +223,12 @@ h5.card-title {
 
 .h5-container a{
   color:rgba(var(--dark-green-02), 1);
-
   font-weight: 600;
 }
 .h5-container a:hover{
   color:rgba(var(--active-hover), 1)
+}
+h5.card-title a{
+  font-family: 'Montserrat';
+  font-size: 0.9em;
 }

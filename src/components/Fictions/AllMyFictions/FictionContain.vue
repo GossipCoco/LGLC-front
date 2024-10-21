@@ -133,7 +133,7 @@ export default {
       nav: {
         current: 0,
         pages: 0,
-        step: 6,
+        step: 9,
       },
       IdFiction: null,
       lastChap: null,

@@ -9,12 +9,30 @@
           </h4>
         </div>
       </div>
-
+    </div>
+    <div v-if="type === 'fictions' ">
+      <div class="row">
+        <div class="col-12">
+          <h4>
+          {{ title }}          
+          </h4>
+        </div>
+      </div>
+    </div>
+    <div v-else-if="type === 'myCharacters' ">
+      <div class="row">
+        <div class="col-6">
+          <h4>
+          {{ title }}          
+          </h4>
+        </div>
+        <div class="col-6"><slot></slot></div>
+      </div>
     </div>
     <div v-else class="title-header width-100-percent display-flex-row">
       <div class="row width-100-percent">
-        <div class="col-8"><h4>{{ title }}</h4></div>
-        <div class="col-4"><slot></slot></div>
+        <div class="col-9"><h4>{{ title }}</h4></div>
+        <div class="col-3"><slot></slot></div>
       </div>
     </div>
   </div>

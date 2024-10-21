@@ -190,8 +190,6 @@ th {
 }
 .character-illustration-container{
     flex: 0.5;
-    background-size: contain;
-    background-repeat: no-repeat;
     border-radius: 20px 20px 20px 20px;
     height: 9rem;
 }

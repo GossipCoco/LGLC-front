@@ -8,18 +8,29 @@
             v-bind:style="{
               backgroundImage: 'url(' + fiction.Image + ')',
             }"
-          ></div>
+          >
+        </div>
           <div class="col-8">
             <div class="h5-container">
-            <h5 class="card-title">
-              <router-link :to="'/fiction/' + fiction.Title">{{ fiction.Title }}</router-link></h5>
-            <div class="display-flex-row">par &nbsp; &nbsp;<h6>{{ fiction.User.UserName }}</h6></div>
-          </div>
+              <div class="display-flex-row">
+                Auteur : &nbsp;
+                <router-link
+                  :to="'/getUserBy/' + fiction.User.UserName"
+                  class="author-text"
+                >
+                  {{ fiction.User.UserName }}
+                </router-link>
+              </div>
+              <h5 class="card-title">
+                <router-link :to="'/fiction/' + fiction.Title">{{
+                  fiction.Title
+                }}</router-link>
+              </h5>
+            </div>
             <div
               class="card-text text-align-justify summary-text-font"
-              v-html="truncateText(fiction.Summary, 50)"
-            >            
-          </div>
+              v-html="truncateText(fiction.Summary, 75)"
+            ></div>
           </div>
         </div>
       </div>
@@ -27,10 +38,9 @@
   </div>
 </template>
 <script>
-
 export default {
   name: "AllCardsFictions",
-  props:['allFictions'],
+  props: ["allFictions"],
   methods: {
     truncateText(text, maxLength) {
       return text.length <= maxLength

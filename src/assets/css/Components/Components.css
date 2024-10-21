@@ -132,7 +132,7 @@ th{
     flex: 1;
 }
 .pagination-container{
-    margin-top: 0;
+    margin-top: -1rem;
 }
 .row.list-fiction-card-container{
     height: 42rem;
@@ -142,10 +142,15 @@ th{
     margin: 0 auto;
 }
 .h5-container{
-    height: 14vh;
-    padding: 0.25rem;
+    height: 12vh;
+    padding: 0.5rem;
     font-size: 0.85em;
     font-weight: 800;
+    text-align: center;
+    width: 15.5rem;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 -1rem;
 }
 .left-fiction-summary-container{
     width: 20rem;
@@ -306,4 +311,21 @@ audio{
 }
 .admin-dashboard{
     margin: 2rem;
+}
+.fiction-container{
+    padding: 0;
+}
+.fiction-container .card-header{
+    padding: 0;
+}
+.fiction-container.all-fictions-container-global .card-header{
+    padding: 0;
+    margin: -1rem 1rem 0 -1rem;
+}
+.all-fictions-container-global{
+    height: 96vh;
+    margin: -1rem 0 2rem 0;
+}
+.row.bottom-dashboard .card-header > div{
+    width: 100%;
 }

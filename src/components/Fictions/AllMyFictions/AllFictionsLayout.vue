@@ -1,6 +1,6 @@
 
 <template>
-  <div class="dashboard-max-card-container border-none background-color-main-lineart flex-one card display-flex-column fiction-container">
+  <div class="dashboard-max-card-container border-none background-color-main-lineart flex-one card display-flex-column fiction-container  all-fictions-container-global">
     <CardHeader v-bind:Title="'Lire toutes mes fictions'" />
     <div class="card-body">
       <SearchBarComponent 
@@ -52,7 +52,7 @@ export default {
       nav: {
         current: 0,
         pages: 0,
-        step: 8,
+        step: 12,
       },
     };
   },

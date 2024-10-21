@@ -150,7 +150,7 @@
     background-repeat: no-repeat;
 }
 .row.title-dashboard{
-    margin: -0.25rem 0.25rem;
+    margin: -0.25rem 0.25rem 0.5rem -0.25rem
 }
 .row.top-dashboard, .row.bottom-dashboard{
     margin: 0.5rem;

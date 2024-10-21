@@ -3,7 +3,7 @@
     <div class="card border-none display-flex-column profil-card fiction-card background-lineart">
       <TitleHeaderDashboard v-bind:title="UserName" v-bind:type="'username'" />
       <div class="card-body user-info-text">
-        <div class="row">
+        <div class="row display-flex align-items-content-justify-content">
           <div class="col-6">
             <div class="image_user_grade_level">
               <!-- <span class="text-white">{{ level.Name }}</span><br> -->
@@ -21,19 +21,19 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-6">
+          <div class="col-7">
             <p><span class="label-profil">Inscription</span></p>
             <p><span class="label-profil">Dernière connextion</span></p>
             <p><span class="label-profil">Nb de fictions</span></p>
             <p><span class="label-profil">Nb de mots écrits</span></p>
             <p><span class="label-profil">Vous avez</span></p>
           </div>
-          <div class="col-6">
+          <div class="col-5">
             <p> <span>{{ formatDate(Inscription) }}</span> </p>
             <p> <span>{{ formatDate(LastConnexion) }}</span></p>
-            <p><span>{{ nBFiction }}</span>fictions</p>
-            <p><span> {{ totalWords }}</span>mots.</p>
-            <p><span>{{ totalPoints }}</span> points.</p>
+            <p><span>{{ nBFiction }}</span>&nbsp;fictions</p>
+            <p><span> {{ totalWords }}</span>&nbsp;mots.</p>
+            <p><span>{{ totalPoints }}</span>&nbsp; points.</p>
           </div>
         </div>
       </div>

@@ -101,7 +101,7 @@
 }
 .font-title-fiction-dasboard{
     color: rgba(var(--dark-green-01), 1);
-    font: 600 1.5em 'Poppins';
+    font: 600 1.25em 'Poppins';
     font-variant: small-caps ;
 }
 .text-align-justify{
