@@ -229,6 +229,7 @@ audio{
     justify-content: center;
     text-align: center;
     vertical-align: bottom;
+    width: 150px;
 }
 .character-details-router a {
     font-size: 0.85em;

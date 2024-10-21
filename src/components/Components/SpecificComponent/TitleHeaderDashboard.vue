@@ -4,8 +4,7 @@
       <div class="row">
         <div class="col-12">
           <h4>
-          <router-link :to="'/getUserBy/' + title">{{ title }}</router-link>
-          <slot></slot>
+          <router-link :to="'/getUserBy/' + title">{{ title }}</router-link>         
           </h4>
         </div>
       </div>
@@ -29,12 +28,11 @@
         <div class="col-6"><slot></slot></div>
       </div>
     </div>
-    <div v-else class="title-header width-100-percent display-flex-row">
+    <!-- <div v-else class="title-header width-100-percent display-flex-row">
       <div class="row width-100-percent">
-        <div class="col-9"><h4>{{ title }}</h4></div>
-        <div class="col-3"><slot></slot></div>
+        <div class="col-12"><h4>{{ title }}</h4></div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 <script>
