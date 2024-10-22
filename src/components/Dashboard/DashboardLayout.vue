@@ -34,6 +34,7 @@
     
     <LastFiveFiction />
     <ExtractLastChap v-if="!showspinner" />
+    <LastBook />
   </div>
   <div class="row bottom-dashboard">
     <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
@@ -66,7 +67,7 @@ import CharacterRandom from "./Components/CharacterRandom.vue";
 import ListAllFictions from "./Components/ListAllFictions.vue";
 // import MusicPlayer from "./Components/MusicPlayer.vue";
 import CharacterByGamer from "./Components/CharacterByGamer.vue";
-
+import LastBook from "./Components/LastBook.vue";
 export default {
   name: "DashboardLayout",
   components: {
@@ -78,6 +79,7 @@ export default {
     ListAllFictions,
     // MusicPlayer,
     CharacterByGamer,
+    LastBook
   },
   data() {
     return {

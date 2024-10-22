@@ -12,5 +12,8 @@ class ArcBook{
         console.log(nav)
         return http.post('/ArcBook/GetAllBooks', nav)
     }
+    GetLastPublishedBook(){
+        return http.get('/ArcBook/GetLastPublishedBook')
+    }
 }
 export default new ArcBook()
