@@ -235,8 +235,11 @@
     font-family: var(--montserratRegular);
     font-size: 18px;
     z-index: 9999;
-    margin-left: 2rem;
+    margin-left: 1rem;
     font-variant: small-caps;
+}
+.card-header.dashboard-card-header > div{
+    width: 100%;
 }
 .clan-group .card-body {
     height: 9rem;
@@ -249,10 +252,17 @@
     margin: 1rem;
 }
 .row.top-dashboard .card {
-    height: 29rem;
+    height: 25rem;
 }
 .row.bottom-dashboard .card {
-    height: 18rem;
+    height: 22rem;
+}
+.list-all-fictions-globale--container.list-all-fictions-globale--container{
+    width: 30rem;
+}
+.list-all-fictions-globale--container.three-last-chapters-container{
+    margin: 1rem 0 0 0;
+    width: 20rem;
 }
 li.quest-container {
     margin: 0 1rem;
@@ -471,9 +481,9 @@ li.quest-container {
     height: 3rem;
 }
 .card-body.last-chapter-card{
-    margin: -6rem 0 0 0;
+    margin: -3rem 0 0 0;
 }
 .summaray-title-text p{
-    margin: 0.5rem 0 0.5rem 0;
+    margin: 0.25rem 0 0.25rem 0;
     line-height: 0.95;
 }

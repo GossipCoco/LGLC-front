@@ -195,7 +195,7 @@ h1.card-title {
 }
 .character-illustration-container{
   border-radius: 20px 20px 20px 20px;
-  height: 7rem;
+  height: 5rem;
   background-position: 50%;
 }
 .character-illustration-container img {

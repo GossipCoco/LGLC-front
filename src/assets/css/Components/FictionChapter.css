@@ -171,6 +171,7 @@ th {
     height: 70px;
     border-radius: 100%;
     aspect-ratio: 1;
+    margin: 1rem 0 0 0;
 }
 .row.bottom-top-dashboard {
     margin-top: 1rem;

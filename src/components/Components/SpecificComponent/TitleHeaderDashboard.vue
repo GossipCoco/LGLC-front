@@ -1,5 +1,5 @@
 <template>
-  <div class="card-header display-flex-row">
+  <div class="card-header dashboard-card-header display-flex-row">
     <div v-if="type === 'username'">
       <div class="row">
         <div class="col-12">
@@ -11,10 +11,18 @@
     </div>
     <div v-else-if="type === 'fictions' ">
       <div class="row">
-        <div class="col-12">
+        <div class="col-7">
           <h4>
           {{ title }}          
           </h4>
+        </div>
+        <div class="col-5">
+          <router-link v-if="nameRoute"
+            type="button"
+            class="btn btn-primary"
+            :to="route"
+            >{{ nameRoute }}</router-link
+          >
         </div>
       </div>
     </div>
@@ -27,7 +35,7 @@
         </div>
       </div>
     </div>
-    <div v-else-if="type === 'myCharacters' ">
+    <div v-else-if="type === 'myCharacters' || type === 'chapters' ">
       <div class="row">
         <div class="col-12">
           <h4>
@@ -41,6 +49,6 @@
 <script>
 export default {
   name: "TitleHeaderDashboard",
-  props: ["title", "type", "route"],
+  props: ["title", "type", "route", "nameRoute"],
 };
 </script>
