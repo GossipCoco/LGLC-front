@@ -475,4 +475,5 @@ li.quest-container {
 }
 .summaray-title-text p{
     margin: 0.5rem 0 0.5rem 0;
+    line-height: 0.95;
 }

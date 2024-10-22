@@ -126,7 +126,9 @@ table.table-borderless, .table.table-borderless>:not(caption)>*>*, .table-border
 .card-body{
     height: 80vh;
 }
-
+.card-body.all-last-three-fictions-container{
+    margin: -5rem 0 0 0;
+}
 .card-body.all-last-three-fictions-container .list-all-fictions-globale--container{
     width: 30rem;
 }

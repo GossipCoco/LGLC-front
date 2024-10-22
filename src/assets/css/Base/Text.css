@@ -171,6 +171,7 @@ h1.card-title {
 .user-info-text p {
   display: flex;
   flex-direction: row;
+  line-height: 0.85;
 }
 
 .user-info-text p span {
