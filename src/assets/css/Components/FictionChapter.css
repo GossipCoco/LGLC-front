@@ -171,13 +171,15 @@ th {
     height: 70px;
     border-radius: 100%;
     aspect-ratio: 1;
-    margin: 1rem 0 0 0;
 }
 .row.bottom-top-dashboard {
     margin-top: 1rem;
 }
 .row.bottom-dashboard {
-    margin-top: -0.75rem;
+    margin: -0.75rem 0 0 0;
+}
+.row.bottom-left-dashboard{
+    margin:-1.5rem 0 0 -0.75rem;
 }
 .fiche-fiction {
     background-color: rgba(var(--middle-green-01), 1);

@@ -1,8 +1,8 @@
 <template>
-  <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12  card-global">
-    <div class="card border-none background-lineart fiction-card">
+  <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12  card-global">
+    <div class="card border-none background-lineart fiction-card random-characters-card">
       <TitleHeaderDashboard v-bind:title="'Personnages aléatoires'" v-bind:type="'myCharacters'"/>
-      <div class="card-body display-flex-column">
+      <div class="card-body display-flex-row">
         <div class="row">
           <div class="col-12 display-flex-row align-items-content-justify-content">
             <div class="character-l1 display-flex-column align-items-content-justify-content flex-one" v-for="character in randomCharacters" :key="character.Id">

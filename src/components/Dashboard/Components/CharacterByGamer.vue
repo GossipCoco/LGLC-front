@@ -1,13 +1,12 @@
 <template>
-  <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12 card-global">
-    <div class="card border-none background-lineart profil-card fiction-card">
+  <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 card-global">
+    <div class="card border-none background-lineart profil-card fiction-card gamer-character-card">
       <TitleHeaderDashboard v-bind:title="'Mes OC\'s'" v-bind:route="'OriginaleCharacterByUser'" v-bind:type="'Lastfictions'" />
-      <div class="card-body"> 
-        <div v-for="(character, index) in gamer" :key="index">          
-          <div class="display-flex-column">
+      <div class="card-body display-flex-row align-items-content-justify-content"> 
+        <div v-for="(character, index) in gamer" :key="index" class="display-flex-row">          
+          <div class="display-flex-column my-oc-character-container">
             <p class="text-white"><router-link :to="'/OriginaleCharacterDetails/'+character.UserName">{{ character.UserName }}</router-link></p>
-            <div class="character-illustration-container background-size-cover" v-bind:style="{ backgroundImage: 'url(' + character.Image + ')' }"></div>
-            <div class="character-description-container flex-one text-white text-align-justify" v-html="truncateText(character.Description, 155)"></div>
+            <div class="character-illustration-container background-size-cover" v-bind:style="{ backgroundImage: 'url(' + character.Image + ')' }"></div>            
           </div>
         </div>
       </div>
@@ -20,13 +19,5 @@ export default {
   name: "CharacterByUser",
   components: { TitleHeaderDashboard },
   props: ["gamer"],
-  methods: {
-    truncateText(text, maxLength) {
-      if (text.length <= maxLength) {
-        return text;
-      }
-      return text.substring(0, maxLength) + '...';
-    },
-  }
 };
 </script>

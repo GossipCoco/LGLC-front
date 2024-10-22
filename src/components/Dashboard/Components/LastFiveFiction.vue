@@ -1,5 +1,5 @@
 <template>
-  <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12  card-global">
+  <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12  card-global">
     <div class="card background-lineart border-none fiction-card">      
       <TitleHeaderDashboard v-bind:title="'Mes 3 dernières fictions'" v-bind:type="'fictions'" v-bind:route="'/createANewFiction'" v-bind:nameRoute="'Nouvelle fiction'"/>
       <div class="card-body all-last-three-fictions-container display-flex-column align-items-content-justify-content">
@@ -10,7 +10,7 @@
             </div>
             <div class="summaray-title-text">
               <p><router-link :to="'/fiction/' + fiction.Title">{{ fiction.Title }}</router-link></p>
-              <p class="white-text text-align-justify" v-html="truncateText(fiction.Summary, 55)"></p>
+              <!-- <p class="white-text text-align-justify" v-html="truncateText(fiction.Summary, 35)"></p> -->
             </div>
           </div>
         </div>        

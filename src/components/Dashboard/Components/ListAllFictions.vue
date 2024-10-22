@@ -1,6 +1,6 @@
 <template>
   <div
-    class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 card-global"
+    class="col-xxl-5 col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12 card-global"
   >
     <div class="card background-lineart border-none fiction-card">
       <TitleHeaderDashboard v-bind:title="'Lire des fictions'"  v-bind:type="'fictions'" v-bind:route="'/AllExistingFictionsLayout'" v-bind:nameRoute="'Lire des fictions'"/>
@@ -26,7 +26,7 @@
                     {{ fiction.Title }}
                   </router-link> </span
                 ><br />
-                <span v-html="truncateText(fiction.Summary, 35)"></span>
+                <span v-html="truncateText(fiction.Summary, 55)"></span>
               </p>
             </div>
           </div>
@@ -48,7 +48,7 @@ export default {
       nav: {
         current: 0,
         pages: 0,
-        step: 3,
+        step: 4,
       },
     };
   },

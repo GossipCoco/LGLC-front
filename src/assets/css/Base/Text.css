@@ -16,7 +16,9 @@ h2,h3 {
   font-family: var(--montserratRegular);
   font-weight: 600;
 }
-
+h4 {
+  font-size: 1.25rem;
+}
 .title-author-container h1 {
   font: 500 2.5rem 'Cinzel' petite-caps;
 }
@@ -188,15 +190,16 @@ h1.card-title {
 }
 
 .character-description-container {
-  max-height: 10rem;
-  overflow-y: hidden;
+  max-height: 2rem;
+  overflow-y: auto;
   flex: 1;
-  padding: 0.5rem;
+  padding: 0 0.5rem 0 0.25rem;
 }
 .character-illustration-container{
   border-radius: 20px 20px 20px 20px;
   height: 5rem;
   background-position: 50%;
+  width: 100px;
 }
 .character-illustration-container img {
   width: 100%;
@@ -237,4 +240,8 @@ h5.card-title {
 h5.card-title a{
   font-family: 'Montserrat';
   font-size: 0.9em;
+}
+.my-oc-character-container p a{
+  font-family: 'Roboto';
+  font-size: 0.95em;
 }

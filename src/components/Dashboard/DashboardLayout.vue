@@ -31,17 +31,27 @@
       v-bind:NameRole="NameRole"
       v-bind:LevelName="LevelName"
     />
-    <CharacterByGamer v-bind:gamer="gamer" />
+    
     <LastFiveFiction />
     <ExtractLastChap v-if="!showspinner" />
   </div>
   <div class="row bottom-dashboard">
-    <MusicPlayer />
-    <CharacterRandom
-      v-if="!showspinner"
-      v-bind:randomCharacters="randomCharacters"
-    />
-    <ListAllFictions v-if="!showspinner" />
+    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+      <div class="row top-left-dashboard">
+        <CharacterByGamer v-bind:gamer="gamer" />
+      </div>
+      <div class="row bottom-left-dashboard">
+        <CharacterRandom
+            v-if="!showspinner"
+            v-bind:randomCharacters="randomCharacters"
+          />
+      </div>
+    </div>
+    <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12">
+      <div class="row">
+        <ListAllFictions v-if="!showspinner" />
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -54,7 +64,7 @@ import LastFiveFiction from "./Components/LastFiveFiction.vue";
 import ExtractLastChap from "./Components/ExtractLastChap.vue";
 import CharacterRandom from "./Components/CharacterRandom.vue";
 import ListAllFictions from "./Components/ListAllFictions.vue";
-import MusicPlayer from "./Components/MusicPlayer.vue";
+// import MusicPlayer from "./Components/MusicPlayer.vue";
 import CharacterByGamer from "./Components/CharacterByGamer.vue";
 
 export default {
@@ -66,7 +76,7 @@ export default {
     TitleHeader,
     CharacterRandom,
     ListAllFictions,
-    MusicPlayer,
+    // MusicPlayer,
     CharacterByGamer,
   },
   data() {
