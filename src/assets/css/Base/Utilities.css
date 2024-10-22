@@ -29,6 +29,9 @@
 .justify-content-right{
     justify-content: right;
 }
+.flex-wrap{
+    flex-wrap: wrap;
+}
 /* HEIGHT and WIDTH*/
 .height-auto{
     height: auto;
@@ -47,7 +50,7 @@
     background: var(--linear-greendark-clear);
 }
 .background-lineart{
-    background: var(--linear-greendark-clear);
+    background: var(--lineart-other01);
 }
 .white-text, .row-filter label{
     color: rgba(var(--main-white), 1)
@@ -68,6 +71,10 @@
     background-repeat: no-repeat;
 }
 /* MARGIN PADDING*/
+
+.width-10-rem{
+    width: 10rem;
+}
 .margin-1-0{
     margin: 1rem 0;
 }
@@ -99,6 +106,9 @@
 }
 .poppins-text{
     font-family: 'Poppins';
+}
+.cinzel{
+    font-family: 'Cinzel';
 }
 .font-size-1-25{
     font-size: 1.25em;

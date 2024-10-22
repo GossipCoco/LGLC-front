@@ -216,6 +216,9 @@ th{
     margin: 0 0 0 -1rem;
     z-index: 99;
 }
+.game-container img{
+    width: 75px;
+}
 audio{
     width: 14rem;
 }

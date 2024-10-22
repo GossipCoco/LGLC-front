@@ -1,13 +1,11 @@
 <template>
-  <div
-    class="dashboard-max-card-container border-none background-color-main-lineart flex-one card one-quest-container align-items-content-justify-content padding-zero"
-  >
+  <div class="dashboard-max-card-container border-none background-color-main-lineart flex-one card one-quest-container align-items-content-justify-content padding-zero">
     <CardHeader class="width-100-percent" v-bind:Title="'Liste des quêtes à réaliser'" />
     <div class="card-body">
       <Spinner v-if="showspinner" />
       <div v-if="!showspinner" class="row list-fiction-card-container">
         <div
-          class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 mb-5 mb-sm-2 display-flex-row quest--global-container"
+          class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 mb-5 mb-sm-2 display-flex-row quest--global-container flex-wrap"
           v-for="(quest, index) in allQuests"
           :key="index"
         >
@@ -20,17 +18,13 @@
           </div>
         </div>
       </div>
-      <div class="row pagination-container">
-        <div class="col-12">         
-            <pagination
-              v-if="!showspinner"
-              v-bind:nav="nav"
-              v-bind:filters="filters"
-              v-bind:getDatas="'QuestPagination'"
-              @QuestPagination="QuestPagination"
-            />          
-        </div>
-      </div>
+      <pagination
+        v-if="!showspinner"
+        v-bind:nav="nav"
+        v-bind:filters="filters"
+        v-bind:getDatas="'QuestPagination'"
+        @QuestPagination="QuestPagination"
+      />
     </div>
   </div>
 </template>

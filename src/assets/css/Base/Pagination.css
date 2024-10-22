@@ -12,8 +12,8 @@
     height: 100px;
 }
 .number-page-container {
-    background-color: rgba(var(--clear-green-01), 1);
-    width: 7rem;
+    background-color: rgba(var(--dark-green-01), 1);
+    width: 9rem;
     height: 3rem;
     border-radius: 0.25rem;
     display: flex;
@@ -21,7 +21,7 @@
     justify-content: center;
     vertical-align: middle;
     padding: 0.65rem 0;
-    margin: 2rem 0 0 0;
+    margin: -0.55rem 0 0 0;
 }
 .pagination li,.pagination-container, .pagination-container-row.col-lg-12.col-md-12.col-sm-12.col-xxl-12.col-xs-12 {
     display: flex;
@@ -77,4 +77,7 @@
 }
 .row.pagination-container-row{
     margin: -3rem 0 0 0;
+}
+.nav-space-contain{
+    font-size: 2.5em;
 }

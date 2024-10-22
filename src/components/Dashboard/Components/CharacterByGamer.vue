@@ -3,7 +3,7 @@
     <div class="card border-none background-lineart profil-card fiction-card gamer-character-card">
       <TitleHeaderDashboard v-bind:title="'Mes OC\'s'" v-bind:route="'OriginaleCharacterByUser'" v-bind:type="'Lastfictions'" />
       <div class="card-body display-flex-row align-items-content-justify-content"> 
-        <div v-for="(character, index) in gamer" :key="index" class="display-flex-row">          
+        <div v-for="(character, index) in gamer" :key="index" class="display-flex-row width-10-rem">          
           <div class="display-flex-column my-oc-character-container">
             <p class="text-white"><router-link :to="'/OriginaleCharacterDetails/'+character.UserName">{{ character.UserName }}</router-link></p>
             <div class="character-illustration-container background-size-cover" v-bind:style="{ backgroundImage: 'url(' + character.Image + ')' }"></div>            
