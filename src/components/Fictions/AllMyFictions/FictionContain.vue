@@ -1,6 +1,6 @@
 <template>
   <div
-    class="fiction-globale-container background-lineart card display-flex-column fiction-container white-text flex-one opensans-text"
+    class="fiction-globale-container background-lineart card display-flex-column fiction-container text-white flex-one opensans-text"
   >
     <div v-if="showspinner" class="d-flex justify-content-center">
       <div class="spinner-border text-success" role="status">
@@ -56,7 +56,7 @@
         <div class="col-8">
           <div class="display-flex-column flex-one">
             <div
-              class="character-chapters display-flex-column fiction-container background-summary-global-container"
+              class="character-chapters display-flex-column flex-one fiction-container background-summary-global-container"
             >
               <div class="display-flex-row character-chapters-container">
                 <div v-if="nbIllus > 0">

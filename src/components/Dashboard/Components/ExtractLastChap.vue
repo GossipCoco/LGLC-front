@@ -16,10 +16,10 @@
           </div>
           <div class="summaray-title-text">
             <p>
-              <span class="font-title-fiction-dasboard">{{ chapter.Fiction.Title }}</span>
+              <span class="last-chapter-text poppins-text font-size-1-25 font-weight-600 font-variant-small-caps">{{ chapter.Fiction.Title }}</span>
             </p>
             <p>
-              <router-link class="last-chapter-text" :to="'/chapter/' + chapter.Title">
+              <router-link class="last-chapter-text poppins-text font-size-1-25 font-weight-600 font-variant-small-caps" :to="'/chapter/' + chapter.Title">
                 {{ chapter.Title }}
               </router-link>
             </p>

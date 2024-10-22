@@ -115,7 +115,6 @@
     font-family: 'Poppins';
 }
 #dashboard .mini-rond-messages p{
-    color: rgba(var(--dark-green-02), 1);
     font-weight: 600;
 }
 .illustration-background .background-fiction-contain{

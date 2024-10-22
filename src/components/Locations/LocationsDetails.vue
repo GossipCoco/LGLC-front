@@ -10,7 +10,7 @@
       <div class="col-8 col-md-8 display-flex-column flex-one location-clan-card-details">
         <div class="card background-color-main-lineart location-clan-card">
         <div class="card-header">{{ location.Name }}</div>
-        <div class="card-body background-color-main-lineart details-infos-characters text-white location-clan-body card-details-body">         
+        <div class="card-body background-color-main-lineart details-infos-characters poppins-text text-white location-clan-body card-details-body">         
           <div class="card-text text-align-justify">
             <div class="text-align-justify"  v-html="location.Description"></div>
           </div>

@@ -22,11 +22,12 @@
         </div>
         <div class="row">
           <div class="col-7">
-            <p><span class="label-profil">Inscription</span></p>
-            <p><span class="label-profil">Dernière connextion</span></p>
-            <p><span class="label-profil">Nb de fictions</span></p>
-            <p><span class="label-profil">Nb de mots écrits</span></p>
-            <p><span class="label-profil">Vous avez</span></p>
+            <p><span class="label-profil poppins-text text-white">Inscription</span></p>
+            <p><span class="label-profil poppins-text text-white">Inscription</span></p>
+            <p><span class="label-profil poppins-text text-white">Dernière connextion</span></p>
+            <p><span class="label-profil poppins-text text-white">Nb de fictions</span></p>
+            <p><span class="label-profil poppins-text text-white">Nb de mots écrits</span></p>
+            <p><span class="label-profil poppins-text text-white">Vous avez</span></p>
           </div>
           <div class="col-5">
             <p> <span>{{ formatDate(Inscription) }}</span> </p>

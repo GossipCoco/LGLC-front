@@ -11,14 +11,14 @@
               />
           </CharacterImageDetail>
           <div class="col-8 col-md-8">
-            <div class="card-body background-color-main-lineart details-infos-characters text-white">
+            <div class="card-body background-color-main-lineart details-infos-characters poppins-text text-white">
               <div class="row">
                 <div class="col-5">
                   <h1 class="card-title">{{ currentName }}</h1>
                 </div>
                 <ButtonCreationCharacter v-bind:class="'col-3'"/>
                 <div class="col-4">                  
-                  <p class="card-text text-align-justify">
+                  <p class="card-text text-align-justify poppins-text text-white">
                     <router-link
                       to="/allCharacters"
                       type="button"

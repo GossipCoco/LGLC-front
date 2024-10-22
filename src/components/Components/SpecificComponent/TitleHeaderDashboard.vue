@@ -1,6 +1,6 @@
 <template>
   <div class="card-header dashboard-card-header display-flex-row">
-    <div v-if="type === 'username'">
+    <div class="width-100-percent" v-if="type === 'username'">
       <div class="row">
         <div class="col-12">
           <h4>
@@ -9,7 +9,7 @@
         </div>
       </div>
     </div>
-    <div v-else-if="type === 'fictions' ">
+    <div class="width-100-percent" v-else-if="type === 'fictions' ">
       <div class="row">
         <div class="col-7">
           <h4>
@@ -26,7 +26,7 @@
         </div>
       </div>
     </div>
-    <div v-else-if="type === 'Lastfictions' ">
+    <div class="width-100-percent" v-else-if="type === 'Lastfictions' ">
       <div class="row">
         <div class="col-12">
           <h4>
@@ -35,7 +35,7 @@
         </div>
       </div>
     </div>
-    <div v-else-if="type === 'myCharacters' || type === 'chapters' ">
+    <div class="width-100-percent" v-else-if="type === 'myCharacters' || type === 'chapters' ">
       <div class="row">
         <div class="col-12">
           <h4>

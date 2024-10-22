@@ -100,16 +100,35 @@
 .poppins-text{
     font-family: 'Poppins';
 }
-.font-title-fiction-dasboard{
-    color: rgba(var(--dark-green-01), 1);
-    font: 600 1.25em 'Poppins';
-    font-variant: small-caps ;
+.font-size-1-25{
+    font-size: 1.25em;
+}
+.font-weight-600{
+    font-weight: 600;
+}
+.font-variant-small-caps{    
+    font-variant: small-caps;
 }
 .text-align-justify{
     text-align: justify;
 }
 .text-white{
     color: rgba(var(--main-white), 1);
+}
+.text-clear-green{    
+    color: rgba(var(--clear-green-0), 1);
+}
+.text-middle-green{    
+    color: rgba(var(--middle-green-01), 1);
+}
+.text-dark-green{
+    color: rgba(var(--dark-green-01), 1);
+}
+.text-active{
+    color: rgba(var(--active-hover), 1);
+}
+.font-size-1em{
+    font-size: 1em;
 }
 /* BORDER */
 .border-100{
@@ -119,16 +138,12 @@
     border: none;
 }
 /* TABLE */
-
 table.table-borderless, .table.table-borderless>:not(caption)>*>*, .table-borderl {
     background-color: rgba(var(--main-white), 0);
 }
 .card-body{
     height: 80vh;
 }
-/* .card-body.all-last-three-fictions-container{
-    margin: -5rem 0 0 0;
-} */
 .card-body.all-last-three-fictions-container .list-all-fictions-globale--container{
     width: 23rem;
 }

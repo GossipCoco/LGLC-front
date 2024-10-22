@@ -4,7 +4,7 @@
     <div class="card-body display-flex-column one-quest ">
       <div class="display-flex-column quest-button-text">
         <h6>{{ quest.Title }}</h6>
-        <p class="display-flex-column quest-description white-text">{{ quest.Description }}</p>
+        <p class="display-flex-column quest-description text-white">{{ quest.Description }}</p>
         <p class="display-flex-column quest-button-link">
           <router-link
             :to="'/QuestById/' + quest.Id"

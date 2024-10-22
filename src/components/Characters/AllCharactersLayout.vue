@@ -9,7 +9,7 @@
         class="col-2 display-flex-row align-items-content-justify-content vertical-align-middle"
         style="height: 5rem"
       >
-        <p class="white-text">{{ labelFilter }}</p>
+        <p class="text-white">{{ labelFilter }}</p>
       </div>
       <InputName
         v-bind:col="'col-2'"

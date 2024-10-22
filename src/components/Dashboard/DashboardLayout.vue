@@ -37,7 +37,7 @@
     <LastBook />
   </div>
   <div class="row bottom-dashboard">
-    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+    <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12">
       <div class="row top-left-dashboard">
         <CharacterByGamer v-bind:gamer="gamer" />
       </div>
@@ -48,9 +48,10 @@
           />
       </div>
     </div>
-    <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12">
+    <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-xs-12">
       <div class="row">
         <ListAllFictions v-if="!showspinner" />
+        <GamesLinks />
       </div>
     </div>
   </div>
@@ -68,6 +69,7 @@ import ListAllFictions from "./Components/ListAllFictions.vue";
 // import MusicPlayer from "./Components/MusicPlayer.vue";
 import CharacterByGamer from "./Components/CharacterByGamer.vue";
 import LastBook from "./Components/LastBook.vue";
+import GamesLinks from "./Components/GamesLinks.vue";
 export default {
   name: "DashboardLayout",
   components: {
@@ -79,7 +81,8 @@ export default {
     ListAllFictions,
     // MusicPlayer,
     CharacterByGamer,
-    LastBook
+    LastBook,
+    GamesLinks
   },
   data() {
     return {

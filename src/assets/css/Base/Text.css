@@ -26,22 +26,13 @@ h4 {
   font-family: 'Montserrat';
 }
 .summaray-title-text p a {
-  color: rgba(var(--clear-dark-01), 1);
-  font: 600 1.25em 'Poppins';
-  font-variant: small-caps;
+  font: 600 1.25em small-caps;
 }
 .summaray-title-text p a:hover {
   color: rgba(var(--active-hover), 1);
 }
-.mini-rond-messages p {
-  color: rgba(var(--dark-green-02), 1)
-}
 .summary-text-font p {
   font-size: 0.9em;
-}
-.summaray-title-text p a.last-chapter-text {
-  color: rgba(var(--main-white), 1);
-  font: 400 1.05em 'Roboto';
 }
 .summaray-title-text p a.last-chapter-text:hover {
   color: rgba(var(--active-hover), 1);
@@ -184,8 +175,6 @@ h1.card-title {
 .user-info-text p span.label-profil {
   flex: 1;
   font-weight: 400;
-  font-family: 'Poppins';
-  color: rgba(var(--main-white), 1);
   text-transform: capitalize;
 }
 
@@ -201,11 +190,6 @@ h1.card-title {
   background-position: 50%;
   width: 100px;
 }
-.character-illustration-container img {
-  width: 100%;
-  border-radius: 100%;
-}
-
 h5.card-title {
   font-size: 1.5em;
   font-weight: 600;
@@ -213,12 +197,6 @@ h5.card-title {
 
 .character-details .card-body {
   background-color: rgba(var(--main-white), 0);
-}
-.name-characatrer-link .btn,
-.col-8.col-md-8.background-color-main-lineart.details-infos-characters,
-.col-8.col-md-8.background-color-main-lineart.details-infos-characters p {
-  color: rgba(var(--main-white), 1);
-  font-family: 'Poppins', sans-serif;
 }
 .name-characatrer-link .btn:hover{
   color: rgba(var(--active-hover), 1);
@@ -229,7 +207,9 @@ h5.card-title {
 .card-text.summary-text-font p{
   line-height: 1.2;
 }
-
+.summmary-book-height-dashboard{
+  height: 16rem;
+}
 .h5-container a{
   color:rgba(var(--dark-green-02), 1);
   font-weight: 600;

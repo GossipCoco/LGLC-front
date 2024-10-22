@@ -6,7 +6,7 @@
              <div class="image-messenger-container">
                 <router-link :to="'/user/messagerie/'+User" class="display-flex-row message-sent-container" >
                     <img src="/images/icons/envelope-solid.svg"/>
-                    <div class="mini-rond-messages"><p>{{ NbMessages }}</p></div>
+                    <div class="mini-rond-messages text-dark-green"><p>{{ NbMessages }}</p></div>
                 </router-link>
             </div>
         </div>

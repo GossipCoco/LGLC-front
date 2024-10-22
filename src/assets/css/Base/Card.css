@@ -238,9 +238,6 @@
     margin-left: 1rem;
     font-variant: small-caps;
 }
-.card-header.dashboard-card-header > div{
-    width: 100%;
-}
 .clan-group .card-body {
     height: 9rem;
 }
@@ -262,16 +259,13 @@
 }
 .row.bottom-dashboard .card.random-characters-card{
     height: 13.5rem;
-    width: 33.5rem;
+    width: 42.25rem;
 }
 .my-oc-character-container{
     margin: 0 0.5rem;
 }
 .random-characters-card .card-body{
     width: 33rem;
-}
-.random-characters-card .card-body > row{
-    width: 100%;
 }
 .list-all-fictions-globale--container.list-all-fictions-globale--container{
     width: 27rem;
@@ -285,12 +279,6 @@ li.quest-container {
 }
 .quest-container {
     margin: 1rem;
-}
-.quest-title {
-    width: 100%;
-    height: 2rem;
-    flex: 0.25;
-    text-align: center;
 }
 .quest--global-container {
     flex-wrap: wrap;
@@ -324,9 +312,7 @@ li.quest-container {
 .card-img-top.background-image-quest-image-container {
     height: 10rem;
 }
-.one-quest-container .card-header {
-    width: 100%;
-}
+
 .card-body.one-quest {
     height: 13rem;
     flex: 1;
@@ -465,9 +451,9 @@ li.quest-container {
 #original-characters-list.border {
     border: none
 }
-.card-text.summary-text-font{
+/* .card-text.summary-text-font{
     height: 3rem;
-}
+} */
 
 .card-text{
     padding: 1.5rem;
@@ -496,9 +482,6 @@ li.quest-container {
 .name_character{
     height: 3rem;
 }
-/* .card-body.last-chapter-card{
-    margin: -3rem 0 0 0;
-} */
 .summaray-title-text p{
     margin: 0.25rem 0 0.25rem 0;
     line-height: 0.95;

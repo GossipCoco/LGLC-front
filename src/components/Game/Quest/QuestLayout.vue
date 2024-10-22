@@ -2,7 +2,7 @@
   <div
     class="dashboard-max-card-container border-none background-color-main-lineart flex-one card one-quest-container align-items-content-justify-content padding-zero"
   >
-    <CardHeader v-bind:Title="'Liste des quêtes à réaliser'" />
+    <CardHeader class="width-100-percent" v-bind:Title="'Liste des quêtes à réaliser'" />
     <div class="card-body">
       <Spinner v-if="showspinner" />
       <div v-if="!showspinner" class="row list-fiction-card-container">

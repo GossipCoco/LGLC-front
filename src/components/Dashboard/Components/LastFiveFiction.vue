@@ -9,8 +9,7 @@
               <ImageRondDashboard v-bind:src=" fiction.Image" v-bind:alt="fiction.Image" />
             </div>
             <div class="summaray-title-text">
-              <p><router-link :to="'/fiction/' + fiction.Title">{{ fiction.Title }}</router-link></p>
-              <!-- <p class="white-text text-align-justify" v-html="truncateText(fiction.Summary, 35)"></p> -->
+              <p><router-link class="poppins-text text-dark-green font-size-1em" :to="'/fiction/' + fiction.Title">{{ fiction.Title }}</router-link></p>
             </div>
           </div>
         </div>        

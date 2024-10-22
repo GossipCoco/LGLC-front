@@ -21,10 +21,10 @@
           ><img :src="'/images/clans/' + clan.Symbol"
         /></CardHeader>
         <div
-          class="card-body white-text background-color-main-lineart details-infos-characters text-white "
+          class="card-body text-white background-color-main-lineart details-infos-characters poppins-text text-white "
         >
           <div class="card-text text-align-justify">
-            <div class="text-align-justify" v-html="clan.Description"></div>
+            <div class="text-align-justify poppins-text" v-html="clan.Description"></div>
             <CharactersListe v-bind:characters="clan.Warriors" />
           </div>
         </div>
