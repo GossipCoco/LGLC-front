@@ -36,9 +36,7 @@ export default {
     GetLocationById(id) {
       ClansServices.GetLocationById(id)
         .then((response) => {
-          console.log(response);
           this.location = response.data.ob;
-          console.log(this.location);
         })
         .catch((err) => {
           console.log(err);

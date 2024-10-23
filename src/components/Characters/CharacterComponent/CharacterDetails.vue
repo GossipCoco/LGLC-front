@@ -1,5 +1,5 @@
 <template>
-  <div class="character-details card mb-3">
+  <div class="character-details background-color-main-lineart card mb-3">
     <div class="parallax">
       <div class="parallax-layer parallax-layer-back width-100-percent">
         <div class="row g-0">
