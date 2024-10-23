@@ -255,10 +255,10 @@
     height: 26rem;
 }
 .row.bottom-dashboard .card.gamer-character-card{
-    height: 11.5rem;
+    height: 12rem;
 }
 .row.bottom-dashboard .card.random-characters-card{
-    height: 13.5rem;
+    height: 13rem;
     width: 42.25rem;
 }
 .my-oc-character-container{
@@ -481,9 +481,9 @@ li.quest-container {
 .character-l1{
     width: 110px;
 }
-.name_character{
+/* .name_character{
     height: 3rem;
-}
+} */
 .summaray-title-text p{
     margin: 0.25rem 0 0.25rem 0;
     line-height: 0.95;
