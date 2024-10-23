@@ -2,7 +2,7 @@
   <div class="container-fluid height-100">
     <div class="row">
       <div class="col-12">
-        <div class="flex-one profil-user-card card">
+        <div class="flex-one profil-user-card background-color-main-lineart card">
           <div class="card-body display-flex-row">
             <div class="display-flex-column align-items-content-justify-content avatar-container border-100">
               <h2>{{ Role }}</h2>

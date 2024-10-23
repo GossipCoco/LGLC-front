@@ -11,11 +11,12 @@
               />
           </CharacterImageDetail>
           <div class="col-8 col-md-8">
-            <div class="card-body background-color-main-lineart details-infos-characters poppins-text text-white">
+            <div class="card-body overflowY-X-hidden background-color-main-lineart details-infos-characters poppins-text text-white">
               <div class="row">
                 <div class="col-5">
                   <h1 class="card-title cinzel">{{ currentName }}</h1>
                 </div>
+                
                 <ButtonCreationCharacter v-bind:class="'col-3'"/>
                 <div class="col-4">                  
                   <p class="card-text text-align-justify poppins-text text-white">

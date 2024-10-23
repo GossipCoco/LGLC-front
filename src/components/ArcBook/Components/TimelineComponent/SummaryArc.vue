@@ -10,7 +10,7 @@
       "
     >
       <div class="timeline-text">
-        <div v-html="Summary" class="text-white text-align-justify"></div>
+        <div v-html="Summary" class="text-white text-align-justify poppins-text"></div>
       </div>
     </div>
   </div>

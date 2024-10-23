@@ -4,8 +4,7 @@
 .card-body h1 {
     text-align: center;
 }
-.container-fluid,.container-fluid,
-.container-fluid.row  {
+.container-fluid,.container-fluid.row  {
     margin-top: 0rem;
     overflow-y: hidden;
     overflow-x: hidden;
@@ -29,7 +28,6 @@
     height: 75vh;
     margin: 2rem;
     padding: 10rem 0 0 0;
-    background: var(--linear-greendark-clear);
 }
 .avatar-container {
     flex: 0.5;
@@ -42,21 +40,12 @@
 }
 .character-details .card-body {
     height: 91.5vh;
-    overflow-y: auto;
-    overflow-x: hidden;
-    background-color: rgba(var(--main-white), 1);
     border-radius: 12px 12px 12px 0;
     z-index: -222
 }
 
 .character-details-chatper.card.mb-3.fiction-container {
-    background: linear-gradient(90deg, rgba(var(--dark-green-02), 1) 0%, rgba(var(--clear-green-02), 1) 100%);
     height: 95vh;
-}
-
-.link-text-a {
-    color: rgba(var(--dark-green-01), 1);
-    font-family: var(--roboto-text);
 }
 .title-dashboard-container-header {
     height: 6rem;
@@ -100,7 +89,6 @@
 }
 #arc-book-container p{
     font-size: 1.05em;
-    font-family: 'Poppins';
 }
 #dashboard .mini-rond-messages p{
     font-weight: 600;

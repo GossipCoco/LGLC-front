@@ -1,57 +1,48 @@
 <template>
-    <div class="character-details-chatper card mb-3 display-flex-column fiction-container">
-
-            <div class="card-header">
-                <div class="chapter-title-content">
-                    <h1 class="chapter-title">
-                        {{ chapter.Title }}
-                    </h1>
-                </div>
+    <div class="character-details-chatper background-color-main-lineart card mb-3 display-flex-column fiction-container">
+        <div class="card-header">
+            <div class="chapter-title-content">
+                <h1 class="chapter-title">
+                    {{ chapter.Title }}
+                </h1>
             </div>
-            <div class="card-body">
-                <div class="row">
-                    <!-- <div class="col-6">
-                        <div style="color: white" v-for="(illustration, index) in AllIillustrations" :key="index">
-                            <div style="height: 150px; width: 150px;">
-                               <img :src=" illustration.IllustrationId"
-                                    :alt="illustration.IllustrationId" style="height: 150px; width: 150px;" />
-                            </div>
-                        </div>
-                    </div> -->
-                    <div class="col-12">
-                        <div class="display-flex chapter-button-content">
-                            <CreateCommentModal
-                                v-bind:fanfiction="TitleFiction"
-                                v-bind:fictionId="FictionId"
-                                v-bind:chapterId="chapterId"
-                                v-bind:chapterTitle="chapter.Title"/>
-                            <button @click="speakText" class="btn btn-primary">
-                                Lire à voix haute
-                            </button>
-                            <router-link type="button" class="btn btn-primary"
-                                :to="'/fiction/createChapter/' + chapter.FictionId" v-if="usrCurrent === AuthorId">
-                                Créer un chapitre
-                            </router-link>
-                            <router-link type="button" class="btn btn-primary" :to="'/EditChapter/' + chapter.Id"
-                                v-if="usrCurrent === AuthorId">
-                                Editer le chapitre
-                            </router-link>
-                            <router-link :to="'/fiction/' + TitleFiction" class="btn btn-primary">
-                                Retour à la liste de chapitres
-                            </router-link>
-                        </div>
-                    </div>
-                </div>
-                <div class="display-flex-row chapter-global-content">                   
-                    <div class="chapter-image-content"
-                        v-bind:style="{ backgroundImage: 'url(' + ImageChapter + ')' }">
-                    </div>
-                    <div class="chapter-text-content">
-                        <p class="text-align-justify" v-html="Content"></p>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-12">
+                    <div class="display-flex chapter-button-content">
+                        <CreateCommentModal
+                            v-bind:fanfiction="TitleFiction"
+                            v-bind:fictionId="FictionId"
+                            v-bind:chapterId="chapterId"
+                            v-bind:chapterTitle="chapter.Title"/>
+                        <button @click="speakText" class="btn btn-primary">
+                            Lire à voix haute
+                        </button>
+                        <router-link type="button" class="btn btn-primary"
+                            :to="'/fiction/createChapter/' + chapter.FictionId" v-if="usrCurrent === AuthorId">
+                            Créer un chapitre
+                        </router-link>
+                        <router-link type="button" class="btn btn-primary" :to="'/EditChapter/' + chapter.Id"
+                            v-if="usrCurrent === AuthorId">
+                            Editer le chapitre
+                        </router-link>
+                        <router-link :to="'/fiction/' + TitleFiction" class="btn btn-primary">
+                            Retour à la liste de chapitres
+                        </router-link>
                     </div>
                 </div>
             </div>
-        </div>      
+            <div class="display-flex-row chapter-global-content">                   
+                <div class="chapter-image-content"
+                    v-bind:style="{ backgroundImage: 'url(' + ImageChapter + ')' }">
+                </div>
+                <div class="chapter-text-content">
+                    <p class="text-align-justify" v-html="Content"></p>
+                </div>
+            </div>
+        </div>
+    </div>      
 </template>
 <script>
 import FictionService from '../../../services/FictionService'

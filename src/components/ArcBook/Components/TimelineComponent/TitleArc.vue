@@ -9,7 +9,7 @@
         animation-name: fadeInLeft;
       "
     >
-      <p class="text-white">{{ Title }}</p>
+      <p class="text-white poppins-text">{{ Title }}</p>
     </div>
   </div>
   <div v-else>

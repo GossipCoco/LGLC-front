@@ -8,11 +8,12 @@
         
       </CharacterImageDetail>
       <div class="col-8 col-md-8">
-        <div class="card-body background-color-main-lineart details-infos-characters text-white">
+        <div class="card-body overflowY-X-hidden background-color-main-lineart details-infos-characters text-white">
           <div class="display-flex-row">
             <div class="display-flex flex-one">
               <h1 class="text-white card-title cinzel">{{ character.UserName }}</h1>
             </div>
+            <router-link  class="btn btn-primary" :to="'/EditAnOriginalCharacter/'+ character.UserName">Editer le personnage</router-link>
             <div class="display-flex flex-one justify-content-right">
               <router-link
                 class="btn btn-primary"
