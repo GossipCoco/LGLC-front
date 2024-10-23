@@ -1,16 +1,11 @@
 <template>
-  <div
-    class="card card-image-layout clan-detail-layout mb-3 background-color-white display-flex-row"
-  >
+  <div class="card card-image-layout clan-detail-layout mb-3 background-color-white display-flex-row">
     <div class="row g-0">
-      <div
-        class="card-image clan-detail-card background-color-white border-card-color flex-one display-flex-row align-items-content-justify-content background-size-cover"
-        v-bind:style="{ backgroundImage: 'url(' + location.Image + ')' }"
-      ></div>
+      <cardImageBackground v-bind:Image=" location.Image"/>
       <div class="col-8 col-md-8 display-flex-column flex-one location-clan-card-details">
         <div class="card background-color-main-lineart location-clan-card">
-        <div class="card-header">{{ location.Name }}</div>
-        <div class="card-body background-color-main-lineart details-infos-characters poppins-text text-white location-clan-body card-details-body">         
+          <CardHeader v-bind:Title="location.Name" />        
+        <div class="card-body location-clan-body text-white background-color-main-lineart details-infos-characters poppins-text text-white">         
           <div class="card-text text-align-justify">
             <div class="text-align-justify"  v-html="location.Description"></div>
           </div>
@@ -22,8 +17,11 @@
 </template>
 <script>
 import ClansServices from "../../services/ClansServices";
+import cardImageBackground from "../Components/GenericComponent/cardImageBackground.vue";
+import CardHeader from "../Components/GenericComponent/CardHeader.vue";
 export default {
   name: "LocationDetails",
+  components:{CardHeader, cardImageBackground},
   data() {
     return {
       url: null,

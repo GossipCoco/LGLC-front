@@ -41,7 +41,7 @@
     padding: 0;
 }
 .character-details .card-body {
-    height: 85vh;
+    height: 91.5vh;
     overflow-y: auto;
     overflow-x: hidden;
     background-color: rgba(var(--main-white), 1);
@@ -78,9 +78,6 @@
 }
 .all-characters-container-card {
     margin-top: 1rem;
-}
-.character-l1 {
-    margin: 0 1rem;
 }
 .character-l1 img {
    width: 75%;

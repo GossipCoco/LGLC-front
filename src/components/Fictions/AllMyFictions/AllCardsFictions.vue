@@ -16,7 +16,7 @@
                 Auteur : &nbsp;
                 <router-link
                   :to="'/getUserBy/' + fiction.User.UserName"
-                  class="text-dark-green"
+                  class="text-dark-green montesserat"
                 >
                   {{ fiction.User.UserName }}
                 </router-link>
