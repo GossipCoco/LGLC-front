@@ -10,11 +10,7 @@
       />
     </div>
   </div>
-  <div v-if="showspinner" class="d-flex justify-content-center">
-    <div class="spinner-border text-success" role="status">
-      <span class="visually-hidden">Loading...</span>
-    </div>
-  </div>
+  <Spinner v-if="showspinner" />  
   <div class="row top-dashboard">
     <AvatarCard
       v-if="!showspinner"
@@ -70,6 +66,7 @@ import ListAllFictions from "./Components/ListAllFictions.vue";
 import CharacterByGamer from "./Components/CharacterByGamer.vue";
 import LastBook from "./Components/LastBook.vue";
 import GamesLinks from "./Components/GamesLinks.vue";
+import Spinner from "../Components/GenericComponent/Spinner.vue";
 export default {
   name: "DashboardLayout",
   components: {
@@ -82,7 +79,8 @@ export default {
     // MusicPlayer,
     CharacterByGamer,
     LastBook,
-    GamesLinks
+    GamesLinks,
+    Spinner
   },
   data() {
     return {

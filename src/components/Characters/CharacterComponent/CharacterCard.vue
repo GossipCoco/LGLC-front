@@ -1,15 +1,14 @@
 <template> 
-
-  <div class="row all-characters-container-card" id="all-characters-container-card">
-    <div class="col-12 mb-3 mb-sm-0 display-flex-row align-items-content-justify-content character-container">
-    <div
-      v-for="(character, index) in characters_props"
-      :key="index"
-      class="character-card align-items-content-justify-content border-none text-white background-color-dark-green-01 background-size-cover card flex-one opensans-text"
-    >
-      <character-text v-bind:character="character" />
+  <div  id="all-characters-container-card" class="row all-characters-container-card">
+    <div class="col-12 mb-3 mb-sm-0 display-flex-row align-items-content-justify-content character-container overflowY-X-hidden">
+      <div
+        v-for="(character, index) in characters_props"
+        :key="index"
+        class="character-card border-none text-white background-color-dark-green-01 background-size-cover card flex-one opensans-text"
+      >
+        <character-text v-bind:character="character" />
+      </div>
     </div>
-  </div>
   </div>
 </template>
 <script>
@@ -17,7 +16,6 @@ import CharacterText from "./CharacterText.vue";
 export default {
   name: "CharacterCard",
   props: ["characters_props"],
-
   inject: ["allCharacters"],
   components: { CharacterText },
   data() {

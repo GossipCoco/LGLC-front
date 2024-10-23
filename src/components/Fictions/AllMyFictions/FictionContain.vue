@@ -2,11 +2,7 @@
   <div
     class="fiction-globale-container background-lineart card display-flex-column fiction-container  overflowY-X-hiddenpadding-0-rem text-white flex-one opensans-text"
   >
-    <div v-if="showspinner" class="d-flex justify-content-center">
-      <div class="spinner-border text-success" role="status">
-        <span class="visually-hidden">Loading...</span>
-      </div>
-    </div>
+    <Spinner v-if="showspinner" />
     <div
       id="card-display-flex-column fiction-container"
       class="card-header display-flex-row"
@@ -108,6 +104,7 @@ import CarrouselCharacter from "./CarrouselCharacter.vue";
 import TitleFiction from "./TitleFiction.vue";
 import ListOfChapter from "./ListOfChapters.vue";
 import CreateCommentModal from "../Comments/CreateCommentModal.vue";
+import Spinner from "../../Components/GenericComponent/Spinner.vue";
 
 export default {
   name: "FictionContain",
@@ -118,8 +115,8 @@ export default {
     TitleFiction,
     CarrouselCharacter,
     ListOfChapter,
-    CreateCommentModal
-
+    CreateCommentModal,
+    Spinner
   },
   data() {
     return {

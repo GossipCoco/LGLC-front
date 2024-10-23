@@ -45,6 +45,9 @@
 .card-image img {
     width: 75%;
 }
+.height-character{
+    height: 5rem
+}
 .dashboard-max-card-container,
 .character-details-chatper.card{
     margin: 2rem;

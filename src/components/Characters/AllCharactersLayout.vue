@@ -1,14 +1,7 @@
 <template>
-  <div
-    class="height-fixe character-container list-all-characters-container"
-  >
-    <div
-      class="row row-filter background-color-dark-green-01 display-flex vertical-align-middle"
-    >
-      <div
-        class="col-2 display-flex-row align-items-content-justify-content vertical-align-middle"
-        style="height: 5rem"
-      >
+  <div class="height-fixe character-container list-all-characters-container">
+    <div class="row row-filter background-color-dark-green-01 display-flex vertical-align-middle">
+      <div class="col-2 display-flex-row align-items-content-justify-content vertical-align-middle height-character">
         <p class="text-white">{{ labelFilter }}</p>
       </div>
       <InputName
@@ -34,16 +27,11 @@
         @getgrade="getgrades"
       />
     </div>
-    <character-card
-      v-bind:characters_props="allCharacters"
-      v-if="!showMyCharacter"
-    />
+    <character-card v-bind:characters_props="allCharacters" v-if="!showMyCharacter"/>
     <div class="row pagination-container-row">
       <div class="pagination-container">
         <div class="row bottom-top-dashboard">
-          <div v-if="showspinner" class="d-flex justify-content-center">
-            <div class="spinner-border text-success" role="status"></div>
-          </div>
+          <Spinner v-if="showspinner" />
         </div>
         <pagination
           v-if="!showspinner && nav.pages > 0"
@@ -66,10 +54,11 @@ import GenericSelect from "../Components/FormComponent/GenericSelect.vue";
 import InputName from "../Components/FormComponent/InputName.vue";
 import CharacterCard from "./CharacterComponent/CharacterCard.vue";
 import Pagination from "../Components/GenericComponent/Pagination.vue";
+import Spinner from "../Components/GenericComponent/Spinner.vue";
 
 export default {
   name: "AllCharacters",
-  components: { CharacterCard, Pagination, GenericSelect, InputName },
+  components: { CharacterCard, Pagination, GenericSelect, InputName, Spinner },
   data() {
     return {
       labelFilter: "Chercher des fictions par",
