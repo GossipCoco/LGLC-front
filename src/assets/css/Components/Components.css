@@ -160,6 +160,9 @@ th{
     height: 20vh;
     background-size: cover;
 }
+.dashboard-max-card-container.card-height.fiction-container .card-body{
+    height: 80vh;
+}
 .fiction-container.game-card{
     height: 90vh;
     background-size: cover;

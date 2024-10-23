@@ -174,3 +174,6 @@ table.table-borderless, .table.table-borderless>:not(caption)>*>*, .table-border
 .card-body.all-last-three-fictions-container .list-all-fictions-globale--container{
     width: 23rem;
 }
+.dashboard-max-card-container.card-height .card-body{
+    height: 80vh;
+}

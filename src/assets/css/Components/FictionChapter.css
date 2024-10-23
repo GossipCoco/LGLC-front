@@ -78,6 +78,9 @@ th {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(var(--main-black), 0.1);
 }
+.dashboard-max-card-container.card-height .card-body{
+    height: 80vh;
+}
 .chapter-title-content {
     text-align: center;
 }
