@@ -48,11 +48,11 @@
 .height-character{
     height: 5rem
 }
-.dashboard-max-card-container,
-.character-details-chatper.card{
+.dashboard-max-card-container, .character-details-chatper.card,.profil-user-card, .admin-dashboard{
     margin: 2rem;
 }
-.dashboard-max-card-container.card.one-quest-container{
+.dashboard-max-card-container.card.one-quest-container,
+.dashboard-max-card-container.one-quest-container{
     margin: 1rem 0 1rem 1rem;
 }
 .fiction-globale-container.card.fiction-container {
@@ -141,6 +141,7 @@
 .character-card.card .card-image {
     height: 250px;
     width: 250px;
+    margin: 0.75rem 0 0 0;
     border-radius: 100% 100% 0 0;
     border: 6px solid rgba(var(--clear-green-02), 1);
 }
@@ -204,7 +205,8 @@
 .clan-group .card-body {
     height: 9rem;
 }
-.card-group.clan-group .card {
+.card-group.clan-group .card, .avatar-gamer, .quest-container,
+.summary-container, #quest-by-id, #quest-by-id .quest-by-id-card.card.quest-by-id-card.background-color-main-lineart {
     margin: 1rem;
 }
 .row.top-dashboard .card {
@@ -236,9 +238,6 @@
 li.quest-container {
     margin: 0 1rem;
 }
-.quest-container {
-    margin: 1rem;
-}
 .quest--global-container {
     flex: 0.25;
     height: 18rem;
@@ -247,9 +246,7 @@ li.quest-container {
     height: 16rem;
     width: 20rem;
 }
-.dashboard-max-card-container.one-quest-container{
-    margin: 1rem 0 1rem 1rem;
-}
+
 .quest-image-container,
 .background-image-quest-image-container {
     background-position: 50% 55%;
@@ -378,7 +375,6 @@ li.quest-container {
 .avatar-gamer{
     width: 200px;
     height: 150px;
-    margin: 1rem;
 }
 #original-characters-list{
     margin:00;
