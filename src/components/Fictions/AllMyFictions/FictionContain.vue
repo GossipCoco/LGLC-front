@@ -1,6 +1,6 @@
 <template>
   <div
-    class="fiction-globale-container background-lineart card display-flex-column fiction-container text-white flex-one opensans-text"
+    class="fiction-globale-container background-lineart card display-flex-column fiction-container padding-0-rem text-white flex-one opensans-text"
   >
     <div v-if="showspinner" class="d-flex justify-content-center">
       <div class="spinner-border text-success" role="status">

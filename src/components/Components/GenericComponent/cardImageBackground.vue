@@ -1,6 +1,6 @@
 <template>
       <div
-      class="card-image clan-detail-card background-color-white border-card-color  display-flex-row align-items-content-justify-content background-size-cover"
+      class="card-image clan-detail-card background-color-white border-card-color flex-one display-flex-row align-items-content-justify-content background-size-cover"
       v-bind:style="{
         backgroundImage: 'url(' + Image + ')',
       }"
