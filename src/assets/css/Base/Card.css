@@ -127,9 +127,7 @@
 }
 .image-illustration-right{
     border-radius: 20% 0 0 20%;
-    border-top: 1rem solid rgba(var(--clear-green-02), 1);
-    border-bottom: 1rem solid rgba(var(--clear-green-02), 1);
-    border-left: 1rem solid rgba(var(--clear-green-02), 1);
+    border : 1rem solid rgba(var(--clear-green-02), 1);
 }
 .border-card-color{
     height: 44rem;

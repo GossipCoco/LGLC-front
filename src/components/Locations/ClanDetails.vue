@@ -17,12 +17,10 @@
         </div>
       </cardImageBackground>
       <div class="col-8 col-md-8 flex-one background-color-main-lineart display-flex-column location-clan-card-details">
-        <CardHeader v-bind:Title="clan.Name"
-          ><img :src="'/images/clans/' + clan.Symbol"
-        /></CardHeader>
-        <div
-          class="card-body text-white background-color-main-lineart details-infos-characters poppins-text text-white "
-        >
+        <CardHeader v-bind:Title="clan.Name">
+          <img :src="'/images/clans/' + clan.Symbol"/>
+        </CardHeader>
+        <div class="card-body text-white background-color-main-lineart details-infos-characters poppins-text text-white">
           <div class="card-text text-align-justify">
             <div class="text-align-justify poppins-text" v-html="clan.Description"></div>
             <CharactersListe v-bind:characters="clan.Warriors" />

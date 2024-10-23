@@ -11,7 +11,7 @@
         <div class="card-body background-color-main-lineart details-infos-characters text-white">
           <div class="display-flex-row">
             <div class="display-flex flex-one">
-              <h1>{{ character.UserName }}</h1>
+              <h1 class="text-white card-title cinzel">{{ character.UserName }}</h1>
             </div>
             <div class="display-flex flex-one justify-content-right">
               <router-link

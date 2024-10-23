@@ -45,8 +45,7 @@
     overflow-y: auto;
     overflow-x: hidden;
     background-color: rgba(var(--main-white), 1);
-    border-radius: 12px;
-    border: 1rem solid rgba(var(--clear-green-02), 1);
+    border-radius: 12px 12px 12px 0;
     z-index: -222
 }
 
