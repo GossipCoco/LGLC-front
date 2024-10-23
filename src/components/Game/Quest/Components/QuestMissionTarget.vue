@@ -1,5 +1,5 @@
 <template>
-  <div class="quest-details">
+  <div class="quest-details align-items-content-justify-content">
     <div class="display-flex-column">
       <div class="display-flex-column">
         <p class="text-align-justify flex-one">{{ questDatas.Description }}</p>

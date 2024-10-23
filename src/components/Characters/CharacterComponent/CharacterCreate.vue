@@ -2,15 +2,16 @@
   <div
     class="display-flex-column form-character-container  overflowY-X-hidden  flex-one opensans-text"
   >
-    <div
-      class="card border-none text-white display-flex-column background-color-dark-green-01 card-form-create-character align-items-content-justify-content flex-one mb-12 text-white"
+    <div class="
+      card border-none text-white display-flex-column background-color-dark-green-01
+      card-form-create-character overflowY-X-hidden align-items-content-justify-content flex-one mb-12 text-white"
     >
       <CardHeader v-bind:Title="'Création de personnage'" />
       <div class="card-body">
         <form class="create-character-form" @submit.stop.prevent="onSubmit">
           <Transition name="slide-fade">
             <div v-if="formPart1" class="character-detail-form">
-              <div class="row form-first-part-container">
+              <div class="row form-first-part-container overflowY-X-hidden">
                 <InputName
                   v-bind:col="'col-12 col-md-12'"
                   v-bind:forId="'inputName'"

@@ -5,12 +5,12 @@
       <Spinner v-if="showspinner" />
       <div v-if="!showspinner" class="row list-fiction-card-container">
         <div
-          class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 mb-5 mb-sm-2 display-flex-row quest--global-container flex-wrap"
+          class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 mb-5 mb-sm-2 display-flex-row flex-wrap quest--global-container flex-wrap"
           v-for="(quest, index) in allQuests"
           :key="index"
         >
           <div
-            class="card display-flex-column quest-container mb-4 background-color-main-lineart"
+            class="card display-flex-column quest-container flex-wrap mb-4 background-color-main-lineart"
             v-for="(image, index) in quest.QuestImages"
             :key="index"
           >

@@ -4,7 +4,7 @@
 .card-body h1 {
     text-align: center;
 }
-.container-fluid,.container-fluid.row  {
+.container-fluid, .container-fluid.row  {
     margin-top: 0rem;
     overflow-y: hidden;
     overflow-x: hidden;
@@ -115,7 +115,6 @@
 .illustration-background .background-fiction-contain .characters-list-container img{
     width: 150px;
 }
-
 .all-characters-list-containers{
     width: 90vh;
     flex-wrap: wrap;

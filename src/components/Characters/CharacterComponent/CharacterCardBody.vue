@@ -1,6 +1,6 @@
 <template>
   <div class="card-body">
-    <p style="text-align: center">
+    <p class="align-items-content-justify-content">
       <span class="name-characatrer-link">
         <router-link
           :to="route + name"
