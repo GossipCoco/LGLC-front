@@ -40,8 +40,7 @@
                         v-bind:kitty="kitty"
                         v-bind:apprentice="apprentice"
                         v-bind:warrior="warrior"
-                      />
-                      
+                      />                      
                       <div class="clan-logo-container">
                         <router-link type="button" class="btn btn-primary" :to="'/clan/'+ClanId">
                           <img
