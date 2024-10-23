@@ -14,7 +14,7 @@
             <div class="card-body background-color-main-lineart details-infos-characters poppins-text text-white">
               <div class="row">
                 <div class="col-5">
-                  <h1 class="card-title">{{ currentName }}</h1>
+                  <h1 class="card-title cinzel">{{ currentName }}</h1>
                 </div>
                 <ButtonCreationCharacter v-bind:class="'col-3'"/>
                 <div class="col-4">                  

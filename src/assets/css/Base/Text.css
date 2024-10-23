@@ -130,21 +130,13 @@ h4 {
   display: flex;
   flex-direction: row;
 }
-
-.user-information-paragraph {
-  font-family: 'Roboto';
-  color: rgba(var(--main-white), 1)
-}
-
 .informations-gamer-container {
   height: 45vh;
   overflow-y: scroll;
 }
-
 h1.card-title {
   font-size: 2.75em;
 }
-
 .star {
   fill: #ccc;
   /* Couleur des étoiles non sélectionnées */
@@ -152,34 +144,19 @@ h1.card-title {
   /* Indique que les étoiles sont cliquables */
   transition: fill 0.3s ease;
 }
-
 .star.checked {
   fill: rgba(var(--active-hover), 1);
   /* Couleur des étoiles sélectionnées (rating) */
 }
-
 .user-info-text p {
-  display: flex;
-  flex-direction: row;
   line-height: 0.85;
 }
-
 .user-info-text p span {
   font-weight: 600;
-  color: rgba(var(--dark-green-01), 1);
 }
-
 .user-info-text p span.label-profil {
-  flex: 1;
   font-weight: 400;
   text-transform: capitalize;
-}
-
-.character-description-container {
-  max-height: 2rem;
-  overflow-y: auto;
-  flex: 1;
-  padding: 0 0.5rem 0 0.25rem;
 }
 .character-illustration-container{
   border-radius: 20px 20px 20px 20px;
@@ -191,16 +168,10 @@ h5.card-title {
   font-size: 1.5em;
   font-weight: 600;
 }
-
-.character-details .card-body {
-  background-color: rgba(var(--main-white), 0);
-}
 .name-characatrer-link .btn:hover{
   color: rgba(var(--active-hover), 1);
 }
-.h5-container h6{
-  color:rgba(var(--main-black), 1)
-}
+
 .card-text.summary-text-font p{
   line-height: 1.2;
 }

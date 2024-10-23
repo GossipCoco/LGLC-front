@@ -16,7 +16,7 @@
                 Auteur : &nbsp;
                 <router-link
                   :to="'/getUserBy/' + fiction.User.UserName"
-                  class="author-text"
+                  class="text-dark-green"
                 >
                   {{ fiction.User.UserName }}
                 </router-link>

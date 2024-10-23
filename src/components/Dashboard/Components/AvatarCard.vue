@@ -22,19 +22,19 @@
         </div>
         <div class="row">
           <div class="col-7">
-            <p><span class="label-profil poppins-text text-white">Inscription</span></p>
-            <p><span class="label-profil poppins-text text-white">Inscription</span></p>
-            <p><span class="label-profil poppins-text text-white">Dernière connextion</span></p>
-            <p><span class="label-profil poppins-text text-white">Nb de fictions</span></p>
-            <p><span class="label-profil poppins-text text-white">Nb de mots écrits</span></p>
-            <p><span class="label-profil poppins-text text-white">Vous avez</span></p>
+            <p class="display-flex-row"><span class="label-profil poppins-text text-white flex-one">Inscription</span></p>
+            <p class="display-flex-row"><span class="label-profil poppins-text text-white flex-one">Inscription</span></p>
+            <p class="display-flex-row"><span class="label-profil poppins-text text-white flex-one">Dernière connextion</span></p>
+            <p class="display-flex-row"><span class="label-profil poppins-text text-white flex-one">Nb de fictions</span></p>
+            <p class="display-flex-row"><span class="label-profil poppins-text text-white flex-one">Nb de mots écrits</span></p>
+            <p class="display-flex-row"><span class="label-profil poppins-text text-white flex-one">Vous avez</span></p>
           </div>
           <div class="col-5">
-            <p> <span>{{ formatDate(Inscription) }}</span> </p>
-            <p> <span>{{ formatDate(LastConnexion) }}</span></p>
-            <p><span>{{ nBFiction }}</span>&nbsp;fictions</p>
-            <p><span> {{ totalWords }}</span>&nbsp;mots.</p>
-            <p><span>{{ totalPoints }}</span>&nbsp; points.</p>
+            <p class="display-flex-row"><span>{{ formatDate(Inscription) }}</span> </p>
+            <p class="display-flex-row"><span>{{ formatDate(LastConnexion) }}</span></p>
+            <p class="display-flex-row"><span>{{ nBFiction }}</span>&nbsp;fictions</p>
+            <p class="display-flex-row"><span> {{ totalWords }}</span>&nbsp;mots.</p>
+            <p class="display-flex-row"><span>{{ totalPoints }}</span>&nbsp; points.</p>
           </div>
         </div>
       </div>

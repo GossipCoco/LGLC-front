@@ -1,12 +1,12 @@
 <template>
   <div class="padding-2-rem">
     <div class="display-flex-column">
-      <div class="user-information-paragraph">
+      <div class="roboto roboto">
         {{ usrInformation.LastName }} {{ usrInformation.FirstName }} -
         {{ usrInformation.UserName }}
       </div>
-      <p class="user-information-paragraph">{{ usrInformation.Description }}</p>
-      <p class="user-information-paragraph">
+      <p class="roboto roboto">{{ usrInformation.Description }}</p>
+      <p class="roboto roboto">
         {{ usrInformation.Biography }} <br />
       </p>
     </div>
@@ -27,7 +27,7 @@
             :alt="gamer.UserName"
           />
           <div class="card-body">
-            <h3 class="card-title">{{ gamer.UserName }}</h3>
+            <h3 class="card-title cinzel">{{ gamer.UserName }}</h3>
             <div class="information-character-container  overflowY-X-hidden">
               <p>Clan de naissance : {{ gamer.ClanId }}</p>
               <p>Statut actuel : {{ gamer.Status }}</p>

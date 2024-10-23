@@ -22,7 +22,7 @@
         <div class="col-8 select-message-container" v-if="selectedMessage">
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title">{{ selectedMessage.Title }}</h3>
+              <h3 class="card-title cinzel">{{ selectedMessage.Title }}</h3>
             </div>
             <div class="card-body">
               <div class="send--message-by-container">

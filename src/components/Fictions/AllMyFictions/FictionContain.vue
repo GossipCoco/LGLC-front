@@ -1,6 +1,6 @@
 <template>
   <div
-    class="fiction-globale-container background-lineart card display-flex-column fiction-container padding-0-rem text-white flex-one opensans-text"
+    class="fiction-globale-container background-lineart card display-flex-column fiction-container  overflowY-X-hiddenpadding-0-rem text-white flex-one opensans-text"
   >
     <div v-if="showspinner" class="d-flex justify-content-center">
       <div class="spinner-border text-success" role="status">
@@ -40,7 +40,7 @@
       <div class="row">
         <div class="col-2">
           <div
-            class="display-flex-column image-fiction-container background-size-cover"
+            class="display-flex-column image-fiction-container  overflowY-X-hidden background-size-cover"
             v-bind:style="{
               backgroundImage: 'url(' + backgroundImageFiction + ')',
             }"
@@ -56,7 +56,7 @@
         <div class="col-8">
           <div class="display-flex-column flex-one">
             <div
-              class="character-chapters display-flex-column flex-one fiction-container background-summary-global-container"
+              class="character-chapters display-flex-column flex-one fiction-container  overflowY-X-hiddenbackground-summary-global-container"
             >
               <div class="display-flex-row character-chapters-container">
                 <div v-if="nbIllus > 0">
