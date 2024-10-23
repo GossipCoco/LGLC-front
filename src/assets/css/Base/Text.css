@@ -1,26 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import '../variables.scss';
 
-a {
-  text-decoration: none;
-  color: inherit;
-  color: rgba(var(--main-white), 1);
-  font-family: var(--opensans-text);
-}
-a, h1, h2, h3, h4, h5, h6, h4 a, .h5-container a {
-  font-family: 'Cinzel';
-  margin: 0;
-  color: rgba(var(--main-white), 1)
-}
-h2,h3 {
-  font-family: var(--montserratRegular);
-  font-weight: 600;
-}
-h4 {
-  font-size: 1.25rem;
-}
+
 .title-author-container h1 {
-  font: 500 2.5rem 'Cinzel' petite-caps;
+  font: 500 2.5rem petite-caps;
 }
 .summaray-title-text p a {
   font: 600 1.25em small-caps;

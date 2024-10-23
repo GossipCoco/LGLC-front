@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-12">
           <h4>
-          <router-link :to="'/getUserBy/' + title">{{ title }}</router-link>         
+          <router-link class="text-white" :to="'/getUserBy/' + title">{{ title }}</router-link>         
           </h4>
         </div>
       </div>
@@ -12,14 +12,14 @@
     <div class="width-100-percent" v-else-if="type === 'fictions' ">
       <div class="row">
         <div class="col-7">
-          <h4>
+          <h4 class="text-white" >
           {{ title }}          
           </h4>
         </div>
         <div class="col-5">
           <router-link v-if="nameRoute"
             type="button"
-            class="btn btn-primary"
+            class="btn btn-primary text-white"
             :to="route"
             >{{ nameRoute }}</router-link
           >
@@ -30,7 +30,7 @@
       <div class="row">
         <div class="col-12">
           <h4>
-            <router-link :to="route">{{ title }}</router-link>            
+            <router-link class="text-white"  :to="route">{{ title }}</router-link>            
           </h4>
         </div>
       </div>
@@ -38,7 +38,7 @@
     <div class="width-100-percent" v-else-if="type === 'myCharacters' || type === 'chapters' ">
       <div class="row">
         <div class="col-12">
-          <h4>
+          <h4 class="text-white" >
           {{ title }}          
           </h4>
         </div>        

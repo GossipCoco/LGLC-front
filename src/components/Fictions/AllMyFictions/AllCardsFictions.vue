@@ -12,7 +12,7 @@
         </div>
           <div class="col-8">
             <div class="h5-container">
-              <div class="display-flex-row">
+              <div class="display-flex-row text-dark-green montesserat">
                 Auteur : &nbsp;
                 <router-link
                   :to="'/getUserBy/' + fiction.User.UserName"
@@ -21,8 +21,8 @@
                   {{ fiction.User.UserName }}
                 </router-link>
               </div>
-              <h5 class="card-title">
-                <router-link :to="'/fiction/' + fiction.Title">{{
+              <h5 class="card-title text-dark-green montesserat">
+                <router-link :to="'/fiction/' + fiction.Title" class="text-dark-green montesserat">{{
                   fiction.Title
                 }}</router-link>
               </h5>

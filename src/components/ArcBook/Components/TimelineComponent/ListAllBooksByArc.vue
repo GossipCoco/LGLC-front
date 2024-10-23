@@ -10,10 +10,10 @@
               "
             >
               <div class="timeline-text">
-                <h4>Liste des romans</h4>
+                <h4 class="text-white">Liste des romans</h4>
                 <div v-for="(book, index) in Books" :key="index">
                   <p>
-                    <router-link :to="'/BookByTitle/' + book.Title">{{
+                    <router-link class="text-white" :to="'/BookByTitle/' + book.Title">{{
                       book.Title
                     }}</router-link>
                   </p>

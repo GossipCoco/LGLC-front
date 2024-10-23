@@ -139,7 +139,7 @@
 .text-align-justify{
     text-align: justify;
 }
-.roboto{
+.text-white{
     color: rgba(var(--main-white), 1);
 }
 .text-clear-green{    

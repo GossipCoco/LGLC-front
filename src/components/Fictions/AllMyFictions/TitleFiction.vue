@@ -1,10 +1,10 @@
 <template>
   <div class="title-author-container">
-    <h1>{{ Title }}</h1>
+    <h1 class="text-white">{{ Title }}</h1>
     <div class="info-fan">
-      <h3>
+      <h3 class="text-white">
         par
-        <router-link :to="'/getUserBy/' + Author" class="author-text">
+        <router-link :to="'/getUserBy/' + Author" class="text-white author-text cinzel">
           {{ Author }}
         </router-link>
       </h3>
