@@ -108,7 +108,7 @@
             @change="onFileChange"
           />
         </div>
-        <div class="col-md-2 create-character-button">
+        <div class="col-md-2 create-character-button display-flex">
           <button
             class="btn btn-primary"
             type="submit"

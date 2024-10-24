@@ -9,7 +9,7 @@
     border-radius: 12px;
 }
 .carousel {
-    width: 19rem;
+    width: 14rem;
 }
 .carousel__item img {
     width: 100px;
@@ -17,22 +17,12 @@
 th {
     font-weight: 200;
 }
-.title-dashboard-container {
-    flex: 1;
-    justify-content: right;
-    text-align: right;
-}
 .bottom-dashboard .card {
     height: 40vh;
     margin: 1rem auto;
 }
-.chapter-image-content,
-.chapter-text-content {
-    flex: 1
-}
 .chapter-image-content {
     width: 500px;
-    background-size: cover;
     background-position: 20%;
     height: 700px;
     flex: 0.5;
@@ -46,11 +36,6 @@ th {
 }
 .chapter-text-content {
     height: 65vh;
-    overflow-y: scroll;
-}
-.title-author-container {
-    flex: 1;
-    text-align: center;
 }
 .card-header.fiction-chapter-container {
     margin: -2rem -2rem 0 0;

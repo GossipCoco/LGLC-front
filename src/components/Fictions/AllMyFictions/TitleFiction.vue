@@ -1,5 +1,5 @@
 <template>
-  <div class="title-author-container">
+  <div class="title-author-container display-flex-column flex-one">
     <h1 class="text-white">{{ Title }}</h1>
     <div class="info-fan">
       <h3 class="text-white">

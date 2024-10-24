@@ -2,7 +2,7 @@
   <div class="character-container  overflowY-scroll overflowX-hidden clans-location-container">
     <div class="display-flex-row card-group clan-group">
       <div v-for="(clan, index) in clans" :key="index">
-        <div class="card location-clan-background-width-container">
+        <div class="card background-color-dark-green-01 location-clan-background-width-container">
           <div
             class="card-image clan-card background-size-cover"
             v-bind:style="{

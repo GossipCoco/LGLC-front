@@ -2,35 +2,35 @@
   <div class="dashboard-max-card-container card-height border-none background-color-main-lineart flex-one card display-flex-column overflowY-X-hiddengame-card">
     <CardHeader v-bind:Title="'Lancé de Dés'" />
     <div class="card-body">
-      <div class="game-roll-container">
+      <div class="display-flex align-items-content-justify-content">
         <div class="text-game-container  flex-one">
-          <p>Utilisateur actuel : {{ userCurrent }}</p>
+          <p class="white-text">Utilisateur actuel : {{ userCurrent }}</p>
         </div>
 
-        <div class="result-roll-dice">
+        <div class="display-flex-row">
           <div class="dice" :class="diceClass(dice1)">
-            <div class="face face1">1</div>
-            <div class="face face2">2</div>
-            <div class="face face3">3</div>
-            <div class="face face4">4</div>
-            <div class="face face5">5</div>
-            <div class="face face6">6</div>
+            <div class="face face1 display-flex align-items-content-justify-content">1</div>
+            <div class="face face2 display-flex align-items-content-justify-content">2</div>
+            <div class="face face3 display-flex align-items-content-justify-content">3</div>
+            <div class="face face4 display-flex align-items-content-justify-content">4</div>
+            <div class="face face5 display-flex align-items-content-justify-content">5</div>
+            <div class="face face6 display-flex align-items-content-justify-content">6</div>
           </div>
           <div class="dice" :class="diceClass(dice2)">
-            <div class="face face1">1</div>
-            <div class="face face2">2</div>
-            <div class="face face3">3</div>
-            <div class="face face4">4</div>
-            <div class="face face5">5</div>
-            <div class="face face6">6</div>
+            <div class="face face1 display-flex align-items-content-justify-content">1</div>
+            <div class="face face2 display-flex align-items-content-justify-content">2</div>
+            <div class="face face3 display-flex align-items-content-justify-content">3</div>
+            <div class="face face4 display-flex align-items-content-justify-content">4</div>
+            <div class="face face5 display-flex align-items-content-justify-content">5</div>
+            <div class="face face6 display-flex align-items-content-justify-content">6</div>
           </div>
           <div class="dice" :class="diceClass(dice3)">
-            <div class="face face1">1</div>
-            <div class="face face2">2</div>
-            <div class="face face3">3</div>
-            <div class="face face4">4</div>
-            <div class="face face5">5</div>
-            <div class="face face6">6</div>
+            <div class="face face1 display-flex align-items-content-justify-content">1</div>
+            <div class="face face2 display-flex align-items-content-justify-content">2</div>
+            <div class="face face3 display-flex align-items-content-justify-content">3</div>
+            <div class="face face4 display-flex align-items-content-justify-content">4</div>
+            <div class="face face5 display-flex align-items-content-justify-content">5</div>
+            <div class="face face6 display-flex align-items-content-justify-content">6</div>
           </div>
         </div>
         <div class="text-game-container  flex-one">

@@ -37,7 +37,7 @@
                 <div class="chapter-image-content flex-one background-size-cover"
                     v-bind:style="{ backgroundImage: 'url(' + ImageChapter + ')' }">
                 </div>
-                <div class="chapter-text-content flex-one">
+                <div class="chapter-text-content flex-one overflowY-scroll">
                     <p class="text-align-justify" v-html="Content"></p>
                 </div>
             </div>

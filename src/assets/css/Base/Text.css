@@ -103,6 +103,8 @@ h5.card-title {
 }
 .name-characatrer-link .btn:hover{
   color: rgba(var(--active-hover), 1);
+  background-color: rgba(var(--dark-green-01), 1);
+  border: 1px solid rgba(var(--dark-green-01), 1);
 }
 .card-text.summary-text-font p{
   line-height: 1.2;
