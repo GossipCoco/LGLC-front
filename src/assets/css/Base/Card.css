@@ -414,3 +414,6 @@ li.quest-container {
     line-height: 0.95;
     text-align: left;
 }
+.fiction-container .card-body{
+    height: 87vh;
+}

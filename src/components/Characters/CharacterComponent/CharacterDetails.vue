@@ -12,22 +12,21 @@
           </CharacterImageDetail>
           <div class="col-8 col-md-8">
             <div class="card-body background-color-main-lineart details-infos-characters poppins-text text-white">
-              <div class="row">
-                <div class="col-5">
-                  <h1 class="card-title cinzel">{{ currentName }}</h1>
+              <div class="row display-flex-row">
+                <div class="col-6">
+                  <h1 class="card-title cinzel">{{ currentName }}</h1>                  
                 </div>
-                <router-link :to="'/EditAnOriginalCharacter/'+ currentName">Editer le personnage</router-link>
-                <ButtonCreationCharacter v-bind:class="'col-3'"/>
-                <div class="col-4">                  
-                  <p class="card-text text-align-justify poppins-text text-white">
-                    <router-link
-                      to="/allCharacters"
-                      type="button"
-                      class="btn btn-primary file-character-btn"
-                    >
-                      Retour à la liste des personnages
-                    </router-link>
-                  </p>                  
+                <div class="col-3">
+                  <router-link type="button" class="btn btn-primary" :to="'/EditAnOriginalCharacter/'+ currentName">Editer le personnage</router-link>
+                </div>
+                <div class="col-3">
+                  <router-link
+                    to="/allCharacters"
+                    type="button"
+                    class="btn btn-primary text-align-justify poppins-text text-white file-character-btn"
+                  >
+                    Tous les personnages
+                  </router-link>                
                 </div>
               </div>
               <div class="row">
@@ -72,10 +71,10 @@ import CharacterService from "../../../services/CharacterService";
 import CharacterImageDetail from "../GenericComponent/CharacterImageDetail.vue";
 import CharacterTabs from "../GenericComponent/CharacterTabs.vue";
 import TableInformationCharacter from "../GenericComponent/TableInformationCharacter.vue";
-import ButtonCreationCharacter from "../../Components/FormComponent/ButtonCreationCharacter.vue";
+// import ButtonCreationCharacter from "../../Components/FormComponent/ButtonCreationCharacter.vue";
 export default {
   name: "CharacterDetails",
-  components: {TableInformationCharacter, ButtonCreationCharacter, CharacterTabs, CharacterImageDetail},
+  components: {TableInformationCharacter, CharacterTabs, CharacterImageDetail},
   data() {
     return {
       url: "",
