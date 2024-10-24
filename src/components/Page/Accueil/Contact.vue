@@ -7,7 +7,7 @@
         <div class="row">
           <div class="col-12">
             <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label"
+              <label for="exampleFormControlInput1" class="form-label text-white"
                 >Votre Email</label
               >
               <input
@@ -18,7 +18,7 @@
               />
             </div>
             <div class="mb-3">
-              <label for="exampleFormControlTextarea1" class="form-label"
+              <label for="exampleFormControlTextarea1" class="form-label text-white"
                 >Votre message</label
               >
               <textarea

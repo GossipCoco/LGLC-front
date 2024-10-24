@@ -30,7 +30,6 @@
   flex: 1
 }
 .rating svg {
-  fill: rgba(var(--main-white), 1);
   cursor: pointer;
   width: 2rem;
   height: 2rem;
@@ -159,7 +158,6 @@ h5.card-title {
 .name-characatrer-link .btn:hover{
   color: rgba(var(--active-hover), 1);
 }
-
 .card-text.summary-text-font p{
   line-height: 1.2;
 }

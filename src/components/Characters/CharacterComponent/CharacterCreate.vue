@@ -48,7 +48,7 @@
                   @getKittyName="getKittyName"
                 />
                 <div class="col-md-6">
-                  <label for="inputapprenti" class="form-label"
+                  <label for="inputapprenti" class="form-label text-white"
                     >Nom d'apprenti</label
                   >
                   <input
@@ -62,7 +62,7 @@
                   />
                 </div>
                 <div class="col-md-6">
-                  <label for="inputwarrior" class="form-label"
+                  <label for="inputwarrior" class="form-label text-white"
                     >Nom de guerrier</label
                   >
                   <input
@@ -79,7 +79,7 @@
                   />
                 </div>
                 <div class="col-md-6">
-                  <label for="inputleader" class="form-label"
+                  <label for="inputleader" class="form-label text-white"
                     >Nom de Chef</label
                   >
                   <input
@@ -95,7 +95,7 @@
                   />
                 </div>
                 <!-- <div class="col-md-6">
-                  <label for="inputGenre" class="form-label">Genre</label>
+                  <label for="inputGenre" class="form-label text-white">Genre</label>
                   <select
                     class="form-select"
                     v-model="form.Genre"
@@ -112,7 +112,7 @@
                   </select>
                 </div> -->
                 <div class="col-md-6">
-                  <label for="inputAge" class="form-label"
+                  <label for="inputAge" class="form-label text-white"
                     >Age en nombre de lunes</label
                   >
                   <input
@@ -124,7 +124,7 @@
                   />
                 </div>
                 <div class="col-md-6">
-                  <label for="inputImage" class="form-label"
+                  <label for="inputImage" class="form-label text-white"
                     >Upload Image</label
                   >
                   <input
@@ -141,7 +141,7 @@
             <div class="text-area-container" v-if="formPart3">
               <div class="col-12">
                 <div class="mb-12">
-                  <label for="exampleFormControlTextarea3" class="form-label"
+                  <label for="exampleFormControlTextarea3" class="form-label text-white"
                     >Description</label
                   >
                   <textarea
@@ -155,7 +155,7 @@
               </div>
               <div class="col-12">
                 <div class="mb-12">
-                  <label for="exampleFormControlTextarea1" class="form-label"
+                  <label for="exampleFormControlTextarea1" class="form-label text-white"
                     >Personnalité</label
                   >
                   <textarea
@@ -169,7 +169,7 @@
               </div>
               <div class="col-12">
                 <div class="mb-12">
-                  <label for="exampleFormControlTextarea2" class="form-label"
+                  <label for="exampleFormControlTextarea2" class="form-label text-white"
                     >Biographie</label
                   >
                   <textarea

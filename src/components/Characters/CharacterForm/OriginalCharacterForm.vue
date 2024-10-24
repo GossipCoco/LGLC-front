@@ -100,7 +100,7 @@
       <div class="row">
         <LinkGenerateImage />
         <div class="col-md-6">
-          <label for="inputImage" class="form-label">Envoyer une image</label>
+          <label for="inputImage" class="form-label text-white">Envoyer une image</label>
           <input
             type="file"
             class="form-control"

@@ -61,7 +61,7 @@
                 <LinkGenerateImage />
                 <div class="col-6">
                   <div class="mb-3">
-                    <label for="file" class="form-label"
+                    <label for="file" class="form-label text-white"
                       >Image de couverture</label
                     >
                     <input

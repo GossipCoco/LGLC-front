@@ -1,6 +1,6 @@
 <template>
   <div :class="col">
-    <label :for="forId" class="form-label">{{ label }}</label>
+    <label :for="forId" class="form-label text-white">{{ label }}</label>
     <input
       type="text"
       class="form-control"

@@ -1,7 +1,7 @@
 <template>
   <div class="row">
     <div class="mb-3">
-      <label for="Title" class="form-label">{{ Title }}</label>
+      <label for="Title" class="form-label text-white">{{ Title }}</label>
       <input
         id="Title"
         type="text"

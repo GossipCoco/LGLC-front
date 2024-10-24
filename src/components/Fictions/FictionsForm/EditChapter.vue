@@ -12,7 +12,7 @@
           <div class="row">
             <div class="col-12">
               <div class="mb-12">
-                <label for="Content" class="form-label">Votre Chapitre {{ form.Name }}</label>
+                <label for="Content" class="form-label text-white">Votre Chapitre {{ form.Name }}</label>
                 <textarea
                   v-model="form.Content"
                   class="form-control"

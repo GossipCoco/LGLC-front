@@ -8,7 +8,7 @@
             <div class="rond-image-illustration">
               <ImageRondDashboard v-bind:src=" fiction.Image" v-bind:alt="fiction.Image" />
             </div>
-            <div class="summaray-title-text">
+            <div class="summaray-title-text  flex-one">
               <p><router-link class="poppins-text text-dark-green font-size-1em" :to="'/fiction/' + fiction.Title">{{ fiction.Title }}</router-link></p>
             </div>
           </div>

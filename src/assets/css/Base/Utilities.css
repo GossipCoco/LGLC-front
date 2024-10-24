@@ -98,6 +98,10 @@
     vertical-align: middle;
 }
 /* OVERFRLOW */
+
+.overflowY-auto{
+    overflow-y: auto;
+}
 .overflowY-X-hidden{
     overflow-y: hidden;
     overflow-x: hidden;
@@ -108,8 +112,14 @@
 .overflowY-scroll{
     overflow-y: scroll;
 }
-.overflowY-auto{
-    overflow-y: auto;
+.overflowY-hidden{
+    overflow-y: hidden;
+}
+.overflowX-scroll{
+    overflow-X: scroll;
+}
+.overflowX-hidden{
+    overflow-x: hidden;
 }
 /* FONTS */
 .opensans-text{

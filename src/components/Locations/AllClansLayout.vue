@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="character-container  overflowY-X-hidden clans-location-container"
-    style="overflow-y: scroll"
-  >
+  <div class="character-container  overflowY-scroll overflowX-hidden clans-location-container">
     <div class="display-flex-row card-group clan-group">
       <div v-for="(clan, index) in clans" :key="index">
         <div class="card location-clan-background-width-container">

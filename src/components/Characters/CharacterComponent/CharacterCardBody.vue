@@ -1,7 +1,7 @@
 <template>
   <div class="card-body">
     <p class="align-items-content-justify-content">
-      <span class="name-characatrer-link">
+      <span class="name-characatrer-link flex-one">
         <router-link
           :to="route + name"
           type="button"

@@ -15,7 +15,7 @@
                 v-bind:alt="fiction.Image"
               />
             </div>
-            <div class="summaray-title-text">
+            <div class="summaray-title-text  flex-one">
               <p>
                 <span class="link-to-fiction-text">
                   <router-link class="poppins-text text-dark-green" :to="'/fiction/' + fiction.Title">

@@ -1,7 +1,7 @@
 <template>
   <div :class="col">
     <div :class="mb">
-      <label :for="forId" class="form-label">{{ label }}</label>
+      <label :for="forId" class="form-label text-white">{{ label }}</label>
       <textarea
         class="form-control"
         :id="forId"

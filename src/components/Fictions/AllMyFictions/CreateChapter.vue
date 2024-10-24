@@ -8,7 +8,7 @@
         <LinkGenerateImage />
         <div class="col-4">
           <div class="mb-3">
-            <label for="file" class="form-label">Image de couverture</label>
+            <label for="file" class="form-label text-white">Image de couverture</label>
             <input type="file" class="form-control" @change="handleFileUpload" />
           </div>
         </div>

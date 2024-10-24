@@ -38,7 +38,7 @@
             <div class="row">
               <div class="col-12">
                 <div class="mb-12">
-                  <label for="Content" class="form-label">Votre résumé</label>
+                  <label for="Content" class="form-label text-white">Votre résumé</label>
                   <textarea
                     v-model="form.Content"
                     class="form-control"

@@ -37,7 +37,7 @@
         <div class="modal-body">
           <div class="row">
             <div class="col">
-              <label for="FirstCharacterId" class="form-label"
+              <label for="FirstCharacterId" class="form-label text-white"
                 >Sélectionner un personnage</label
               >
               <select

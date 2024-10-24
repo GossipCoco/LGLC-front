@@ -5,7 +5,7 @@
   >
     <CardHeader v-bind:Title="'Les romans de La Guerre des Clans'" />
     <div class="card-body">
-      <div class="row book-container">
+      <div class="row book-container overflowY-scroll overflowX-hidden">
         <div class="col-12 col-sm-12 col-md-12">
           <div class="apland-timeline-area">
             <div v-for="(arc, index) in allBooks" :key="index">
