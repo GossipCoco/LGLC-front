@@ -33,11 +33,11 @@
                     </div>
                 </div>
             </div>
-            <div class="display-flex-row chapter-global-content">                   
-                <div class="chapter-image-content"
+            <div class="display-flex-row chapter-global-content display-flex">                   
+                <div class="chapter-image-content flex-one background-size-cover"
                     v-bind:style="{ backgroundImage: 'url(' + ImageChapter + ')' }">
                 </div>
-                <div class="chapter-text-content">
+                <div class="chapter-text-content flex-one">
                     <p class="text-align-justify" v-html="Content"></p>
                 </div>
             </div>

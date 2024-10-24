@@ -1,7 +1,7 @@
 <template>
   <div class="rating display-flex-column">
     <div class="rating-chiffre">
-      <h4>{{ parseFloat(rating).toFixed(1) }} / 5</h4>
+      <h4 class="text-white">{{ parseFloat(rating).toFixed(1) }} / 5</h4>
     </div>
     <div class="display-flex-row">
       <svg

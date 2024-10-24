@@ -8,7 +8,7 @@
               <h2>{{ Role }}</h2>
               <img class="align-items-content-justify-content border-100" :src="'/images/Avatars/' + form.Avatar" /><br>
               <label class="btn btn-default p-0" for="upload-avatar">
-                <input id="upload-avatar" type="file" accept="image/png, image/jpeg, image/jpg, image/webp" ref="file"
+                <input id="upload-avatar" class="text-white" type="file" accept="image/png, image/jpeg, image/jpg, image/webp" ref="file"
                   @change="selectImage" />
               </label><br>
               <button class="btn btn-success btn-sm float-right" :disabled="!currentImage" @click="upload">

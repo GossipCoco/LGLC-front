@@ -45,14 +45,7 @@
 .card-form-create-character .card-body{
     width: 100%;
     height: 77vh;
-    overflow-x: hidden;    
     padding: 1rem;
-}
-.card-form-create-character .card-body{
-    overflow-y: hidden;
-}
-.create-character-form{
-    overflow-y: hidden;
 }
 .create-character-form .text-area-container{
     height: 30rem;
@@ -63,21 +56,8 @@
 .select-character-container img{
     width: 50%;
 }
-.avatar-container h2, input#upload-avatar{
-    color: rgba(var(--main-white), 1)
-}
 .one-fiction-container{
     padding: 1rem 0 0 0;
-}
-.one-fiction-container .image-fiction-container{
-    flex: 0.25;
-    width:  20rem;
-    height: 20rem;
-    background-size: cover;
-    background-position: 40% 20%;
-    border-radius: 2rem;
-    margin-left: 2rem;
-    margin-top: 6rem;
 }
 .dashboard-max-card-container.card.fiction-container table{
     color: rgba(var(--main-white), 1);
@@ -85,26 +65,15 @@
 th{
     font-weight: 200;
 }
-.title-dashboard-container{
-    display: flex;
-    flex: 1;
-    justify-content: right;
-    text-align: right;
-}
 .bottom-dashboard .card{
     height: 40vh;
     margin: 1rem auto;
 }
 .chapter-global-content{
-    display: flex;
     height: 70vh;
-}
-.chapter-image-content, .chapter-text-content{
-    flex: 1
 }
 .chapter-image-content{
     width: 500px;
-    background-size: cover;
     background-position: 20%;
     height: 700px;
     flex: 0.5;
@@ -112,7 +81,6 @@ th{
 .chapter-text-content{
     padding: 0.5rem;
 }
-
 .row.btn-generate-btn{
     display: flex;
     flex-direction: row;
