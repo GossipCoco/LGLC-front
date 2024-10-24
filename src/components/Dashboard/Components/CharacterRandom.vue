@@ -12,7 +12,7 @@
               <router-link :to="'/characterDetails/' + character.CurrentName" class="display-flex-column">
                 <p class="text-white">{{ character.CurrentName }}</p>
                 <div
-                  class="rond-character-background"
+                  class="rond-character-background background-size-cover display-flex-row align-items-content-justify-content"
                   v-bind:style="{
                     backgroundImage: 'url(' + character.Clan.Image + ')',
                   }"

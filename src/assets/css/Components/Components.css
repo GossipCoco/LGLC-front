@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import '../variables.scss';
-
-
 /* BUTTON */
 .btn-primary {
     background-color: rgba(var(--middle-green-02), 1);
@@ -12,7 +10,6 @@
     border: 1px solid rgba(var(--dark-green-01), 1);
     color: rgba(var(--active-hover), 1);
 }
-
 /* CARD */
 /* .card-image{
     background-size: cover;
@@ -112,10 +109,7 @@ th{
     padding: 0.5rem;
     font-size: 0.85em;
     font-weight: 800;
-    text-align: center;
     width: 15.5rem;
-    display: flex;
-    flex-direction: column;
     margin: 0 0 0 -1rem;
 }
 .left-fiction-summary-container{
@@ -124,10 +118,7 @@ th{
 .left-fiction-summary-container .all-characters-of-fiction{
     flex-wrap: wrap;
 }
-.fiction-container{
-    height: 20vh;
-    background-size: cover;
-}
+
 .dashboard-max-card-container.card-height.fiction-container .card-body{
     height: 80vh;
 }
@@ -143,13 +134,6 @@ th{
 .illustration-arc-container img{
     width: 100%;
 }
-.image-book-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-}
 .image-book{
     width: 90%;
     border-radius: 20px;
@@ -157,7 +141,6 @@ th{
 .user-info-text img{
     width: 55%;
 }
-
 .card-body.user-info-text .row{
     margin: 1rem 0;
 }
@@ -167,7 +150,6 @@ th{
     background-position: 50%;
     border-radius: 20px 0 0 20px;
 }
-
 .fiction-summary-card{
     width: 40vh;
     height: 20vh;
@@ -179,10 +161,6 @@ th{
     height: 2rem;
     width: 2rem;
     border-radius: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
     padding: 1rem 0 0 0;
     margin: 0 0 0 -1rem;
     z-index: 99;
@@ -194,26 +172,16 @@ audio{
     width: 14rem;
 }
 .rond-character-background{
-    background-repeat: no-repeat;
-    background-size: cover;
     border-radius: 100%;
-    background-position: 50%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    text-align: center;
+    background-position: 50%;   
     vertical-align: bottom;
     width: 100px;
 }
 .character-details-router a {
     font-size: 0.85em;
 }
-
 .all-characters-by-user-container{
     height: 20rem;
-    overflow-y: scroll;
 }
 .image-width{
     width: 45%;
@@ -224,18 +192,13 @@ audio{
 }
 .all-my-characters-container{
     height: 110vh;
-    overflow-y: hidden;
-    overflow-x: hidden;
-    padding: 3rem;
+     padding: 3rem;
     margin: 0 auto;
-
 }
 .card.individual-character-card{
     height: 45vh;
 }
 .original-character-contain.card-image{
-    background-size: cover;
-    background-repeat: no-repeat;
     background-position: 50%;
 }
 .btn-position{
@@ -268,7 +231,6 @@ audio{
     display: flex;
     justify-content: right;
 }
-
 .character-container-global.clans-location-container{
     overflow-y: auto;
     overflow-x: hidden;
@@ -286,7 +248,6 @@ audio{
     font-family: 'Roboto';
     font-weight: 500;
 }
-
 .fiction-container{
     padding: 0;
 }

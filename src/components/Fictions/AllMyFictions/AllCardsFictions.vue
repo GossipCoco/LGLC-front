@@ -11,7 +11,7 @@
           >
         </div>
           <div class="col-8">
-            <div class="h5-container">
+            <div class="h5-container display-flex-column align-items-content-justify-content">
               <div class="display-flex-row text-dark-green montesserat">
                 Auteur : &nbsp;
                 <router-link

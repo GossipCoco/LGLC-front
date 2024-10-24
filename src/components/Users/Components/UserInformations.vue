@@ -13,7 +13,7 @@
   </div>
   <h1>Fiche personnage</h1>
   <hr />
-  <div class="all-characters-by-user-container">
+  <div class="all-characters-by-user-container overflowY-scroll">
     <div class="row row-cols-1 row-cols-md-3 g-4">
       <div
         class="col"
