@@ -1,6 +1,6 @@
 <template>
     <div class="character-details-chatper background-color-main-lineart card mb-3 display-flex-column fiction-container">
-        <div class="card-header">
+        <div class="card-header align-items-content-justify-content">
             <div class="chapter-title-content text-white cinzel">
                 <h1 class="chapter-title text-white cinzel">
                     {{ chapter.Title }}
@@ -10,7 +10,7 @@
         <div class="card-body">
             <div class="row">
                 <div class="col-12">
-                    <div class="display-flex chapter-button-content">
+                    <div class="display-flex align-items-content-justify-content chapter-button-content">
                         <CreateCommentModal
                             v-bind:fanfiction="TitleFiction"
                             v-bind:fictionId="FictionId"

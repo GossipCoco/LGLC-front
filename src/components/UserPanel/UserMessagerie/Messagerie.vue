@@ -21,7 +21,7 @@
         </div>
         <div class="col-8 select-message-container text-dark-green" v-if="selectedMessage">
           <div class="card">
-            <div class="card-header">
+            <div class="card-header display-flex-row align-items-content-justify-content">
               <h3 class="card-title cinzel">{{ selectedMessage.Title }}</h3>
             </div>
             <div class="card-body">

@@ -3,47 +3,52 @@
     <CardHeader v-bind:Title="'Jeu de Puzzle'" />
     <div class="card-body">
       <div class="display-flex-row">
-        <div class="title-puzzle">
-          <button
-            type="button"
-            class="btn btn-primary shufflePieces"
-            @click="shufflePieces"
-          >
-            Mélanger les pièces
-          </button>
-          <button
-            type="button"
-            class="btn btn-primary shufflePieces"
-            @click="changeImage"
-          >
-            Changer l'image
-          </button>
-        </div>
         <div class="display-flex-column">
-          <div class="alert alert-success" role="alert">
-            <div v-if="isSolved" class="congrats-message">
-              Félicitations! Vous avez réussi le puzzle. Vous avez gagné
-              {{ points }} points en {{ elapsedTime }} secondes.
-            </div>
-            <div v-else>
-              <p>Temps écoulé : {{ elapsedTime }} secondes</p>
-              <p>Points actuels : {{ points }}</p>
+          <div class="title-puzzle display-flex-column">
+            <button
+              type="button"
+              class="btn btn-primary shufflePieces"
+              @click="shufflePieces"
+            >
+              Mélanger les pièces
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary shufflePieces"
+              @click="changeImage"
+            >
+              Changer l'image
+            </button>
+          </div>
+          <div class="display-flex-column">
+            <div class="alert alert-success" role="alert">
+              <div v-if="isSolved" class="congrats-message">
+                Félicitations! Vous avez réussi le puzzle. Vous avez gagné
+                {{ points }} points en {{ elapsedTime }} secondes.
+              </div>
+              <div v-else>
+                <p>Temps écoulé : {{ elapsedTime }} secondes</p>
+                <p>Points actuels : {{ points }}</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="puzzle-global-game">
-        <div class="puzzle-container" :style="containerStyle">
-          <div
-            v-for="(piece, index) in shuffledPieces"
-            :key="index"
-            class="puzzle-piece"
-            :style="piece.style"
-            draggable="true"
-            @dragstart="dragStart($event, index)"
-            @dragover="dragOver($event)"
-            @drop="drop($event, index)"
-          ></div>
+
+        <div
+          class="display-flex-row align-items-content-justify-content flex-one"
+        >
+          <div class="puzzle-container" :style="containerStyle">
+            <div
+              v-for="(piece, index) in shuffledPieces"
+              :key="index"
+              class="puzzle-piece"
+              :style="piece.style"
+              draggable="true"
+              @dragstart="dragStart($event, index)"
+              @dragover="dragOver($event)"
+              @drop="drop($event, index)"
+            ></div>
+          </div>
         </div>
       </div>
     </div>
@@ -117,14 +122,14 @@ export default {
       );
       const results = {
         foundTreasures: "Puzzle",
-        points: this.points
+        points: this.points,
       };
       EventService.saveGameResults(this.userCurrent, results)
-        .then(response => {
-          console.log('Results saved:', response.data);
+        .then((response) => {
+          console.log("Results saved:", response.data);
         })
-        .catch(error => {
-          console.error('Error saving results:', error);
+        .catch((error) => {
+          console.error("Error saving results:", error);
         });
     },
 
@@ -170,9 +175,7 @@ export default {
     GetAllIllustrations() {
       ImageService.GetAllIllustrations()
         .then((response) => {
-          this.imagesByRequest = response.data.ob.map(
-            (item) => item.Id
-          );
+          this.imagesByRequest = response.data.ob.map((item) => item.Id);
         })
         .catch((err) => {
           console.error(err);

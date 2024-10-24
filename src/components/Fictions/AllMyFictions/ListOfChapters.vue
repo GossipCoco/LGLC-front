@@ -1,6 +1,6 @@
 <template>
   <div class="opacity-container display-flex-row">
-    <div class="summary-container">
+    <div class="summary-container overflowY-auto overflowX-hidden">
       <div class="row">
         <div class="col-3">
           <EditSummary v-bind:FictionId="IdFiction" v-bind:Summary="Summary" />

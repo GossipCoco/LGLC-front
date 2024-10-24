@@ -98,9 +98,6 @@ th {
 .chapter-button-content {
     margin: 2rem 0 2rem 0;
     gap: 2rem;
-    align-items: center;
-    align-content: center;
-    justify-content: right;
 }
 .character-chapters-fiction-container .character-chapters-container {
     width: 75rem;
@@ -121,8 +118,6 @@ th {
 }
 .summary-container {
     height: 67vh;
-    overflow-y: auto;
-    overflow-x: hidden;
     padding: 0 1rem;
     width: 45rem;
 }
@@ -133,12 +128,6 @@ th {
     padding: 0;
     width: 100%;
     height: 2.5rem;
-}
-.fiction-container .card-header {
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    text-align: center;
 }
 .fiction-container .card-header h4 {
     font-family: var(--montserratRegular);
@@ -164,14 +153,12 @@ th {
 .fiche-fiction {
     background-color: rgba(var(--middle-green-01), 1);
 }
-.fiche-fiction h5,
-.fiche-fiction p {
+.fiche-fiction h5,.fiche-fiction p {
     color: rgba(var(--main-white), 1)
 }
 .fiche-fiction .link-text-a {
     color: rgba(var(--active-hover), 1)
 }
-
 .card-text.summary-text-font{
     padding: 0;
 }

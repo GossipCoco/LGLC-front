@@ -5,7 +5,7 @@
     <Spinner v-if="showspinner" />
     <div
       id="card-display-flex-column fiction-container"
-      class="card-header display-flex-row"
+      class="card-header display-flex-row align-items-content-justify-content"
     >
       <div class="Comment-icon">
         <router-link :to="'/CommentByFiction/' + Title"
