@@ -23,8 +23,8 @@
     padding: 0rem 1rem 1rem 1.5rem;
 }
 .card-character-container{
-    margin: 0 4rem 2rem 2rem;
-    width: 15rem;
+    margin: 0 0.5rem 0.5rem 0.5rem;
+    width: 19rem;
     height: 20rem;
 }
 #all-characters-container-card .character-card.card {
@@ -359,7 +359,7 @@ li.quest-container {
 #original-characters-list .card.individual-character-card{
     margin: 0.5rem;
     height: 20em;    
-    border-radius: 100% 100% 0 0;
+    border-radius: 100% 100% 12px 12px;
     background-position: 50%;
     aspect-ratio: 1;
     border: 6px solid rgba(var(--clear-green-01), 1);
@@ -370,16 +370,17 @@ li.quest-container {
     border: rgba(var(--dark-green-01), 1) 5px solid;
  }
 #original-characters-list  .card.individual-character-card{
-    border-radius: 45% 45% 20% 20%; 
+    border-radius: 45% 45% 12px 12px; 
 }
 .avatar-gamer{
     width: 200px;
     height: 150px;
 }
 #original-characters-list{
-    margin:00;
-    padding-top: 7rem;
+    margin: 0 2rem;
+    padding-top: 0rem;
     height: 83vh;
+    overflow-y: auto;
 }
 #original-characters-list.border {
     border: none
