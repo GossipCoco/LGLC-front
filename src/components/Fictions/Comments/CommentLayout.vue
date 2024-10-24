@@ -1,29 +1,30 @@
 <template>
   <div
     id="comment-container"
-    class="fiction-globale-container text-white card display-flex-column fiction-container  overflowY-X-hiddenopensans-text"
+    class="background-color-main-lineart fiction-globale-container text-white card display-flex-column fiction-container overflowY-scroll overflowX-hidden opensans-text"
   >
     <div class="row">
       <div class="col-12">
         <p class="card-text text-align-justify">
-              <router-link
-                type="button"
-                class="btn btn-primary"
-                :to="'/fiction/' + url"
-                >Revnevnir à la fiction</router-link
-              >
-            </p>
+          <router-link
+            type="button"
+            class="btn btn-primary"
+            :to="'/fiction/' + url"
+            >
+              Revenir à la fiction
+            </router-link>
+        </p>
       </div>
     </div>
     <div class="row">
       <div class="col-12">
         <div
-          class="message"
+          class="message display-flex-column"
           v-for="(comment, index) in allComments"
           :key="index"
           :class="{ 'message--right': index % 2 !== 0 }"
         >
-          <div class="message__outer">
+          <div class="message__outer display-flex">
             <div class="message__avatar">
               <img
                 :src="'/images/Avatars/' + comment.User.avatar"
@@ -34,7 +35,7 @@
                 <p>{{ comment.User.FirstName }} {{ comment.User.LastName }}</p>
               </div>
             </div>
-            <div class="message__inner">
+            <div class="display-flex-column">
               <div class="message__bubble">
                 <p class="text-align-justify">{{ comment.Content }}</p>
               </div>
