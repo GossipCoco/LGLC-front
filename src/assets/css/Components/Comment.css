@@ -60,3 +60,6 @@
   width: 70px;
   height: 70px;
 }
+.Comment-icon svg{
+  transform: scale(.75);
+}

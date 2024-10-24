@@ -94,12 +94,12 @@
 }
 .illustration-background .background-fiction-contain{
     background-repeat: no-repeat;
-    height: 38rem;
+    height: 40rem;
     border-radius: 20px;
 }
 .opacity-container{
     background-color: rgba(var(--dark-green-01), 0.75);
-    height: 67vh;
+    height: 77vh;
     border-radius: 20px;
 }
 .illustration-background .background-fiction-contain .characters-list-container{
@@ -107,7 +107,7 @@
 }
 .all-characters-of-fiction{
     margin: 1rem 0 0 0;
-    width: 25rem;
+    width: 14rem;
 }
 .illustration-background .background-fiction-contain .characters-list-container img{
     width: 150px;

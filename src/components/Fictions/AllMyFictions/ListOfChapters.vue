@@ -24,22 +24,22 @@
           v-for="(chapter, index) in fiction.Chapters"
           :key="index"
         >
-          <router-link class="dropdown-item" :to="'/chapter/' + chapter.Title">
+          <router-link class="dropdown-item roboto" :to="'/chapter/' + chapter.Title">
             {{ chapter.Title }}
           </router-link>
         </li>
       </ul>
-      <p>
+      <div class="d-grid gap-2">
         <router-link
           type="button"
-          class="btn btn-primary"
+          class="btn btn-primary btn-lg"
           v-if="AuthorId === usrCurrent"
           :to="'/fiction/createChapter/' + IdFiction"
           v-bind="lastChap"
         >
           Créer le chapitre {{ lastChap }}
         </router-link>
-      </p>
+      </div>
     </div>
     
   </div>

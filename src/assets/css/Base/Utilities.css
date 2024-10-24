@@ -59,8 +59,11 @@
 .white-text, .row-filter label{
     color: rgba(var(--main-white), 1)
 }
+.black-text{
+    color: rgba(var(--main-black), 1)
+}
 .background-color-white{
-    background-color: rgba(var(--main-white), 0);
+    background-color: rgba(var(--main-white), 1);
 }
 .background-color-dark-green-01{
     background-color: rgba(var(--dark-green-01), 1);

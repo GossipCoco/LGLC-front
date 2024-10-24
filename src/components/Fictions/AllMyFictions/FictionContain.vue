@@ -25,12 +25,14 @@
         v-bind:Author="Author"
         v-bind:dateCreation="dateCreation"
       />
-      <router-link
-        type="button"
-        class="btn btn-primary"
-        :to="'/allFictions/' + Author"
-        >Retour à la liste des fictions</router-link
-      >
+      <div class="display-flex-row align-items-content-justify-content">
+        <router-link
+          type="button"
+          class="btn btn-primary"
+          :to="'/allFictions/' + Author"
+          >Retour à la liste des fictions</router-link
+        >
+      </div>
     </div>
     <div class="card-body">
       <div class="row">
@@ -49,10 +51,11 @@
             <CarrouselCharacter v-bind:Characters="listOfCharacter" />
           </div>
         </div>
-        <div class="col-8">
+        <div class="col-10">
           <div class="display-flex-column flex-one">
             <div
-              class="character-chapters display-flex-column flex-one fiction-container  overflowY-X-hiddenbackground-summary-global-container"
+              class="character-chapters display-flex-column flex-one fiction-container 
+              overflowY-X-hidden background-summary-global-container"
             >
               <div class="display-flex-row character-chapters-container">
                 <div v-if="nbIllus > 0">

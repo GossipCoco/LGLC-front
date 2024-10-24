@@ -1,8 +1,8 @@
 <template>
     <div class="character-details-chatper background-color-main-lineart card mb-3 display-flex-column fiction-container">
         <div class="card-header">
-            <div class="chapter-title-content">
-                <h1 class="chapter-title">
+            <div class="chapter-title-content text-white cinzel">
+                <h1 class="chapter-title text-white cinzel">
                     {{ chapter.Title }}
                 </h1>
             </div>
@@ -37,8 +37,8 @@
                 <div class="chapter-image-content flex-one background-size-cover"
                     v-bind:style="{ backgroundImage: 'url(' + ImageChapter + ')' }">
                 </div>
-                <div class="chapter-text-content flex-one overflowY-scroll">
-                    <p class="text-align-justify" v-html="Content"></p>
+                <div class="chapter-text-content background-color-white flex-one overflowY-scroll">
+                    <p class="text-align-justify background-color-white black-text " v-html="Content"></p>
                 </div>
             </div>
         </div>
