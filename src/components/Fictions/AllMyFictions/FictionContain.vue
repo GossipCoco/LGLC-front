@@ -43,12 +43,9 @@
               backgroundImage: 'url(' + backgroundImageFiction + ')',
             }"
           ></div>
-          <div class="display-flex-column all-characters-of-fiction">
-            <AddANewCharacterModal
-              v-if="AuthorId === usrCurrent"
-              v-bind:IdGame="IdGame"
-            />
+          <div class="display-flex-column all-characters-of-fiction">            
             <CarrouselCharacter v-bind:Characters="listOfCharacter" />
+            <CarrouselCharacter v-bind:Characters="Gamers" />
           </div>
         </div>
         <div class="col-10">
@@ -77,6 +74,7 @@
                         v-bind:lastChap="lastChap"
                         v-bind:fiction="fiction"
                         v-bind:Summary="Summary"
+                        v-bind:IdGame="IdGame"
                       />
                     </div>
                   </div>
@@ -89,6 +87,7 @@
                     v-bind:lastChap="lastChap"
                     v-bind:fiction="fiction"
                     v-bind:Summary="Summary"
+                    v-bind:IdGame="IdGame"
                   />
                 </div>
               </div>
@@ -101,7 +100,7 @@
 </template>
 <script>
 import FictionService from "../../../services/FictionService";
-import AddANewCharacterModal from "./AddANewCharacterModal.vue";
+
 import Rating from "./Rating.vue";
 import CarrouselCharacter from "./CarrouselCharacter.vue";
 import TitleFiction from "./TitleFiction.vue";
@@ -113,7 +112,6 @@ export default {
   name: "FictionContain",
   inject: ["user"],
   components: {
-    AddANewCharacterModal,
     Rating,
     TitleFiction,
     CarrouselCharacter,
@@ -149,6 +147,7 @@ export default {
       rating: 0,
       illustration: null,
       nbIllus: null,
+      Gamers: {}
     };
   },
   created() {
@@ -180,7 +179,6 @@ export default {
       this.showspinner = true;
       FictionService.getFictionByName(id, this.nav)
         .then((response) => {
-          console.log(response.data.ob)
           this.fiction = response.data.ob;
           this.rating = response.data.ob.AverageRating;
           this.IdFiction = this.fiction.Id;
@@ -189,8 +187,8 @@ export default {
           this.AuthorId = this.fiction.User.Id;
           this.Title = this.fiction.Title;
           this.backgroundImageFiction = this.fiction.Image;
-          console.log(this.backgroundImageFiction)
           this.listOfCharacter = this.fiction.Game.GameCharacters;
+          this.Gamers = this.fiction.Game.GameGamers
           this.Summary = this.fiction.Summary;
           this.dateCreation = this.fiction.DateCreation;
           this.nbChapter = this.fiction.lenght;

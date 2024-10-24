@@ -5,7 +5,7 @@
       <div class="card-body display-flex-row align-items-content-justify-content"> 
         <div v-for="(character, index) in gamer" :key="index" class="display-flex-row width-10-rem">
           <div class="display-flex-column my-oc-character-container">
-            <router-link class="text-white roboto" :to="'/OriginaleCharacterDetails/'+character.UserName">{{ character.UserName }}</router-link>
+            <router-link class="text-white roboto" :to="'/OriginaleCharacterDetails/'+character.CurrentName">{{ character.CurrentName }}</router-link>
             <div class="character-illustration-container background-size-cover" v-bind:style="{ backgroundImage: 'url(' + character.Image + ')' }"></div>            
           </div>
         </div>

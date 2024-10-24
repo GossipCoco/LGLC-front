@@ -16,7 +16,7 @@
         :value="character.Id"
         :key="index"
       >
-        {{ character.UserName }}
+        {{ character.CurrentName }}
       </option>
     </select>
   </div>

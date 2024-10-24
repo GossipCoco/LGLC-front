@@ -38,6 +38,14 @@ class FictionService {
             },
         });
     }
+    UpdateFictionIllustration(id, data) {
+        console.log(data)
+        return http.post(`/fiction/UpdateFictionIllustration/${id}`, data, {
+            headers: {
+                'Content-Type': 'multipart/form-data',
+            },
+        });
+    }
     GetLastChapterOfAFiction(id, data){
         return http.post(`/chapter/GetLastChapterOfAFiction/${id}`, data);
     }

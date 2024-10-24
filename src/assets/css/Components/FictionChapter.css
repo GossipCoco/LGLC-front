@@ -109,6 +109,9 @@ th {
     width: 82rem;
     margin: 0;  
 }
+.original-character-image-container img{
+    width: 100%;
+}
 .all-chapters-list-container {    
     width: 30rem;
     padding: 1rem;

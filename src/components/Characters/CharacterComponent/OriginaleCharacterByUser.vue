@@ -5,7 +5,7 @@
       <div class="card-group display-flex">
         <div class="card individual-character-card">
           <BackgroundImage v-bind:Image="character.Image" />
-          <CharacterCardBody v-bind:id="character.Id" v-bind:name="character.UserName" v-bind:route="'/OriginaleCharacterDetails/'"/>
+          <CharacterCardBody v-bind:id="character.Id" v-bind:name="character.CurrentName" v-bind:route="'/OriginaleCharacterDetails/'"/>
         </div>
       </div>
     </div>

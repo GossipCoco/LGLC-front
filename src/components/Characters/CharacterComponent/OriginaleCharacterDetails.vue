@@ -11,9 +11,9 @@
         <div class="card-body overflowY-X-hidden background-color-main-lineart details-infos-characters text-white">
           <div class="display-flex-row">
             <div class="display-flex flex-one">
-              <h1 class="text-white card-title cinzel">{{ character.UserName }}</h1>
+              <h1 class="text-white card-title cinzel">{{ character.CurrentName }}</h1>
             </div>
-            <router-link  class="btn btn-primary" :to="'/EditAnOriginalCharacter/'+ character.UserName">Editer le personnage</router-link>
+            <router-link  class="btn btn-primary" :to="'/EditAnOriginalCharacter/'+ character.CurrentName">Editer le personnage</router-link>
             <div class="display-flex flex-one justify-content-right">
               <router-link
                 class="btn btn-primary"
