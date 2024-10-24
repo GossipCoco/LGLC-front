@@ -6,49 +6,49 @@
         <div class="col-4">
           <ul class="list-group">
             <li
-              class="list-group-item messagerie-list-container"
+              class="list-group-item messagerie-list-container display-flex-row flex-one"
               v-for="(message, index) in allMessages"
               :key="index"
               @click="selectMessage(message)"
               style="cursor: pointer"
             >
-              <span class="badge text-bg-primary rounded-pill">{{
+              <span class="badge text-bg-primary flex-one display-flex-row flex-one align-items-content-justify-content rounded-pill">{{
                 new Date(message.DateSend).toLocaleString()
               }}</span>
-              <p>{{ message.Title }}</p>
+              <p class="display-flex-row flex-one">{{ message.Title }}</p>
             </li>
           </ul>
         </div>
-        <div class="col-8 select-message-container" v-if="selectedMessage">
+        <div class="col-8 select-message-container text-dark-green" v-if="selectedMessage">
           <div class="card">
             <div class="card-header">
               <h3 class="card-title cinzel">{{ selectedMessage.Title }}</h3>
             </div>
             <div class="card-body">
-              <div class="send--message-by-container">
-                <p>
+              <div class="send--message-by-container text-dark-green display-flex-row">
+                <p class="flex-on text-dark-green">
                   <strong>Envoyé par :</strong>
                   {{ selectedMessage.Sender.FirstName }}
                   {{ selectedMessage.Sender.LastName }} ({{
                     selectedMessage.Sender.UserName
                   }})
                 </p>
-                <p>
+                <p class="flex-on text-dark-green">
                   <strong>Date :</strong>
                   {{ new Date(selectedMessage.DateSend).toLocaleString() }}
                 </p>
-                <p>
+                <p class="flex-on text-dark-green">
                   <strong>Statut :</strong>
                   <span v-if="selectedMessage.Status === 'unread'">Non lu</span>
                   <span v-if="selectedMessage.Status === 'read'">Lu</span>
                 </p>
               </div>
-              <p class="message-container">
+              <p class="message-container flex-on text-dark-green">
                 <strong>Contenu du message :</strong><br><br> {{ selectedMessage.Content }}
               </p>
             </div>
             <div class="card-footer text-body-secondary">
-              <p>
+              <p class="flex-on text-dark-green">
                 <button
                   type="button"
                   class="btn btn-primary"

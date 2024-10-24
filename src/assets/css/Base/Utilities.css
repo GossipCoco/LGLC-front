@@ -181,6 +181,14 @@ table.table-borderless, .table.table-borderless>:not(caption)>*>*, .table-border
 .card-body{
     height: 80vh;
 }
+.character-list-wrapper .card-body{
+    height: 5rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 .card-body.all-last-three-fictions-container .list-all-fictions-globale--container{
     width: 23rem;
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="opacity-container">
+  <div class="opacity-container display-flex-row">
     <div class="summary-container">
       <EditSummary v-bind:FictionId="IdFiction" v-bind:Summary="Summary" />
       <p class="text-align-justify" v-html="Summary"></p>

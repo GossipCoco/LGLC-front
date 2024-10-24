@@ -1,6 +1,6 @@
 <template>
   <div class="card-body">
-    <p class="align-items-content-justify-content">
+    <p class="display-flex align-items-content-justify-content">
       <span class="name-characatrer-link flex-one">
         <router-link
           :to="route + name"

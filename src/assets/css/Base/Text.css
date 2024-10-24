@@ -37,85 +37,31 @@
 .rating svg.checked {
   fill: rgba(var(--active-hover), 1);
 }
-.card.quest-by-id-card h2 {
-  color: rgba(var(--main-white), 1);
-}
-.modal-body .form-label,
-.create-character-form label {
-  color: rgba(var(--main-white), 1)
-}
-
-.carousel__item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-}
-
 .card-header h2 {
   font: 2em capitalize all-petite-caps;
 }
-
 .card-header h2 {
   font-variant-caps: small-caps;
 }
-
 #list-events p span {
   font-weight: 600;
 }
-.card-header.quest-title h4 {
-  color: rgba(var(--dark-green-01), 1)
-}
-
-#list-events p {
-  color: rgba(var(--main-white), 1);
-  font-family: 'Roboto';
-}
-
-.login-card h2 {
-  color: rgba(var(--dark-green-01), 1)
-}
-
 .select-message-container h3 {
   text-align: center;
-  color: rgba(var(--dark-green-01), 1);
 }
-
 .send--message-by-container {
-  display: flex;
-  flex-direction: row;
   margin: 1rem 1rem;
-  color: rgba(var(--dark-green-01), 1);
 }
-
 .send--message-by-container p {
-  flex: 1;
   margin: 1rem 1rem;
-  color: rgba(var(--dark-green-01), 1);
 }
-
-.message-container {
-  color: rgba(var(--dark-green-01), 1)
-}
-
 .text-bg-primary {
   background-color: rgba(var(--dark-green-01), 1) !important;
-  display: flex;
-  justify-content: center;
-  vertical-align: middle;
-  flex: 1;
   font-weight: 600;
 }
 
 .list-group-item.messagerie-list-container p {
   margin: 0 0 0 1rem;
-  flex: 1;
-}
-
-.list-group-item.messagerie-list-container {
-  display: flex;
-  flex-direction: row;
 }
 .informations-gamer-container {
   height: 45vh;

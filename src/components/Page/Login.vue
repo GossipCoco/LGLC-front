@@ -5,7 +5,7 @@
       <div class="card login-card">
         <div class="card-body">
           <div class="login-container">
-            <h2>Se connecter à son compte</h2>
+            <h2 class="text-dark-green">Se connecter à son compte</h2>
             <form @submit.prevent="login">
               <div class="row">
                 <div class="col">

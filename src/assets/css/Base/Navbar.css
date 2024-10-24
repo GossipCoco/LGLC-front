@@ -18,7 +18,6 @@
   background-color: var(--bs-dark);
   border-color: var(--bs-gray);
 }
-
 .form-control-dark:focus {
   color: rgba(var(--main-black), 1);
   background-color: var(--bs-dark);
@@ -56,12 +55,6 @@
   font-size: 18px;
 }
 /* MENU LEFT */
-.side-bar {
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-  align-content: center;
-}
 .li-level1 {
   margin-left: -1rem;
 }
@@ -80,37 +73,18 @@
   width: 13rem;
 }
 .menu-left ul li {
-  font-family: var(--roboto-text);
-  color: rgba(var(--clear-green-02), 1);
-  margin: 0.3rem 0 0 -3rem;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  margin: 0.5rem 4rem 0 0;
 }
 #collapseExample3 p {
   font-size: 0.865em;
   font-variant-caps: all-small-caps;
-  color: rgba(var(--clear-green-02), 1);
   margin: 0;
   font-weight: 800;
 }
 .menu-level1 {
-  display: flex;
-  flex-direction: row;
   height: 8vh;
-  justify-content: flex-start;
-  align-content: center;
-  align-items: center;
-  text-align: center;
   margin: 0 0 0 2rem;
 }
-.menu-li-contain {
-  display: flex;
-  flex-direction: row;
-}
-
 .icon-menu-container {
   width: 48px;
   height: 48px;
@@ -172,6 +146,7 @@ ul {
   word-wrap: normal;
   word-break: break-word;
   width: 7.5rem;
+  margin: -1rem 0 1rem 2rem;
 }
 .menu-li-contain svg {
   margin: 1rem -1rem 0 1rem;

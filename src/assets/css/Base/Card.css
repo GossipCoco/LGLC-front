@@ -417,3 +417,6 @@ li.quest-container {
 .fiction-container .card-body{
     height: 87vh;
 }
+.login-card .card-body{
+    height: 15rem;
+}

@@ -21,16 +21,16 @@
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
               <li class="nav-item" v-if="!isLoggedIn">
-                <router-link to="/login">Se connecter</router-link>
+                <router-link class="roboto text-white" to="/login">Se connecter</router-link>
               </li>
-              <li class="nav-item" v-if="!isLoggedIn">
+              <li class="nav-item roboto text-white"  v-if="!isLoggedIn">
                 <router-link to="/Register">Créer son compte</router-link>
               </li>
-              <li class="nav-item" v-if="isLoggedIn">
+              <li class="nav-item roboto text-white"  v-if="isLoggedIn">
                 <router-link to="/dashboard">Aller sur son Dashboard</router-link>
               </li>
-              <li class="nav-item logout-li-container" v-if="isLoggedIn">
-                <a href="#" @click.prevent="logout" class="logout-li-container">
+              <li class="nav-item logout-li-container roboto text-white" v-if="isLoggedIn">
+                <a href="#" @click.prevent="logout" class="logout-li-container roboto text-white">
                     Logout <img src="../../../../public/images/icons/right-from-bracket-solid.svg" width="25px"/>
                 </a>
               </li>
