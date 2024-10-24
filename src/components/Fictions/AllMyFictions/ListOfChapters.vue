@@ -156,6 +156,12 @@ export default {
       FictionService.UpdateFictionIllustration(id, data)
       .then((response) => {
             console.log(response)
+            if(response){
+              location.reload()
+            }
+            else{
+              alert("Problème d'upload")
+            }
           })
           .catch((e) => {
             console.log(e);
