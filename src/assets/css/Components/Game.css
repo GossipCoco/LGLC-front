@@ -88,3 +88,15 @@
     color: green;
     font-weight: bold;
 }
+.preview-image-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.preview-image {
+  max-width: 200px; /* Taille maximale de l'image de prévisualisation */
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}

@@ -1,8 +1,5 @@
 <template>
   <div class="rating display-flex-column">
-    <div class="rating-chiffre">
-      <h4 class="text-white">{{ parseFloat(rating).toFixed(1) }} / 5</h4>
-    </div>
     <div class="display-flex-row">
       <svg
         v-for="star in 5"
@@ -19,6 +16,9 @@
           d="M12 .587l3.668 7.431L24 9.587l-6 5.852L19.336 24 12 20.201 4.664 24 6 15.439 0 9.587l8.332-1.569z"
         />
       </svg>
+    </div>
+    <div class="rating-chiffre">
+      <h4 class="text-white">{{ parseFloat(rating).toFixed(1) }} / 5</h4>
     </div>
   </div>
 </template>

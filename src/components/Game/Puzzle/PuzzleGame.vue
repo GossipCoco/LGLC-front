@@ -19,6 +19,31 @@
             >
               Changer l'image
             </button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              @click="setDifficulty('facile')"
+            >
+              Facile (3x3)
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              @click="setDifficulty('moyen')"
+            >
+              Moyen (6x6)
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              @click="setDifficulty('difficile')"
+            >
+              Difficile (9x9)
+            </button>
+            <div class="puzzle-preview">
+              <p>Image de prévisualisation :</p>
+              <img :src="selectedImage" alt="Prévisualisation" class="preview-image"/>
+            </div>
           </div>
           <div class="display-flex-column">
             <div class="alert alert-success" role="alert">
@@ -73,13 +98,16 @@ export default {
       imageHeight: 0,
       draggedIndex: null,
       isSolved: false,
-      startTime: null, // Pour enregistrer l'heure de début
-      elapsedTime: 0, // Temps écoulé en secondes
-      timerInterval: null, // Référence pour le setInterval du timer
-      points: 1000, // Points de départ
-      pointReductionRate: 10, // Réduction des points par seconde
+      startTime: null,
+      elapsedTime: 0,
+      timerInterval: null,
+      points: 1000,
+      pointReductionRate: 10,
+      difficulty: "facile", // Default difficulty level
+      gridSize: 3, // Default grid size for 'facile' (3x3)
     };
   },
+
   created() {
     this.userCurrent = this.$store.state.auth.user.usrID;
     this.changeImage();
@@ -115,32 +143,19 @@ export default {
       this.timerInterval = null;
     },
 
-    calculatePoints() {
-      this.points = Math.max(
-        0,
-        1000 - this.elapsedTime * this.pointReductionRate
-      );
-      const results = {
-        foundTreasures: "Puzzle",
-        points: this.points,
-      };
-      EventService.saveGameResults(this.userCurrent, results)
-        .then((response) => {
-          console.log("Results saved:", response.data);
-        })
-        .catch((error) => {
-          console.error("Error saving results:", error);
-        });
-    },
 
     // Appeler startTimer au début du jeu
     createPieces() {
       this.pieces = [];
       this.shuffledPieces = [];
-      const pieceWidth = this.imageWidth / 3;
-      const pieceHeight = this.imageHeight / 3;
-      for (let row = 0; row < 3; row++) {
-        for (let col = 0; col < 3; col++) {
+
+      // Ajuster la taille de la grille selon la difficulté
+      const pieceCount = this.gridSize;
+      const pieceWidth = this.imageWidth / pieceCount;
+      const pieceHeight = this.imageHeight / pieceCount;
+
+      for (let row = 0; row < pieceCount; row++) {
+        for (let col = 0; col < pieceCount; col++) {
           this.pieces.push({
             row,
             col,
@@ -159,7 +174,50 @@ export default {
       }
       this.shuffledPieces = [...this.pieces];
       this.shufflePieces();
-      this.startTimer(); // Démarrer le timer quand les pièces sont prêtes
+      this.startTimer();
+    },
+    setDifficulty(level) {
+      this.difficulty = level;
+
+      // Modifier la taille de la grille selon la difficulté
+      if (level === "facile") {
+        this.gridSize = 3; // 3x3
+      } else if (level === "moyen") {
+        this.gridSize = 6; // 6x6
+      } else if (level === "difficile") {
+        this.gridSize = 9; // 9x9
+      }
+
+      // Recréer les pièces avec la nouvelle difficulté
+      this.createPieces();
+    },
+    calculatePoints() {
+      let difficultyMultiplier = 1; // Multiplier par défaut pour facile
+      if (this.difficulty === "moyen") {
+        difficultyMultiplier = 1.5; // Augmenter le score pour difficulté moyenne
+      } else if (this.difficulty === "difficile") {
+        difficultyMultiplier = 2; // Augmenter davantage le score pour difficile
+      }
+
+      // Calcul des points en fonction du temps écoulé et de la difficulté
+      this.points = Math.max(
+        0,
+        (1000 - this.elapsedTime * this.pointReductionRate) *
+          difficultyMultiplier
+      );
+
+      const results = {
+        foundTreasures: "Puzzle",
+        points: this.points,
+      };
+
+      EventService.saveGameResults(this.userCurrent, results)
+        .then((response) => {
+          console.log("Results saved:", response.data);
+        })
+        .catch((error) => {
+          console.error("Error saving results:", error);
+        });
     },
 
     // Appeler stopTimer quand le puzzle est résolu

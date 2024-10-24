@@ -31,8 +31,13 @@ th {
     padding: 0.5rem;
 }
 .Comment-icon {
-    width: 13rem;
-    margin: 0 2rem 0 0;
+    margin: -1rem 0 0 0;
+}
+.Comment-icon > div{
+    margin: -3rem 0rem 0 0;
+}
+.fiction-global-informarion-container-hearder{
+    height: 10rem;
 }
 .chapter-text-content {
     height: 65vh;
@@ -49,6 +54,10 @@ th {
     font-weight: 600;
     font-family: 'Montserrat';
 }
+.title-author-container{
+    flex:0.75;
+}
+
 .card-header.fiction-chapter-container h3 {
     margin-left: 2rem;
     font-variant: small-caps;

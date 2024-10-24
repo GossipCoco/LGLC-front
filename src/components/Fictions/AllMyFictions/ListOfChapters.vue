@@ -13,17 +13,17 @@
         </div>
         <div class="col-5">
           <div class="display-flex-column">
-            <p>
-              <label class="btn btn-default p-0" for="upload-illustration fiction">
-                <input
-                  id="upload-illustration fiction"
-                  type="file"
-                  accept="image/png, image/jpeg, image/jpg, image/webp"
-                  ref="file"
-                  @change="handleFileUpload"
-                />
-              </label>
-            </p>
+            <div class="mb-3">
+              <label for="formFile" class="form-label"
+                >Choisir une illustration</label
+              >
+              <input
+                class="form-control"
+                type="file"
+                id="formFile"
+                @change="handleFileUpload"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -36,7 +36,10 @@
           v-for="(chapter, index) in fiction.Chapters"
           :key="index"
         >
-          <router-link class="dropdown-item roboto" :to="'/chapter/' + chapter.Title">
+          <router-link
+            class="dropdown-item roboto"
+            :to="'/chapter/' + chapter.Title"
+          >
             {{ chapter.Title }}
           </router-link>
         </li>
@@ -60,7 +63,7 @@
 import FictionService from "../../../services/FictionService";
 import EditSummary from "../FictionsForm/EditSummary.vue";
 import AddANewCharacterModal from "./AddANewCharacterModal.vue";
-import pica from 'pica'; // Importer Pica
+import pica from "pica"; // Importer Pica
 
 export default {
   name: "ListOfChapters",
@@ -93,7 +96,12 @@ export default {
       const file = event.target.files[0];
 
       // Vérifier le type MIME pour les images acceptées
-      const allowedTypes = ['image/jpeg', 'image/jpg', 'image/png', 'image/webp'];
+      const allowedTypes = [
+        "image/jpeg",
+        "image/jpg",
+        "image/png",
+        "image/webp",
+      ];
       if (!allowedTypes.includes(file.type)) {
         alert("Seuls les formats JPEG, PNG et WEBP sont acceptés.");
         return;
@@ -122,7 +130,7 @@ export default {
       reader.readAsDataURL(file);
     },
     resizeImage(img, maxWidth, originalFile) {
-      const canvas = document.createElement('canvas');
+      const canvas = document.createElement("canvas");
       const p = pica();
 
       // On garde le ratio en redimensionnant la largeur à 1200px
@@ -130,7 +138,7 @@ export default {
       canvas.width = maxWidth;
       canvas.height = img.height * scaleFactor;
 
-      const ctx = canvas.getContext('2d');
+      const ctx = canvas.getContext("2d");
       ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
 
       // Utiliser Pica pour redimensionner et convertir le canvas en blob (fichier image)
@@ -138,9 +146,11 @@ export default {
         quality: 3,
         alpha: true,
       }).then(() => {
-        p.toBlob(canvas, originalFile.type, 0.90).then((blob) => {
+        p.toBlob(canvas, originalFile.type, 0.9).then((blob) => {
           // On garde le nom de l'image d'origine avec blob et le type d'image d'origine
-          this.file = new File([blob], originalFile.name, { type: originalFile.type });
+          this.file = new File([blob], originalFile.name, {
+            type: originalFile.type,
+          });
           console.log("Image redimensionnée:", this.file);
           this.sendFile(); // Appel de l'envoi de fichier après redimensionnement
         });
@@ -148,24 +158,23 @@ export default {
     },
     sendFile() {
       const formData = new FormData();
-      formData.append('image', this.file);
+      formData.append("image", this.file);
 
       this.UploadNewImage(this.IdFiction, formData); // Envoi de l'image via la fonction UploadNewImage
     },
     UploadNewImage(id, data) {
       FictionService.UpdateFictionIllustration(id, data)
-      .then((response) => {
-            console.log(response)
-            if(response){
-              location.reload()
-            }
-            else{
-              alert("Problème d'upload")
-            }
-          })
-          .catch((e) => {
-            console.log(e);
-          });
+        .then((response) => {
+          console.log(response);
+          if (response) {
+            location.reload();
+          } else {
+            alert("Problème d'upload");
+          }
+        })
+        .catch((e) => {
+          console.log(e);
+        });
     },
   },
 };
