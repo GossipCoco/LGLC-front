@@ -2,16 +2,17 @@
   <div class="opacity-container display-flex-row">
     <div class="summary-container overflowY-auto overflowX-hidden">
       <div class="row">
-        <div class="col-3">
-          <EditSummary v-bind:FictionId="IdFiction" v-bind:Summary="Summary" />
-        </div>
-        <div class="col-4">
+        <div class="col-2">
           <AddANewCharacterModal
             v-if="AuthorId === usrCurrent"
             v-bind:IdGame="IdGame"
           />
         </div>
-        <div class="col-5">
+        <div class="col-2">
+          <EditSummary v-bind:FictionId="IdFiction" v-bind:Summary="Summary" />
+
+        </div>
+        <div class="col-3">
           <div class="display-flex-column">
             <div class="mb-3">
               <label for="formFile" class="form-label"
@@ -26,38 +27,20 @@
             </div>
           </div>
         </div>
+        <div class="col-1"></div>
+        <div class="col-4">          
+            <router-link
+              type="button"
+              class="btn btn-primary btn-lg"
+              v-if="AuthorId === usrCurrent"
+              :to="'/fiction/createChapter/' + IdFiction"
+              v-bind="lastChap"
+            >
+              Créer le chapitre {{ lastChap }}
+            </router-link>           
+        </div>
       </div>
       <div class="row">
-        <div class="col-6"><p class="text-align-justify" v-html="Summary"></p></div>
-        <div class="col-4">
-          <div class="display-flex-column flex-one all-chapters-list-container">
-            <ul class="list-group">
-              <li
-                class="list-group-item"
-                v-for="(chapter, index) in fiction.Chapters"
-                :key="index"
-              >
-                <router-link
-                  class="dropdown-item roboto"
-                  :to="'/chapter/' + chapter.Title"
-                >
-                  {{ chapter.Title }}
-                </router-link>
-              </li>
-            </ul>
-            <div class="d-grid gap-2">
-              <router-link
-                type="button"
-                class="btn btn-primary btn-lg"
-                v-if="AuthorId === usrCurrent"
-                :to="'/fiction/createChapter/' + IdFiction"
-                v-bind="lastChap"
-              >
-                Créer le chapitre {{ lastChap }}
-              </router-link>
-            </div>
-          </div>
-        </div>
         <div class="col-2">
           <div
             class="display-flex-column image-fiction-container overflowY-X-hidden background-size-cover"
@@ -81,6 +64,27 @@
             <CarrouselCharacter v-bind:Characters="OCCharacters" />
           </div>
         </div>
+        <div class="col-6"><p class="text-align-justify overflowY-auto" v-html="Summary"></p></div>
+        <div class="col-4">
+          <div class="display-flex-column flex-one all-chapters-list-container">
+            <ul class="list-group">
+              <li
+                class="list-group-item"
+                v-for="(chapter, index) in fiction.Chapters"
+                :key="index"
+              >
+                <router-link
+                  class="dropdown-item roboto"
+                  :to="'/chapter/' + chapter.Title"
+                >
+                  {{ chapter.Title }}
+                </router-link>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+        
     </div>
   </div>
 
