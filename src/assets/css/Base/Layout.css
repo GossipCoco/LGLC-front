@@ -92,9 +92,12 @@
 #dashboard .mini-rond-messages p{
     font-weight: 600;
 }
+.carousel__icon{
+    color: rgba(var(--main-white), 1)
+}
 .illustration-background .background-fiction-contain{
     background-repeat: no-repeat;
-    height: 42rem;
+    height: 40rem;
     border-radius: 20px;
 }
 .opacity-container{

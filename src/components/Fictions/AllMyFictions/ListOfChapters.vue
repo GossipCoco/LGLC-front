@@ -10,19 +10,15 @@
         </div>
         <div class="col-2">
           <EditSummary v-bind:FictionId="IdFiction" v-bind:Summary="Summary" />
-
         </div>
         <div class="col-3">
           <div class="display-flex-column">
             <div class="mb-3">
-              <label for="formFile" class="form-label"
-                >Choisir une illustration</label
-              >
               <input
                 class="form-control"
                 type="file"
                 id="formFile"
-                @change="handleFileUpload"
+                @change="handleFileUploadIllustration"
               />
             </div>
           </div>
@@ -64,7 +60,7 @@
             <CarrouselCharacter v-bind:Characters="OCCharacters" />
           </div>
         </div>
-        <div class="col-6"><p class="text-align-justify overflowY-auto" v-html="Summary"></p></div>
+        <div class="col-6"><p class="text-align-justify overflowY-auto summary-height-container" v-html="Summary"></p></div>
         <div class="col-4">
           <div class="display-flex-column flex-one all-chapters-list-container">
             <ul class="list-group">
@@ -81,13 +77,10 @@
                 </router-link>
               </li>
             </ul>
-
           </div>
-        </div>
-        
+        </div>        
     </div>
-  </div>
-
+    </div>
   </div>
 </template>
 

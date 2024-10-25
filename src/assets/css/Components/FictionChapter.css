@@ -111,8 +111,8 @@ th {
     width: 75rem;
 }
 .illustration-background {
-    width: 100rem;
-    margin: 0;  
+    width: 98rem;
+    margin: 0 0 2rem 0;  
 }
 .original-character-image-container img{
     width: 100%;
@@ -126,6 +126,10 @@ th {
 }
 .character-chapters-container img {
     width: 40%;
+}
+.summary-height-container{
+    height: 60vh;
+    padding: 1rem;
 }
 .summary-container {
     height: 70vh;
