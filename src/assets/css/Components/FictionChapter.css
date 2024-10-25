@@ -55,9 +55,8 @@ th {
     font-family: 'Montserrat';
 }
 .title-author-container{
-    flex:0.75;
+    flex:0.85;
 }
-
 .card-header.fiction-chapter-container h3 {
     margin-left: 2rem;
     font-variant: small-caps;
@@ -119,16 +118,16 @@ th {
     width: 100%;
 }
 .all-chapters-list-container {    
-    width: 30rem;
+    width: 25rem;
     padding: 1rem;
 }
 .character-chapters-container img {
     width: 50%;
 }
 .summary-container {
-    height: 67vh;
+    height: 70vh;
     padding: 0 1rem;
-    width: 45rem;
+    width: 50rem;
 }
 .create-chapter-btn-container .btn {
     width: 15rem;

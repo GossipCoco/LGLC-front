@@ -4,7 +4,7 @@
     type="button"
     class="btn btn-primary"
     data-bs-toggle="modal"
-    data-bs-target="#exampleModal"
+    data-bs-target="#AddANewCharacterModal"
   >
     Ajouter un personnage
   </button>
@@ -12,9 +12,9 @@
   <!-- Modal -->
   <div
     class="modal fade"
-    id="exampleModal"
+    id="AddANewCharacterModal"
     tabindex="-1"
-    aria-labelledby="exampleModalLabel"
+    aria-labelledby="AddANewCharacterModalLabel"
     aria-hidden="true"
   >
     <div class="modal-dialog">
@@ -22,7 +22,7 @@
         <div class="modal-header">
           <h1
             class="modal-title fs-5"
-            id="exampleModalLabel"
+            id="AddANewCharacterModalLabel"
             style="color: black"
           >
           Ajouter un personnage

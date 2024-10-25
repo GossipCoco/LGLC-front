@@ -1,5 +1,5 @@
 <template>
-  <div class="card-body">
+  <div class="card-body align-items-content-justify-content">
     <p class="display-flex align-items-content-justify-content">
       <span class="name-characatrer-link flex-one align-items-content-justify-content">
         <router-link

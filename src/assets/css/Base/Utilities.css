@@ -17,6 +17,7 @@
     display: flex;
     flex: 1;
 }
+/* Alignement */
 .align-items-content-justify-content{
     align-items: center;
     align-content: center;
@@ -41,6 +42,9 @@
 }
 .width-100-percent{
     width: 100%;
+}
+.width-10-rem{
+    width: 10rem;
 }
 .height-100{
     height: 100vh;
@@ -88,9 +92,6 @@
 }
 /* MARGIN PADDING*/
 
-.width-10-rem{
-    width: 10rem;
-}
 .margin-0-rem{
     margin: 0;
 }
@@ -106,20 +107,16 @@
 .padding-2-rem{
     padding: 2rem;
 }
-.vertical-align-middle {
-    vertical-align: middle;
-}
 /* OVERFRLOW */
-
-.overflowY-auto{
-    overflow-y: auto;
-}
 .overflowY-X-hidden{
     overflow-y: hidden;
     overflow-x: hidden;
 }
 .overflow-hidden{
     overflow: hidden;
+}
+.overflowY-auto{
+    overflow-y: auto;
 }
 .overflowY-scroll{
     overflow-y: scroll;
@@ -149,6 +146,9 @@
 .montesserat{
     font-family: 'Montserrat';
 }
+.font-size-1em{
+    font-size: 1em;
+}
 .font-size-1-25{
     font-size: 1.25em;
 }
@@ -176,9 +176,6 @@
 .text-active{
     color: rgba(var(--active-hover), 1);
 }
-.font-size-1em{
-    font-size: 1em;
-}
 /* BORDER */
 .border-100{
     border-radius: 100%
@@ -195,11 +192,6 @@ table.table-borderless, .table.table-borderless>:not(caption)>*>*, .table-border
 }
 .character-list-wrapper .card-body{
     height: 5rem;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 .card-body.all-last-three-fictions-container .list-all-fictions-globale--container{
     width: 23rem;
