@@ -312,7 +312,7 @@ export default {
         img.src = e.target.result;
         img.onload = () => {
           // Redimensionner l'image si elle dépasse 1200px de largeur
-          if (img.width > 1200) {
+          if (img.width > 1920) {
             resizeImage(img, 1920, this.file)
               .then((resizedFile) => {
                 this.file = resizedFile;
