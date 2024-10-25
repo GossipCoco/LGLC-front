@@ -1,6 +1,6 @@
 <template>
   <div
-    class="fiction-globale-container  background-lineart card display-flex-column fiction-container  overflowY-X-hiddenpadding-0-rem text-white flex-one opensans-text"
+    class="fiction-globale-container background-lineart card display-flex-column fiction-container overflowY-X-hiddenpadding-0-rem text-white flex-one opensans-text"
   >
     <Spinner v-if="showspinner" />
     <div
@@ -9,7 +9,7 @@
     >
       <div class="Comment-icon">
         <router-link :to="'/CommentByFiction/' + Title">
-          <img src="../../../../public/images/icons/comments-solid.svg">
+          <img src="../../../../public/images/icons/comments-solid.svg" />
         </router-link>
         <CreateCommentModal
           v-bind:fanfiction="Title"
@@ -33,11 +33,10 @@
     </div>
     <div class="card-body">
       <div class="row">
-        <div class="col-10">
+        <div class="col-12">
           <div class="display-flex-column flex-one">
             <div
-              class="character-chapters display-flex-column flex-one fiction-container 
-              overflowY-X-hidden background-summary-global-container"
+              class="character-chapters display-flex-column flex-one fiction-container overflowY-X-hidden background-summary-global-container"
             >
               <div class="display-flex-row character-chapters-container">
                 <div v-if="nbIllus > 0">
@@ -52,7 +51,7 @@
                       }"
                       class="background-size-cover display-flex-column background-fiction-contain"
                     >
-                    <ListOfChapter
+                      <ListOfChapter
                         v-bind:AuthorId="AuthorId"
                         v-bind:usrCurrent="usrCurrent"
                         v-bind:IdFiction="IdFiction"
@@ -60,6 +59,9 @@
                         v-bind:fiction="fiction"
                         v-bind:Summary="Summary"
                         v-bind:IdGame="IdGame"
+                        v-bind:backgroundImageFiction="backgroundImageFiction"
+                        v-bind:Characters="listOfCharacter"
+                        v-bind:OCCharacters="Gamers"
                       />
                     </div>
                   </div>
@@ -73,37 +75,15 @@
                     v-bind:fiction="fiction"
                     v-bind:Summary="Summary"
                     v-bind:IdGame="IdGame"
+                    v-bind:Characters="listOfCharacter"
+                    v-bind:OCCharacters="Gamers"
                   />
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-2">
-          <div
-            class="display-flex-column image-fiction-container  overflowY-X-hidden background-size-cover"
-            v-bind:style="{
-              backgroundImage: 'url(' + backgroundImageFiction + ')',
-            }"
-          ></div>
-          <div class="display-flex-column">
-            <div class="mb-3">
-              <label for="formFile" class="form-label"
-                >Choisir une image</label
-              >
-              <input
-                class="form-control"
-                type="file"
-                id="formFile"
-                @change="handleFileUpload"
-              />
-            </div>
-          </div>
-          <div class="display-flex-column all-characters-of-fiction">            
-            <CarrouselCharacter v-bind:Characters="listOfCharacter" />
-            <CarrouselCharacter v-bind:Characters="Gamers" />
-          </div>
-        </div>
+        
       </div>
     </div>
   </div>
@@ -112,22 +92,21 @@
 import FictionService from "../../../services/FictionService";
 
 import Rating from "./Rating.vue";
-import CarrouselCharacter from "./CarrouselCharacter.vue";
+
 import TitleFiction from "./TitleFiction.vue";
 import ListOfChapter from "./ListOfChapters.vue";
 import CreateCommentModal from "../Comments/CreateCommentModal.vue";
 import Spinner from "../../Components/GenericComponent/Spinner.vue";
-import pica from 'pica'; // Importer Pica
+import pica from "pica"; // Importer Pica
 export default {
   name: "FictionContain",
   inject: ["user"],
   components: {
     Rating,
     TitleFiction,
-    CarrouselCharacter,
     ListOfChapter,
     CreateCommentModal,
-    Spinner
+    Spinner,
   },
   data() {
     return {
@@ -157,7 +136,7 @@ export default {
       rating: 0,
       illustration: null,
       nbIllus: null,
-      Gamers: {}
+      Gamers: {},
     };
   },
   created() {
@@ -198,7 +177,7 @@ export default {
           this.Title = this.fiction.Title;
           this.backgroundImageFiction = this.fiction.Image;
           this.listOfCharacter = this.fiction.Game.GameCharacters;
-          this.Gamers = this.fiction.Game.GameGamers
+          this.Gamers = this.fiction.Game.GameGamers;
           this.Summary = this.fiction.Summary;
           this.dateCreation = this.fiction.DateCreation;
           this.nbChapter = this.fiction.lenght;
@@ -217,7 +196,12 @@ export default {
       const file = event.target.files[0];
 
       // Vérifier le type MIME pour les images acceptées
-      const allowedTypes = ['image/jpeg', 'image/jpg', 'image/png', 'image/webp'];
+      const allowedTypes = [
+        "image/jpeg",
+        "image/jpg",
+        "image/png",
+        "image/webp",
+      ];
       if (!allowedTypes.includes(file.type)) {
         alert("Seuls les formats JPEG, PNG et WEBP sont acceptés.");
         return;
@@ -246,7 +230,7 @@ export default {
       reader.readAsDataURL(file);
     },
     resizeImage(img, maxWidth, originalFile) {
-      const canvas = document.createElement('canvas');
+      const canvas = document.createElement("canvas");
       const p = pica();
 
       // On garde le ratio en redimensionnant la largeur à 1200px
@@ -254,7 +238,7 @@ export default {
       canvas.width = maxWidth;
       canvas.height = img.height * scaleFactor;
 
-      const ctx = canvas.getContext('2d');
+      const ctx = canvas.getContext("2d");
       ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
 
       // Utiliser Pica pour redimensionner et convertir le canvas en blob (fichier image)
@@ -262,9 +246,11 @@ export default {
         quality: 3,
         alpha: true,
       }).then(() => {
-        p.toBlob(canvas, originalFile.type, 0.90).then((blob) => {
+        p.toBlob(canvas, originalFile.type, 0.9).then((blob) => {
           // On garde le nom de l'image d'origine avec blob et le type d'image d'origine
-          this.file = new File([blob], originalFile.name, { type: originalFile.type });
+          this.file = new File([blob], originalFile.name, {
+            type: originalFile.type,
+          });
           console.log("Image redimensionnée:", this.file);
           this.sendFile(); // Appel de l'envoi de fichier après redimensionnement
         });
@@ -272,26 +258,24 @@ export default {
     },
     sendFile() {
       const formData = new FormData();
-      formData.append('image', this.file);
+      formData.append("image", this.file);
 
       this.UploadNewImage(this.IdFiction, formData); // Envoi de l'image via la fonction UploadNewImage
     },
     UploadNewImage(id, data) {
       FictionService.UpdateFictionIllustration(id, data)
-      .then((response) => {
-            console.log(response)
-            if(response){
-              location.reload()
-            }
-            else{
-              alert("Problème d'upload")
-            }
-          })
-          .catch((e) => {
-            console.log(e);
-          });
+        .then((response) => {
+          console.log(response);
+          if (response) {
+            location.reload();
+          } else {
+            alert("Problème d'upload");
+          }
+        })
+        .catch((e) => {
+          console.log(e);
+        });
     },
   },
-  
 };
 </script>

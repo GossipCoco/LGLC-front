@@ -27,35 +27,63 @@
           </div>
         </div>
       </div>
-      <p class="text-align-justify" v-html="Summary"></p>
+      <div class="row">
+        <div class="col-6"><p class="text-align-justify" v-html="Summary"></p></div>
+        <div class="col-4">
+          <div class="display-flex-column flex-one all-chapters-list-container">
+            <ul class="list-group">
+              <li
+                class="list-group-item"
+                v-for="(chapter, index) in fiction.Chapters"
+                :key="index"
+              >
+                <router-link
+                  class="dropdown-item roboto"
+                  :to="'/chapter/' + chapter.Title"
+                >
+                  {{ chapter.Title }}
+                </router-link>
+              </li>
+            </ul>
+            <div class="d-grid gap-2">
+              <router-link
+                type="button"
+                class="btn btn-primary btn-lg"
+                v-if="AuthorId === usrCurrent"
+                :to="'/fiction/createChapter/' + IdFiction"
+                v-bind="lastChap"
+              >
+                Créer le chapitre {{ lastChap }}
+              </router-link>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div
+            class="display-flex-column image-fiction-container overflowY-X-hidden background-size-cover"
+            v-bind:style="{
+              backgroundImage: 'url(' + backgroundImageFiction + ')',
+            }"
+          ></div>
+          <div class="display-flex-column">
+            <div class="mb-3">
+              <label for="formFile" class="form-label">Choisir une image</label>
+              <input
+                class="form-control"
+                type="file"
+                id="formFile"
+                @change="handleFileUpload"
+              />
+            </div>
+          </div>
+          <div class="display-flex-column all-characters-of-fiction">
+            <CarrouselCharacter v-bind:Characters="Characters" />
+            <CarrouselCharacter v-bind:Characters="OCCharacters" />
+          </div>
+        </div>
     </div>
-    <div class="display-flex-column flex-one all-chapters-list-container">
-      <ul class="list-group">
-        <li
-          class="list-group-item"
-          v-for="(chapter, index) in fiction.Chapters"
-          :key="index"
-        >
-          <router-link
-            class="dropdown-item roboto"
-            :to="'/chapter/' + chapter.Title"
-          >
-            {{ chapter.Title }}
-          </router-link>
-        </li>
-      </ul>
-      <div class="d-grid gap-2">
-        <router-link
-          type="button"
-          class="btn btn-primary btn-lg"
-          v-if="AuthorId === usrCurrent"
-          :to="'/fiction/createChapter/' + IdFiction"
-          v-bind="lastChap"
-        >
-          Créer le chapitre {{ lastChap }}
-        </router-link>
-      </div>
-    </div>
+  </div>
+
   </div>
 </template>
 
@@ -63,6 +91,7 @@
 import FictionService from "../../../services/FictionService";
 import EditSummary from "../FictionsForm/EditSummary.vue";
 import AddANewCharacterModal from "./AddANewCharacterModal.vue";
+import CarrouselCharacter from "./CarrouselCharacter.vue";
 import pica from "pica"; // Importer Pica
 
 export default {
@@ -75,8 +104,11 @@ export default {
     "fiction",
     "Summary",
     "IdGame",
+    "backgroundImageFiction",
+    "Characters",
+    "OCCharacters"
   ],
-  components: { EditSummary, AddANewCharacterModal },
+  components: { EditSummary, CarrouselCharacter, AddANewCharacterModal },
   data() {
     return {
       NewImage: null,
@@ -86,12 +118,6 @@ export default {
     };
   },
   methods: {
-    selectImage() {
-      this.currentImage = this.$refs.file.files.item(0);
-      this.previewImage = URL.createObjectURL(this.currentImage);
-      this.progress = 0;
-      this.message = "";
-    },
     handleFileUpload(event) {
       const file = event.target.files[0];
 

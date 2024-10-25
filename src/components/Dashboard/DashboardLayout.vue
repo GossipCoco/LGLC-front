@@ -28,14 +28,14 @@
       v-bind:LevelName="LevelName"
     />
     
-    <LastFiveFiction />
+    <LastFiveFiction v-if="!showspinner" />
     <ExtractLastChap v-if="!showspinner" />
     <LastBook />
   </div>
   <div class="row bottom-dashboard">
     <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12">
       <div class="row top-left-dashboard">
-        <CharacterByGamer v-bind:gamer="gamer" />
+        <CharacterByGamer v-bind:gamer="gamer" v-if="!showspinner" />
       </div>
       <div class="row bottom-left-dashboard">
         <CharacterRandom
@@ -47,7 +47,7 @@
     <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-xs-12">
       <div class="row">
         <ListAllFictions v-if="!showspinner" />
-        <GamesLinks />
+        <GamesLinks v-if="!showspinner" />
       </div>
     </div>
   </div>
@@ -171,7 +171,6 @@ export default {
       this.showspinner = true;
       UserService.getUserById(e)
         .then((response) => {
-          this.showspinner = false;
           this.userInfo = response.data.ob;
           this.Avatar = response.data.ob.Avatar;
           this.usr = response.data.ob.UserName;
@@ -186,8 +185,8 @@ export default {
           this.Nbmessages = this.userInfo.Messages.length;
           this.totalPoints = this.calculateTotalPoints(this.userInfo.Points);
           this.level = this.userInfo.Level;
-          this.gamer = this.userInfo.Gamers;
-          this
+          this.gamer = this.userInfo.Gamers;          
+          this.showspinner = false;
         })
         .catch((error) => {
           console.error(error);

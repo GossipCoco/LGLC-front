@@ -89,12 +89,12 @@ th {
     flex: 1;
     background-position: 50%;
     border-radius: 1rem 0 0 1rem;
-    height: 67vh;
+    height: 74vh;
 }
 .chapter-text-content {
     flex: 2;
     overflow: auto;
-    height: 38rem;
+    height: 42rem;
     padding: 1rem 2rem 1rem 1rem;
     border-radius: 0 3rem 3rem 0;
     box-shadow: inset 0 0 10px rgba(var(--main-black), 0.1);
@@ -104,18 +104,21 @@ th {
     font-size: 1.1em;
 }
 .chapter-button-content {
-    margin: 2rem 0 2rem 0;
-    gap: 2rem;
+    margin: 0rem 0 1rem 0;
+    gap: 1rem;
 }
 .character-chapters-fiction-container .character-chapters-container {
     width: 75rem;
 }
 .illustration-background {
-    width: 82rem;
+    width: 100rem;
     margin: 0;  
 }
 .original-character-image-container img{
     width: 100%;
+}
+.gap-2{
+    width: 28rem;
 }
 .all-chapters-list-container {    
     width: 25rem;
@@ -127,7 +130,8 @@ th {
 .summary-container {
     height: 70vh;
     padding: 0 1rem;
-    width: 50rem;
+    width: 100rem;
+    overflow: hidden;
 }
 .create-chapter-btn-container .btn {
     width: 15rem;
