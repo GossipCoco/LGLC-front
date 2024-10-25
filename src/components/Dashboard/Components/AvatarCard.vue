@@ -22,8 +22,7 @@
         </div>
         <div class="row">
           <div class="col-7">
-            <p class="display-flex-row"><span class="label-profil poppins-text text-white flex-one">Inscription</span></p>
-            <p class="display-flex-row"><span class="label-profil poppins-text text-white flex-one">Inscription</span></p>
+            <p class="display-flex-row"><span class="label-profil poppins-text text-white flex-one">Inscription</span></p>            <p class="display-flex-row"><span class="label-profil poppins-text text-white flex-one">Inscription</span></p>
             <p class="display-flex-row"><span class="label-profil poppins-text text-white flex-one">Dernière connextion</span></p>
             <p class="display-flex-row"><span class="label-profil poppins-text text-white flex-one">Nb de fictions</span></p>
             <p class="display-flex-row"><span class="label-profil poppins-text text-white flex-one">Nb de mots écrits</span></p>
