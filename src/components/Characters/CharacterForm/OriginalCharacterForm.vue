@@ -100,12 +100,14 @@
       <div class="row">
         <LinkGenerateImage />
         <div class="col-md-6">
-          <label for="inputImage" class="form-label text-white">Envoyer une image</label>
+          <label for="inputImage" class="form-label text-white"
+            >Envoyer une image</label
+          >
           <input
             type="file"
             class="form-control"
             id="inputImage"
-            @change="onFileChange"
+            @change="handleFileUpload"
           />
         </div>
         <div class="col-md-2 create-character-button display-flex">
@@ -117,7 +119,7 @@
           >
             Créer le personnage
           </button>
-      </div>
+        </div>
       </div>
       <!-- <div class="row">
         <div class="col-12">
@@ -133,13 +135,14 @@ import InputName from "../../Components/FormComponent/InputName.vue";
 import GerenicSelect from "../../Components/FormComponent/GenericSelect.vue";
 import GenericTextarea from "../../Components/FormComponent/GenericTextarea.vue";
 import LinkGenerateImage from "../../Components/FormComponent/LinkGenerateImage.vue";
+import { resizeImage } from "../../../services/functions";
 export default {
   name: "OriginalCharacterForm",
   components: {
     InputName,
     GerenicSelect,
     GenericTextarea,
-    LinkGenerateImage
+    LinkGenerateImage,
   },
   date() {
     return {
@@ -247,11 +250,11 @@ export default {
       if (this.form) {
         this.form.Description = e;
         const Description = this.form.Description
-        ? this.form.Description.split("\n")
-            .map((paragraph) => `<p>${paragraph}</p>`)
-            .join("")
-        : "";
-      this.form.Description = Description;
+          ? this.form.Description.split("\n")
+              .map((paragraph) => `<p>${paragraph}</p>`)
+              .join("")
+          : "";
+        this.form.Description = Description;
       } else {
         console.error("L'objet `form` n'est pas défini.");
       }
@@ -260,82 +263,125 @@ export default {
       if (this.form) {
         this.form.Personnality = e;
         const Personnality = this.form.Personnality
-        ? this.form.Personnality.split("\n")
-            .map((paragraph) => `<p>${paragraph}</p>`)
-            .join("")
-        : "";
+          ? this.form.Personnality.split("\n")
+              .map((paragraph) => `<p>${paragraph}</p>`)
+              .join("")
+          : "";
         this.form.Personnality = Personnality;
       } else {
         console.error("L'objet `form` n'est pas défini.");
       }
     },
     getbiography(e) {
-
       if (this.form) {
         this.form.Biography = e;
         const Biography = this.form.Biography
-        ? this.form.Biography.split("\n")
-            .map((paragraph) => `<p>${paragraph}</p>`)
-            .join("")
-        : "";
+          ? this.form.Biography.split("\n")
+              .map((paragraph) => `<p>${paragraph}</p>`)
+              .join("")
+          : "";
         this.form.Biography = Biography;
       } else {
         console.error("L'objet `form` n'est pas défini.");
       }
     },
-    onFileChange(e) {
-      if (this.form) {
-        const file = e.target.files[0];
-        this.form.Image = file;
-        
-      }else {
-        console.error("L'objet `form` n'est pas défini.");
+    handleFileUpload(event) {
+      this.file = event.target.files[0];
+
+      this.file = event.target.files[0];
+      // Vérifier le type MIME pour les images acceptées
+      const allowedTypes = [
+        "image/jpeg",
+        "image/jpg",
+        "image/png",
+        "image/webp",
+      ];
+      if (!allowedTypes.includes(this.file.type)) {
+        alert("Seuls les formats JPEG, PNG et WEBP sont acceptés.");
+        return;
+      }
+      // Vérification du poids de l'image (5 Mo)
+      if (this.file.size > 5 * 1024 * 1024) {
+        alert("L'image dépasse la limite de 5 Mo.");
+        return;
       }
 
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const img = new Image();
+        img.src = e.target.result;
+        img.onload = () => {
+          // Redimensionner l'image si elle dépasse 1200px de largeur
+          if (img.width > 1200) {
+            resizeImage(img, 1920, this.file)
+              .then((resizedFile) => {
+                this.file = resizedFile;
+                this.sendFile();
+              })
+              .catch((error) => {
+                console.error("Erreur lors du redimensionnement:", error);
+              });
+          } else {
+            this.sendFile(); // Appel de l'envoi de fichier
+          }
+        };
+      };
+      reader.readAsDataURL(this.file);
+    },
+    sendFile() {
+      const formData = new FormData();
+      formData.append("image", this.file);
+      this.handleOk(formData); // Envoi de l'image via la fonction UploadNewImage
     },
     handleOk() {
       console.log(this.form);
       const formData = new FormData();
-  formData.append('image', this.form.Image); // Utilisez le nom de champ `image` comme dans votre route
-  formData.append('UserId', this.form.UserId);
-  formData.append('UserName', this.form.UserName);
-  formData.append('KitName', this.form.KitName);
-  formData.append('ApprenticeName', this.form.ApprenticeName);
-  formData.append('WarriorName', this.form.WarriorName);
-  formData.append('ClanId', this.form.ClanId);
-  formData.append('Status', this.form.Status);
-  formData.append('Genre', this.form.Genre);
-  formData.append('GradeId', this.form.GradeId);
-  formData.append('Personnality', this.form.Personnality);
-  formData.append('Biography', this.form.Biography);
-  formData.append('Description', this.form.Description);
+      formData.append("image", this.form.Image); // Utilisez le nom de champ `image` comme dans votre route
+      formData.append("UserId", this.form.UserId);
+      formData.append("UserName", this.form.UserName);
+      formData.append("KitName", this.form.KitName);
+      formData.append("ApprenticeName", this.form.ApprenticeName);
+      formData.append("WarriorName", this.form.WarriorName);
+      formData.append("ClanId", this.form.ClanId);
+      formData.append("Status", this.form.Status);
+      formData.append("Genre", this.form.Genre);
+      formData.append("GradeId", this.form.GradeId);
+      formData.append("Personnality", this.form.Personnality);
+      formData.append("Biography", this.form.Biography);
+      formData.append("Description", this.form.Description);
       this.CreateAnOriginalCharacter(this.form.UserId, this.form);
     },
-    async CreateAnOriginalCharacter(id, formData){
+    async CreateAnOriginalCharacter(id, formData) {
       console.log(id, formData);
-      try{
-        const response = await CharacterService.CreateAnOriginalCharacter(id, formData)
-        console.log('Réponse de la création de fiction :', response);
-      
-      if (response && response.data) { // Assure-toi que la réponse contient bien les données attendues
-        console.log('Fiction créée avec succès, redirection...');
-        this.$router.push({
-          path: "/OriginaleCharacterByUser",
-        });
-      } else {
-        console.error('Erreur lors de la création de la fiction, réponse inattendue :', response);
+      try {
+        const response = await CharacterService.CreateAnOriginalCharacter(
+          id,
+          formData
+        );
+        console.log("Réponse de la création de fiction :", response);
+
+        if (response && response.data) {
+          // Assure-toi que la réponse contient bien les données attendues
+          console.log("Fiction créée avec succès, redirection...");
+          this.$router.push({
+            path: "/OriginaleCharacterByUser",
+          });
+        } else {
+          console.error(
+            "Erreur lors de la création de la fiction, réponse inattendue :",
+            response
+          );
+          this.$router.push({
+            path: "/OriginaleCharacterByUser",
+          });
+        }
+      } catch (error) {
+        console.error("Erreur lors de la création de la fiction :", error);
         this.$router.push({
           path: "/OriginaleCharacterByUser",
         });
       }
-      }
-      catch (error) {
-      console.error('Erreur lors de la création de la fiction :', error);
-      this.$router.push({
-          path: "/OriginaleCharacterByUser",
-        });
-    }
-    }
+    },
   },
 };
 </script>

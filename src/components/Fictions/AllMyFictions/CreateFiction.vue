@@ -98,6 +98,7 @@ import SelectCharacterComponent from "../../Components/FormComponent/SelectChara
 import SelectOriginalCharacterComponent from "../../Components/FormComponent/SelectOriginalCharacterComponent.vue";
 import TextAreaComponent from "../../Components/FormComponent/TextAreaComponent.vue";
 import LinkGenerateImage from "../../Components/FormComponent/LinkGenerateImage.vue";
+import { resizeImage } from '../../../services/functions'
 
 export default {
   name: "CreateFiction",
@@ -183,8 +184,52 @@ export default {
         });
       
     },
+
     handleFileUpload(event) {
       this.file = event.target.files[0];
+      
+      this.file = event.target.files[0];
+      // Vérifier le type MIME pour les images acceptées
+      const allowedTypes = [
+        "image/jpeg",
+        "image/jpg",
+        "image/png",
+        "image/webp",
+      ];
+      if (!allowedTypes.includes(this.file.type)) {
+        alert("Seuls les formats JPEG, PNG et WEBP sont acceptés.");
+        return;
+      }
+      // Vérification du poids de l'image (5 Mo)
+      if (this.file.size > 5 * 1024 * 1024) {
+        alert("L'image dépasse la limite de 5 Mo.");
+        return;
+      }
+
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const img = new Image();
+        img.src = e.target.result;
+        img.onload = () => {
+          // Redimensionner l'image si elle dépasse 1200px de largeur
+          if (img.width > 1200) {
+            resizeImage(img, 1920, this.file).then((resizedFile) => {
+              this.file = resizedFile;
+              this.sendFile();
+            }).catch((error) => {
+              console.error("Erreur lors du redimensionnement:", error);
+            });
+          } else {
+            this.sendFile(); // Appel de l'envoi de fichier
+          }
+        };
+      };
+      reader.readAsDataURL(this.file);
+    },
+    sendFile() {
+      const formData = new FormData();
+      formData.append("image", this.file);
+      this.handleOk(formData); // Envoi de l'image via la fonction UploadNewImage
     },
     handleOk() {
           // Soumettre le formulaire de création de personnage
