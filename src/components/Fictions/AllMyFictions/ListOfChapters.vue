@@ -11,18 +11,7 @@
         <div class="col-2">
           <EditSummary v-bind:FictionId="IdFiction" v-bind:Summary="Summary" />
         </div>
-        <div class="col-3">
-          <div class="display-flex-column">
-            <div class="mb-3">
-              <input
-                class="form-control"
-                type="file"
-                id="formFile"
-                @change="handleFileUploadIllustration"
-              />
-            </div>
-          </div>
-        </div>
+        <UploadIllustration v-bind:IllustrationId="IllustrationId" v-bind:IdFiction="IdFiction"/>
         <div class="col-1"></div>
         <div class="col-4">          
             <router-link
@@ -89,6 +78,7 @@ import FictionService from "../../../services/FictionService";
 import EditSummary from "../FictionsForm/EditSummary.vue";
 import AddANewCharacterModal from "./AddANewCharacterModal.vue";
 import CarrouselCharacter from "./CarrouselCharacter.vue";
+import UploadIllustration from "../Components/UploadIllustration.vue";
 import pica from "pica"; // Importer Pica
 
 export default {
@@ -103,9 +93,11 @@ export default {
     "IdGame",
     "backgroundImageFiction",
     "Characters",
-    "OCCharacters"
+    "OCCharacters",
+    "UploadIllustration",
+    "IllustrationId"
   ],
-  components: { EditSummary, CarrouselCharacter, AddANewCharacterModal },
+  components: { EditSummary, CarrouselCharacter, AddANewCharacterModal, UploadIllustration },
   data() {
     return {
       NewImage: null,

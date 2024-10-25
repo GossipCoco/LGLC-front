@@ -46,6 +46,14 @@ class FictionService {
             },
         });
     }
+    UploadFictionBackgroundIllustration(id, data){
+        console.log(id, data)
+        return http.post(`/fiction/UploadFictionBackgroundIllustration/${id}`, data, {
+            headers: {
+                'Content-Type': 'multipart/form-data',
+            },
+        });   
+    }
     GetLastChapterOfAFiction(id, data){
         return http.post(`/chapter/GetLastChapterOfAFiction/${id}`, data);
     }
