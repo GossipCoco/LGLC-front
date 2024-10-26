@@ -2,8 +2,8 @@
   <div class="row pagination-zone-container">
     <div class="pagination-container-row col-lg-12 col-md-12 col-sm-12 col-xxl-12 col-xs-12">
       <div class="row pagination-container">
-        <div class="col-3 col-md-3 col-sm-3 col-xxl- 2col-xs-"></div>
-        <div class="col-5 col-md-5 col-sm-5 col-xxl-5 col-xs-5 col-pagination-container">
+        <div class="col-2 col-md-2 col-sm-2 col-xxl-2 col-xs-2"></div>
+        <div class="col-6 col-md-6 col-sm-6 col-xxl-6 col-xs-6 col-pagination-container">
           <ul class="pagination" v-if="navPage.pages < 6">
             <li class="nav-btn-contain">
               <button

@@ -151,7 +151,6 @@ export default {
     getAllCharacters(nav) {
       CharacterService.getAllCharacters({ nav })
         .then((response) => {
-          console.log(response);
           this.allCharacters = response.data.ob;
           this.showspinner = false;
           functions.CalcPagination(
