@@ -1,5 +1,6 @@
 <template>
-  <div class="padding-2-rem">
+  <div class="card-body user-inbformation-conter>">
+  <div class="padding-2-rem white-text">
     <div class="display-flex-column">
       <div class="roboto roboto">
         {{ usrInformation.LastName }} {{ usrInformation.FirstName }} -
@@ -13,43 +14,36 @@
   </div>
   <h1>Fiche personnage</h1>
   <hr />
-  <div class="all-characters-by-user-container overflowY-scroll">
+  <div class="all-characters-by-user-container overflowY-hidden overflowX-hidden">
     <div class="row row-cols-1 row-cols-md-3 g-4">
       <div
-        class="col"
+        class="col-3"
         v-for="(gamer, index) in usrInformation.Gamers"
         :key="index"
       >
-        <div class="card h-100">
+      <div class="col-11">
+      <div class="display-flex-row align-items-content-justify-content">
+        <div class="card h-100 display-flex-row align-items-content-justify-content">
           <img            
             :src="gamer.Image"
             class="card-img-top avatar-gamer"
             :alt="gamer.UserName"
           />
-          <div class="card-body">
+          
             <h3 class="card-title cinzel">{{ gamer.UserName }}</h3>
             <div class="information-character-container  overflowY-X-hidden">
               <p>Clan de naissance : {{ gamer.ClanId }}</p>
               <p>Statut actuel : {{ gamer.Status }}</p>
               <p>Genre du personnage : {{ gamer.Genre }}</p>
-            </div>
-          </div>
-          <div class="card-footer">
-            <div class="informations-gamer-container display-flex">
-              <div class="display-flex-column">
-                <h2>Description</h2>
-                <p v-html="gamer.Description"></p>
-                <h2>Personnalité</h2>
-                <p v-html="gamer.Personnality"></p>
-                <h2>Biographie</h2>
-                <p v-html="gamer.Biography"></p>
-              </div>
-            </div>
+
           </div>
         </div>
+        </div>
+      </div>
       </div>
     </div>
   </div>
+</div>
 </template>
 <script>
 import UserService from "../../../services/UserService";

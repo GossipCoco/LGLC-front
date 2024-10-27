@@ -221,3 +221,6 @@ audio{
 .row.bottom-dashboard .card-header > div{
     width: 100%;
 }
+.card-body.user-inbformation-conter{
+    height: 80vh;
+}
