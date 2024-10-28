@@ -14,7 +14,7 @@
               v-bind:alt="chapter.Image"
             />
           </div>
-          <div class="summaray-title-text flex-one">
+          <div class="summaray-title-text flex-one display-flex-column align-items-content-justify-content">
             <p>
               <span class="last-chapter-text poppins-text font-size-1-25 font-weight-600 font-variant-small-caps">{{ chapter.Fiction.Title }}</span>
             </p>
