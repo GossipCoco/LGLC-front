@@ -21,6 +21,5 @@ export default {
     created() {
         this.url = this.$route.params.id;
     }
-
 }
 </script>
