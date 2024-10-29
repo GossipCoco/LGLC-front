@@ -28,6 +28,15 @@
     }
 }
 @media (min-width: 1200px) and (max-width: 1600px) {
+    .menu-left.menu-hidden.d-flex.flex-column.flex-shrink-0.p-3{
+        width: 9rem;
+    }
+    .card-body.all-last-three-fictions-container .list-all-fictions-globale--container {
+        width: 18rem;
+    }
+    .list-all-fictions-globale--container.three-last-chapters-container{
+        width: 18rem;
+    }
     #navbarCollapse {
         margin-left: 47rem;
     }
@@ -82,7 +91,7 @@
         margin: -1.5rem 0 0 5rem;
     }
     .menu-left ul li {
-        margin: 0.5rem 0;
+        margin: 0.55rem 3rem 0 -5rem;    
     }
     .list-all-fictions-globale--container {
         width: 18rem;

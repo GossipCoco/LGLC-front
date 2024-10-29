@@ -5,9 +5,7 @@
       <div class="card-body all-last-three-fictions-container display-flex-column align-items-content-justify-content">
         <div v-for="(game, index) in GamesAndFictions" :key="index">
           <div v-for="(fiction, index) in game.Fiction" :key="index" class="display-flex-row list-all-fictions-globale--container">
-            <div class="rond-image-illustration">
-              <ImageRondDashboard v-bind:src=" fiction.Image" v-bind:alt="fiction.Image" />
-            </div>
+            <ImageRondDashboard v-bind:src=" fiction.Image" v-bind:alt="fiction.Image" />            
             <div class="summaray-title-text  flex-one">
               <p><router-link class="poppins-text text-dark-green font-size-1em" :to="'/fiction/' + fiction.Title">{{ fiction.Title }}</router-link></p>
             </div>

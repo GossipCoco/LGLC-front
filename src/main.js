@@ -18,6 +18,7 @@ import { faCat, faEnvelope, faGamepad, faHome, faHouseUser, faUser, faUserAlt, f
 import 'jquery/dist/jquery'
 import 'popper.js/dist/umd/popper.min.js'
 import 'popper.js'
+// import './assets/css/custom-variables.scss'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 import './assets/css/Base/Base.css'
