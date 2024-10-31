@@ -74,6 +74,7 @@
         <div v-if="!EditDescriptionTextArea" class="text-align-justify" v-html="Description"></div>
         <TextAreaOriginalCharacter v-if="EditDescriptionTextArea" v-bind:Title="'Description'" v-bind:Text="Description" v-bind:getDatas="'getDescription'" @getDescription="getDescription">
           <button type="button" class="btn btn-primary" v-on:click="editAndSendDescription">Editer la description</button>
+          <button type="button" class="btn btn-primary" v-on:click="cancel">Annuler</button>
         </TextAreaOriginalCharacter>
       </div>
       <div
@@ -83,7 +84,16 @@
         aria-labelledby="pills-profile-tab"
         tabindex="1"
       >
-        <div class="text-align-justify" v-html="Personnality"></div>
+        <p>
+          <button type="button" class="btn btn-primary" @click="editPersonnality">
+            <font-awesome-icon icon="pen" />
+          </button>
+        </p>
+        <div v-if="!EditPersonnalityTextArea" class="text-align-justify" v-html="Personnality"></div>
+        <TextAreaOriginalCharacter v-if="EditPersonnalityTextArea" v-bind:Title="'Personnalité'" v-bind:Text="Personnality" v-bind:getDatas="'getPersonnality'" @getPersonnality="getPersonnality">
+          <button type="button" class="btn btn-primary" v-on:click="editAndSendPersonnality">Editer la personnalité</button>
+          <button type="button" class="btn btn-primary" v-on:click="cancel">Annuler</button>
+        </TextAreaOriginalCharacter>
       </div>
       <div
         class="tab-pane fade"
@@ -92,7 +102,16 @@
         aria-labelledby="pills-contact-tab"
         tabindex="2"
       >
-        <div class="text-align-justify" v-html="Biography"></div>
+        <p>
+          <button type="button" class="btn btn-primary" @click="editBiography">
+            <font-awesome-icon icon="pen" />
+          </button>
+        </p>
+        <div v-if="!EditBiographyTextArea" class="text-align-justify" v-html="Biography"></div>
+        <TextAreaOriginalCharacter v-if="EditBiographyTextArea" v-bind:Title="'Biographie'" v-bind:Text="Biography" v-bind:getDatas="'getBiography'" @getBiography="getBiography">
+          <button type="button" class="btn btn-primary" v-on:click="editAndSendBiography">Editer la biographie</button>
+          <button type="button" class="btn btn-primary" v-on:click="cancel">Annuler</button>
+        </TextAreaOriginalCharacter>
       </div>
       <div
         class="tab-pane fade"
@@ -117,35 +136,66 @@ export default {
   data(){
     return{
       EditDescriptionTextArea: false,
-      newDescription: null
+      EditPersonnalityTextArea:false,
+      EditBiographyTextArea:false,
+      newDescription: null,
+      newPersonnality: null,
+      newBiography: null,
     }
   },
   methods:{
+    cancel(){
+      this.EditDescriptionTextArea = false
+      this.EditPersonnalityTextArea = false
+      this.EditBiographyTextArea = false
+    },
     editDescription(){
       this.EditDescriptionTextArea = true
+    },
+    editPersonnality(){
+      this.EditPersonnalityTextArea = true
+    },
+    editBiography(){
+      this.EditBiographyTextArea = true
     },
     getDescription(e){
       this.newDescription = e
     },
+    getPersonnality(e){
+      this.newPersonnality = e
+    },
+    getBiography(e){
+      this.newBiography = e
+    },
     editAndSendDescription(){
-      console.log(this.newDescription)
       const formData = new FormData();
       formData.append('typeField', 'Description')
       formData.append('Description', this.newDescription)
       this.EditOriginalCharacter(this.CurrentName, formData)
     },
-      EditOriginalCharacter(id, formData){
-        CharacterService.EditOriginalCharacter(id, formData)
-        .then((response) => {
-          console.log(response)
-          this.EditDescriptionTextArea = false
-        })
-        .catch(err => {
-          console.log(err)
-        })
-      }
-
+    editAndSendPersonnality(){
+      const formData = new FormData();
+      formData.append('typeField', 'Personnality')
+      formData.append('Personnality', this.newPersonnality)
+      this.EditOriginalCharacter(this.CurrentName, formData)
+    },
+    editAndSendBiography(){
+      const formData = new FormData();
+      formData.append('typeField', 'Biography')
+      formData.append('Biography', this.newBiography)
+      this.EditOriginalCharacter(this.CurrentName, formData)
+    },
+    EditOriginalCharacter(id, formData){
+      CharacterService.EditOriginalCharacter(id, formData)
+      .then((response) => {
+        console.log(response)
+        this.EditDescriptionTextArea = false
+        location.reload()
+      })
+      .catch(err => {
+        console.log(err)
+      })
     }
-  
+  }  
 };
 </script>
