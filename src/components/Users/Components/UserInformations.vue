@@ -2,10 +2,8 @@
   <div class="card-body user-inbformation-conter>">
     <div class="padding-2-rem white-text">
       <div class="display-flex-row">
-        <div class="avatar-container">
-          <img :src="'/images/Avatars/' + usrInformation.Avatar" />
-        </div>
-        <div class="">
+        <ImageRondDashboard v-bind:src="'/images/Avatars/' + usrInformation.Avatar" v-bind:alt="usrInformation.Avatar" v-bind:classe="'card-img-top mini-rond-avatar-image'"/>
+        <div class="display-flex-column">
           <p class="roboto roboto">
             {{ usrInformation.LastName }} {{ usrInformation.FirstName }} -
             {{ usrInformation.UserName }}
@@ -18,7 +16,8 @@
         </div>
       </div>
     </div>
-    <h1>Fiche personnage</h1>
+    <hr />
+    <h1 class="text-white">Fiche personnages</h1>
     <hr />
     <div
       class="all-characters-by-user-container overflowY-hidden overflowX-hidden"
@@ -56,8 +55,10 @@
 </template>
 <script>
 import UserService from "../../../services/UserService";
+import ImageRondDashboard from "../../Components/SpecificComponent/ImageRondDashboard.vue";
 export default {
   name: "UserInformations",
+  components:{ImageRondDashboard},
   props: ["user"],
   data() {
     return {
