@@ -16,49 +16,16 @@
         </div>
       </div>
     </div>
-    <hr />
-    <h1 class="text-white">Fiche personnages</h1>
-    <hr />
-    <div
-      class="all-characters-by-user-container overflowY-hidden overflowX-hidden"
-    >
-      <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div
-          class="col-3"
-          v-for="(gamer, index) in usrInformation.Gamers"
-          :key="index"
-        >
-          <div class="col-11">
-            <div class="display-flex-row align-items-content-justify-content">
-              <div
-                class="card h-100 display-flex-row align-items-content-justify-content"
-              >
-                <img
-                  :src="gamer.Image"
-                  class="card-img-top avatar-gamer"
-                  :alt="gamer.UserName"
-                />
-
-                <h3 class="card-title cinzel">{{ gamer.UserName }}</h3>
-                <div class="information-character-container overflowY-X-hidden">
-                  <p>Clan de naissance : {{ gamer.ClanId }}</p>
-                  <p>Statut actuel : {{ gamer.Status }}</p>
-                  <p>Genre du personnage : {{ gamer.Genre }}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <OCGamerCard v-bind:gamers="usrInformation.Gamers" />
   </div>
 </template>
 <script>
 import UserService from "../../../services/UserService";
 import ImageRondDashboard from "../../Components/SpecificComponent/ImageRondDashboard.vue";
+import OCGamerCard from "./OCGamerCard.vue";
 export default {
   name: "UserInformations",
-  components:{ImageRondDashboard},
+  components:{ImageRondDashboard, OCGamerCard},
   props: ["user"],
   data() {
     return {
