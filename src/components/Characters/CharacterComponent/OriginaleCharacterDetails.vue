@@ -12,8 +12,7 @@
           <div class="display-flex-row">
             <div class="display-flex flex-one">
               <h1 class="text-white card-title cinzel">{{ character.CurrentName }}</h1>
-            </div>
-            <router-link  class="btn btn-primary" :to="'/EditAnOriginalCharacter/'+ character.CurrentName">Editer le personnage</router-link>
+            </div>            
             <div class="display-flex flex-one justify-content-right">
               <router-link
                 class="btn btn-primary"
@@ -25,10 +24,19 @@
           </div>
           <div class="row">
             <div class="col-4">
-              <p>{{ character.Genre }}</p>
-              <p>{{ grade }}</p>
+              <p>Grade : </p>
+              <p>Genre : </p>
+              <p>Nom de chaton</p>
+              <p>Nom d'apprenti</p>
+              <p>Nom de guerrier</p>
             </div>
-            <div class="col-4"></div>
+            <div class="col-4">
+              <p>{{ grade }}</p>
+              <p>{{ character.Genre }}</p>
+              <p>{{ character.KitName }}</p>
+              <p>{{ character.WarriorName }}</p>
+              <p>{{ character.ApprenticeName }}</p>
+            </div>
             <div class="col-4">
               <img :src="'/images/clans/' + symbol" />
             </div>
@@ -73,6 +81,7 @@ export default {
     GetOneOriginaleCharacterByName(name) {
       CharacterService.GetOneOriginaleCharacterByName(name)
         .then((response) => {
+          console.log(response.data.ob)
           this.character = response.data.ob;
           this.symbol = response.data.ob.Clan.Symbol
           this.grade = response.data.ob.Grade.Name
