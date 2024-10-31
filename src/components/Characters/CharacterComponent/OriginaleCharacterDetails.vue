@@ -23,7 +23,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-4">
+            <div class="col-2">
               <p>Grade : </p>
               <p>Genre : </p>
               <p>Nom de chaton</p>
@@ -37,7 +37,8 @@
               <p>{{ character.WarriorName }}</p>
               <p>{{ character.ApprenticeName }}</p>
             </div>
-            <div class="col-4">
+            <div class="col-4"></div>
+            <div class="col-2 display-flex align-items-content-justify-content">
               <img :src="'/images/clans/' + symbol" />
             </div>
           </div>

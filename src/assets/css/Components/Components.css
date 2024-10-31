@@ -224,3 +224,7 @@ audio{
 .card-body.user-inbformation-conter{
     height: 80vh;
 }
+.info-original-character-height{
+    height: 19rem;
+    padding: 1rem;
+}
