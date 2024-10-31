@@ -109,9 +109,10 @@
 <script>
 import RelationCharacterComponent from "./RelationCharacterComponent.vue";
 import TextAreaOriginalCharacter from "../CharacterForm/TextAreaOriginalCharacter.vue";
+import CharacterService from "../../../services/CharacterService";
 export default {
   name: "CharacterTabs",
-  props: ["Description", "Personnality", "Biography", "Relation"],
+  props: ["CurrentName", "Description", "Personnality", "Biography", "Relation"],
   components: { RelationCharacterComponent, TextAreaOriginalCharacter },
   data(){
     return{
@@ -128,7 +129,23 @@ export default {
     },
     editAndSendDescription(){
       console.log(this.newDescription)
+      const formData = new FormData();
+      formData.append('typeField', 'Description')
+      formData.append('Description', this.newDescription)
+      this.EditOriginalCharacter(this.CurrentName, formData)
+    },
+      EditOriginalCharacter(id, formData){
+        CharacterService.EditOriginalCharacter(id, formData)
+        .then((response) => {
+          console.log(response)
+          this.EditDescriptionTextArea = false
+        })
+        .catch(err => {
+          console.log(err)
+        })
+      }
+
     }
-  }
+  
 };
 </script>

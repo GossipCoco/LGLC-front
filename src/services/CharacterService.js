@@ -51,6 +51,9 @@ class CharacterService {
     GetTwoRandoCharacters() {
         return http.get('/character/GetTwoRandoCharacters')
     }
+    EditOriginalCharacter(id, data){
+        return http.post(`/character/EditOriginalCharacter/${id}`, data)
+    }
 }
 
 export default new CharacterService()

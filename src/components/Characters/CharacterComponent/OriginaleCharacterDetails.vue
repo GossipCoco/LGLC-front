@@ -35,6 +35,7 @@
           </div>
           <div class="row">
             <CharacterTabs
+              v-bind:CurrentName="character.CurrentName"
               v-bind:Description="character.Description"
               v-bind:Personnality="character.Personnality"
               v-bind:Biography="character.Biography"
