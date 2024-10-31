@@ -13,7 +13,8 @@ import '@vueup/vue-quill/dist/vue-quill.snow.css';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faCat, faEnvelope, faGamepad, faHome, faHouseUser, faUser, faUserAlt, faUserCog,
-        faUsers, faBurger, faBook, faGear, faChevronDown, faStar, faUserSecret
+        faUsers, faBurger, faBook, faGear, faChevronDown, faStar, faUserSecret,
+        faPen
         } from '@fortawesome/free-solid-svg-icons'
 import 'jquery/dist/jquery'
 import 'popper.js/dist/umd/popper.min.js'
@@ -47,7 +48,7 @@ IOController.initSocket(io)
 
 library.add(faUserSecret,faUser, faHouseUser, faGamepad, faUser, faHome, faEnvelope,
             faUserCog, faCat, faUserAlt, faUsers, faCat, faBurger, faBook,
-            faGear, faChevronDown, faStar)
+            faGear, faChevronDown, faStar, faPen)
 
 const app = createApp(App)
 app.component('QuillEditor', QuillEditor)

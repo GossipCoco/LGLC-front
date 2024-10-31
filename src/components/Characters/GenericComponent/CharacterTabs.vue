@@ -66,7 +66,15 @@
         aria-labelledby="pills-home-tab"
         tabindex="0"
       >
-        <div  class="text-align-justify" v-html="Description"></div>
+        <p>
+          <button type="button" class="btn btn-primary" @click="editDescription">
+            <font-awesome-icon icon="pen" />
+          </button>
+        </p>
+        <div v-if="!EditDescriptionTextArea" class="text-align-justify" v-html="Description"></div>
+        <TextAreaOriginalCharacter v-if="EditDescriptionTextArea" v-bind:Title="'Description'" v-bind:Text="Description" v-bind:getDatas="'getDescription'" @getDescription="getDescription">
+          <button type="button" class="btn btn-primary" v-on:click="editAndSendDescription">Editer la description</button>
+        </TextAreaOriginalCharacter>
       </div>
       <div
         class="tab-pane fade"
@@ -75,7 +83,7 @@
         aria-labelledby="pills-profile-tab"
         tabindex="1"
       >
-        <div  class="text-align-justify" v-html="Personnality"></div>
+        <div class="text-align-justify" v-html="Personnality"></div>
       </div>
       <div
         class="tab-pane fade"
@@ -99,11 +107,28 @@
   </div>
 </template>
 <script>
-import RelationCharacterComponent from './RelationCharacterComponent.vue';
+import RelationCharacterComponent from "./RelationCharacterComponent.vue";
+import TextAreaOriginalCharacter from "../CharacterForm/TextAreaOriginalCharacter.vue";
 export default {
-    name: "CharacterTabs",
-    props: ["Description","Personnality","Biography", "Relation"],
-    components:{ RelationCharacterComponent}
-
-}
+  name: "CharacterTabs",
+  props: ["Description", "Personnality", "Biography", "Relation"],
+  components: { RelationCharacterComponent, TextAreaOriginalCharacter },
+  data(){
+    return{
+      EditDescriptionTextArea: false,
+      newDescription: null
+    }
+  },
+  methods:{
+    editDescription(){
+      this.EditDescriptionTextArea = true
+    },
+    getDescription(e){
+      this.newDescription = e
+    },
+    editAndSendDescription(){
+      console.log(this.newDescription)
+    }
+  }
+};
 </script>
