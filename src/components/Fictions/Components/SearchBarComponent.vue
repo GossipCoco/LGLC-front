@@ -1,28 +1,31 @@
 <template>
-  <div class="row">    
+  <div class="row">
     <SelectCharacterComponent
       v-bind:For="'SearchCharacter'"
       v-bind:label="'Chercher un personnage'"
+      v-bind:formdata="'getcharacter'"
       v-bind:characters="characters"
       v-bind:col="'col-2'"
-      @form-character="getCharacter"
+      @getCharacter="getCharacter"
     />
     <GenericSelect
-          v-bind:For="'SearchClan'"
-          v-bind:label="'Clan'"
-          v-bind:formdata="'getclan'"
-          v-bind:col="'col-3'"
-          @getclan="getclan"
-        />
-
-    <div class="col-2">
-
-    </div>
-
-    <div class="col-1">
+      v-bind:For="'SearchClan'"
+      v-bind:label="'Clan'"
+      v-bind:formdata="'getclan'"
+      v-bind:col="'col-3'"
+      @getclan="getclan"
+    />
+    <GenericSelect
+      v-bind:For="'SearchAuthor'"
+      v-bind:label="'Auteur'"
+      v-bind:formdata="'getAuthor'"
+      v-bind:col="'col-3'"
+      @getAuthor="getAuthor"
+    />
+    <div class="col-1 display-flex align-items-content-justify-content">
       <button type="button" class="btn btn-primary">Rechercher</button>
     </div>
-    <div class="col-3">
+    <div class="col-3 display-flex align-items-content-justify-content">
       <router-link class="btn btn-primary" to="/createANewFiction">
         Créer une nouvelle fiction
       </router-link>
@@ -42,12 +45,18 @@ export default {
     };
   },
   methods: {
-    getCharacter(CharacterId) {
-      this.$emit("form-character", CharacterId);
+    getCharacter(e) {
+      console.log(e)
+      this.$emit("form-info",e ,'Character');
     },
-    getclans(ClanId){
-      this.$emit("form-clan", ClanId);
-    }
+    getclan(e) {
+      console.log(e)
+      this.$emit("form-info",e ,'Clan');
+    },
+    getAuthor(e) {
+      console.log(e)
+      this.$emit("form-info",e ,'Auteur');
+    },
   },
 };
 </script>

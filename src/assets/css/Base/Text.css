@@ -93,8 +93,8 @@ h1.card-title {
   text-transform: capitalize;
 }
 .character-illustration-container{
-  border-radius: 20px 20px 20px 20px;
-  height: 5rem;
+  border-radius: 100%;
+  height: 6rem;
   background-position: 50%;
   width: 100px;
 }

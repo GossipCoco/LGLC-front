@@ -7,6 +7,9 @@ class FictionService {
     countAllMyFictions(id){
         return http.get(`/fiction/CountAllMyFictions/${id}`);
     }
+    GetAllAUthors(){
+        return http.get('/fiction/GetAllAUthors')
+    }
     getFictionByName(id, data){
         return http.post(`/fiction/GetAllFictionsByName/${id}`, data);
     }

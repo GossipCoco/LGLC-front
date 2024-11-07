@@ -81,12 +81,12 @@ th{
     margin: 0 auto;
 }
 .h5-container{
-    height: 12vh;
-    padding: 0.5rem;
-    font-size: 0.85em;
+    height: 10vh;
+    padding: 0.25rem;
+    font-size: 0.75em;
     font-weight: 800;
     width: 15.5rem;
-    margin: 0 0 0 -1rem;
+    margin: -0.5rem 0 0 -1rem;
 }
 .left-fiction-summary-container{
     width: 20rem;
@@ -115,13 +115,13 @@ th{
 }
 .image-fiction-container-background{
     padding: 1rem 0 0.5rem 0;
-    height: 20vh;
+    height: 15vh;
     background-position: 50%;
     border-radius: 20px 0 0 20px;
 }
 .fiction-summary-card{
     width: 40vh;
-    height: 20vh;
+    height: 15vh;
     padding: 0 1rem 0 0.75rem;
     border-radius: 20% 12px 12px 20%;
 }
@@ -144,6 +144,7 @@ audio{
     background-position: 50%;   
     vertical-align: bottom;
     width: 100px;
+    height: 95px;
 }
 .character-details-router a {
     font-size: 0.85em;

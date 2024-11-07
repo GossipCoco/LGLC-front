@@ -90,6 +90,10 @@
     background-size: contain;
     background-repeat: no-repeat;
 }
+.clear-green-bacground{
+    background-color: rgba(var(--clear-green-02), 1);
+    border: 1px solid  rgba(var(--dark-green-02), 1);
+}
 /* MARGIN PADDING*/
 
 .margin-0-rem{

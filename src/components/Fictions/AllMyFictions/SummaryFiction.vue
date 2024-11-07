@@ -4,7 +4,7 @@
       :For="'SearchCharacter'"
       :label="'Sélectionner un personnage'"
       :characters="characters"
-      @form-character="getSearchedCharacter"
+      @form-info="getInfo"      
     />   
     <Spinner v-if="showspinner" />
     <AllCardsFictions v-else :allFictions="allFictions" />
@@ -33,11 +33,11 @@ export default {
   data() {
     return {
       userCurrent: this.$store.state.auth.user.usrID,
-      characters: {},
       allFictions: {},
       NbAllMyGamesFictions: 0,
       showspinner: false,
       filters: [],
+      allAuthors:{},
       nav: {
         current: 0,
         pages: 0,
@@ -51,8 +51,8 @@ export default {
     this.GetAllNamesAndIdsCharacters();
   },
   methods: {
-    getSearchedCharacter(e) {
-      console.log(e);
+    getInfo(e, w) {
+      console.log(e, w);
     },
     GetAllNamesAndIdsCharacters() {
       CharacterService.GetAllNamesAndIdsCharacters()
@@ -68,6 +68,12 @@ export default {
 
       try {
         await this.countAllFictions();
+        if(window.innerWidth >= 1920){
+          this.nav.step = 12
+        }else if(window.innerWidth < 1920)
+        {
+          this.nav.step = 8
+        }
         await this.getAllFictions(this.nav);
 
       } catch (error) {

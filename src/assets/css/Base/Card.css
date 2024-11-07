@@ -220,14 +220,11 @@
 }
 .row.bottom-dashboard .card.random-characters-card{
     height: 13rem;
-    width: 42.25rem;
 }
 .my-oc-character-container{
     margin: 0 0.5rem;
 }
-.random-characters-card .card-body{
-    width: 42rem;
-}
+
 .list-all-fictions-globale--container.list-all-fictions-globale--container{
     width: 22rem;
 }

@@ -7,7 +7,6 @@ import UserService from "./services/UserService";
 import jwtAPI from "./api/JwtApi";
 export default {
   name: "App",
-
   data() {
     return {
       jwtApi: null,

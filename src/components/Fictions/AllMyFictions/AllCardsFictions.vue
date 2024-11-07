@@ -1,7 +1,7 @@
 <template>
   <div class="row row-cols-md-4 g-4 margin-1-0">
     <div class="col" v-for="(fiction, index) in allFictions" :key="index">
-      <div class="card fiction-summary-card">
+      <div class="card fiction-summary-card clear-green-bacground">
         <div class="row">
           <div
             class="col-4 image-fiction-container-background background-size-cover"
@@ -10,7 +10,7 @@
             }"
           >
         </div>
-          <div class="col-8">
+          <div class="col-8 ">
             <div class="h5-container display-flex-column align-items-content-justify-content">
               <div class="display-flex-row text-dark-green montesserat">
                 Auteur : &nbsp;
@@ -29,7 +29,7 @@
             </div>
             <div
               class="card-text text-align-justify summary-text-font"
-              v-html="truncateText(fiction.Summary, 75)"
+              v-html="truncateText(fiction.Summary, 50)"
             ></div>
           </div>
         </div>
