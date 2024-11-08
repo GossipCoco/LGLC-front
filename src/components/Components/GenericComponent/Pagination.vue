@@ -1,5 +1,5 @@
 <template>
-  <div class="row pagination-zone-container">
+  <div class="row pagination-zone-container display-flex align-items-content-justify-content vertical-align-middle">
     <div class="pagination-container-row col-lg-12 col-md-12 col-sm-12 col-xxl-12 col-xs-12">
       <div class="row pagination-container">
         <div class="col-2 col-md-2 col-sm-2 col-xxl-2 col-xs-2"></div>

@@ -69,7 +69,7 @@ export default {
       try {
         await this.countAllFictions();
         if(window.innerWidth >= 1920){
-          this.nav.step = 12
+          this.nav.step = 16
         }else if(window.innerWidth < 1920)
         {
           this.nav.step = 8

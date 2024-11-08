@@ -81,12 +81,11 @@ th{
     margin: 0 auto;
 }
 .h5-container{
-    height: 10vh;
-    padding: 0.25rem;
-    font-size: 0.75em;
+    height: 9vh;
+    font-size: 0.65em;
     font-weight: 800;
     width: 15.5rem;
-    margin: -0.5rem 0 0 -1rem;
+    margin: -0.5rem 0 -0.5rem -1rem;
 }
 .left-fiction-summary-container{
     width: 20rem;
@@ -123,7 +122,10 @@ th{
     width: 40vh;
     height: 15vh;
     padding: 0 1rem 0 0.75rem;
-    border-radius: 20% 12px 12px 20%;
+    border-radius: 12px;
+}
+.height-all-fictions-container{
+    height: 70vh;
 }
 .mini-rond-messages{
     height: 2rem;
