@@ -7,7 +7,7 @@
         v-bind:For="'SearchCharacter'"
         v-bind:label="'Sélectionner un personnage'"
         v-bind:characters="characters"
-        @form-character="getSearchedCharacter"
+        @form-info="getInfo"
       />
       <Spinner v-if="showspinner" />
       <AllCardsFictions v-else :allFictions="allFictions" />
@@ -62,7 +62,7 @@ export default {
     this.GetAllNamesAndIdsCharacters();
   },
   methods: {
-    getSearchedCharacter(e) {
+    getInfo(e) {
       console.log(e);
     },
     GetAllNamesAndIdsCharacters() {

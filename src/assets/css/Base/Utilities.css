@@ -102,6 +102,9 @@
 .margin-1-0{
     margin: 1rem 0;
 }
+.margin-top-1rem{
+    margin: 0.5rem 0 0 0;
+}
 .margin-3-rem{
     margin: 3rem;
 }

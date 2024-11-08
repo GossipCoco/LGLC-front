@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-3">
+  <div class="margin-top-1rem mb-3">
     <label for="Summary" class="form-label text-white">{{ Title }} inspirée de "La Guerre des Clans"</label>
     <textarea
       v-model="content"
