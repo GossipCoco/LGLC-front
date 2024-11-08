@@ -83,12 +83,24 @@ export default {
     },
     async FictionPagination(page) {
       this.nav.current = page;
+      if(window.innerWidth >= 1920){
+          this.nav.step = 16
+        }else if(window.innerWidth < 1920)
+        {
+          this.nav.step = 8
+        }
       await this.getAllFictions(this.nav);
     },
     async countAllFictions() {
       try {
         const response = await FictionService.CountAllFictionsOnBases();
         this.NbAllFictions = response.data.ob.count;
+        if(window.innerWidth >= 1920){
+          this.nav.step = 16
+        }else if(window.innerWidth < 1920)
+        {
+          this.nav.step = 8
+        }
         this.nav.pages = Math.ceil(this.NbAllFictions / this.nav.step);
       } catch (error) {
         console.error(error);

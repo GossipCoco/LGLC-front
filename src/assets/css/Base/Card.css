@@ -56,9 +56,8 @@
     margin: 1rem 0 1rem 1rem;
 }
 .fiction-globale-container.card.fiction-container {
-    margin: 1rem 2rem 2rem 2rem;
-    width: 100rem;
-    min-width: 100rem;
+    margin: 1rem 1rem 1rem 1rem;
+    width: 103rem;
     height: 51rem;
 }
 .cat-corner::before
