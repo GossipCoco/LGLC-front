@@ -72,6 +72,12 @@ export default {
         this.$emit('getAuthor', this.dataId);        
       }
     },
+    GetGenre(){
+      this.options = [
+            { Name: "Mâle", Id: "Mâle" },
+            { Name: "Femelle", Id: "Femelle" },
+          ]
+    },
     GetAllAUthors(){
       FictionService.GetAllAUthors()
       .then((response) => {
@@ -84,16 +90,24 @@ export default {
     },
     GetAllGrade() {
       GradeServices.getAllGrades()
-        .then((response) => {          
+        .then((response) => {
+          console.log(response.data.ob)
           this.options = response.data.ob;
         })
         .catch((e) => {
           console.log(e);
         });
     },
+    GetStatus(){
+        this.options = [
+              { Name: "Vivant(e)", Id: "Vivant" },
+              { Name: "Décédé(e)", Id: "Décéde" },
+            ]
+      },
       GetAllClans() {
         ClansServices.getAllClans()
         .then((response) => {
+          console.log(response.data.ob)
           this.options = response.data.ob;          
         })
         .catch((e) => {

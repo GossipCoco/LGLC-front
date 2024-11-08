@@ -305,17 +305,6 @@ export default {
       this.handleOk(formData); // Envoi de l'image via la fonction UploadNewImage
     },
     handleOk() {
-      // Soumettre le formulaire de création de personnage
-      CharacterService.createANewCharacter(this.form)
-        .then((response) => {
-          const newCharacterId = response.data.ob.Id;
-          const redirectTo = this.$route.query.redirectTo || "/allCharacters";
-          this.$router.push({ path: redirectTo, query: { newCharacterId } });
-        })
-        .catch((e) => {
-          console.log(e);
-        });
-
       const formattedText = this.form.Summary;
       this.form.Summary = formattedText;
 
