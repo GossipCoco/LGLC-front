@@ -55,6 +55,7 @@
                     v-bind:Personnality="personnality"
                     v-bind:Biography="character.Biography"
                     v-bind:Relation="Relation"
+                    v-bind:Fictions="Fictions"
                     />                    
                   </div>
                 </div>
@@ -95,7 +96,8 @@ export default {
       symboleClan: null,
       ClanId: null,
       Grade: null,
-      Relation: {}
+      Relation: {},
+      Fictions:{}
     };
   },
   created() {},
@@ -120,6 +122,7 @@ export default {
     getCharacter(id) {
       CharacterService.getCharacterByName(id)
         .then((response) => {
+          // console.log(response.data.ob.GameCharacters)
           this.character = response.data.ob;
           this.Symbol = this.character.Clan.Symbol;
           this.ClanId = this.character.Clan.Id
@@ -137,6 +140,7 @@ export default {
           this.personnality = response.data.ob.Personnality;
           this.Grade = response.data.ob.Grade.Name
           this.Relation = response.data.ob.RelationsOne
+          this.Fictions = response.data.ob.GameCharacters
 
         })
         .catch((e) => {

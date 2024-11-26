@@ -8,8 +8,8 @@
           class="btn btn-outline-light poppins-text "
         >
           {{ name }}
-        </router-link></span
-      >
+        </router-link>
+      </span>
     </p>
   </div>
 </template>

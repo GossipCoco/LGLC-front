@@ -43,6 +43,20 @@
           Histoire
         </button>
       </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="pills-fiction-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#pills-fiction"
+          type="button"
+          role="tab"
+          aria-controls="pills-fiction"
+          aria-selected="false"
+        >
+          Fictions
+        </button>
+      </li>
       <li class="nav-item" role="family">
         <button
           class="nav-link"
@@ -122,6 +136,22 @@
       >
         <RelationCharacterComponent v-bind:Relation="Relation" />
       </div>
+      <div
+        class="tab-pane fade"
+        id="pills-fiction"
+        role="tabpanel"
+        aria-labelledby="pills-fiction-tab"
+        tabindex="5"
+      >
+        <p>Les fictions de ce personnage</p>
+        <div v-for="(games, index) in Fictions" :key="index">
+          <div v-for="(fictions, index) in games" :key="index">
+            <div v-for="(fiction, index) in fictions.Fiction" :key="index">
+              <p><router-link :to="'/fiction/' + fiction.Title" class="white-text">{{ fiction.Title }}</router-link></p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -131,7 +161,7 @@ import TextAreaOriginalCharacter from "../CharacterForm/TextAreaOriginalCharacte
 import CharacterService from "../../../services/CharacterService";
 export default {
   name: "CharacterTabs",
-  props: ["CurrentName", "Description", "Personnality", "Biography", "Relation"],
+  props: ["CurrentName", "Description", "Personnality", "Biography", "Relation", "Fictions"],
   components: { RelationCharacterComponent, TextAreaOriginalCharacter },
   data(){
     return{
