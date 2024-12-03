@@ -24,10 +24,10 @@
                 <router-link class="roboto text-white" to="/login">Se connecter</router-link>
               </li>
               <li class="nav-item roboto text-white"  v-if="!isLoggedIn">
-                <router-link to="/Register">Créer son compte</router-link>
+                <router-link to="/Register" class="nav-item roboto text-white">Créer son compte</router-link>
               </li>
               <li class="nav-item roboto text-white"  v-if="isLoggedIn">
-                <router-link to="/dashboard">Aller sur son Dashboard</router-link>
+                <router-link to="/dashboard" class="nav-item roboto text-white">Aller sur son Dashboard</router-link>
               </li>
               <li class="nav-item logout-li-container roboto text-white" v-if="isLoggedIn">
                 <a href="#" @click.prevent="logout" class="logout-li-container roboto text-white">
