@@ -6,7 +6,8 @@
         v-bind:UserName="UserName"
         v-bind:Avatar="Avatar"
         v-bind:User="usr"
-        v-bind:NbMessages="Nbmessages"
+        v-bind:NbMessages="Nbmessages"        
+        v-bind:usrId="usrId"
       />
     </div>
   </div>

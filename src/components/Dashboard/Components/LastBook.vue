@@ -6,7 +6,15 @@
         v-bind:type="'chapters'"
       />
       <div class="card-body last-chapter-card text-white">
-        <h5 class="text-white">{{ lastBook.Title }}</h5>
+        <h5 class="text-white">
+          <router-link
+              class="text-white poppins-text"
+              :to="'/BookByTitle/' + lastBook.Title"
+              >
+              {{ lastBook.Title }}</router-link>
+          
+
+        </h5>
         <div class="summary-book-dashboard display-flex-row align-items-content-justify-content">
           <img :src="lastBook.Image" width="20%" />
           <span class="text-white text-align-justify overflowY-scroll summmary-book-height-dashboard poppins-text text-white" v-html="lastBook.Summary"></span>
