@@ -231,3 +231,40 @@ audio{
     height: 19rem;
     padding: 1rem;
 }
+.avatar-container {
+    position: relative;
+    width: 100px;
+    height: 90px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  
+  .avatar-wrapper img {
+    width: 40%;
+    height: 40%;
+    object-fit: cover;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .edit-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .file-input {
+    display: none; /* Cache l'input file */
+  }
