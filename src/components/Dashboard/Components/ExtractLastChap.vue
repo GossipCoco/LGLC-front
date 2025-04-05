@@ -1,5 +1,5 @@
 <template>
-  <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-12 col-sm-12 col-xs-12 card-global">
+  <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 card-global">
     <div class="card background-lineart border-none fiction-card">
       <TitleHeaderDashboard v-bind:title="'Mes 3 derniers chapitres'" v-bind:type="'chapters'"/>
       <div class="card-body last-chapter-card display-flex-column align-items-content-justify-content">

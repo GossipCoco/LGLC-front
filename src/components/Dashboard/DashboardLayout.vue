@@ -34,7 +34,7 @@
     <LastBook />
   </div>
   <div class="row bottom-dashboard">
-    <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12">
+    <div class="col-xxl-5 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
       <div class="row top-left-dashboard">
         <CharacterByGamer v-bind:gamer="gamer" v-if="!showspinner" />
       </div>
@@ -45,7 +45,7 @@
           />
       </div>
     </div>
-    <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-xs-12">
+    <div class="col-xxl-7 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
       <div class="row">
         <ListAllFictions v-if="!showspinner" />
         <GamesLinks v-if="!showspinner" />
