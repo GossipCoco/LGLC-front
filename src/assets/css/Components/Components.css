@@ -182,6 +182,9 @@ audio{
     color: rgba(var(--clear-green-01), 1);
     background-color: var(--active-hover);
 }
+.margin-top-2-rem, .input-name-margin{
+    margin: 0.2rem 0 0 0;
+}
 .nav-link{
     color: rgba(var(--main-white), 1);
 }

@@ -1,7 +1,7 @@
 <template>
-  <div class="burger-menu" @click="toggleMenu">
+  <!-- <div class="burger-menu" @click="toggleMenu">
     <img :src="logo" />
-  </div>
+  </div> -->
   <div
     :class="[ 
       'menu-left', 

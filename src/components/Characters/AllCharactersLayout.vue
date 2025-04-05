@@ -1,18 +1,19 @@
 <template>
   <div class="height-fixe character-container list-all-characters-container">
     <div class="row row-filter background-color-dark-green-01 display-flex vertical-align-middle">
-      <div class="col-2 display-flex-row align-items-content-justify-content vertical-align-middle height-character">
+      <div class="col-xxl-2 col-xl-2 col-lg-12 col-md-12 col-sm-12 col-xs-12 display-flex-row align-items-content-justify-content vertical-align-middle height-character">
         <p class="text-white">{{ labelFilter }}</p>
       </div>
       <InputName
-        v-bind:col="'col-2'"
+      class="input-name-margin"
+        v-bind:col="'col-xxl-3 col-xl-3 col-lg-12 col-md-12 col-sm-12 col-xs-12'"
         v-bind:forId="'inputName'"
         v-bind:label="'Nom actuel du personnage'"
         v-bind:getNameData="'getCurrentName'"
         @getCurrentName="getCurrentName"
       />
       <GenericSelect
-        v-bind:col="'col-2'"
+        v-bind:col="'col-xxl-3 col-xl-3 col-lg-12 col-md-12 col-sm-12 col-xs-12'"
         v-bind:For="'SearchClan'"
         v-bind:label="'Clan'"
         v-bind:formdata="'getclans'"
@@ -20,7 +21,7 @@
         @getclans="getclans"
       />
       <GenericSelect
-        v-bind:col="'col-2'"
+        v-bind:col="'col-xxl-3 col-xl-3 col-lg-12 col-md-12 col-sm-12 col-xs-12'"
         v-bind:For="'SearchGrade'"
         v-bind:label="'Grade'"
         v-bind:formdata="'getgrade'"

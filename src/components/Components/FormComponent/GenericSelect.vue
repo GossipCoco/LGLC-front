@@ -1,9 +1,10 @@
 <template>
   <div :class="col">
-    <label :for="For" class="text-white form-label">
+    <label :for="For" class="col-sm-2 text-white form-label">
       {{ label }}
     </label>
-    <select
+    <div class="col-sm-10">
+      <select
       v-if="label !== 'Auteur'"
       :id="For"
       class="form-select"
@@ -27,6 +28,7 @@
           {{ option.Username }}
         </option>
       </select>
+    </div>    
   </div>
 </template>
 <script>

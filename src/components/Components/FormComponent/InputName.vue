@@ -1,6 +1,6 @@
 <template>
   <div :class="col">
-    <label :for="forId" class="form-label text-white">{{ label }}</label>
+    <div class="form-floating mb-2 margin-top-2-rem">    
     <input
       type="text"
       class="form-control"
@@ -8,6 +8,8 @@
       v-model="name"
       @change="getDatas"
     />
+    <label :for="forId">{{ label }}</label>
+  </div>
   </div>
 </template>
 <script>
