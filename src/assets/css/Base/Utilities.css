@@ -201,7 +201,7 @@ table.table-borderless, .table.table-borderless>:not(caption)>*>*, .table-border
     height: 5rem;
 }
 .card-body.all-last-three-fictions-container .list-all-fictions-globale--container{
-    width: 23rem;
+    width: 20rem;
 }
 .dashboard-max-card-container.card-height .card-body{
     height: 80vh;
