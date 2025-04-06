@@ -46,7 +46,7 @@
 }
 #navbarCollapse {
   height: 5rem;
-  margin-left: 60rem;
+  margin-left: 55rem;
   justify-content: right;
   width: 90vh;
   margin-right: -55rem;
@@ -180,8 +180,8 @@ ul {
     flex: 1;
     width: 20rem;
     height: 18vh;
-    padding: 0;
-    margin-top: -1rem;
+    padding: 0;    
+    margin: -3rem 0 0 -10rem;
 }
 #accueil .navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark{
   padding: 0;
