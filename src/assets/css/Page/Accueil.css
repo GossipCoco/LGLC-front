@@ -185,7 +185,8 @@
     padding-left: 0 !important;
 }
 #accueil .navbar-brand img {
-    width: 45%;
+    margin: 0 0 0 -2rem;
+    width: 35%;
 }
 #accueil .image-accueil .image-one {
     position: relative;

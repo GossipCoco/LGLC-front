@@ -222,7 +222,7 @@ export default {
       usrId: this.$store.state.auth.user.usrID,
       role: null,
       isMenuOpen: false,
-      logo: "/images/Logos/Automne_Logo1.png",
+      logo: "/images/Logos/LaGuerredesClansLogos.png",
       menuItems: [
         {
           title: "Dashboard",

@@ -4,7 +4,7 @@
         <div class="container-fluid height-100 header-container overflowY-X-hidden overflow-hidden">
           <div class="logo-accueil-container">
           <router-link to="/Accueil" class="navbar-brand">
-            <img src="../../../../public/images/Logos/Automne_Logo1.png" />
+            <img src="../../../../public/images/Logos/logo-spring.png" />
           </router-link>
           </div>
           <button
