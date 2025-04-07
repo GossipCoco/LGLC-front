@@ -45,7 +45,7 @@
 th{
     font-weight: 200;
 }
-.bottom-dashboard .card{
+.bottom-dashboard-levele-one .card{
     height: 40vh;
     margin: 1rem auto;
 }
@@ -138,7 +138,7 @@ th{
     z-index: 99;
 }
 .game-container img{
-    width: 75px;
+    width: 55px;
 }
 audio{
     width: 14rem;
@@ -226,7 +226,7 @@ audio{
     height: 95vh;
     margin: 0rem 0 1rem 0;
 }
-.row.bottom-dashboard .card-header > div{
+.row.bottom-dashboard-levele-one .card-header > div{
     width: 100%;
 }
 .card-body.user-inbformation-conter{

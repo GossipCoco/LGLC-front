@@ -17,7 +17,7 @@
 th {
     font-weight: 200;
 }
-.bottom-dashboard .card {
+.bottom-dashboard-levele-one .card {
     height: 40vh;
     margin: 1rem auto;
 }
@@ -160,8 +160,8 @@ th {
 .row.bottom-top-dashboard {
     margin-top: 1rem;
 }
-.row.bottom-dashboard {
-    margin: -0.75rem 0 0 0;
+.row.bottom-dashboard-levele-one {
+    margin: 0.75rem 0 1rem 0;
 }
 .row.bottom-left-dashboard{
     margin:-1.5rem 0 0 -0.75rem;

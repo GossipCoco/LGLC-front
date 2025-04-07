@@ -132,6 +132,16 @@ main.container-fluid{
 .row.title-dashboard{
     margin: 0.2rem 0.25rem 0.5rem -0.25rem
 }
-.row.top-dashboard, .row.bottom-dashboard{
-    margin: 0.5rem 0;
+.row.top-dashboard, .row.bottom-dashboard-levele-one{
+    margin: 0.5rem 0 0.5rem 0.75rem;
+    ;
+}
+.row.top-left-dashboard{
+    margin: -0.15rem 0 0 0
+}
+.card.border-none.background-lineart.profil-card.fiction-card.gamer-character-card{
+    margin: 0 0 1rem 0.15rem;
+}
+.card.border-none.background-lineart.fiction-card.random-characters-card.padding-0-rem.margin-0-rem{
+    margin: 2rem 0 0 1rem;
 }

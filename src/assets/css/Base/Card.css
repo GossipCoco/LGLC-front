@@ -211,25 +211,33 @@
 .row.top-dashboard .card {
     height: 22rem;
 }
-.row.bottom-dashboard .card {
-    height: 26rem;
+.row.bottom-dashboard-levele-one .card {
+    height: 29.5rem;
+    margin: 0rem 0.25rem 0 -1.2rem;
 }
-.row.bottom-dashboard .card.gamer-character-card{
-    height: 12rem;
+.row.bottom-dashboard-levele-one .card.gamer-character-card{
+    height: 15rem;
 }
-.row.bottom-dashboard .card.random-characters-card{
+.row.bottom-dashboard-levele-one .card.random-characters-card{
     height: 13rem;
 }
+/* .row.bottom-dashboard-levele-one {
+    margin: 0.15rem 0 2rem 0;
+} */
 .my-oc-character-container{
     margin: 0 0.5rem;
 }
 
 .list-all-fictions-globale--container.list-all-fictions-globale--container{
-    width: 22rem;
+    width: 30rem;
 }
 .list-all-fictions-globale--container.three-last-chapters-container{
     margin: 1rem 0 0 0;
     width: 20rem;
+}
+
+.summaray-title-text.flex-one.align-items-content-justify-content{
+    width: 25rem;
 }
 li.quest-container {
     margin: 0 1rem;

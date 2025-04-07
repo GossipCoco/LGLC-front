@@ -33,7 +33,7 @@
     <ExtractLastChap v-if="!showspinner" />
     <LastBook />
   </div>
-  <div class="row bottom-dashboard">
+  <div class="row bottom-dashboard-levele-one">
     <div class="col-xxl-5 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
       <div class="row top-left-dashboard">
         <CharacterByGamer v-bind:gamer="gamer" v-if="!showspinner" />
@@ -51,6 +51,9 @@
         <GamesLinks v-if="!showspinner" />
       </div>
     </div>
+  </div>
+  <div class="row bottom-dashboard-levele-one-level-two">
+
   </div>
 </template>
 <script>

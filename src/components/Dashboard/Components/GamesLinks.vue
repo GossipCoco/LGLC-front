@@ -1,5 +1,5 @@
 <template>
-  <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 card-global">
+  <div class="col-xxl-5 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 card-global">
     <div class="card background-lineart border-none fiction-card game-container">
         <TitleHeaderDashboard
             v-bind:title="'Nos jeux'"
@@ -7,7 +7,7 @@
         />
         <div class="card-boy">
           <div class="display-flex-column align-items-content-justify-content">
-            <div class=" display-flex-row align-items-content-justify-content">
+            <div class=" display-flex-column align-items-content-justify-content">
               <img src="../../../../public/images/Game/puzzle.png">
               <div class=" display-flex-column align-items-content-justify-content">
                 <p><router-link class="text-white" to="/puzzle">Jeu du puzzle</router-link></p>
@@ -16,7 +16,7 @@
             </div>
           </div>
           <div class="display-flex-column align-items-content-justify-content">
-            <div class=" display-flex-row align-items-content-justify-content">
+            <div class=" display-flex-column align-items-content-justify-content">
               <img src="../../../../public/images/Game/mouse01.png" />
               <div class=" display-flex-column align-items-content-justify-content">
                 <p><router-link class="text-white" to="/puzzle">Attrape la souris! </router-link></p>
@@ -25,7 +25,7 @@
             </div>
           </div>
           <div class="display-flex-column align-items-content-justify-content">
-            <div class=" display-flex-row align-items-content-justify-content">
+            <div class=" display-flex-column align-items-content-justify-content">
               <img src="../../../../public/images/Game/oie01.png" />
               <div class=" display-flex-column align-items-content-justify-content">
                 <p><router-link class="text-white" to="/puzzle">Jeu de l'Oie</router-link></p>

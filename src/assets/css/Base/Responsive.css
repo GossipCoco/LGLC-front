@@ -37,14 +37,14 @@
     .row.top-dashboard .card {
         height: 36rem;
     }
-    .row.bottom-dashboard .card.random-characters-card {
+    .row.bottom-dashboard-levele-one .card.random-characters-card {
         height: 16rem;
         margin: 1rem -0.75rem 0 0;
     }
-    .row.bottom-dashboard .card {
+    .row.bottom-dashboard-levele-one .card {
         height: 28rem;
     }    
-    .row.bottom-dashboard .card {
+    .row.bottom-dashboard-levele-one .card {
         height: 28rem;
     }  
 }
@@ -270,7 +270,7 @@
         width: 120px;
     }
     .top-dashboard,
-    .bottom-dashboard {
+    .bottom-dashboard-levele-one {
         height: 150rem;
     }
     .character-l1 {
