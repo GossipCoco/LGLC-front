@@ -8,8 +8,10 @@
     margin-top: 0rem;
     overflow-y: hidden;
     overflow-x: hidden;
-    width: 100%;
-    padding: 0.5rem 0.5rem 0.25rem 2rem;
+    width: 100%;    
+}
+#app > .container-fluid{
+    padding:0.5rem;
 }
 main.container-fluid{    
     overflow-y: scroll;
@@ -128,8 +130,8 @@ main.container-fluid{
     background-repeat: no-repeat;
 }
 .row.title-dashboard{
-    margin: -0.25rem 0.25rem 0.5rem -0.25rem
+    margin: 0.2rem 0.25rem 0.5rem -0.25rem
 }
 .row.top-dashboard, .row.bottom-dashboard{
-    margin: 0.5rem;
+    margin: 0.5rem 0;
 }
