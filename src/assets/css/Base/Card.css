@@ -229,7 +229,7 @@
 }
 .list-all-fictions-globale--container.three-last-chapters-container{
     margin: 1rem 0 0 0;
-    width: 23rem;
+    width: 20rem;
 }
 li.quest-container {
     margin: 0 1rem;
@@ -276,7 +276,7 @@ li.quest-container {
     margin-top: 20px;
 }
 .reward-message {
-    color: green;
+    color: rgba(var(--main-green), 1);
     font-weight: bold;
     margin-top: 20px;
 }

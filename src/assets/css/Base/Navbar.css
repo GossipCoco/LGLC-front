@@ -10,7 +10,7 @@
   scrollbar-color: rgba(var(--clear-green-02), 1) rgba(var(--dark-green-02), 1);
   scrollbar-width: thin;
   margin: 0.5rem 0 1rem -1.75rem;
-  width: 13rem;
+  width: 10rem;
   height: 98vh;
 }
 .form-control-dark {
@@ -36,7 +36,7 @@
 }
 .logo-container {
   padding: 0;
-  margin: -2rem 0.5rem 0 0;
+  margin: 0 0 0 1rem;
 }
 .navbar {
   margin-top: -0.5rem
@@ -73,7 +73,7 @@
   width: 13rem;
 }
 .menu-left ul li {
-  margin: 0.5rem 4rem 0 0;
+  margin: 0.5rem 0 0 -7rem
 }
 #collapseExample3 p {
   font-size: 0.865em;
