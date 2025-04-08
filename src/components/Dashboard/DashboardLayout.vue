@@ -32,7 +32,7 @@
       
       <LastFiveFiction v-if="!showspinner" />
       <ExtractLastChap v-if="!showspinner" />
-      
+      <music-player />
     </div>
     <div class="row bottom-dashboard-levele-one">
       <div class="col-xxl-5 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -68,7 +68,7 @@ import LastFiveFiction from "./Components/LastFiveFiction.vue";
 import ExtractLastChap from "./Components/ExtractLastChap.vue";
 import CharacterRandom from "./Components/CharacterRandom.vue";
 import ListAllFictions from "./Components/ListAllFictions.vue";
-// import MusicPlayer from "./Components/MusicPlayer.vue";
+import MusicPlayer from "./Components/MusicPlayer.vue";
 import CharacterByGamer from "./Components/CharacterByGamer.vue";
 import LastBook from "./Components/LastBook.vue";
 import GamesLinks from "./Components/GamesLinks.vue";
@@ -82,7 +82,7 @@ export default {
     TitleHeader,
     CharacterRandom,
     ListAllFictions,
-    // MusicPlayer,
+    MusicPlayer,
     CharacterByGamer,
     LastBook,
     GamesLinks,
@@ -131,7 +131,7 @@ export default {
           this.showspinner = false;
           if (response && response.data) {
             const characters = response.data.ob;
-            const randomCharacters = this.getRandomCharacters(characters, 4);
+            const randomCharacters = this.getRandomCharacters(characters, 6);
             this.randomCharacters = randomCharacters;
           }
         })

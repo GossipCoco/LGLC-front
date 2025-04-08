@@ -3,7 +3,7 @@
     <div class="card border-none background-lineart fiction-card random-characters-card padding-0-rem margin-0-rem">
       <TitleHeaderDashboard v-bind:title="'Personnages aléatoires'" v-bind:type="'myCharacters'"/>
       <div class="card-body display-flex-row align-items-content-justify-content">
-         <div class="display-flex-row width-10-rem" 
+         <div class="display-flex-row width-10-rem margin-bottom-1-rem" 
               v-for="character in randomCharacters"
               :key="character.Id"
             >

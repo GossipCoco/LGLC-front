@@ -143,13 +143,18 @@
     margin: 0 0 1rem 0.15rem;
 }
 .card.border-none.background-lineart.fiction-card.random-characters-card.padding-0-rem.margin-0-rem{
-    margin: 2rem 0 0 1rem;
+    margin: 1rem 0 0 1rem;
 }
-
+.margin-bottom-1-rem{
+    margin: 0 0 1rem 0;
+}
 .row.bottom-dashboard-levele-one-level-two{
     margin: 1rem;
 }
 .card-body.last-chapter-card.text-white
 {
     height: 30rem;
+}
+.dashboard-max.flex-one.card.display-flex-column.height-100.background-color-main-lineart.margin-3-rem{
+    overflow-y: auto;
 }

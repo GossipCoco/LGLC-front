@@ -212,14 +212,17 @@
     height: 22rem;
 }
 .row.bottom-dashboard-levele-one .card {
-    height: 29.5rem;
+    height: 40rem;
     margin: 0rem 0.25rem 0 -1.2rem;
 }
 .row.bottom-dashboard-levele-one .card.gamer-character-card{
-    height: 15rem;
+    height: 17rem;
 }
 .row.bottom-dashboard-levele-one .card.random-characters-card{
-    height: 13rem;
+    height: 23rem;
+}
+.random-characters-card .card-body{
+    flex-wrap: wrap;
 }
 /* .row.bottom-dashboard-levele-one {
     margin: 0.15rem 0 2rem 0;
@@ -227,7 +230,9 @@
 .my-oc-character-container{
     margin: 0 0.5rem;
 }
-
+.game-container .card-boy > div > div .display-flex-column.align-items-content-justify-content{
+    padding: 1rem;
+}
 .list-all-fictions-globale--container.list-all-fictions-globale--container{
     width: 30rem;
 }
