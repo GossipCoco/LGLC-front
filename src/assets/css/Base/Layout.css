@@ -13,7 +13,7 @@
 #app > .container-fluid{
     padding:0.5rem;
 }
-main.container-fluid{    
+.scroll-bar-container{    
     overflow-y: scroll;
 }
 .dashboard-layout-container {
@@ -144,4 +144,12 @@ main.container-fluid{
 }
 .card.border-none.background-lineart.fiction-card.random-characters-card.padding-0-rem.margin-0-rem{
     margin: 2rem 0 0 1rem;
+}
+
+.row.bottom-dashboard-levele-one-level-two{
+    margin: 1rem;
+}
+.card-body.last-chapter-card.text-white
+{
+    height: 30rem;
 }

@@ -11,49 +11,51 @@
       />
     </div>
   </div>
-  <Spinner v-if="showspinner" />  
-  <div class="row top-dashboard">
-    <AvatarCard
-      v-if="!showspinner"
-      v-bind:Avatar="Avatar"
-      v-bind:UserName="usr"
-      v-bind:LastConnexion="LastConnexion"
-      v-bind:Inscription="Inscription"
-      v-bind:level="level"
-      v-bind:Role="role"
-      v-bind:nBFiction="nBFictionV2"
-      v-bind:totalWords="totalWordsV2"
-      v-bind:totalPoints="totalPoints"
-      v-bind:roleImage="roleImage"
-      v-bind:NameRole="NameRole"
-      v-bind:LevelName="LevelName"
-    />
-    
-    <LastFiveFiction v-if="!showspinner" />
-    <ExtractLastChap v-if="!showspinner" />
-    <LastBook />
-  </div>
-  <div class="row bottom-dashboard-levele-one">
-    <div class="col-xxl-5 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-      <div class="row top-left-dashboard">
-        <CharacterByGamer v-bind:gamer="gamer" v-if="!showspinner" />
+  <Spinner v-if="showspinner" />
+  <div class="scroll-bar-container">
+    <div class="row top-dashboard">
+      <AvatarCard
+        v-if="!showspinner"
+        v-bind:Avatar="Avatar"
+        v-bind:UserName="usr"
+        v-bind:LastConnexion="LastConnexion"
+        v-bind:Inscription="Inscription"
+        v-bind:level="level"
+        v-bind:Role="role"
+        v-bind:nBFiction="nBFictionV2"
+        v-bind:totalWords="totalWordsV2"
+        v-bind:totalPoints="totalPoints"
+        v-bind:roleImage="roleImage"
+        v-bind:NameRole="NameRole"
+        v-bind:LevelName="LevelName"
+      />
+      
+      <LastFiveFiction v-if="!showspinner" />
+      <ExtractLastChap v-if="!showspinner" />
+      
+    </div>
+    <div class="row bottom-dashboard-levele-one">
+      <div class="col-xxl-5 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="row top-left-dashboard">
+          <CharacterByGamer v-bind:gamer="gamer" v-if="!showspinner" />
+        </div>
+        <div class="row bottom-left-dashboard">
+          <CharacterRandom
+              v-if="!showspinner"
+              v-bind:randomCharacters="randomCharacters"
+            />
+        </div>
       </div>
-      <div class="row bottom-left-dashboard">
-        <CharacterRandom
-            v-if="!showspinner"
-            v-bind:randomCharacters="randomCharacters"
-          />
+      <div class="col-xxl-7 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="row">
+          <ListAllFictions v-if="!showspinner" />
+          <GamesLinks v-if="!showspinner" />
+        </div>
       </div>
     </div>
-    <div class="col-xxl-7 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-      <div class="row">
-        <ListAllFictions v-if="!showspinner" />
-        <GamesLinks v-if="!showspinner" />
-      </div>
+    <div class="row bottom-dashboard-levele-one-level-two">
+      <LastBook />
     </div>
-  </div>
-  <div class="row bottom-dashboard-levele-one-level-two">
-
   </div>
 </template>
 <script>
