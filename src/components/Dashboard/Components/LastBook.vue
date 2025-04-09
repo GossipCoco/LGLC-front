@@ -1,5 +1,5 @@
 <template>
-  <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 card-global">
+  <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 card-global">
     <div class="card background-lineart border-none fiction-card last-book-container">
       <TitleHeaderDashboard
         v-bind:title="'Dernier roman paru'"
@@ -13,7 +13,7 @@
           >
           {{ lastBook.Title }}</router-link>
         </h5>
-        <div class="summary-book-dashboard display-flex-col align-items-content-justify-content">
+        <div class="summary-book-dashboard display-flex-row align-items-content-justify-content">
           <img :src="lastBook.Image" width="20%" />
           <div class="text-white text-align-justify overflowY-scroll summmary-book-height-dashboard poppins-text text-white" v-html="lastBook.Summary"></div>
         </div>

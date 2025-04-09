@@ -221,6 +221,11 @@
 .row.bottom-dashboard-levele-one .card.random-characters-card{
     height: 23rem;
 }
+.row.bottom-dashboard-levele-one .card.last-book-container {
+    height: 18rem;
+    margin: 0rem 0.5rem 0 0.2rem;
+}
+
 .random-characters-card .card-body{
     flex-wrap: wrap;
 }
@@ -277,9 +282,7 @@ li.quest-container {
 .quest-button-text p {
     height: 9rem;
 }
-.quest-button-text .btn.btn-primary {
-    width: 10rem;
-}
+
 .quest-details {
     margin-top: 20px;
 }
@@ -335,15 +338,7 @@ li.quest-container {
 .row.list-quest-card-container{
     height: 35rem;
 }
-.btn-primary.file-character-btn {
-    background-color:  rgb(var(--dark-green-01), 0.6);
-    border-color:  rgb(var(--dark-green-01), 0.6);
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-.btn-primary.file-character-btn:hover {
-    background-color:  rgb(var(--clear-green-02), 0.6);
-    transform: scale(1.05);
-}
+
 .accordion-button.collapsed,
 .accordion-item:first-of-type>.accordion-header .accordion-button,
 .accordion-button:not(.collapsed),
@@ -427,4 +422,8 @@ li.quest-container {
 }
 .login-card .card-body{
     height: 15rem;
+}
+
+.card .last-book-container{
+    height: 20rem;
 }

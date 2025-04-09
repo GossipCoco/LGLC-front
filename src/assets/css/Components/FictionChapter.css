@@ -137,9 +137,7 @@ th {
     width: 100rem;
     overflow: hidden;
 }
-.create-chapter-btn-container .btn {
-    width: 15rem;
-}
+
 .card.fiction-container .card-header h4 {
     padding: 0;
     width: 100%;
@@ -152,8 +150,8 @@ th {
     flex: 0.25
 }
 .rond-image-illustration img {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     border-radius: 100%;
     aspect-ratio: 1;
 }
@@ -164,7 +162,7 @@ th {
     margin: 0.75rem 0 1rem 0;
 }
 .row.bottom-left-dashboard{
-    margin:-1.5rem 0 0 -0.75rem;
+    margin: 1rem 0 0 -0.75rem;
 }
 .fiche-fiction {
     background-color: rgba(var(--middle-green-01), 1);

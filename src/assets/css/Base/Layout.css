@@ -79,9 +79,7 @@
     transform: scale(1.5);
     transition: all 2s ease-out;;
  }
-.flex-one .btn {
-    margin-bottom: 1rem;
-}
+
 .avatar-container {
     height: 8vh;
 }

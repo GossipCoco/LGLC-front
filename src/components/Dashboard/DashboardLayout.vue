@@ -29,15 +29,14 @@
         v-bind:NameRole="NameRole"
         v-bind:LevelName="LevelName"
       />
-      
+      <CharacterByGamerV2 v-bind:gamer="gamer" v-if="!showspinner" />
       <LastFiveFiction v-if="!showspinner" />
-      <ExtractLastChap v-if="!showspinner" />
-      <music-player />
+      <ExtractLastChap v-if="!showspinner" />      
     </div>
     <div class="row bottom-dashboard-levele-one">
       <div class="col-xxl-5 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="row top-left-dashboard">
-          <CharacterByGamer v-bind:gamer="gamer" v-if="!showspinner" />
+          <LastBook />
         </div>
         <div class="row bottom-left-dashboard">
           <CharacterRandom
@@ -54,7 +53,7 @@
       </div>
     </div>
     <div class="row bottom-dashboard-levele-one-level-two">
-      <LastBook />
+      
     </div>
   </div>
 </template>
@@ -68,8 +67,9 @@ import LastFiveFiction from "./Components/LastFiveFiction.vue";
 import ExtractLastChap from "./Components/ExtractLastChap.vue";
 import CharacterRandom from "./Components/CharacterRandom.vue";
 import ListAllFictions from "./Components/ListAllFictions.vue";
-import MusicPlayer from "./Components/MusicPlayer.vue";
-import CharacterByGamer from "./Components/CharacterByGamer.vue";
+// import MusicPlayer from "./Components/MusicPlayer.vue";
+// import CharacterByGamer from "./Components/CharacterByGamer.vue";
+import CharacterByGamerV2 from "./Components/CharacterByGamerV2.vue";
 import LastBook from "./Components/LastBook.vue";
 import GamesLinks from "./Components/GamesLinks.vue";
 import Spinner from "../Components/GenericComponent/Spinner.vue";
@@ -82,11 +82,12 @@ export default {
     TitleHeader,
     CharacterRandom,
     ListAllFictions,
-    MusicPlayer,
-    CharacterByGamer,
+    //MusicPlayer,
+    // CharacterByGamer,
     LastBook,
     GamesLinks,
-    Spinner
+    Spinner,
+    CharacterByGamerV2
   },
   data() {
     return {
