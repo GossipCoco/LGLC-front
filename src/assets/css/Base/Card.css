@@ -432,5 +432,9 @@ li.quest-container {
     height: 20rem;
 }
 .my-oc-card .card-body{
-    padding: 10rem 0 2rem 0;
+    padding: 0;
+    height: 10rem;
+}
+.row.middle-dashboard .card-global{
+    margin: 0 2rem 0 1rem;
 }

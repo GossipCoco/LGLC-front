@@ -34,6 +34,9 @@
       <LastFiveFiction v-if="!showspinner" />
       <ExtractLastChap v-if="!showspinner" />      
     </div>
+    <div class="row middle-dashboard">
+      <CharacterByGamerV2 v-bind:gamer="gamer" v-if="!showspinner" />
+    </div>
     <div class="row bottom-dashboard-levele-one">
       <div class="col-xxl-5 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="row top-left-dashboard">
@@ -71,6 +74,7 @@ import ListAllFictions from "./Components/ListAllFictions.vue";
 import LastBook from "./Components/LastBook.vue";
 import GamesLinks from "./Components/GamesLinks.vue";
 import Spinner from "../Components/GenericComponent/Spinner.vue";
+import CharacterByGamerV2 from "./Components/CharacterByGamerV2.vue";
 export default {
   name: "DashboardLayout",
   components: {
@@ -83,6 +87,7 @@ export default {
     LastBook,
     GamesLinks,
     Spinner,
+    CharacterByGamerV2
   },
   data() {
     return {
