@@ -3,9 +3,9 @@
     <CardHeader class="width-100-percent" v-bind:Title="'Liste des quêtes à réaliser'" />
     <div class="card-body">
       <Spinner v-if="showspinner" />
-      <div v-if="!showspinner" class="row list-fiction-card-container">
+      <div v-if="!showspinner" class="row list-quest-card-container">
         <div
-          class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 mb-5 mb-sm-2 display-flex-row flex-wrap quest--global-container flex-wrap"
+          class="col-xxl-5 col-xl-5 col-lg-12 col-md-12 col-sm-12 display-flex-row flex-wrap quest--global-container flex-wrap"
           v-for="(quest, index) in allQuests"
           :key="index"
         >

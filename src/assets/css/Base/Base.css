@@ -36,7 +36,6 @@ a {
   color: rgba(var(--dark-green-01), 1);
   font-family: var(--opensans-text);
 }
-
 a,h1,h2,h3,h4,h5,h6,h4 a,.h5-container a {
   font-family: 'Cinzel';
   margin: 0;
