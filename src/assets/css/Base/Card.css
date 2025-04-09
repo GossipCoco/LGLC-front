@@ -211,21 +211,25 @@
 .row.top-dashboard .card {
     height: 22rem;
 }
-.row.bottom-dashboard-levele-one .card {
+/* .row.bottom-dashboard-levele-one .card {
     height: 40rem;
     margin: 0rem 0.25rem 0 -1.2rem;
-}
+} */
 .row.bottom-dashboard-levele-one .card.gamer-character-card{
     height: 17rem;
 }
 .row.bottom-dashboard-levele-one .card.random-characters-card{
     height: 23rem;
 }
-.row.bottom-dashboard-levele-one .card.last-book-container {
+.row.bottom-dashboard-levele-one .card.last-book-container{
     height: 18rem;
     margin: 0rem 0.5rem 0 0.2rem;
 }
-
+.row.bottom-dashboard-levele-one .card.all-fictions-card,
+.row.bottom-dashboard-levele-one .card.game-container
+{
+    height: 43rem;
+} 
 .random-characters-card .card-body{
     flex-wrap: wrap;
 }
