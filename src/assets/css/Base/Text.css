@@ -44,7 +44,7 @@
 .card-header h2 {
   font-variant-caps: small-caps;
 }
-#list-events p span {
+#list-events p span, .text-bg-primary, .user-info-text p span, h5.card-title {
   font-weight: 600;
 }
 .select-message-container h3 {
@@ -58,7 +58,6 @@
 }
 .text-bg-primary {
   background-color: rgba(var(--dark-green-01), 1) !important;
-  font-weight: 600;
 }
 
 .list-group-item.messagerie-list-container p {
@@ -85,9 +84,7 @@ h1.card-title {
 .user-info-text p {
   line-height: 0.85;
 }
-.user-info-text p span {
-  font-weight: 600;
-}
+
 .user-info-text p span.label-profil {
   font-weight: 400;
   text-transform: capitalize;
@@ -100,7 +97,6 @@ h1.card-title {
 }
 h5.card-title {
   font-size: 1.5em;
-  font-weight: 600;
 }
 
 .card-text.summary-text-font p{
@@ -115,12 +111,17 @@ h5.card-title {
 .h5-container a:hover{
   color:rgba(var(--active-hover), 1)
 }
-h5.card-title a{
+h5.card-title a, .my-oc-character-container p a,.summaray-title-text p a{
   font-size: 0.9em;
 }
-.my-oc-character-container p a{
-  font-size: 0.95em;
+.title-text-novel{
+  margin: 0 0 0 1rem;
 }
-.summaray-title-text p a {
-  font-size: 0.95em;
+.title-text-novel p{
+  text-align: left;
+}
+.title-text-novel p a{
+  font-variant: small-caps;
+  font-weight: 600;
+  font-size: 1.25em;
 }
