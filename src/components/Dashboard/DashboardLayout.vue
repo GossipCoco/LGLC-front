@@ -28,8 +28,9 @@
         v-bind:roleImage="roleImage"
         v-bind:NameRole="NameRole"
         v-bind:LevelName="LevelName"
+        v-bind:gamer="gamer"
       />
-      <CharacterByGamerV2 v-bind:gamer="gamer" v-if="!showspinner" />
+      
       <LastFiveFiction v-if="!showspinner" />
       <ExtractLastChap v-if="!showspinner" />      
     </div>
@@ -67,9 +68,6 @@ import LastFiveFiction from "./Components/LastFiveFiction.vue";
 import ExtractLastChap from "./Components/ExtractLastChap.vue";
 import CharacterRandom from "./Components/CharacterRandom.vue";
 import ListAllFictions from "./Components/ListAllFictions.vue";
-// import MusicPlayer from "./Components/MusicPlayer.vue";
-// import CharacterByGamer from "./Components/CharacterByGamer.vue";
-import CharacterByGamerV2 from "./Components/CharacterByGamerV2.vue";
 import LastBook from "./Components/LastBook.vue";
 import GamesLinks from "./Components/GamesLinks.vue";
 import Spinner from "../Components/GenericComponent/Spinner.vue";
@@ -82,12 +80,9 @@ export default {
     TitleHeader,
     CharacterRandom,
     ListAllFictions,
-    //MusicPlayer,
-    // CharacterByGamer,
     LastBook,
     GamesLinks,
     Spinner,
-    CharacterByGamerV2
   },
   data() {
     return {

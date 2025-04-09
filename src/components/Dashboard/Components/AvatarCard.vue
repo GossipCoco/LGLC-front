@@ -1,5 +1,5 @@
 <template>
-  <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 card-global">
+  <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 card-global">
     <div class="card border-none display-flex-column profil-card fiction-card background-lineart">
       <TitleHeaderDashboard v-bind:title="UserName" v-bind:type="'username'" />
       <div class="card-body user-info-text">
@@ -36,11 +36,15 @@
             <p class="display-flex-row"><span>{{ totalPoints }}</span>&nbsp; points.</p>
           </div>
         </div>
+        <div class="row">
+          <CharacterByGamerV2 v-bind:gamer="gamer" v-if="!showspinner" />
+        </div>
       </div>
     </div>
   </div>
 </template>
 <script>
+import CharacterByGamerV2 from "./CharacterByGamerV2.vue";
 import TitleHeaderDashboard from "../../Components/SpecificComponent/TitleHeaderDashboard.vue";
 export default {
   name: "AvatarCard",
@@ -56,9 +60,10 @@ export default {
     "totalPoints",
     "roleImage",
     "NameRole",
-    "LevelName"
+    "LevelName",
+    "gamer"
   ],
-  components: { TitleHeaderDashboard },
+  components: { TitleHeaderDashboard, CharacterByGamerV2 },
   data() {
     return {
       avatar: this.Avatar,

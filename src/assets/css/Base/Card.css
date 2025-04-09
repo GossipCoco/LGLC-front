@@ -209,7 +209,7 @@
     margin: 1rem;
 }
 .row.top-dashboard .card {
-    height: 22rem;
+    height: 28rem;
 }
 /* .row.bottom-dashboard-levele-one .card {
     height: 40rem;
@@ -430,4 +430,7 @@ li.quest-container {
 
 .card .last-book-container{
     height: 20rem;
+}
+.my-oc-card .card-body{
+    padding: 10rem 0 2rem 0;
 }

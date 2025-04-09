@@ -98,7 +98,6 @@ h1.card-title {
 h5.card-title {
   font-size: 1.5em;
 }
-
 .card-text.summary-text-font p{
   line-height: 1.2;
 }
@@ -116,6 +115,7 @@ h5.card-title a, .my-oc-character-container p a,.summaray-title-text p a{
 }
 .title-text-novel{
   margin: 0 0 0 1rem;
+  padding: 0;
 }
 .title-text-novel p{
   text-align: left;
@@ -124,4 +124,6 @@ h5.card-title a, .my-oc-character-container p a,.summaray-title-text p a{
   font-variant: small-caps;
   font-weight: 600;
   font-size: 1.25em;
+  line-height: 70%;
 }
+
