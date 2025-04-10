@@ -376,17 +376,18 @@ li.quest-container {
     border: rgba(var(--dark-green-01), 1) 5px solid;
  }
 #original-characters-list  .card.individual-character-card{
-    border-radius: 45% 45% 12px 12px; 
+    border-radius: 46% 46% 12px 12px; 
 }
 .avatar-gamer{
     width: 200px;
     height: 150px;
 }
 #original-characters-list{
-    margin: 0 2rem;
+    margin: 0rem 2rem;
     padding-top: 0rem;
-    height: 83vh;
-    overflow-y: auto;
+    height: 87vh;
+    overflow-y: hidden;
+    padding: 2rem 0 0 0;
 }
 #original-characters-list.border {
     border: none
