@@ -150,8 +150,8 @@ th {
     flex: 0.25
 }
 .rond-image-illustration img {
-    width: 80px;
-    height: 80px;
+    width: 13vh;
+    height: 13vh;
     border-radius: 100%;
     aspect-ratio: 1;
 }

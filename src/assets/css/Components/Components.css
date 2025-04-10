@@ -95,7 +95,10 @@ th{
     flex: 0.25
 }
 .summaray-title-text{
-    margin: 0 0 0 0.5rem;       
+    margin: 0 0 0 -2vh;       
+}
+.last-chapter-card .summaray-title-text{
+    margin: 0 0 0 1rem;       
 }
 .pagination-container{
     margin-top: -1rem;
