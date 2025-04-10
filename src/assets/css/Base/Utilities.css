@@ -206,3 +206,17 @@ table.table-borderless, .table.table-borderless>:not(caption)>*>*, .table-border
 .dashboard-max-card-container.card-height .card-body{
     height: 80vh;
 }
+/* HEIGHT & WIDTH */
+
+.height-18-rem{
+    height: 18rem;
+}
+.height-16-rem{
+    height: 16rem;
+}
+.height-20-rem{
+    height: 20rem;
+}
+.width-10-rem{
+    width: 10rem
+}

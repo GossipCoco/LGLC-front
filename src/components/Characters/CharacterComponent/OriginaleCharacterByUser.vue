@@ -1,7 +1,7 @@
 <template>
   <div id="original-characters-list" class="row row-cols-1 row-cols-md-2 g-4 all-my-characters-container 
   display-flex align-items-content-justify-content overflowY-X-hidden">
-    <div class="col card-character-container" v-for="(character, index) in allMyCharacters" :key="index">
+    <div class="col card-character-container height-20-rem" v-for="(character, index) in allMyCharacters" :key="index">
       <div class="card-group display-flex">
         <div class="card individual-character-card">
           <BackgroundImage v-bind:Image="character.Image" />
