@@ -38,6 +38,7 @@ export default {
       showspinner: false,
       filters: [],
       allAuthors:{},
+      width: 1700,
       nav: {
         current: 0,
         pages: 0,
@@ -68,9 +69,9 @@ export default {
 
       try {
         await this.countAllFictions();
-        if(window.innerWidth >= 1920){
+        if(window.innerWidth >= this.width){
           this.nav.step = 16
-        }else if(window.innerWidth < 1920)
+        }else if(window.innerWidth < this.width)
         {
           this.nav.step = 8
         }
@@ -83,9 +84,9 @@ export default {
     },
     async FictionPagination(page) {
       this.nav.current = page;
-      if(window.innerWidth >= 1920){
+      if(window.innerWidth >= this.width){
           this.nav.step = 16
-        }else if(window.innerWidth < 1920)
+        }else if(window.innerWidth < this.width)
         {
           this.nav.step = 8
         }
@@ -95,9 +96,9 @@ export default {
       try {
         const response = await FictionService.CountAllFictionsOnBases();
         this.NbAllFictions = response.data.ob.count;
-        if(window.innerWidth >= 1920){
+        if(window.innerWidth >= this.width){
           this.nav.step = 16
-        }else if(window.innerWidth < 1920)
+        }else if(window.innerWidth < this.width)
         {
           this.nav.step = 8
         }
