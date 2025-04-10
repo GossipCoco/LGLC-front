@@ -49,6 +49,7 @@ export default {
       NbAllMyGamesFictions: 0,      
       showspinner: false,
       filters: [],
+      width: 1700,
       nav: {
         current: 0,
         pages: 0,
@@ -79,9 +80,9 @@ export default {
       console.log("Démarrage du chargement des fictions...", this.nav);
       try{
         await this.countAllMyFictions();
-        if(window.innerWidth >= 1920){
+        if(window.innerWidth >= this.width){
           this.nav.step = 16
-        }else if(window.innerWidth < 1920)
+        }else if(window.innerWidth < this.width)
         {
           this.nav.step = 8
         }
@@ -95,9 +96,9 @@ export default {
     async FictionPagination(page) {
       console.log("Page : ", page)
       this.nav.current = page;
-      if(window.innerWidth >= 1920){
+      if(window.innerWidth >= this.width){
           this.nav.step = 16
-        }else if(window.innerWidth < 1920)
+        }else if(window.innerWidth < this.width)
         {
           this.nav.step = 8
         }
@@ -109,9 +110,9 @@ export default {
       try {
         const response = await AllMyFictionService.CountAllMyFictions(this.userCurrent);
         this.NbAllMyGamesFictions = response.data.ob.count;
-        if(window.innerWidth >= 1920){
+        if(window.innerWidth >= this.width){
           this.nav.step = 16
-        }else if(window.innerWidth < 1920)
+        }else if(window.innerWidth < this.width)
         {
           this.nav.step = 8
         }

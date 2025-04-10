@@ -29,8 +29,7 @@
         v-bind:NameRole="NameRole"
         v-bind:LevelName="LevelName"
         v-bind:gamer="gamer"
-      />
-      
+      />      
       <LastFiveFiction v-if="!showspinner" />
       <ExtractLastChap v-if="!showspinner" />      
     </div>
@@ -39,15 +38,8 @@
     </div>
     <div class="row bottom-dashboard-levele-one">
       <div class="col-xxl-5 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <div class="row top-left-dashboard">
-          <LastBook />
-        </div>
-        <div class="row bottom-left-dashboard">
-          <CharacterRandom
-              v-if="!showspinner"
-              v-bind:randomCharacters="randomCharacters"
-            />
-        </div>
+        <LastBook />
+        <CharacterRandom v-if="!showspinner" v-bind:randomCharacters="randomCharacters"/>
       </div>
       <div class="col-xxl-7 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="row">
