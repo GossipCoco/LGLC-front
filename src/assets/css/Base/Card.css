@@ -438,3 +438,6 @@ li.quest-container {
 .row.middle-dashboard .card-global{
     margin: 0 2rem 0 1rem;
 }
+.card.my-oc-card{
+    width: 93rem;
+}
