@@ -43,7 +43,7 @@
     padding: 0;
 }
 .character-details .card-body {
-    height: 91.5vh;
+    height: 90.5vh;
     border-radius: 12px 12px 12px 0;
     z-index: -222
 }
@@ -100,12 +100,18 @@
 }
 .illustration-background .background-fiction-contain{
     background-repeat: no-repeat;
-    height: 42rem;
+    background-position: center;
+    background-size: cover;
     border-radius: 20px;
+    height: 65vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 183vh;
 }
 .opacity-container{
     background-color: rgba(var(--dark-green-01), 0.75);
-    height: 80vh;
+    height: 64vh;
     border-radius: 20px;
 }
 .illustration-background .background-fiction-contain .characters-list-container{

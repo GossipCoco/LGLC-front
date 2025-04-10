@@ -56,9 +56,8 @@
     margin: 1rem 0 1rem 1rem;
 }
 .fiction-globale-container.card.fiction-container {
-    margin: 1rem 1rem 1rem 1rem;
-    width: 103rem;
-    height: 51rem;
+    margin: 1rem 1rem 3rem 1rem;
+    height: 45rem;
 }
 .cat-corner::before
 .dashboard-max-card-container::before,
@@ -94,8 +93,8 @@
 /* Character Details */
 .character-details {
     margin: 0rem 1rem 0 2rem;
-    width: 100rem;
-    height: 57rem;
+    width: 183vh;
+    height:95vh;
     background: none;
     padding: 1rem;
     perspective: 5rem;
@@ -131,7 +130,7 @@
     border : 1rem solid rgba(var(--clear-green-01), 1);
 }
 .border-card-color{
-    height: 44rem;
+    height: 87.5vh;
 }
 .clans-location-container {
     margin: 1rem auto;
@@ -180,7 +179,7 @@
     height: 35vh;
 }
 .character-details .col-md-4 {
-    padding-top: 14vh;
+    padding-top: 3vh;
 }
 .card-form-create-character {
     margin: 2rem 0 2rem 2rem;
@@ -422,7 +421,7 @@ li.quest-container {
     text-align: left;
 }
 .fiction-container .card-body{
-    height: 84vh;
+    height: 70vh;
 }
 .login-card .card-body{
     height: 15rem;
