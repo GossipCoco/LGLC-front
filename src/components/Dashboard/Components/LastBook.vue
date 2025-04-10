@@ -1,7 +1,7 @@
 <template>
   <div class="row top-left-dashboard">
   <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 card-global">
-    <div class="card background-lineart border-none fiction-card last-book-container">
+    <div class="card background-lineart border-none fiction-card last-book-container height-18-rem">
       <TitleHeaderDashboard
         v-bind:title="'Dernier roman paru'"
         v-bind:type="'chapters'"

@@ -1,16 +1,16 @@
 <template>
-  <div class="dashboard-max-card-container border-none background-color-main-lineart flex-one card padding-0-rem one-quest-container align-items-content-justify-content padding-zero">
+  <div class="dashboard-max-card-container border-none background-color-main-lineart flex-one card padding-0-rem one-quest-container height-16-rem align-items-content-justify-content padding-zero">
     <CardHeader class="width-100-percent" v-bind:Title="'Liste des quêtes à réaliser'" />
     <div class="card-body">
       <Spinner v-if="showspinner" />
       <div v-if="!showspinner" class="row list-quest-card-container">
         <div
-          class="col-xxl-5 col-xl-5 col-lg-12 col-md-12 col-sm-12 display-flex-row flex-wrap quest--global-container flex-wrap"
+          class="col-xxl-5 col-xl-5 col-lg-12 col-md-12 col-sm-12 display-flex-row flex-wrap quest--global-container flex-wrap height-18-rem"
           v-for="(quest, index) in allQuests"
           :key="index"
         >
           <div
-            class="card display-flex-column quest-container flex-wrap mb-4 background-color-main-lineart"
+            class="card display-flex-column quest-container height-16-rem flex-wrap mb-4 background-color-main-lineart"
             v-for="(image, index) in quest.QuestImages"
             :key="index"
           >

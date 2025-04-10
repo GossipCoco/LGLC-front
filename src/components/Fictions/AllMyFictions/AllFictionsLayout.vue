@@ -105,7 +105,6 @@ export default {
       console.log("FictionPagination", this.nav)
       this.GetAllFictionsByUser(this.userCurrent, this.nav);
     },
-
     async countAllMyFictions() {
       try {
         const response = await AllMyFictionService.CountAllMyFictions(this.userCurrent);
@@ -122,12 +121,10 @@ export default {
         console.error(error);
       }
     },
-
     async GetAllFictionsByUser(usr) {     
       try {
         const response = await AllMyFictionService.GetAllFictionsByUser(usr, this.nav);       
-        this.allFictions = response.data.ob;
-        
+        this.allFictions = response.data.ob;        
       } catch (error) {
         console.error(error);
       }
