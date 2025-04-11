@@ -87,14 +87,13 @@ export default {
           this.nav.step = 8
         }
         await this.GetAllFictionsByUser(this.userCurrent, this.nav);
-        console.log("Fictions chargées :", this.allFictions); // Vérifiez ici si les fictions sont bien chargées
-      }catch (error) {
+      }
+      catch (error) {
         console.error("Erreur lors du chargement des fictions :", error);
       }
         this.showspinner = false;
     },
     async FictionPagination(page) {
-      console.log("Page : ", page)
       this.nav.current = page;
       if(window.innerWidth >= this.width){
           this.nav.step = 16
@@ -102,7 +101,6 @@ export default {
         {
           this.nav.step = 8
         }
-      console.log("FictionPagination", this.nav)
       this.GetAllFictionsByUser(this.userCurrent, this.nav);
     },
     async countAllMyFictions() {
@@ -116,7 +114,6 @@ export default {
           this.nav.step = 8
         }
         this.nav.pages = Math.ceil(this.NbAllMyGamesFictions / this.nav.step);
-        console.log("countAllMyFictions", this.nav)
       } catch (error) {
         console.error(error);
       }
