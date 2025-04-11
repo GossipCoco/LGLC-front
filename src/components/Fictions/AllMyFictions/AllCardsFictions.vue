@@ -21,16 +21,17 @@
                   {{ fiction.User.UserName }}
                 </router-link>
               </div>
-              <h5 class="card-title text-dark-green montesserat">
-                <router-link :to="'/fiction/' + fiction.Title" class="text-dark-green montesserat">{{
-                  fiction.Title
-                }}</router-link>
-              </h5>
+              <div class="display-flex-row title-container-card">
+                <h5 class="card-title text-dark-green montesserat">
+                  <router-link :to="'/fiction/' + fiction.Title" class="text-dark-green montesserat">{{
+                    fiction.Title
+                  }}</router-link>
+                </h5>
+              </div>
             </div>
             <div
-              class="card-text text-align-justify summary-text-font"
-              v-html="truncateText(fiction.Summary, 50)"
-            ></div>
+              class="card-text text-align-justify summary-text-font" v-html="truncateText(fiction.Summary, 50)">
+            </div>
           </div>
         </div>
       </div>

@@ -101,7 +101,7 @@ th{
     margin: 0 0 0 1rem;       
 }
 .pagination-container{
-    margin-top: -1rem;
+    margin-top: -2rem;
 }
 .row.list-fiction-card-container{
     height: 38rem;
@@ -151,13 +151,13 @@ th{
     border-radius: 12px 0 0 12px;
 }
 .fiction-summary-card{
-    width: 45vh;
+    width: 44vh;
     height: 15vh;
     padding: 0 0.5rem 0 0.75rem;
-    border-radius: 8px;
+    border-radius: 8px
 }
 .height-all-fictions-container{
-    height: 70vh;
+    height: 68vh;
 }
 .mini-rond-messages{
     height: 2rem;
@@ -254,7 +254,7 @@ audio{
 }
 .all-fictions-container-global{
     height: 95vh;
-    margin: 0rem 0 1rem 0;
+    margin: 0rem 0 1rem 1rem;
 }
 .row.bottom-dashboard-levele-one .card-header > div{
     width: 100%;

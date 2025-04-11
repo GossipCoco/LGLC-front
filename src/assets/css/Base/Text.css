@@ -18,7 +18,7 @@
   color: rgba(var(--active-hover), 1);
 }
 .summary-text-font p {
-  font-size: 0.9em;
+  font-size: 0.75em;
 }
 .summaray-title-text p a.last-chapter-text:hover {
   color: rgba(var(--active-hover), 1);
@@ -125,5 +125,7 @@ h5.card-title a, .my-oc-character-container p a,.summaray-title-text p a{
   font-weight: 600;
   font-size: 1.25em;
   line-height: 70%;
+  display: block;
+  width: 50vh;
 }
 
