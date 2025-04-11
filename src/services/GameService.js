@@ -19,6 +19,9 @@ class GameService {
     GetFiveLastGameByUser(id){
         return http.get(`/game/GetFiveLastGameByUser/${id}`)
     }
+    GetAllGamesByCharacter(id, nav){        
+        return http.post(`/game/GetAllGamesByCharacter/${id}`, nav)
+    }
     CreateANewGame(id, data) {
         return http.post(`/game/createANewGame/${id}`, data, {
             headers: {

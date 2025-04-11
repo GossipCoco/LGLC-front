@@ -21,6 +21,7 @@
 </template>
 <script>
 import CharacterService from "../../../services/CharacterService";
+import GameService from "../../../services/GameService";
 import SearchBarComponent from "../Components/SearchBarComponent.vue";
 import Pagination from "../../Components/GenericComponent/Pagination.vue";
 import FictionService from "../../../services/FictionService";
@@ -39,6 +40,7 @@ export default {
       filters: [],
       allAuthors:{},
       width: 1700,
+      searchedCharacter: null,
       nav: {
         current: 0,
         pages: 0,
@@ -54,6 +56,17 @@ export default {
   methods: {
     getInfo(e, w) {
       console.log(e, w);
+      this.searchedCharacter = e
+      this.GetAllGamesByCharacter(this.searchedCharacter)
+    },
+    GetAllGamesByCharacter(searchedCharacter){
+      GameService.GetAllGamesByCharacter(searchedCharacter)
+      .then((response) => {
+          console.log(response.data.ob)
+        })
+        .catch((e) => {
+          console.log(e);
+        });
     },
     GetAllNamesAndIdsCharacters() {
       CharacterService.GetAllNamesAndIdsCharacters()

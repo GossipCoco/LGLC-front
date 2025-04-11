@@ -1,20 +1,20 @@
 <template>
-  <div class="row">
+  <div class="row search-bar-component">
     <SelectCharacterComponent
       v-bind:For="'SearchCharacter'"
       v-bind:label="'Chercher un personnage'"
-      v-bind:formdata="'getcharacter'"
+      v-bind:formdata="'getCharacter'"
       v-bind:characters="characters"
       v-bind:col="'col-2'"
       @getCharacter="getCharacter"
     />
-    <GenericSelect
+    <!-- <GenericSelect
       v-bind:For="'SearchClan'"
       v-bind:label="'Clan'"
       v-bind:formdata="'getclan'"
-      v-bind:col="'col-3'"
+      v-bind:col="'col-2'"
       @getclan="getclan"
-    />
+    /> -->
     <GenericSelect
       v-bind:For="'SearchAuthor'"
       v-bind:label="'Auteur'"
@@ -22,8 +22,8 @@
       v-bind:col="'col-3'"
       @getAuthor="getAuthor"
     />
-    <div class="col-1 display-flex align-items-content-justify-content">
-      <button type="button" class="btn btn-primary">Rechercher</button>
+    <div class="col-2 display-flex align-items-content-justify-content">
+      <button type="button" class="btn btn-primary">Rechercher une fiction</button>
     </div>
     <div class="col-3 display-flex align-items-content-justify-content">
       <router-link class="btn btn-primary" to="/createANewFiction">

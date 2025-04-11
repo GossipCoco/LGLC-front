@@ -1,6 +1,6 @@
 <template>
   <div :class="col">
-    <label :for="For" class="text-white form-label">
+    <label :for="For" class="text-white form-label form-select-sm">
       {{ label }}
     </label>
     <select
@@ -33,7 +33,7 @@ export default {
   },
   methods: {
     getCharacter() {
-      this.$emit("form-character", this.CharacterId);
+      this.$emit("getCharacter", this.CharacterId);
     },
   },
 };

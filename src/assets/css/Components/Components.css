@@ -307,3 +307,6 @@ audio{
   .file-input {
     display: none; /* Cache l'input file */
   }
+  .all-fictions-container-global .search-bar-component .col-1,  .search-bar-component .col-3.display-flex.align-items-content-justify-content{
+    padding: 1rem 0 0 0;
+  }

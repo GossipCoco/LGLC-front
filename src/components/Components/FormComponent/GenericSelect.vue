@@ -1,6 +1,6 @@
 <template>
   <div :class="col">
-    <label :for="For" class="col-sm-2 text-white form-label">
+    <label :for="For" class="col-sm-2 text-white form-label form-select-sm">
       {{ label }}
     </label>
     <div class="col-sm-10">
