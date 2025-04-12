@@ -8,7 +8,7 @@
       class="input-name-margin"
         v-bind:col="'col-xxl-3 col-xl-3 col-lg-12 col-md-12 col-sm-12 col-xs-12'"
         v-bind:forId="'inputName'"
-        v-bind:label="'Nom actuel du personnage'"
+        v-bind:label="'Nom du personnage'"
         v-bind:getNameData="'getCurrentName'"
         @getCurrentName="getCurrentName"
       />

@@ -70,7 +70,8 @@
     margin-top: 0.25rem;
 }
 .all-characters-container-card {
-    margin-top: 1rem;
+    margin-top: 2rem;
+    width: 180vh;
 }
 .character-l1 img {
    width: 75%;

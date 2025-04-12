@@ -78,6 +78,10 @@
 .row.pagination-container-row{
     margin: -3rem 0 0 0;
 }
+
+.list-all-characters-container .row.pagination-container-row{
+    margin: 1rem 0 0 0;
+}
 .nav-space-contain{
     font-size: 2.5em;
 }

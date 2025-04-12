@@ -1,33 +1,35 @@
 <template>
   <div :class="col">
-    <label :for="For" class="col-sm-2 text-white form-label form-select-sm">
-      {{ label }}
-    </label>
-    <div class="col-sm-10">
-      <select
-      v-if="label !== 'Auteur'"
-      :id="For"
-      class="form-select"
-      aria-label="Default select example"
-      v-model="dataId"
-      @change="getData"
-    >
-    <option  v-for="(option, index) in options" :value="option.Id" :key="index">
-        {{ option.Name }}
-      </option>
-    </select>
-    <select
-      v-if="label === 'Auteur'"
-      :id="For"
-      class="form-select"
-      aria-label="Default select example"
-      v-model="dataId"
-      @change="getData"
-    >
-      <option v-for="(option, index) in allAuthors"  :value="option.Id" :key="index">
-          {{ option.Username }}
+    <div class="mb-3 row">
+      <label :for="For" class="col-sm-2 text-white form-label form-select-sm">
+        {{ label }}
+      </label>
+      <div class="col-sm-10">
+        <select
+        v-if="label !== 'Auteur'"
+        :id="For"
+        class="form-select"
+        aria-label="Default select example"
+        v-model="dataId"
+        @change="getData"
+      >
+      <option  v-for="(option, index) in options" :value="option.Id" :key="index">
+          {{ option.Name }}
         </option>
       </select>
+      <select
+        v-if="label === 'Auteur'"
+        :id="For"
+        class="form-select"
+        aria-label="Default select example"
+        v-model="dataId"
+        @change="getData"
+      >
+        <option v-for="(option, index) in allAuthors"  :value="option.Id" :key="index">
+            {{ option.Username }}
+          </option>
+        </select>
+      </div>
     </div>    
   </div>
 </template>

@@ -104,8 +104,8 @@
     overflow: hidden;
 }
 .clan-card {
-    width: 20rem;
-    height: 20rem;
+    width: 15rem;
+    height: 15rem;
     border-radius: 70% 70% 0 0;
     background-position: 50%;
     border: 6px solid rgba(var(--middle-green-02), 1);
@@ -132,6 +132,9 @@
 .border-card-color{
     height: 87.5vh;
 }
+.clan-detail-card.image-illustration-right.border-card-color{
+    height: 79.5vh;
+}
 .clans-location-container {
     margin: 1rem auto;
     padding: 5rem 0 0 8rem;
@@ -147,7 +150,7 @@
     font-variant: small-caps;
 }
 .card.card-image-layout.clan-detail-layout.mb-3 {
-    width: 100rem;
+    width: 180vh;
     border-radius: 20px 0 0 20px;
     background: none;
 }

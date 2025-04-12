@@ -1,15 +1,17 @@
 <template>
   <div :class="col">
-    <div class="form-floating mb-2 margin-top-2-rem">    
-    <input
-      type="text"
-      class="form-control"
-      :id="forId"
-      v-model="name"
-      @change="getDatas"
-    />
-    <label :for="forId">{{ label }}</label>
-  </div>
+    <div class="mb-3 row">
+      <label :for="forId" class="col-sm-5 col-form-label">{{ label }}</label>
+      <div class="col-sm-7">
+        <input
+          type="text"
+          class="form-control form-control-sm"
+          :id="forId"
+          v-model="name"
+          @change="getDatas"
+        />
+      </div>
+    </div>
   </div>
 </template>
 <script>
