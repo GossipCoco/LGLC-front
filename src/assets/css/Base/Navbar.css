@@ -36,13 +36,13 @@
 }
 .logo-container {
   padding: 0;
-  margin: 0 0 0 1rem;
+  margin: -4rem 0 0 -1rem;
 }
 .navbar {
   margin-top: -0.5rem
 }
 .logo-container img {
-  width: 85%;
+  width: 20vh;
 }
 #navbarCollapse {
   height: 5rem;
@@ -197,7 +197,9 @@ ul {
 /* FITLER */
 .row-filter{
   height: 8vh;
-  padding: 1rem 0;
+  padding: 1rem 0 0 2rem;
+  width: 188vh;
+  margin: 0.5rem 0 0 1rem;
 }
 .burger-menu {
   display: none;
