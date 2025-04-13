@@ -1,24 +1,28 @@
 <template>
   <div :class="col">
-    <label :for="For" class="text-white form-label form-select-sm">
-      {{ label }}
-    </label>
-    <select
-      :id="For"
-      class="form-select"
-      aria-label="Default select example"
-      v-model="CharacterId"
-      @change="getCharacter"
-    >
-      <option selected disabled>{{ label }}</option>
-      <option
-        v-for="(character, index) in characters"
-        :value="character.Id"
-        :key="index"
-      >
-        {{ character.CurrentName }}
-      </option>
-    </select>
+    <div class="mb-3 row">
+      <label :for="For" class="col-sm-4 text-white form-label form-select-sm">
+        {{ label }}
+      </label>
+      <div class="col-sm-8">
+        <select
+          :id="For"
+          class="form-select"
+          aria-label="Default select example"
+          v-model="CharacterId"
+          @change="getCharacter"
+        >
+          <option selected disabled>{{ label }}</option>
+          <option
+            v-for="(character, index) in characters"
+            :value="character.Id"
+            :key="index"
+          >
+            {{ character.CurrentName }}
+          </option>
+        </select>
+      </div>
+    </div>
   </div>
 </template>
 <script>

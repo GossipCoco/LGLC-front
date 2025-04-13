@@ -5,16 +5,9 @@
       v-bind:label="'Chercher un personnage'"
       v-bind:formdata="'getCharacter'"
       v-bind:characters="characters"
-      v-bind:col="'col-2'"
+      v-bind:col="'col-4'"
       @getCharacter="getCharacter"
     />
-    <!-- <GenericSelect
-      v-bind:For="'SearchClan'"
-      v-bind:label="'Clan'"
-      v-bind:formdata="'getclan'"
-      v-bind:col="'col-2'"
-      @getclan="getclan"
-    /> -->
     <GenericSelect
       v-bind:For="'SearchAuthor'"
       v-bind:label="'Auteur'"
@@ -27,7 +20,7 @@
     </div>
     <div class="col-3 display-flex align-items-content-justify-content">
       <router-link class="btn btn-primary" to="/createANewFiction">
-        Créer une nouvelle fiction
+        Nouvelle fiction
       </router-link>
     </div>
   </div>

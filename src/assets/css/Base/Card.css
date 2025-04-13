@@ -29,12 +29,12 @@
 }
 #all-characters-container-card .character-card.card {
     margin: 1rem 2rem 0 2rem;
-    width: 37vh;
+    width: 35vh;
     min-width: 35vh;
     padding: 0rem 1rem 1rem 0.5rem;
     max-width: 17rem;
-    height: 37vh;
-    border-radius: 8rem 8rem 2rem 2rem;
+    height: 35vh;
+    border-radius: 8rem 8rem 1rem 1rem;
     overflow: hidden;
 }
 .clan-detail-card {
@@ -43,7 +43,7 @@
     margin: 5rem 0 0 0;
 }
 .card-image img {
-    width: 75%;
+    width: 60%;
 }
 .height-character{
     height: 5rem
@@ -140,7 +140,7 @@
     padding: 5rem 0 0 8rem;
 }
 .character-card.card .card-image {
-    height: 30vh;
+    height: 25vh;
     width: 33vh;
     margin: 0.75rem 0 0 0;
     border-radius: 100% 100% 0 0;
@@ -456,6 +456,8 @@ li.quest-container {
 }
 .title-container-card{
     width: 22vh;
+    margin: -0.5rem 0 0 0;
+    display: block;
 }
 .fiction-summary-card .col-8{
     padding: 0.5rem;

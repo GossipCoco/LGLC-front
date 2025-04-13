@@ -323,3 +323,6 @@ audio{
 .dashboard-max-card-container.card-height .card-body{
     height: 80vh;
 }
+.fiction-summary-card p{
+    margin: 0 0 0.25rem 0;
+}
