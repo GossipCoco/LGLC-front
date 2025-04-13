@@ -71,6 +71,7 @@ export default {
       allCharacters: {},
       grades: {},
       filters: [],
+      width: 1700,
       nav: {
         current: 0,
         pages: 0,
@@ -150,6 +151,12 @@ export default {
       }
     },
     getAllCharacters(nav) {
+      if(window.innerWidth >= this.width){
+          this.nav.step = 10
+        }else if(window.innerWidth < this.width)
+        {
+          this.nav.step = 8
+        }
       CharacterService.getAllCharacters({ nav })
         .then((response) => {
           this.allCharacters = response.data.ob;

@@ -201,6 +201,14 @@ ul {
   width: 188vh;
   margin: 0.5rem 0 0 1rem;
 }
+
+
+.list-all-characters-container .row-filter{
+  height: 13vh;
+  padding: 2rem 0 0 2rem;
+  width: 188vh;
+  margin: 1.5rem 0 0 1rem;
+}
 .burger-menu {
   display: none;
   cursor: pointer;
