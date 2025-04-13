@@ -360,7 +360,7 @@ li.quest-container {
     width: 17rem;
 }
 .card-body.user-info-text{
-    padding: 0 1rem 0 1rem;
+    padding: 0;
 }
 /* SPECIFIC */
 
@@ -415,12 +415,16 @@ li.quest-container {
 }
 .row.top-dashboard .card-body > div{
     margin: 0 0 0.25rem 0;
-    width: 44vh;
+    width: 42vh;
 }
 
 .row.top-dashboard .all-my-oc-card .card-body > div{
     margin: 0 0 0.25rem 0;
     width: 20vh;
+}
+.row.top-dashboard .card-body.user-info-text > div{
+    margin: 0 0 0.25rem 0;
+    width: 44vh;
 }
 .character-l1{
     width: 110px;
@@ -451,7 +455,7 @@ li.quest-container {
     margin: 0 2rem 0 1rem;
 }
 .title-container-card{
-    width: 21vh;
+    width: 22vh;
 }
 .fiction-summary-card .col-8{
     padding: 0.5rem;

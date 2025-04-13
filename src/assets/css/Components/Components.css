@@ -115,7 +115,7 @@ th{
     font-size: 0.65em;
     font-weight: 800;
     width: 15.5rem;
-    margin: -0.5rem 0 -0.5rem -1rem;
+    margin: 0.15rem 0 -0.5rem -1rem;
 }
 .left-fiction-summary-container{
     width: 20rem;
@@ -273,12 +273,10 @@ audio{
     border-radius: 50%;
     overflow: hidden;
     cursor: pointer;
-  }
-
-  
+  }  
   .avatar-wrapper img {
-    width: 60%;
-    height: 60%;
+    width: 55%;
+    height: 55%;
     object-fit: cover;
     transition: opacity 0.3s ease-in-out;
     border: 4px solid rgba(var(--active-hover), 1);
@@ -302,17 +300,26 @@ audio{
     color: white;
     font-size: 20px;
     transition: opacity 0.3s ease-in-out;
-  }
-  
+  }  
   .file-input {
     display: none; /* Cache l'input file */
   }
   .all-fictions-container-global .search-bar-component .col-1,  .search-bar-component .col-3.display-flex.align-items-content-justify-content{
     padding: 1rem 0 0 0;
   }
-
   .location-clan-background-width-container .btn.btn-primary{
     width: 30vh;
     max-width: 30vh;
     margin: 0 0 0 6.5rem;
   }
+  
+  .character-list-wrapper .card-body{
+    height: 5rem;
+    margin: -1rem 0 0 0;
+}
+.card-body.all-last-three-fictions-container .list-all-fictions-globale--container{
+    width: 20rem;
+}
+.dashboard-max-card-container.card-height .card-body{
+    height: 80vh;
+}

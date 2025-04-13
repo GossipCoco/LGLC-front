@@ -39,7 +39,7 @@
     </div>
     <div class="row bottom-dashboard-levele-one">
       <div class="col-xxl-5 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <LastBook />
+        <LastBook v-if="!showspinner"/>
         <CharacterRandom v-if="!showspinner" v-bind:randomCharacters="randomCharacters"/>
       </div>
       <div class="col-xxl-7 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -169,8 +169,14 @@ export default {
     },
     GetUserById(e) {
       this.showspinner = true;
+      this.nav = {
+        current: 0,
+        pages: 0,
+        step: 4,
+      }
       UserService.getUserById(e)
         .then((response) => {
+          console.log(response.data.ob)
           this.userInfo = response.data.ob;
           this.Avatar = response.data.ob.Avatar;
           this.usr = response.data.ob.UserName;

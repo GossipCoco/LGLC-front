@@ -111,7 +111,7 @@ h5.card-title {
   color:rgba(var(--active-hover), 1)
 }
 h5.card-title a, .my-oc-character-container p a,.summaray-title-text p a{
-  font-size: 0.9em;
+  font-size: 1em;
 }
 .title-text-novel{
   margin: 0 0 0 1rem;
