@@ -357,29 +357,39 @@ li.quest-container {
 }
 #original-characters-list .card-group {
     flex-flow: row wrap;
-    width: 17rem;
+    width: 16rem;
 }
 .card-body.user-info-text{
     padding: 0;
 }
 /* SPECIFIC */
 
-#original-characters-list .border-card-color,
-#original-characters-list .card.individual-character-card{
+#original-characters-list .border-card-color
+{
     margin: 0.5rem;
-    height: 20em;    
+    height: 35vh;
     border-radius: 100% 100% 12px 12px;
     background-position: 50%;
     aspect-ratio: 1;
     border: 6px solid rgba(var(--clear-green-01), 1);
 }
-
+#original-characters-list .card.individual-character-card{
+    margin: 0.5rem;
+    height: 35vh;
+    border-radius: 100% 100% 12px 12px;
+    background-position: 50%;
+    aspect-ratio: 1;
+    border: 6px solid rgba(var(--clear-green-01), 1);
+}
 #original-characters-list .card.individual-character-card {
     background-color: rgba(var(--dark-green-01), 1);
     border: rgba(var(--dark-green-01), 1) 5px solid;
  }
 #original-characters-list  .card.individual-character-card{
     border-radius: 46% 46% 12px 12px; 
+}
+.individual-character-card .card-body {
+    margin: -1rem 0 0 0;
 }
 .avatar-gamer{
     width: 200px;

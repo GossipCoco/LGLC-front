@@ -196,8 +196,8 @@ ul {
 }
 /* FITLER */
 .row-filter{
-  height: 16vh;
-  padding: 4rem 0;
+  height: 8vh;
+  padding: 1rem 0;
 }
 .burger-menu {
   display: none;

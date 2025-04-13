@@ -43,7 +43,7 @@
     background-size: contain;
 }
 .card-image img{
-    width: 75%;
+    width: 65%;
 }
 .select-character-container{
     flex-wrap: wrap;
@@ -101,7 +101,7 @@ th{
     margin: 0 0 0 1rem;       
 }
 .pagination-container{
-    margin-top: -2rem;
+    margin-top: -4rem;
 }
 .row.list-fiction-card-container{
     height: 38rem;
