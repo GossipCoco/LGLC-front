@@ -250,6 +250,7 @@ audio{
 }
 .fiction-container .card-header{
     padding: 0;
+    height: 13vh;
 }
 .fiction-container.all-fictions-container-global .card-header{
     padding: 0;

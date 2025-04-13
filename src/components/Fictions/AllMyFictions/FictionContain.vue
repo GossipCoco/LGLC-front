@@ -8,13 +8,15 @@
       class="card-header fiction-global-informarion-container-hearder display-flex-row align-items-content-justify-content"
     >
       <div class="Comment-icon">
-        <router-link :to="'/CommentByFiction/' + Title">
-          <img src="../../../../public/images/icons/comments-solid.svg" />
+        <div class="display-flex-column">
+        <router-link :to="'/CommentByFiction/' + Title" class=" btn btn-primary">
+          Lire les commentaire
         </router-link>
         <CreateCommentModal
           v-bind:fanfiction="Title"
           v-bind:fictionId="IdFiction"
         />
+      </div>
       </div>
       <Rating :fictionId="IdFiction" :rating="rating" />
       <TitleFiction
@@ -22,13 +24,21 @@
         v-bind:Author="Author"
         v-bind:dateCreation="dateCreation"
       />
-      <div class="display-flex-row align-items-content-justify-content">
-        <router-link
-          type="button"
-          class="btn btn-primary"
-          :to="'/allFictions/' + Author"
-          >Retour à la liste des fictions</router-link
-        >
+      <div class="back-to-all-fictions-container">
+        <div class="flex-one display-flex-column align-items-content-justify-content">
+          <router-link
+            type="button"
+            class="btn btn-primary"
+            :to="'/allFictions/' + Author"
+            >Retour à la liste mes fictions</router-link
+          >
+          <router-link
+            type="button"
+            class="btn btn-primary"
+            :to="'/AllExistingFictionsLayout'"
+            >Retour à la liste des fictions</router-link
+          >
+        </div>
       </div>
     </div>
     <div class="card-body">

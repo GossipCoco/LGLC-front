@@ -1,14 +1,16 @@
 <template>
-  <div class="title-author-container display-flex-column flex-one">
+  <div class="title-author-container flex-one display-flex-column flex-one">
     <h1 class="text-white">{{ Title }}</h1>
     <div class="info-fan">
-      <h3 class="text-white">
-        par
-        <router-link :to="'/getUserBy/' + Author" class="text-white author-text cinzel">
-          {{ Author }}
-        </router-link>
-      </h3>
-      <p>{{ formatDate(dateCreation) }}</p>
+      <div class="display-flex-row flex-on align-items-content-justify-content">
+        <h3 class="text-white">
+          par
+          <router-link :to="'/getUserBy/' + Author" class="text-white author-text cinzel">
+            {{ Author }}
+          </router-link>
+        </h3>
+        <p>{{ formatDate(dateCreation) }}</p>
+      </div>
     </div>
   </div>
 </template>

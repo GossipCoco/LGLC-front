@@ -310,7 +310,6 @@ li.quest-container {
     transition: transform 0.1s ease-out;
 }
 .display-flex-column button{
-    height: 3rem;
     margin: 0.5rem 0;
 }
 .buttons-container{

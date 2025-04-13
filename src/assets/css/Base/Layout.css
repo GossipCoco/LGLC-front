@@ -107,7 +107,7 @@
     background-position: center;
     background-size: cover;
     border-radius: 20px;
-    height: 70vh;
+    height: 77vh;
     width: 100%;
     overflow: hidden;
     position: relative;
@@ -116,6 +116,7 @@
 .opacity-container{
     background-color: rgba(var(--dark-green-01), 0.75);
     border-radius: 20px;
+    height: 77vh;
 }
 .illustration-background .background-fiction-contain .characters-list-container{
     padding: 0.5rem 0 0.5rem 0;

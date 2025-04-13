@@ -24,16 +24,17 @@
   color: rgba(var(--active-hover), 1);
 }
 .rating {
-  width: 10rem;
-  height: 4rem;
+  width: 16vh;
+  height: 5vh;
+  margin: -2rem 0 0 2rem;
 }
 .rating svg {
   flex: 1
 }
 .rating svg {
   cursor: pointer;
-  width: 2rem;
-  height: 2rem;
+  width: 1vh;
+  height: 3vh
 }
 .rating svg.checked {
   fill: rgba(var(--active-hover), 1);

@@ -31,10 +31,10 @@ th {
     padding: 0.5rem;
 }
 .Comment-icon {
-    margin: -1rem 0 0 0;
+    margin: 2rem 0rem 0 0.5rem;
 }
 .Comment-icon > div{
-    margin: -3rem 0rem 0 0;
+    margin: -.5rem 0rem 0 0;
 }
 .fiction-global-informarion-container-hearder{
     height: 10rem;
@@ -55,7 +55,7 @@ th {
     font-family: 'Montserrat';
 }
 .title-author-container{
-    flex:0.85;
+    margin: 2rem 0 0 0;
 }
 .card-header.fiction-chapter-container h3 {
     margin-left: 2rem;
@@ -111,8 +111,9 @@ th {
     width: 75rem;
 }
 .illustration-background {
-    width: 101rem;
-    margin: 0 0 1rem 0;  
+    width: 183vh;
+    height: 77vh;
+    margin: 0;
 }
 .original-character-image-container img{
     width: 100%;
@@ -138,7 +139,9 @@ th {
     width: 100rem;
     overflow: hidden;
 }
-
+.back-to-all-fictions-container > div {
+    margin: 3rem 0 0 0;
+}
 .card.fiction-container .card-header h4 {
     padding: 0;
     width: 100%;
@@ -187,4 +190,11 @@ th {
 }
 .create-chapter-card-container{
     height: 85vh;
+}
+.back-to-all-fictions-container{
+    margin: -2rem 0.25rem 0 0;
+}
+.Comment-icon .flex-one .btn{    
+    margin: -0.5rem 0 0 0;
+
 }

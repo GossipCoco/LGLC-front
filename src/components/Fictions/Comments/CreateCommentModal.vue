@@ -1,16 +1,13 @@
 <template>
-  <div>
-    <!-- Button trigger modal -->
+  <div class="flex-one display-flex-column">
     <button
       type="button"
       class="btn btn-primary"
       data-bs-toggle="modal"
       data-bs-target="#commentFanfiction"
     >
-      Commenter la fanfiction
+      Laisser un commentaire
     </button>
-
-    <!-- Modal -->
     <div
       class="modal fade"
       id="commentFanfiction"
