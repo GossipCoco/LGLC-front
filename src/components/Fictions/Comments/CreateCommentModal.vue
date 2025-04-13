@@ -1,5 +1,10 @@
 <template>
+        <div class="Comment-icon">
+          <div class="display-flex-column">
   <div class="flex-one display-flex-column">
+    <router-link :to="'/CommentByFiction/' + Title" class=" btn btn-primary">
+            Lire les commentaire
+          </router-link>
     <button
       type="button"
       class="btn btn-primary"
@@ -55,12 +60,14 @@
       </div>
     </div>
   </div>
+  </div>
+  </div>
 </template>
 <script>
 import FictionService from "../../../services/FictionService";
 export default {
   name: "CreateCommentModal",
-  props: ["fanfiction", "chapterTitle", "fictionId", "chapterId"],
+  props: ["fanfiction", "chapterTitle", "fictionId", "chapterId", "Title",],
   data() {
     return {
       form: {
@@ -92,11 +99,11 @@ export default {
       console.log(this.form);
       FictionService.CreateCommentForAFiction(this.fictionId, this.form)
         .then((response) => {
-          console.log(response)
+          console.log(response);
           this.$router.push({
             path: "/CommentByFiction/" + this.fanfiction,
           });
-          location.reload()
+          location.reload();
         })
         .catch((e) => {
           console.log(e);

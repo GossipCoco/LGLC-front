@@ -1,46 +1,26 @@
 <template>
-  <div class="fiction-globale-container background-lineart card display-flex-column fiction-container overflowY-X-hiddenpadding-0-rem text-white flex-one opensans-text">
+  <div
+    class="fiction-globale-container background-lineart card display-flex-column fiction-container overflowY-X-hiddenpadding-0-rem text-white flex-one opensans-text"
+  >
     <Spinner v-if="showspinner" />
-    <!-- To do finir le compenent Car header -->
-
     <div
-      v-if="!showspinner" 
+      v-if="!showspinner"
       id="card-display-flex-column fiction-container"
       class="card-header fiction-global-informarion-container-hearder display-flex-row align-items-content-justify-content"
     >
-      <div class="Comment-icon">
-        <div class="display-flex-column">
-        <router-link :to="'/CommentByFiction/' + Title" class=" btn btn-primary">
-          Lire les commentaire
-        </router-link>
-        <CreateCommentModal
-          v-bind:fanfiction="Title"
-          v-bind:fictionId="IdFiction"
-        />
-      </div>
-      </div>
+      <CreateCommentModal
+        v-bind:fanfiction="Title"
+        v-bind:fictionId="IdFiction"
+        v-bind:Title="Title"
+      />
+
       <Rating :fictionId="IdFiction" :rating="rating" />
       <TitleFiction
         v-bind:Title="Title"
         v-bind:Author="Author"
         v-bind:dateCreation="dateCreation"
       />
-      <div class="back-to-all-fictions-container">
-        <div class="flex-one display-flex-column align-items-content-justify-content">
-          <router-link
-            type="button"
-            class="btn btn-primary"
-            :to="'/allFictions/' + Author"
-            >Retour à la liste mes fictions</router-link
-          >
-          <router-link
-            type="button"
-            class="btn btn-primary"
-            :to="'/AllExistingFictionsLayout'"
-            >Retour à la liste des fictions</router-link
-          >
-        </div>
-      </div>
+      <BackToFileBtnGroup v-bind:Author="Author" />
     </div>
     <div class="card-body">
       <div class="row">
@@ -106,8 +86,7 @@ import TitleFiction from "./TitleFiction.vue";
 import ListOfChapter from "./ListOfChapters.vue";
 import CreateCommentModal from "../Comments/CreateCommentModal.vue";
 import Spinner from "../../Components/GenericComponent/Spinner.vue";
-
-
+import BackToFileBtnGroup from "../Components/BackToFileBtnGroup.vue";
 export default {
   name: "FictionContain",
   inject: ["user"],
@@ -117,6 +96,7 @@ export default {
     ListOfChapter,
     CreateCommentModal,
     Spinner,
+    BackToFileBtnGroup,
   },
   data() {
     return {
@@ -180,7 +160,7 @@ export default {
       FictionService.getFictionByName(id, this.nav)
         .then((response) => {
           this.fiction = response.data.ob;
-          console.log(this.fiction)
+          console.log(this.fiction);
           this.rating = response.data.ob.AverageRating;
           this.IdFiction = this.fiction.Id;
           this.IdGame = this.fiction.Game.Id;
@@ -188,7 +168,7 @@ export default {
           this.AuthorId = this.fiction.User.Id;
           this.Title = this.fiction.Title;
           this.backgroundImageFiction = this.fiction.Image;
-          this.TypeFiction = this.fiction.FictionKinds
+          this.TypeFiction = this.fiction.FictionKinds;
           this.listOfCharacter = this.fiction.Game.GameCharacters;
           this.Gamers = this.fiction.Game.GameGamers;
           this.Summary = this.fiction.Summary;

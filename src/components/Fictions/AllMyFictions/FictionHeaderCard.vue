@@ -6,14 +6,14 @@
     >
       <div class="Comment-icon">
         <div class="display-flex-column">
-        <router-link :to="'/CommentByFiction/' + Title" class=" btn btn-primary">
-          Lire les commentaire
-        </router-link>
-        <CreateCommentModal
-          v-bind:fanfiction="Title"
-          v-bind:fictionId="IdFiction"
-        />
-      </div>
+            <router-link :to="'/CommentByFiction/' + Title" class=" btn btn-primary">
+            Lire les commentaire
+            </router-link>
+            <CreateCommentModal
+            v-bind:fanfiction="Title"
+            v-bind:fictionId="IdFiction"
+            />
+        </div>
       </div>
       <Rating :fictionId="IdFiction" :rating="rating" />
       <TitleFiction
