@@ -121,8 +121,9 @@ th {
     width: 28rem;
 }
 .all-chapters-list-container {    
-    width: 25rem;
+    width: 52vh;
     padding: 0 1rem;
+    overflow: auto;
 }
 .character-chapters-container img {
     width: 40%;

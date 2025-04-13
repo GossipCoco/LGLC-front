@@ -9,10 +9,15 @@
           />
         </div>
         <div class="col-2">
-          <EditSummary v-bind:FictionId="IdFiction" v-bind:Summary="Summary" />
+          <UploadImage
+            v-bind:id="IdFiction"
+            v-bind:service="'UploadFictionBackgroundIllustration'"
+            v-bind:css="'mb-3'"
+          />
+          
         </div>
         <div class="col-3">
-          <UploadImage v-bind:id="IdFiction" v-bind:service="'UploadFictionBackgroundIllustration'" v-bind:css="'mb-3'"/>
+          <EditSummary v-bind:FictionId="IdFiction" v-bind:Summary="Summary" />
         </div>
         <div class="col-1"></div>
         <div class="col-4">
@@ -30,7 +35,13 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-2">
+        <div class="col-xxl-2 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="display-flex-column all-characters-of-fiction">
+            <CarrouselCharacter v-bind:Characters="Characters" />
+            <CarrouselCharacter v-bind:Characters="OCCharacters" />
+          </div>
+        </div>
+        <div class="col-xxl-2 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <div
             class="display-flex-column image-fiction-container overflowY-X-hidden background-size-cover"
             v-bind:style="{
@@ -38,16 +49,21 @@
             }"
           ></div>
           <div class="display-flex-column">
-            <UploadImage v-bind:id="IdFiction" v-bind:service="'UpdateFictionIllustration'" v-bind:css="'mb-3'"/>
-          </div>
-          <div class="display-flex-column all-characters-of-fiction">
-            <CarrouselCharacter v-bind:Characters="Characters" />
-            <CarrouselCharacter v-bind:Characters="OCCharacters" />
+            <UploadImage
+              v-bind:id="IdFiction"
+              v-bind:service="'UpdateFictionIllustration'"
+              v-bind:css="'mb-3'"
+            />
           </div>
         </div>
-        <div class="col-6"><p class="text-align-justify overflowY-auto summary-height-container" v-html="Summary"></p></div>
+        <div class="col-xxl-4 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <p
+            class="text-align-justify overflowY-auto summary-height-container"
+            v-html="Summary"
+          ></p>
+        </div>
         <ListAllChapters v-bind:Chapters="fiction.Chapters" />
-    </div>
+      </div>
     </div>
   </div>
 </template>
@@ -72,11 +88,15 @@ export default {
     "Characters",
     "OCCharacters",
     "UploadIllustration",
-    "IllustrationId"
+    "IllustrationId",
   ],
-  components: { EditSummary, CarrouselCharacter, AddANewCharacterModal, UploadImage,
-    ListAllChapters
-   },
+  components: {
+    EditSummary,
+    CarrouselCharacter,
+    AddANewCharacterModal,
+    UploadImage,
+    ListAllChapters,
+  },
   data() {
     return {
       NewImage: null,

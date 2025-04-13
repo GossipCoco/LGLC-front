@@ -84,7 +84,6 @@
             </div>
           </div>
         </div>
-        
       </div>
     </div>
   </div>
@@ -130,6 +129,7 @@ export default {
       Title: null,
       CharImg: null,
       Summary: null,
+      TypeFiction: null,
       listOfCharacter: {},
       nbChapter: 0,
       rating: 0,
@@ -176,6 +176,7 @@ export default {
           this.AuthorId = this.fiction.User.Id;
           this.Title = this.fiction.Title;
           this.backgroundImageFiction = this.fiction.Image;
+          this.TypeFiction = this.fiction.FictionKinds
           this.listOfCharacter = this.fiction.Game.GameCharacters;
           this.Gamers = this.fiction.Game.GameGamers;
           this.Summary = this.fiction.Summary;

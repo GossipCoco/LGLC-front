@@ -1,13 +1,14 @@
 <template>
-  <button
-    type="button"
-    class="btn btn-primary"
-    data-bs-toggle="modal"
-    data-bs-target="#EditSummary"
-  >
-    Editer le résumé
-  </button>
-
+  <div class="d-grid gap-4">
+    <button
+      type="button"
+      class="btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#EditSummary"
+    >
+      Editer le résumé
+    </button>
+  </div>
   <!-- Modal -->
   <div
     class="modal fade"
@@ -38,7 +39,9 @@
             <div class="row">
               <div class="col-12">
                 <div class="mb-12">
-                  <label for="Content" class="form-label text-white">Votre résumé</label>
+                  <label for="Content" class="form-label text-white"
+                    >Votre résumé</label
+                  >
                   <textarea
                     v-model="form.Content"
                     class="form-control"
@@ -59,7 +62,9 @@
           >
             Fermer
           </button>
-          <button type="button" class="btn btn-primary">Enregistrer les modifications</button>
+          <button type="button" class="btn btn-primary">
+            Enregistrer les modifications
+          </button>
         </div>
       </div>
     </div>
