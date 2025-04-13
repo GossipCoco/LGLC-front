@@ -5,7 +5,7 @@
         <router-link
           :to="route + name"
           type="button"
-          class="btn btn-outline-light poppins-text "
+          class="btn btn-primary poppins-text "
         >
           {{ name }}
         </router-link>

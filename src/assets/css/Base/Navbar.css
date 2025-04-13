@@ -9,8 +9,8 @@
   overflow-x: hidden;
   scrollbar-color: rgba(var(--clear-green-02), 1) rgba(var(--dark-green-02), 1);
   scrollbar-width: thin;
-  margin: 0.25rem 1rem 1rem 0.25rem;
-  width: 10rem;
+  margin: 0.25rem 1rem 1rem 0rem;
+  width: 20vh;
   height: 98vh;
 }
 .form-control-dark {
@@ -36,13 +36,13 @@
 }
 .logo-container {
   padding: 0;
-  margin: -4rem 0 0 -1rem;
+  margin: -3rem 0 0 -1rem;
 }
 .navbar {
   margin-top: -0.5rem
 }
 .logo-container img {
-  width: 20vh;
+  width: 19vh;
 }
 #navbarCollapse {
   height: 5rem;

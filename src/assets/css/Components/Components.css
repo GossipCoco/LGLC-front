@@ -103,6 +103,9 @@ th{
 .pagination-container{
     margin-top: -4rem;
 }
+.all-fictions-container-global .pagination-container{
+    margin-top: -2rem;
+}
 .row.list-fiction-card-container{
     height: 38rem;
     padding: 1rem;
@@ -315,7 +318,7 @@ audio{
   
   .character-list-wrapper .card-body{
     height: 5rem;
-    margin: -1rem 0 0 0;
+    margin: 0 0 0 0;
 }
 .card-body.all-last-three-fictions-container .list-all-fictions-globale--container{
     width: 20rem;
@@ -325,4 +328,11 @@ audio{
 }
 .fiction-summary-card p{
     margin: 0 0 0.25rem 0;
+}
+.name-characatrer-link .btn{
+    height: 8vh;
+    width: 20vh;
+}
+span.name-characatrer-link{
+    margin: -0.5rem;
 }

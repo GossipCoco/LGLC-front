@@ -43,7 +43,7 @@
         <CharacterRandom v-if="!showspinner" v-bind:randomCharacters="randomCharacters"/>
       </div>
       <div class="col-xxl-7 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <div class="row">
+        <div class="row fictions-games-container">
           <ListAllFictions v-if="!showspinner" />
           <GamesLinks v-if="!showspinner" />
         </div>

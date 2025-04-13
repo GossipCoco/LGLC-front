@@ -70,8 +70,8 @@
     margin-top: 0.25rem;
 }
 .all-characters-container-card {
-    margin-top: 0;
-    width: 180vh;
+    margin: 0 7rem 0 4rem;
+    width: 173vh;
 }
 .character-l1 img {
    width: 75%;
@@ -100,8 +100,10 @@
 .carousel__icon{
     color: rgba(var(--main-white), 1)
 }
-.illustration-background .background-fiction-contain{
+.illustration-background .background-fiction-contain, .illustration-arc-container{
     background-repeat: no-repeat;
+}
+.illustration-background .background-fiction-contain{
     background-position: center;
     background-size: cover;
     border-radius: 20px;
@@ -132,10 +134,9 @@
 .illustration-arc-container{
     height: 60vh;
     background-position: 2%;
-    background-repeat: no-repeat;
 }
 .row.title-dashboard{
-    margin: 0.2rem 0.25rem 0.5rem -0.25rem
+    margin: 0.2rem 0.25rem 0.5rem 0.25rem
 }
 .row.top-dashboard, .row.bottom-dashboard-levele-one{
     margin: 0.5rem 0 0.5rem 0.75rem;
@@ -143,6 +144,9 @@
 }
 .row.top-left-dashboard{
     margin: -0.15rem 0 0 0
+}
+.row.fictions-games-container{
+    margin: -1rem 0 0 -2rem;
 }
 .card.border-none.background-lineart.profil-card.fiction-card.gamer-character-card{
     margin: 0 0 1rem 0.15rem;
