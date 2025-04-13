@@ -31,10 +31,11 @@
         v-bind:gamer="gamer"
       />      
       <LastFiveFiction v-if="!showspinner" />
-      <ExtractLastChap v-if="!showspinner" />      
+      <ExtractLastChap v-if="!showspinner" />
+      <CharacterByGamerV2 v-bind:gamer="gamer" v-if="!showspinner" />
     </div>
     <div class="row middle-dashboard">
-      <CharacterByGamerV2 v-bind:gamer="gamer" v-if="!showspinner" />
+      
     </div>
     <div class="row bottom-dashboard-levele-one">
       <div class="col-xxl-5 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">

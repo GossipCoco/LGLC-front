@@ -119,6 +119,8 @@ h5.card-title a, .my-oc-character-container p a,.summaray-title-text p a{
 }
 .title-text-novel p{
   text-align: left;
+  text-wrap: wrap;
+  width: 26vh;
 }
 .title-text-novel p a{
   font-variant: small-caps;
@@ -126,6 +128,7 @@ h5.card-title a, .my-oc-character-container p a,.summaray-title-text p a{
   font-size: 1.25em;
   line-height: 70%;
   display: block;
-  width: 50vh;
+  width: 32vh;
+  overflow-wrap: break-word;
 }
 
