@@ -1,9 +1,10 @@
 <template>
-  <div
-    class="fiction-globale-container background-lineart card display-flex-column fiction-container overflowY-X-hiddenpadding-0-rem text-white flex-one opensans-text"
-  >
+  <div class="fiction-globale-container background-lineart card display-flex-column fiction-container overflowY-X-hiddenpadding-0-rem text-white flex-one opensans-text">
     <Spinner v-if="showspinner" />
+    <!-- To do finir le compenent Car header -->
+
     <div
+      v-if="!showspinner" 
       id="card-display-flex-column fiction-container"
       class="card-header fiction-global-informarion-container-hearder display-flex-row align-items-content-justify-content"
     >
@@ -105,6 +106,7 @@ import TitleFiction from "./TitleFiction.vue";
 import ListOfChapter from "./ListOfChapters.vue";
 import CreateCommentModal from "../Comments/CreateCommentModal.vue";
 import Spinner from "../../Components/GenericComponent/Spinner.vue";
+
 
 export default {
   name: "FictionContain",
