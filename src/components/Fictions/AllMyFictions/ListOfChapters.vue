@@ -2,19 +2,13 @@
   <div class="opacity-container display-flex-row">
     <div class="summary-container overflowY-auto overflowX-hidden">
       <div class="row">
-        <div class="col-2">
-          <AddANewCharacterModal
-            v-if="AuthorId === usrCurrent"
-            v-bind:IdGame="IdGame"
-          />
-        </div>
+        <div class="col-2"></div>
         <div class="col-2">
           <UploadImage
             v-bind:id="IdFiction"
             v-bind:service="'UploadFictionBackgroundIllustration'"
             v-bind:css="'mb-3'"
           />
-          
         </div>
         <div class="col-3">
           <EditSummary v-bind:FictionId="IdFiction" v-bind:Summary="Summary" />
@@ -34,33 +28,29 @@
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-xxl-2 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="row middle-fiction-card">
+        <div
+          class="col-xxl-2 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 right-column-image-container"
+        >
           <div class="display-flex-column all-characters-of-fiction">
+            <div
+              class="display-flex-column image-fiction-container overflowY-X-hidden background-size-cover"
+              v-bind:style="{
+                backgroundImage: 'url(' + backgroundImageFiction + ')',
+              }"
+            ></div>
             <CarrouselCharacter v-bind:Characters="Characters" />
             <CarrouselCharacter v-bind:Characters="OCCharacters" />
           </div>
         </div>
         <div class="col-xxl-2 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          <div
-            class="display-flex-column image-fiction-container overflowY-X-hidden background-size-cover"
-            v-bind:style="{
-              backgroundImage: 'url(' + backgroundImageFiction + ')',
-            }"
-          ></div>
-          <div class="display-flex-column">
-            <UploadImage
-              v-bind:id="IdFiction"
-              v-bind:service="'UpdateFictionIllustration'"
-              v-bind:css="'mb-3'"
-            />
-          </div>
+          <AddANewCharacterModal
+            v-if="AuthorId === usrCurrent"
+            v-bind:IdGame="IdGame"
+          />
         </div>
         <div class="col-xxl-4 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          <p
-            class="text-align-justify overflowY-auto summary-height-container"
-            v-html="Summary"
-          ></p>
+          <p class="text-align-justify overflowY-auto summary-height-container" v-html="Summary"></p>
         </div>
         <ListAllChapters v-bind:Chapters="fiction.Chapters" />
       </div>
