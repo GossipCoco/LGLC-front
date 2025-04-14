@@ -35,7 +35,7 @@
     padding: 10rem 0 0 0;
 }
 .avatar-container {
-    flex: 0.5;
+    flex: .45;
 }
 .character-container {
     margin: -3rem auto;
