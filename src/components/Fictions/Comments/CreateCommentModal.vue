@@ -1,73 +1,85 @@
 <template>
-        <div class="Comment-icon">
-          <div class="display-flex-column">
-  <div class="flex-one display-flex-column">
-    <router-link :to="'/CommentByFiction/' + Title" class=" btn btn-primary">
-            Lire les commentaire
-          </router-link>
-    <button
-      type="button"
-      class="btn btn-primary"
-      data-bs-toggle="modal"
-      data-bs-target="#commentFanfiction"
-    >
-      Laisser un commentaire
-    </button>
-    <div
-      class="modal fade"
-      id="commentFanfiction"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-xl">
-        <div class="modal-content background-color-main-lineart">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">
-              Commenter "{{ fanfiction }}" ({{ fictionId }})
-            </h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <form @submit.stop.prevent="onSubmit">
-              <textarea
-                v-model="form.Content"
-                class="form-control"
-                id="Comment"
-                rows="12"
-                @change="getData"
-              ></textarea>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Fermer
-            </button>
-            <button type="button" class="btn btn-primary" v-on:click="handleOk">
-              Envoyer le commentaire
-            </button>
+  <div class="Comment-icon">
+    <div class="display-flex-column">
+      <div class="flex-one display-flex-column">
+        <router-link :to="'/CommentByFiction/' + Title" class="btn btn-primary">
+          Lire les commentaire
+        </router-link>
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#commentFanfiction"
+        >
+          Laisser un commentaire
+        </button>
+        <div
+          class="modal fade"
+          id="commentFanfiction"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-xl">
+            <div class="modal-content background-color-main-lineart">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                  Commenter "{{ fanfiction }}" ({{ fictionId }})
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form @submit.stop.prevent="onSubmit">
+                  <textarea
+                    v-model="form.Content"
+                    class="form-control"
+                    id="Comment"
+                    rows="12"
+                    @change="getData"
+                  ></textarea>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Fermer
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  v-on:click="handleOk"
+                >
+                  Envoyer le commentaire
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  </div>
-  </div>
+  
 </template>
 <script>
 import FictionService from "../../../services/FictionService";
 export default {
   name: "CreateCommentModal",
-  props: ["fanfiction", "chapterTitle", "fictionId", "chapterId", "Title","rating"],
+  props: [
+    "fanfiction",
+    "chapterTitle",
+    "fictionId",
+    "chapterId",
+    "Title",
+    "rating",
+  ],
   data() {
     return {
       form: {
