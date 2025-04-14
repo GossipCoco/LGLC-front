@@ -67,7 +67,7 @@
 import FictionService from "../../../services/FictionService";
 export default {
   name: "CreateCommentModal",
-  props: ["fanfiction", "chapterTitle", "fictionId", "chapterId", "Title",],
+  props: ["fanfiction", "chapterTitle", "fictionId", "chapterId", "Title","rating"],
   data() {
     return {
       form: {

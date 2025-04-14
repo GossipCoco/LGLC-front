@@ -12,6 +12,7 @@
         v-bind:fanfiction="Title"
         v-bind:fictionId="IdFiction"
         v-bind:Title="Title"
+        v-bind:rating="rating"
       />
       <Rating :fictionId="IdFiction" :rating="rating" />
       <TitleFiction

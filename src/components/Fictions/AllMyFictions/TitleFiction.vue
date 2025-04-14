@@ -9,7 +9,7 @@
             {{ Author }}
           </router-link>
         </h3>
-        <p>{{ formatDate(dateCreation) }}</p>
+        <!-- <p>{{ formatDate(dateCreation) }}</p> -->
       </div>
     </div>
   </div>
