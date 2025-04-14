@@ -13,7 +13,6 @@
         v-bind:fictionId="IdFiction"
         v-bind:Title="Title"
       />
-
       <Rating :fictionId="IdFiction" :rating="rating" />
       <TitleFiction
         v-bind:Title="Title"
