@@ -4,9 +4,8 @@
     max-width: 50vh;
 }
 .pagination-container {
-    width: 100vh;
-    align-items: center;
-    align-content: center;
+    width: 180vh;
+    margin-top: 5rem;
 }
 
 .row.all-calls-pagination-container{
@@ -17,24 +16,16 @@
     width: 9rem;
     height: 5vh;
     border-radius: 0.25rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
     vertical-align: middle;
     padding: 0.65rem 0;
-    margin: -1rem 0 0 0;
+    margin: -5rem 0 0 0;
 }
 .pagination li,.pagination-container, .pagination-container-row.col-lg-12.col-md-12.col-sm-12.col-xxl-12.col-xs-12 {
-    display: flex;
-    flex-direction: row;
-    flex:1;
     margin: 0;
     margin-top: -3rem;
     justify-content: right;
 }
-.pagination-container{
-    margin-top: 5rem;
-}
+
 .row.search-pagination-container{
     height: 50px;
 }
@@ -55,6 +46,7 @@
     font-size: 16px;
     font-weight: 600;
     text-align: right;
+    padding: 1rem 0 0 0;
 }
 .nav-btn-contain button{
     height: 40px;
