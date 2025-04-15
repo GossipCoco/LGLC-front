@@ -15,14 +15,14 @@
 .number-page-container {
     background-color: rgba(var(--dark-green-01), 1);
     width: 9rem;
-    height: 3rem;
+    height: 5vh;
     border-radius: 0.25rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
     vertical-align: middle;
     padding: 0.65rem 0;
-    margin: 0.55rem 0 0 0;
+    margin: -1rem 0 0 0;
 }
 .pagination li,.pagination-container, .pagination-container-row.col-lg-12.col-md-12.col-sm-12.col-xxl-12.col-xs-12 {
     display: flex;
@@ -73,7 +73,6 @@
     color: rgba(var(--active-hover),1)
 }
 .pagination li{
-    height: 40px;
     margin: 0;
 }
 .row.pagination-container-row{
