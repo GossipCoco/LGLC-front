@@ -103,6 +103,9 @@
 .dashboard-max-card-container.card-height.fiction-container .card-body{
     height: 80vh;
 }
+.one-book-container-wrapper .fiction-container .card-body{
+    height: 60vh;
+}
 .book-container{
     height: 75vh;
 }

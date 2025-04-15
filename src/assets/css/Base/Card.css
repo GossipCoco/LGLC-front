@@ -454,6 +454,12 @@ li.quest-container {
 .fiction-container .card-body{
     height: 80vh;
 }
+.one-book-container-wrapper .fiction-container .card-body{
+    height: 60vh;
+}
+#book-container .fiction-container .card-body{
+    height: 60vh;
+}
 .login-card .card-body{
     height: 15rem;
 }
