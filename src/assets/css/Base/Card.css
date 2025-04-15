@@ -322,9 +322,15 @@ li.quest-container {
     border-radius: 10px;
     transition: transform 0.3s ease;
 }
+.card-image img.image-book{
+    width: 25vh;
+    height: 30vh;
+    border-radius: 20px;
+}
 .card-image img:hover {
     transform: scale(1.05);
 }
+
 .details-infos-characters {
     box-shadow: 0 4px 8px rgba(var(--main-black), 0.1);
     border-radius: 10px;
