@@ -1,21 +1,22 @@
 <template>
     <div class="character-details-chatper background-color-main-lineart card mb-3 display-flex-column fiction-container">
-        <div class="card-header align-items-content-justify-content">
+        <div class="card-header display-flex-row align-items-content-justify-content">
             <div class="chapter-title-content text-white cinzel">
                 <h1 class="chapter-title text-white cinzel">
                     {{ chapter.Title }}
                 </h1>
             </div>
+            <CreateCommentModal
+                v-bind:fanfiction="TitleFiction"
+                v-bind:fictionId="FictionId"
+                v-bind:chapterId="chapterId"
+                v-bind:chapterTitle="chapter.Title"
+            />
         </div>
         <div class="card-body">
             <div class="row">
                 <div class="col-12">
                     <div class="display-flex align-items-content-justify-content chapter-button-content">
-                        <CreateCommentModal
-                            v-bind:fanfiction="TitleFiction"
-                            v-bind:fictionId="FictionId"
-                            v-bind:chapterId="chapterId"
-                            v-bind:chapterTitle="chapter.Title"/>
                         <button @click="speakText" class="btn btn-primary">
                             Lire à voix haute
                         </button>
@@ -33,13 +34,9 @@
                     </div>
                 </div>
             </div>
-            <div class="display-flex-row chapter-global-content display-flex">                   
-                <div class="chapter-image-content flex-one background-size-cover"
-                    v-bind:style="{ backgroundImage: 'url(' + ImageChapter + ')' }">
-                </div>
-                <div class="chapter-text-content background-color-white flex-one overflowY-scroll">
-                    <p class="text-align-justify background-color-white black-text " v-html="Content"></p>
-                </div>
+            <div class="display-flex-row chapter-global-content display-flex">
+                <chapter-image v-bind:ImageChapter="ImageChapter" />
+                <chapter-text v-bind:Content="Content" />
             </div>
         </div>
     </div>      
@@ -47,9 +44,11 @@
 <script>
 import FictionService from '../../../services/FictionService'
 import CreateCommentModal from '../Comments/CreateCommentModal.vue';
+import ChapterImage from './ChapterImage.vue'
+import ChapterText from './ChapterText.vue';
 export default {
     name: 'ChapterLayout',
-    components: {CreateCommentModal},
+    components: {CreateCommentModal, ChapterImage, ChapterText},
     data() {
         return {
             TitleFiction: null,

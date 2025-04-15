@@ -44,7 +44,8 @@
 .create-character-form .text-area-container{
     height: 30rem;
 }
-.create-character-form > div:nth-child(2){
+.create-character-form > div:nth-child(2),
+.bottom-dashboard-levele-one .card{
     height: 40vh;
 }
 .one-fiction-container, .mini-rond-messages,
@@ -52,11 +53,7 @@
 .search-bar-component .col-3.display-flex.align-items-content-justify-content{
     padding: 1rem 0 0 0;
 }
-th{
-    font-weight: 200;
-}
 .bottom-dashboard-levele-one .card{
-    height: 40vh;
     margin: 1rem auto;
 }
 .chapter-global-content{
