@@ -12,6 +12,11 @@
                 v-bind:chapterId="chapterId"
                 v-bind:chapterTitle="chapter.Title"
             />
+            <div class="back-to-fiction-btn-container">
+                <router-link :to="'/fiction/' + TitleFiction" class="btn btn-primary">
+                    Retour à la liste de chapitres
+                </router-link>
+            </div>
         </div>
         <div class="card-body">
             <div class="row">
@@ -27,9 +32,6 @@
                         <router-link type="button" class="btn btn-primary" :to="'/EditChapter/' + chapter.Id"
                             v-if="usrCurrent === AuthorId">
                             Editer le chapitre
-                        </router-link>
-                        <router-link :to="'/fiction/' + TitleFiction" class="btn btn-primary">
-                            Retour à la liste de chapitres
                         </router-link>
                     </div>
                 </div>

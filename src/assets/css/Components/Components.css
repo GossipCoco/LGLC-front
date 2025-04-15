@@ -59,14 +59,11 @@
 .chapter-global-content{
     height: 70vh;
 }
-.chapter-image-content{
-    width: 500px;
-    background-position: 20%;
-    height: 700px;
-    flex: 0.5;
-}
 .chapter-text-content{
     padding: 0.5rem;
+}
+.back-to-fiction-btn-container{
+    margin: -1rem 0 0 2rem;
 }
 .logo img{
     width: 55%;
