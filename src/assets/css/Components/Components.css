@@ -344,3 +344,9 @@ span.name-characatrer-link{
 .right-column-image-container{
     margin: -5rem 0 0 0;
 }
+
+.btn:first-child:active{
+    color: rgb(var(--main-white), 1);
+    background-color: rgb(var(--dark-green-01), 1);
+    border-color: rgb(var(--dark-green-01), 1);
+}

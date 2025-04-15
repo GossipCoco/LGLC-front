@@ -63,14 +63,14 @@
   position: fixed;
   background: var(--lineart-other03);
   border-top-right-radius: 0 0;
-  border-top-left-radius: 12px 12px;
-  border-bottom-right-radius: 12px 12px;
-  border-bottom-left-radius: 12px 12px;
+  border-top-left-radius: 8px 8px;
+  border-bottom-right-radius: 8px 8px;
+  border-bottom-left-radius: 8px 8px;
   width: 8%;
   margin: 0.5rem 0rem;
 }
 .icon-menu-container svg.svg-inline--fa.fa-chevron-down {
-  color: rgba(var(--clear-green-02), 1);
+  color: rgba(var(--clear-green-01), 1);
 }
 .menu-left ul {
   width: 13rem;

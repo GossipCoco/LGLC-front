@@ -29,10 +29,10 @@
     --dark-green-02 : 33, 67, 35;
     --middle-green-01: 73, 111, 56;
     --middle-green-02: 58, 106, 72;
-    --clear-green-01: 181, 202, 94;
-    --clear-green-02: 255, 249, 171;
+    --clear-green-01: 161, 181, 76;
+    --clear-green-02: 196, 219, 96;
     --ternary-green: 236,255, 153;
-    --active-hover: 235, 140, 58;
+    --active-hover: 249, 248, 113;
 
     /* Lineart */
     --linear-greendark-clear: linear-gradient(90deg, rgba(var(--dark-green-01), 1) 0%,
@@ -52,7 +52,7 @@
     linear-gradient(336deg, rgba(var(--middle-green-01), 1), rgba(0,0,255,0) 70.71%);
 
     /* Image */
-    --background-image: url('/images/Backgrounds/Warriors_2792_1.png');
+    --background-image: url('/images/Backgrounds/Warriors_2792_2.png');
     --cat-corner: url('/images/icons/cat02.svg');
     --second-cat-corner: url('/images/icons/cat-corner.svg');
 }
