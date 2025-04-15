@@ -119,7 +119,7 @@
           <router-link class="link-collapse display-flex-column align-items-content-justify-content " to="/createANewFiction">
             Nouvelle fiction
           </router-link>
-          <router-link v-if="role === 'Administrateur'" to="/CharacterCreate" class="link-collapse display-flex-column align-items-content-justify-content ">
+          <router-link v-if="role === 'Administrateur'" to="/CreateAnOriginalCharacter" class="link-collapse display-flex-column align-items-content-justify-content ">
             Nouveau personnage
           </router-link> 
         </div>
