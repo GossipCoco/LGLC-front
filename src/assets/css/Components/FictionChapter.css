@@ -63,6 +63,15 @@ th {
 .dashboard-max-card-container.card-height .card-body{
     height: 80vh;
 }
+#book-container.dashboard-max-card-container {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(var(--main-black), 0.1);
+    margin: 2rem 0 0 -4rem;
+}
+#book-container.dashboard-max-card-container.card-height .card-body{
+    height: 80vh;
+}
 .chapter-title-content {
     text-align: center;
 }
