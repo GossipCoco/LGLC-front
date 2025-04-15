@@ -21,9 +21,7 @@ th {
     height: 40vh;
     margin: 1rem auto;
 }
-.chapter-text-content {
-    padding: 0.5rem;
-}
+
 .Comment-icon {
     margin: 2rem 0rem 0 0.5rem;
 }
@@ -33,9 +31,7 @@ th {
 .fiction-global-informarion-container-hearder{
     height: 10rem;
 }
-.chapter-text-content {
-    height: 65vh;
-}
+
 .card-header.fiction-chapter-container {
     margin: -2rem -2rem 0 0;
 }
@@ -85,7 +81,6 @@ th {
     border-radius: 1rem 0 0 1rem;
 }
 .chapter-text-content {
-    flex: 2;
     overflow: auto;
     padding: 1rem 2rem 1rem 1rem;
     border-radius: 0 3rem 3rem 0;

@@ -14,7 +14,8 @@
     background-color: rgba(var(--middle-green-01), 1);
     border: 1px solid rgba(var(--middle-green-01), 1);
 }
-.btn-primary:hover, .name-characatrer-link .btn:hover {
+.btn-primary:hover, .name-characatrer-link .btn:hover,
+.btn-primary.file-character-btn {
     background-color: rgba(var(--dark-green-01), 1);
     border: 1px solid rgba(var(--dark-green-01), 1);
     color: rgba(var(--active-hover), 1);
@@ -23,18 +24,17 @@
     width: 10rem;
 }
 .btn-primary.file-character-btn {
-    background-color:  rgb(var(--dark-green-01), 0.6);
-    border-color:  rgb(var(--dark-green-01), 0.6);
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .btn-primary.file-character-btn:hover {
-    background-color:  rgb(var(--clear-green-02), 0.6);
+    background-color:  rgba(var(--clear-green-02), 1);
+    border: rgba(var(--clear-green-02), 1);
     transform: scale(1.05);
 }
 /* CARD */
-.card-image img{
+/* .card-image img{
     width: 65%;
-}
+} */
 .create-character-form,
 .card-form-create-character .card-body{
     width: 100%;
@@ -58,9 +58,6 @@
 }
 .chapter-global-content{
     height: 70vh;
-}
-.chapter-text-content{
-    padding: 0.5rem;
 }
 .back-to-fiction-btn-container{
     margin: -1rem 0 0 2rem;
@@ -113,7 +110,8 @@
     width: 100%;
 }
 .image-book{
-    width: 90%;
+    width: 25vh;
+    height: 30vh;
     border-radius: 20px;
 }
 .user-info-text img{
@@ -162,8 +160,13 @@ audio{
 .character-details-router a {
     font-size: 0.85em;
 }
+.all-characters-by-user-container .card{
+    height: 33vh;
+}
 .all-characters-by-user-container{
-    height: 20rem;
+    height: 75vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 .image-width{
     width: 45%;
