@@ -4,7 +4,7 @@
       <div class="row pagination-container align-items-content-justify-content">
         <div class="col-11 col-md-11 col-sm-11 col-xxl-11 col-xs-11 col-pagination-container align-items-content-justify-content">
           <ul class="pagination" v-if="navPage.pages < 6">
-            <li class="nav-btn-contain">
+            <li class="nav-btn-contain display-flex-row  flex-one">
               <button
                 v-for="p in navPage.pages"
                 :key="p"
@@ -234,7 +234,7 @@
                 Suivant
               </button>
             </li>
-            <li class="page-item display-flex-row  flex-one">
+            <li class="page-item display-flex-row flex-one">
               <button
                 type="button"
                 class="page-link pagination-text"
@@ -248,8 +248,8 @@
         </div>
         <div class="col-1 col-md-1 col-sm-1 col-xxl-2 col-xs-2">
           <div class="number-page-container align-items-content-justify-content display-flex-row">
-            <p v-if="!nav.current">Page : 1</p>
-            <p v-else>Page : {{ nav.current + 1 }}</p>
+            <p v-if="!nav.current" class="padding-1rem-0-0-0">Page : 1</p>
+            <p v-else class="padding-1rem-0-0-0">Page : {{ nav.current + 1 }}</p>
           </div>
         </div>
       </div>

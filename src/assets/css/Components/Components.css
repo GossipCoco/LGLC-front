@@ -1,20 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import '../variables.scss';
 /* BUTTON */
-.create-chapter-btn-container .btn {
+.create-chapter-btn-container .btn, .select-character-container .form-check {
     width: 15rem;
 }
 .btn-validate-container{
-    margin: 3rem 0rem 0 0;
+    margin: 3rem 0 0 0;
 }
 .flex-one .btn {
     margin-bottom: 1rem;
 }
 .btn-primary {
-    background-color: rgba(var(--middle-green-02), 1);
-    border: 1px solid rgba(var(--middle-green-02), 1);
+    background-color: rgba(var(--middle-green-01), 1);
+    border: 1px solid rgba(var(--middle-green-01), 1);
 }
-.btn-primary:hover {
+.btn-primary:hover, .name-characatrer-link .btn:hover {
     background-color: rgba(var(--dark-green-01), 1);
     border: 1px solid rgba(var(--dark-green-01), 1);
     color: rgba(var(--active-hover), 1);
@@ -31,25 +31,9 @@
     background-color:  rgb(var(--clear-green-02), 0.6);
     transform: scale(1.05);
 }
-.name-characatrer-link .btn:hover{
-    color: rgba(var(--active-hover), 1);
-    background-color: rgba(var(--dark-green-01), 1);
-    border: 1px solid rgba(var(--dark-green-01), 1)
-}
-
 /* CARD */
-
-.illustration-arc-container.card-image{
-    background-size: contain;
-}
 .card-image img{
     width: 65%;
-}
-.select-character-container{
-    flex-wrap: wrap;
-}
-.select-character-container .form-check{
-    width: 15rem;
 }
 .create-character-form,
 .card-form-create-character .card-body{
@@ -63,10 +47,9 @@
 .create-character-form > div:nth-child(2){
     height: 40vh;
 }
-.select-character-container img{
-    width: 50%;
-}
-.one-fiction-container{
+.one-fiction-container, .mini-rond-messages,
+.all-fictions-container-global .search-bar-component .col-1,
+.search-bar-component .col-3.display-flex.align-items-content-justify-content{
     padding: 1rem 0 0 0;
 }
 th{
@@ -166,7 +149,6 @@ th{
     height: 2rem;
     width: 2rem;
     border-radius: 100%;
-    padding: 1rem 0 0 0;
     margin: 0 0 0 -1rem;
     z-index: 99;
 }
@@ -304,15 +286,12 @@ audio{
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: rgb(var(--main-white), 1);
     font-size: 20px;
     transition: opacity 0.3s ease-in-out;
   }  
   .file-input {
     display: none; /* Cache l'input file */
-  }
-  .all-fictions-container-global .search-bar-component .col-1,  .search-bar-component .col-3.display-flex.align-items-content-justify-content{
-    padding: 1rem 0 0 0;
   }
   .location-clan-background-width-container .btn.btn-primary{
     width: 30vh;
