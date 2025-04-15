@@ -13,10 +13,10 @@
                 v-bind:src="fiction.Image"
                 v-bind:alt="fiction.Image"
               />
-            <div class="summaray-title-text  flex-one align-items-content-justify-content">
+            <div class="summaray-title-text text-ternary-green flex-one align-items-content-justify-content">
               <p>
                 <span class="link-to-fiction-text">
-                  <router-link class="poppins-text text-dark-green" :to="'/fiction/' + fiction.Title">
+                  <router-link class="poppins-text text-ternary-green" :to="'/fiction/' + fiction.Title">
                     {{ fiction.Title }}
                   </router-link> </span
                 ><br />
