@@ -1,34 +1,9 @@
 <template>
   <div class="row user-all-information-container">
     <div class="col-7">
-      <p class="display-flex-row">
-        <span class="label-profil poppins-text text-white flex-one"
-          >Inscription</span
-        >
-      </p>
-      <p class="display-flex-row">
-        <span class="label-profil poppins-text text-white flex-one"
-          >Dernière connextion</span
-        >
-      </p>
-      <p class="display-flex-row">
-        <span class="label-profil poppins-text text-white flex-one"
-          >Nb de fictions</span
-        >
-      </p>
-      <p class="display-flex-row">
-        <span class="label-profil poppins-text text-white flex-one"
-          >Nb de mots écrits</span
-        >
-      </p>
-      <p class="display-flex-row">
-        <span class="label-profil poppins-text text-white flex-one"
-          >Vous avez</span
-        >
-      </p>
-      <p class="display-flex-row">
-        <span class="label-profil poppins-text text-white flex-one"
-          >Vous avez</span
+      <p class="display-flex-row" v-for="(info, index) in information" :key="index">
+        <span class="label-profil poppins-text text-white flex-one" v-for="(name, index) in info" :key="index">
+          {{ name }}</span
         >
       </p>
     </div>
@@ -62,6 +37,18 @@
 export default {
   name: "UserInformation",
   props:['Inscription', 'LastConnexion', 'nBFiction', 'totalWords', 'totalPoints', 'NbOCs'],
+  data(){
+    return{
+      information:[
+        {name: 'Inscription'},        
+        {name: 'Dernière connextion'},
+        {name: 'Nb de fictions'},
+        {name: 'Nb de mots écrits'},
+        {name: 'Vous avez'},
+        {name: 'Vous avez'}
+      ]
+    }
+  },
   methods: {
     formatDate(isoDateString) {
       if (isoDateString) {
