@@ -48,7 +48,7 @@
         height: 28rem;
     }  
 }
-@media (min-width: 1200px) and (max-width: 1600px) {
+@media (min-width: 800px) and (max-width: 1600px) {
     .menu-left.menu-hidden.d-flex.flex-column.flex-shrink-0.p-3{
         width: 9rem;
     }
@@ -117,8 +117,9 @@
     .list-all-fictions-globale--container {
         width: 18rem;
     }
-    .row.top-dashboard .card {
-        height: 23rem;
+    .row.top-dashboard .card.my-oc-card {
+        height: 15rem;
+        margin: 1rem auto;
     }
     #all-characters-container-card .character-card.card{
         display: flex;
@@ -271,7 +272,7 @@
     }
     .top-dashboard,
     .bottom-dashboard-levele-one {
-        height: 150rem;
+        height: 165vh;
     }
     .character-l1 {
         flex: 0.1;
