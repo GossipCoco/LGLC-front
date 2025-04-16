@@ -198,3 +198,24 @@
 .row.top-dashboard .card-body > div{
     width: 42vh;
 }
+.row.top-dashboard .all-my-oc-card .card-body > div{
+    width: 20vh;
+}
+.row.top-dashboard .card-body.user-info-text > div{
+    width: 44vh;
+}
+.character-l1{
+    width: 110px;
+}
+.one-book-container-wrapper .fiction-container .card-body, #book-container .fiction-container .card-body{
+    height: 60vh;
+}
+.login-card .card-body{
+    height: 15rem;
+}
+.card .last-book-container{
+    height: 20rem;
+}
+.my-oc-card .card-body{
+    height: 10rem;
+}

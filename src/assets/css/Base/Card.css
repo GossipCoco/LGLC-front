@@ -277,16 +277,10 @@ li.quest-container {
 }
 .row.top-dashboard .all-my-oc-card .card-body > div{
     margin: 0 0 0.25rem 0;
-    width: 20vh;
 }
 .row.top-dashboard .card-body.user-info-text > div{
     margin: 0 0 0.25rem 0;
-    width: 44vh;
 }
-.character-l1{
-    width: 110px;
-}
-
 .summaray-title-text p{
     margin: 0.25rem 0 0.25rem 0;
     line-height: 0.95;
@@ -299,18 +293,8 @@ li.quest-container {
 .fiction-container .card-body{
     height: 80vh;
 }
-.one-book-container-wrapper .fiction-container .card-body, #book-container .fiction-container .card-body{
-    height: 60vh;
-}
-.login-card .card-body{
-    height: 15rem;
-}
-.card .last-book-container{
-    height: 20rem;
-}
 .my-oc-card .card-body{
     padding: 0;
-    height: 10rem;
 }
 .row.middle-dashboard .card-global{
     margin: 0 2rem 0 1rem;
