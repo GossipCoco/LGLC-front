@@ -113,7 +113,7 @@ h5.card-title {
   height: 11rem;
 }
 .h5-container a{
-  font-weight: 600;
+  font-weight: 800;
 }
 .h5-container a:hover{
   color:rgba(var(--active-hover), 1)
@@ -139,4 +139,6 @@ h5.card-title a, .my-oc-character-container p a,.summaray-title-text p a{
   width: 32vh;
   overflow-wrap: break-word;
 }
-
+.author-text{
+  font-size: 1.25em;
+}

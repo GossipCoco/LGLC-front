@@ -32,7 +32,7 @@
     --clear-green-01: 161, 181, 76;
     --clear-green-02: 196, 219, 96;
     --ternary-green: 236,255, 153;
-    --active-hover: 249, 248, 113;
+    --active-hover: 27, 98, 98;
 
     /* Lineart */
     --linear-greendark-clear: linear-gradient(90deg, rgba(var(--dark-green-01), 1) 0%,
@@ -54,4 +54,7 @@
     --background-image: url('/images/Backgrounds/Warriors-1159.png');
     --cat-corner: url('/images/icons/cat02.svg');
     --second-cat-corner: url('/images/icons/cat-corner.svg');
+    --accueil-img1: url('/images/Accueil/Warriors_3587.jpg');
+    --accueil-img2: url('/images/Accueil/Warriors_3508.png');
+    --accueil-img3: url('/images/Accueil/Warriors_3620.jpg');
 }

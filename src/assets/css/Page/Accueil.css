@@ -172,6 +172,9 @@ h2{
 #accueil .col-md-5{
     display: grid;
     vertical-align: middle;
+    padding: 1rem;
+    background-color: rgba(var(--dark-green-01), 0.25);
+    border-radius: 8px;
 }
 #accueil .image-row-second{
     display: flex;
@@ -184,10 +187,6 @@ h2{
 }
 #accueil p.lead{
     text-align: justify;
-}
-.px-3 {
-    padding-right: 0 !important;
-    padding-left: 0 !important;
 }
 #accueil .navbar-brand img {
     margin: 0 0 0 -2rem;
@@ -230,29 +229,29 @@ h2{
     transform: translateX(0);
     animation: slideInRight 1s forwards;
 }
-#accueil .accueil-image-one{
+#accueil .accueil-image-one, #accueil .accueil-image-tree{
     margin: 0 0 0 10rem;
-    background-image: url('/images/Accueil/Warriors_3587.jpg');
+}
+#accueil .accueil-image-one{
+    background-image: var(--accueil-img1);
 }
 #accueil .accueil-image-two{
     margin: 0rem 10rem 0 2rem;
-    background-image: url('/images/Accueil/Warriors_3508.png');
+    background-image: var(--accueil-img2);
 }
 #accueil .accueil-image-tree{
-    margin: 0 0 0 10rem;
-    background-image: url('/images/Accueil/Warriors_3620.jpg');
+    background-image: var(--accueil-img3);
 }
-#accueil .accueil-image-one,  #accueil .accueil-image-tree{
+#accueil .accueil-image-one, #accueil .accueil-image-two, #accueil .accueil-image-tree{
     width: 400px;
     height: 400px;
-    background-position: 50%;
     border-radius: 50%;
+}
+#accueil .accueil-image-one, #accueil .accueil-image-tree{
+    background-position: 50%;
 }
 #accueil .accueil-image-two{
-    width: 400px;
-    height: 400px;
     background-position: 20%;
-    border-radius: 50%;
 }
 #accueil .text-body-secondary{
     color: rgba(var(--main-white), 1)!important;
@@ -278,6 +277,9 @@ h2{
     word-break: normal;
     font-family: 'Open Sans';
     font-size: 1.5em;
+    padding: 1rem;
+    background-color: rgba(var(--dark-green-01), 0.25);
+    border-radius: 8px;
 }
  footer p{
     margin: -2rem 0 0 0;
