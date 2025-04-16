@@ -72,7 +72,7 @@
 }
 
 #accueil #parallax .video-container{
-    background-image: url('/images/paysage/paysage_1336.png');
+    background-image: url('/images/paysage/Warriors_3498.png');
     background-repeat: no-repeat;
     background-size: cover;
     transform: translate3d(0, 0, 0);
@@ -191,12 +191,12 @@
 #accueil .image-accueil .image-one {
     animation: slideInRight 2s ease-out;
     position: absolute;
-    margin: 4rem 0 0 46rem;
+    margin: -25rem 0 0 13rem;
     z-index: 1;
     width: 100%;
 }
 #accueil .image-accueil .image-one img {
-    width: 70%;
+    width: 90%;
 }
 #accueil .image-accueil {
     position: relative;
