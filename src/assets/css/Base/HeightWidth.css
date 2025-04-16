@@ -13,10 +13,8 @@
     min-width: 20rem;
 }
 .card-character-container,
-#all-characters-container-card .character-card.card{
-    width: 25vh;
-}
-.card-character-container{
+#all-characters-container-card .character-card.card,
+.card-image img.image-book{
     width: 25vh;
 }
 #all-characters-container-card .character-card.card {
@@ -127,19 +125,76 @@
     height: 43rem;
 }
 .list-all-fictions-globale--container.list-all-fictions-globale--container{
-     width: 30rem;
+    width: 30rem;
 }
 .list-all-fictions-globale--container.three-last-chapters-container{
-    margin: 1rem 0 0 0;
     width: 20rem;
 }
 .summaray-title-text.flex-one.align-items-content-justify-content{
     width: 25rem;
 }
 .quest--global-container {
-     height: 18rem;
+    height: 18rem;
 }
 .quest-container {
     height: 16rem;
     width: 19rem;
+}
+.background-image-quest{
+    height: 16rem;
+}
+.card-img-top.background-image-quest-image-container {
+    height: 10rem;
+}
+.card-body.one-quest {
+    height: 13rem;
+    width: 10rem;
+}
+.card-img-top.background-image-quest-image-container img {
+    width: 75%;
+}
+.quest-button-text {
+    height: 12rem;
+    margin: 1rem 0 0 0;
+}
+.quest-button-text p {
+    height: 9rem;
+}
+.parallax-container {
+    height: 400px;
+}
+.card-image img.image-book{
+    height: 30vh;
+}
+.row.list-quest-card-container{
+    height: 35rem;
+}
+.table.table-borderless{
+    width: 25rem;
+}
+#original-characters-list .card-group {
+    width: 24vh;
+}
+#original-characters-list .border-card-color{   
+    height: 35vh; 
+}
+#original-characters-list .card.individual-character-card{
+    height: 30vh;
+}
+.avatar-gamer{
+    width: 200px;
+    height: 150px;
+}
+#original-characters-list{
+    height: 87vh;
+}
+.clan-detail-layout .card-image img{
+    width: 17vh;
+}
+.fiction-globale-container ul{
+    width: 50vh;
+    height: 90vh;
+}
+.row.top-dashboard .card-body > div{
+    width: 42vh;
 }

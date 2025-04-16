@@ -156,33 +156,13 @@ li.quest-container {
 .quest--global-container {
     flex: 0.25;
 }
-.quest-image-container,
-.background-image-quest-image-container {
+.quest-image-container, .background-image-quest-image-container {
     background-position: 50% 55%;
     vertical-align: top;
 }
 .background-image-quest{
-    height: 16rem;
     background-position: 50% 45%;
 }
-.card-img-top.background-image-quest-image-container {
-    height: 10rem;
-}
-.card-body.one-quest {
-    height: 13rem;
-    width: 10rem;
-}
-.card-img-top.background-image-quest-image-container img {
-    width: 75%;
-}
-.quest-button-text {
-    height: 12rem;
-    margin: 1rem 0 0 0;
-}
-.quest-button-text p {
-    height: 9rem;
-}
-
 .quest-details {
     margin-top: 20px;
 }
@@ -193,7 +173,6 @@ li.quest-container {
 }
 .parallax-container {
     position: relative;
-    height: 400px;
     overflow: hidden;
 }
 .parallax-layer {
@@ -209,22 +188,13 @@ li.quest-container {
 .buttons-container{
     margin: 0.25rem;
 }
-.indivual-caracter-container {
-    width: 110px;
-}
 .card-image img {
     border-radius: 10px;
     transition: transform 0.3s ease;
 }
-.card-image img.image-book{
-    width: 25vh;
-    height: 30vh;
-    border-radius: 20px;
-}
 .card-image img:hover {
     transform: scale(1.05);
 }
-
 .details-infos-characters {
     box-shadow: 0 4px 8px rgba(var(--main-black), 0.1);
     border-radius: 10px;
@@ -242,11 +212,6 @@ li.quest-container {
     font-size: 1.2em;
     line-height: 1.6;
 }
-
-.row.list-quest-card-container{
-    height: 35rem;
-}
-
 .accordion-button.collapsed,
 .accordion-item:first-of-type>.accordion-header .accordion-button,
 .accordion-button:not(.collapsed),
@@ -254,12 +219,8 @@ li.quest-container {
 .accordion-button:focus{
     background-color: rgb(var(--clear-green-02), 0.6);
 }
-.table.table-borderless{
-    width: 25rem;
-}
 #original-characters-list .card-group {
     flex-flow: row wrap;
-    width: 24vh;
 }
 .card-body.user-info-text{
     padding: 0;
@@ -269,7 +230,6 @@ li.quest-container {
 #original-characters-list .border-card-color
 {
     margin: 0.5rem;
-    height: 35vh;
     border-radius: 90% 90% 8px 8px;
     background-position: 50%;
     aspect-ratio: 1;
@@ -277,7 +237,6 @@ li.quest-container {
 }
 #original-characters-list .card.individual-character-card{
     margin: 0.5rem;
-    height: 30vh;
     border-radius: 100% 100% 12px 12px;
     background-position: 50%;
     aspect-ratio: 1;
@@ -290,14 +249,9 @@ li.quest-container {
 .individual-character-card .card-body {
     margin: -0.5rem 0 0 0;
 }
-.avatar-gamer{
-    width: 200px;
-    height: 150px;
-}
 #original-characters-list{
     margin: -1rem 6rem;
     padding-top: 0rem;
-    height: 87vh;
     overflow-y: hidden;
     padding: 2rem 0 0 0;
 }
@@ -308,7 +262,6 @@ li.quest-container {
     padding: 1.5rem;
 }
 .clan-detail-layout .card-image img{
-    width: 150%;
     position: relative;
     top: 5rem;
 }
@@ -319,16 +272,9 @@ li.quest-container {
     border-radius: 20%;
 }
 .fiction-globale-container ul{
-    width: 50vh;
     margin: 0 0 1rem 0;
     overflow-y: auto;
-    height: 90vh;
 }
-.row.top-dashboard .card-body > div{
-    margin: 0 0 0.25rem 0;
-    width: 42vh;
-}
-
 .row.top-dashboard .all-my-oc-card .card-body > div{
     margin: 0 0 0.25rem 0;
     width: 20vh;
