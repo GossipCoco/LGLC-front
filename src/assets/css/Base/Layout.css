@@ -141,9 +141,8 @@
 .row.title-dashboard{
     margin: 0.2rem 0.25rem 0.5rem 0.25rem
 }
-.row.top-dashboard, .row.bottom-dashboard-levele-one{
+.row.top-dashboard{
     margin: 0.5rem 0 0.5rem 0;
-    ;
 }
 .row.top-left-dashboard{
     margin: -0.15rem 0 0 0
