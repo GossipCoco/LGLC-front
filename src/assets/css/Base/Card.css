@@ -177,7 +177,6 @@ li.quest-container {
 }
 .parallax-layer {
     position: absolute;
-    height: 100%;
     top: 0;
     left: 0;
     transition: transform 0.1s ease-out;
@@ -266,7 +265,7 @@ li.quest-container {
     top: 5rem;
 }
 .clan-detail-card > .col-2{
-    margin: 0 2rem;;
+    margin: 0 2rem;
 }
 .card-image.clan-detail > .col-8{
     border-radius: 20%;
@@ -290,9 +289,6 @@ li.quest-container {
 .summaray-title-text p span.text-white .text-white.text-align-justify.poppins-text p{
     font-size: 0.85em;
 }
-.fiction-container .card-body{
-    height: 80vh;
-}
 .my-oc-card .card-body{
     padding: 0;
 }
@@ -300,7 +296,6 @@ li.quest-container {
     margin: 0 2rem 0 1rem;
 }
 .title-container-card{
-    width: 25vh;
     margin: -0.5rem 0 0 0;
 }
 .fiction-summary-card .col-8{

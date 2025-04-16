@@ -7,14 +7,17 @@
 .character-container-global {
     width: 185vh;
 }
+.character-card.card, .list-all-fictions-globale--container.three-last-chapters-container {
+    width: 20rem;    
+}
 .character-card.card {
-    width: 20rem;
     height: 40rem;
     min-width: 20rem;
 }
 .card-character-container,
 #all-characters-container-card .character-card.card,
-.card-image img.image-book{
+.card-image img.image-book,
+.title-container-card{
     width: 25vh;
 }
 #all-characters-container-card .character-card.card {
@@ -31,7 +34,8 @@
 .height-character{
     height: 5rem
 }
-.fiction-globale-container.card.fiction-container {
+.fiction-globale-container.card.fiction-container,
+.card-form-create-character, .fiction-globale-container ul {
     height: 90vh;
 }
 .cat-corner::before
@@ -95,9 +99,6 @@
 .all-clans-cards .card-body {
     height: 35vh;
 }
-.card-form-create-character {
-    height: 90vh;
-}
 .form-first-part-container .col-md-6 {
     height: 10vh;
 }
@@ -126,9 +127,6 @@
 }
 .list-all-fictions-globale--container.list-all-fictions-globale--container{
     width: 30rem;
-}
-.list-all-fictions-globale--container.three-last-chapters-container{
-    width: 20rem;
 }
 .summaray-title-text.flex-one.align-items-content-justify-content{
     width: 25rem;
@@ -193,7 +191,6 @@
 }
 .fiction-globale-container ul{
     width: 50vh;
-    height: 90vh;
 }
 .row.top-dashboard .card-body > div{
     width: 42vh;
@@ -218,4 +215,10 @@
 }
 .my-oc-card .card-body{
     height: 10rem;
+}
+.parallax-layer {
+    height: 100%;
+}
+.fiction-container .card-body{
+    height: 80vh;
 }
