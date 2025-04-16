@@ -29,6 +29,7 @@
         v-bind:NameRole="NameRole"
         v-bind:LevelName="LevelName"
         v-bind:gamer="gamer"
+        v-bind:NbOCs="NbOCs"
       />      
       <LastFiveFiction v-if="!showspinner" />
       <ExtractLastChap v-if="!showspinner" />
@@ -94,6 +95,7 @@ export default {
       NameRole: null,
       LevelName:null,
       Nbmessages: null,
+      NbOCs: null,
       totalWordsByFiction: {}, // Objet pour stocker les totaux par fiction
       nBFictionV2: 0, // Nombre de fictions
       totalWordsV2: 0, // Total de mots de toutes les fictions
@@ -114,8 +116,19 @@ export default {
     this.GetUserById(this.usrId);
     this.CountTotalWordByUserV2(this.usrId);
     this.GetAllCharactersDashboard(this.nav);
+    this.CountNbOriginaleCharacterByUser(this.usrId)
   },
   methods: {
+    CountNbOriginaleCharacterByUser(e){
+      CharacterService.CountNbOriginaleCharacterByUser(e)
+      .then((response) => {
+        console.log(response.data.ob.count)
+        this.NbOCs = response.data.ob.count
+      })
+      .catch((err) => {
+          console.error("erreur", err)
+      });
+    },
     GetAllCharactersDashboard(nav) {
       this.showspinner = true;
       CharacterService.GetAllCharactersDashboard({

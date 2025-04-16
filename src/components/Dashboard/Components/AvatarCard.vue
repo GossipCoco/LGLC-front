@@ -28,6 +28,7 @@
             <p class="display-flex-row"><span class="label-profil poppins-text text-white flex-one">Nb de fictions</span></p>
             <p class="display-flex-row"><span class="label-profil poppins-text text-white flex-one">Nb de mots écrits</span></p>
             <p class="display-flex-row"><span class="label-profil poppins-text text-white flex-one">Vous avez</span></p>
+            <p class="display-flex-row"><span class="label-profil poppins-text text-white flex-one">Vous avez</span></p>
           </div>
           <div class="col-5">
             <p class="display-flex-row"><span>{{ formatDate(Inscription) }}</span> </p>
@@ -35,6 +36,7 @@
             <p class="display-flex-row"><span>{{ nBFiction }}</span>&nbsp;fictions</p>
             <p class="display-flex-row"><span> {{ totalWords }}</span>&nbsp;mots.</p>
             <p class="display-flex-row"><span>{{ totalPoints }}</span>&nbsp; points.</p>
+            <p class="display-flex-row"><span>{{ NbOCs }}</span>&nbsp; personnages.</p>
           </div>
         </div>
       </div>
@@ -60,7 +62,8 @@ export default {
     "roleImage",
     "NameRole",
     "LevelName",
-    "gamer"
+    "gamer",
+    "NbOCs"
   ],
   components: { TitleHeaderDashboard },
   data() {
