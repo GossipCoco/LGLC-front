@@ -79,9 +79,6 @@ th {
     font-size: 2em;
     margin-bottom: 20px;
 }
-.chapter-global-content, .chapter-text-content, .summary-container {
-    height: 70vh;
-}
 .chapter-image-content, .illustration-background {
     margin: 0;
 }

@@ -32,9 +32,6 @@
     transform: scale(1.05);
 }
 /* CARD */
-/* .card-image img{
-    width: 65%;
-} */
 .create-character-form,
 .card-form-create-character .card-body{
     width: 100%;
@@ -56,9 +53,7 @@
 .bottom-dashboard-levele-one .card{
     margin: 1rem auto;
 }
-.chapter-global-content{
-    height: 70vh;
-}
+
 .back-to-fiction-btn-container{
     margin: -1rem 0 0 2rem;
 }

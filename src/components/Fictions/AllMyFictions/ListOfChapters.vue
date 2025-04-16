@@ -1,6 +1,6 @@
 <template>
   <div class="opacity-container display-flex-row">
-    <div class="summary-container overflowY-auto overflowX-hidden">
+    <div class="summary-container height-70-vh overflowY-auto overflowX-hidden">
       <div class="row">
         <div class="col-2"></div>
         <div class="col-2">

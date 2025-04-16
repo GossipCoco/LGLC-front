@@ -57,7 +57,7 @@
     height: auto;
 }
 #accueil {
-    width: 100%;
+    width: 225vh;
     height: 100%;
     overflow-y: auto;
     overflow-x: hidden;
@@ -227,20 +227,26 @@
 }
 #accueil .accueil-image-one{
     margin: 0 0 0 10rem;
-    background-image: url('/images/Accueil/_5b729561-4ede-40d2-8039-7c82b8b47b15.jpeg');
+    background-image: url('/images/Accueil/Warriors_3587.jpg');
 }
 #accueil .accueil-image-two{
     margin: 0rem 10rem 0 2rem;
-    background-image: url('/images/Accueil/_17ff9c3d-444c-44cd-b9fd-559dfd9e87d5.jpg');
+    background-image: url('/images/Accueil/Warriors_3508.png');
 }
 #accueil .accueil-image-tree{
     margin: 0 0 0 10rem;
-    background-image: url('/images/Accueil/Warriors_221.jpg');
+    background-image: url('/images/Accueil/Warriors_3620.jpg');
 }
-#accueil .accueil-image-one, #accueil .accueil-image-two, #accueil .accueil-image-tree{
+#accueil .accueil-image-one,  #accueil .accueil-image-tree{
     width: 400px;
     height: 400px;
     background-position: 50%;
+    border-radius: 50%;
+}
+#accueil .accueil-image-two{
+    width: 400px;
+    height: 400px;
+    background-position: 20%;
     border-radius: 50%;
 }
 #accueil .text-body-secondary{
@@ -258,11 +264,9 @@
 }
 #accueil footer.container{
     background-color: rgba(var(--main-black), 1);
-    min-width: 209vh;
+    min-width: 214vh;
+    margin: 0 0 0 0;
 }
- main#footer-link{
-    height: 70vh;
- }
  #accueil #summary-container p{
     text-align: justify;
     word-wrap: normal;
