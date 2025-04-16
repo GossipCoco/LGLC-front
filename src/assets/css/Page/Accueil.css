@@ -44,6 +44,7 @@
 h2{
     color: rgba(var(--clear-green-01), 1);
     font-weight: 600;
+    text-shadow: rgba(var(--dark-green-01), 1) 2px 0px 10px;
 }
 #accueil .parallax {
     perspective: -5px;

@@ -24,7 +24,7 @@ html, body, #app {
 }
 html,body {
   background-image: var(--background-image);
-  background-position: 100% auto;
+  background-position: 100% 95%;
   background-size: cover;
   background-repeat: no-repeat;
 }
