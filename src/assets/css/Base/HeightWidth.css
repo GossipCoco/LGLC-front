@@ -73,13 +73,13 @@
     height: 87.5vh;
 }
 .clan-detail-card.image-illustration-right.border-card-color{
-    height: 74vh;
+    height: 75vh;
 }
 .character-card.card .card-image {
     height: 25vh;
     width: 23vh;
 }
-.card.card-image-layout.clan-detail-layout.mb-3 {
+.card.card-image-layout.clan-detail-layout.mb-3,.card.card-image-layout.clan-detail-layout.mb-3 .row.g-0 {
     width: 180vh;
 }
 .card.card-image-layout.clan-detail-layout.mb-3 .card-image-layout {

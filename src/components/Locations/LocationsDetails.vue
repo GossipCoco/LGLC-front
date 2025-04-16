@@ -1,7 +1,9 @@
 <template>
   <div class="card card-image-layout clan-detail-layout mb-3 background-color-white display-flex-row">
     <div class="row g-0">
-      <cardImageBackground v-bind:Image=" location.Image"/>
+      <div class="col-4 col-md-4">
+        <cardImageBackground v-bind:Image=" location.Image"/>
+      </div>
       <div class="col-8 col-md-8 display-flex-column flex-one location-clan-card-details">
         <div class="card background-color-main-lineart location-clan-card">
           <CardHeader v-bind:Title="location.Name" />        

@@ -1,6 +1,8 @@
 <template>
   <div class="card card-image-layout clan-detail-layout display-flex-row mb-3">
     <div class="row g-0">
+      <div
+          class="col-4">
       <cardImageBackground v-bind:Image="Image">
         <div
           class="col-2 display-flex-row align-items-content-justify-content"
@@ -11,11 +13,10 @@
             class="height-auto width-100-percent"
             :src="character.Character.Image"
             :alt="character.Characterimage"
-            width="250px"
-            height="350px"
           />
         </div>
       </cardImageBackground>
+      </div>
       <div class="col-8 col-md-8 flex-one background-color-main-lineart display-flex-column location-clan-card-details">
         <CardHeader v-bind:Title="clan.Name">
           <img :src="'/images/clans/' + clan.Symbol"/>
@@ -49,7 +50,7 @@ export default {
   computed: {
     limitedCharacters() {
       // Limite le nombre de personnages à 3
-      return this.clan.Warriors ? this.clan.Warriors.slice(0, 3) : [];
+      return this.clan.Warriors ? this.clan.Warriors.slice(0, 2) : [];
     },
   },
   created() {
