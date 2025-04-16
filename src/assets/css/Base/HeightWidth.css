@@ -97,3 +97,49 @@
 .all-clans-cards .card-body {
     height: 35vh;
 }
+.card-form-create-character {
+    height: 90vh;
+}
+.form-first-part-container .col-md-6 {
+    height: 10vh;
+}
+.bottom-top-dashboard .card {
+    height: 35vh;
+}
+.clan-group .card-body {
+    height: 9rem;
+}
+.row.top-dashboard .card {
+    height: 28rem;
+}
+.row.bottom-dashboard-levele-one .card.gamer-character-card{
+    height: 17rem;
+}
+.row.bottom-dashboard-levele-one .card.random-characters-card{
+    height: 23rem;
+}
+.row.bottom-dashboard-levele-one .card.last-book-container{
+    height: 18rem;
+}
+.row.bottom-dashboard-levele-one .card.all-fictions-card,
+.row.bottom-dashboard-levele-one .card.game-container
+{
+    height: 43rem;
+}
+.list-all-fictions-globale--container.list-all-fictions-globale--container{
+     width: 30rem;
+}
+.list-all-fictions-globale--container.three-last-chapters-container{
+    margin: 1rem 0 0 0;
+    width: 20rem;
+}
+.summaray-title-text.flex-one.align-items-content-justify-content{
+    width: 25rem;
+}
+.quest--global-container {
+     height: 18rem;
+}
+.quest-container {
+    height: 16rem;
+    width: 19rem;
+}
