@@ -24,3 +24,76 @@
     max-width: 25vh;
     height: 32vh;
 }
+.clan-detail-card {
+    width: 80rem;   
+}
+.card-image img {
+    width: 60%;
+}
+.height-character{
+    height: 5rem
+}
+.fiction-globale-container.card.fiction-container {
+    height: 90vh;
+}
+.cat-corner::before
+.dashboard-max-card-container::before,
+.fiction-globale-container::before,
+.character-card.card::before,
+.display-flex-row.card-group.clan-group .card.location-clan-background-width-container::before {
+    width: 10px;
+    height: 10px;
+}
+.character-details {
+    width: 183vh;
+    height: 95vh;
+}
+.character-details.card .card-image img {
+    width: 75%;
+}
+.clan-card {
+    width: 15rem;
+    height: 15rem;
+}
+.card-image-layout {
+    width: 95rem;
+}
+.clan-detail-layout .card-body {
+    height: 69.5vh;
+}
+.clan-detail-layout .card-body.location-clan-body {
+    height: 77vh;
+}
+.location-clan-card-details-body{
+    height: 44vh;
+}
+.border-card-color{
+    height: 87.5vh;
+}
+.clan-detail-card.image-illustration-right.border-card-color{
+    height: 74vh;
+}
+.character-card.card .card-image {
+    height: 25vh;
+    width: 23vh;
+}
+.card.card-image-layout.clan-detail-layout.mb-3 {
+    width: 180vh;
+}
+.card.card-image-layout.clan-detail-layout.mb-3 .card-image-layout {
+    width: 95rem;
+}
+.profil-user-card.card .avatar-container img {
+    width: 30vh;
+    height: 30vh;
+}
+.dashboard-home-max-card-container .avatar-container {
+    width: 5vh;
+    height: 5vh;
+}
+.form-profil-user-card {
+    height: 20vh;
+}
+.all-clans-cards .card-body {
+    height: 35vh;
+}

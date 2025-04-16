@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import '../variables.scss';
 
-
 .character-details.card::before {
     content: var(--cat-corner);
     position: absolute;
@@ -9,7 +8,8 @@
     left: 94%;
     z-index: 99999;
 }
-.character-container-global {
+.character-container-global, .fiction-container .card-body,.character-details,
+.game-container .card-boy > div > div .display-flex-column.align-items-content-justify-content {
     padding: 1rem;
 }
 .character-card.card {
@@ -26,15 +26,8 @@
     overflow: hidden;
 }
 .clan-detail-card {
-    width: 80rem;   
     background-position: 50%;
     margin: 5rem 0 0 0;
-}
-.card-image img {
-    width: 60%;
-}
-.height-character{
-    height: 5rem
 }
 .dashboard-max-card-container, .character-details-chatper.card,.profil-user-card, .admin-dashboard{
     margin: 2rem;
@@ -45,7 +38,6 @@
 }
 .fiction-globale-container.card.fiction-container {
     margin: 1rem 1rem 2rem 1rem;
-    height: 90vh;
 }
 .cat-corner::before
 .dashboard-max-card-container::before,
@@ -53,8 +45,6 @@
 .character-card.card::before,
 .display-flex-row.card-group.clan-group .card.location-clan-background-width-container::before {
     content: var(--second-cat-corner);
-    width: 10px;
-    height: 10px;
     position: relative;
     top: 4rem;
     left: 95%;
@@ -81,19 +71,13 @@
 /* Character Details */
 .character-details {
     margin: 0rem 1rem 0 2rem;
-    width: 183vh;
-    height:95vh;
     background: none;
-    padding: 1rem;
     perspective: 5rem;
 }
 .character-details.card .card-image img {
-    width: 75%;
     overflow: hidden;
 }
 .clan-card {
-    width: 15rem;
-    height: 15rem;
     border-radius: 70% 70% 0 0;
     background-position: 50%;
     border: 6px solid rgba(var(--middle-green-02), 1);
@@ -101,35 +85,18 @@
     margin: 0.25rem 0 0 1rem;
 }
 .card-image-layout {
-    width: 95rem;
     margin: 4rem 0 0 3rem;
 }
-.clan-detail-layout .card-body {
-    height: 69.5vh;
-}
-.clan-detail-layout .card-body.location-clan-body {
-    height: 77vh;
-}
-.location-clan-card-details-body{
-    height: 44vh;
-}
+
 .image-illustration-right{
     border-radius: 20% 0 0 20%;
     border : 1rem solid rgba(var(--clear-green-01), 1);
-}
-.border-card-color{
-    height: 87.5vh;
-}
-.clan-detail-card.image-illustration-right.border-card-color{
-    height: 74vh;
 }
 .clans-location-container {
     margin: 1rem auto;
     padding: 5rem 0 0 8rem;
 }
 .character-card.card .card-image {
-    height: 25vh;
-    width: 23vh;
     margin: 0.75rem 0 0 0;
     border-radius: 100% 100% 0 0;
     border: 6px solid rgba(var(--clear-green-02), 1);
@@ -138,30 +105,18 @@
     font-variant: small-caps;
 }
 .card.card-image-layout.clan-detail-layout.mb-3 {
-    width: 180vh;
     border-radius: 20px 0 0 20px;
     background: none;
 }
 .card.card-image-layout.clan-detail-layout.mb-3 .card-image-layout {
-    width: 95rem;
     margin: 4rem 0 0 3rem;
 }
 /* USER */
-.profil-user-card.card .avatar-container img {
-    width: 30vh;
-    height: 30vh;
-}
 .dashboard-home-max-card-container .avatar-container {
-    width: 5vh;
-    height: 5vh;
     margin-top: -1.5rem;
 }
 .form-profil-user-card {
     margin-top: 3rem;
-    height: 20vh;
-}
-.all-clans-cards .card-body {
-    height: 35vh;
 }
 .character-details .col-md-4 {
     padding-top: 3vh;
@@ -216,9 +171,7 @@
 .my-oc-character-container{
     margin: 0 0.5rem;
 }
-.game-container .card-boy > div > div .display-flex-column.align-items-content-justify-content{
-    padding: 1rem;
-}
+
 .list-all-fictions-globale--container.list-all-fictions-globale--container{
     width: 30rem;
 }
@@ -424,9 +377,7 @@ li.quest-container {
 .character-l1{
     width: 110px;
 }
-.fiction-container .card-body{
-    padding: 1rem;
-}
+
 .summaray-title-text p{
     margin: 0.25rem 0 0.25rem 0;
     line-height: 0.95;
