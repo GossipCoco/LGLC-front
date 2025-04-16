@@ -49,7 +49,7 @@
           </div>
         </div>
         <div class="collapse display-flex-column align-items-content-justify-content " id="collapseExample3">
-          <p class="text-white">Univers LGDC</p>
+          <p class="text-white">LGDC</p>
           <router-link to="/allCharacters" class="link-collapse display-flex-column align-items-content-justify-content ">
             Personnnages
             </router-link>

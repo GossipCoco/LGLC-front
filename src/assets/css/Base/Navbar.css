@@ -10,7 +10,7 @@
   scrollbar-color: rgba(var(--clear-green-02), 1) rgba(var(--dark-green-02), 1);
   scrollbar-width: thin;
   margin: 0.25rem 1rem 1rem 0rem;
-  width: 20vh;
+  width: 15vh;
   height: 98vh;
 }
 .form-control-dark {
@@ -36,13 +36,13 @@
 }
 .logo-container {
   padding: 0;
-  margin: -3rem 0 0 -1rem;
+  margin: -1rem 0 0 -1rem;
 }
 .navbar {
   margin-top: -0.5rem
 }
 .logo-container img {
-  width: 19vh;
+  width: 14vh;
 }
 #navbarCollapse {
   height: 5rem;
@@ -73,7 +73,8 @@
   color: rgba(var(--clear-green-01), 1);
 }
 .menu-left ul {
-  width: 13rem;
+  width: 11vh;
+  padding: 0 0 0 8vh;
 }
 .menu-left ul li {
   margin: 0.5rem 0 0 -7rem
@@ -161,7 +162,9 @@ ul {
   font-family: "Poppins", sans-serif;
   font-size: 0.45em;
   color: rgba(var(--clear-green-02), 1);
-  width: 7rem;
+  width: 6rem;
+  white-space: normal;
+  overflow-wrap: break-word;
 }
 .link-collapse .link-collapse {
   display: flex;

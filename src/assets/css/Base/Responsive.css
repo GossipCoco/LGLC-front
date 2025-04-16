@@ -7,12 +7,7 @@
         overflow-x: hidden;
     }
 }
-@media (min-width:549px) and (max-width:1440px){
-    .burger-menu img{
-        width: 50%;
-    }
-}
-@media (min-width:2560px) {
+@media (min-width:1921px) {
     .dashboard-home-max-card-container.card{
         overflow-y: scroll;
         overflow-x: hidden;

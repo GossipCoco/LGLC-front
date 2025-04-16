@@ -1,5 +1,5 @@
 <template>
-    <div class="card background-lineart border-none">
+    <div class="card welcome-dashboard-container background-lineart border-none">
         <div class="card-body display-flex-row align-items-content-justify-content title-dashboard-container-header">
             <h1 class=" font-variant-small-caps cinzel text-white">Bienvenue sur votre tableau de bord                
                 {{ User }}</h1>

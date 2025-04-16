@@ -5,17 +5,15 @@
     text-align: center;
 }
 .container-fluid, .container-fluid.row  {
-    margin-top: 0rem;
     overflow-y: hidden;
     overflow-x: hidden;
-    width: 100%;    
-}
-#app > .container-fluid{
-    padding:0.5rem;
 }
 .scroll-bar-container{    
     overflow-y: scroll;
     overflow-x: hidden;
+}
+#app > .container-fluid{
+    padding:0.5rem;
 }
 .dashboard-layout-container {
     margin-top: 5rem;
@@ -54,6 +52,10 @@
 }
 .title-dashboard-container-header {
     height: 6rem;
+}
+.welcome-dashboard-container{
+    width: 188vh;
+    margin: 0 0 0 -1rem;
 }
 .title-dashboard-container-header img {
     width: 5%;
@@ -140,7 +142,7 @@
     margin: 0.2rem 0.25rem 0.5rem 0.25rem
 }
 .row.top-dashboard, .row.bottom-dashboard-levele-one{
-    margin: 0.5rem 0 0.5rem 0.75rem;
+    margin: 0.5rem 0 0.5rem 0;
     ;
 }
 .row.top-left-dashboard{

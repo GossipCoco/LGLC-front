@@ -44,7 +44,6 @@
   </div>
 </template>
 <script>
-
 import TitleHeaderDashboard from "../../Components/SpecificComponent/TitleHeaderDashboard.vue";
 export default {
   name: "AvatarCard",
