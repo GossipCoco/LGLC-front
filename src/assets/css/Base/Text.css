@@ -131,8 +131,9 @@ h5.card-title a, .my-oc-character-container p a{
 .title-text-novel p{
   text-align: left;
   text-wrap: wrap;
-  width: 26vh;
+  width: 29vh;
   font-family: "Poppins";
+  text-align: justify;
 }
 .title-text-novel p a{
   font-variant: small-caps;
@@ -143,6 +144,12 @@ h5.card-title a, .my-oc-character-container p a{
   width: 32vh;
   overflow-wrap: break-word;
 }
+.title-text-novel .text-white.text-align-justify.poppins-text p{
+font-size: 0.85em;
+}
 .author-text{
   font-size: 1.25em;
+}
+.summary-title-text span.text-white p{
+  text-align: justify;
 }

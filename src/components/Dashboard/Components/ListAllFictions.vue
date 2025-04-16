@@ -20,7 +20,7 @@
                     {{ fiction.Title }}
                   </router-link> </span
                 ><br />
-                <span class="text-white " v-html="truncateText(fiction.Summary, 100)"></span>
+                <span class="text-white " v-html="truncateText(fiction.Summary, 120)"></span>
               </p>
             </div>
           </div>
@@ -42,7 +42,7 @@ export default {
       nav: {
         current: 0,
         pages: 0,
-        step: 6,
+        step: 4,
       },
     };
   },

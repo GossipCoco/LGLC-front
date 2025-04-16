@@ -8,7 +8,7 @@
             <ImageRondDashboard v-bind:src=" fiction.Image" v-bind:alt="fiction.Image" />
             <div class="title-text-novel flex-one display-flex-column justify-content-left">
               <p><router-link class="poppins-text text-ternary-green font-size-1em" :to="'/fiction/' + fiction.Title">{{ fiction.Title }}</router-link></p>
-              <div v-html="truncateText(fiction.Summary, 40)" class="text-white text-align-justify poppins-text"></div>
+              <div v-html="truncateText(fiction.Summary, 90)" class="text-white text-align-justify poppins-text"></div>
             </div>
           </div>
         </div>        

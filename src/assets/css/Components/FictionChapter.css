@@ -144,6 +144,9 @@ th {
 .rond-image-illustration {
     flex: 0.25
 }
+.list-fictions-dashboard .rond-image-illustration {
+    padding: 1rem 0.25rem 0 0;
+}
 .rond-image-illustration img {
     width: 10vh;
     height: 10vh;
