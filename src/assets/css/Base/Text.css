@@ -11,16 +11,19 @@
   font: 500 2.5rem petite-caps;
 
 }
-.summaray-title-text p a {
-  font: 600 1.25em small-caps;
+.summary-title-text p a {
+  font-weight: 500;
+  font-size:  1.15em;
+  font-variant: small-caps;
+  font-family: 'Poppins';
 }
-.summaray-title-text p a:hover {
+.summary-title-text p a:hover {
   color: rgba(var(--active-hover), 1);
 }
 .summary-text-font p {
   font-size: 0.75em;
 }
-.summaray-title-text p a.last-chapter-text:hover {
+.summary-title-text p a.last-chapter-text:hover {
   color: rgba(var(--active-hover), 1);
 }
 .rating {
@@ -118,7 +121,7 @@ h5.card-title {
 .h5-container a:hover{
   color:rgba(var(--active-hover), 1)
 }
-h5.card-title a, .my-oc-character-container p a,.summaray-title-text p a{
+h5.card-title a, .my-oc-character-container p a{
   font-size: 1em;
 }
 .title-text-novel{
@@ -129,6 +132,7 @@ h5.card-title a, .my-oc-character-container p a,.summaray-title-text p a{
   text-align: left;
   text-wrap: wrap;
   width: 26vh;
+  font-family: "Poppins";
 }
 .title-text-novel p a{
   font-variant: small-caps;

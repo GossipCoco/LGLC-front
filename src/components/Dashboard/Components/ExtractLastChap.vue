@@ -12,16 +12,10 @@
               v-bind:src=" chapter.Image"
               v-bind:alt="chapter.Image"
             />
-          <div class="summaray-title-text flex-one display-flex-column align-items-content-justify-content">
-            <p>
-              <span class="last-chapter-text poppins-text font-size-1-25 font-weight-600 font-variant-small-caps text-ternary-green">{{ chapter.Fiction.Title }}</span>
-            </p>
-            <p>
-              <router-link class="last-chapter-text poppins-text font-size-1-25 font-weight-600 font-variant-small-caps text-white" :to="'/chapter/' + chapter.Title">
-                {{ chapter.Title }}
-              </router-link>
-            </p>
-          </div>
+            <fiction-text
+            v-bind:FictionTitle="chapter.Fiction.Title"
+            v-bind:ChapterTitle="chapter.Title"
+            />
         </div>
       </div>
     </div>
@@ -31,9 +25,12 @@
 import FictionService from "../../../services/FictionService";
 import TitleHeaderDashboard from "../../Components/SpecificComponent/TitleHeaderDashboard.vue";
 import ImageRondDashboard from "../../Components/SpecificComponent/ImageRondDashboard.vue";
+import FictionText from "../ComponentGeneric/FictionText.vue";
 export default {
   name: "ExtractLastChap",
-  components: { TitleHeaderDashboard, ImageRondDashboard },
+  components: { TitleHeaderDashboard, ImageRondDashboard,
+    FictionText
+   },
   data() {
     return {
       usr: this.$store.state.auth.user.usrID,

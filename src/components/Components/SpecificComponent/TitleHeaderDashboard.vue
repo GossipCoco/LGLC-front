@@ -11,12 +11,12 @@
     </div>
     <div class="width-100-percent" v-else-if="type === 'fictions' ">
       <div class="row">
-        <div class="col-7">
+        <div class="col-6">
           <h4 class="text-white" >
           {{ title }}          
           </h4>
         </div>
-        <div class="col-5">
+        <div class="col-6">
           <router-link v-if="nameRoute"
             type="button"
             class="btn btn-primary text-white"

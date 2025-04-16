@@ -13,14 +13,14 @@
                 v-bind:src="fiction.Image"
                 v-bind:alt="fiction.Image"
               />
-            <div class="summaray-title-text text-ternary-green flex-one align-items-content-justify-content">
+            <div class="summary-title-text text-ternary-green">
               <p>
                 <span class="link-to-fiction-text">
                   <router-link class="poppins-text text-ternary-green" :to="'/fiction/' + fiction.Title">
                     {{ fiction.Title }}
                   </router-link> </span
                 ><br />
-                <span class="text-white " v-html="truncateText(fiction.Summary, 50)"></span>
+                <span class="text-white " v-html="truncateText(fiction.Summary, 100)"></span>
               </p>
             </div>
           </div>
