@@ -222,3 +222,19 @@
 .fiction-container .card-body{
     height: 80vh;
 }
+.rating {
+    width: 16vh;
+    height: 5vh;
+}.rating svg {
+    width: 1vh;
+    height: 3vh
+}
+.character-illustration-container{
+    width: 100px;
+}
+.title-text-novel p{
+    width: 29vh;
+}
+.title-text-novel p a{
+    width: 26vh;
+}

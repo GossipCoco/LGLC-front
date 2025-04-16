@@ -27,8 +27,6 @@
   color: rgba(var(--active-hover), 1);
 }
 .rating {
-  width: 16vh;
-  height: 5vh;
   margin: -2rem 0 0 2rem;
 }
 .rating svg {
@@ -36,8 +34,6 @@
 }
 .rating svg {
   cursor: pointer;
-  width: 1vh;
-  height: 3vh
 }
 .rating svg.checked {
   fill: rgba(var(--active-hover), 1);
@@ -69,14 +65,13 @@
   margin: 0 0 0 1rem;
 }
 .informations-gamer-container {
-  height: 45vh;
   overflow-y: scroll;
 }
 h1.card-title {
   font-size: 2.75em;
 }
 .star {
-  fill: #ccc;
+  fill: rgba(var(--ternary-green), 1);
   /* Couleur des étoiles non sélectionnées */
   cursor: pointer;
   /* Indique que les étoiles sont cliquables */
@@ -92,7 +87,6 @@ h1.card-title {
   color: rgba(var(--main-white), 1);
    font-family: 'Poppins';
 }
-
 .user-info-text p span.label-profil {
   font-size: 0.95em;
   font-weight: 400;
@@ -101,9 +95,7 @@ h1.card-title {
 }
 .character-illustration-container{
   border-radius: 100%;
-  height: 6rem;
   background-position: 50%;
-  width: 100px;
   border: 4px solid rgba(var(--clear-green-02), 1);
 }
 h5.card-title {
@@ -111,9 +103,6 @@ h5.card-title {
 }
 .card-text.summary-text-font p{
   line-height: 1.2;
-}
-.summmary-book-height-dashboard{
-  height: 11rem;
 }
 .h5-container a{
   font-weight: 800;
@@ -131,7 +120,6 @@ h5.card-title a, .my-oc-character-container p a{
 .title-text-novel p{
   text-align: left;
   text-wrap: wrap;
-  width: 29vh;
   font-family: "Poppins";
   text-align: justify;
 }
@@ -140,7 +128,6 @@ h5.card-title a, .my-oc-character-container p a{
   font-weight: 600;
   font-size: 1.25em;
   line-height: 70%;
-  width: 26vh;
   overflow-wrap: break-word;
 }
 .title-text-novel .text-white.text-align-justify.poppins-text p{
