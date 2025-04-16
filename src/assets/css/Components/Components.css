@@ -7,6 +7,9 @@
 .btn-validate-container{
     margin: 3rem 0 0 0;
 }
+ .flex-one .name-characatrer-link .btn {
+    margin : 0rem 0 0 0;
+}
 .flex-one .btn {
     margin : -2rem 0 0 0;
 }
