@@ -1,8 +1,12 @@
 <template>
-  <div class="card-body user-inbformation-conter>">
+  <div class="card-body user-information-container">
     <div class="padding-2-rem white-text">
       <div class="display-flex-row">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 col-xxl-2">
         <ImageRondDashboard v-bind:src="'/images/Avatars/' + usrInformation.Avatar" v-bind:alt="usrInformation.Avatar" v-bind:classe="'card-img-top mini-rond-avatar-image'"/>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 col-xxl-10">
         <div class="display-flex-column">
           <p class="roboto roboto">
             {{ usrInformation.LastName }} {{ usrInformation.FirstName }} -
@@ -11,8 +15,10 @@
           <p class="roboto roboto">{{ usrInformation.Description }}</p>
           <p class="roboto roboto">
             {{ usrInformation.Biography }} 
-            <!-- <br />  {{ usrInformation }} -->
+            
           </p>
+        </div>
+        </div>
         </div>
       </div>
     </div>

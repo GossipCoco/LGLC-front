@@ -164,6 +164,7 @@ audio{
 }
 .all-characters-by-user-container .card{
     height: 33vh;
+    background: var(--lineart-other00);
 }
 .all-characters-by-user-container, .book-containe{
     height: 75vh;

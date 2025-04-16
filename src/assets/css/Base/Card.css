@@ -336,6 +336,9 @@ li.quest-container {
     font-size: 1.5em;
     margin-bottom: 0.5em;
 }
+.all-characters-by-user-container .card-title, .information-character-container p{
+    color: rgba(var(--main-white), 1)
+}
 .card-text {
     font-family: 'Roboto', sans-serif;
     font-size: 1.2em;
