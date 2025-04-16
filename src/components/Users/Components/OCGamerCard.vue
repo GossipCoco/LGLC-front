@@ -2,7 +2,7 @@
   <hr />
   <h1 class="text-white">Fiche personnages</h1>
   <hr />
-  <div class="all-characters-by-user-container overflowY-hidden overflowX-hidden">
+  <div class="all-characters-by-user-container overflowY-scroll overflowX-hidden">
     <div class="row row-cols-1 row-cols-md-3 g-4">
       <div class="col-3" v-for="(gamer, index) in gamers" :key="index">
         <div class="col-11">

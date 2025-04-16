@@ -109,9 +109,7 @@
 .one-book-container-wrapper .fiction-container .card-body{
     height: 60vh;
 }
-.book-container{
-    height: 75vh;
-}
+
 .illustration-arc-container img{
     width: 100%;
 }
@@ -160,8 +158,8 @@ audio{
     border-radius: 100%;
     background-position: 50%;   
     vertical-align: bottom;
-    width: 100px;
-    height: 95px;
+    width: 12vh;
+    height: 12vh;
 }
 .character-details-router a {
     font-size: 0.85em;
@@ -169,10 +167,8 @@ audio{
 .all-characters-by-user-container .card{
     height: 33vh;
 }
-.all-characters-by-user-container{
+.all-characters-by-user-container, .book-containe{
     height: 75vh;
-    overflow-y: scroll;
-    overflow-x: hidden;
 }
 .image-width{
     width: 45%;
@@ -183,7 +179,7 @@ audio{
 }
 .all-my-characters-container{
     height: 110vh;
-     padding: 3rem;
+    padding: 3rem;
     margin: 0 auto;
 }
 .card.individual-character-card{
