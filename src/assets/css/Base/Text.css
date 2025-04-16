@@ -140,8 +140,7 @@ h5.card-title a, .my-oc-character-container p a{
   font-weight: 600;
   font-size: 1.25em;
   line-height: 70%;
-  display: block;
-  width: 32vh;
+  width: 26vh;
   overflow-wrap: break-word;
 }
 .title-text-novel .text-white.text-align-justify.poppins-text p{

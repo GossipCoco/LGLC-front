@@ -17,6 +17,9 @@
     display: flex;
     flex: 1;
 }
+.display-block{
+    display: block;
+}
 /* Alignement */
 .align-items-content-justify-content{
     align-items: center;

@@ -34,6 +34,7 @@
 }
 .quest-button-text .btn.btn-primary {
     width: 10rem;
+    margin: 0;
 }
 .btn-primary.file-character-btn {
     transition: background-color 0.3s ease, transform 0.3s ease;

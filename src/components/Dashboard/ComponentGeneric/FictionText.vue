@@ -6,7 +6,7 @@
       <span
         class="last-chapter-text poppins-text font-size-1-25 font-weight-600 font-variant-small-caps text-ternary-green"
       >
-        {{ FictionTitle }}
+      <router-link class="poppins-text text-ternary-green font-size-1em" :to="'/fiction/' + FictionTitle">{{ FictionTitle }}</router-link>
       </span>
     </p>
     <p>
