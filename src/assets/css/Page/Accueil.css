@@ -41,6 +41,10 @@
         opacity: 1;
     }
 }
+h2{
+    color: rgba(var(--clear-green-01), 1);
+    font-weight: 600;
+}
 #accueil .parallax {
     perspective: -5px;
     overflow-x: hidden;

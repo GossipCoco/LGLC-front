@@ -2,23 +2,23 @@
     <div class="row">
         <div id="rever-container" class="col-4 col-image-rond .display-flex-row  align-items-content-justify-content">
             <div class="image-rond">
-                <img src="/images/Accueil/OIG496.png"/>
+                <img src="/images/Accueil/OIG497.png"/>
             </div>
-            <h2 class="fw-normal">Rêvez</h2>
+            <h2>Rêvez</h2>
             <p>Imaginez vos propres aventures de l'univers LGDC</p>
         </div>
         <div id="jouer-container" class="col-4 col-image-rond .display-flex-row  align-items-content-justify-content">
             <div class="image-rond">
                 <img src="/images/Accueil/bluestar.png" />
             </div>
-            <h2 class="fw-normal">Jouez</h2>
+            <h2>Jouez</h2>
             <p>Jeux sur l'univers LGDC et même des quizz</p>
         </div>
         <div id="creer-container" class="col-4 col-image-rond .display-flex-row  align-items-content-justify-content">
             <div class="image-rond">
                 <img src="/images/Accueil/OIG210.png" />
             </div>
-            <h2 class="fw-normal">Créez</h2>
+            <h2>Créez</h2>
             <p>Imaginez vos propres chats guerriers</p>
         </div>
     </div>
