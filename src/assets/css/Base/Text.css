@@ -155,3 +155,6 @@ font-size: 0.85em;
 .mini-rond-messages p{
   color: rgba(var(--main-white), 1)
 }
+.last-chapter-text-link{
+  font-size: .9em;
+}

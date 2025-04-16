@@ -304,3 +304,10 @@ li.quest-container {
 .height-all-fictions-container .col{
     margin: 0.25rem 0;
 }
+.location-clan-card-details{
+    border-radius: 8px 8px 8px 0;
+}
+.last-chapter-card.card-body{
+    height: 70vh;
+    margin: -1rem 0 0 0;
+} 
