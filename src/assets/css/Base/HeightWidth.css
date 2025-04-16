@@ -238,3 +238,12 @@
 .title-text-novel p a{
     width: 26vh;
 }
+.summmary-book-height-dashboard{
+  height: 11rem;
+}
+.character-illustration-container{
+    height: 6rem;
+}
+.informations-gamer-container {
+    height: 45vh;
+}
