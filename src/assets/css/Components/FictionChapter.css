@@ -126,7 +126,7 @@ th {
     padding: 1rem;
 }
 .summary-container {
-    padding: 0 1rem;
+    padding: 4rem 1rem 0 0;
     width: 100rem;
     overflow: hidden;
 }

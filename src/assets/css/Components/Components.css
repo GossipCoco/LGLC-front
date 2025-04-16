@@ -10,6 +10,15 @@
 .flex-one .btn {
     margin : -2rem 0 0 0;
 }
+.flex-one .middle-fiction-card .btn {
+    margin : 2rem 0 0 0;
+}
+.back-to-all-fictions-container .flex-one .btn {
+    margin : 0.25rem 0 0 0;
+}
+.fiction-globale-container .summary-container .flex-one .btn {
+    margin : 0rem 0 0 0;
+}
 .btn-primary {
     background-color: rgba(var(--middle-green-01), 1);
     border: 1px solid rgba(var(--middle-green-01), 1);
@@ -116,8 +125,8 @@
     border-radius: 20px;
 }
 .user-info-text img{
-    width: 55%;
-    border: 4px solid rgba(var(--active-hover), 1);
+    width: 14vh; 
+    border: 8px solid rgba(var(--active-hover), 1);
     border-radius: 100%;
 }
 .card-body.user-info-text .row{
@@ -257,7 +266,19 @@ audio{
     overflow: hidden;
     cursor: pointer;
     padding: 1rem;
-  }  
+  }
+  .profil-user-card .avatar-container {
+    position: relative;
+    width: 10vh;
+    height: 80vh;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 1rem;
+  }
+  .profil-user-card .card-body{
+    margin: -10rem 0 0 0;
+  }
   .avatar-wrapper img {
     width: 10vh;
     height: 10vh;

@@ -159,15 +159,9 @@
     margin: 4rem 0 0 3rem;
 }
 /* USER */
-
-.avatar-container,
-.avatar-container img {
-    width: 100px;
-    height: 100px;
-}
 .profil-user-card.card .avatar-container img {
-    width: 200px;
-    height: 250px;
+    width: 30vh;
+    height: 30vh;
 }
 .dashboard-home-max-card-container .avatar-container {
     width: 5vh;

@@ -26,9 +26,8 @@
       <div class="row">
         <div class="col-12">
           <div class="display-flex-column flex-one">
-            <div
-              class="character-chapters display-flex-column flex-one fiction-container overflowY-X-hidden background-summary-global-container"
-            >
+            <div class="character-chapters display-flex-column flex-one fiction-container
+              overflowY-X-hidden background-summary-global-container">
               <div class="display-flex-row character-chapters-container">
                 <div v-if="nbIllus > 0">
                   <div

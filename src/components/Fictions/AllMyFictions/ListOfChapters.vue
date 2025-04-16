@@ -8,10 +8,11 @@
             v-bind:id="IdFiction"
             v-bind:service="'UploadFictionBackgroundIllustration'"
             v-bind:css="'mb-3'"
+            v-if="AuthorId === usrCurrent"
           />
         </div>
         <div class="col-3">
-          <EditSummary v-bind:FictionId="IdFiction" v-bind:Summary="Summary" />
+          <EditSummary v-bind:FictionId="IdFiction" v-bind:Summary="Summary" v-if="AuthorId === usrCurrent"/>
         </div>
         <div class="col-1"></div>
         <div class="col-4">
