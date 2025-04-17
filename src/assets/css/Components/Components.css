@@ -50,16 +50,7 @@
 /* CARD */
 .create-character-form,
 .card-form-create-character .card-body{
-    width: 100%;
-    height: 77vh;
     padding: 1rem;
-}
-.create-character-form .text-area-container{
-    height: 30rem;
-}
-.create-character-form > div:nth-child(2),
-.bottom-dashboard-levele-one .card{
-    height: 40vh;
 }
 .one-fiction-container, .mini-rond-messages,
 .all-fictions-container-global .search-bar-component .col-1{
@@ -71,12 +62,8 @@
 .bottom-dashboard-levele-one .card{
     margin: 1rem auto;
 }
-
 .back-to-fiction-btn-container{
     margin: -1rem 0 0 2rem;
-}
-.logo img{
-    width: 55%;
 }
 .logo-wrapper-contain .logo{
     flex: 0.25
@@ -94,45 +81,26 @@
     margin: -1rem 0 0 0;
 }
 .row.list-fiction-card-container{
-    height: 38rem;
     padding: 1rem;
 }
 #dashboard .row.top-dashboard .card-global{
     margin: 0 auto;
 }
 .h5-container{
-    height: 9vh;
     font-size: 0.65em;
     font-weight: 800;
-    width: 15.5rem;
     margin: 0.15rem 0 -0.5rem -1rem;
-}
-.left-fiction-summary-container{
-    width: 20rem;
 }
 .left-fiction-summary-container .all-characters-of-fiction{
     flex-wrap: wrap;
 }
-.dashboard-max-card-container.card-height.fiction-container .card-body{
-    height: 80vh;
-}
 .one-book-container-wrapper{
     margin: 2rem 0 0 5rem;
 }
-.one-book-container-wrapper .fiction-container .card-body{
-    height: 60vh;
-}
-
-.illustration-arc-container img{
-    width: 100%;
-}
 .image-book{
-    width: 25vh;
-    height: 30vh;
     border-radius: 20px;
 }
 .user-info-text img{
-    width: 14vh; 
     border: 8px solid rgba(var(--active-hover), 1);
     border-radius: 100%;
 }
@@ -141,53 +109,31 @@
 }
 .image-fiction-container-background{
     padding: 1rem 0 0.5rem 0;
-    height: 15vh;
     background-position: 50%;
     border-radius: 12px 0 0 12px;
 }
 .fiction-summary-card{
-    width: 44vh;
-    height: 15vh;
     padding: 0 0.5rem 0 0.75rem;
     border-radius: 8px
 }
 .height-all-fictions-container{
-    height: 70vh;
     margin: -1rem 0 -1rem 0;
 }
 .mini-rond-messages{
-    height: 2rem;
-    width: 2rem;
     border-radius: 100%;
     margin: 0 0 0 -1rem;
     z-index: 99;
-}
-.game-container img{
-    width: 6vh;
-}
-audio{
-    width: 14rem;
 }
 .rond-character-background{
     border-radius: 100%;
     background-position: 50%;   
     vertical-align: bottom;
-    width: 12vh;
-    height: 12vh;
 }
 .character-details-router a {
     font-size: 0.85em;
 }
 .all-characters-by-user-container .card{
-    height: 33vh;
     background: var(--lineart-other00);
-}
-.all-characters-by-user-container, .book-containe{
-    height: 75vh;
-}
-.image-width{
-    width: 45%;
-    height: 45%;
 }
 .list-all-characters-container{
     padding: 0rem 1rem 1rem 1rem;
@@ -196,9 +142,6 @@ audio{
     height: 110vh;
     padding: 3rem;
     margin: 0 auto;
-}
-.card.individual-character-card{
-    height: 45vh;
 }
 .original-character-contain.card-image{
     background-position: 50%;

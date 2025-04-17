@@ -307,3 +307,76 @@
     width: 100%;
     height: 77vh;
 }
+.create-character-form .text-area-container{
+    height: 30rem;
+}
+.create-character-form > div:nth-child(2),
+.bottom-dashboard-levele-one .card{
+    height: 40vh;
+}
+.logo img{
+    width: 55%;
+}
+.row.list-fiction-card-container{
+    height: 38rem;
+}
+.h5-container{
+    height: 9vh;
+    width: 15.5rem;
+}
+.left-fiction-summary-container{
+    width: 20rem;
+}
+.dashboard-max-card-container.card-height.fiction-container .card-body{
+    height: 80vh;
+}
+.one-book-container-wrapper .fiction-container .card-body{
+    height: 60vh;
+}
+.illustration-arc-container img{
+    width: 100%;
+}
+.image-book{
+    width: 25vh;
+    height: 30vh;
+}
+.user-info-text img{
+    width: 14vh; 
+}
+.image-fiction-container-background{
+    height: 15vh;
+}
+.fiction-summary-card{
+    width: 44vh;
+    height: 15vh;
+}
+.height-all-fictions-container{
+    height: 70vh;
+}
+.mini-rond-messages{
+    height: 2rem;
+    width: 2rem;
+}
+.game-container img{
+    width: 6vh;
+}
+audio{
+    width: 14rem;
+}
+.rond-character-background{
+    width: 12vh;
+    height: 12vh;
+}
+.all-characters-by-user-container .card{
+    height: 33vh;
+}
+.all-characters-by-user-container, .book-containe{
+    height: 75vh;
+}
+.image-width{
+    width: 45%;
+    height: 45%;
+}
+.card.individual-character-card{
+    height: 45vh;
+}
