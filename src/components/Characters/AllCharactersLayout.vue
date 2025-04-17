@@ -6,7 +6,7 @@
       </div>
       <InputName
       class="input-name-margin"
-        v-bind:col="'col-xxl-3 col-xl-3 col-lg-12 col-md-12 col-sm-12 col-xs-12'"
+        v-bind:col="'col-xxl-4 col-xl-4 col-lg-12 col-md-12 col-sm-12 col-xs-12'"
         v-bind:forId="'inputName'"
         v-bind:label="'Nom du personnage'"
         v-bind:getNameData="'getCurrentName'"
@@ -21,7 +21,7 @@
         @getclans="getclans"
       />
       <GenericSelect
-        v-bind:col="'col-xxl-3 col-xl-3 col-lg-12 col-md-12 col-sm-12 col-xs-12'"
+        v-bind:col="'col-xxl-2 col-xl-2 col-lg-12 col-md-12 col-sm-12 col-xs-12'"
         v-bind:For="'SearchGrade'"
         v-bind:label="'Grade'"
         v-bind:formdata="'getgrade'"
