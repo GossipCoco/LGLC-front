@@ -54,8 +54,8 @@
     width: 75%;
 }
 .clan-card {
-    width: 15rem;
-    height: 15rem;
+    width: 20vh;
+    height: 24vh;
 }
 .card-image-layout {
     width: 95rem;
@@ -364,7 +364,8 @@ audio{
     height: 45vh;
 }
 .card.location-clan-background-width-container{
-    width: 17rem;
+    width: 24vh;
+    height: 31vh;
 }
 .mini-rond-avatar-image{
     width: 70px;
@@ -391,8 +392,8 @@ audio{
     height: 40px;
 }
 .location-clan-background-width-container .btn.btn-primary{
-  width: 30vh;
-  max-width: 30vh;
+    width: 30vh;
+    max-width: 22vh;
 }
 .character-list-wrapper .card-body{
     height: 5rem;

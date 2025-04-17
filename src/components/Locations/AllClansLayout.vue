@@ -11,14 +11,14 @@
           ></div>
           <div class="card-header display-flex-row align-items-content-justify-content">
             <div class="display-flex align-items-content-justify-content">
-              <div class="d-grid gap-2 col-8 mx-auto">
+              
                 <router-link
                   type="button"
                   class="btn btn-primary"
                   :to="'/clan/' + clan.Id"
                   >{{ clan.Name }}</router-link
                 >
-              </div>
+              
             </div>
           </div>
         </div>

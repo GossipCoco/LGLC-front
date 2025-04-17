@@ -246,7 +246,7 @@
     display: none; /* Cache l'input file */
 }
 .location-clan-background-width-container .btn.btn-primary{
-    margin: 0 0 0 6.5rem;
+    margin: 0;
 }
 .fiction-summary-card p{
     margin: 0 0 0.25rem 0;
