@@ -20,7 +20,6 @@
 }
 .global-container {
     margin-top: 3rem;
-    height: 98vh;
 }
 .container-fluid>.row>.col-10.col-sm-10.col-md-10.col-lg-10.col-xl-10.col-xxl-10 {
     margin: 0;
@@ -29,7 +28,6 @@
     background-color: rgba(var(--main-white), 0);
 }
 .profil-user-card {
-    height: 85vh;
     padding: 10rem 0 0 0;
 }
 .avatar-container {
@@ -154,7 +152,7 @@
     margin: 0 0 1rem 0.15rem;
 }
 .card.border-none.background-lineart.fiction-card.random-characters-card.padding-0-rem.margin-0-rem{
-    margin: 1rem 0 0 1rem;
+    margin: 0 0.5rem 0 1.25rem;
 }
 .margin-bottom-1-rem{
     margin: 0 0 1rem 0;

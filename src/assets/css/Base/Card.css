@@ -138,8 +138,7 @@
     margin: 1rem;
 }
 .row.bottom-dashboard-levele-one .card.last-book-container{
-
-    margin: 0rem 0.5rem 0 0.2rem;
+    margin: 0rem 0.5rem;
 }
 .random-characters-card .card-body{
     flex-wrap: wrap;

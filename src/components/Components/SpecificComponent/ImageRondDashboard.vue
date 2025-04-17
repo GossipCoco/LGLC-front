@@ -1,5 +1,4 @@
 <template>
-
   <div class="avatar-container" v-if="edit === true">
     <div
       class="avatar-wrapper"
@@ -8,14 +7,13 @@
       @click="triggerFileInput"
     >
       <!-- Avatar actuel -->
-      <img v-if="!showspinner"   :src="src" :alt="alt" :class="'display-flex-column;' + classe" />
+      <img v-if="!showspinner"  loading="lazy"  :src="src" :alt="alt" :class="'display-flex-column;' + classe" />
 
       <!-- Icône "+" affiché au survol -->
       <div v-if="showEditIcon" class="edit-overlay">
         <i class="fa fa-plus"></i>
       </div>
     </div>
-
     <!-- Input file masqué -->
     <input
       type="file"

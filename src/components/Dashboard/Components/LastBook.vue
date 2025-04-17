@@ -15,7 +15,7 @@
           {{ lastBook.Title }}</router-link>
         </h4>
         <div class="summary-book-dashboard display-flex-row align-items-content-justify-content">
-          <img :src="lastBook.Image" width="20%" />
+          <img :src="lastBook.Image" width="20%"  loading="lazy" />
           <div class="text-white text-align-justify overflowY-scroll summmary-book-height-dashboard poppins-text text-white" v-html="lastBook.Summary"></div>
         </div>
       </div>

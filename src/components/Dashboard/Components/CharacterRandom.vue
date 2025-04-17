@@ -4,7 +4,7 @@
     <div class="card border-none background-lineart fiction-card random-characters-card padding-0-rem margin-0-rem">
       <TitleHeaderDashboard v-bind:title="'Personnages aléatoires'" v-bind:type="'myCharacters'"/>
       <div class="card-body display-flex-row align-items-content-justify-content">
-         <div class="display-flex-row width-10-rem margin-bottom-1-rem" 
+         <div class="display-flex-row align-items-content-justify-content width-10-rem margin-bottom-1-rem" 
               v-for="character in randomCharacters"
               :key="character.Id"
             >
@@ -16,7 +16,7 @@
                     backgroundImage: 'url(' + character.Clan.Image + ')',
                   }"
                 >
-                  <img class="height-auto width-100-percent" :src="character.Image" :alt="character.Image"/>
+                  <img class="height-auto width-100-percent" loading="lazy" :src="character.Image" :alt="character.Image"/>
                 </div>
               </router-link>
             </div>

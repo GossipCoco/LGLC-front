@@ -4,7 +4,7 @@
       <div class="image_user_grade_level">
         <div clas="display-flex-column">
           <p class="text-white poppins-text">Rôle : {{ NameRole }}</p>
-          <img :src="'/images/Levels/' + Image" :alt="Image" />
+          <img :src="'/images/Levels/' + Image" :alt="Image" loading="lazy"/>
         </div>
       </div>
     </div>
@@ -12,7 +12,7 @@
       <div class="image_user_grade_level">
         <div clas="display-flex-column">
           <p class="text-white poppins-text">Niveau {{ LevelName }}</p>
-          <img :src="'/images/Levels/' + roleImage" :alt="roleImage" />
+          <img :src="'/images/Levels/' + roleImage" :alt="roleImage" loading="lazy"/>
         </div>
       </div>
     </div>
