@@ -380,3 +380,10 @@ audio{
 .card.individual-character-card{
     height: 45vh;
 }
+.card.location-clan-background-width-container{
+    width: 17rem;
+}
+.mini-rond-avatar-image{
+    width: 70px;
+    height: 70px;
+}
