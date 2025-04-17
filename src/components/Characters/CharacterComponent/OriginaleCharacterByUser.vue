@@ -125,7 +125,6 @@ export default {
         {
           this.nav.step = 8
         }
-
       CharacterService.GetOriginaleCharacterByUser(user, nav)
         .then((response) => {
           this.allMyCharacters = response.data.ob;

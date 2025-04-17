@@ -89,7 +89,6 @@
     border-radius: 20px;
     overflow: hidden;
     position: relative;
-    width: 183vh;
 }
 .opacity-container{
     background-color: rgba(var(--dark-green-01), 0.75);

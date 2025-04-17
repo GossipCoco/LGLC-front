@@ -429,3 +429,9 @@ audio{
 .card-form-create-character .card-header{
     width: 185vh;
 }
+#original-character-global-container .flex-one .btn {
+    height: 7vh;
+}
+.illustration-background .background-fiction-contain{    
+    width: 183vh;
+}
