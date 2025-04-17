@@ -9,6 +9,7 @@
           <CardHeader v-bind:Title="location.Name" />        
         <div class="card-body location-clan-body text-white background-color-main-lineart details-infos-characters poppins-text text-white">         
           <div class="card-text text-align-justify">
+            <router-link to="/AllLocationsLayout" class="btn btn-primary">Retour à la liste des lieux</router-link>
             <div class="text-align-justify"  v-html="location.Description"></div>
           </div>
         </div>

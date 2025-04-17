@@ -120,10 +120,10 @@ export default {
     },
     GetOriginaleCharacterByUser(user, nav) {
       if(window.innerWidth >= this.width){
-          this.nav.step = 14
+          this.nav.step = 6
         }else if(window.innerWidth < this.width)
         {
-          this.nav.step = 14
+          this.nav.step = 8
         }
 
       CharacterService.GetOriginaleCharacterByUser(user, nav)

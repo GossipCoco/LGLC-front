@@ -4,7 +4,7 @@
       <div
           class="col-4">
       <cardImageBackground v-bind:Image="Image">
-        <div
+        <!-- <div
           class="col-2 display-flex-row align-items-content-justify-content"
           v-for="(character, index) in limitedCharacters"
           :key="index"
@@ -14,15 +14,19 @@
             :src="character.Character.Image"
             :alt="character.Characterimage"
           />
-        </div>
+         
+        </div> -->
       </cardImageBackground>
       </div>
       <div class="col-8 col-md-8 flex-one background-color-main-lineart display-flex-column location-clan-card-details">
         <CardHeader v-bind:Title="clan.Name">
-          <img :src="'/images/clans/' + clan.Symbol"/>
+          <div class="display-flex-row">
+            <img :src="'/images/clans/' + clan.Symbol"/>            
+          </div>
         </CardHeader>
         <div class="card-body text-white background-color-main-lineart details-infos-characters poppins-text text-white">
           <div class="card-text text-align-justify">
+            <router-link to="/AllClansLayout" class="btn btn-primary">Retour à la liste des clans</router-link>
             <div class="text-align-justify poppins-text" v-html="clan.Description"></div>
             <CharactersListe v-bind:characters="clan.Warriors" />
           </div>
@@ -64,6 +68,7 @@ export default {
       ClanService.getClanByName(this.url)
         .then((response) => {
           this.clan = response.data.ob;
+          console.log(response.data.ob.Warriors)
           this.Image = response.data.ob.Image;
         })
         .catch((e) => {

@@ -2,10 +2,12 @@
   <div class="display-flex-row flex-one align-items-content-justify-content all-characters-list-containers">
     <div class="row">
       <div class="col-2" v-for="(character, index) in characters" :key="index">
+        <div v-if="character.Character">
         <img
           class="height-auto width-100-percent"
           :src="character.Character.Image"
           :alt="image"
+          loading="lazy"
         />
         <router-link
           :to="'/characterDetails/' + character.Character.CurrentName"
@@ -14,6 +16,7 @@
         >
           {{ character.Character.CurrentName }}
         </router-link>
+        </div>
       </div>
     </div>
   </div>
@@ -22,5 +25,10 @@
 export default {
   name: "CharactersList",
   props: ["characters"],
+  data(){
+    return {
+      allCharacters: this.characters
+    }
+  }
 };
 </script>
