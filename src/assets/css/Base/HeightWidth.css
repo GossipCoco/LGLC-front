@@ -3,7 +3,8 @@
 .global-container {
     height: 98vh;
 }
-.game{
+.game, .clan-detail-card.image-illustration-right.border-card-color,
+.all-characters-by-user-container, .book-containe{
     height: 75vh;
 }
 .character-container-global {
@@ -71,9 +72,6 @@
 .border-card-color{
     height: 87.5vh;
 }
-.clan-detail-card.image-illustration-right.border-card-color{
-    height: 75vh;
-}
 .character-card.card .card-image {
     height: 25vh;
     width: 23vh;
@@ -94,26 +92,22 @@
 .form-profil-user-card {
     height: 20vh;
 }
-.all-clans-cards .card-body {
+.all-clans-cards .card-body, .bottom-top-dashboard .card,
+#original-characters-list .border-card-color {
     height: 35vh;
 }
-.form-first-part-container .col-md-6 {
+.form-first-part-container .col-md-6,.character-illustration-container,
+.avatar-container, .avatar-wrapper img, .avatar-wrapper
+ {
     height: 10vh;
 }
-.bottom-top-dashboard .card {
-    height: 35vh;
-}
-.clan-group .card-body {
-    height: 9rem;
-}
+.one-book-container-wrapper .fiction-container .card-body, #book-container .fiction-container .card-body,
+.illustration-arc-container, .one-book-container-wrapper .fiction-container .card-body,
 .row.top-dashboard .card {
-    height: 28rem;
-}
-.row.bottom-dashboard-levele-one .card.gamer-character-card{
-    height: 17rem;
+    height: 60vh;
 }
 .row.bottom-dashboard-levele-one .card.random-characters-card{
-    height: 24rem;
+    height: 48vh;
 }
 .row.bottom-dashboard-levele-one .card.last-book-container{
     height: 18rem;
@@ -168,9 +162,6 @@
 #original-characters-list .card-group {
     width: 24vh;
 }
-#original-characters-list .border-card-color{   
-    height: 35vh; 
-}
 #original-characters-list .card.individual-character-card{
     height: 30vh;
 }
@@ -199,10 +190,6 @@
 .character-l1{
     width: 110px;
 }
-.one-book-container-wrapper .fiction-container .card-body, #book-container .fiction-container .card-body,
-.illustration-arc-container, .one-book-container-wrapper .fiction-container .card-body{
-    height: 60vh;
-}
 .login-card .card-body{
     height: 15rem;
 }
@@ -230,8 +217,7 @@
     height: 3vh
 }
 .character-illustration-container{
-    height: 6rem;
-    width: 100px;
+    width: 10vh;
 }
 .title-text-novel p{
     width: 29vh;
@@ -359,9 +345,6 @@ audio{
 .all-characters-by-user-container .card{
     height: 33vh;
 }
-.all-characters-by-user-container, .book-containe{
-    height: 75vh;
-}
 .image-width{
     width: 45%;
     height: 45%;
@@ -389,12 +372,8 @@ audio{
 .avatar-container, .profil-user-card .avatar-container, .avatar-wrapper img  {
     width: 10vh;
 }
-.avatar-container, .avatar-wrapper img {
-    height: 10vh;
-}
 .avatar-wrapper{
     width: 10vh;
-    height: 10vh;
 }
 .edit-overlay {
     width: 40px;
@@ -412,5 +391,11 @@ audio{
 }
 .name-characatrer-link .btn{
     height: 8vh;
-    width: 20vh;
+    width: 21vh;
+}
+.card-character-container{
+    height: 30vh;
+}
+.create-chapter-btn-container .btn, .select-character-container .form-check {
+    width: 15rem;
 }
