@@ -27,9 +27,6 @@
     max-width: 25vh;
     height: 32vh;
 }
-.button-validate-container .btn.btn-primary{
-    height: 5vh;
-}
 .card-image img {
     width: 60%;
 }
@@ -93,7 +90,6 @@
 }
 .dashboard-home-max-card-container .avatar-container {
     width: 5vh;
-    height: 5vh;
 }
 .form-profil-user-card {
     height: 20vh;
@@ -142,9 +138,6 @@
 }
 .background-image-quest{
     height: 16rem;
-}
-.card-img-top.background-image-quest-image-container {
-    height: 10rem;
 }
 .card-body.one-quest {
     height: 13rem;
@@ -206,7 +199,8 @@
 .character-l1{
     width: 110px;
 }
-.one-book-container-wrapper .fiction-container .card-body, #book-container .fiction-container .card-body{
+.one-book-container-wrapper .fiction-container .card-body, #book-container .fiction-container .card-body,
+.illustration-arc-container, .one-book-container-wrapper .fiction-container .card-body{
     height: 60vh;
 }
 .login-card .card-body{
@@ -215,19 +209,23 @@
 .card .last-book-container{
     height: 20rem;
 }
-.my-oc-card .card-body{
+.my-oc-card .card-body, .card-img-top.background-image-quest-image-container{
     height: 10rem;
 }
 .parallax-layer {
     height: 100%;
 }
-.fiction-container .card-body{
+.fiction-container .card-body,.card-body.user-inbformation-conter, .profil-user-card .avatar-container,
+.dashboard-max-card-container.card-height.fiction-container .card-body, .dashboard-max-card-container.card-height .card-body{
     height: 80vh;
+}
+.rating, .button-validate-container .btn.btn-primary, .dashboard-home-max-card-container .avatar-container{
+    height: 5vh;
 }
 .rating {
     width: 16vh;
-    height: 5vh;
-}.rating svg {
+}
+.rating svg {
     width: 1vh;
     height: 3vh
 }
@@ -296,9 +294,6 @@
 .all-characters-list-containers{
     width: 90vh;
 }
-.illustration-arc-container{
-    height: 60vh;
-}
 .card-body.last-chapter-card.text-white{
     height: 30rem;
 }
@@ -326,12 +321,6 @@
 }
 .left-fiction-summary-container{
     width: 20rem;
-}
-.dashboard-max-card-container.card-height.fiction-container .card-body{
-    height: 80vh;
-}
-.one-book-container-wrapper .fiction-container .card-body{
-    height: 60vh;
 }
 .illustration-arc-container img{
     width: 100%;
@@ -386,4 +375,42 @@ audio{
 .mini-rond-avatar-image{
     width: 70px;
     height: 70px;
+}
+.all-fictions-container-global{
+    height: 95vh;
+}
+.row.bottom-dashboard-levele-one .card-header > div{
+    width: 100%;
+}
+
+.info-original-character-height{
+    height: 19rem;
+}
+.avatar-container, .profil-user-card .avatar-container, .avatar-wrapper img  {
+    width: 10vh;
+}
+.avatar-container, .avatar-wrapper img {
+    height: 10vh;
+}
+.avatar-wrapper{
+    width: 10vh;
+    height: 10vh;
+}
+.edit-overlay {
+    width: 40px;
+    height: 40px;
+}
+.location-clan-background-width-container .btn.btn-primary{
+  width: 30vh;
+  max-width: 30vh;
+}
+.character-list-wrapper .card-body{
+    height: 5rem;
+}
+.card-body.all-last-three-fictions-container .list-all-fictions-globale--container{
+    width: 20rem;
+}
+.name-characatrer-link .btn{
+    height: 8vh;
+    width: 20vh;
 }

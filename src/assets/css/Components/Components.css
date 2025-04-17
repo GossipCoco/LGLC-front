@@ -163,7 +163,6 @@
     color: var(--active-hover);
 }
 .card.location-clan-background-width-container{
-    width: 17rem;
     border-radius: 70% 70% 0 0;
 }
 .create-character-button{
@@ -171,8 +170,6 @@
     justify-content: right;
 }
 .mini-rond-avatar-image{
-    width: 70px;
-    height: 70px;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -195,60 +192,42 @@
     margin: -1rem 1rem 0 -1rem;
 }
 .all-fictions-container-global{
-    height: 95vh;
     margin: 0rem 0 1rem 1rem;
 }
-.row.bottom-dashboard-levele-one .card-header > div{
-    width: 100%;
-}
-.card-body.user-inbformation-conter{
-    height: 80vh;
-}
 .info-original-character-height{
-    height: 19rem;
     padding: 1rem;
 }
 .avatar-container {
     position: relative;
-    width: 10vh;
-    height: 10vh;
     border-radius: 50%;
     overflow: hidden;
     cursor: pointer;
     padding: 1rem;
-  }
-  .profil-user-card .avatar-container {
+}
+.profil-user-card .avatar-container {
     position: relative;
-    width: 10vh;
-    height: 80vh;
     border-radius: 50%;
     overflow: hidden;
     cursor: pointer;
     padding: 1rem;
-  }
-  .profil-user-card .card-body{
+}
+.profil-user-card .card-body{
     margin: -10rem 0 0 0;
-  }
-  .avatar-wrapper img {
-    width: 10vh;
-    height: 10vh;
+}
+.avatar-wrapper img {
     object-fit: cover;
     transition: opacity 0.3s ease-in-out;
     border: 4px solid rgba(var(--active-hover), 1);
     border-radius: 100%;
-  }
-  .avatar-wrapper{
+}
+.avatar-wrapper{
     margin: -1rem 0 0 0;
-    width: 10vh;
-    height: 10vh;
-  }
-  .edit-overlay {
+}
+.edit-overlay {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 40px;
-    height: 40px;
     background: rgba(0, 0, 0, 0.5);
     border-radius: 50%;
     display: flex;
@@ -257,41 +236,25 @@
     color: rgb(var(--main-white), 1);
     font-size: 20px;
     transition: opacity 0.3s ease-in-out;
-  }  
-  .file-input {
+}
+.file-input {
     display: none; /* Cache l'input file */
-  }
-  .location-clan-background-width-container .btn.btn-primary{
-    width: 30vh;
-    max-width: 30vh;
+}
+.location-clan-background-width-container .btn.btn-primary{
     margin: 0 0 0 6.5rem;
-  }
-  
-  .character-list-wrapper .card-body{
-    height: 5rem;
+}
+.character-list-wrapper .card-body{
     margin: 0 0 0 0;
-}
-.card-body.all-last-three-fictions-container .list-all-fictions-globale--container{
-    width: 20rem;
-}
-.dashboard-max-card-container.card-height .card-body{
-    height: 80vh;
 }
 .fiction-summary-card p{
     margin: 0 0 0.25rem 0;
 }
-.name-characatrer-link .btn{
-    height: 8vh;
-    width: 20vh;
-}
 span.name-characatrer-link{
     margin: -0.5rem;
 }
-
 .right-column-image-container{
     margin: -5rem 0 0 0;
 }
-
 .btn:first-child:active{
     color: rgb(var(--main-white), 1);
     background-color: rgb(var(--dark-green-01), 1);
