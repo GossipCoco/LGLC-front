@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import '../variables.scss';
+
+/* en VH */
 .global-container {
     height: 98vh;
 }
@@ -9,13 +11,6 @@
 }
 .character-container-global {
     width: 185vh;
-}
-.character-card.card, .list-all-fictions-globale--container.three-last-chapters-container {
-    width: 20rem;    
-}
-.character-card.card {
-    height: 40rem;
-    min-width: 20rem;
 }
 .card-character-container,
 #all-characters-container-card .character-card.card,
@@ -28,9 +23,6 @@
     max-width: 25vh;
     height: 32vh;
 }
-.card-image img {
-    width: 60%;
-}
 .height-character{
     height: 5vh
 }
@@ -38,28 +30,7 @@
 .card-form-create-character, .fiction-globale-container ul {
     height: 90vh;
 }
-.cat-corner::before
-.dashboard-max-card-container::before,
-.fiction-globale-container::before,
-.character-card.card::before,
-.display-flex-row.card-group.clan-group .card.location-clan-background-width-container::before {
-    width: 10px;
-    height: 10px;
-}
-.character-details {
-    width: 183vh;
-    height: 95vh;
-}
-.character-details.card .card-image img {
-    width: 75%;
-}
-.clan-card {
-    width: 20vh;
-    height: 24vh;
-}
-.card-image-layout {
-    width: 95rem;
-}
+
 .clan-detail-layout .card-body {
     height: 69.5vh;
 }
@@ -109,6 +80,28 @@
 .row.bottom-dashboard-levele-one .card.random-characters-card{
     height: 48vh;
 }
+.character-details {
+    width: 183vh;
+    height: 95vh;
+}
+.clan-card {
+    width: 20vh;
+    height: 24vh;
+}
+/* en REM */
+.character-card.card, .list-all-fictions-globale--container.three-last-chapters-container {
+    width: 20rem;    
+}
+.character-card.card {
+    height: 40rem;
+    min-width: 20rem;
+}
+.character-details.card .card-image img {
+    width: 75%;
+}
+.card-image-layout {
+    width: 95rem;
+}
 .row.bottom-dashboard-levele-one .card.last-book-container{
     height: 18rem;
 }
@@ -137,15 +130,26 @@
     height: 13rem;
     width: 10rem;
 }
-.card-img-top.background-image-quest-image-container img {
-    width: 75%;
-}
 .quest-button-text {
     height: 12rem;
-    margin: 1rem 0 0 0;
 }
 .quest-button-text p {
     height: 9rem;
+}
+/* AUTRES */
+.card-image img {
+    width: 60%;
+}
+.cat-corner::before
+.dashboard-max-card-container::before,
+.fiction-globale-container::before,
+.character-card.card::before,
+.display-flex-row.card-group.clan-group .card.location-clan-background-width-container::before {
+    width: 10px;
+    height: 10px;
+}
+.card-img-top.background-image-quest-image-container img {
+    width: 75%;
 }
 .parallax-container {
     height: 400px;
