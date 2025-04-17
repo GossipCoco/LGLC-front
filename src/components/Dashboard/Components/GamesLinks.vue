@@ -8,27 +8,33 @@
         <div class="card-boy">
           <div class="display-flex-column align-items-content-justify-content">
             <div class=" display-flex-column align-items-content-justify-content">
+              <div class=" display-flex-row align-items-content-justify-content">
               <img loading="lazy" src="../../../../public/images/Game/puzzle.png">
-              <div class=" display-flex-column align-items-content-justify-content">
-                <p><router-link class="text-white" to="/puzzle">Jeu du puzzle</router-link></p>
-                <p class="text-white"> Résous des puzzles en temps record et gagne des points</p>
+              <p><router-link class="text-white" to="/puzzle">Jeu du puzzle</router-link></p>
+            </div>
+            <div class=" display-flex-column align-items-content-justify-content">
+              <p class="text-white"> Résous des puzzles en temps record et gagne des points</p>
             </div>
             </div>
           </div>
           <div class="display-flex-column align-items-content-justify-content">
             <div class=" display-flex-column align-items-content-justify-content">
-              <img loading="lazy" src="../../../../public/images/Game/mouse01.png" />
-              <div class=" display-flex-column align-items-content-justify-content">
+              <div class=" display-flex-row align-items-content-justify-content">
+                <img loading="lazy" src="../../../../public/images/Game/mouse01.png" />
                 <p><router-link class="text-white" to="/puzzle">Attrape la souris! </router-link></p>
+            </div>
+              <div class=" display-flex-column align-items-content-justify-content">
                 <p class="text-white">Fais preuve d'habilité pour capturer un maximum de sours et gagne des points</p>
                 </div>
             </div>
           </div>
           <div class="display-flex-column align-items-content-justify-content">
             <div class=" display-flex-column align-items-content-justify-content">
-              <img loading="lazy" src="../../../../public/images/Game/oie01.png" />
-              <div class=" display-flex-column align-items-content-justify-content">
+              <div class=" display-flex-row align-items-content-justify-content">
+                <img loading="lazy" src="../../../../public/images/Game/oie01.png" />
                 <p><router-link class="text-white" to="/puzzle">Jeu de l'Oie</router-link></p>
+              </div>              
+              <div class=" display-flex-column align-items-content-justify-content">
                 <p class="text-white">Joue au jeu de l'oie, trouve des trésors et gagne des points</p>
             </div>
             </div>
