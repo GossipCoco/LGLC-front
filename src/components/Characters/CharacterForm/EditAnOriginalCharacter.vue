@@ -1,8 +1,8 @@
 <template>
   <div class="display-flex-column form-character-container flex-one opensans-text">
     <div class="card border-none background-color-main-lineart overflowY-X-hidden text-white display-flex-column card-form-create-character align-items-content-justify-content flex-one mb-12">
-      <CardHeader :Title="title" style="width: 100%;"/>
-      <div class="card-body overflowY-X-hidden" style="height: 80vh">
+      <CardHeader :Title="title"/>
+      <div class="card-body overflowY-X-hidden">
 
       </div>
     </div>

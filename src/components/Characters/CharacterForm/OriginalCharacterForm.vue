@@ -1,5 +1,5 @@
 <template>
-  <div class="card-body" style="height: 80vh">
+  <div class="card-body">
     <form
       class="create-original-character-form"
       @submit.stop.prevent="onSubmit"

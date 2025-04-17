@@ -308,4 +308,8 @@ li.quest-container {
 .last-chapter-card.card-body{
     height: 70vh;
     margin: -1rem 0 0 0;
-} 
+}
+.clan-detail-card.image-illustration-right.border-card-color{
+    display: flex;
+    flex: 0.25;
+}

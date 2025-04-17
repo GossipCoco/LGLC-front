@@ -399,3 +399,22 @@ audio{
 .create-chapter-btn-container .btn, .select-character-container .form-check {
     width: 15rem;
 }
+.quest-button-text .btn.btn-primary {
+    width: 10rem;
+}
+.all-my-characters-container{
+    height: 110vh;
+}
+
+.fiction-container .card-header{
+    height: 13vh;
+}
+.card-form-create-character .card-body{
+    height: 77vh;   
+}
+.create-character-button .btn{
+    height: 5vh;
+}
+.card-form-create-character .card-header{
+    width: 185vh;
+}

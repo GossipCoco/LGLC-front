@@ -14,6 +14,9 @@
 .flex-one .button-validate-container .btn.btn-primary{
     margin : 1rem 0 0 0;
 }
+.flex-one .create-character-button .btn.btn-primary{
+    margin : 1rem 0 0 0;
+}
 .flex-one .middle-fiction-card .btn {
     margin : 2rem 0 0 0;
 }
@@ -34,15 +37,14 @@
     border: 1px solid rgba(var(--dark-green-01), 1);
     color: rgba(var(--active-hover), 1);
 }
-.quest-button-text .btn.btn-primary {
-    width: 10rem;
+.quest-button-text .btn.btn-primar, .character-list-wrapper .card-body {
     margin: 0;
 }
 .btn-primary.file-character-btn {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .btn-primary.file-character-btn:hover {
-    background-color:  rgba(var(--clear-green-02), 1);
+    background-color: rgba(var(--clear-green-01), 1);
     border: rgba(var(--clear-green-02), 1);
     transform: scale(1.05);
 }
@@ -138,7 +140,6 @@
     padding: 0rem 1rem 1rem 1rem;
 }
 .all-my-characters-container{
-    height: 110vh;
     padding: 3rem;
     margin: 0 auto;
 }
@@ -184,7 +185,6 @@
 }
 .fiction-container .card-header{
     padding: 0;
-    height: 13vh;
 }
 .fiction-container.all-fictions-container-global .card-header{
     padding: 0;
@@ -242,9 +242,6 @@
 .location-clan-background-width-container .btn.btn-primary{
     margin: 0 0 0 6.5rem;
 }
-.character-list-wrapper .card-body{
-    margin: 0 0 0 0;
-}
 .fiction-summary-card p{
     margin: 0 0 0.25rem 0;
 }
@@ -258,4 +255,7 @@ span.name-characatrer-link{
     color: rgb(var(--main-white), 1);
     background-color: rgb(var(--dark-green-01), 1);
     border-color: rgb(var(--dark-green-01), 1);
+}
+.card-form-create-character .card-header{
+    margin: -1rem 0 0 0;
 }
