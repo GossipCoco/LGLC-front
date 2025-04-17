@@ -232,6 +232,7 @@
     height: 3vh
 }
 .character-illustration-container{
+    height: 6rem;
     width: 100px;
 }
 .title-text-novel p{
@@ -243,12 +244,61 @@
 .summmary-book-height-dashboard{
   height: 11rem;
 }
-.character-illustration-container{
-    height: 6rem;
-}
 .informations-gamer-container {
     height: 45vh;
 }
 .profil-user-card {
     height: 85vh;
+}
+.character-container {
+    height: 86vh;
+}
+.character-details-chatper.card.mb-3.fiction-container {
+    height: 95vh;
+}
+.title-dashboard-container-header {
+    height: 6rem;
+}
+.character-details .card-body {
+    height: 90.5vh;
+}
+.welcome-dashboard-container{
+    width: 188vh;
+}
+.title-dashboard-container-header img {
+    width: 5%;
+}
+.title-dashboard-container-header .image-messenger-container img {
+    width: 20%;
+}
+.all-characters-container-card {
+    width: 173vh;
+}
+.character-l1 img {
+    width: 75%;
+    height: 75%;
+}
+.avatar-container {
+    height: 8vh;
+}
+.illustration-background .background-fiction-contain{
+    width: 100%;
+}
+.opacity-container, .illustration-background .background-fiction-contain{
+    height: 77vh;
+}
+.all-characters-of-fiction{
+    width: 14rem;
+}
+.illustration-background .background-fiction-contain .characters-list-container img{
+    width: 150px;
+}
+.all-characters-list-containers{
+    width: 90vh;
+}
+.illustration-arc-container{
+    height: 60vh;
+}
+.card-body.last-chapter-card.text-white{
+    height: 30rem;
 }

@@ -39,6 +39,17 @@
             </div>
             </div>
           </div>
+          <div class="display-flex-column align-items-content-justify-content">
+            <div class=" display-flex-column align-items-content-justify-content">
+              <div class=" display-flex-row align-items-content-justify-content">
+                <img loading="lazy" src="../../../../public/images/Game/quête.png" />
+                <p><router-link class="text-white" to="/Quest">Quêtes</router-link></p>
+              </div>              
+              <div class=" display-flex-column align-items-content-justify-content">
+                <p class="text-white">Réalise et accomplis des quêtes pour gagner des points</p>
+            </div>
+            </div>
+          </div>
       </div>
     </div>
   </div>

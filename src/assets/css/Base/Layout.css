@@ -35,33 +35,21 @@
 }
 .character-container {
     margin: -3rem auto;
-    height: 86vh;
     flex-wrap: wrap;
     padding: 0;
 }
 .character-details .card-body {
-    height: 90.5vh;
     border-radius: 12px 12px 12px 0;
     z-index: -222
 }
-
-.character-details-chatper.card.mb-3.fiction-container {
-    height: 95vh;
-}
-.title-dashboard-container-header {
-    height: 6rem;
-}
 .welcome-dashboard-container{
-    width: 188vh;
     margin: 0 0 0 -1rem;
 }
 .title-dashboard-container-header img {
-    width: 5%;
     border-radius: 100%;
     margin: 0 0 0 1rem;
 }
 .title-dashboard-container-header .image-messenger-container img {
-    width: 20%;
     border-radius: 0;
     margin: 0 0 0 1rem;
     transform: scale(0.75);
@@ -71,19 +59,11 @@
 }
 .all-characters-container-card {
     margin: 0 7rem 0 4rem;
-    width: 173vh;
 }
-.character-l1 img {
-   width: 75%;
-   height: 75%;
-}
+
 .character-l1 img:hover {
     transform: scale(1.5);
     transition: all 2s ease-out;;
- }
-
-.avatar-container {
-    height: 8vh;
 }
 .row.submit-container {
     margin-top: 0rem;
@@ -107,8 +87,6 @@
     background-position: center;
     background-size: cover;
     border-radius: 20px;
-    height: 77vh;
-    width: 100%;
     overflow: hidden;
     position: relative;
     width: 183vh;
@@ -116,24 +94,17 @@
 .opacity-container{
     background-color: rgba(var(--dark-green-01), 0.75);
     border-radius: 20px;
-    height: 77vh;
 }
 .illustration-background .background-fiction-contain .characters-list-container{
     padding: 0.5rem 0 0.5rem 0;
 }
 .all-characters-of-fiction{
     margin: 1rem 0 0 0;
-    width: 14rem;
-}
-.illustration-background .background-fiction-contain .characters-list-container img{
-    width: 150px;
 }
 .all-characters-list-containers{
-    width: 90vh;
     flex-wrap: wrap;
 }
 .illustration-arc-container{
-    height: 60vh;
     background-position: 2%;
 }
 .row.title-dashboard{
@@ -159,10 +130,6 @@
 }
 .row.bottom-dashboard-levele-one-level-two{
     margin: 1rem;
-}
-.card-body.last-chapter-card.text-white
-{
-    height: 30rem;
 }
 .dashboard-max.flex-one.card.display-flex-column.height-100.background-color-main-lineart.margin-3-rem{
     overflow-y: auto;
