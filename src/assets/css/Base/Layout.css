@@ -39,18 +39,15 @@
     padding: 0;
 }
 .character-details .card-body {
-    border-radius: 12px 12px 12px 0;
     z-index: -222
 }
 .welcome-dashboard-container{
     margin: 0 0 0 -1rem;
 }
 .title-dashboard-container-header img {
-    border-radius: 100%;
     margin: 0 0 0 1rem;
 }
 .title-dashboard-container-header .image-messenger-container img {
-    border-radius: 0;
     margin: 0 0 0 1rem;
     transform: scale(0.75);
 }
@@ -60,16 +57,12 @@
 .all-characters-container-card {
     margin: 0 7rem 0 4rem;
 }
-
 .character-l1 img:hover {
     transform: scale(1.5);
     transition: all 2s ease-out;;
 }
 .row.submit-container {
     margin-top: 0rem;
-}
-.card {
-    border: none;
 }
 #arc-book-container p{
     font-size: 1.05em;
@@ -86,13 +79,11 @@
 .illustration-background .background-fiction-contain{
     background-position: center;
     background-size: cover;
-    border-radius: 20px;
     overflow: hidden;
     position: relative;
 }
 .opacity-container{
     background-color: rgba(var(--dark-green-01), 0.75);
-    border-radius: 20px;
 }
 .illustration-background .background-fiction-contain .characters-list-container{
     padding: 0.5rem 0 0.5rem 0;

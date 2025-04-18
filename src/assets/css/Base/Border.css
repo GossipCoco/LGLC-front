@@ -92,3 +92,18 @@
 .location-clan-card-details{
     border-radius: 8px 8px 8px 0;
 }
+.character-details .card-body {
+    border-radius: 12px 12px 12px 0;
+}
+.title-dashboard-container-header img {
+    border-radius: 100%;
+}
+.title-dashboard-container-header .image-messenger-container img {
+    border-radius: 0;
+}
+.card {
+    border: none;
+}
+.illustration-background .background-fiction-contain, .opacity-container{
+    border-radius: 20px;
+}
