@@ -3,13 +3,13 @@
 
 /* en VH */
 .global-container {
-    height: 98vh;
+    height: 98v
 }
-.game, .clan-detail-card.image-illustration-right.border-card-color,
+ .game, .clan-detail-card.image-illustration-right.border-card-color,
 .all-characters-by-user-container, .book-containe{
     height: 75vh;
 }
-.character-container-global, .card-form-create-character .card-header {
+#one-book-container-wrapper .row, .character-container-global, .card-form-create-character .card-header {
     width: 185vh;
 }
 .card-character-container,#all-characters-container-card .character-card.card,
@@ -28,7 +28,6 @@
 .card-form-create-character, .fiction-globale-container ul {
     height: 90vh;
 }
-
 .clan-detail-layout .card-body {
     height: 69.5vh;
 }
@@ -51,8 +50,10 @@
 .card.card-image-layout.clan-detail-layout.mb-3 .card-image-layout {
     width: 95rem;
 }
-.profil-user-card.card .avatar-container img {
+.profil-user-card.card .avatar-container img, .h5-container, .location-clan-background-width-container .btn.btn-primary {
     width: 30vh;
+}
+.profil-user-card.card .avatar-container img {
     height: 30vh;
 }
 .dashboard-home-max-card-container .avatar-container {
@@ -83,8 +84,8 @@
     height: 95vh;
 }
 .clan-card {
-    width: 20vh;
-    height: 24vh;
+    width: 30vh;
+    height: 30vh;
 }
 .card-image img.image-book{
     height: 30vh;
@@ -188,7 +189,6 @@
 }
 .h5-container{
     height: 9vh;
-    width: 30vh;
 }
 .image-book{
     height: 30vh;
@@ -217,8 +217,8 @@
     height: 33vh;
 }
 .card.location-clan-background-width-container{
-    width: 24vh;
-    height: 31vh;
+    width: 34vh;
+    height: 40vh;
 }
 .card.individual-character-card{
     height: 45vh;
@@ -233,8 +233,7 @@
     width: 10vh;
 }
 .location-clan-background-width-container .btn.btn-primary{
-    width: 30vh;
-    max-width: 22vh;
+    max-width: 30vh;
 }
 .name-characatrer-link .btn{
     height: 8vh;
@@ -379,9 +378,6 @@ audio{
 .parallax-layer {
     height: 100%;
 }
-.title-dashboard-container-header img {
-    width: 5%;
-}
 .title-dashboard-container-header .image-messenger-container img {
     width: 20%;
 }
@@ -428,4 +424,7 @@ audio{
 .edit-overlay {
     width: 40px;
     height: 40px;
+}
+.clans-location-container .gap-2 {
+    width: 0;
 }

@@ -82,7 +82,7 @@
     background-position: 50%;
     border: 6px solid rgba(var(--middle-green-02), 1);
     background-color: rgba(var(--dark-green-02), 1);
-    margin: 0.25rem 0 0 1rem;
+    margin: 0.75rem 0 0 0.75rem;
 }
 .card-image-layout {
     margin: 4rem 0 0 3rem;
