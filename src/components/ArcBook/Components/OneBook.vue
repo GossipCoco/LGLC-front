@@ -14,18 +14,20 @@
         </CardHeader>
         <div class="card-body">
           <div class="row">
-            <div class="col-10">
+            <div class="col-12">
               <div
                 class="text-white text-align-justify"
                 v-html="book.Summary"
               ></div>
-              <CharactersByBook v-bind:characters="book.BookCharacters" />
             </div>
           </div>
+          <CharactersByBook v-bind:characters="book.BookCharacters" />
         </div>
       </div>
     </div>
   </div>
+
+
 </template>
 <script>
 import ArcBookService from "../../../services/ArcBookService";

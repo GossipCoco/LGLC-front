@@ -9,13 +9,11 @@
 .all-characters-by-user-container, .book-containe{
     height: 75vh;
 }
-.character-container-global {
+.character-container-global, .card-form-create-character .card-header {
     width: 185vh;
 }
-.card-character-container,
-#all-characters-container-card .character-card.card,
-.card-image img.image-book,
-.title-container-card{
+.card-character-container,#all-characters-container-card .character-card.card,
+.card-image img.image-book, .title-container-card, .image-book{
     width: 25vh;
 }
 #all-characters-container-card .character-card.card {
@@ -181,11 +179,8 @@
 }
 .create-character-form,
 .card-form-create-character .card-body{
-    width: 100%;
+    width: 180vh;;
     height: 77vh;
-}
-.create-character-form .text-area-container{
-    height: 30rem;
 }
 .create-character-form > div:nth-child(2),
 .bottom-dashboard-levele-one .card{
@@ -196,7 +191,6 @@
     width: 30vh;
 }
 .image-book{
-    width: 25vh;
     height: 30vh;
 }
 .user-info-text img{
@@ -261,9 +255,6 @@
 .create-character-button .btn{
     height: 5vh;
 }
-.card-form-create-character .card-header{
-    width: 185vh;
-}
 #original-character-global-container .flex-one .btn {
     height: 7vh;
 }
@@ -272,15 +263,15 @@
 }
 
 /* en REM */
+.create-character-form .text-area-container{
+    height: 30rem;
+}
 .character-card.card, .list-all-fictions-globale--container.three-last-chapters-container {
     width: 20rem;    
 }
 .character-card.card {
     height: 40rem;
     min-width: 20rem;
-}
-.character-details.card .card-image img {
-    width: 75%;
 }
 .card-image-layout {
     width: 95rem;
@@ -319,37 +310,11 @@
 .quest-button-text p {
     height: 9rem;
 }
-/* AUTRES */
-.card-image img {
-    width: 60%;
-}
-.cat-corner::before
-.dashboard-max-card-container::before,
-.fiction-globale-container::before,
-.character-card.card::before,
-.display-flex-row.card-group.clan-group .card.location-clan-background-width-container::before {
-    width: 10px;
-    height: 10px;
-}
-.card-img-top.background-image-quest-image-container img {
-    width: 75%;
-}
-.parallax-container {
-    height: 400px;
-}
-
 .row.list-quest-card-container{
     height: 35rem;
 }
 .table.table-borderless{
     width: 25rem;
-}
-.avatar-gamer{
-    width: 200px;
-    height: 150px;
-}
-.character-l1{
-    width: 110px;
 }
 .login-card .card-body{
     height: 15rem;
@@ -360,48 +325,23 @@
 .my-oc-card .card-body, .card-img-top.background-image-quest-image-container{
     height: 10rem;
 }
-.parallax-layer {
-    height: 100%;
-}
 .summmary-book-height-dashboard{
   height: 11rem;
 }
 .title-dashboard-container-header {
     height: 6rem;
 }
-.title-dashboard-container-header img {
-    width: 5%;
-}
-.title-dashboard-container-header .image-messenger-container img {
-    width: 20%;
-}
-.character-l1 img {
-    width: 75%;
-    height: 75%;
-}
-.illustration-background .background-fiction-contain{
-    width: 100%;
-}
 .all-characters-of-fiction{
     width: 14rem;
 }
-.illustration-background .background-fiction-contain .characters-list-container img{
-    width: 150px;
-}
 .card-body.last-chapter-card.text-white{
     height: 30rem;
-}
-.logo img{
-    width: 55%;
 }
 .row.list-fiction-card-container{
     height: 38rem;
 }
 .left-fiction-summary-container{
     width: 20rem;
-}
-.illustration-arc-container img{
-    width: 100%;
 }
 .mini-rond-messages{
     height: 2rem;
@@ -410,24 +350,8 @@
 audio{
     width: 14rem;
 }
-.image-width{
-    width: 45%;
-    height: 45%;
-}
-.mini-rond-avatar-image{
-    width: 70px;
-    height: 70px;
-}
-.row.bottom-dashboard-levele-one .card-header > div{
-    width: 100%;
-}
-
 .info-original-character-height{
     height: 19rem;
-}
-.edit-overlay {
-    width: 40px;
-    height: 40px;
 }
 .character-list-wrapper .card-body{
     height: 5rem;
@@ -440,4 +364,68 @@ audio{
 }
 .quest-button-text .btn.btn-primary {
     width: 10rem;
+}
+/* % */
+.character-details.card .card-image img {
+    width: 75%;
+}
+.card-image img {
+    width: 60%;
+}
+.card-img-top.background-image-quest-image-container img,
+.character-l1 img {
+    width: 75%;
+}
+.parallax-layer {
+    height: 100%;
+}
+.title-dashboard-container-header img {
+    width: 5%;
+}
+.title-dashboard-container-header .image-messenger-container img {
+    width: 20%;
+}
+.character-l1 img {
+    height: 75%;
+}
+.illustration-background .background-fiction-contain,
+.illustration-arc-container img, .row.bottom-dashboard-levele-one .card-header > div{
+    width: 100%;
+}
+.logo img{
+    width: 55%;
+}
+.image-width{
+    width: 45%;
+    height: 45%;
+}
+/*  px */
+.cat-corner::before
+.dashboard-max-card-container::before,
+.fiction-globale-container::before,
+.character-card.card::before,
+.display-flex-row.card-group.clan-group .card.location-clan-background-width-container::before {
+    width: 10px;
+    height: 10px;
+}
+.parallax-container {
+    height: 400px;
+}
+.avatar-gamer{
+    width: 200px;
+    height: 150px;
+}
+.character-l1{
+    width: 110px;
+}
+.illustration-background .background-fiction-contain .characters-list-container img{
+    width: 150px;
+}
+.mini-rond-avatar-image{
+    width: 70px;
+    height: 70px;
+}
+.edit-overlay {
+    width: 40px;
+    height: 40px;
 }
