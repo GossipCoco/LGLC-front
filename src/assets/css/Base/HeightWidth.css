@@ -12,7 +12,9 @@
 .middle-dashboard{
     width: 192vh;
 }
-
+.last-chapter-card.card-body{
+    height: 70vh;
+}
 .global-container {
     height: 98v
 }
