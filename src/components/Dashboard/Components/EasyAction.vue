@@ -1,10 +1,10 @@
-<template>
-  <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12">
-    <div class="card border-none background-lineart fiction-card">     
-      <div class="card-header">
-        <h4>Actions rapides</h4>
-      </div>
-      <div class="card-body">
+<template>  
+    <div class="card border-none background-lineart fiction-card"> 
+      <TitleHeaderDashboard
+            v-bind:title="'Actions rapides'"
+            v-bind:type="'chapters'"
+        />    
+      <div class="card-body easy-action-container">
         <div class="display-flex-column flex-one">
         <router-link to="/CharacterCreate" type="button" class="btn btn-primary">
           Créer un nouveau personnage
@@ -13,10 +13,13 @@
       </div>
       </div>
     </div>
-  </div>
 </template>
 <script>
+
+import TitleHeaderDashboard from '../../Components/SpecificComponent/TitleHeaderDashboard.vue';
 export default {
-  name: 'EasyAction'
+  name: 'EasyAction',
+    components:{TitleHeaderDashboard}
+  
 }
 </script>

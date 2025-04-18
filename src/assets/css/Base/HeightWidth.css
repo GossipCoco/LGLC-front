@@ -2,6 +2,17 @@
 @import '../variables.scss';
 
 /* en VH */
+
+.list-all-fictions-globale--container.list-all-fictions-globale--container{
+    width: 100vh;
+}
+.row.bottom-dashboard-levele-three .card, .row.bottom-dashboard-levele-three .card .card-body{
+    height: 38vh;
+}
+.middle-dashboard{
+    width: 192vh;
+}
+
 .global-container {
     height: 98v
 }
@@ -282,9 +293,6 @@
 .row.bottom-dashboard-levele-one .card.game-container
 {
     height: 43rem;
-}
-.list-all-fictions-globale--container.list-all-fictions-globale--container{
-    width: 30rem;
 }
 .summaray-title-text.flex-one.align-items-content-justify-content{
     width: 25rem;

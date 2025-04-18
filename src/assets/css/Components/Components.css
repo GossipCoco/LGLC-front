@@ -8,6 +8,9 @@
 .flex-one .btn {
     margin : -2rem 0 0 0;
 }
+.easy-action-container .flex-one .btn {
+    margin: 2rem 0 4rem 0;
+}
 .name-characatrer-link.flex-one .btn {
     margin : 0;
 }
@@ -22,6 +25,9 @@
 }
 #original-character-global-container .flex-one .btn {
     margin: 0rem 5rem 0 0
+}
+.row.bottom-dashboard-levele-three{
+    margin: 1rem 0 0 0;
 }
 .card-header.fiction-global-informarion-container-hearder .flex-one .btn{
     margin: 0.5rem 0 0 0
@@ -247,6 +253,9 @@
 }
 .location-clan-background-width-container .btn.btn-primary{
     margin: 0 0 0 -15vh;
+}
+.location-clan-background-width-container .btn.btn-primary.clan-btn{
+    margin: 0;
 }
 .fiction-summary-card p{
     margin: 0 0 0.25rem 0;

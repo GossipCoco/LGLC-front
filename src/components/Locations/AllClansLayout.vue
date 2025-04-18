@@ -14,7 +14,7 @@
               
                 <router-link
                   type="button"
-                  class="btn btn-primary"
+                  class="btn btn-primary clan-btn"
                   :to="'/clan/' + clan.Id"
                   >{{ clan.Name }}</router-link
                 >

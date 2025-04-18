@@ -36,7 +36,7 @@
       <CharacterByGamerV2 v-bind:gamer="gamer" v-if="!showspinner" />
     </div>
     <div class="row middle-dashboard">
-      
+      <separator v-bind:Title="'Tout sur l\'univers de la Guerre des Clans'" />
     </div>
     <div class="row bottom-dashboard-levele-one">
       <div class="col-xxl-5 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -45,15 +45,24 @@
       </div>
       <div class="col-xxl-7 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="row fictions-games-container">
-          <ListAllFictions v-if="!showspinner" />
-          <GamesLinks v-if="!showspinner" />
+          <ListAllFictions v-if="!showspinner" />          
         </div>
       </div>
     </div>
-    <div class="row bottom-dashboard-levele-one-level-two">
-      
+    <div class="row middle-separator">
+      <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <separator v-bind:Title="'Nos jeux'" />
+      </div>
+    </div>      
+    <div class="row bottom-dashboard-levele-three">
+      <div class="col-xxl-6 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <GamesLinks v-if="!showspinner" />
+      </div>
+      <div class="col-xxl-6 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <easy-action />
+      </div>
     </div>
-  </div>
+</div>
 </template>
 <script>
 import UserService from "../../services/UserService";
@@ -69,6 +78,8 @@ import LastBook from "./Components/LastBook.vue";
 import GamesLinks from "./Components/GamesLinks.vue";
 import Spinner from "../Components/GenericComponent/Spinner.vue";
 import CharacterByGamerV2 from "./Components/CharacterByGamerV2.vue";
+import Separator from "./ComponentGeneric/Separator.vue";
+import EasyAction from "./Components/EasyAction.vue";
 export default {
   name: "DashboardLayout",
   components: {
@@ -81,7 +92,9 @@ export default {
     LastBook,
     GamesLinks,
     Spinner,
-    CharacterByGamerV2
+    CharacterByGamerV2,
+    Separator,
+    EasyAction
   },
   data() {
     return {
