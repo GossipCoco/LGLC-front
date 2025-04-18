@@ -41,12 +41,10 @@
 }
 .btn-primary {
     background-color: rgba(var(--middle-green-01), 1);
-    border: 1px solid rgba(var(--middle-green-01), 1);
 }
 .btn-primary:hover, .name-characatrer-link .btn:hover,
 .btn-primary.file-character-btn {
     background-color: rgba(var(--dark-green-01), 1);
-    border: 1px solid rgba(var(--dark-green-01), 1);
     color: rgba(var(--active-hover), 1);
 }
 .quest-button-text .btn.btn-primar, .character-list-wrapper .card-body {
@@ -57,7 +55,6 @@
 }
 .btn-primary.file-character-btn:hover {
     background-color: rgba(var(--clear-green-01), 1);
-    border: rgba(var(--clear-green-02), 1);
     transform: scale(1.05);
 }
 /* CARD */
@@ -110,35 +107,24 @@
 .one-book-container-wrapper{
     margin: 2rem 0 0 5rem;
 }
-.image-book{
-    border-radius: 20px;
-}
-.user-info-text img{
-    border: 8px solid rgba(var(--active-hover), 1);
-    border-radius: 100%;
-}
 .card-body.user-info-text .row{
     margin: 1rem 0;
 }
 .image-fiction-container-background{
     padding: 1rem 0 0.5rem 0;
     background-position: 50%;
-    border-radius: 12px 0 0 12px;
 }
 .fiction-summary-card{
     padding: 0 0.5rem 0 0.75rem;
-    border-radius: 8px
 }
 .height-all-fictions-container{
     margin: -1rem 0 -1rem 0;
 }
 .mini-rond-messages{
-    border-radius: 100%;
     margin: 0 0 0 -1rem;
     z-index: 99;
 }
 .rond-character-background{
-    border-radius: 100%;
     background-position: 50%;   
     vertical-align: bottom;
 }
@@ -174,15 +160,11 @@
 .nav-link:focus, .nav-link:hover {
     color: var(--active-hover);
 }
-.card.location-clan-background-width-container{
-    border-radius: 100% 100% 8% 8%;
-}
 .create-character-button{
     margin: 1.5rem 0 0 0;
     justify-content: right;
 }
 .mini-rond-avatar-image{
-    border-radius: 50%;
     object-fit: cover;
 }
 .table-row{
@@ -208,16 +190,8 @@
 .info-original-character-height{
     padding: 1rem;
 }
-.avatar-container {
+.avatar-container, .profil-user-card .avatar-container  {
     position: relative;
-    border-radius: 50%;
-    overflow: hidden;
-    cursor: pointer;
-    padding: 1rem;
-}
-.profil-user-card .avatar-container {
-    position: relative;
-    border-radius: 50%;
     overflow: hidden;
     cursor: pointer;
     padding: 1rem;
@@ -228,8 +202,6 @@
 .dashboard-card-header .avatar-wrapper img {
     object-fit: cover;
     transition: opacity 0.3s ease-in-out;
-    border: 4px solid rgba(var(--active-hover), 1);
-    border-radius: 100%;
 }
 .dashboard-card-header .avatar-wrapper{
     margin: -1rem 0 0 0;
@@ -240,7 +212,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -269,7 +240,6 @@ span.name-characatrer-link{
 .btn:first-child:active{
     color: rgb(var(--main-white), 1);
     background-color: rgb(var(--dark-green-01), 1);
-    border-color: rgb(var(--dark-green-01), 1);
 }
 .card-form-create-character .card-header{
     margin: -1rem 0 0 0;
