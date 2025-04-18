@@ -88,6 +88,68 @@
     width: 20vh;
     height: 24vh;
 }
+.card-image img.image-book{
+    height: 30vh;
+}
+#original-characters-list .card-group {
+    width: 24vh;
+}
+#original-characters-list .card.individual-character-card{
+    height: 30vh;
+}
+#original-characters-list{
+    height: 87vh;
+}
+.clan-detail-layout .card-image img{
+    width: 17vh;
+}
+.fiction-globale-container ul{
+    width: 50vh;
+}
+.row.top-dashboard .card-body > div{
+    width: 42vh;
+}
+.row.top-dashboard .all-my-oc-card .card-body > div{
+    width: 20vh;
+}
+.row.top-dashboard .card-body.user-info-text > div{
+    width: 44vh;
+}
+.fiction-container .card-body,.card-body.user-inbformation-conter, .profil-user-card .avatar-container,
+.dashboard-max-card-container.card-height.fiction-container .card-body, .dashboard-max-card-container.card-height .card-body{
+    height: 80vh;
+}
+.rating, .button-validate-container .btn.btn-primary, .dashboard-home-max-card-container .avatar-container{
+    height: 5vh;
+}
+.rating {
+    width: 16vh;
+}
+.rating svg {
+    width: 1vh;
+    height: 3vh
+}
+.character-illustration-container{
+    width: 10vh;
+}
+.title-text-novel p{
+    width: 29vh;
+}
+.title-text-novel p a{
+    width: 26vh;
+}
+.informations-gamer-container {
+    height: 45vh;
+}
+.profil-user-card {
+    height: 85vh;
+}
+.character-container {
+    height: 86vh;
+}
+.character-details-chatper.card.mb-3.fiction-container {
+    height: 95vh;
+}
 /* en REM */
 .character-card.card, .list-all-fictions-globale--container.three-last-chapters-container {
     width: 20rem;    
@@ -154,42 +216,16 @@
 .parallax-container {
     height: 400px;
 }
-.card-image img.image-book{
-    height: 30vh;
-}
+
 .row.list-quest-card-container{
     height: 35rem;
 }
 .table.table-borderless{
     width: 25rem;
 }
-#original-characters-list .card-group {
-    width: 24vh;
-}
-#original-characters-list .card.individual-character-card{
-    height: 30vh;
-}
 .avatar-gamer{
     width: 200px;
     height: 150px;
-}
-#original-characters-list{
-    height: 87vh;
-}
-.clan-detail-layout .card-image img{
-    width: 17vh;
-}
-.fiction-globale-container ul{
-    width: 50vh;
-}
-.row.top-dashboard .card-body > div{
-    width: 42vh;
-}
-.row.top-dashboard .all-my-oc-card .card-body > div{
-    width: 20vh;
-}
-.row.top-dashboard .card-body.user-info-text > div{
-    width: 44vh;
 }
 .character-l1{
     width: 110px;
@@ -206,43 +242,8 @@
 .parallax-layer {
     height: 100%;
 }
-.fiction-container .card-body,.card-body.user-inbformation-conter, .profil-user-card .avatar-container,
-.dashboard-max-card-container.card-height.fiction-container .card-body, .dashboard-max-card-container.card-height .card-body{
-    height: 80vh;
-}
-.rating, .button-validate-container .btn.btn-primary, .dashboard-home-max-card-container .avatar-container{
-    height: 5vh;
-}
-.rating {
-    width: 16vh;
-}
-.rating svg {
-    width: 1vh;
-    height: 3vh
-}
-.character-illustration-container{
-    width: 10vh;
-}
-.title-text-novel p{
-    width: 29vh;
-}
-.title-text-novel p a{
-    width: 26vh;
-}
 .summmary-book-height-dashboard{
   height: 11rem;
-}
-.informations-gamer-container {
-    height: 45vh;
-}
-.profil-user-card {
-    height: 85vh;
-}
-.character-container {
-    height: 86vh;
-}
-.character-details-chatper.card.mb-3.fiction-container {
-    height: 95vh;
 }
 .title-dashboard-container-header {
     height: 6rem;
