@@ -150,6 +150,127 @@
 .character-details-chatper.card.mb-3.fiction-container {
     height: 95vh;
 }
+.character-details .card-body {
+    height: 90.5vh;
+}
+.welcome-dashboard-container{
+    width: 188vh;
+}
+.all-characters-container-card {
+    width: 173vh;
+}
+.avatar-container {
+    height: 8vh;
+}
+.opacity-container, .illustration-background .background-fiction-contain{
+    height: 77vh;
+}
+.all-characters-list-containers{
+    width: 90vh;
+    height: 50vh;
+}
+.all-characters-list-containers .row{
+    height: 40vh;
+}
+.clan-detail-layout .card-header .row{
+    width: 120vh;
+}
+.clan-detail-layout .card-header img{
+    width: 10vh;
+    height: 10vh;
+}
+.create-character-form,
+.card-form-create-character .card-body{
+    width: 100%;
+    height: 77vh;
+}
+.create-character-form .text-area-container{
+    height: 30rem;
+}
+.create-character-form > div:nth-child(2),
+.bottom-dashboard-levele-one .card{
+    height: 40vh;
+}
+.h5-container{
+    height: 9vh;
+    width: 30vh;
+}
+.image-book{
+    width: 25vh;
+    height: 30vh;
+}
+.user-info-text img{
+    width: 14vh; 
+}
+.image-fiction-container-background{
+    height: 15vh;
+}
+.fiction-summary-card{
+    width: 44vh;
+    height: 15vh;
+}
+.height-all-fictions-container{
+    height: 70vh;
+}
+.game-container img{
+    width: 6vh;
+}
+.rond-character-background{
+    width: 12vh;
+    height: 12vh;
+}
+.all-characters-by-user-container .card{
+    height: 33vh;
+}
+.card.location-clan-background-width-container{
+    width: 24vh;
+    height: 31vh;
+}
+.card.individual-character-card{
+    height: 45vh;
+}
+.all-fictions-container-global{
+    height: 95vh;
+}
+.avatar-container, .profil-user-card .avatar-container, .avatar-wrapper img  {
+    width: 10vh;
+}
+.avatar-wrapper{
+    width: 10vh;
+}
+.location-clan-background-width-container .btn.btn-primary{
+    width: 30vh;
+    max-width: 22vh;
+}
+.name-characatrer-link .btn{
+    height: 8vh;
+    width: 21vh;
+}
+.card-character-container{
+    height: 30vh;
+}
+.all-my-characters-container{
+    height: 110vh;
+}
+.fiction-container .card-header{
+    height: 13vh;
+}
+.card-form-create-character .card-body{
+    height: 77vh;   
+}
+.create-character-button .btn{
+    height: 5vh;
+}
+.card-form-create-character .card-header{
+    width: 185vh;
+}
+#original-character-global-container .flex-one .btn {
+    height: 7vh;
+}
+.illustration-background .background-fiction-contain{    
+    width: 183vh;
+}
+
 /* en REM */
 .character-card.card, .list-all-fictions-globale--container.three-last-chapters-container {
     width: 20rem;    
@@ -248,33 +369,18 @@
 .title-dashboard-container-header {
     height: 6rem;
 }
-.character-details .card-body {
-    height: 90.5vh;
-}
-.welcome-dashboard-container{
-    width: 188vh;
-}
 .title-dashboard-container-header img {
     width: 5%;
 }
 .title-dashboard-container-header .image-messenger-container img {
     width: 20%;
 }
-.all-characters-container-card {
-    width: 173vh;
-}
 .character-l1 img {
     width: 75%;
     height: 75%;
 }
-.avatar-container {
-    height: 8vh;
-}
 .illustration-background .background-fiction-contain{
     width: 100%;
-}
-.opacity-container, .illustration-background .background-fiction-contain{
-    height: 77vh;
 }
 .all-characters-of-fiction{
     width: 14rem;
@@ -282,34 +388,8 @@
 .illustration-background .background-fiction-contain .characters-list-container img{
     width: 150px;
 }
-.all-characters-list-containers{
-    width: 90vh;
-    height: 50vh;
-}
-.all-characters-list-containers .row{
-    height: 40vh;
-}
-.clan-detail-layout .card-header .row{
-    width: 120vh;
-}
-.clan-detail-layout .card-header img{
-    width: 10vh;
-    height: 10vh;
-}
 .card-body.last-chapter-card.text-white{
     height: 30rem;
-}
-.create-character-form,
-.card-form-create-character .card-body{
-    width: 100%;
-    height: 77vh;
-}
-.create-character-form .text-area-container{
-    height: 30rem;
-}
-.create-character-form > div:nth-child(2),
-.bottom-dashboard-levele-one .card{
-    height: 40vh;
 }
 .logo img{
     width: 55%;
@@ -317,67 +397,26 @@
 .row.list-fiction-card-container{
     height: 38rem;
 }
-.h5-container{
-    height: 9vh;
-    width: 15.5rem;
-}
 .left-fiction-summary-container{
     width: 20rem;
 }
 .illustration-arc-container img{
     width: 100%;
 }
-.image-book{
-    width: 25vh;
-    height: 30vh;
-}
-.user-info-text img{
-    width: 14vh; 
-}
-.image-fiction-container-background{
-    height: 15vh;
-}
-.fiction-summary-card{
-    width: 44vh;
-    height: 15vh;
-}
-.height-all-fictions-container{
-    height: 70vh;
-}
 .mini-rond-messages{
     height: 2rem;
     width: 2rem;
 }
-.game-container img{
-    width: 6vh;
-}
 audio{
     width: 14rem;
-}
-.rond-character-background{
-    width: 12vh;
-    height: 12vh;
-}
-.all-characters-by-user-container .card{
-    height: 33vh;
 }
 .image-width{
     width: 45%;
     height: 45%;
 }
-.card.individual-character-card{
-    height: 45vh;
-}
-.card.location-clan-background-width-container{
-    width: 24vh;
-    height: 31vh;
-}
 .mini-rond-avatar-image{
     width: 70px;
     height: 70px;
-}
-.all-fictions-container-global{
-    height: 95vh;
 }
 .row.bottom-dashboard-levele-one .card-header > div{
     width: 100%;
@@ -386,19 +425,9 @@ audio{
 .info-original-character-height{
     height: 19rem;
 }
-.avatar-container, .profil-user-card .avatar-container, .avatar-wrapper img  {
-    width: 10vh;
-}
-.avatar-wrapper{
-    width: 10vh;
-}
 .edit-overlay {
     width: 40px;
     height: 40px;
-}
-.location-clan-background-width-container .btn.btn-primary{
-    width: 30vh;
-    max-width: 22vh;
 }
 .character-list-wrapper .card-body{
     height: 5rem;
@@ -406,37 +435,9 @@ audio{
 .card-body.all-last-three-fictions-container .list-all-fictions-globale--container{
     width: 20rem;
 }
-.name-characatrer-link .btn{
-    height: 8vh;
-    width: 21vh;
-}
-.card-character-container{
-    height: 30vh;
-}
 .create-chapter-btn-container .btn, .select-character-container .form-check {
     width: 15rem;
 }
 .quest-button-text .btn.btn-primary {
     width: 10rem;
-}
-.all-my-characters-container{
-    height: 110vh;
-}
-.fiction-container .card-header{
-    height: 13vh;
-}
-.card-form-create-character .card-body{
-    height: 77vh;   
-}
-.create-character-button .btn{
-    height: 5vh;
-}
-.card-form-create-character .card-header{
-    width: 185vh;
-}
-#original-character-global-container .flex-one .btn {
-    height: 7vh;
-}
-.illustration-background .background-fiction-contain{    
-    width: 183vh;
 }
