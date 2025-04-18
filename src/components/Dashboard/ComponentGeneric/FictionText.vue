@@ -1,6 +1,6 @@
 <template>
   <div
-    class="summaray-title-text flex-one display-flex-column align-items-content-justify-content"
+    class="summaray-title-text flex-one display-flex-column"
   >
     <p>
       <span

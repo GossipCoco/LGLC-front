@@ -51,7 +51,7 @@
     </div>
     <div class="row middle-separator">
       <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <separator v-bind:Title="'Nos jeux'" />
+        <separator v-bind:Title="'Nos jeux & vos créations'" />
       </div>
     </div>      
     <div class="row bottom-dashboard-levele-three">

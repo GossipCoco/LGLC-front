@@ -162,7 +162,10 @@ th {
     margin-top: 1rem;
 }
 .row.bottom-dashboard-levele-one {
-    margin: 0.75rem -1rem 1rem -2rem;
+    margin: 0.75rem -1rem 0rem -2rem;
+}
+.row.middle-separator{
+    margin: 0;
 }
 .row.bottom-left-dashboard{
     margin: 1rem 0 0 -0.75rem;

@@ -237,10 +237,21 @@
 .all-fictions-container-global{
     height: 95vh;
 }
-.avatar-container, .profil-user-card .avatar-container, .avatar-wrapper img  {
+.welcome-dashboard-container .avatar-container{
+    height: 14vh;
+}
+.welcome-dashboard-container img.mini-rond-avatar-image{
+    width: 8vh;
+    height: 8vh;
+}
+ .profil-user-card .avatar-container {
     width: 10vh;
 }
-.avatar-wrapper{
+.dashboard-card-header .avatar-wrapper img  {
+    width: 8vh;
+    height: 8vh;
+}
+.dashboard-card-header .avatar-wrapper{
     width: 10vh;
 }
 .location-clan-background-width-container .btn.btn-primary{
@@ -271,7 +282,26 @@
 .illustration-background .background-fiction-contain{    
     width: 183vh;
 }
-
+.select-message-container .card-body{
+    height: 40vh;
+}
+.avatar-avatar-card-container{
+    height: 12vh;
+}
+.avatar-avatar-card-container .avatar-container {
+    width: 14vh;
+    height: 14vh;
+}
+.avatar-avatar-card-container .avatar-container .avatar-wrapper {
+    width: 12vh;
+}
+.avatar-avatar-card-container .avatar-container .avatar-wrapper img{
+    width: 12vh;
+    height: 12vh;
+}
+.user-info-text .row.avatar-row{
+    height: 15vh;
+}
 /* en REM */
 .create-character-form .text-area-container{
     height: 30rem;

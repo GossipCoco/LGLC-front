@@ -6,7 +6,7 @@
         />    
       <div class="card-body easy-action-container">
         <div class="display-flex-column flex-one">
-        <router-link to="/CharacterCreate" type="button" class="btn btn-primary">
+        <router-link to="/CreateAnOriginalCharacter" type="button" class="btn btn-primary">
           Créer un nouveau personnage
         </router-link>
         <router-link type="button" class="btn btn-primary" to="/createANewFiction">Créer une nouvelle fiction</router-link>

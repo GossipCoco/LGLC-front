@@ -7,6 +7,11 @@
           v-bind:type="'username'"
         />
         <div class="card-body user-info-text">
+          <div class="row avatar-row">
+            <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 avatar-avatar-card-container display-flex align-items-content-justify-content">
+              <ImageRondDashboard v-bind:src="'/images/Avatars/' + Avatar" v-bind:alt="Avatar" v-bind:classe="'card-img-top mini-rond-avatar-image'" v-bind:edit="true"/>
+            </div>
+          </div>
           <role-level
             v-bind:NameRole="NameRole"
             v-bind:Image="level.Image"
@@ -30,6 +35,7 @@
 import TitleHeaderDashboard from "../../Components/SpecificComponent/TitleHeaderDashboard.vue";
 import RoleLevel from "../ComponentGeneric/RoleLevel.vue";
 import UserInformation from "../ComponentGeneric/UserInformation.vue";
+import ImageRondDashboard from "../../Components/SpecificComponent/ImageRondDashboard.vue"
 export default {
   name: "AvatarCard",
   props: [
@@ -48,7 +54,7 @@ export default {
     "gamer",
     "NbOCs",
   ],
-  components: { TitleHeaderDashboard, RoleLevel, UserInformation },
+  components: { TitleHeaderDashboard, RoleLevel, UserInformation, ImageRondDashboard },
   data() {
     return {
       avatar: this.Avatar,
