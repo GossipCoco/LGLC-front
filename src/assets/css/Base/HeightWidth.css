@@ -22,7 +22,9 @@
 .all-characters-by-user-container, .book-containe{
     height: 75vh;
 }
-#one-book-container-wrapper .row, .character-container-global, .card-form-create-character .card-header {
+#one-book-container-wrapper .row,
+.character-container-global,
+.card-form-create-character .card-header {
     width: 185vh;
 }
 .card-character-container,#all-characters-container-card .character-card.card,
@@ -70,7 +72,8 @@
     width: 95rem;
 }
 .profil-user-card.card .avatar-container img, .h5-container, 
-.location-clan-background-width-container .btn.btn-primary, .clan-card {
+.location-clan-background-width-container .btn.btn-primary, .clan-card,
+.table.table-borderless {
     width: 30vh;
 }
 .profil-user-card.card .avatar-container img, .clan-card, .card-image img.image-book,
@@ -337,9 +340,7 @@
 #accueil header {
     height: 14vh;
 }
-.table.table-borderless{
-    width: 30vh;
-}
+
 /* en REM */
 .create-character-form .text-area-container{
     height: 30rem;

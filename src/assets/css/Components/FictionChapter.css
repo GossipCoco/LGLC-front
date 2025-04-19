@@ -41,9 +41,9 @@ th {
     font-weight: 600;
     font-family: 'Montserrat';
 }
-.title-author-container{
+/* .title-author-container{
     margin: 2rem 0 0 0;
-}
+} */
 .card-header.fiction-chapter-container h3 {
     margin-left: 2rem;
     font-variant: small-caps;
