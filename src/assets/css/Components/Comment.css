@@ -61,7 +61,6 @@
 .Comment-icon img{
   transform: scale(.3);
 }
-
 .Comment-icon > div > div.flex-one.display-flex-column{
   margin: -2rem 0 0 0;
 }
