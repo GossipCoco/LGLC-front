@@ -92,10 +92,7 @@ h1.card-title {
   color: rgba(var(--ternary-green), 1)
 }
 .character-illustration-container{
-  border-radius: 100%;
-  background-position: 50%;
-  border: 4px solid rgba(var(--clear-green-02), 1);
-}
+  background-position: 50%;}
 h5.card-title {
   font-size: 1.5em;
 }
