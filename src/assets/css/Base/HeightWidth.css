@@ -178,9 +178,9 @@
     height: 77vh;
 }
 .all-characters-list-containers{
-    width: 90vh;
-    height: 50vh;
+    width: 112vh;
 }
+.all-characters-list-containers,
 .all-characters-list-containers .row{
     height: 40vh;
 }
@@ -303,6 +303,10 @@
 }
 .user-info-text .row.avatar-row{
     height: 15vh;
+}
+.btn.btn-primary.btn-character-in-clan-detail{
+    width: auto;
+    height: 8vh;
 }
 /* en REM */
 .create-character-form .text-area-container{

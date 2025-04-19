@@ -12,7 +12,7 @@
         <router-link
           :to="'/characterDetails/' + character.Character.CurrentName"
           type="button"
-          class="btn btn-primary"
+          class="btn btn-primary btn-character-in-clan-detail"
         >
           {{ character.Character.CurrentName }}
         </router-link>

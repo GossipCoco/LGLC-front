@@ -31,18 +31,12 @@
 .card.location-clan-background-width-container{
     border-radius: 100% 100% 8% 8%;
 }
-.avatar-container,
-.profil-user-card .avatar-container  {
+.avatar-container,  .profil-user-card .avatar-container,
+.mini-rond-avatar-image, .edit-overlay  {
     border-radius: 50%;
 }
 .dashboard-card-header .avatar-wrapper img {
     border: 4px solid rgba(var(--active-hover), 1);
-}
-.mini-rond-avatar-image{
-    border-radius: 50%;
-}
-.edit-overlay{
-    border-radius: 50%;
 }
 .btn:first-child:active{
     border-color: rgb(var(--dark-green-01), 1);
@@ -50,19 +44,20 @@
 #all-characters-container-card .character-card.card {
     border-radius: 8rem 8rem 1rem 1rem;
 }
-.clan-card {
-    border-radius: 70% 70% 0 0;
+.clan-card, .character-card.card .card-image {
     border: 6px solid rgba(var(--middle-green-02), 1);
 }
+.clan-card {
+    border-radius: 70% 70% 0 0;
+}
 .image-illustration-right{
-    border-radius: 20% 0 0 20%;
+    border-radius: 50% 0 0 50%;
     border : 1rem solid rgba(var(--clear-green-01), 1);
 }
 .character-card.card .card-image {
     border-radius: 100% 100% 0 0;
-    border: 6px solid rgba(var(--clear-green-02), 1);
 }
-.card.card-image-layout.clan-detail-layout.mb-3 {
+.card.card-image-layout.clan-detail-layout {
     border-radius: 20px 0 0 20px;
 }
 .fiction-card .card-header {
