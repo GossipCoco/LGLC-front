@@ -1,8 +1,11 @@
 import http from '../http/http-common'
 
 class ClanService {
-    getAllClans() {
-        return http.get('/clan')
+    countAllClans(){
+        return http.get('/clan/countAllClans')
+    }
+    getAllClans(data) {
+        return http.post('/clan', data)
     }
     getClanByName(id){
         return http.get(`/clan/${id}`);
@@ -10,8 +13,8 @@ class ClanService {
     getLocationById(id){
         return http.get(`/clan/Location/${id}`);
     }
-    GetAllLocations() {
-        return http.get('/clan/Location/GetAllLocations')
+    GetAllLocations(nav) {
+        return http.post('/clan/Location/GetAllLocations', nav)
     }
     GetLocationById(id){
         console.log(id)

@@ -69,7 +69,8 @@
 .card.card-image-layout.clan-detail-layout.mb-3 .card-image-layout {
     width: 95rem;
 }
-.profil-user-card.card .avatar-container img, .h5-container, .location-clan-background-width-container .btn.btn-primary {
+.profil-user-card.card .avatar-container img, .h5-container, 
+.location-clan-background-width-container .btn.btn-primary, .clan-card {
     width: 30vh;
 }
 .profil-user-card.card .avatar-container img, .clan-card, .card-image img.image-book,
@@ -201,7 +202,6 @@
 .h5-container{
     height: 9vh;
 }
-
 .user-info-text img{
     width: 14vh; 
 }
@@ -240,7 +240,6 @@
     width: 8vh;
     height: 8vh;
 }
-
 .dashboard-card-header .avatar-wrapper img  {
     width: 8vh;
     height: 8vh;
@@ -264,7 +263,6 @@
 .card-form-create-character .card-body{
     height: 77vh;   
 }
-
 #original-character-global-container .flex-one .btn {
     height: 7vh;
 }
@@ -289,8 +287,6 @@
     width: 14vh;
     height: 8vh;
 }
-
-
 /* NavNar en Vh */
 .menu-left.menu-hidden.d-flex.flex-column.flex-shrink-0.p-3 {
     width: 15vh;
@@ -327,7 +323,6 @@
     height: 15vh;
     width: 214vh;
 }
-
 .row-filter{
     height: 8vh;
 }
@@ -505,9 +500,10 @@ audio{
 }
 .clans-location-container .gap-2 {
     width: 0;
-}.header-container.container {
+}
+.header-container.container {
     max-width: 100%;
-  }
+}
 @media (max-width: 1400px) {
     .menu-left {
         width: 150px;
