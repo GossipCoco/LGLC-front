@@ -17,9 +17,9 @@
 .image-book{
     border-radius: 20px;
 }
-.icon-menu-container,.avatar-navabar img,
-.user-info-text img,.mini-rond-messages, .rond-character-background,
-.dashboard-card-header .avatar-wrapper img, .title-dashboard-container-header img {
+.icon-menu-container, .avatar-navabar img, .rond-character-background,
+.user-info-text img,.mini-rond-messages, .dashboard-card-header .avatar-wrapper img,
+.title-dashboard-container-header img, .character-illustration-container, .message__avatar img  {
     border-radius: 100%;
 }
 .image-fiction-container-background{
@@ -119,12 +119,31 @@
     border: 1px solid rgba(var(--dark-green-01),1);
 }
 .character-illustration-container{
-    border-radius: 100%;
     border: 4px solid rgba(var(--clear-green-02), 1);
 }  
 .message__bubble {
     border-radius: 10px;
 }
-.message__avatar img {
+.dice .face {
+    border: 2px solid rgba(var(--main-black), 1);
+}
+/* Fiction chapter */
+.image-fiction-container {
+    border-radius: 12px;
+}
+.dashboard-max-card-container {
+    border-radius: 10px;
+}
+#book-container.dashboard-max-card-container {
+    border-radius: 10px;
+}
+.chapter-image-content {
+    border-radius: 1rem 0 0 1rem;
+}
+.chapter-text-content {
+    border-radius: 0 3rem 3rem 0;
+}
+.rond-image-illustration img {
     border-radius: 100%;
+    border: 4px solid rgba(var(--active-hover), 1);
 }
