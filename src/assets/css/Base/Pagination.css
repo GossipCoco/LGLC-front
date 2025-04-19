@@ -15,7 +15,6 @@
     background-color: rgba(var(--dark-green-01), 1);
     width: 9rem;
     height: 5vh;
-    border-radius: 0.25rem;
     vertical-align: middle;
     padding: 0.65rem 0;
     margin: -5rem 0 0 0;
@@ -55,12 +54,10 @@
 }
 .pagination .page-link{
     background-color: rgba(var(--dark-green-01),1);
-    border: 1px solid rgba(var(--dark-green-01),1);
     color: rgba(var(--main-white),1)
 }
 .pagination .page-link:hover{
     background-color: rgba(var(--clear-green-01),1);
-    border: 1px solid rgba(var(--clear-green-01),1);
     color: rgba(var(--active-hover),1)
 }
 .pagination li{
@@ -69,7 +66,6 @@
 .row.pagination-container-row{
     margin: -3rem 0 0 0;
 }
-
 .list-all-characters-container .row.pagination-container-row{
     margin: 3rem 0 0 0;
 }
