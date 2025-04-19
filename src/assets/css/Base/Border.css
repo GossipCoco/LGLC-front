@@ -103,3 +103,21 @@
 .illustration-background .background-fiction-contain, .opacity-container{
     border-radius: 20px;
 }
+.form-control-dark {
+    border-color: var(--bs-gray);
+}
+.form-control-dark:focus {
+    border-color: rgba(var(--main-black), 1);
+}
+.menu-left {
+    border-top-right-radius: 0 0;
+    border-top-left-radius: 8px 8px;
+    border-bottom-right-radius: 8px 8px;
+    border-bottom-left-radius: 8px 8px;
+}
+.icon-menu-container {
+    border-radius: 100%;
+}
+.avatar-navabar img {
+    border-radius: 100%;
+}
