@@ -121,4 +121,10 @@
 .character-illustration-container{
     border-radius: 100%;
     border: 4px solid rgba(var(--clear-green-02), 1);
-  }
+}  
+.message__bubble {
+    border-radius: 10px;
+}
+.message__avatar img {
+    border-radius: 100%;
+}
