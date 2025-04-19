@@ -123,9 +123,20 @@
 .margin-bottom-1-rem{
     margin: 0 0 1rem 0;
 }
-.row.bottom-dashboard-levele-one-level-two{
-    margin: 1rem;
-}
 .dashboard-max.flex-one.card.display-flex-column.height-100.background-color-main-lineart.margin-3-rem{
     overflow-y: auto;
+}
+.title-text-novel > p{
+    margin: 0;
+}
+.card-body.all-last-three-fictions-container{
+    padding: 0 0 0 0;
+    margin: -1rem 0 0 0;
+}
+.btn-all-my-fictions{
+    display: flex;;
+    align-content: end;
+    align-items: flex-end;
+    text-align: left;
+    margin: 0 0 0.5rem 53vh;
 }

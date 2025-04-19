@@ -1,8 +1,11 @@
 <template>
   <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 card-global">
     <div class="card background-lineart border-none fiction-card">      
-      <TitleHeaderDashboard v-bind:title="'Mes 3 dernières fictions'" v-bind:type="'fictions'" v-bind:route="'/createANewFiction'" v-bind:nameRoute="'Nouvelle fiction'"/>
+      <TitleHeaderDashboard v-bind:title="'Mes 4 dernières fictions'" v-bind:type="'fictions'" v-bind:route="'/createANewFiction'" v-bind:nameRoute="'Nouvelle fiction'"/>
       <div class="card-body all-last-three-fictions-container display-flex-column align-items-content-justify-content">
+        <div class="btn-all-my-fictions">
+          <router-link class="btn btn-primary" :to="'allFictions/'+usrId">Mes fictions</router-link>
+        </div>
         <div v-for="(game, index) in GamesAndFictions" :key="index">
           <div v-for="(fiction, index) in game.Fiction" :key="index" class="display-flex-row list-all-fictions-globale--container">
             <ImageRondDashboard v-bind:src=" fiction.Image" v-bind:alt="fiction.Image" />
@@ -12,10 +15,11 @@
                   {{ fiction.Title }}
                 </router-link>
               </p>
-              <div v-html="truncateText(fiction.Summary, 90)" class="text-white text-align-justify poppins-text"></div>
+              <div v-html="truncateText(fiction.Summary, 50)" class="text-white text-align-justify poppins-text"></div>
             </div>
           </div>
-        </div>        
+        </div>
+        
       </div>
     </div>
   </div>

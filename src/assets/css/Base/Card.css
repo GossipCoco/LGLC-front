@@ -107,9 +107,6 @@
 .dashboard-home-max-card-container .avatar-container {
     margin-top: -1.5rem;
 }
-.form-profil-user-card {
-    margin-top: 3rem;
-}
 .character-details .col-md-4 {
     padding-top: 3vh;
 }
@@ -125,7 +122,8 @@
     font-variant: small-caps;
 }
 .card-group.clan-group .card, .avatar-gamer, .quest-container,
-.summary-container, #quest-by-id, #quest-by-id .quest-by-id-card.card.quest-by-id-card.background-color-main-lineart {
+.summary-container, #quest-by-id, #quest-by-id .quest-by-id-card.card.quest-by-id-card.background-color-main-lineart,
+.row.bottom-dashboard-levele-one-level-two {
     margin: 1rem;
 }
 .row.bottom-dashboard-levele-one .card.last-book-container{
