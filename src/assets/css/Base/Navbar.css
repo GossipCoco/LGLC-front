@@ -39,9 +39,7 @@
   margin-top: -0.5rem
 }
 #navbarCollapse {
-  margin-left: 55rem;
-  justify-content: right;
-  margin-right: -55rem;
+  margin: 3vh 0 0 180vh;
 }
 .nav-item a {
   font-size: 18px;
@@ -157,7 +155,7 @@ ul {
 .logo-accueil-container{
     flex: 1;
     padding: 0;    
-    margin: -2rem 0 0 -12rem;
+    margin: -7vh 0 0 -29vh;
 }
 #accueil .navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark{
   padding: 0;

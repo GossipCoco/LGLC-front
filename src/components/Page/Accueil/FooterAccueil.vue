@@ -39,7 +39,7 @@
           </ul>
         </div>
       </div>
-      <p class="text-center text-body-secondary">&copy; 2024 GossipCoco</p>
+      <p class="text-center text-body-secondary">&copy; {{ currentYear }} GossipCoco</p>
     </div>
     
   </footer>
@@ -47,5 +47,10 @@
 <script>
 export default {
   name: "FooterAccueil",
+  data() {
+    return {
+      currentYear: new Date().getFullYear()
+    }
+  }
 };
 </script>

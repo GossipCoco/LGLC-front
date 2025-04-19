@@ -90,7 +90,6 @@ h2{
     background-color: rgba(var(--main-black), 1);
 }
 #accueil header {
-    height: 11rem;
     background-color: rgba(var(--main-black), 1);
   }
 #accueil .accueil-header {
@@ -189,7 +188,7 @@ h2{
     text-align: justify;
 }
 #accueil .navbar-brand img {
-    margin: 0 0 0 -2rem;
+    margin: 3rem 0 0 13rem;
 }
 #accueil .image-accueil .image-one {
     animation: slideInRight 2s ease-out;

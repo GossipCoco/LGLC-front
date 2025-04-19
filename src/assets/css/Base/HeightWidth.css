@@ -324,7 +324,7 @@
   width: 14vh;
 }
 #navbarCollapse {
-    height: 5rem;
+    height: 14vh;
     width: 90vh;
 }
 .menu-left ul{
@@ -338,7 +338,7 @@
     height: 6vh;
 }
 .navbar>.container-fluid {
-    height: 25vh;
+    height: 15vh;
 }
 .avatar-navabar {
     width: 6vh;
@@ -355,11 +355,11 @@
     height: 18vh;
 }
 #accueil .navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark{
-    height: 24vh;
+    height: 15vh;
     width: 214vh;
 }
 #accueil .navbar-brand img {
-    width: 35%;
+    width: 50vh;
 }
 .row-filter{
     height: 8vh;
@@ -368,7 +368,9 @@
     height: 13vh;
     width: 188vh;
 }
-
+#accueil header {
+    height: 14vh;
+}
 /* en REM */
 .create-character-form .text-area-container{
     height: 30rem;
