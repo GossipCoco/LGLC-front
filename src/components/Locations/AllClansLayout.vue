@@ -89,9 +89,9 @@ export default {
     async ClanPagination(page) {
       this.nav.current = page;
       if (window.innerWidth >= this.width) {
-        this.nav.step = 8;
+        this.nav.step = 12;
       } else {
-        this.nav.step = 4;
+        this.nav.step = 8;
       }
       await this.getAllClans(this.nav);
     },
