@@ -87,6 +87,9 @@
 .pagination-container{
     margin-top: -4rem;
 }
+.pagination-container.all-clans-pagination-container{
+    margin-top: 2rem;
+}
 .all-fictions-container-global .pagination-container{
     margin: -1rem 0 0 0;
 }

@@ -55,7 +55,7 @@
   color: rgba(var(--clear-green-01), 1);
 }
 .menu-left ul {
-  padding: 0 0 0 8vh;
+  padding: 0 0 0 10vh;
 }
 .menu-left ul li {
   margin: 0.5rem 0 0 -7rem
