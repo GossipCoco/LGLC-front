@@ -8,7 +8,6 @@
     position: relative;
     width: 800px; /* Same as mapSize width */
     height: 600px; /* Same as mapSize height */
-    border: 1px solid #000;
   }
   
   #goose-game   .game-map {
@@ -20,7 +19,6 @@
     position: absolute;
     width: 50px; /* Same as gridSize */
     height: 50px; /* Same as gridSize */
-    border: 1px solid rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
   }
   
@@ -96,7 +94,5 @@
 .preview-image {
   max-width: 200px; /* Taille maximale de l'image de prévisualisation */
   height: auto;
-  border: 1px solid #ddd;
-  border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }

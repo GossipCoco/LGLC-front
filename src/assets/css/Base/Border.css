@@ -147,3 +147,27 @@
     border-radius: 100%;
     border: 4px solid rgba(var(--active-hover), 1);
 }
+/* Jeu de l'Oie */
+
+#goose-game .game-map-container {
+    border: 1px solid rgba(var(--main-black), 1);
+}
+#goose-game  .game-square {
+    border: 1px solid rgbargba(var(--main-black), 0.2);
+}
+.preview-image {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+#quest-by-id .quest-details, #quest-by-id .interactive-elements .clickable  {
+    border-radius: 8px;
+}
+.bubble-dialog {
+    border-radius: 15px;
+}
+.bubble-dialog:after {
+    border-width: 0 100px 100px 0;
+    border-style: solid;
+    border-color: rgba(var(--main-white), 1) transparent;
+    
+}

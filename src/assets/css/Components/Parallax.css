@@ -68,7 +68,6 @@
   z-index: 5;
   background-color: rgba(var(--main-white), 0.8);
   padding: 0.05rem 1rem;
-  border-radius: 8px;
   text-align: center;
 }
 #quest-by-id .interactive-elements .clickable {
@@ -76,7 +75,6 @@
   padding: 0.5rem 1rem;
   background-color: rgba(var(--main-white), 0.5);
   color: rgba(var(--main-white), 1);
-  border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -133,7 +131,6 @@
 .bubble-dialog {
   position: relative;
   background: rgba(var(--main-white), 1);
-  border-radius: 15px;
   padding: 15px;
   max-width: 300px;
   text-align: center;
@@ -143,11 +140,7 @@
   content: '';
   position: absolute;
   bottom: 80px;
-  left: -30px;
-  border-width: 0 100px 100px 0;
-  border-style: solid;
-  border-color: rgba(var(--main-white), 1) transparent;
-  transform: rotate(45deg);
+  left: -30px;transform: rotate(45deg);
 }
 img.key-object-img {
   position: relative;
