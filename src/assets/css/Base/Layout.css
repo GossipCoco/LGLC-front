@@ -135,8 +135,6 @@
 }
 .btn-all-my-fictions{
     display: flex;;
-    align-content: end;
-    align-items: flex-end;
     text-align: left;
     margin: 0 0 0.5rem 53vh;
 }

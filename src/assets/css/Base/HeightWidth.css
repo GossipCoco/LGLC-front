@@ -58,8 +58,12 @@
     width: 23vh;
 }
 .card.card-image-layout.clan-detail-layout.mb-3,
-.card.card-image-layout.clan-detail-layout.mb-3 .row.g-0 {
+.card.card-image-layout.clan-detail-layout.mb-3 .row.g-0,
+.welcome-dashboard-container, .list-all-characters-container .row-filter {
     width: 188vh;
+}
+.card.card-image-layout.clan-detail-layout.mb-3,
+.card.card-image-layout.clan-detail-layout.mb-3 .row.g-0 {
     height: 94vh;
 }
 .card.card-image-layout.clan-detail-layout.mb-3 .card-image-layout {
@@ -68,7 +72,10 @@
 .profil-user-card.card .avatar-container img, .h5-container, .location-clan-background-width-container .btn.btn-primary {
     width: 30vh;
 }
-.profil-user-card.card .avatar-container img {
+.profil-user-card.card .avatar-container img, .clan-card, .card-image img.image-book,
+#original-characters-list .card.individual-character-card,
+.clan-detail-layout .card-body .text-align-justify.poppins-text,
+.image-book, .card-character-container{
     height: 30vh;
 }
 .dashboard-home-max-card-container .avatar-container {
@@ -94,22 +101,14 @@
 .row.bottom-dashboard-levele-one .card.random-characters-card{
     height: 48vh;
 }
-.character-details {
+.illustration-background .background-fiction-contain, .character-details{    
     width: 183vh;
+}
+.character-details {
     height: 95vh;
-}
-.clan-card {
-    width: 30vh;
-    height: 30vh;
-}
-.card-image img.image-book{
-    height: 30vh;
 }
 #original-characters-list .card-group {
     width: 24vh;
-}
-#original-characters-list .card.individual-character-card{
-    height: 30vh;
 }
 #original-characters-list{
     height: 87vh;
@@ -117,7 +116,7 @@
 .clan-detail-layout .card-image img{
     width: 17vh;
 }
-.fiction-globale-container ul{
+#accueil .navbar-brand img, .fiction-globale-container ul{
     width: 50vh;
 }
 .row.top-dashboard .card-body > div{
@@ -126,14 +125,14 @@
 .row.top-dashboard .all-my-oc-card .card-body > div{
     width: 20vh;
 }
-.row.top-dashboard .card-body.user-info-text > div{
+.row.top-dashboard .card-body.user-info-text > div, .fiction-summary-card{
     width: 44vh;
 }
 .fiction-container .card-body,.card-body.user-inbformation-conter, .profil-user-card .avatar-container,
 .dashboard-max-card-container.card-height.fiction-container .card-body, .dashboard-max-card-container.card-height .card-body{
     height: 80vh;
 }
-.rating, .button-validate-container .btn.btn-primary, .dashboard-home-max-card-container .avatar-container{
+.rating, .button-validate-container .btn.btn-primary, .dashboard-home-max-card-container .avatar-container, .create-character-button .btn{
     height: 5vh;
 }
 .rating {
@@ -142,9 +141,6 @@
 .rating svg {
     width: 1vh;
     height: 3vh
-}
-.character-illustration-container{
-    width: 10vh;
 }
 .title-text-novel p{
     width: 29vh;
@@ -167,9 +163,7 @@
 .character-details .card-body {
     height: 90.5vh;
 }
-.welcome-dashboard-container{
-    width: 188vh;
-}
+
 .all-characters-container-card {
     width: 173vh;
 }
@@ -193,24 +187,21 @@
     width: 8vh;
     height: 8vh;
 }
-.clan-detail-layout .card-body .text-align-justify.poppins-text{
-    height: 30vh;
-}
 .create-character-form,
 .card-form-create-character .card-body{
     width: 180vh;;
     height: 77vh;
 }
 .create-character-form > div:nth-child(2),
-.bottom-dashboard-levele-one .card{
+.bottom-dashboard-levele-one .card,
+.card.location-clan-background-width-container,
+.select-message-container .card-body{
     height: 40vh;
 }
 .h5-container{
     height: 9vh;
 }
-.image-book{
-    height: 30vh;
-}
+
 .user-info-text img{
     width: 14vh; 
 }
@@ -218,7 +209,6 @@
     height: 15vh;
 }
 .fiction-summary-card{
-    width: 44vh;
     height: 15vh;
 }
 .height-all-fictions-container{
@@ -236,7 +226,6 @@
 }
 .card.location-clan-background-width-container{
     width: 34vh;
-    height: 40vh;
 }
 .card.individual-character-card{
     height: 45vh;
@@ -251,14 +240,12 @@
     width: 8vh;
     height: 8vh;
 }
- .profil-user-card .avatar-container {
-    width: 10vh;
-}
+
 .dashboard-card-header .avatar-wrapper img  {
     width: 8vh;
     height: 8vh;
 }
-.dashboard-card-header .avatar-wrapper{
+.dashboard-card-header .avatar-wrapper, .character-illustration-container, .profil-user-card .avatar-container{
     width: 10vh;
 }
 .location-clan-background-width-container .btn.btn-primary{
@@ -267,9 +254,6 @@
 .name-characatrer-link .btn{
     height: 8vh;
     width: 21vh;
-}
-.card-character-container{
-    height: 30vh;
 }
 .all-my-characters-container{
     height: 110vh;
@@ -280,17 +264,9 @@
 .card-form-create-character .card-body{
     height: 77vh;   
 }
-.create-character-button .btn{
-    height: 5vh;
-}
+
 #original-character-global-container .flex-one .btn {
     height: 7vh;
-}
-.illustration-background .background-fiction-contain{    
-    width: 183vh;
-}
-.select-message-container .card-body{
-    height: 40vh;
 }
 .avatar-avatar-card-container{
     height: 12vh;
@@ -333,19 +309,12 @@
 .menu-level1 {
   height: 8vh;
 }
-.icon-menu-container {
+.icon-menu-container,.avatar-navabar, .avatar-navabar img {
     width: 6vh;
     height: 6vh;
 }
 .navbar>.container-fluid {
     height: 15vh;
-}
-.avatar-navabar {
-    width: 6vh;
-    height: 6vh;
-}.avatar-navabar img {
-    width: 6vh;
-    height: 6vh;
 }
 .li-level1 .collapse {
     width: 7.5rem;
@@ -358,15 +327,12 @@
     height: 15vh;
     width: 214vh;
 }
-#accueil .navbar-brand img {
-    width: 50vh;
-}
+
 .row-filter{
     height: 8vh;
 }
 .list-all-characters-container .row-filter{
     height: 13vh;
-    width: 188vh;
 }
 #accueil header {
     height: 14vh;
@@ -389,8 +355,7 @@
     height: 18rem;
 }
 .row.bottom-dashboard-levele-one .card.all-fictions-card,
-.row.bottom-dashboard-levele-one .card.game-container
-{
+.row.bottom-dashboard-levele-one .card.game-container{
     height: 43rem;
 }
 .summaray-title-text.flex-one.align-items-content-justify-content{
