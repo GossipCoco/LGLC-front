@@ -19,7 +19,6 @@
     position: absolute;
     width: 50px; /* Same as gridSize */
     height: 50px; /* Same as gridSize */
-    box-sizing: border-box;
   }
   
   #goose-game   .game-cat {

@@ -61,7 +61,6 @@
     position: absolute;
     width: 11px;
     height: 11px;
-    border-radius: 50%;
     background-color: rgba(var(--clear-green-02), 1);
     content: "";
     top: 50%;
@@ -80,12 +79,10 @@
     position: relative;
     z-index: 1;
     padding: 30px 30px 25px;
-    border-radius: 6px;
     margin-bottom: 15px;
     margin-top: 15px;
     -webkit-box-shadow: 0 0.25rem 1rem 0 rgba(var(--middle-green-02), 1);
     box-shadow: 0 0.25rem 1rem 0 rgba(var(--middle-green-02), 1);
-    border: 1px solid  rgba(var(--main-white), 1);
 }
 @media only screen and (max-width: 575px) {
     .single-timeline-area .single-timeline-content {
@@ -103,7 +100,6 @@
     flex: 0 0 30px;
     text-align: center;
     max-width: 30px;
-    border-radius: 50%;
     margin-right: 15px;
 }
 .single-timeline-area .single-timeline-content .timeline-icon i {

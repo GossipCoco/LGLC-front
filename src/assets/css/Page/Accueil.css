@@ -173,7 +173,6 @@ h2{
     vertical-align: middle;
     padding: 1rem;
     background-color: rgba(var(--dark-green-01), 0.25);
-    border-radius: 8px;
 }
 #accueil .image-row-second{
     display: flex;
@@ -243,7 +242,6 @@ h2{
 #accueil .accueil-image-one, #accueil .accueil-image-two, #accueil .accueil-image-tree{
     width: 400px;
     height: 400px;
-    border-radius: 50%;
 }
 #accueil .accueil-image-one, #accueil .accueil-image-tree{
     background-position: 50%;
@@ -277,7 +275,6 @@ h2{
     font-size: 1.5em;
     padding: 1rem;
     background-color: rgba(var(--dark-green-01), 0.25);
-    border-radius: 8px;
 }
  footer p{
     margin: -2rem 0 0 0;
