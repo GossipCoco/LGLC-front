@@ -1,6 +1,6 @@
 <template>
   <div
-    class="character-container overflowY-scroll overflowX-hidden clans-location-container"
+    class="character-container overflowX-hidden clans-location-container"
   >
     <div class="display-flex-row card-group clan-group">
       <div v-for="(clan, index) in clans" :key="index">

@@ -69,9 +69,8 @@
 }
 /* Character Details */
 .character-details {
-    margin: 0rem 1rem 0 2rem;
+    margin: 0rem 1rem 0 0;
     background: none;
-    perspective: 5rem;
 }
 .character-details.card .card-image img {
     overflow: hidden;
@@ -88,8 +87,9 @@
     margin: 0 0 1rem 1rem;
 }
 .clans-location-container {
-    margin: 1rem auto;
-    padding: 5rem 0 0 8rem;
+    margin: 0 auto;
+    padding: 2rem 0 0 4rem;
+    overflow-y: hidden;
 }
 .character-card.card .card-image {
     margin: 0.75rem 0 0 0;

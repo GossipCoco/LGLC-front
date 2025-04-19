@@ -51,7 +51,7 @@
     height: 44vh;
 }
 .border-card-color{
-    height: 87.5vh;
+    height: 88.5vh;
 }
 .character-card.card .card-image {
     height: 25vh;
@@ -102,11 +102,12 @@
 .row.bottom-dashboard-levele-one .card.random-characters-card{
     height: 48vh;
 }
-.illustration-background .background-fiction-contain, .character-details{    
+.illustration-background .background-fiction-contain{    
     width: 183vh;
 }
 .character-details {
     height: 95vh;
+    width: 190vh;
 }
 #original-characters-list .card-group {
     width: 24vh;
@@ -157,6 +158,9 @@
 }
 .character-container {
     height: 86vh;
+}
+.clans-location-container{
+    height: 92vh;
 }
 .character-details-chatper.card.mb-3.fiction-container {
     height: 95vh;
@@ -226,6 +230,7 @@
 }
 .card.location-clan-background-width-container{
     width: 34vh;
+    height: 35vh;
 }
 .card.individual-character-card{
     height: 45vh;
@@ -332,6 +337,9 @@
 #accueil header {
     height: 14vh;
 }
+.table.table-borderless{
+    width: 30vh;
+}
 /* en REM */
 .create-character-form .text-area-container{
     height: 30rem;
@@ -379,9 +387,7 @@
 .row.list-quest-card-container{
     height: 35rem;
 }
-.table.table-borderless{
-    width: 25rem;
-}
+
 .login-card .card-body{
     height: 15rem;
 }
@@ -436,6 +442,9 @@ audio{
 }
 .link-collapse {
     width: 6rem;
+}
+.row.pagination-zone-container, .row.pagination-container, .pagination-row-container{
+    width: 180vh;
 }
 /* % */
 .character-details.card .card-image img {

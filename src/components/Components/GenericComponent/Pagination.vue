@@ -2,7 +2,8 @@
   <div class="row pagination-zone-container display-flex align-items-content-justify-content vertical-align-middle">
     <div class="pagination-container-row col-lg-12 col-md-12 col-sm-12 col-xxl-12 col-xs-12">
       <div class="row pagination-container align-items-content-justify-content">
-        <div class="col-11 col-md-11 col-sm-11 col-xxl-11 col-xs-11 col-pagination-container align-items-content-justify-content">
+        <div class="col-md-2 col-sm-2 col-xl-2 col-xxl-2 col-xs-2"></div>
+        <div class="col-md-8 col-sm-8 col-xl-8 col-xxl-8 col-xs-8 col-pagination-container align-items-content-justify-content">
           <ul class="pagination" v-if="navPage.pages < 6">
             <li class="nav-btn-contain display-flex-row  flex-one">
               <button
@@ -246,7 +247,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-1 col-md-1 col-sm-1 col-xxl-2 col-xs-2">
+        <div class="col-md-2 col-sm-2 col-xl-2 col-xxl-2 col-xs-2">
           <div class="number-page-container align-items-content-justify-content display-flex-row">
             <p v-if="!nav.current" class="padding-1rem-0-0-0">Page : 1</p>
             <p v-else class="padding-1rem-0-0-0">Page : {{ nav.current + 1 }}</p>
