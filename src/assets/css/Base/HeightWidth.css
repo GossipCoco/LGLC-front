@@ -313,6 +313,62 @@
     width: 14vh;
     height: 8vh;
 }
+
+
+/* NavNar en Vh */
+.menu-left.menu-hidden.d-flex.flex-column.flex-shrink-0.p-3 {
+    width: 15vh;
+    height: 98vh;
+}
+.logo-container img {
+  width: 14vh;
+}
+#navbarCollapse {
+    height: 5rem;
+    width: 90vh;
+}
+.menu-left ul{
+    width: 11vh;
+}
+.menu-level1 {
+  height: 8vh;
+}
+.icon-menu-container {
+    width: 6vh;
+    height: 6vh;
+}
+.navbar>.container-fluid {
+    height: 25vh;
+}
+.avatar-navabar {
+    width: 6vh;
+    height: 6vh;
+}.avatar-navabar img {
+    width: 6vh;
+    height: 6vh;
+}
+.li-level1 .collapse {
+    width: 7.5rem;
+}
+.logo-accueil-container{
+    width: 18vh;
+    height: 18vh;
+}
+#accueil .navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark{
+    height: 24vh;
+    width: 214vh;
+}
+#accueil .navbar-brand img {
+    width: 35%;
+}
+.row-filter{
+    height: 8vh;
+}
+.list-all-characters-container .row-filter{
+    height: 13vh;
+    width: 188vh;
+}
+
 /* en REM */
 .create-character-form .text-area-container{
     height: 30rem;
@@ -413,6 +469,12 @@ audio{
 .quest-button-text .btn.btn-primary {
     width: 10rem;
 }
+.icon-menu-container img {
+    width: 1.25rem;
+}
+.link-collapse {
+    width: 6rem;
+}
 /* % */
 .character-details.card .card-image img {
     width: 75%;
@@ -476,4 +538,12 @@ audio{
 }
 .clans-location-container .gap-2 {
     width: 0;
+}.header-container.container {
+    max-width: 100%;
+  }
+@media (max-width: 1400px) {
+    .menu-left {
+        width: 150px;
+        height: 100%;
+    }
 }

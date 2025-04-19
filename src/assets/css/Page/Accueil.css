@@ -190,7 +190,6 @@ h2{
 }
 #accueil .navbar-brand img {
     margin: 0 0 0 -2rem;
-    width: 35%;
 }
 #accueil .image-accueil .image-one {
     animation: slideInRight 2s ease-out;
