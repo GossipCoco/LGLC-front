@@ -285,3 +285,6 @@ li.quest-container {
     display: flex;
     flex: 0.25;
 }
+.clan-detail-layout .card-body .text-align-justify.poppins-text{
+    overflow-y: scroll;
+}

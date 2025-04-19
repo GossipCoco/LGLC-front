@@ -42,7 +42,7 @@
     height: 90vh;
 }
 .clan-detail-layout .card-body {
-    height: 69.5vh;
+    height: 77vh;
 }
 .clan-detail-layout .card-body.location-clan-body {
     height: 77vh;
@@ -57,8 +57,10 @@
     height: 25vh;
     width: 23vh;
 }
-.card.card-image-layout.clan-detail-layout.mb-3,.card.card-image-layout.clan-detail-layout.mb-3 .row.g-0 {
-    width: 180vh;
+.card.card-image-layout.clan-detail-layout.mb-3,
+.card.card-image-layout.clan-detail-layout.mb-3 .row.g-0 {
+    width: 188vh;
+    height: 94vh;
 }
 .card.card-image-layout.clan-detail-layout.mb-3 .card-image-layout {
     width: 95rem;
@@ -182,14 +184,17 @@
 }
 .all-characters-list-containers,
 .all-characters-list-containers .row{
-    height: 40vh;
+    height: 28vh;
 }
 .clan-detail-layout .card-header .row{
     width: 120vh;
 }
 .clan-detail-layout .card-header img{
-    width: 10vh;
-    height: 10vh;
+    width: 8vh;
+    height: 8vh;
+}
+.clan-detail-layout .card-body .text-align-justify.poppins-text{
+    height: 30vh;
 }
 .create-character-form,
 .card-form-create-character .card-body{
@@ -305,7 +310,7 @@
     height: 15vh;
 }
 .btn.btn-primary.btn-character-in-clan-detail{
-    width: auto;
+    width: 14vh;
     height: 8vh;
 }
 /* en REM */

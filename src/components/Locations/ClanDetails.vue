@@ -4,7 +4,7 @@
       <div
           class="col-4">
       <cardImageBackground v-bind:Image="Image">
-        <!-- <div
+        <div
           class="col-2 display-flex-row align-items-content-justify-content"
           v-for="(character, index) in limitedCharacters"
           :key="index"
@@ -15,7 +15,7 @@
             :alt="character.Characterimage"
           />
          
-        </div> -->
+        </div>
       </cardImageBackground>
       </div>
       <div class="col-8 col-md-8 flex-one background-color-main-lineart display-flex-column location-clan-card-details">
