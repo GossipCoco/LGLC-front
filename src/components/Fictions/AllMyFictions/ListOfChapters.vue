@@ -1,22 +1,18 @@
 <template>
   <div class="opacity-container display-flex-row">
     <div class="summary-container height-70-vh overflowY-auto overflowX-hidden">
-      <div class="row">
-        <div class="col-2"></div>
-        <div class="col-2">
-          <UploadImage
+      <div class="row top-fiction">
+        <div class="col-3">
+           <UploadImage
             v-bind:id="IdFiction"
             v-bind:service="'UploadFictionBackgroundIllustration'"
             v-bind:css="'mb-3'"
             v-if="AuthorId === usrCurrent"
-          />
-        </div>
-        <div class="col-3">
+          /></div>
+        <div class="col-6">
           <EditSummary v-bind:FictionId="IdFiction" v-bind:Summary="Summary" v-if="AuthorId === usrCurrent"/>
         </div>
-        <div class="col-1"></div>
-        <div class="col-4">
-          <div class="d-grid gap-2">
+        <div class="col-3">
             <router-link
               type="button"
               class="btn btn-primary btn-lg"
@@ -26,13 +22,10 @@
             >
               Créer le chapitre {{ lastChap }}
             </router-link>
-          </div>
         </div>
       </div>
       <div class="row middle-fiction-card">
-        <div
-          class="col-xxl-2 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 right-column-image-container"
-        >
+        <div class="col-xxl-2 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 right-column-image-container">
           <div class="display-flex-column all-characters-of-fiction">
             <div
               class="display-flex-column image-fiction-container overflowY-X-hidden background-size-cover"
@@ -40,17 +33,15 @@
                 backgroundImage: 'url(' + backgroundImageFiction + ')',
               }"
             ></div>
+            <AddANewCharacterModal
+            v-if="AuthorId === usrCurrent"
+            v-bind:IdGame="IdGame"
+            />
             <CarrouselCharacter v-bind:Characters="Characters" />
             <CarrouselCharacter v-bind:Characters="OCCharacters" />
           </div>
         </div>
-        <div class="col-xxl-2 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          <AddANewCharacterModal
-            v-if="AuthorId === usrCurrent"
-            v-bind:IdGame="IdGame"
-          />
-        </div>
-        <div class="col-xxl-4 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="col-xxl-6 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <p class="text-align-justify overflowY-auto summary-height-container" v-html="Summary"></p>
         </div>
         <ListAllChapters v-bind:Chapters="fiction.Chapters" />

@@ -1,14 +1,14 @@
 <template>
-  <div class="d-grid gap-4">
+  
     <button
       type="button"
-      class="btn btn-primary"
+      class="btn btn-primary edit-summary-btn"
       data-bs-toggle="modal"
       data-bs-target="#EditSummary"
     >
       Editer le résumé
     </button>
-  </div>
+
   <!-- Modal -->
   <div
     class="modal fade"

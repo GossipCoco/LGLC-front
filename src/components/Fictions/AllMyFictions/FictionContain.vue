@@ -21,8 +21,9 @@
         v-bind:dateCreation="dateCreation"
       />
       <BackToFileBtnGroup v-bind:Author="Author" />
-    </div>
-    <div class="card-body">
+    </div>    
+    <Spinner v-if="showspinner" />
+    <div class="card-body" v-if="!showspinner">
       <div class="row">
         <div class="col-12">
           <div class="display-flex-column flex-one">

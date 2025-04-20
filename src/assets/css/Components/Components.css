@@ -8,7 +8,10 @@
 .flex-one .btn {
     margin : -2rem 0 0 0;
 }
-.easy-action-container .flex-one .btn {
+.flex-one .top-fiction .btn.btn-primary.btn-lg  {
+    margin: 1vh 0 1vh 0;;
+}
+.easy-action-container .flex-one .btn{
     margin: 1rem 0 0 0;
 }
 .name-characatrer-link.flex-one .btn {
