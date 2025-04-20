@@ -147,16 +147,14 @@ export default {
       } else return "";
     },
     GetLastChapterOfAFiction(id) {
-      console.log(id)
       FictionService.GetLastChapterOfAFiction(id)
         .then((response) => {
-          console.log(response.data.ob)
+          console.log("GetLastChapterOfAFiction",response.data.ob)
           if(!response.data.ob){
             this.lastChap = 1
           }else{
             const lastChapNum = response.data.ob.NumberChapter;
             this.lastChap = lastChapNum + 1;
-
           }
         })
         .catch((err) => {
@@ -168,7 +166,6 @@ export default {
       FictionService.getFictionByName(id, this.nav)
         .then((response) => {
           this.fiction = response.data.ob;
-          console.log(this.fiction);
           this.rating = response.data.ob.AverageRating;
           this.IdFiction = this.fiction.Id;
           this.IdGame = this.fiction.Game.Id;
@@ -176,14 +173,13 @@ export default {
           this.AuthorId = this.fiction.User.Id;
           this.Title = this.fiction.Title;
           this.backgroundImageFiction = this.fiction.Image;
-          console.log(this.backgroundImageFiction)
           this.TypeFiction = this.fiction.FictionKinds;
           this.listOfCharacter = this.fiction.Game.GameCharacters;
           this.Gamers = this.fiction.Game.GameGamers;
           this.Summary = this.fiction.Summary;
           this.dateCreation = this.fiction.DateCreation;
           this.nbChapter = this.fiction.lenght;
-          this.illustration = this.backgroundImageFiction;
+          this.illustration = this.fiction.FictionIllustrations;
           this.nbIllus =  Object.keys(this.illustration).length;
           this.nbBackground =  Object.keys(this.backgroundImageFiction).length;
           if (this.fiction.Chapters.length > 0) {
