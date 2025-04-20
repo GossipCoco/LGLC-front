@@ -228,6 +228,12 @@ export default {
       console.log(field)
       this.form.SecondCharacterId = field;
     },
+    getOriginalFirstCharacter(e){
+      this.form.OriginalFirstCharacterId = e
+    },
+    getOriginalSecondCharacter(e){
+    this.form.OriginalSecondCharacterId = e
+    },
     async generateImage() {
       try {
         const response = await axios.post(Config.Url + "/api/generate-image", {
