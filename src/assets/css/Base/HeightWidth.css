@@ -28,7 +28,9 @@
     width: 185vh;
 }
 .card-character-container,#all-characters-container-card .character-card.card,
-.card-image img.image-book, .title-container-card, .image-book{
+.card-image img.image-book, .title-container-card, .image-book,
+.all-characters-of-fiction > button,
+.user-information-container .rond-image-illustration img{
     width: 25vh;
 }
 #all-characters-container-card .character-card.card {
@@ -43,10 +45,7 @@
 .card-form-create-character, .fiction-globale-container ul {
     height: 90vh;
 }
-.clan-detail-layout .card-body {
-    height: 77vh;
-}
-.clan-detail-layout .card-body.location-clan-body {
+.clan-detail-layout .card-body, .clan-detail-layout .card-body.location-clan-body {
     height: 77vh;
 }
 .location-clan-card-details-body{
@@ -55,8 +54,11 @@
 .border-card-color{
     height: 88.5vh;
 }
+.user-information-container .rond-image-illustration img
 .character-card.card .card-image {
     height: 25vh;
+}
+.character-card.card .card-image {
     width: 23vh;
 }
 .card.card-image-layout.clan-detail-layout.mb-3,
@@ -341,9 +343,7 @@
     height: 14vh;
 }
 /* Fiction */
-.all-characters-of-fiction > button{
-    width: 25vh;
-}
+
 .image-fiction-container {
     width: 30vh;
     height: 18vh;
@@ -351,6 +351,16 @@
 .carousel {
     width: 24vh;
 }
+#edit-chapter-contain .character-details-chatper.card.mb-3.fiction-container{
+    height: 75vh;
+}
+.create-chapter-card-container{
+    height: 85vh;
+}#edit-chapter-contain{
+    width: 140vh;
+    height: 80vh;
+}
+
 /* en REM */
 .create-character-form .text-area-container{
     height: 30rem;

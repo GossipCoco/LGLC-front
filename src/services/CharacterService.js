@@ -42,6 +42,7 @@ class CharacterService {
         )
     }
     CreateAnOriginalCharacter(id, data){
+        console.log(id, data)
         return http.post(`/character/CreateAnOriginalCharacter/${id}`, data, {
             headers: {
                 'Content-Type': 'multipart/form-data',
