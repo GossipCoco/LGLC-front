@@ -16,14 +16,14 @@
               @input-title="InputTitle"
             />
           </div>
-          <!-- <div class="row">
+          <div class="row">
             <SelectCharacterComponent
               v-bind:For="'FirstCharacterId'"
               v-bind:label="'Sélectionner un personnage'"
               v-bind:characterId="form.FirstCharacterId"
               v-bind:characters="characters"
               v-bind:col="'col-3'"
-              @form-character="handleFirstCharacterChange"
+              @getCharacter="handleFirstCharacterChange"
             />
             <SelectCharacterComponent
               v-bind:For="'SecondCharacterId'"
@@ -31,7 +31,7 @@
               v-bind:characterId="form.SecondCharacterId"
               v-bind:characters="characters"
               v-bind:col="'col-3'"
-              @form-character="handleSecondCharacterChange"
+              @getCharacter="handleSecondCharacterChange"
             />
             <SelectOriginalCharacterComponent
               v-bind:For="'OriginalFirstCharacterId'"
@@ -51,7 +51,7 @@
               v-bind:getDatas="'getOriginalSecondCharacter'"
               @getOriginalSecondCharacter="getOriginalSecondCharacter"
             />
-          </div> -->
+          </div>
           <div class="row">
             <div class="col-6">
               <div class="margin-top-1rem">
@@ -141,8 +141,8 @@ import axios from "axios";
 import Config from "../../../../server";
 import CardHeader from "../../Components/GenericComponent/CardHeader.vue";
 import InputTitle from "../../Components/FormComponent/InputTitle.vue";
-// import SelectCharacterComponent from "../../Components/FormComponent/SelectCharacterComponent.vue";
-// import SelectOriginalCharacterComponent from "../../Components/FormComponent/SelectOriginalCharacterComponent.vue";
+import SelectCharacterComponent from "../../Components/FormComponent/SelectCharacterComponent.vue";
+import SelectOriginalCharacterComponent from "../../Components/FormComponent/SelectOriginalCharacterComponent.vue";
 import TextAreaComponent from "../../Components/FormComponent/TextAreaComponent.vue";
 import LinkGenerateImage from "../../Components/FormComponent/LinkGenerateImage.vue";
 import { resizeImage } from "../../../services/functions";
@@ -153,9 +153,9 @@ export default {
     CardHeader,
     InputTitle,
     TextAreaComponent,
-    // SelectCharacterComponent,
+    SelectCharacterComponent,
     LinkGenerateImage,
-    // SelectOriginalCharacterComponent,
+    SelectOriginalCharacterComponent,
   },
   inject: ["user"],
   data() {
@@ -169,6 +169,11 @@ export default {
       form: {
         Title: null,
         Summary: null,
+        FirstCharacterId: null,
+        SecondCharacterId: null,
+        OriginalFirstCharacterId: null,
+        OriginalSecondCharacterId: null,
+        LocationId: null,
         ClanId: null,
         KindId: null
       },
@@ -216,9 +221,11 @@ export default {
       this.form.Title = e;
     },
     handleFirstCharacterChange(field) {
+      console.log(field)
       this.form.FirstCharacterId = field;
     },
     handleSecondCharacterChange(field) {
+      console.log(field)
       this.form.SecondCharacterId = field;
     },
     async generateImage() {
@@ -306,8 +313,19 @@ export default {
       const formData = new FormData();
       formData.append("Title", this.form.Title);
       formData.append("Summary", this.form.Summary);
+      formData.append("FirstCharacterId", this.form.FirstCharacterId);
+      formData.append("SecondCharacterId", this.form.SecondCharacterId);
+      formData.append("LocationId", this.form.LocationId);
       formData.append("ClanId", this.form.ClanId)
       formData.append("KindId", this.form.KindId)
+      formData.append(
+        "OriginalFirstCharacterId",
+        this.form.OriginalFirstCharacterId
+      );
+      formData.append(
+        "OriginalSecondCharacterId",
+        this.form.OriginalSecondCharacterId
+      );
       if (this.file) {
         formData.append("image", this.file);
       }
