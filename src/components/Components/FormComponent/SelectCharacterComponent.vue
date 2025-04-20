@@ -37,7 +37,6 @@ export default {
   },
   methods: {
     getCharacter() {
-      console.log(this.CharacterId)
       this.$emit("getCharacter", this.CharacterId);
     },
   },
