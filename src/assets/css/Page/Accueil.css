@@ -164,7 +164,6 @@ h2{
 #accueil li.nav-item{
     flex: 1;
     display: flex;
-    width: 15rem;
     text-transform: capitalize;
     font-variant: small-caps;
 }

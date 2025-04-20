@@ -360,7 +360,21 @@
     width: 140vh;
     height: 80vh;
 }
-
+.pagination{
+    max-width: 50vh;
+}
+.pagination-container {
+    width: 180vh;
+}
+.row.pagination-zone-container, .row.pagination-container, .pagination-row-container{
+    width: 180vh;
+}
+.row.all-calls-pagination-container{
+    height: 100px;
+}
+#accueil li.nav-item{
+    width: 17vh;
+}
 /* en REM */
 .create-character-form .text-area-container{
     height: 30rem;
@@ -464,9 +478,7 @@ audio{
 .link-collapse {
     width: 6rem;
 }
-.row.pagination-zone-container, .row.pagination-container, .pagination-row-container{
-    width: 180vh;
-}
+
 /* % */
 .character-details.card .card-image img {
     width: 75%;
