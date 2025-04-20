@@ -93,7 +93,6 @@ export default {
     },
     handleFileUpload(event) {
       this.file = event.target.files[0];
-      // Vérifier le type MIME pour les images acceptées
       const allowedTypes = [
         "image/jpeg",
         "image/jpg",
@@ -102,29 +101,29 @@ export default {
       ];
       if (!allowedTypes.includes(this.file.type)) {
         alert("Seuls les formats JPEG, PNG et WEBP sont acceptés.");
+        this.file = null;
         return;
       }
-      // Vérification du poids de l'image (5 Mo)
       if (this.file.size > 5 * 1024 * 1024) {
         alert("L'image dépasse la limite de 5 Mo.");
+        this.file = null;
         return;
       }
 
+      // Préparer le fichier pour upload plus tard
       const reader = new FileReader();
       reader.onload = (e) => {
         const img = new Image();
         img.src = e.target.result;
         img.onload = () => {
-          // Redimensionner l'image si elle dépasse 1200px de largeur
           if (img.width > 1200) {
-            resizeImage(img, 1920, this.file).then((resizedFile) => {
-              this.file = resizedFile;
-              this.sendFile();
-            }).catch((error) => {
-              console.error("Erreur lors du redimensionnement:", error);
-            });
-          } else {
-            this.sendFile(); // Appel de l'envoi de fichier
+            resizeImage(img, 1920, this.file)
+              .then((resizedFile) => {
+                this.file = resizedFile;
+              })
+              .catch((error) => {
+                console.error("Erreur lors du redimensionnement:", error);
+              });
           }
         };
       };
@@ -135,7 +134,7 @@ export default {
       formData.append("image", this.file);
       this.handleOk(formData); // Envoi de l'image via la fonction UploadNewImage
     },
-    handleOk(dataImage) {
+    handleOk() {
       const formData = new FormData();
       formData.append(
         "Id",
@@ -150,9 +149,11 @@ export default {
       formData.append("Content", this.form.Content);
       formData.append("NumberChapter", this.NextChapter);
       formData.append("PrecedentChapterId", this.NextChapterofLastfiction);
-      if (dataImage) {
-        formData.append("image", dataImage);
+
+      if (this.file) {
+        formData.append("image", this.file); // L'image est envoyée maintenant seulement
       }
+
       this.CreateANewChapter(this.fictionId, formData);
     },
     CreateANewChapter(fictionId, data) {
