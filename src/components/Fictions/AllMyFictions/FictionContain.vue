@@ -183,9 +183,9 @@ export default {
           this.Summary = this.fiction.Summary;
           this.dateCreation = this.fiction.DateCreation;
           this.nbChapter = this.fiction.lenght;
-          this.illustration = this.fiction.FictionIllustrations;
-          this.nbIllus = Object.keys(this.backgroundImageFiction).length;  
-          this.nbBackground =Object.keys(this.illustration).length;
+          this.illustration = this.backgroundImageFiction;
+          this.nbIllus =  Object.keys(this.illustration).length;
+          this.nbBackground =  Object.keys(this.backgroundImageFiction).length;
           if (this.fiction.Chapters.length > 0) {
             this.GetLastChapterOfAFiction(this.IdFiction);
           }
