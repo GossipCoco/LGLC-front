@@ -340,7 +340,17 @@
 #accueil header {
     height: 14vh;
 }
-
+/* Fiction */
+.all-characters-of-fiction > button{
+    width: 25vh;
+}
+.image-fiction-container {
+    width: 30vh;
+    height: 18vh;
+}
+.carousel {
+    width: 24vh;
+}
 /* en REM */
 .create-character-form .text-area-container{
     height: 30rem;
