@@ -10,7 +10,7 @@
               <label class="btn btn-default p-0" for="upload-avatar">
                 <input id="upload-avatar" class="text-white" type="file" accept="image/png, image/jpeg, image/jpg, image/webp" ref="file"
                   @change="selectImage" />
-              </label><br>
+              </label><br><br>
               <button class="btn btn-success btn-sm float-right" :disabled="!currentImage" @click="upload">
                 Choisir un avatar
               </button>
