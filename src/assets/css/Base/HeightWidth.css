@@ -121,6 +121,9 @@
 .row.bottom-dashboard-levele-one .card.random-characters-card{
     height: 48vh;
 }
+.form-character-container .card-header h2{
+    width: 180vh;
+}
 .illustration-background .background-fiction-contain{    
     width: 183vh;
 }
@@ -282,7 +285,7 @@
     height: 13vh;
 }
 .card-form-create-character .card-body{
-    height: 77vh;   
+    height: 80vh;   
 }
 #original-character-global-container .flex-one .btn {
     height: 7vh;

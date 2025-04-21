@@ -68,7 +68,7 @@
 }
 .create-character-form,
 .card-form-create-character .card-body{
-    padding: 1rem;
+    padding: 2vh 0 0 0;
 }
 .one-fiction-container, .mini-rond-messages,
 .all-fictions-container-global .search-bar-component .col-1{
