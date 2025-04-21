@@ -339,6 +339,11 @@
 #accueil header {
     height: 14vh;
 }
+
+.mini-rond-messages{
+    height: 4vh;
+    width: 4vh;
+}
 /* Fiction */
 
 .image-fiction-container {
@@ -376,13 +381,7 @@
 .create-character-form .text-area-container{
     height: 30rem;
 }
-.character-card.card, .list-all-fictions-globale--container.three-last-chapters-container {
-    width: 20rem;    
-}
-.character-card.card {
-    height: 40rem;
-    min-width: 20rem;
-}
+
 .card-image-layout {
     width: 95rem;
 }
@@ -446,10 +445,6 @@
 }
 .left-fiction-summary-container{
     width: 20rem;
-}
-.mini-rond-messages{
-    height: 2rem;
-    width: 2rem;
 }
 audio{
     width: 14rem;
