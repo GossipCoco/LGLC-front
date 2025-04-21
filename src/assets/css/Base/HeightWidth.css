@@ -92,9 +92,11 @@
 }
 .clan-card, .card-image img.image-book,
 #original-characters-list .card.individual-character-card,
-.clan-detail-layout .card-body .text-align-justify.poppins-text,
 .image-book, .card-character-container{
     height: 30vh;
+}
+.clan-detail-layout .card-body .text-align-justify.poppins-text{
+    height: 40vh;
 }
 .dashboard-home-max-card-container .avatar-container {
     width: 5vh;
@@ -351,7 +353,6 @@
 #accueil header {
     height: 14vh;
 }
-
 .mini-rond-messages{
     height: 4vh;
     width: 4vh;
@@ -363,7 +364,6 @@
     height: 80vh;
 }
 /* Fiction */
-
 .image-fiction-container {
     width: 30vh;
     height: 18vh;
@@ -376,7 +376,8 @@
 }
 .create-chapter-card-container{
     height: 85vh;
-}#edit-chapter-contain{
+}
+#edit-chapter-contain{
     width: 140vh;
     height: 80vh;
 }
@@ -402,20 +403,17 @@
     width: 183vh;
     height: 77vh;
 }
-/* en REM */
-.fiction-global-informarion-container-hearder{
-    height: 10rem;
-}
-.create-character-form .text-area-container{
-    height: 30rem;
-}
 .row.bottom-dashboard-levele-one .card.all-fictions-card,
 .row.bottom-dashboard-levele-one .card.game-container{
-    height: 43rem;
+    height: 86vh;
 }
-.summaray-title-text.flex-one.align-items-content-justify-content{
+.col-8.location-clan-card-details{
+    height: 90vh;
+}
+/* en REM */
+/* .summaray-title-text.flex-one{
     width: 25rem;
-}
+} */
 .quest--global-container {
     height: 18rem;
 }

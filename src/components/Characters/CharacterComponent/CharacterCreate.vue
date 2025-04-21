@@ -94,23 +94,6 @@
                     "
                   />
                 </div>
-                <!-- <div class="col-md-6">
-                  <label for="inputGenre" class="form-label text-white">Genre</label>
-                  <select
-                    class="form-select"
-                    v-model="form.Genre"
-                    id="inputGenre"
-                    required
-                  >
-                    <option
-                      v-for="(genre, index) in genres"
-                      :value="genre.id"
-                      :key="index"
-                    >
-                      {{ genre.name }}
-                    </option>
-                  </select>
-                </div> -->
                 <div class="col-md-6">
                   <label for="inputAge" class="form-label text-white"
                     >Age en nombre de lunes</label
