@@ -4,10 +4,6 @@
 th {
     font-weight: 200;
 }
-.bottom-dashboard-levele-one .card {
-    height: 40vh;
-    margin: 1rem auto;
-}
 .Comment-icon {
     margin: 2rem 0rem 0 0.5rem;
 }
@@ -138,7 +134,10 @@ th {
     margin-top: 1rem;
 }
 .row.bottom-dashboard-levele-one {
-    margin: 0.75rem -1rem 0rem -2rem;
+    margin: 0.75rem -1rem 1rem -2rem;
+}
+.row.bottom-dashboard-levele-one .card.all-fictions-card{
+    margin: 1rem 0 0 0;
 }
 .row.middle-separator{
     margin: 0;

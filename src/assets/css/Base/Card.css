@@ -265,6 +265,7 @@ li.quest-container {
 }
 .my-oc-card .card-body{
     padding: 0;
+    margin: -8vh 0 0 0;
 }
 .row.middle-dashboard .card-global{
     margin: 0 2rem 0 1rem;

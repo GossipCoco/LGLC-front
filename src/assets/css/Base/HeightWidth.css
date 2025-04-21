@@ -130,7 +130,7 @@
     width: 42vh;
 }
 .row.top-dashboard .all-my-oc-card .card-body > div{
-    width: 20vh;
+    width: 22vh;
 }
 .row.top-dashboard .card-body.user-info-text > div, .fiction-summary-card{
     width: 44vh;
@@ -173,7 +173,6 @@
 .character-details .card-body {
     height: 90.5vh;
 }
-
 .all-characters-container-card {
     width: 173vh;
 }
@@ -202,9 +201,7 @@
     width: 180vh;;
     height: 77vh;
 }
-.create-character-form > div:nth-child(2),
-.bottom-dashboard-levele-one .card,
-.card.location-clan-background-width-container,
+.create-character-form > div:nth-child(2),.card.location-clan-background-width-container,
 .select-message-container .card-body{
     height: 40vh;
 }
@@ -377,16 +374,12 @@
 .number-page-container {
     height: 5vh;
 }
+.row.bottom-dashboard-levele-one .card.last-book-container{
+    height: 36vh;
+}
 /* en REM */
 .create-character-form .text-area-container{
     height: 30rem;
-}
-
-.card-image-layout {
-    width: 95rem;
-}
-.row.bottom-dashboard-levele-one .card.last-book-container{
-    height: 18rem;
 }
 .row.bottom-dashboard-levele-one .card.all-fictions-card,
 .row.bottom-dashboard-levele-one .card.game-container{
@@ -425,7 +418,7 @@
 .card .last-book-container{
     height: 20rem;
 }
-.my-oc-card .card-body, .card-img-top.background-image-quest-image-container{
+.card-img-top.background-image-quest-image-container{
     height: 10rem;
 }
 .summmary-book-height-dashboard{
