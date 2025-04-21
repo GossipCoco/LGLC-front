@@ -322,9 +322,6 @@
 .navbar>.container-fluid {
     height: 15vh;
 }
-.li-level1 .collapse {
-    width: 7.5rem;
-}
 .logo-accueil-container{
     width: 18vh;
     height: 18vh;
@@ -369,11 +366,11 @@
 .row.pagination-zone-container, .row.pagination-container, .pagination-row-container{
     width: 180vh;
 }
-.row.all-calls-pagination-container{
-    height: 100px;
-}
-#accueil li.nav-item{
+#accueil li.nav-item, .number-page-container{
     width: 17vh;
+}
+.number-page-container {
+    height: 5vh;
 }
 /* en REM */
 .create-character-form .text-area-container{
@@ -511,6 +508,10 @@ audio{
     height: 45%;
 }
 /*  px */
+
+.row.all-calls-pagination-container{
+    height: 100px;
+}
 .cat-corner::before
 .dashboard-max-card-container::before,
 .fiction-globale-container::before,

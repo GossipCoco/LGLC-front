@@ -101,7 +101,7 @@
         <LinkGenerateImage />
         <div class="col-md-6">
           <label for="inputImage" class="form-label text-white"
-            >Envoyer une image</label
+            >Envoyer une image (2Mo max ou 1000 * 1000)</label
           >
           <input
             type="file"

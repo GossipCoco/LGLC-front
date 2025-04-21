@@ -67,7 +67,6 @@ export default {
     },
     methods: {
     getData() {
-      console.log(this.formdata, this.dataId)
       if(this.formdata === 'getclan'){
         this.$emit('getclan', this.dataId);
       }else if(this.formdata === 'getCharacter'){
@@ -76,13 +75,12 @@ export default {
         this.$emit('getAuthor', this.dataId);        
       }else if(this.formdata ==='getgrade'){
         this.$emit('getgrade', this.dataId)
-      }
-      else if(this.formdata === 'getgenre'){
-        console.log(this.dataId, this.formdata)
+      }else if(this.formdata === 'getgenre'){
         this.$emit('getgenre', this.dataId)
-      }
-      else if(this.formdata === 'getStatus'){
+      }else if(this.formdata === 'getStatus'){
         this.$emit('getStatus', this.dataId)
+      }else if(this.formdata === 'getAuthor'){
+        this.$emit('getAuthor', this.dataId)
       }
     },
     GetGenre(){

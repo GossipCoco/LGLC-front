@@ -6,8 +6,6 @@
 
 .number-page-container {
     background-color: rgba(var(--dark-green-01), 1);
-    width: 9rem;
-    height: 5vh;
     vertical-align: middle;
     padding: 0.65rem 0;
     margin: -2vh 0 0 0;
