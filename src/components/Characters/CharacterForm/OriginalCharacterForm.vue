@@ -29,7 +29,7 @@
         <InputName
           v-bind:col="'col-3 col-md-3'"
           v-bind:forId="'inputWarriorName'"
-          v-bind:label="'Nom de Guerrier/Guérisseur'"
+          v-bind:label="'Nom de Guerrier ou de Guérisseur'"
           v-bind:getNameData="'getWarriorName'"
           @getWarriorName="getWarriorName"
         />
@@ -121,11 +121,6 @@
           </button>
         </div>
       </div>
-      <!-- <div class="row">
-        <div class="col-12">
-          
-        </div>
-      </div> -->
     </form>
   </div>
 </template>
@@ -173,17 +168,42 @@ export default {
     },
 
     // Récupération des données par events
-    getUserName(e) { this.form.UserName = e; },
-    getKitName(e) { this.form.KitName = e; },
-    getclan(e) { this.form.ClanId = e; },
-    getgrade(e) { this.form.GradeId = e; },
-    getNameApprentice(e) { this.form.ApprenticeName = e; },
-    getWarriorName(e) { this.form.WarriorName = e; },
-    getgenre(e) { this.form.Genre = e; },
-    getStatus(e) { this.form.Status = e; },
-    getDescription(e) { this.form.Description = this.formatText(e); },
-    getPersonnality(e) { this.form.Personnality = this.formatText(e); },
-    getbiography(e) { this.form.Biography = this.formatText(e); },
+    getUserName(e) {
+      this.form.UserName = e;
+    },
+    getKitName(e) {
+      this.form.KitName = e;
+    },
+    getclan(e) {
+      console.log("getclan", e);
+      this.form.ClanId = e; },
+    getgrade(e) {
+      console.log("getgrade", e);
+      this.form.GradeId = e;
+    console.log(this.form) },
+    getNameApprentice(e) {
+      this.form.ApprenticeName = e;
+    },
+    getWarriorName(e) {
+      this.form.WarriorName = e;
+    },
+    getgenre(e) {
+      console.log(e)
+      this.form.Genre = e;
+    },
+    getStatus(e) {
+      console.log(e)
+      this.form.Status = e;
+    },
+    getDescription(e) {
+      this.form.Description = this.formatText(e);
+    },
+    getPersonnality(e) {
+      this.form.Personnality = this.formatText(e);
+     },
+    getbiography(e) {
+      this.form.Biography = this.formatText(e);
+    },
 
     // Upload + Resize
     handleFileUpload(event) {
@@ -230,6 +250,7 @@ export default {
     },
 
     async CreateAnOriginalCharacter(id, formData) {
+      console.log(formData)
       try {
         const response = await CharacterService.CreateAnOriginalCharacter(id, formData);
         console.log("Réponse de création :", response?.data);

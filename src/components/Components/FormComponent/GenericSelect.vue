@@ -74,6 +74,15 @@ export default {
         this.$emit('getCharacter', this.dataId);        
       }else if(this.formdata === 'getAuthor'){
         this.$emit('getAuthor', this.dataId);        
+      }else if(this.formdata ==='getgrade'){
+        this.$emit('getgrade', this.dataId)
+      }
+      else if(this.formdata === 'getgenre'){
+        console.log(this.dataId, this.formdata)
+        this.$emit('getgenre', this.dataId)
+      }
+      else if(this.formdata === 'getStatus'){
+        this.$emit('getStatus', this.dataId)
       }
     },
     GetGenre(){
