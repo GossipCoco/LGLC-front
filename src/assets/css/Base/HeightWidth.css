@@ -2,7 +2,13 @@
 @import '../variables.scss';
 
 /* en VH */
-
+.page-profil-user-container .card-header h2{
+    width: 180vh;
+}
+.user-information-container .mini-rond-avatar-image{
+    width: 25vh;
+    height: 25vh;
+}
 .list-all-fictions-globale--container.list-all-fictions-globale--container{
     width: 100vh;
 }
@@ -544,6 +550,7 @@ audio{
     width: 70px;
     height: 70px;
 }
+
 .edit-overlay {
     width: 40px;
     height: 40px;
