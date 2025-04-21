@@ -58,9 +58,10 @@
       <div class="col-xxl-6 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <GamesLinks v-if="!showspinner" />
       </div>
-      <div class="col-xxl-6 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="col-xxl-3 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <easy-action />
       </div>
+      <music-player />
     </div>
 </div>
 </template>
@@ -80,6 +81,7 @@ import Spinner from "../Components/GenericComponent/Spinner.vue";
 import CharacterByGamerV2 from "./Components/CharacterByGamerV2.vue";
 import Separator from "./ComponentGeneric/Separator.vue";
 import EasyAction from "./Components/EasyAction.vue";
+import MusicPlayer from "./Components/MusicPlayer.vue";
 export default {
   name: "DashboardLayout",
   components: {
@@ -94,7 +96,8 @@ export default {
     Spinner,
     CharacterByGamerV2,
     Separator,
-    EasyAction
+    EasyAction,
+    MusicPlayer
   },
   data() {
     return {
