@@ -306,6 +306,9 @@
     width: 14vh;
     height: 8vh;
 }
+.fiction-container .card-header h2{
+    width: 180vh;
+}
 /* NavNar en Vh */
 .menu-left.menu-hidden.d-flex.flex-column.flex-shrink-0.p-3 {
     width: 15vh;

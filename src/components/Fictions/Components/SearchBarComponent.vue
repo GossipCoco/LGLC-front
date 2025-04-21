@@ -19,6 +19,9 @@
       <button type="button" class="btn btn-primary">Rechercher une fiction</button>
     </div>
     <div class="col-3 display-flex align-items-content-justify-content">
+      <router-link class="btn btn-primary" :to="'/allFictions/' + userId">
+        Mes fictions
+      </router-link>
       <router-link class="btn btn-primary" to="/createANewFiction">
         Nouvelle fiction
       </router-link>
@@ -32,22 +35,22 @@ export default {
   name: "SearchBarComponent",
   props: ["For", "label", "characterId", "characters", "clans"],
   components: { SelectCharacterComponent, GenericSelect },
+  inject: ["user"],
   data() {
     return {
       allCharacters: this.characters,
+      userId: this.$store.state.auth.user.usrID,
     };
   },
   methods: {
     getCharacter(e) {
-      console.log(e)
+      console.log(this.userId)
       this.$emit("form-info",e ,'Character');
     },
     getclan(e) {
-      console.log(e)
       this.$emit("form-info",e ,'Clan');
     },
     getAuthor(e) {
-      console.log(e)
       this.$emit("form-info",e ,'Auteur');
     },
   },
