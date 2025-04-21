@@ -10,9 +10,7 @@ th {
 .Comment-icon > div{
     margin: -.5rem 0rem 0 0;
 }
-.fiction-global-informarion-container-hearder{
-    height: 10rem;
-}
+
 .card-header.fiction-chapter-container {
     margin: -2rem -2rem 0 0;
 }
@@ -40,18 +38,13 @@ th {
     padding: 20px;
     box-shadow: 0 4px 8px rgba(var(--main-black), 0.1);
 }
-.dashboard-max-card-container.card-height .card-body{
-    height: 80vh;
-}
+
 #book-container.dashboard-max-card-container {
     padding: 20px;
-
     box-shadow: 0 4px 8px rgba(var(--main-black), 0.1);
     margin: 2rem 0 0 -4rem;
 }
-#book-container.dashboard-max-card-container.card-height .card-body{
-    height: 80vh;
-}
+
 .chapter-title-content {
     text-align: center;
 }
@@ -81,10 +74,7 @@ th {
 .character-chapters-fiction-container .character-chapters-container {
     width: 75rem;
 }
-.illustration-background {
-    width: 183vh;
-    height: 77vh;
-}
+
 .original-character-image-container img{
     width: 100%;
 }
@@ -126,8 +116,6 @@ th {
     padding: 1rem 0.25rem 0 0;
 }
 .rond-image-illustration img {
-    width: 9vh;
-    height: 9vh;
     aspect-ratio: 1;
 }
 .row.bottom-top-dashboard {

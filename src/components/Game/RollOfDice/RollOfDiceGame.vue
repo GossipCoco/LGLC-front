@@ -1,5 +1,5 @@
 <template>
-  <div class="dashboard-max-card-container card-height border-none background-color-main-lineart flex-one card display-flex-column overflowY-X-hiddengame-card">
+  <div class="dashboard-max-card-container roll-dice-container card-height border-none background-color-main-lineart flex-one card display-flex-column overflowY-X-hiddengame-card">
     <CardHeader v-bind:Title="'Lancé de Dés'" />
     <div class="card-body">
       <div class="display-flex align-items-content-justify-content">

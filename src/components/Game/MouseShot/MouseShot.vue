@@ -4,7 +4,7 @@
     class="dashboard-max-card-container border-none background-color-main-lineart flex-one card display-flex-column fiction-container"
   >
     <CardHeader v-bind:Title="'Jeu du chat et de la souris'" />
-    <div class="game" @keydown="handleKeyPress" tabindex="0">
+    <div class="game height-75-vh" @keydown="handleKeyPress" tabindex="0">
       <div
         v-if="gameStarted"
         ref="gameArea"

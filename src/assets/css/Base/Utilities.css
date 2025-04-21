@@ -58,7 +58,27 @@
 .height-90{
     height: 90vh
 }
-
+.height-75-vh{
+    height: 75vh;
+}
+.height-18-rem{
+    height: 18rem;
+}
+.height-16-rem{
+    height: 16rem;
+}
+.height-20-rem{
+    height: 20rem;
+}
+.height-70-vh{
+    height: 70vh;
+}
+.width-10-rem{
+    width: 10rem
+}
+.height-30-vh{
+    height: 30vh;
+}
 /* Background-color & color  */
 .background-color-main-lineart{
     background: var(--lineart-other00);
@@ -208,25 +228,4 @@ table.table-borderless, .table.table-borderless>:not(caption)>*>*, .table-border
 }
 th{
     font-weight: 200;
-}
-.card-body{
-    height: 80vh;
-}
-
-/* HEIGHT & WIDTH */
-
-.height-18-rem{
-    height: 18rem;
-}
-.height-16-rem{
-    height: 16rem;
-}
-.height-20-rem{
-    height: 20rem;
-}
-.height-70-vh{
-    height: 70vh;
-}
-.width-10-rem{
-    width: 10rem
 }
