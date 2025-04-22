@@ -17,9 +17,8 @@
     </div>
   </div>
 </template>
-  
-  <script>
-  import TitleHeaderDashboard from '../../Components/SpecificComponent/TitleHeaderDashboard.vue';
+<script>
+import TitleHeaderDashboard from '../../Components/SpecificComponent/TitleHeaderDashboard.vue';
 export default {
     name: 'MusicPlayer',
     components: {TitleHeaderDashboard},
@@ -30,7 +29,9 @@ export default {
         { name: "Musique 1", url: "/musics/LaTragédiedeFléau.mp3" },
         { name: "Musique 2", url: "/musics/LaTragédiedeFléau(1).mp3" },
         { name: "Musique 3", url: "/musics/LaTragédiedeFléau(2).mp3" },
-        { name: "Musique 3", url: "/musics/LaTragédiedeFléau(3).mp3" },
+        { name: "Musique 4", url: "/musics/LaTragédiedeFléau(3).mp3" },
+        { name: "Musique 5", url: "/musics/La destinée d'Etoile Bleue (1).mp3" },
+        { name: "Musique 6", url: "/musics/Le courage de Plume Grise (1).mp3" },
       ],
       currentTrackIndex: 0, // Index de la musique actuelle
     };
