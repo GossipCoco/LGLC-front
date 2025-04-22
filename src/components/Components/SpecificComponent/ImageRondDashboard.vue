@@ -10,7 +10,7 @@
       <img v-if="!showspinner"  loading="lazy"  :src="src" :alt="alt" :class="'display-flex-column;' + classe" />
 
       <!-- Icône "+" affiché au survol -->
-      <div v-if="showEditIcon" class="edit-overlay">
+      <div v-if="showEditIcon" class="edit-overlay display-flex align-items-content-justify-content">
         <i class="fa fa-plus"></i>
       </div>
     </div>
