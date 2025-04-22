@@ -6,7 +6,7 @@
             <img
               :src="arc.IllustrationOne"
               :alt="arc.Title"
-              class="image-book"
+              class="image-book height-30-vh"
             />
           </div>
           <div class="carousel-item">

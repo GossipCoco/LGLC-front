@@ -2,7 +2,7 @@
   <div class="one-book-container-wrapper">
     <div class="display-flex-row flex-one">
       <card-image-background v-bind:Image="background">
-        <img :src="book.Image" :alt="book.Title" class="image-book" />
+        <img :src="book.Image" :alt="book.Title" class="image-book height-30-vh" />
       </card-image-background>
 
       <div

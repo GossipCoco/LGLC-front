@@ -90,11 +90,6 @@
 .table.table-borderless {
     width: 30vh;
 }
-.clan-card, .card-image img.image-book,
-#original-characters-list .card.individual-character-card,
-.image-book, .card-character-container{
-    height: 30vh;
-}
 .clan-detail-layout .card-body .text-align-justify.poppins-text{
     height: 40vh;
 }
@@ -251,9 +246,6 @@
     width: 34vh;
     height: 35vh;
 }
-.card.individual-character-card{
-    height: 45vh;
-}
 .all-fictions-container-global{
     height: 95vh;
 }
@@ -275,8 +267,8 @@
     max-width: 30vh;
 }
 .name-characatrer-link .btn{
-    height: 8vh;
-    width: 21vh;
+    height: 7vh;
+    width: 19vh;
 }
 .all-my-characters-container{
     height: 110vh;

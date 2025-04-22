@@ -8,7 +8,7 @@
           class="card background-color-dark-green-01 location-clan-background-width-container"
         >
           <div
-            class="card-image clan-card height-20-rem background-size-cover"
+            class="card-image clan-card height-30-vh background-size-cover"
             v-bind:style="{
               backgroundImage: 'url(' + clan.Image + ')',
             }"
