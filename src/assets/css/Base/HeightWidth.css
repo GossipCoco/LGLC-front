@@ -414,12 +414,16 @@
 .quest-button-text {
     height: 30vh;
 }
+.row.list-quest-card-container{
+    height: 70vh;
+    width: 180vh;
+}
 /* en REM */
 /* .summaray-title-text.flex-one{
     width: 25rem;
 } */
 .quest--global-container {
-    height: 18rem;
+    height: 38vh;
 }
 .quest-container {
     height: 16rem;
@@ -435,10 +439,6 @@
 .quest-button-text p {
     height: 9rem;
 }
-.row.list-quest-card-container{
-    height: 35rem;
-}
-
 .login-card .card-body{
     height: 15rem;
 }

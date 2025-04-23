@@ -3,7 +3,10 @@
 .pagination-container {
     margin-top: 5rem;
 }
-
+.one-quest-container .row.pagination-zone-container,
+.one-quest-container .row.pagination-zone-container .pagination-container-row{
+    margin: 4rem 0 0 0;
+}
 .number-page-container {
     background-color: rgba(var(--dark-green-01), 1);
     vertical-align: middle;
