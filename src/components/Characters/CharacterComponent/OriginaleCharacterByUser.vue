@@ -123,7 +123,7 @@ export default {
           this.nav.step = 6
         }else if(window.innerWidth < this.width)
         {
-          this.nav.step = 8
+          this.nav.step = 6
         }
       CharacterService.GetOriginaleCharacterByUser(user, nav)
         .then((response) => {
