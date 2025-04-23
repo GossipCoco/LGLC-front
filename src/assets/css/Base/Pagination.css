@@ -16,9 +16,6 @@
     justify-content: right;
 }
 
-.row.search-pagination-container{
-    height: 50px;
-}
 .row.search-pagination-container .col-2{
     padding: 0 0 1rem 0;
 }

@@ -103,11 +103,10 @@
 .form-control-dark:focus {
     border-color: rgba(var(--main-black), 1);
 }
-.menu-left {
-    border-top-right-radius: 0 0;
-    border-top-left-radius: 8px 8px;
-    border-bottom-right-radius: 8px 8px;
-    border-bottom-left-radius: 8px 8px;
+.menu-left,
+#quest-by-id .quest-details, #quest-by-id .interactive-elements .clickable,
+#accueil .col-md-5, #accueil #summary-container p {
+    border-radius: 8px;
 }
 
 /* PAGINATION */
@@ -160,9 +159,7 @@
     border: 1px solid #ddd;
     border-radius: 5px;
 }
-#quest-by-id .quest-details, #quest-by-id .interactive-elements .clickable  {
-    border-radius: 8px;
-}
+
 .bubble-dialog {
     border-radius: 15px;
 }
@@ -182,15 +179,11 @@
     border-radius: 50%;
 }
 /* Accueil */
-#accueil .col-md-5{
-    border-radius: 8px;
-  }
+
   #accueil .accueil-image-one, #accueil .accueil-image-two, #accueil .accueil-image-tree{
     border-radius: 50%;
   }
-  #accueil #summary-container p{
-    border-radius: 8px;
-  }
+
   .form-signin input[type="email"] {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
