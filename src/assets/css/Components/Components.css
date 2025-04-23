@@ -8,6 +8,13 @@
 .flex-one .btn {
     margin : -2rem 0 0 0;
 }
+.flex-one .quest-button-text .btn.btn-primary {
+    margin: 2rem 0 0 0;
+}
+.quest-by-id-card 
+.flex-one .btn {
+    margin : 0rem 0 0 0;
+}
 .flex-one .top-fiction .btn.btn-primary.btn-lg  {
     margin: 1vh 0 1vh 0;;
 }
@@ -59,6 +66,9 @@
 .btn-primary.file-character-btn:hover {
     background-color: rgba(var(--clear-green-01), 1);
     transform: scale(1.05);
+}
+.one-quest-container .row.pagination-zone-container{
+    margin: 2rem 0 0 0;
 }
 /* CARD */
 .card.clan-detail-layout{

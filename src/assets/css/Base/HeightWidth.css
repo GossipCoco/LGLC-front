@@ -382,6 +382,12 @@
 .pagination-container {
     width: 180vh;
 }
+.one-quest-container .card-header h2{
+    width: 180vh;
+}
+.quest-by-id-card .card-header h2{
+    width: 180vh;
+}
 .row.pagination-zone-container, .row.pagination-container, .pagination-row-container{
     width: 180vh;
 }
@@ -405,6 +411,9 @@
 .col-8.location-clan-card-details{
     height: 90vh;
 }
+.quest-button-text {
+    height: 30vh;
+}
 /* en REM */
 /* .summaray-title-text.flex-one{
     width: 25rem;
@@ -422,9 +431,6 @@
 .card-body.one-quest {
     height: 13rem;
     width: 10rem;
-}
-.quest-button-text {
-    height: 12rem;
 }
 .quest-button-text p {
     height: 9rem;
