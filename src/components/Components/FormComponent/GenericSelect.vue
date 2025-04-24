@@ -93,7 +93,6 @@ export default {
       FictionService.GetAllAUthors()
       .then((response) => {
         this.allAuthors = response.data.ob
-        console.log(this.allAuthors)
       })      
       .catch((e) => {
           console.log(e);
@@ -102,7 +101,6 @@ export default {
     GetAllGrade() {
       GradeServices.getAllGrades()
         .then((response) => {
-          console.log(response.data.ob)
           this.options = response.data.ob;
         })
         .catch((e) => {
@@ -118,7 +116,6 @@ export default {
       GetAllClans() {
         ClansServices.getAllClans()
         .then((response) => {
-          console.log(response.data.ob)
           this.options = response.data.ob;          
         })
         .catch((e) => {
