@@ -103,8 +103,6 @@ th {
 }
 .card.fiction-container .card-header h4 {
     padding: 0;
-    width: 100%;
-    height: 2.5rem;
 }
 .fiction-container .card-header h4 {
     font-family: var(--montserratRegular);

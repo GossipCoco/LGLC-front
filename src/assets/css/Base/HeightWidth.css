@@ -415,6 +415,11 @@
 /* .summaray-title-text.flex-one{
     width: 25rem;
 } */
+
+.card.fiction-container .card-header h4 {    
+    width: 100%;
+    height: 2.5rem;
+}
 .quest--global-container {
     height: 38vh;
 }
