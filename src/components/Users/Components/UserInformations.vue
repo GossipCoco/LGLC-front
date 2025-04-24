@@ -17,7 +17,7 @@
               <div class="display-flex-row">
                 <div class="display-flex-column user-profil-image">
                   <p class="text-white poppins-text">
-                    Rôle : {{ usrInformation.Level.Name }}
+                    Level : {{ usrInformation.Level.Name }}
                   </p>
                   <img
                     :src="'/images/Levels/' + usrInformation.Level.Image"
@@ -28,7 +28,7 @@
                 </div>
                 <div class="display-flex-column user-profil-image">
                   <p class="text-white poppins-text">
-                    Niveau : {{ usrInformation.Role.Name }}
+                    Rôle : {{ usrInformation.Role.Name }}
                   </p>
                   <img
                     :src="'/images/Levels/' + usrInformation.Role.Image"
