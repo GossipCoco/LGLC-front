@@ -32,5 +32,6 @@
 export default {
   name: "OCGamerCard",
   props: ["gamers"],
+  
 };
 </script>

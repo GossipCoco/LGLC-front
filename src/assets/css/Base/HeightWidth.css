@@ -431,6 +431,9 @@
     width: 20vh;
     height: 20vh;
 }
+.level-role-width{
+    width: 20vh;
+}
 /* en REM */
 .card.fiction-container .card-header h4 {    
     width: 100%;
