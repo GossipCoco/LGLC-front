@@ -40,7 +40,7 @@
                       :style="{
                         backgroundImage: 'url(' + illus.IllustrationId + ')',
                       }"
-                      class="background-size-cover display-flex-column background-fiction-contain"
+                      class="background-size-cover display-flex-column background-fiction-contain width-180-vh"
                     >
                       <ListOfChapter
                         v-bind:AuthorId="AuthorId"
@@ -63,7 +63,7 @@
                       :style="{
                         backgroundImage: 'url(' + backgroundImageFiction + ')',
                       }"
-                      class="background-size-cover display-flex-column background-fiction-contain"
+                      class="background-size-cover display-flex-column background-fiction-contain width-180-vh"
                     >
                   <ListOfChapter
                     v-bind:AuthorId="AuthorId"
@@ -172,7 +172,6 @@ export default {
       this.showspinner = true;
       FictionService.getFictionByName(id, this.nav)
         .then((response) => {
-          console.log(response.data.ob)
           this.fiction = response.data.ob;
           this.rating = response.data.ob.AverageRating;
           this.IdFiction = this.fiction.Id;
