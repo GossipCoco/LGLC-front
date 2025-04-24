@@ -82,6 +82,12 @@
 .width-30-vh{
     width: 30vh;
 }
+.width-180-vh{
+    width: 180vh;
+}
+.width-190-vh{
+    width: 190vh;
+}
 /* Background-color & color  */
 .background-color-main-lineart{
     background: var(--lineart-other00);

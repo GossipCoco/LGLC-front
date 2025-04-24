@@ -2,7 +2,14 @@
 @import '../variables.scss';
 
 /* en VH */
-.page-profil-user-container .card-header h2{
+.page-profil-user-container .card-header h2,
+.form-character-container .card-header h2,
+.fiction-container .card-header h2,
+.one-quest-container .card-header h2,
+.quest-by-id-card .card-header h2,
+.row.pagination-zone-container, .row.pagination-container,
+.create-character-form, .card-form-create-character .card-body,
+.pagination-container{
     width: 180vh;
 }
 .user-information-container .mini-rond-avatar-image{
@@ -116,9 +123,7 @@
 .row.bottom-dashboard-levele-one .card.random-characters-card{
     height: 48vh;
 }
-.form-character-container .card-header h2{
-    width: 180vh;
-}
+
 .illustration-background .background-fiction-contain{    
     width: 183vh;
 }
@@ -210,7 +215,6 @@
 }
 .create-character-form,
 .card-form-create-character .card-body{
-    width: 180vh;;
     height: 77vh;
 }
 .create-character-form > div:nth-child(2),.card.location-clan-background-width-container,
@@ -303,9 +307,7 @@
     width: 14vh;
     height: 8vh;
 }
-.fiction-container .card-header h2{
-    width: 180vh;
-}
+
 /* NavNar en Vh */
 .menu-left.menu-hidden.d-flex.flex-column.flex-shrink-0.p-3 {
     width: 15vh;
@@ -378,18 +380,6 @@
 }
 .pagination{
     max-width: 50vh;
-}
-.pagination-container {
-    width: 180vh;
-}
-.one-quest-container .card-header h2{
-    width: 180vh;
-}
-.quest-by-id-card .card-header h2{
-    width: 180vh;
-}
-.row.pagination-zone-container, .row.pagination-container, .pagination-row-container{
-    width: 180vh;
 }
 #accueil li.nav-item, .number-page-container{
     width: 17vh;
