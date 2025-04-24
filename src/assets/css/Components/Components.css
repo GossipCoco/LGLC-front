@@ -73,7 +73,7 @@
     transform: scale(1.05);
 }
 .one-quest-container .row.pagination-zone-container{
-    margin: 4rem 0 0 0;
+    margin: 5rem 0 0 0;
 }
 .modal-footer{
     padding: 1rem 0 0 0;
@@ -85,7 +85,7 @@
 }
 .create-character-form,
 .card-form-create-character .card-body{
-    padding: 2vh 0 0 0;
+    padding: 2vh 2vh 0 2vh;
 }
 .one-fiction-container, .mini-rond-messages,
 .all-fictions-container-global .search-bar-component .col-1{

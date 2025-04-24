@@ -13,19 +13,14 @@
 .modal-footer{
     height: 10vh;
 }
-.card-form-create-character .card-body,
-.pagination-container{
-    width: 180vh;
-}
 .row.list-quest-card-container{
     width: 185vh;
 }
-.user-information-container .mini-rond-avatar-image{
+.user-information-container .mini-rond-avatar-image,
+.user-information-container .rond-image-illustration img
+.character-card.card .card-image{
     width: 25vh;
     height: 25vh;
-}
-.list-all-fictions-globale--container.list-all-fictions-globale--container{
-    width: 100vh;
 }
 .row.bottom-dashboard-levele-three .card, .row.bottom-dashboard-levele-three .card .card-body{
     height: 38vh;
@@ -33,7 +28,7 @@
 .middle-dashboard{
     width: 192vh;
 }
-.last-chapter-card.card-body{
+.height-all-fictions-container{
     height: 70vh;
 }
 .global-container {
@@ -54,11 +49,7 @@
     width: 9vh;
     height: 9vh;
 }
-.user-information-container .rond-image-illustration img
-.character-card.card .card-image {    
-    width: 25vh;
-    height: 25vh;
-}
+
 .card-character-container,#all-characters-container-card .character-card.card,
 .card-image img.image-book, .title-container-card, .image-book,
 .all-characters-of-fiction > button{
@@ -167,8 +158,11 @@
 }
 .quest-container{
     width: 35vh;
+    height: 36vh;
 }
-.rating, .button-validate-container .btn.btn-primary, .dashboard-home-max-card-container .avatar-container, .create-character-button .btn{
+.rating, .button-validate-container .btn.btn-primary,
+.dashboard-home-max-card-container .avatar-container,
+.create-character-button .btn, .number-page-container{
     height: 5vh;
 }
 .rating {
@@ -244,9 +238,6 @@
 }
 .fiction-summary-card{
     height: 15vh;
-}
-.height-all-fictions-container{
-    height: 70vh;
 }
 .game-container img{
     width: 6vh;
@@ -401,9 +392,6 @@
 #accueil li.nav-item, .number-page-container{
     width: 17vh;
 }
-.number-page-container {
-    height: 5vh;
-}
 .row.bottom-dashboard-levele-one .card.last-book-container{
     height: 36vh;
 }
@@ -420,9 +408,7 @@
 .quest-button-text {
     height: 30vh;
 }
-.row.list-quest-card-container{
-    height: 70vh;
-}
+
 /* QUEST */
 .quest--global-container {
     height: 38vh;
@@ -434,22 +420,21 @@
 #quest-by-id .parallax-container {
     height: 74vh;
 }
-
+.quest-button-text p {
+    height: 20vh;
+}
+.background-image-quest{
+    height: 36vh;
+    width: 10vh;
+}
 /* en REM */
 .card.fiction-container .card-header h4 {    
     width: 100%;
     height: 2.5rem;
 }
-.background-image-quest{
-    height: 32vh;
-    width: 10vh;
-}
 .card-body.one-quest {
     height: 13rem;
     width: 10rem;
-}
-.quest-button-text p {
-    height: 9rem;
 }
 .login-card .card-body{
     height: 15rem;
@@ -502,7 +487,6 @@ audio{
 .link-collapse {
     width: 6rem;
 }
-
 /* % */
 .character-details.card .card-image img {
     width: 75%;
@@ -535,7 +519,6 @@ audio{
     height: 45%;
 }
 /*  px */
-
 .row.all-calls-pagination-container{
     height: 100px;
 }
@@ -564,7 +547,6 @@ audio{
     width: 70px;
     height: 70px;
 }
-
 .edit-overlay {
     width: 40px;
     height: 40px;
