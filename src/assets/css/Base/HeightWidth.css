@@ -427,6 +427,10 @@
     height: 36vh;
     width: 10vh;
 }
+.avatar-gamer{
+    width: 20vh;
+    height: 20vh;
+}
 /* en REM */
 .card.fiction-container .card-header h4 {    
     width: 100%;
@@ -529,10 +533,6 @@ audio{
 .display-flex-row.card-group.clan-group .card.location-clan-background-width-container::before {
     width: 10px;
     height: 10px;
-}
-.avatar-gamer{
-    width: 200px;
-    height: 150px;
 }
 .character-l1{
     width: 110px;

@@ -178,6 +178,9 @@
 .single-timeline-area .single-timeline-content .timeline-icon {
     border-radius: 50%;
 }
+.avatar-gamer{
+    border-radius: 100%;
+}
 /* Accueil */
 
   #accueil .accueil-image-one, #accueil .accueil-image-two, #accueil .accueil-image-tree{

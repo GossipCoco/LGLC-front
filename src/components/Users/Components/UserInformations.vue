@@ -41,7 +41,6 @@ export default {
   },
   created() {
     this.GetUser(this.user);
-    console.log(this.user);
   },
   methods: {
     GetUser(username) {

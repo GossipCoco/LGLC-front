@@ -17,7 +17,7 @@
                   :alt="gamer.UserName"
                 />
                 <div class="information-character-container overflowY-X-hidden">
-                  <p>Clan de naissance : {{ gamer.ClanId }}</p>
+                  <p>Clan de naissance : {{ gamer.Clan.Name }}</p>
                   <p>Statut actuel : {{ gamer.Status }}</p>
                   <p>Genre du personnage : {{ gamer.Genre }}</p>
                 </div>
