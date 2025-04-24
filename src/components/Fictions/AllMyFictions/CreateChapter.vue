@@ -4,7 +4,7 @@
   >
     <CardHeader v-bind:Title="'Chapitre' + NextChapter" />
     <form
-      class="create-character-form"
+      class="create-character-form width-180-vh"
       @submit.stop.prevent="onSubmit"
       ref="uploadForm"
     >

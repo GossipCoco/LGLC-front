@@ -17,7 +17,7 @@
     aria-labelledby="EditSummaryLabel"
     aria-hidden="true"
   >
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-xl">
       <div class="modal-content background-color-dark-green-01">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="EditSummaryLabel">
@@ -32,7 +32,7 @@
         </div>
         <div class="modal-body">
           <form
-            class="create-character-form"
+            class="create-character-form-modal"
             @submit.stop.prevent="handleOk"
             ref="uploadForm"
           >

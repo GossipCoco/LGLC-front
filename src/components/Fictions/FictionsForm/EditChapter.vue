@@ -5,7 +5,7 @@
     >
       <div class="card-body">
         <form
-          class="create-character-form"
+          class="create-character-form width-180-vh"
           @submit.stop.prevent="handleOk"
           ref="uploadForm"
         >

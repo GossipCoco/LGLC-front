@@ -72,6 +72,9 @@
 .one-quest-container .row.pagination-zone-container{
     margin: 4rem 0 0 0;
 }
+.modal-footer{
+    padding: 1rem 0 0 0;
+}
 /* CARD */
 .card.clan-detail-layout{
     background-color: rgb(var(--main-white), 0);

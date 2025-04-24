@@ -5,7 +5,7 @@
   >
     <div class="row width-190-vh">
       <div class="col-8">
-        <h2 class="display-flex flex-one align-items-content-justify-content text-white">{{ Title }}</h2>
+        <h2 class="display-flex flex-one align-items-content-justify-content text-white width-180-vh">{{ Title }}</h2>
       </div>
       <div class="col-4">
         <slot></slot>

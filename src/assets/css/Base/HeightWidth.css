@@ -2,14 +2,19 @@
 @import '../variables.scss';
 
 /* en VH */
-.page-profil-user-container .card-header h2,
-.form-character-container .card-header h2,
-.fiction-container .card-header h2,
-.one-quest-container .card-header h2,
-.quest-by-id-card .card-header h2,
-.row.pagination-zone-container, .row.pagination-container,
-.create-character-form, .card-form-create-character .card-body,
-.pagination-container{
+
+.fiction-container{    
+    width: 186vh;
+}
+.create-character-form-modal{
+    width: 138vh;
+    height: 50vh;
+}
+.modal-footer{
+    height: 10vh;
+}
+.card-form-create-character .card-body,
+.pagination-container, .row.list-quest-card-container{
     width: 180vh;
 }
 .user-information-container .mini-rond-avatar-image{
@@ -394,8 +399,7 @@
     width: 183vh;
     height: 77vh;
 }
-.row.bottom-dashboard-levele-one .card.all-fictions-card,
-.row.bottom-dashboard-levele-one .card.game-container{
+.row.bottom-dashboard-levele-one .card.all-fictions-card{
     height: 86vh;
 }
 .col-8.location-clan-card-details{
@@ -406,7 +410,6 @@
 }
 .row.list-quest-card-container{
     height: 70vh;
-    width: 180vh;
 }
 /* en REM */
 /* .summaray-title-text.flex-one{
