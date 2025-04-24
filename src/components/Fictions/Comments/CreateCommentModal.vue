@@ -105,10 +105,8 @@ export default {
       this.onSubmit();
     },
     onSubmit() {
-      console.log(this.fictionId + " - " + this.chapterId + " ");
       this.form.FictionId = this.fictionId;
       this.form.ChapterId = this.chapterId;
-      console.log(this.form);
       FictionService.CreateCommentForAFiction(this.fictionId, this.form)
         .then((response) => {
           console.log(response);

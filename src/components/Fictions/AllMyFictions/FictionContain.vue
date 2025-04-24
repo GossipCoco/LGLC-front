@@ -33,7 +33,7 @@
                 <div v-if="nbIllus > 0">
                   <div
                     class="illustration-background"
-                    v-for="(illus, index) in illustration"
+                    v-for="(illus, index) in illustration.slice(0, 1)"
                     :key="index"
                   >
                     <div
@@ -59,6 +59,12 @@
                   </div>
                 </div>
                 <div v-else class="background-fiction-contain">
+                  <div
+                      :style="{
+                        backgroundImage: 'url(' + backgroundImageFiction + ')',
+                      }"
+                      class="background-size-cover display-flex-column background-fiction-contain"
+                    >
                   <ListOfChapter
                     v-bind:AuthorId="AuthorId"
                     v-bind:usrCurrent="usrCurrent"
@@ -70,6 +76,8 @@
                     v-bind:Characters="listOfCharacter"
                     v-bind:OCCharacters="Gamers"
                   />
+
+                  </div>
                 </div>
               </div>
             </div>
@@ -148,8 +156,7 @@ export default {
     },
     GetLastChapterOfAFiction(id) {
       FictionService.GetLastChapterOfAFiction(id)
-        .then((response) => {
-          console.log("GetLastChapterOfAFiction",response.data.ob)
+        .then((response) => {          
           if(!response.data.ob){
             this.lastChap = 1
           }else{
