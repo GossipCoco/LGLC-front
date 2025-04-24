@@ -28,8 +28,6 @@
 }
 
 #quest-by-id {
-  width: 185vh;
-  height: 95vh;
   padding: 0;
   overflow: hidden;
 }
@@ -41,10 +39,9 @@
 }
 #quest-by-id .parallax-container {
   position: relative;
-  height: 74vh;
   overflow-y: scroll;
   overflow-x: hidden;
-  perspective: 10rem;
+  perspective: 20vh;
   transform-style: preserve-3d;
 }
 #quest-by-id .parallax-layer {
@@ -140,7 +137,8 @@
   content: '';
   position: absolute;
   bottom: 80px;
-  left: -30px;transform: rotate(45deg);
+  left: -6vh;
+  transform: rotate(45deg);
 }
 img.key-object-img {
   position: relative;

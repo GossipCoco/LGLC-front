@@ -14,8 +14,11 @@
     height: 10vh;
 }
 .card-form-create-character .card-body,
-.pagination-container, .row.list-quest-card-container{
+.pagination-container{
     width: 180vh;
+}
+.row.list-quest-card-container{
+    width: 185vh;
 }
 .user-information-container .mini-rond-avatar-image{
     width: 25vh;
@@ -158,8 +161,12 @@
     width: 44vh;
 }
 .fiction-container .card-body,.card-body.user-inbformation-conter, .profil-user-card .avatar-container,
-.dashboard-max-card-container.card-height.fiction-container .card-body, .dashboard-max-card-container.card-height .card-body{
+.dashboard-max-card-container.card-height.fiction-container .card-body, 
+.dashboard-max-card-container.card-height .card-body {
     height: 80vh;
+}
+.quest-container{
+    width: 35vh;
 }
 .rating, .button-validate-container .btn.btn-primary, .dashboard-home-max-card-container .avatar-container, .create-character-button .btn{
     height: 5vh;
@@ -269,8 +276,13 @@
     width: 8vh;
     height: 8vh;
 }
-.dashboard-card-header .avatar-wrapper, .character-illustration-container, .profil-user-card .avatar-container{
+.dashboard-card-header .avatar-wrapper,
+.character-illustration-container,
+.profil-user-card .avatar-container{
     width: 10vh;
+}
+.flex-one .quest-button-text .btn.btn-primary{
+    width: 13vh;
 }
 .location-clan-background-width-container .btn.btn-primary{
     max-width: 30vh;
@@ -411,24 +423,26 @@
 .row.list-quest-card-container{
     height: 70vh;
 }
-/* en REM */
-/* .summaray-title-text.flex-one{
-    width: 25rem;
-} */
+/* QUEST */
+.quest--global-container {
+    height: 38vh;
+}
+#quest-by-id {
+    width: 185vh;
+    height: 95vh;
+}
+#quest-by-id .parallax-container {
+    height: 74vh;
+}
 
+/* en REM */
 .card.fiction-container .card-header h4 {    
     width: 100%;
     height: 2.5rem;
 }
-.quest--global-container {
-    height: 38vh;
-}
-.quest-container {
-    height: 16rem;
-    width: 19rem;
-}
 .background-image-quest{
-    height: 16rem;
+    height: 32vh;
+    width: 10vh;
 }
 .card-body.one-quest {
     height: 13rem;

@@ -5,7 +5,7 @@
       <Spinner v-if="showspinner" />
       <div v-if="!showspinner" class="row list-quest-card-container">
         <div
-          class="col-xxl-5 col-xl-5 col-lg-12 col-md-12 col-sm-12 display-flex-row flex-wrap quest--global-container flex-wrap height-18-rem"
+          class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 display-flex-row flex-wrap quest--global-container flex-wrap height-18-rem"
           v-for="(quest, index) in allQuests"
           :key="index"
         >
@@ -51,7 +51,7 @@ export default {
       nav: {
         current: 0,
         pages: 0,
-        step: 8,
+        step: 10,
       },
     };
   },
@@ -92,7 +92,6 @@ export default {
       QuestService.GetAllQuests(nav)
         .then((response) => {
           this.allQuests = response.data.ob;
-          console.log(this.allQuests)
           this.showspinner = false;
           functions.CalcPagination(
             this.nbQuests,
