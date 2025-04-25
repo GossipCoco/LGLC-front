@@ -17,7 +17,17 @@
     
 }
 @media (min-width: 1367px) and (max-width: 1600px) {
-    
+    .title-author-container h1{
+        font: 500 2rem petite-caps;
+    }
+    .Comment-icon, .Comment-icon .display-flex-column, .Comment-icon .flex-one .btn {
+        width: 23vh;
+    }    
+    .rating {
+        width: 10rem;
+        height: 10rem;
+        margin: 4vh 0 0 1vh;
+    }
 }
 @media (min-width: 1201px) and (max-width: 1400px) {
     
@@ -207,12 +217,7 @@
     .carousel{
         width: 15rem;
     }
-    .rating {
-        width: 5rem;
-        height: 4rem;
-    }
     .Comment-icon {
-        width: 3rem;
         margin: 1rem 0 0 -4rem;
     }
     .illustration-background .background-fiction-contain{
