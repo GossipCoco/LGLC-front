@@ -14,9 +14,7 @@
     
 }
 @media (min-width: 1440px) and (max-width: 1920px) {
-    .row.avatar-row{
-        
-    }
+
 }
 @media (min-width: 1367px) and (max-width: 1439px) {
 
@@ -181,6 +179,31 @@
     .row.bottom-dashboard-levele-one .card.all-fictions-card {
         height: 101vh;
     }
+    /* Page all characters */
+    .all-characters-container-card {
+        margin-top: 8vh;
+    }
+    .character-container-global {
+        margin: -1rem auto;
+        height: 150vh;
+        overflow-y: hidden;
+        overflow-x: hidden
+    }
+    .character-card.card .card-image {
+        height: 25vh;
+        width: 22vh;
+    }
+    
+    #all-characters-container-card .character-card.card{
+        display: flex;
+        flex-direction: column;
+        margin: 0 4vh 8vh 0;
+        height: 34vh;
+        width: 32vh;
+    }
+    span.name-characatrer-link{
+        margin: -15vh 0 0 0;
+    }
 }
  @media (min-width: 1400px) and (max-width:1710px){
     .col-xxl-3{
@@ -189,6 +212,9 @@
     .col-xxl-3.card-global.all-my-oc-card {
         width: 100%;
     }    
+    span.name-characatrer-link{
+        margin: -15vh 0 0 0;
+    }
  }
 @media (min-width: 1201px) and (max-width: 1400px) {    
     .menu-left ul {
@@ -332,6 +358,9 @@
     }
     .row.bottom-dashboard-levele-one .card.all-fictions-card {
         height: 101vh;
+    }    
+    span.name-characatrer-link{
+        margin: -15vh 0 0 0;
     }
 
 }
@@ -405,11 +434,6 @@
         width: 200vh;
         min-width: 200vh;
     }
-    .character-container-global {
-        height: 90vh;
-        width: 180vh;
-        margin-top: 1rem;
-    }
     .dashboard-home-max-card-container.card {
         padding: 0;
         margin: 1rem 0 0 0;
@@ -425,10 +449,7 @@
         background-position: 50%;
     }
 
-    .character-card.card .card-image {
-        height: 250px;
-        width: 250px;
-    }
+
     .card-image img {
         width: 70%;
         height: 100%;
@@ -443,21 +464,9 @@
     .list-all-fictions-globale--container {
         width: 185vh;
     }
-    #all-characters-container-card .character-card.card{
-        display: flex;
-        flex-direction: column;
-        margin: 0 2rem 5rem 0;
-    }
     .row.row-filter{
         display: flex;
         flex-direction: row;
-    }.all-characters-container-card {
-        margin-top: 0rem;
-    }
-    .character-container{
-        margin: -1rem auto;
-        height: 150vh;
-        overflow-y: hidden;
     }
     .row.pagination-container-row{
         margin: 22rem 0 0 0;
@@ -466,9 +475,9 @@
         width: 80rem;
     }
     .card-form-create-character .card-body {
-        width: 80%;
+        width: 180vh;
         height: 70vh;
-        overflow-y: hidden;
+        overflow-y: scroll;
         overflow-x: hidden;
         padding: 1rem;
     }
