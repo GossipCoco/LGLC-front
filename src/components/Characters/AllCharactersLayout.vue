@@ -13,7 +13,7 @@
         @getCurrentName="getCurrentName"
       />
       <GenericSelect
-        v-bind:col="'col-xxl-3 col-xl-3 col-lg-12 col-md-12 col-sm-12 col-xs-12'"
+        v-bind:col="'col-xxl-3 col-xl-3 col-lg-12 col-md-12 col-sm-12 col-xs-12 search-clan'"
         v-bind:For="'SearchClan'"
         v-bind:label="'Clan'"
         v-bind:formdata="'getclans'"
@@ -21,7 +21,7 @@
         @getclans="getclans"
       />
       <GenericSelect
-        v-bind:col="'col-xxl-2 col-xl-2 col-lg-12 col-md-12 col-sm-12 col-xs-12'"
+        v-bind:col="'col-xxl-2 col-xl-2 col-lg-12 col-md-12 col-sm-12 col-xs-12 search-grade'"
         v-bind:For="'SearchGrade'"
         v-bind:label="'Grade'"
         v-bind:formdata="'getgrade'"

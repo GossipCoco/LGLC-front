@@ -34,7 +34,6 @@ import './assets/css/Base/Text.css'
 import './assets/css/Page/Login.css'
 import './assets/css/Page/SignInRegister.css'
 import './assets/css/Page/Accueil.css'
-import './assets/css/Base/Responsive.css'
 import './assets/css/Components/Components.css'
 import './assets/css/Components/Fiction.css'
 import './assets/css/Components/FictionChapter.css'
@@ -45,6 +44,8 @@ import './assets/css/Components/Comment.css'
 import './assets/css/Components/Game.css'
 import './assets/css/Components/Dice.css'
 import './assets/css/Components/Timeline.css'
+import './assets/css/Base/Responsive.css'
+import './assets/css/Base/Responsive-Mobile.css'
 
 IOController.initSocket(io)
 

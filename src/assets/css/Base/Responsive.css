@@ -204,8 +204,22 @@
     span.name-characatrer-link{
         margin: -15vh 0 0 0;
     }
+
+    .character-list-wrapper .card-body{
+        height: 2vh;
+        margin: 12vh 0 0 0;
+    }
+    .character-details-card .card-body p{
+        margin: -11vh 0 0 0; 
+
+    }
 }
  @media (min-width: 1400px) and (max-width:1710px){
+    
+    .character-list-wrapper .card-body{
+        height: 2vh;
+        margin: 12vh 0 0 0;
+    }
     .col-xxl-3{
         width: 33%;
     }
@@ -215,10 +229,24 @@
     span.name-characatrer-link{
         margin: -15vh 0 0 0;
     }
+    .character-details-card .card-body p{
+        margin: -11vh 0 0 0; 
+
+    }
  }
-@media (min-width: 1201px) and (max-width: 1400px) {    
+@media (min-width: 1201px) and (max-width: 1400px) { 
+    .info-original-character-height{
+        height: 20vh;
+        overflow-y: scroll;
+    }
+    .character-details .parallax {
+        overflow-y: hidden;
+    }
+    .tab-pane{
+        
+    }
     .menu-left ul {
-        padding: 0 0 0 5vh;
+        padding: 0 0 0 12vh;
     }
     .menu-left.menu-hidden.d-flex.flex-column.flex-shrink-0.p-3{
         width: 18vh;
@@ -362,6 +390,14 @@
     span.name-characatrer-link{
         margin: -15vh 0 0 0;
     }
+    .character-list-wrapper .card-body{
+        margin: 12vh 0 0 0;
+    }
+    .name-characatrer-link.flex-one .btn{
+        margin: -1vh 0 0 -1px;
+        padding: 1vh 0 0 0;
+        height: 10vh;
+    }
     .mb-3 {
         margin: -3vh 0 0 0;
     }
@@ -372,26 +408,30 @@
         width: 30vh;
         margin: 2vh 0 0 0;
     }
+    .search-clan, .search-grade{
+        margin: 3vh 0 0 0;
+    }
+    .character-list-wrapper .card-body{
+        height: 2vh;
+        margin: 12vh 0 0 0;
+    }
+    .character-details-card .card-body p{
+        margin: -11vh 0 0 0; 
+
+    }
 }
 @media (min-width: 993px) and (max-width: 1200px) {
     .display-none-responsive p{
         display: none;
     }
+       
+    span.name-characatrer-link{
+        margin: -15vh 0 0 0;
+    }
 
 }
-@media (min-width: 769px) and (max-width: 992px) {
-    
-    .display-none-responsive p{
-        display: none;
-    }
-}
-@media (min-width: 577px) and (max-width: 768px) {
-    .display-none-responsive p{
-        display: none;
-    }
-    
-}
 
+/* 
 @media (max-width: 576px) {
     
 }
@@ -615,4 +655,4 @@
     .chapter-text-content {
         max-height: none;
     }
-}
+} */

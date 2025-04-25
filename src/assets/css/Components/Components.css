@@ -62,7 +62,7 @@
     background-color: rgba(var(--dark-green-01), 1);
     color: rgba(var(--active-hover), 1);
 }
-.quest-button-text .btn.btn-primar, .character-list-wrapper .card-body {
+.quest-button-text .btn.btn-primar {
     margin: 0;
 }
 .btn-primary.file-character-btn {
