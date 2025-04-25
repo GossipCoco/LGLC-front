@@ -4,8 +4,8 @@
       :For="'SearchCharacter'"
       :label="'Sélectionner un personnage'"
       :characters="characters"
-      @form-info="getInfo"      
-    />   
+      @form-info="getInfo"
+    />
     <Spinner v-if="showspinner" />
     <AllCardsFictions v-else :allFictions="allFictions" />
     <div class="row pagination-container">
@@ -38,7 +38,7 @@ export default {
       NbAllMyGamesFictions: 0,
       showspinner: false,
       filters: [],
-      allAuthors:{},
+      allAuthors: {},
       width: 1920,
       searchedCharacter: null,
       nav: {
@@ -49,20 +49,35 @@ export default {
     };
   },
   created() {
-    this.usrId = this.userCurrent; 
-    this.initData();   
+    this.usrId = this.userCurrent;
+    this.initData();
     this.GetAllNamesAndIdsCharacters();
   },
   methods: {
+    getStepByScreenWidth(width) {
+      if (width >= 4400) {
+        return 20; // Très grands écrans
+      } else if (width >= 1920) {
+        return 16; // Grand écran standard
+      } else if (width >= 1600) {
+        return 16; // Écran intermédiaire        
+      }else if (width >= 1400) {
+        return 8; // Écran intermédiaire
+      } else if (width >= 1366) {
+        return 8; // Portable classique
+      } else {
+        return 8; // Tablettes / petits écrans
+      }
+    },
     getInfo(e, w) {
       console.log(e, w);
-      this.searchedCharacter = e
-      this.GetAllGamesByCharacter(this.searchedCharacter)
+      this.searchedCharacter = e;
+      this.GetAllGamesByCharacter(this.searchedCharacter);
     },
-    GetAllGamesByCharacter(searchedCharacter){
+    GetAllGamesByCharacter(searchedCharacter) {
       GameService.GetAllGamesByCharacter(searchedCharacter)
-      .then((response) => {
-          console.log(response.data.ob)
+        .then((response) => {
+          console.log(response.data.ob);
         })
         .catch((e) => {
           console.log(e);
@@ -79,21 +94,13 @@ export default {
     },
     async initData() {
       this.showspinner = true;
-
       try {
-        await this.countAllFictions();        
-        if(window.innerWidth >= 1920){
-          this.nav.step = 16
-        }else if(window.innerWidth < 1921 || window.innerWidth > 1601)
-        {
-          console.log("1", window.innerWidth)
-          this.nav.step = 8
-        }else if(window.innerWidth < 1600 || window.innerWidth > 1367 ||  window.innerWidth === 1440){
-          console.log("2", window.innerWidth)
-          this.nav.step = 10
-        }
-        await this.getAllFictions(this.nav);
+        await this.countAllFictions();
 
+        const screenWidth = window.innerWidth;
+        this.nav.step = this.getStepByScreenWidth(screenWidth);
+
+        await this.getAllFictions(this.nav);
       } catch (error) {
         console.error("Erreur lors du chargement des fictions :", error);
       }
@@ -101,43 +108,31 @@ export default {
     },
     async FictionPagination(page) {
       this.nav.current = page;
-      if(window.innerWidth >= this.width){
-          this.nav.step = 16
-        }else if(window.innerWidth < this.width || window.innerWidth > 1601)
-        {
-          console.log("1", window.innerWidth)
-          this.nav.step = 8
-        }else if(window.innerWidth > 1367 || window.innerWidth < 1600){
-          console.log("2",window.innerWidth)
-          this.nav.step = 10
-        }
+
+      const screenWidth = window.innerWidth;
+      this.nav.step = this.getStepByScreenWidth(screenWidth);
 
       await this.getAllFictions(this.nav);
     },
+
     async countAllFictions() {
       try {
         const response = await FictionService.CountAllFictionsOnBases();
         this.NbAllFictions = response.data.ob.count;
-        if(window.innerWidth >= this.width){
-          this.nav.step = 16
-        }else if(window.innerWidth < this.width || window.innerWidth > 1601)
-        {
-          console.log(window.innerWidth)
-          this.nav.step = 8
-        }else if(window.innerWidth > 1367 || window.innerWidth < 1600){
-          console.log(window.innerWidth)
-          this.nav.step = 10
-        }
+
+        const screenWidth = window.innerWidth;
+        this.nav.step = this.getStepByScreenWidth(screenWidth);
+
         this.nav.pages = Math.ceil(this.NbAllFictions / this.nav.step);
       } catch (error) {
         console.error(error);
       }
     },
+
     async getAllFictions(nav) {
       try {
         const response = await FictionService.GetAllFictionsOnBase(nav);
         this.allFictions = response.data.ob;
-
       } catch (error) {
         console.error(error);
       }

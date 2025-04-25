@@ -94,7 +94,7 @@
               </span>
             </li>
             <div
-              class="pagination"
+              class="pagination pagination-div-container-center"
               v-if="navPage.current < 3 || navPage.current > navPage.pages - 4"
             >
               <span class="nav-space-contain">...</span>
@@ -106,8 +106,6 @@
                   @click="getData(getMiddle(navPage) - 2)"
                 >
                   {{ getMiddle(navPage) - 1 }}
-                  <!-- {{ navPage }} -->
-                  <!-- {{ navPage.middle - 1 }} -->
                 </button>
               </li>
               <li class="page-item display-flex-row  flex-one">
