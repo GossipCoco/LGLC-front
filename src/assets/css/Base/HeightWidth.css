@@ -316,6 +316,9 @@
     height: 8vh;
 }
 
+.summary-height-container{
+    height: 60vh;
+}
 /* NavNar en Vh */
 .menu-left.menu-hidden.d-flex.flex-column.flex-shrink-0.p-3 {
     width: 15vh;

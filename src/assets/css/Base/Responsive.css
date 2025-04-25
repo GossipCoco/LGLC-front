@@ -24,9 +24,56 @@
         width: 23vh;
     }    
     .rating {
-        width: 10rem;
-        height: 10rem;
-        margin: 4vh 0 0 1vh;
+        width: 10vh;
+        height: 10vh;
+        margin: 5vh 0 0 1vh;
+    }
+    .title-author-container.flex-one{
+        flex:0.85;
+    }
+    .character-chapters-fiction-container .character-chapters-container,.illustration-background {
+        width: 140vh;
+    }    
+    .illustration-background .background-fiction-contain{
+        height: 75vh;
+    }    
+    .opacity-container{
+        height: 75vh;
+    }
+    .middle-fiction-card .col-xxl-6.col-xl-12.col-lg-12.col-md-12.col-sm-12.col-xs-12{
+        width: 62vh;
+        margin: 0 0 0 6vh;
+    }
+    .summary-height-container p{
+        font-size: 1.5em;
+    }
+    .middle-fiction-card a{
+        font-size: 1.25em;
+        font-weight: 500;
+    }
+    .all-chapters-list-container ul{
+        width: 44vh;
+        max-width: 44vh;
+        margin: 0;
+        height: 80vh;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    .carousel p{
+        font-size: 1.25em;
+    }
+    .flex-one .summary-container .btn {
+        font-size: 1.25em;
+        margin: -13vh 0 0 0;
+    }
+    .summary-height-container{
+        height: 66vh;
+    }
+    .right-column-image-container {
+        margin: -13vh 0 0 0;
+    }
+    .summary-container input{
+        margin: -3vh 0 0 0;
     }
 }
 @media (min-width: 1201px) and (max-width: 1400px) {
@@ -79,7 +126,9 @@
     }    
     .row.bottom-dashboard-levele-one .card {
         height: 28rem;
-    }  
+    }
+    
+
 }
 @media (min-width: 800px) and (max-width: 1600px) {
     .menu-left.menu-hidden.d-flex.flex-column.flex-shrink-0.p-3{
@@ -209,10 +258,6 @@
     .character-chapters-fiction-container{
         margin: 0rem 5rem 0 0rem;
         width: 35rem;
-    }   
-    .character-chapters-fiction-container .character-chapters-container,
-    .illustration-background {
-        width: 59rem;
     }
     .carousel{
         width: 15rem;
@@ -220,20 +265,10 @@
     .Comment-icon {
         margin: 1rem 0 0 -4rem;
     }
-    .illustration-background .background-fiction-contain{
-        height: 60vh;
-    }
-    .all-chapters-list-container ul{
-        width: 21rem;
-        max-width: 21rem;
-    }
     .all-chapters-list-container ul li a{
         max-width: 20rem;
         overflow-wrap: break-word;
         white-space: normal;
-    }
-    .opacity-container{
-        height: 60vh;
     }
     .row.list-fiction-card-container .col-3.col-sm-12.col-md-12.col-lg-3.col-xl-3.col-xxl-4.mb-2.mb-sm-2.mb-2.mb-sm-2{
         height: 10rem;
