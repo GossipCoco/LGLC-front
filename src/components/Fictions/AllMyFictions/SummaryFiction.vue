@@ -60,7 +60,7 @@ export default {
       } else if (width >= 1920) {
         return 16; // Grand écran standard
       } else if (width >= 1600) {
-        return 16; // Écran intermédiaire        
+        return 15; // Écran intermédiaire        
       }else if (width >= 1400) {
         return 15; // Écran intermédiaire
       } else if (width >= 1366) {

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 card-global"
+    class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 card-global"
   >
     <div class="card background-lineart border-none fiction-card">
       <TitleHeaderDashboard

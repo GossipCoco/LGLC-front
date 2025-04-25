@@ -13,8 +13,13 @@
 @media (min-width: 1921px) and (max-width: 2560px) {
     
 }
-@media (min-width: 1601px) and (max-width: 1920px) {
-    
+@media (min-width: 1440px) and (max-width: 1920px) {
+    .row.avatar-row{
+        
+    }
+}
+@media (min-width: 1367px) and (max-width: 1439px) {
+
 }
 @media (min-width: 1367px) and (max-width: 1600px) {
     .menu-left ul {
@@ -177,6 +182,14 @@
         height: 101vh;
     }
 }
+ @media (min-width: 1400px) and (max-width:1710px){
+    .col-xxl-3{
+        width: 33%;
+    }
+    .col-xxl-3.card-global.all-my-oc-card {
+        width: 100%;
+    }    
+ }
 @media (min-width: 1201px) and (max-width: 1400px) {    
     .menu-left ul {
         padding: 0 0 0 5vh;

@@ -1,20 +1,23 @@
+$grid-columns:      12;
+$grid-gutter-width: 1.5rem;
 $grid-breakpoints: (
   xs: 576px,
   sm: 768px,
   md: 1028px,
-  lg: 1280px,
-  xl: 1400px,
+  lg: 1440px,
+  xl: 1600px,
   xxl: 1750px,
   ultra: 4400px 
 );
 
-$container-max-widths: (
-  sm: 720px,
-  md: 960px,
-  lg: 1140px,
-  xl: 1320px,
-  xxl: 1680px,
-  ultra: 2100px
+$container-max-widths: (    
+  xs: 576px,
+  sm: 768px,
+  md: 1028px,
+  lg: 1440px,
+  xl: 1600px,
+  xxl: 1750px,
+  ultra: 4400px 
 );
 
 @import "./variables.scss";
