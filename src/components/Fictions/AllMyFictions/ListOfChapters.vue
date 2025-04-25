@@ -25,7 +25,7 @@
         </div>
       </div>
       <div class="row middle-fiction-card">
-        <div class="col-xxl-2 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 right-column-image-container">
+        <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12 right-column-image-container">
           <div class="display-flex-column all-characters-of-fiction">
             <div
               class="display-flex-column image-fiction-container overflowY-X-hidden background-size-cover"
@@ -41,7 +41,7 @@
             <CarrouselCharacter v-bind:Characters="OCCharacters" />
           </div>
         </div>
-        <div class="col-xxl-6 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
           <p class="text-align-justify overflowY-auto summary-height-container" v-html="Summary"></p>
         </div>
         <ListAllChapters v-bind:Chapters="fiction.Chapters" />

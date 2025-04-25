@@ -124,19 +124,31 @@
         width: 195vh;
         min-width: 195vh;
     }
+    .fiction-container .card-header {
+        height: 22vh;
+    }
     .title-author-container h1{
         font: 500 2rem petite-caps;
     }
     .Comment-icon, .Comment-icon .display-flex-column, .Comment-icon .flex-one .btn {
-        width: 23vh;
-    }    
+        width: 30vh;
+    }
+    .Comment-icon{
+        margin: 4vh 0 0 -21vh;
+    }
+    .fiction-globale-container h3{
+        font-size: 1.25em;
+    }
+    .Comment-icon {
+        margin: 4vh 0 0 -9vh;
+    }
     .rating {
         width: 10vh;
         height: 10vh;
         margin: 5vh 0 0 1vh;
     }
     .title-author-container.flex-one{
-        flex:0.85;
+        flex:0.7;
     }
     .character-chapters-fiction-container .character-chapters-container,.illustration-background {
         width: 185vh;

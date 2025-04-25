@@ -1,5 +1,5 @@
 <template>
-  <div class="col-xxl-4 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+  <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
     <div class="display-flex-column flex-one all-chapters-list-container">
       <ul class="list-group">
         <li
