@@ -134,6 +134,48 @@
     .height-all-fictions-container {
         height: 58vh;
     }
+    /* DASHBOARD */
+    .row.top-dashboard{
+        height: 137vh;
+    }
+    .row.top-dashboard .card-global{
+        height: 95vh;
+    }
+    .one-book-container-wrapper .fiction-container .card-body, #book-container .fiction-container .card-body, .illustration-arc-container, .one-book-container-wrapper .fiction-container .card-body, .row.top-dashboard .card {
+        height: 95vh;
+    }
+    .row.avatar-row, .row.top-dashboard .card-body.user-info-text > div{
+        width: 62vh;
+    }
+    .row.top-dashboard .card-body > div{
+        width: 60vh;
+    }
+    .title-text-novel p {
+        width: 39vh;
+    }
+    .row.bottom-dashboard-levele-one .card.last-book-container {
+        height: 63vh;
+    }
+    .list-all-fictions-globale--container {
+        width: 187vh;
+        margin: 0 0 0 8vh;
+    }
+    .row.top-dashboard .all-my-oc-card .card-body > div {
+        width: 28vh;
+    }
+    .welcome-dashboard-container{
+        width: 195vh;
+    }
+    .row.top-dashboard .card.my-oc-card {
+        height: 28vh;
+        margin: 1rem auto;
+    }
+    .row.bottom-dashboard-levele-one .card.random-characters-card {
+        height: 33vh;
+    }
+    .row.bottom-dashboard-levele-one .card.all-fictions-card {
+        height: 101vh;
+    }
 }
 @media (min-width: 1201px) and (max-width: 1400px) {    
     .menu-left ul {
@@ -239,6 +281,46 @@
         width: 25vh;
         display: flex;
     }
+    /* DASHBOARD */
+    .row.top-dashboard{
+        height: 130vh;
+    }
+    .row.top-dashboard .card-global{
+        height: 95vh;
+    }
+    .one-book-container-wrapper .fiction-container .card-body, #book-container .fiction-container .card-body, .illustration-arc-container, .one-book-container-wrapper .fiction-container .card-body, .row.top-dashboard .card {
+        height: 95vh;
+    }
+    .row.avatar-row, .row.top-dashboard .card-body.user-info-text > div{
+        width: 62vh;
+    }
+    .row.top-dashboard .card-body > div{
+        width: 60vh;
+    }
+    .title-text-novel p {
+        width: 39vh;
+    }
+    .row.bottom-dashboard-levele-one{
+        height: 200vh;
+    }
+    .list-all-fictions-globale--container {
+        width: 187vh;
+        margin: 0 0 0 8vh;
+    }
+    .welcome-dashboard-container{
+        width: 195vh;
+    }    
+    .row.top-dashboard .card.my-oc-card {
+        height: 28vh;
+        margin: 1rem auto;
+    }
+    .row.bottom-dashboard-levele-one .card.random-characters-card {
+        height: 33vh;
+    }
+    .row.bottom-dashboard-levele-one .card.all-fictions-card {
+        height: 101vh;
+    }
+
 }
 @media (min-width: 993px) and (max-width: 1200px) {
     .display-none-responsive p{
@@ -271,16 +353,11 @@
         width: 30%;
         height: 100%;
     }
-    .list-all-fictions-globale--container {
-        width: 34rem;
-    }
     .title-dashboard-container-header{
         height: 8rem;        
         padding: 1.5rem 0 1rem 0;
     }
-    .list-all-fictions-globale--container{
-        width: 33rem;
-    }
+
     #dashboard p{
         font-size: 1.25em;
     }
@@ -302,13 +379,6 @@
 }
 @media (min-width: 800px) and (max-width: 1600px) {
 
-
-    .card-body.all-last-three-fictions-container .list-all-fictions-globale--container {
-        width: 18rem;
-    }
-    .list-all-fictions-globale--container.three-last-chapters-container{
-        width: 18rem;
-    }
     #navbarCollapse {
         margin-left: 47rem;
     }
@@ -358,11 +428,7 @@
         margin: 0 0 2vh -9vh;  
     }
     .list-all-fictions-globale--container {
-        width: 18rem;
-    }
-    .row.top-dashboard .card.my-oc-card {
-        height: 15rem;
-        margin: 1rem auto;
+        width: 185vh;
     }
     #all-characters-container-card .character-card.card{
         display: flex;
