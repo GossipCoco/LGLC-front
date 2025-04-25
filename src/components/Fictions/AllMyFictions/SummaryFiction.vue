@@ -62,9 +62,9 @@ export default {
       } else if (width >= 1600) {
         return 16; // Écran intermédiaire        
       }else if (width >= 1400) {
-        return 8; // Écran intermédiaire
+        return 15; // Écran intermédiaire
       } else if (width >= 1366) {
-        return 8; // Portable classique
+        return 15; // Portable classique
       } else {
         return 8; // Tablettes / petits écrans
       }

@@ -1,9 +1,8 @@
 <template>
   <div class="row pagination-zone-container width-180-vh display-flex align-items-content-justify-content vertical-align-middle">
     <div class="pagination-container-row col-lg-12 col-md-12 col-sm-12 col-xxl-12 col-xs-12">
-      <div class="row pagination-container width-180-vh align-items-content-justify-content">
-        <div class="col-md-2 col-sm-2 col-xl-2 col-xxl-2 col-xs-2"></div>
-        <div class="col-md-8 col-sm-8 col-xl-8 col-xxl-8 col-xs-8 col-pagination-container align-items-content-justify-content">
+      <div class="row pagination-container width-180-vh align-items-content-justify-content">        
+        <div class="col-md-10 col-sm-10 col-xl-10 col-xxl-10 col-xs-10 col-pagination-container align-items-content-justify-content">
           <ul class="pagination" v-if="navPage.pages < 6">
             <li class="nav-btn-contain display-flex-row  flex-one">
               <button
