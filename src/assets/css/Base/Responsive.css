@@ -75,6 +75,21 @@
     .summary-container input{
         margin: -3vh 0 0 0;
     }
+    .dashboard-max-card-container.card.fiction-container{
+        width: 20vh;
+        max-width: 25vh;
+        margin: 0 0 0 3vh;
+    }
+    .card.fiction-summary-card.clear-green-bacground{
+        height: 32vh;
+        width: 25vh;
+    }
+    .row-cols-md-4>*{
+        width: 26vh;
+    }
+    .fiction-container .pagination-container-row{
+        margin: 14vh;
+    }
 }
 @media (min-width: 1201px) and (max-width: 1400px) {
     
@@ -224,9 +239,6 @@
     }
     .row.list-fiction-card-container{
         width: 80rem;
-    }
-    .dashboard-max-card-container.card.fiction-container{
-        margin: 0;
     }
     .dashboard-max-card-container.card.fiction-container > .card-body{
         height: 40rem;

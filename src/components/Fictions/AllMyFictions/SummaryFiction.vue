@@ -39,7 +39,7 @@ export default {
       showspinner: false,
       filters: [],
       allAuthors:{},
-      width: 1700,
+      width: 1920,
       searchedCharacter: null,
       nav: {
         current: 0,
@@ -81,12 +81,16 @@ export default {
       this.showspinner = true;
 
       try {
-        await this.countAllFictions();
-        if(window.innerWidth >= this.width){
+        await this.countAllFictions();        
+        if(window.innerWidth >= 1920){
           this.nav.step = 16
-        }else if(window.innerWidth < this.width)
+        }else if(window.innerWidth < 1921 || window.innerWidth > 1601)
         {
+          console.log("1", window.innerWidth)
           this.nav.step = 8
+        }else if(window.innerWidth < 1600 || window.innerWidth > 1367 ||  window.innerWidth === 1440){
+          console.log("2", window.innerWidth)
+          this.nav.step = 10
         }
         await this.getAllFictions(this.nav);
 
@@ -99,10 +103,15 @@ export default {
       this.nav.current = page;
       if(window.innerWidth >= this.width){
           this.nav.step = 16
-        }else if(window.innerWidth < this.width)
+        }else if(window.innerWidth < this.width || window.innerWidth > 1601)
         {
+          console.log("1", window.innerWidth)
           this.nav.step = 8
+        }else if(window.innerWidth > 1367 || window.innerWidth < 1600){
+          console.log("2",window.innerWidth)
+          this.nav.step = 10
         }
+
       await this.getAllFictions(this.nav);
     },
     async countAllFictions() {
@@ -111,9 +120,13 @@ export default {
         this.NbAllFictions = response.data.ob.count;
         if(window.innerWidth >= this.width){
           this.nav.step = 16
-        }else if(window.innerWidth < this.width)
+        }else if(window.innerWidth < this.width || window.innerWidth > 1601)
         {
+          console.log(window.innerWidth)
           this.nav.step = 8
+        }else if(window.innerWidth > 1367 || window.innerWidth < 1600){
+          console.log(window.innerWidth)
+          this.nav.step = 10
         }
         this.nav.pages = Math.ceil(this.NbAllFictions / this.nav.step);
       } catch (error) {

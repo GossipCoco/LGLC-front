@@ -4,12 +4,12 @@
       <div class="card fiction-summary-card clear-green-bacground">
         <div class="row">
           <div
-            class="col-4 image-fiction-container-background background-size-cover"
+            class="col-4 col-lg-12 col-md-12 col-sm-12 col xs-12 image-fiction-container-background background-size-cover"
             v-bind:style="{
               backgroundImage: 'url(' + fiction.Image + ')',
             }"
           ></div>
-          <div class="col-8">
+          <div class="col-8 col-lg-12 col-md-12 col-sm-12 col xs-12">
             <div
               class="h5-container display-flex-column align-items-content-justify-content"
             >
