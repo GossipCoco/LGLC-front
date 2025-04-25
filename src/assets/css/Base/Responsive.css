@@ -17,6 +17,22 @@
     
 }
 @media (min-width: 1367px) and (max-width: 1600px) {
+    .menu-left ul {
+        padding: 0 0 0 5vh;
+    }
+    .menu-left.menu-hidden.d-flex.flex-column.flex-shrink-0.p-3{
+        width: 18vh;
+        margin: 1vh 0 0 1vh;
+    }
+    .icon-menu-container {
+        width: 50px;
+        height: 50px;
+    }
+    .icon-menu-container svg,
+    .icon-menu-container img {
+        width: 25px;
+        width: 25px
+    }
     .title-author-container h1{
         font: 500 2rem petite-caps;
     }
@@ -102,14 +118,14 @@
     }
     .fiction-container .pagination-div-container-center{
         margin: 0;
-    }    
+    }
     h5.card-title.text-dark-green.montesserat{
         margin: 4vh 0 0 0;
     }
     h5.card-title a{
         width: 25vh;
         display: flex;
-    }    
+    }
     .dashboard-max-card-container.card.fiction-container > .card-body{
         height: 40rem;
         width: 196vh;
@@ -120,6 +136,13 @@
     }
 }
 @media (min-width: 1201px) and (max-width: 1400px) {    
+    .menu-left ul {
+        padding: 0 0 0 5vh;
+    }
+    .menu-left.menu-hidden.d-flex.flex-column.flex-shrink-0.p-3{
+        width: 18vh;
+        margin: 1vh 0 0 1vh;
+    } 
     .fiction-globale-container.card.fiction-container {
         width: 195vh;
         min-width: 195vh;
@@ -278,9 +301,8 @@
 
 }
 @media (min-width: 800px) and (max-width: 1600px) {
-    .menu-left.menu-hidden.d-flex.flex-column.flex-shrink-0.p-3{
-        width: 9rem;
-    }
+
+
     .card-body.all-last-three-fictions-container .list-all-fictions-globale--container {
         width: 18rem;
     }
@@ -319,13 +341,7 @@
     .image-fiction-container{
         background-position: 50%;
     }
-    .icon-menu-container {
-        width: 50px;
-    }
-    .icon-menu-container svg,
-    .icon-menu-container img {
-        width: 25px;
-    }
+
     .character-card.card .card-image {
         height: 250px;
         width: 250px;
@@ -339,7 +355,7 @@
         margin: -1.5rem 0 0 5rem;
     }
     .menu-left ul li {
-        margin: 0 0 0 -9vh;  
+        margin: 0 0 2vh -9vh;  
     }
     .list-all-fictions-globale--container {
         width: 18rem;
@@ -451,12 +467,6 @@
     }
   }
   @media (max-width: 1200px){
-    .menu-left.menu-hidden.d-flex.flex-column.flex-shrink-0.p-3 {
-        width: 8rem;
-    }
-    .menu-left ul li {
-        margin: 0 0 0 -9vh;
-    }
     div > .card-global{
         margin: 0 0 1rem 0;
     }
