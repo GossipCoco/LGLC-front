@@ -9,7 +9,7 @@ module.exports = {
     css: {
       loaderOptions: {
         scss: {
-          data: `@import "./src/assets/variables.scss";`
+          additionalData: `@import "./src/assets/bootstrap-overrides.scss";`
         }
       }
     }
