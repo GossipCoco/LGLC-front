@@ -70,7 +70,7 @@
                 </button>
               </span>
             </li>
-            <li class="pagination" v-else-if="navPage.current == 2">
+            <li class="pagination pagination-div-container-center" v-else-if="navPage.current == 2">
               <span class="page-item">
                 <button
                   type="button"
@@ -129,7 +129,7 @@
               </li>
               <span class="nav-space-contain">...</span>
             </div>
-            <span class="pagination" v-else>
+            <span class="pagination " v-else>
               <span class="nav-space-contain">...</span>
               <li class="page-item display-flex-row  flex-one">
                 <button
@@ -164,7 +164,7 @@
               <span class="nav-space-contain">...</span>
             </span>
             <span
-              class="pagination"
+              class="pagination pagination-div-container-center"
               v-if="navPage.current == navPage.pages - 3"
             >
               <li class="page-item display-flex-row  flex-one">
@@ -189,7 +189,7 @@
               </li>
             </span>
             <span v-if="navPage.current == navPage.pages - 2">
-              <li class="page-item display-flex-row  flex-one">
+              <li class="page-item display-flex-row flex-one">
                 <button
                   type="button"
                   class="page-link"
