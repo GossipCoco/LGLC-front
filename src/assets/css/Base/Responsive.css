@@ -362,7 +362,16 @@
     span.name-characatrer-link{
         margin: -15vh 0 0 0;
     }
-
+    .mb-3 {
+        margin: -3vh 0 0 0;
+    }
+    .list-all-characters-container .input-name-margin .col-sm-7 {
+        padding: 3vh 0 0 0;
+    }
+    .list-all-characters-container .row.row-filter p{
+        width: 30vh;
+        margin: 2vh 0 0 0;
+    }
 }
 @media (min-width: 993px) and (max-width: 1200px) {
     .display-none-responsive p{
