@@ -7,6 +7,34 @@
         overflow-x: hidden;
     }
 }
+@media (min-width: 2561px) and (max-width: 3840px) {
+    
+}
+@media (min-width: 1921px) and (max-width: 2560px) {
+    
+}
+@media (min-width: 1601px) and (max-width: 1920px) {
+    
+}
+@media (min-width: 1367px) and (max-width: 1600px) {
+    
+}
+@media (min-width: 1201px) and (max-width: 1400px) {
+    
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+    
+}
+@media (min-width: 769px) and (max-width: 992px) {
+    
+}
+@media (min-width: 577px) and (max-width: 768px) {
+    
+}
+
+@media (max-width: 576px) {
+    
+}
 @media (min-width:1921px) {
     .dashboard-home-max-card-container.card{
         overflow-y: scroll;
