@@ -158,7 +158,7 @@
 }
 .quest-container{
     width: 35vh;
-    height: 36vh;
+    height: 30vh;
 }
 .rating, .button-validate-container .btn.btn-primary,
 .dashboard-home-max-card-container .avatar-container,
@@ -273,7 +273,7 @@
     width: 10vh;
 }
 .flex-one .quest-button-text .btn.btn-primary{
-    width: 13vh;
+    width: 18vh;
 }
 .location-clan-background-width-container .btn.btn-primary{
     max-width: 30vh;
@@ -414,7 +414,7 @@
 
 /* QUEST */
 .quest--global-container {
-    height: 38vh;
+    height: 30vh;
 }
 #quest-by-id {
     width: 185vh;
@@ -425,9 +425,16 @@
 }
 .quest-button-text p {
     height: 20vh;
+}.quest-button-text p.quest-description {
+    height: 20vh;
+    width: 18vh;
+}
+.one-quest h6{
+    width: 18vh;
+    height: 10vh;
 }
 .background-image-quest{
-    height: 36vh;
+    height: 30vh;
     width: 10vh;
 }
 .avatar-gamer{
@@ -437,14 +444,14 @@
 .level-role-width{
     width: 20vh;
 }
+.card-body.one-quest {
+    height: 32vh;
+    width: 18vh;
+}
 /* en REM */
 .card.fiction-container .card-header h4 {    
     width: 100%;
     height: 2.5rem;
-}
-.card-body.one-quest {
-    height: 13rem;
-    width: 10rem;
 }
 .login-card .card-body{
     height: 15rem;
