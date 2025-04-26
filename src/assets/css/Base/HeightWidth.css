@@ -319,6 +319,10 @@
 .summary-height-container{
     height: 60vh;
 }
+
+.character-list-wrapper .card-body{
+    height: 6vh;
+}
 /* NavNar en Vh */
 .menu-left.menu-hidden.d-flex.flex-column.flex-shrink-0.p-3 {
     width: 15vh;
@@ -448,6 +452,10 @@
     height: 32vh;
     width: 18vh;
 }
+
+.card-image img {
+    width: 23vh;
+}
 /* en REM */
 .card.fiction-container .card-header h4 {    
     width: 100%;
@@ -486,9 +494,6 @@ audio{
 .info-original-character-height{
     height: 19rem;
 }
-.character-list-wrapper .card-body{
-    height: 5rem;
-}
 .card-body.all-last-three-fictions-container .list-all-fictions-globale--container{
     width: 20rem;
 }
@@ -507,9 +512,6 @@ audio{
 /* % */
 .character-details.card .card-image img {
     width: 75%;
-}
-.card-image img {
-    width: 60%;
 }
 .card-img-top.background-image-quest-image-container img,
 .character-l1 img {

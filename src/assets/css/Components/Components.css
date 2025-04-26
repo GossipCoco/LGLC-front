@@ -11,6 +11,10 @@
 .flex-one .btn {
     margin : -2rem 0 0 0;
 }
+
+.flex-one .title-puzzle.display-flex-column .btn {
+    margin : 2vh 0 0 0;
+}
 .back-to-all-fictions-container .flex-one .btn {
     margin : 1rem 0 0 0;
 }
