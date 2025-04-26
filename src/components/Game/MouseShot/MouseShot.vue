@@ -51,7 +51,7 @@ export default {
       mouseImage: "/images/Game/mouse.png", // Adjust path as necessary
       catImage: "/images/Game/Etoiledefeu.png", // Adjust path as necessary
       backgroundImage:
-        "/images/paysage/paysage_1050.png", // Adjust path as necessary
+        "/images/paysage/Warriors_3538.png", // Adjust path as necessary
       mouseStyle: { top: "0px", left: "0px" },
       catStyle: { bottom: "20px", left: "50px" },
       score: 0,

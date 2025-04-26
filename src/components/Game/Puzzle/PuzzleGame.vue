@@ -42,7 +42,11 @@
             </button>
             <div class="puzzle-preview">
               <p>Image de prévisualisation :</p>
-              <img :src="selectedImage" alt="Prévisualisation" class="preview-image"/>
+              <img
+                :src="selectedImage"
+                alt="Prévisualisation"
+                class="preview-image"
+              />
             </div>
           </div>
           <div class="display-flex-column">
@@ -143,7 +147,6 @@ export default {
       this.timerInterval = null;
     },
 
-
     // Appeler startTimer au début du jeu
     createPieces() {
       this.pieces = [];
@@ -192,32 +195,18 @@ export default {
       this.createPieces();
     },
     calculatePoints() {
-      let difficultyMultiplier = 1; // Multiplier par défaut pour facile
+      let difficultyMultiplier = 1;
       if (this.difficulty === "moyen") {
-        difficultyMultiplier = 1.5; // Augmenter le score pour difficulté moyenne
+        difficultyMultiplier = 1.5;
       } else if (this.difficulty === "difficile") {
-        difficultyMultiplier = 2; // Augmenter davantage le score pour difficile
+        difficultyMultiplier = 2;
       }
 
-      // Calcul des points en fonction du temps écoulé et de la difficulté
       this.points = Math.max(
         0,
         (1000 - this.elapsedTime * this.pointReductionRate) *
           difficultyMultiplier
       );
-
-      const results = {
-        foundTreasures: "Puzzle",
-        points: this.points,
-      };
-
-      EventService.saveGameResults(this.userCurrent, results)
-        .then((response) => {
-          console.log("Results saved:", response.data);
-        })
-        .catch((error) => {
-          console.error("Error saving results:", error);
-        });
     },
 
     // Appeler stopTimer quand le puzzle est résolu
@@ -226,8 +215,25 @@ export default {
         const correctPiece = this.pieces[index];
         return piece.row === correctPiece.row && piece.col === correctPiece.col;
       });
+
       if (this.isSolved) {
-        this.stopTimer(); // Arrêter le timer si le puzzle est résolu
+        this.stopTimer();
+        this.calculatePoints(); // calculer les points ici
+
+        const results = {
+          foundTreasures: "Puzzle",
+          points: this.points,
+          elapsedTime: this.elapsedTime,
+          difficulty: this.difficulty,
+        };
+
+        EventService.saveGameResults(this.userCurrent, results)
+          .then((response) => {
+            console.log("Results saved:", response.data);
+          })
+          .catch((error) => {
+            console.error("Error saving results:", error);
+          });
       }
     },
     GetAllIllustrations() {
