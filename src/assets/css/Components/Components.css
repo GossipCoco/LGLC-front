@@ -11,33 +11,24 @@
 .flex-one .btn {
     margin : -2rem 0 0 0;
 }
-
 .flex-one .title-puzzle.display-flex-column .btn {
     margin : 2vh 0 0 0;
 }
-.back-to-all-fictions-container .flex-one .btn {
-    margin : 1rem 0 0 0;
-}
-.flex-one .quest-button-text .btn.btn-primary {
+.back-to-all-fictions-container .flex-one .btn,
+.flex-one .quest-button-text .btn.btn-primary,
+.easy-action-container .flex-one .btn,
+.one-book-container-wrapper, .flex-one .button-validate-container .btn.btn-primary,
+.flex-one .create-character-button .btn.btn-primary{
     margin: 1rem 0 0 0;
 }
 .quest-by-id-card .flex-one .btn {
-    margin : 0rem 0 0 0;
+    margin : 0 0 0 0;
 }
 .flex-one .top-fiction .btn.btn-primary.btn-lg  {
-    margin: 1vh 0 1vh 0;;
-}
-.easy-action-container .flex-one .btn{
-    margin: 1rem 0 0 0;
+    margin: 1vh 0 1vh 0;
 }
 .name-characatrer-link.flex-one .btn {
     margin : 0;
-}
-.flex-one .button-validate-container .btn.btn-primary{
-    margin : 1rem 0 0 0;
-}
-.flex-one .create-character-button .btn.btn-primary{
-    margin : 1rem 0 0 0;
 }
 .flex-one .middle-fiction-card .btn {
     margin : 2rem 0 0 0;
@@ -55,8 +46,10 @@
 .back-to-all-fictions-container .flex-one .btn {
     margin : 0.25rem 0 0 0;
 }
-.fiction-globale-container .summary-container .flex-one .btn {
-    margin : 0;
+.fiction-globale-container .summary-container .flex-one .btn,
+.location-clan-background-width-container .btn.btn-primary.clan-btn,
+.quest-button-text .btn.btn-primar{
+    margin: 0;
 }
 .btn-primary {
     background-color: rgba(var(--middle-green-01), 1);
@@ -65,9 +58,6 @@
 .btn-primary.file-character-btn {
     background-color: rgba(var(--dark-green-01), 1);
     color: rgba(var(--active-hover), 1);
-}
-.quest-button-text .btn.btn-primar {
-    margin: 0;
 }
 .btn-primary.file-character-btn {
     transition: background-color 0.3s ease, transform 0.3s ease;
@@ -79,7 +69,9 @@
 .one-quest-container .row.pagination-zone-container{
     margin: 5rem 0 0 0;
 }
-.modal-footer{
+.modal-footer,
+.one-fiction-container, .mini-rond-messages,
+.all-fictions-container-global .search-bar-component .col-1{
     padding: 1rem 0 0 0;
 }
 /* CARD */
@@ -91,11 +83,9 @@
 .card-form-create-character .card-body{
     padding: 2vh 2vh 0 2vh;
 }
-.one-fiction-container, .mini-rond-messages,
-.all-fictions-container-global .search-bar-component .col-1{
-    padding: 1rem 0 0 0;
-}
-.search-bar-component .col-3.display-flex.align-items-content-justify-content{
+.search-bar-component .col-3.display-flex.align-items-content-justify-content,
+.fiction-container, .fiction-container .card-header,
+.fiction-container.all-fictions-container-global .card-header{
     padding: 0;
 }
 .back-to-fiction-btn-container{
@@ -132,9 +122,6 @@
 }
 .left-fiction-summary-container .all-characters-of-fiction{
     flex-wrap: wrap;
-}
-.one-book-container-wrapper{
-    margin: 1rem 0 0 0;
 }
 .card-body.user-info-text .row{
     margin: 1rem 0;
@@ -203,14 +190,7 @@
     font-family: 'Roboto';
     font-weight: 500;
 }
-.fiction-container{
-    padding: 0;
-}
-.fiction-container .card-header{
-    padding: 0;
-}
 .fiction-container.all-fictions-container-global .card-header{
-    padding: 0;
     margin: -1rem 1rem 0 -1rem;
 }
 .all-fictions-container-global{
@@ -250,9 +230,6 @@
 }
 .location-clan-background-width-container .btn.btn-primary{
     margin: 0 0 0 -15vh;
-}
-.location-clan-background-width-container .btn.btn-primary.clan-btn{
-    margin: 0;
 }
 .fiction-summary-card p{
     margin: 0 0 0.25rem 0;
