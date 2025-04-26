@@ -99,6 +99,13 @@
         max-width: 25vh;
         margin: 0 0 0 3vh;
     }
+    #book-container.dashboard-max-card-container.card.fiction-container{
+        width: 120vh;
+        max-width: 125vh;
+    }
+    #book-container.dashboard-max-card-container.card.fiction-container .card-body p {
+        width: 105vh;
+    }
     .card.fiction-summary-card.clear-green-bacground{
         height: 15vh;
         width: 36vh;
@@ -182,6 +189,10 @@
     /* Page all characters */
     .all-characters-container-card {
         margin-top: 8vh;
+        width: 134vh;
+    }
+    .info-original-character-height{
+        width: 75vh;
     }
     .character-container-global {
         margin: -1rem auto;
@@ -423,6 +434,12 @@
     }
     .row.bottom-dashboard-levele-three{
         height: 125vh;
+    }
+}
+@media (max-width: 1400px) {
+    .menu-left {
+        width: 150px;
+        height: 100%;
     }
 }
 @media (min-width: 993px) and (max-width: 1200px) {
