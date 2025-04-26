@@ -37,7 +37,7 @@
         width: 25px
     }
     .title-author-container h1{
-        font: 500 2rem petite-caps;
+        font: 500 1.5rem petite-caps;
     }
     .Comment-icon, .Comment-icon .display-flex-column, .Comment-icon .flex-one .btn {
         width: 23vh;
@@ -45,10 +45,26 @@
     .rating {
         width: 10vh;
         height: 10vh;
-        margin: 5vh 0 0 1vh;
+        margin: 5vh 0 0 10vh;
+    }
+    .chapter-global-content.height-70-vh, .chapter-text-content{
+        height: 60vh;
+    }
+    
+    .Comment-icon > div > div.flex-one.display-flex-column{
+        display: flex;
+        flex-direction: row;
+        width: 46vh;
+        margin: -7vh 0 0 -8vh;
+    }
+    .character-details-chatper.card{
+        margin: -2vh 0 0 0;
+    }
+    .author-text{
+        font-size: .85em;
     }
     .title-author-container.flex-one{
-        flex:0.85;
+        flex: 0.2;
     }
     .character-chapters-fiction-container .character-chapters-container,.illustration-background {
         width: 140vh;
@@ -99,6 +115,10 @@
         max-width: 25vh;
         margin: 0 0 0 3vh;
     }
+    .card.fiction-container.all-fictions-container-global{
+        width: 120vh;
+        max-width: 125vh;
+    }
     #book-container.dashboard-max-card-container.card.fiction-container{
         width: 120vh;
         max-width: 125vh;
@@ -106,6 +126,7 @@
     #book-container.dashboard-max-card-container.card.fiction-container .card-body p {
         width: 105vh;
     }
+
     .card.fiction-summary-card.clear-green-bacground{
         height: 15vh;
         width: 36vh;
@@ -227,6 +248,10 @@
 }
  @media (min-width: 1400px) and (max-width:1710px){
     
+    .card.fiction-container.all-fictions-container-global{
+        width: 120vh;
+        max-width: 125vh;
+    }
     .character-list-wrapper .card-body{
         height: 2vh;
         margin: 12vh 0 0 0;
@@ -246,6 +271,16 @@
     }
  }
 @media (min-width: 1201px) and (max-width: 1400px) { 
+    .height-all-fictions-container {
+        margin: 1rem 0 -2rem 7rem;
+    }
+    .card.fiction-container.all-fictions-container-global{
+        width: 190vh;
+        max-width: 190vh;
+    }
+    .all-fictions-container-global .pagination-container {
+        margin: 2rem 0 0 0;
+    }
     .info-original-character-height{
         height: 20vh;
         overflow-y: scroll;
@@ -271,13 +306,18 @@
         height: 22vh;
     }
     .title-author-container h1{
-        font: 500 2rem petite-caps;
+        font: 500 1.5rem petite-caps;
+        font-variant-caps: all-petite-caps;
     }
     .Comment-icon, .Comment-icon .display-flex-column, .Comment-icon .flex-one .btn {
         width: 30vh;
     }
+    .chapter-title-content{
+        margin: 0 0 0 -35vh;
+        width: 150vh;
+    }
     .Comment-icon{
-        margin: 4vh 0 0 -21vh;
+        margin: 4vh 0 0 -38vh;
     }
     .fiction-globale-container h3{
         font-size: 1.25em;
@@ -288,7 +328,7 @@
     .rating {
         width: 10vh;
         height: 10vh;
-        margin: 5vh 0 0 1vh;
+        margin: 5vh 0 0 10vh;
     }
     .title-author-container.flex-one{
         flex:0.7;
