@@ -62,7 +62,7 @@
 }
 #quest-by-id .quest-details {
   position: relative;
-  z-index: 5;
+  z-index: 8;
   background-color: rgba(var(--main-white), 0.8);
   padding: 0.05rem 1rem;
   text-align: center;
