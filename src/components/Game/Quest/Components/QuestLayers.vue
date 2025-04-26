@@ -1,16 +1,18 @@
 <template>
-  <div
-    v-for="(layer, index) in layersData"
-    :key="index"
-    :style="{
-      backgroundImage: `url(${layer.Image})`,
-      backgroundRepeat: 'no-repeat',
-      backgroundSize: 'cover',
-      zIndex: layer.Position,
-      transform: `translateZ(${layer.translateZ}) translateY(${layer.translateY}) translateX(${layer.translateX}) scale(${layer.scale})`,
-    }"
-    class="parallax-layer width-100-percent"
-  ></div>
+  <div class="parallax-layer-container">
+    <div
+      v-for="(layer, index) in layersData"
+      :key="index"
+      class="parallax-layer"
+      :style="{
+        backgroundImage: `url(${layer.Image})`,
+        transform: `translate3d(${layer.translateX}, ${layer.translateY}, ${layer.translateZ}) scale(${layer.scale})`
+      }"
+    >
+
+  <img :scr="layer.Image" />
+  </div>
+  </div>
 </template>
 <script>
 export default {

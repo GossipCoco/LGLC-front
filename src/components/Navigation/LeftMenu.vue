@@ -158,7 +158,7 @@
           <router-link class="link-collapse display-flex-column align-items-content-justify-content " to="/TreasureHunt"
             >Chasse au trésor</router-link
           >
-          <router-link class="link-collapse display-flex-column align-items-content-justify-content " to="/Quest">Quêtes</router-link>
+          <router-link class="link-collapse display-flex-column align-items-content-justify-content " v-if="role === 'Administrateur'" to="/Quest">Quêtes</router-link>
         </div>
       </li>
       <li class="li-level1 display-flex-column align-items-content-justify-content">

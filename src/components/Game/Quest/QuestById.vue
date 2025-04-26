@@ -13,7 +13,11 @@
       >
       />
       <div class="card-body">
-         <div class="parallax-container width-100-percent">
+        <div v-for="(layer, index) in layers" :key="index">
+            <p class="text-white">{{ layer.Image }}</p>
+            <img :scr="layer.Image" />
+          </div>
+        <div class="parallax-container width-100-percent">
           <QuestMissionTarget v-bind:questDatas="quest" />
           <QuestQuestion
             v-if="quest.TypeQuest === 'question'"
@@ -23,7 +27,8 @@
             v-if="quest.TypeQuest === 'object'"
             v-bind:findobjects="quest.QuestKeyObjects"
           />
-          <QuestLayers v-bind:layersData="layers" />
+
+          <!-- <QuestLayers v-bind:layersData="layers" /> -->
         </div>
       </div>
     </div>
@@ -35,7 +40,7 @@ import { Toast } from "bootstrap"; // Import Bootstrap's Toast component
 import CardHeader from "../../Components/GenericComponent/CardHeader.vue";
 import QuestMissionTarget from "./Components/QuestMissionTarget.vue";
 import QuestQuestion from "./Components/QuestQuestion.vue";
-import QuestLayers from "./Components/QuestLayers.vue";
+// import QuestLayers from "./Components/QuestLayers.vue";
 import QuestKeyObjects from "./Components/QuestKeyObjects.vue";
 
 export default {
@@ -44,7 +49,7 @@ export default {
     CardHeader,
     QuestQuestion,
     QuestMissionTarget,
-    QuestLayers,
+    // QuestLayers,
     QuestKeyObjects,
   },
   data() {
@@ -74,13 +79,14 @@ export default {
           console.log(response.data.ob.QuestParallaxes);
           this.quest = response.data.ob;
           this.layers = response.data.ob.QuestParallaxes.map((item) => {
-            console.log(item.Parallax)
             if (!item.Parallax) {
               console.warn("Pas de Parallax pour QuestParallax id:", item.Id);
-              return null; // ou {} vide
+              return null;
             }
+            const path = `/images/parallax/${item.Parallax.Image}`;
+            console.log("Image path:", path);
             return {
-              Image: `/images/parallax/${item.Parallax.Image}`,
+              Image: path,
               Position: item.Parallax.Position,
               translateZ: item.Parallax.translateZ,
               translateY: item.Parallax.translateY,
