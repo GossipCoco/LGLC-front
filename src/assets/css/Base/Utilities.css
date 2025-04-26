@@ -96,7 +96,6 @@
 .width-190-vh{
     width: 190vh;
 }
-
 .width-100-vh{
     width:100vh;
 }
@@ -145,7 +144,6 @@
     border: 1px solid  rgba(var(--ternary-green), 1);
 }
 /* MARGIN PADDING*/
-
 .margin-0-rem{
     margin: 0;
 }
