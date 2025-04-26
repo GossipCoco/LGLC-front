@@ -33,9 +33,6 @@ export default {
       nbPoints: null
     };
   },
-  created() {
-    console.log(this.questData.QuestQuestions);
-  },
   methods: {
     submitAnswer() {
       if (

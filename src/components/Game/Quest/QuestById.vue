@@ -28,7 +28,7 @@
             v-bind:findobjects="quest.QuestKeyObjects"
           />
 
-          <!-- <QuestLayers v-bind:layersData="layers" /> -->
+          
         </div>
       </div>
     </div>
@@ -76,15 +76,14 @@ export default {
     GetQuestById(id) {
       QuestService.GetQuestById(id)
         .then((response) => {
-          console.log(response.data.ob.QuestParallaxes);
           this.quest = response.data.ob;
-          this.layers = response.data.ob.QuestParallaxes.map((item) => {
+          this.layers = response.data.ob.QuestParallaxes.map((item) => 
+          {
             if (!item.Parallax) {
               console.warn("Pas de Parallax pour QuestParallax id:", item.Id);
               return null;
             }
             const path = `/images/parallax/${item.Parallax.Image}`;
-            console.log("Image path:", path);
             return {
               Image: path,
               Position: item.Parallax.Position,
@@ -94,7 +93,7 @@ export default {
               scale: item.Parallax.scale,
             };
           }).filter((item) => item !== null);
-          console.table(this.layers);
+          console.log(this.layers);
         })
         .catch((err) => {
           console.log(err);
