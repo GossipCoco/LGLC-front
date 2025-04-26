@@ -15,7 +15,7 @@
       <div class="card-body">
         <div v-for="(parallax, index) in layers" :key="index">
           
-          <img :src="parallax.Image"/> 
+          <!-- <img :src="parallax.Image"/>  -->
           <!-- {{ parallax.Image }} -->
         </div>
         <div class="parallax-container width-100-percent">
