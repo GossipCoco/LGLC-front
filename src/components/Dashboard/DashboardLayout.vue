@@ -138,7 +138,6 @@ export default {
     CountNbOriginaleCharacterByUser(e){
       CharacterService.CountNbOriginaleCharacterByUser(e)
       .then((response) => {
-        console.log(response.data.ob.count)
         this.NbOCs = response.data.ob.count
       })
       .catch((err) => {
@@ -205,7 +204,6 @@ export default {
       }
       UserService.getUserById(e)
         .then((response) => {
-          console.log(response.data.ob)
           this.userInfo = response.data.ob;
           this.Avatar = response.data.ob.Avatar;
           this.usr = response.data.ob.UserName;
