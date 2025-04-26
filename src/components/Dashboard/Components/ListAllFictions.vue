@@ -57,7 +57,6 @@ export default {
     GetAllLastFiveGames(nav) {
       GameService.GetAllLastFiveGames(nav)
         .then((response) => {
-          console.log(response.data.ob)
           this.fiveGames = response.data.ob;
         })
         .catch((e) => {

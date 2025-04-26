@@ -1,68 +1,70 @@
 <template>
-  <div class="row title-dashboard">
-    <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-      <TitleHeader
-        v-if="!showspinner"
-        v-bind:UserName="UserName"
-        v-bind:Avatar="Avatar"
-        v-bind:User="usr"
-        v-bind:NbMessages="Nbmessages"        
-        v-bind:usrId="usrId"
-      />
-    </div>
-  </div>
-  <Spinner v-if="showspinner" />
-  <div class="scroll-bar-container">
-    <div class="row top-dashboard">
-      <AvatarCard
-        v-if="!showspinner"
-        v-bind:Avatar="Avatar"
-        v-bind:UserName="usr"
-        v-bind:LastConnexion="LastConnexion"
-        v-bind:Inscription="Inscription"
-        v-bind:level="level"
-        v-bind:Role="role"
-        v-bind:nBFiction="nBFictionV2"
-        v-bind:totalWords="totalWordsV2"
-        v-bind:totalPoints="totalPoints"
-        v-bind:roleImage="roleImage"
-        v-bind:NameRole="NameRole"
-        v-bind:LevelName="LevelName"
-        v-bind:gamer="gamer"
-        v-bind:NbOCs="NbOCs"
-      />      
-      <LastFiveFiction v-if="!showspinner" />
-      <ExtractLastChap v-if="!showspinner" />
-      <CharacterByGamerV2 v-bind:gamer="gamer" v-if="!showspinner" />
-    </div>
-    <div class="row middle-dashboard">
-      <separator v-bind:Title="'Tout sur l\'univers de la Guerre des Clans'" />
-    </div>
-    <div class="row bottom-dashboard-levele-one">
-      <div class="col-xxl-5 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <LastBook v-if="!showspinner"/>
-        <CharacterRandom v-if="!showspinner" v-bind:randomCharacters="randomCharacters"/>
+  <div id="dashboard-layout-container" class="scroll-bar-container">
+    <div class="row title-dashboard">
+      <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <TitleHeader
+          v-if="!showspinner"
+          v-bind:UserName="UserName"
+          v-bind:Avatar="Avatar"
+          v-bind:User="usr"
+          v-bind:NbMessages="Nbmessages"        
+          v-bind:usrId="usrId"
+        />
       </div>
-      <div class="col-xxl-7 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <div class="row fictions-games-container">
-          <ListAllFictions v-if="!showspinner" />          
+    </div>
+    <Spinner v-if="showspinner" />
+    <div>
+      <div class="row top-dashboard">
+        <AvatarCard
+          v-if="!showspinner"
+          v-bind:Avatar="Avatar"
+          v-bind:UserName="usr"
+          v-bind:LastConnexion="LastConnexion"
+          v-bind:Inscription="Inscription"
+          v-bind:level="level"
+          v-bind:Role="role"
+          v-bind:nBFiction="nBFictionV2"
+          v-bind:totalWords="totalWordsV2"
+          v-bind:totalPoints="totalPoints"
+          v-bind:roleImage="roleImage"
+          v-bind:NameRole="NameRole"
+          v-bind:LevelName="LevelName"
+          v-bind:gamer="gamer"
+          v-bind:NbOCs="NbOCs"
+        />      
+        <LastFiveFiction v-if="!showspinner" />
+        <ExtractLastChap v-if="!showspinner" />
+        <CharacterByGamerV2 v-bind:gamer="gamer" v-if="!showspinner" />
+      </div>
+      <div class="row middle-dashboard">
+        <separator v-bind:Title="'Tout sur l\'univers de la Guerre des Clans'" />
+      </div>
+      <div class="row bottom-dashboard-levele-one">
+        <div class="col-xxl-5 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <LastBook v-if="!showspinner"/>
+          <CharacterRandom v-if="!showspinner" v-bind:randomCharacters="randomCharacters"/>
+        </div>
+        <div class="col-xxl-7 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="row fictions-games-container">
+            <ListAllFictions v-if="!showspinner" />          
+          </div>
         </div>
       </div>
-    </div>
-    <div class="row middle-separator">
-      <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <separator v-bind:Title="'Nos jeux & vos créations'" />
+      <div class="row middle-separator">
+        <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <separator v-bind:Title="'Nos jeux & vos créations'" />
+        </div>
+      </div>      
+      <div class="row bottom-dashboard-levele-three">
+        <div class="col-xxl-6 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <GamesLinks v-if="!showspinner" />
+        </div>
+        <div class="col-xxl-3 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <easy-action />
+        </div>
+        <music-player />
       </div>
-    </div>      
-    <div class="row bottom-dashboard-levele-three">
-      <div class="col-xxl-6 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <GamesLinks v-if="!showspinner" />
-      </div>
-      <div class="col-xxl-3 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <easy-action />
-      </div>
-      <music-player />
-    </div>
+  </div>
 </div>
 </template>
 <script>
@@ -161,7 +163,6 @@ export default {
           console.error("erreur", err);
         });
     },
-
     getRandomCharacters(characters, count) {
       const shuffled = [...characters].sort(() => 0.5 - Math.random());
       return shuffled.slice(0, count);
