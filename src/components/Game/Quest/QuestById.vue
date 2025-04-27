@@ -13,8 +13,8 @@
       >
       <div class="card-body">
         <div v-for="(layer, index) in layers" :key="index">
-          <p class="text-white">{{ layer.Image }}</p>
-          <img :src='layer.Image' />
+          <!-- <p class="text-white">{{ layer.Image }}</p>
+          <img :src='layer.Image' /> -->
         </div>
         <div class="parallax-container width-100-percent">
           <QuestMissionTarget v-bind:questDatas="quest" />
