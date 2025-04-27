@@ -32,7 +32,8 @@
                 transform: `translate3d(${layer.translateX}, ${layer.translateY},
                 ${layer.translateZ}) scale(${layer.scale})`,
               }"
-            ></div>
+            >
+          </div>
           </div>
         </div>
       </div>
@@ -88,6 +89,7 @@ export default {
               return null;
             }
             const path = `/images/parallax/${item.Parallax.Image}`;
+            console.log(path)
             return {
               Image: path,
               Position: item.Parallax.Position,
