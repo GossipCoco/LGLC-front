@@ -13,28 +13,28 @@
       >
       <div class="card-body">
         <div class="parallax-container width-100-percent">
-          <QuestMissionTarget v-bind:questDatas="quest" />
-          <QuestQuestion
-            v-if="quest.TypeQuest === 'question'"
-            v-bind:questData="quest"
-          />
-          <QuestKeyObjects
-            v-if="quest.TypeQuest === 'object'"
-            v-bind:findobjects="quest.QuestKeyObjects"
-          />
-          <div class="parallax-layer-container">
-            <div
-              v-for="(layer, index) in layers"
-              :key="index"
-              class="parallax-layer"
-              :style="{
-                backgroundImage: `url(${layer.Image})`,
-                transform: `translate3d(${layer.translateX}, ${layer.translateY},
-                ${layer.translateZ}) scale(${layer.scale})`,
-              }"
-            >
-            <img :src='layer.Image' />
-          </div>
+          <div
+            class="parallax-container width-100-percent"
+            :style="{
+              backgroundImage: `url('/images/Backgrounds/Warriors_3682.jpg')`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              minHeight: '80vh',
+            }"
+          >
+            <QuestMissionTarget v-bind:questDatas="quest" />
+            <QuestQuestion
+              v-if="quest.TypeQuest === 'question'"
+              v-bind:questData="quest"
+            />
+            <QuestKeyObjects
+              v-if="quest.TypeQuest === 'object'"
+              v-bind:findobjects="quest.QuestKeyObjects"
+            />
+            <div v-for="(layer, index) in layers" :key="index">
+              <img :src='layer.Image' />
+            </div>
           </div>
         </div>
       </div>
@@ -47,7 +47,6 @@ import { Toast } from "bootstrap"; // Import Bootstrap's Toast component
 import CardHeader from "../../Components/GenericComponent/CardHeader.vue";
 import QuestMissionTarget from "./Components/QuestMissionTarget.vue";
 import QuestQuestion from "./Components/QuestQuestion.vue";
-// import QuestLayers from "./Components/QuestLayers.vue";
 import QuestKeyObjects from "./Components/QuestKeyObjects.vue";
 
 export default {
