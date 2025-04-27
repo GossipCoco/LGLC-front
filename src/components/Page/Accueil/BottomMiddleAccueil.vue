@@ -17,7 +17,7 @@
             </p>
         </div>
         <div class="col-md-5 accueil-image-one background-size-cover">
-            <!-- <img src="/images/Accueil/_5b729561-4ede-40d2-8039-7c82b8b47b15.jpeg" /> -->
+            
         </div>
         <div class="col-md-1"></div>
     </div>
