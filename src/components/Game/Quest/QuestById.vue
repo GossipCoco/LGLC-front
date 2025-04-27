@@ -33,6 +33,7 @@
                 ${layer.translateZ}) scale(${layer.scale})`,
               }"
             >
+            <img :src='layer.Image' />
           </div>
           </div>
         </div>
