@@ -12,18 +12,6 @@
         ></card-header
       >
       <div class="card-body">
-        <!-- <div class="parallax-container width-100-percent">
-          <div
-            class="parallax-container width-100-percent"
-            :style="{
-              backgroundImage: `url('/images/parallax/perso-detoure/fond/fond_001.png')`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat',
-              minHeight: '80vh',
-            }"
-          > -->
-
         <QuestMissionTarget v-bind:questDatas="quest" />
         <QuestQuestion
           v-if="quest.TypeQuest === 'question'"
@@ -44,7 +32,6 @@
               zIndex: layer.Position,
             }"
           >
-            <!-- <img :src='layer.Image' /> -->
           </div>
         </div>
       </div>
