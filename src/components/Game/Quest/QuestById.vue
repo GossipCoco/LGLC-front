@@ -12,7 +12,6 @@
         ></card-header
       >
       <div class="card-body">
-        
         <!-- <div class="parallax-container width-100-percent">
           <div
             class="parallax-container width-100-percent"
@@ -24,32 +23,33 @@
               minHeight: '80vh',
             }"
           > -->
-          
-            <QuestMissionTarget v-bind:questDatas="quest" />
-            <QuestQuestion
-              v-if="quest.TypeQuest === 'question'"
-              v-bind:questData="quest"
-            />
-            <QuestKeyObjects
-              v-if="quest.TypeQuest === 'object'"
-              v-bind:findobjects="quest.QuestKeyObjects"
-            />
-            <img src="/images/parallax/perso-detoure/middle/middle_001.png" />
-            <div
-              v-for="(layer, index) in layers"
-              :key="index"
-              class="parallax-layer"
-              :style="{
-                backgroundImage: `url(${layer.Image})`,
-                transform: `translate3d(${layer.translateX}, ${layer.translateY}, ${layer.translateZ}) scale(${layer.scale})`,
-                zIndex: layer.Position,
-              }"
-            >
-              <!-- <img :src='layer.Image' /> -->
-            </div>
+
+        <QuestMissionTarget v-bind:questDatas="quest" />
+        <QuestQuestion
+          v-if="quest.TypeQuest === 'question'"
+          v-bind:questData="quest"
+        />
+        <QuestKeyObjects
+          v-if="quest.TypeQuest === 'object'"
+          v-bind:findobjects="quest.QuestKeyObjects"
+        />
+        <div class="parallax-layer-container">
+          <div
+            v-for="(layer, index) in layers"
+            :key="index"
+            class="parallax-layer"
+            :style="{
+              backgroundImage: `url(${layer.Image})`,
+              transform: `translate3d(${layer.translateX}, ${layer.translateY}, ${layer.translateZ}) scale(${layer.scale})`,
+              zIndex: layer.Position,
+            }"
+          >
+            <!-- <img :src='layer.Image' /> -->
           </div>
         </div>
       </div>
+    </div>
+  </div>
 </template>
 <script>
 import QuestService from "../../../services/QuestService";
