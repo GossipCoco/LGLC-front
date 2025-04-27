@@ -12,7 +12,7 @@
         ></card-header
       >
       <div class="card-body">
-        <!-- <img src="/images/parallax/perso-detoure/fond/fond_001.png" /> -->
+        
         <!-- <div class="parallax-container width-100-percent">
           <div
             class="parallax-container width-100-percent"
@@ -34,6 +34,7 @@
               v-if="quest.TypeQuest === 'object'"
               v-bind:findobjects="quest.QuestKeyObjects"
             />
+            <img src="/images/parallax/perso-detoure/middle/middle_001.png" />
             <div
               v-for="(layer, index) in layers"
               :key="index"
