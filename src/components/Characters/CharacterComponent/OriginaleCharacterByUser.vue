@@ -24,10 +24,8 @@
       @getgrade="getgrades"
     />
   </div>
-  <div
-    id="original-characters-list"
-    class="row row-cols-1 row-cols-md-2 g-4 all-my-characters-container display-flex align-items-content-justify-content overflowY-X-hidden"
-  >
+
+  <div id="original-characters-list" class="row row-cols-1 row-cols-md-2 g-4 all-my-characters-container display-flex align-items-content-justify-content overflowY-X-hidden">
     <div
       class="col card-character-container height-30-vh original-character-card-container"
       v-for="(character, index) in allMyCharacters"
@@ -45,6 +43,7 @@
       </div>
     </div>
   </div>
+
   <div class="row">
     <div class="col">
       <Pagination
@@ -57,6 +56,7 @@
     </div>
   </div>
 </template>
+
 <script>
 import functions from "../../../services/functions";
 import CharacterService from "../../../services/CharacterService";
@@ -95,49 +95,43 @@ export default {
   },
   methods: {
     truncateText(text, maxLength) {
-      return text.length <= maxLength
-        ? text
-        : text.substring(0, maxLength) + "...";
+      return text.length <= maxLength ? text : text.substring(0, maxLength) + "...";
     },
-    init() {
-      console.log(this.usr);
-      this.CountNbOriginaleCharacterByUser(this.usr);
-      this.GetOriginaleCharacterByUser(this.usr, this.nav);
+    async init() {
+      try {
+        await this.CountNbOriginaleCharacterByUser(this.usr);
+        await this.GetOriginaleCharacterByUser(this.usr, this.nav);
+      } catch (err) {
+        console.error(err);
+      }
     },
-    CountNbOriginaleCharacterByUser(user) {
-      CharacterService.CountNbOriginaleCharacterByUser(user)
-        .then((response) => {
-          this.showspinner = false;
-          this.NbAllCharacters = response.data.ob.count;
-        })
-        .catch((err) => {
-          console.log(err);
-        });
+    async CountNbOriginaleCharacterByUser(user) {
+      try {
+        const response = await CharacterService.CountNbOriginaleCharacterByUser(user);
+        this.NbAllCharacters = response.data.ob.count;
+        functions.CalcPagination(this.NbAllCharacters, this.nav, this.nav.step);
+      } catch (err) {
+        console.log(err);
+      }
     },
-    CharacterPagination(page) {
+    async CharacterPagination(page) {
       this.nav.current = page;
-      this.GetOriginaleCharacterByUser(this.usr, this.nav);
+      await this.GetOriginaleCharacterByUser(this.usr, this.nav);
     },
-    GetOriginaleCharacterByUser(user, nav) {
-      if(window.innerWidth >= this.width){
-          this.nav.step = 6
-        }else if(window.innerWidth < this.width)
-        {
-          this.nav.step = 6
-        }
-      CharacterService.GetOriginaleCharacterByUser(user, nav)
-        .then((response) => {
-          this.allMyCharacters = response.data.ob;
-          functions.CalcPagination(
-            this.NbAllCharacters,
-            this.showPagination,
-            this.nav,
-            this.loading
-          );
-        })
-        .catch((err) => {
-          console.log(err);
-        });
+    async GetOriginaleCharacterByUser(user, nav) {
+      if (window.innerWidth >= this.width) {
+        this.nav.step = 6;
+      } else {
+        this.nav.step = 6;
+      }
+      try {
+        const response = await CharacterService.GetOriginaleCharacterByUser(user, nav);
+        this.allMyCharacters = response.data.ob;
+        this.showspinner = false;
+        functions.CalcPagination(this.NbAllCharacters, this.nav, this.nav.step);
+      } catch (err) {
+        console.log(err);
+      }
     },
   },
 };

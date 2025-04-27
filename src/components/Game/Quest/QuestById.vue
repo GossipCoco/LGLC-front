@@ -14,9 +14,9 @@
       />
       <div class="card-body">
         <div v-for="(layer, index) in layers" :key="index">
-            <p class="text-white">{{ layer.Image }}</p>
-            <img :scr="layer.Image" />
-          </div>
+          <p class="text-white">{{ layer.Image }}</p>
+          <img :scr="layer.Image" />
+        </div>
         <div class="parallax-container width-100-percent">
           <QuestMissionTarget v-bind:questDatas="quest" />
           <QuestQuestion
@@ -28,7 +28,18 @@
             v-bind:findobjects="quest.QuestKeyObjects"
           />
 
-          
+          <div class="parallax-layer-container">
+            <div
+              v-for="(layer, index) in layers"
+              :key="index"
+              class="parallax-layer"
+              :style="{
+                backgroundImage: `url(${layer.Image})`,
+                transform: `translate3d(${layer.translateX}, ${layer.translateY},
+                ${layer.translateZ}) scale(${layer.scale})`,
+              }"
+            ></div>
+          </div>
         </div>
       </div>
     </div>
@@ -77,8 +88,7 @@ export default {
       QuestService.GetQuestById(id)
         .then((response) => {
           this.quest = response.data.ob;
-          this.layers = response.data.ob.QuestParallaxes.map((item) => 
-          {
+          this.layers = response.data.ob.QuestParallaxes.map((item) => {
             if (!item.Parallax) {
               console.warn("Pas de Parallax pour QuestParallax id:", item.Id);
               return null;
