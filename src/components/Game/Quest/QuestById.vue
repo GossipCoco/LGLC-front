@@ -89,8 +89,6 @@ export default {
               console.warn("Pas de Parallax pour QuestParallax id:", item.Id);
               return null;
             }
-            const path = `/images/parallax/${item.Parallax.Image}`;
-            console.log(path)
             return {
               Image: item.Parallax.Image,
               Position: item.Parallax.Position,
