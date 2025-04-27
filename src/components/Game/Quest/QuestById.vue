@@ -11,6 +11,7 @@
           >Retour à la liste de quêtes</router-link
         ></card-header
       >
+      <img src="/images/parallax/perso-detoure/level4_001.png" />
       <div class="card-body">
         <!-- <div class="parallax-container width-100-percent">
           <div
