@@ -1,6 +1,7 @@
 <template>
   <div class="display-flex-column flex-one">
     <table class="table table-borderless text-white">
+      <tbody>
       <tr>
         <td>
           <span class="text-white"><strong>Clan</strong></span>
@@ -38,6 +39,7 @@
         </td>
         <td>{{ warrior }}</td>
       </tr>
+    </tbody>
     </table>
   </div>
 </template>
