@@ -12,10 +12,6 @@
         ></card-header
       >
       <div class="card-body">
-        <div v-for="(layer, index) in layers" :key="index">
-          <!-- <p class="text-white">{{ layer.Image }}</p>
-          <img :src='layer.Image' /> -->
-        </div>
         <div class="parallax-container width-100-percent">
           <QuestMissionTarget v-bind:questDatas="quest" />
           <QuestQuestion
@@ -36,7 +32,9 @@
                 transform: `translate3d(${layer.translateX}, ${layer.translateY},
                 ${layer.translateZ}) scale(${layer.scale})`,
               }"
-            ></div>
+            >
+            {{ layer.Image }}
+          <img :src="layer.Image" /></div>
           </div>
         </div>
       </div>
