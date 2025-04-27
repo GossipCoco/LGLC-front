@@ -4,6 +4,7 @@
       <div class="display-flex-row">
         <div class="row">
           <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 col-xxl-2">
+            <img src="/images/parallax/fond-V2/fond_001.png">
             <ImageRondDashboard
               v-bind:src="'/images/Avatars/' + usrInformation.Avatar"
               v-bind:alt="usrInformation.Avatar"
@@ -14,10 +15,10 @@
             class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 col-xxl-10"
           >
             <div class="display-flex-column user-profil-image">
-              <div class="display-flex-row">
+              <!-- <div class="display-flex-row">
                 <div class="display-flex-column user-profil-image">
                   <p class="text-white poppins-text">
-                    Level : {{ usrInformation.Level.Name }}
+                    Level : {{ usrInformation.Level }}
                   </p>
                   <img
                     :src="'/images/Levels/' + usrInformation.Level.Image"
@@ -28,7 +29,7 @@
                 </div>
                 <div class="display-flex-column user-profil-image">
                   <p class="text-white poppins-text">
-                    Rôle : {{ usrInformation.Role.Name }}
+                    Rôle : {{ usrInformation.Role }}
                   </p>
                   <img
                     :src="'/images/Levels/' + usrInformation.Role.Image"
@@ -37,7 +38,7 @@
                     class="level-role-width"
                   />
                 </div>
-              </div>
+              </div> -->
               <p class="roboto roboto">
                 {{ usrInformation.LastName }} {{ usrInformation.FirstName }} -
                 {{ usrInformation.UserName }}
