@@ -32,9 +32,7 @@
                 transform: `translate3d(${layer.translateX}, ${layer.translateY},
                 ${layer.translateZ}) scale(${layer.scale})`,
               }"
-            >
-            {{ layer.Image }}
-          <img :src="layer.Image" /></div>
+            ></div>
           </div>
         </div>
       </div>
