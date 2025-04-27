@@ -34,7 +34,7 @@
               v-if="quest.TypeQuest === 'object'"
               v-bind:findobjects="quest.QuestKeyObjects"
             />
-            <img src="/images/parallax/perso-detoure/middle/middle_001.png" />
+            <img src="/public/images/parallax/perso-detoure/middle/middle_001.png" />
             <div
               v-for="(layer, index) in layers"
               :key="index"
