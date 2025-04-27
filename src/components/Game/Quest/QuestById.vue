@@ -23,7 +23,7 @@
               minHeight: '80vh',
             }"
           >
-          <img src="/images/parallax/perso-detoure/warrior_ 021.png" />
+          <!-- <img src="/images/parallax/perso-detoure/warrior_ 021.png" /> -->
             <QuestMissionTarget v-bind:questDatas="quest" />
             <QuestQuestion
               v-if="quest.TypeQuest === 'question'"
