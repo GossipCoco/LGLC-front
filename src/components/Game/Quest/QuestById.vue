@@ -42,7 +42,7 @@
               :style="{
                 backgroundImage: `url(${layer.Image})`,
                 transform: `translate3d(${layer.translateX}, ${layer.translateY}, ${layer.translateZ}) scale(${layer.scale})`,
-                zIndex: layer.Position === '5' ? 10 : 1,
+                zIndex: layer.Position,
               }"
             >
               <!-- <img :src='layer.Image' /> -->
