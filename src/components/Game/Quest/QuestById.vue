@@ -91,7 +91,7 @@ export default {
             const path = `/images/parallax/${item.Parallax.Image}`;
             console.log(path)
             return {
-              Image: path,
+              Image: item.Parallax.Image,
               Position: item.Parallax.Position,
               translateZ: item.Parallax.translateZ,
               translateY: item.Parallax.translateY,
