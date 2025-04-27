@@ -12,18 +12,19 @@
         ></card-header
       >
       <div class="card-body">
-        <div class="parallax-container width-100-percent">
+        <!-- <img src="/images/parallax/perso-detoure/fond/fond_001.png" /> -->
+        <!-- <div class="parallax-container width-100-percent">
           <div
             class="parallax-container width-100-percent"
             :style="{
-              backgroundImage: `url(${layers.Image})`,
+              backgroundImage: `url('/images/parallax/perso-detoure/fond/fond_001.png')`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
               minHeight: '80vh',
             }"
-          >
-          <!-- <img src="/images/parallax/perso-detoure/warrior_ 021.png" /> -->
+          > -->
+          
             <QuestMissionTarget v-bind:questDatas="quest" />
             <QuestQuestion
               v-if="quest.TypeQuest === 'question'"
@@ -41,6 +42,7 @@
                 backgroundImage: `url(${layer.Image})`,
                 transform: `translate3d(${layer.translateX}, ${layer.translateY},
                 ${layer.translateZ}) scale(${layer.scale})`,
+                zIndex: layer.Position === '5' ? 10 : 1,
               }"
             >
               <img :src='layer.Image' />
@@ -48,8 +50,6 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
 </template>
 <script>
 import QuestService from "../../../services/QuestService";
