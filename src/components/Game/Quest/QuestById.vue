@@ -45,7 +45,7 @@
                 zIndex: layer.Position === '5' ? 10 : 1,
               }"
             >
-              <img :src='layer.Image' />
+              <!-- <img :src='layer.Image' /> -->
             </div>
           </div>
         </div>
