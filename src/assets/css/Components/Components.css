@@ -246,3 +246,7 @@ span.name-characatrer-link{
 .card-form-create-character .card-header{
     margin: -1rem 0 0 0;
 }
+.col-btn-container .btn.btn-primary{
+    width: 38vh;
+    margin: 0 0 0 151vh;
+}
