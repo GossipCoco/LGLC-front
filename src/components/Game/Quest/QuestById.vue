@@ -16,7 +16,7 @@
           <div
             class="parallax-container width-100-percent"
             :style="{
-              backgroundImage: `url('/images/Backgrounds/Warriors_3682.jpg')`,
+              backgroundImage: `url(${layers.Image})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
@@ -33,7 +33,16 @@
               v-if="quest.TypeQuest === 'object'"
               v-bind:findobjects="quest.QuestKeyObjects"
             />
-            <div v-for="(layer, index) in layers" :key="index">
+            <div
+              v-for="(layer, index) in layers"
+              :key="index"
+              class="parallax-layer"
+              :style="{
+                backgroundImage: `url(${layer.Image})`,
+                transform: `translate3d(${layer.translateX}, ${layer.translateY},
+                ${layer.translateZ}) scale(${layer.scale})`,
+              }"
+            >
               <img :src='layer.Image' />
             </div>
           </div>
