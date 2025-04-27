@@ -4,7 +4,7 @@
       <div class="display-flex-row">
         <div class="row">
           <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 col-xxl-2">
-            <img src="/images/parallax/fond-V2/fond_001.png">
+            <img src="/images/parallax/fond/fond_001.png">
             <ImageRondDashboard
               v-bind:src="'/images/Avatars/' + usrInformation.Avatar"
               v-bind:alt="usrInformation.Avatar"
