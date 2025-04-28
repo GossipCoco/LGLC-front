@@ -6,8 +6,8 @@
   margin: 0.25rem 0;
 }
 .title-author-container h1 {
-  font: 500 2.5rem petite-caps;
-
+  font: 500 2.25rem petite-caps;
+  font-variant: all-petite-caps;
 }
 .summary-title-text p a {
   font-weight: 500;
@@ -126,10 +126,11 @@ h5.card-title a, .my-oc-character-container p a{
   overflow-wrap: break-word;
 }
 .title-text-novel .text-white.text-align-justify.poppins-text p{
-font-size: 0.85em;
+  font-size: 0.85em;
 }
 .author-text{
   font-size: 1.2em;
+  font-variant-caps: all-small-caps;
 }
 .summary-title-text span.text-white p{
   text-align: justify;

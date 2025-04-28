@@ -16,10 +16,7 @@
 @media (min-width: 1440px) and (max-width: 1920px) {
 
 }
-@media (min-width: 1367px) and (max-width: 1439px) {
-
-}
-@media (min-width: 1367px) and (max-width: 1600px) {
+@media (min-width: 1367px) and (max-width:  1439px) {
     .menu-left ul {
         padding: 0 0 0 5vh;
     }
@@ -49,8 +46,7 @@
     }
     .chapter-global-content.height-70-vh, .chapter-text-content{
         height: 60vh;
-    }
-    
+    }    
     .Comment-icon > div > div.flex-one.display-flex-column{
         display: flex;
         flex-direction: row;

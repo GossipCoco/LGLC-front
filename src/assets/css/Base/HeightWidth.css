@@ -29,7 +29,7 @@
     width: 192vh;
 }
 .height-all-fictions-container{
-    height: 70vh;
+    height: 75vh;
 }
 .global-container {
     height: 98v
@@ -237,7 +237,7 @@
     height: 15vh;
 }
 .fiction-summary-card{
-    height: 15vh;
+    height: 17vh;
 }
 .game-container img{
     width: 6vh;
@@ -473,7 +473,7 @@
     height: 2.5rem;
 }
 .all-characters-of-fiction{
-    width: 14rem;
+    width: 28vh;
 }
 .card-body.last-chapter-card.text-white{
     height: 30rem;
