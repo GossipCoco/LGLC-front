@@ -9,7 +9,7 @@
     </div>
   </div>
   <div class="display-flex-column">
-    <button class="btn btn-success quest-completed-btn" @click="completeQuest">
+    <button class="btn btn-success width-50-vh" @click="completeQuest">
       Compléter la quête
     </button>
     <div v-if="showReward" class="reward-message">

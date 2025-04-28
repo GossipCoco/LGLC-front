@@ -4,7 +4,7 @@
     class="dashboard-max-card-container border-none background-color-main-lineart flex-one card display-flex-column cat-corner fiction-container"
   >
     <CardHeader v-bind:Title="'Les romans de La Guerre des Clans'" />
-    <div class="card-body">
+    <div class="card-body width-60-vh">
       <div class="row book-container overflowY-scroll overflowX-hidden">
         <div class="col-12 col-sm-12 col-md-12">
           <div class="apland-timeline-area">

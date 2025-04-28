@@ -66,7 +66,7 @@
     width: 10rem
 }
 /* VH */
-.width-150-vh{
+.width-50-vh{
     width: 50vh;
 }
 .height-100{
@@ -77,6 +77,9 @@
 }
 .width-80-vh{
     height: 80vh;
+}
+.width-60-vh{
+    height: 60vh;
 }
 .width-10-vh{
     width: 10vh;

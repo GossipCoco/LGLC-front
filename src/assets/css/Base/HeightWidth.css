@@ -114,7 +114,7 @@
  {
     height: 10vh;
 }
-.one-book-container-wrapper .fiction-container .card-body, #book-container .fiction-container .card-body,
+ /* #book-container .fiction-container .card-body, */
 .illustration-arc-container, .one-book-container-wrapper .fiction-container .card-body,
 .row.top-dashboard .card {
     height: 60vh;
@@ -137,9 +137,6 @@
 }
 .clan-detail-layout .card-image img{
     width: 17vh;
-}
-#accueil .navbar-brand img, .fiction-globale-container ul{
-    width: 50vh;
 }
 .row.top-dashboard .card-body > div{
     width: 42vh;
@@ -408,9 +405,7 @@
     width: 38vh;
 }
 /* QUEST */
-.flex-one .quest-content .btn.quest-completed-btn{
-    width: 50vh;
-}
+
 .quest--global-container {
     height: 30vh;
 }
