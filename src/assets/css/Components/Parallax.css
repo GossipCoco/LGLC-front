@@ -202,3 +202,6 @@ img.key-object-img {
   flex-direction: column;
   height: 6rem;
 }
+.parallax-layer-container .parallax-layer{
+  background-repeat: no-repeat;
+}
