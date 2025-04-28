@@ -1,19 +1,19 @@
 @echo off
 setlocal enabledelayedexpansion
 
-:: Dossier cible
-set "target=public\images"
+:: Chemin du dossier à lister (ADAPTE si besoin)
+set "folder=C:\Users\gossi\Documents\Project\Project-Warriors\front-app-v3\public\images"
 
 :: Fichier où enregistrer la liste
-set "output=list_of_images.txt"
+set "output=liste_images.txt"
 
-:: Vide le fichier avant d'écrire
-echo. > %output%
+:: Nettoyage de l'ancien fichier si existe
+if exist "%output%" del "%output%"
 
-:: Parcourir tous les fichiers dans target et sous-dossiers
-for /r "%target%" %%f in (*.png *.jpg *.jpeg *.svg *.gif) do (
-    echo %%f >> %output%
+:: Boucle sur tous les fichiers .png et .jpg (et autres si tu veux)
+for /R "%folder%" %%f in (*.png *.jpg *.jpeg *.webp) do (
+    echo %%f >> "%output%"
 )
 
-echo Liste terminée. Fichier généré : %output%
+echo Liste terminée.
 pause
