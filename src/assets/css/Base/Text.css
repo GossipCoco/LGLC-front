@@ -23,9 +23,8 @@
 
 .card-header h2 {
   font: 2em capitalize all-petite-caps;
-}
-.card-header h2 {
   font-variant-caps: small-caps;
+  margin: 0 0 0 -50vh;
 }
 #list-events p span, .text-bg-primary, .user-info-text p span, h5.card-title {
   font-weight: 600;
@@ -110,6 +109,7 @@ h5.card-title a, .my-oc-character-container p a{
 .quest-container .card-header h6{
   color: rgba(var(--main-white), 1);
   font-weight: 600;
+  width: 30vh;
 }
 .quest-button-text p.quest-description{
   text-align: justify;

@@ -115,6 +115,10 @@ th {
 .rond-image-illustration img {
     aspect-ratio: 1;
 }
+.page-profil-user-container .rond-image-illustration.avatar-profil-container img {
+    height: 25vh;
+    width: 25vh;
+}
 .row.bottom-top-dashboard {
     margin-top: 1rem;
 }

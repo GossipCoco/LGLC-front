@@ -49,6 +49,6 @@
 <script>
 export default {
   name: "TableInformationCharacter",
-  props: ["NameClan", "genre", "Grade", "kitty", "apprentice", "warrior"],
+  props: ["NameClan", "genre", "Grade", "kitty", "apprentice", "warrior", "ClanId"],
 };
 </script>
