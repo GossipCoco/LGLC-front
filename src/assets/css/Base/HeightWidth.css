@@ -122,7 +122,6 @@
 .row.bottom-dashboard-levele-one .card.random-characters-card{
     height: 48vh;
 }
-
 .illustration-background .background-fiction-contain{    
     width: 183vh;
 }
@@ -259,17 +258,12 @@
 .welcome-dashboard-container .avatar-container{
     height: 14vh;
 }
-.welcome-dashboard-container img.mini-rond-avatar-image{
+.welcome-dashboard-container img.mini-rond-avatar-image, 
+.dashboard-card-header .avatar-wrapper img{
     width: 8vh;
     height: 8vh;
 }
-.dashboard-card-header .avatar-wrapper img  {
-    width: 8vh;
-    height: 8vh;
-}
-.dashboard-card-header .avatar-wrapper,
-.character-illustration-container,
-.profil-user-card .avatar-container{
+.background-image-quest{
     width: 10vh;
 }
 .flex-one .quest-button-text .btn.btn-primary{
@@ -442,7 +436,6 @@
 }
 .background-image-quest{
     height: 30vh;
-    width: 10vh;
 }
 .avatar-gamer{
     width: 20vh;

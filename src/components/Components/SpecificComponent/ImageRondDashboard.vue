@@ -1,7 +1,7 @@
 <template>
   <div class="avatar-container" v-if="edit === true">
     <div
-      class="avatar-wrapper"
+      class="avatar-wrapper width-10-vh"
       @mouseenter="showEditIcon = true"
       @mouseleave="showEditIcon = false"
       @click="triggerFileInput"
