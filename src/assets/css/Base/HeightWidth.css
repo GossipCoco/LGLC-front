@@ -417,6 +417,9 @@
 }
 
 /* QUEST */
+.flex-one .quest-content .btn.quest-completed-btn{
+    width: 50vh;
+}
 .quest--global-container {
     height: 30vh;
 }

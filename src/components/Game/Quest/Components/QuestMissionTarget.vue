@@ -9,12 +9,7 @@
     </div>
   </div>
   <div class="display-flex-column">
-    <p class="card-text text-align-justify">
-      <router-link to="/Quest" type="button" class="btn btn-primary">
-        Retour à la liste des quêtes
-      </router-link>
-    </p>
-    <button class="btn btn-success" @click="completeQuest">
+    <button class="btn btn-success quest-completed-btn" @click="completeQuest">
       Compléter la quête
     </button>
     <div v-if="showReward" class="reward-message">
