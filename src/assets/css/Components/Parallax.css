@@ -203,6 +203,7 @@ img.key-object-img {
   display: flex;
   flex-direction: column;
   height: 6rem;
+  background-color: rgba(var(--main-white), 0);
 }
 #quest-by-id .parallax-container{
   background-repeat: no-repeat;
