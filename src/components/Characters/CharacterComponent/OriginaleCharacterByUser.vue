@@ -26,23 +26,10 @@
   </div>
   <div class="row btn-create-character">
     <div clss="'col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12'">
-      <Pagination
-        v-if="!showspinner && nav.pages > 0"
-        v-bind:nav="nav"
-        v-bind:filters="filters"
-        v-bind:getDatas="'CharacterPagination'"
-        @CharacterPagination="CharacterPagination"
-      />
-    </div>
-    </div>      
-    <div clss="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12 col-btn-container">
       <router-link to="/CreateAnOriginalCharacter" class="btn btn-primary">
             Nouveau personnage
       </router-link>
     </div>
-  <div class="row">
-    <div class="col">
-      
   </div>
   <div
     id="original-characters-list"
@@ -64,6 +51,16 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="row pagination-row-container">
+    <div clss="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <Pagination
+        v-if="!showspinner && nav.pages > 0"
+        v-bind:nav="nav"
+        v-bind:filters="filters"
+        v-bind:getDatas="'CharacterPagination'"
+        @CharacterPagination="CharacterPagination"
+      />
   </div>
   </div>
 </template>

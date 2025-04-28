@@ -14,7 +14,7 @@
     height: 10vh;
 }
 .row.list-quest-card-container{
-    width: 185vh;
+    width: 190vh;
 }
 .user-information-container .mini-rond-avatar-image,
 .user-information-container .rond-image-illustration img
@@ -263,9 +263,6 @@
     width: 8vh;
     height: 8vh;
 }
-.background-image-quest{
-    width: 10vh;
-}
 .flex-one .quest-button-text .btn.btn-primary{
     width: 18vh;
 }
@@ -309,11 +306,9 @@
     width: 14vh;
     height: 8vh;
 }
-
 .summary-height-container{
     height: 60vh;
 }
-
 .character-list-wrapper .card-body{
     height: 6vh;
 }
@@ -409,7 +404,9 @@
 .quest-button-text {
     height: 30vh;
 }
-
+.col-btn-container .btn.btn-primary{
+    width: 38vh;
+}
 /* QUEST */
 .flex-one .quest-content .btn.quest-completed-btn{
     width: 50vh;
@@ -435,7 +432,10 @@
     height: 10vh;
 }
 .background-image-quest{
-    height: 30vh;
+    height: 23vh;
+}
+.quest-container .card-header h6{
+    height: 4vh;
 }
 .avatar-gamer{
     width: 20vh;

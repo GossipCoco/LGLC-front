@@ -250,6 +250,8 @@ span.name-characatrer-link{
     margin: -1rem 0 0 0;
 }
 .col-btn-container .btn.btn-primary{
-    width: 38vh;
     margin: 0 0 0 151vh;
+}
+.quest-button-text p.quest-button-link {
+    margin: -7vh 0 0 0;
 }
