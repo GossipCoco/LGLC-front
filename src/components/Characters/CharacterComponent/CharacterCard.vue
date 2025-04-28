@@ -1,5 +1,5 @@
 <template> 
-  <div  id="all-characters-container-card" class="row all-characters-container-card">
+  <div  id="all-characters-container-card" class="row all-characters-container-card width-25-vh">
     <div class="col-12 mb-3 mb-sm-0 display-flex-row align-items-content-justify-content character-container overflowY-X-hidden">
       <div
         v-for="(character, index) in characters_props"

@@ -14,7 +14,7 @@
               class="h5-container display-flex-column align-items-content-justify-content"
             >
               <div class="display-flex-column text-dark-green montesserat">
-                <div class="display-flex-row title-container-card display-block align-items-content-justify-content">
+                <div class="display-flex-row title-container-card width-25-vh display-block align-items-content-justify-content">
                   <h5 class="card-title text-dark-green montesserat">
                     <router-link
                       :to="'/fiction/' + fiction.Title"

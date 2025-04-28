@@ -49,9 +49,7 @@
     width: 9vh;
     height: 9vh;
 }
-
-.card-character-container,#all-characters-container-card .character-card.card,
-.card-image img.image-book, .title-container-card, .image-book,
+.title-container-card, 
 .all-characters-of-fiction > button{
     width: 25vh;
 }

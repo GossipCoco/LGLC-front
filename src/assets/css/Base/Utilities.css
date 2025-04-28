@@ -103,6 +103,10 @@
 .width-30-vh{
     width: 30vh;
 }
+.width-25-vh
+{
+    width: 25vh;
+}
 .width-10-vh{
     width: 10vh;
 }
@@ -112,6 +116,11 @@
 .width-25-vh-height-25-vh{
     width: 25vh;
     height: 25vh;
+}
+.width-9v-vh-height-9v-vh
+{
+    width: 9vh;
+    height: 9vh;
 }
 /* Background-color & color  */
 .background-color-main-lineart{

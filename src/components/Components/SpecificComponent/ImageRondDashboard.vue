@@ -1,7 +1,7 @@
 <template>
   <div class="avatar-container" v-if="edit === true">
     <div
-      class="avatar-wrapper width-10-vh"
+      class="avatar-wrapper  width-9v-vh-height-9v-vh;"
       @mouseenter="showEditIcon = true"
       @mouseleave="showEditIcon = false"
       @click="triggerFileInput"
@@ -25,7 +25,7 @@
     />
   </div>
   <div class="rond-image-illustration" v-else>
-    <img v-if="!showspinner" :src="src" :alt="alt" :class="'display-flex-column;' + classe" />
+    <img v-if="!showspinner" :src="src" :alt="alt" class="display-flex-column width-9v-vh-height-9v-vh;" />
   </div>
 </template>
 <script>
