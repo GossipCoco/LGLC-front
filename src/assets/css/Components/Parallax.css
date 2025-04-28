@@ -46,7 +46,6 @@
 }
 #quest-by-id .parallax-layer {
   position: absolute;
-
   height: 150vh;
   width: 250vh;
   transition: transform 1s ease;
