@@ -146,8 +146,8 @@ img.key-object-img {
   position: relative;
   z-index: 999999;
   transform: scale(.25);
-  top: -35rem;
-  left: 2rem
+  top: -5vh;
+  left: -54vh;
 }
 @keyframes rotate {
   from {
