@@ -9,8 +9,6 @@
         transform: `translate3d(${layer.translateX}, ${layer.translateY}, ${layer.translateZ}) scale(${layer.scale})`
       }"
     >
-
-  <img :scr="layer.Image" />
   </div>
   </div>
 </template>

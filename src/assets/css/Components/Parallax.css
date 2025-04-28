@@ -43,6 +43,8 @@
   overflow-x: hidden;
   perspective: 20vh;
   transform-style: preserve-3d;
+  background-repeat: no-repeat;
+  width: 175vh;
 }
 #quest-by-id .parallax-layer {
   position: absolute;
@@ -50,6 +52,7 @@
   left: 0;
   height: 105vh;
   transition: transform 1s ease;
+  background-repeat: no-repeat;
 }
 #quest-by-id .chat-image {
   position: absolute;
@@ -202,6 +205,6 @@ img.key-object-img {
   flex-direction: column;
   height: 6rem;
 }
-.parallax-layer-container .parallax-layer{
+#quest-by-id .parallax-container{
   background-repeat: no-repeat;
 }

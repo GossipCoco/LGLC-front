@@ -12,26 +12,23 @@
         ></card-header
       >
       <div class="card-body">
-        <QuestMissionTarget v-bind:questDatas="quest" />
-        <QuestQuestion
-          v-if="quest.TypeQuest === 'question'"
-          v-bind:questData="quest"
-        />
-        <QuestKeyObjects
-          v-if="quest.TypeQuest === 'object'"
-          v-bind:findobjects="quest.QuestKeyObjects"
-        />
-        <div class="parallax-layer-container">
-          <div
-            v-for="(layer, index) in layers"
-            :key="index"
-            class="parallax-layer"
-            :style="{
-              backgroundImage: `url(${layer.Image})`,
-              transform: `translate3d(${layer.translateX}, ${layer.translateY}, ${layer.translateZ}) scale(${layer.scale})`,
-              zIndex: layer.Position,
-            }"
-          >
+        <div id="quest-by-id" class="quest-container">
+          <div class="parallax-container">
+            <div v-for="(layer, index) in layers" 
+                :key="index" 
+                class="parallax-layer"
+                :style="{
+                  backgroundImage: `url(${layer.Image})`,
+                  zIndex: layer.Position,
+                  transform: `translate3d(${layer.translateX}, ${layer.translateY}, ${layer.translateZ}) scale(${layer.scale})`
+                }">
+            </div>
+            <!-- Composants interactifs au-dessus des layers -->
+            <div class="quest-content">
+              <QuestMissionTarget :questDatas="quest" />
+              <QuestQuestion v-if="quest.TypeQuest === 'question'" :questData="quest" />
+              <QuestKeyObjects v-if="quest.TypeQuest === 'object'" :findobjects="quest.QuestKeyObjects" />
+            </div>
           </div>
         </div>
       </div>
