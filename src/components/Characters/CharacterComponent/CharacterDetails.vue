@@ -1,64 +1,58 @@
 <template>
   <div class="character-details background-color-main-lineart card mb-3">
-    <div class="parallax">
-      <div class="parallax-layer parallax-layer-back width-100-percent">
-        <div class="row g-0">
-          <CharacterImageDetail v-bind:Image="background">
-            <img
-                class="height-auto display-block width-100-percent"
-                :src="image"
-                :alt="image"
-              />
-          </CharacterImageDetail>
-          <div class="col-8 col-md-8">
-            <div class="card-body background-color-main-lineart details-infos-characters poppins-text text-white">
-              <div class="row display-flex-row">
-                <div class="col-6">
-                  <h1 class="card-title cinzel">{{ currentName }}</h1>                  
+    <div class="row g-0">
+      <CharacterImageDetail v-bind:Image="background">
+        <img
+            class="height-auto display-block width-100-percent"
+            :src="image"
+            :alt="image"
+          />
+      </CharacterImageDetail>
+      <div class="col-8 col-md-8">
+        <div class="card-body background-color-main-lineart details-infos-characters poppins-text text-white">
+          <div class="row display-flex-row">
+            <div class="col-6">
+              <h1 class="card-title cinzel">{{ currentName }}</h1>
+            </div>
+            <div class="col-3">
+              <router-link type="button" class="btn btn-primary" :to="'/EditAnOriginalCharacter/'+ currentName">Editer le personnage</router-link>
+            </div>
+            <div class="col-3">
+              <router-link
+                to="/allCharacters"
+                type="button"
+                class="btn btn-primary text-align-justify poppins-text text-white file-character-btn"
+              >
+                Tous les personnages
+              </router-link>                
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="information-global-character">
+                <div class="display-flex-row character-info-general-container">
+                  <!-- <img src="/images/clans/Logo-windclan.png" /> -->
+                  <TableInformationCharacter
+                    v-bind:NameClan="NameClan"
+                    v-bind:genre="genre"
+                    v-bind:Grade="Grade"
+                    v-bind:kitty="kitty"
+                    v-bind:apprentice="apprentice"
+                    v-bind:warrior="warrior"
+                  />                      
+                  <!-- <div class="clan-logo-container">
+                    <router-link type="button" class="btn btn-primary" :to="'/clan/'+ClanId">
+                      <img :src="'/images/clans/' + Symbol" />
+                    </router-link>
+                  </div> -->
                 </div>
-                <div class="col-3">
-                  <router-link type="button" class="btn btn-primary" :to="'/EditAnOriginalCharacter/'+ currentName">Editer le personnage</router-link>
-                </div>
-                <div class="col-3">
-                  <router-link
-                    to="/allCharacters"
-                    type="button"
-                    class="btn btn-primary text-align-justify poppins-text text-white file-character-btn"
-                  >
-                    Tous les personnages
-                  </router-link>                
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12">
-                  <div class="information-global-character">
-                    <div class="display-flex-row character-info-general-container">
-                      <TableInformationCharacter
-                        v-bind:NameClan="NameClan"
-                        v-bind:genre="genre"
-                        v-bind:Grade="Grade"
-                        v-bind:kitty="kitty"
-                        v-bind:apprentice="apprentice"
-                        v-bind:warrior="warrior"
-                      />                      
-                      <div class="clan-logo-container">
-                        <router-link type="button" class="btn btn-primary" :to="'/clan/'+ClanId">
-                          <img
-                            :src="'/images/clans/' + Symbol"
-                            class="height-auto width-100-percent"
-                          />
-                        </router-link>
-                      </div>
-                    </div>
-                    <CharacterTabs
-                    v-bind:Description="description"
-                    v-bind:Personnality="personnality"
-                    v-bind:Biography="character.Biography"
-                    v-bind:Relation="Relation"
-                    v-bind:Fictions="Fictions"
-                    />                    
-                  </div>
-                </div>
+                <CharacterTabs
+                v-bind:Description="description"
+                v-bind:Personnality="personnality"
+                v-bind:Biography="character.Biography"
+                v-bind:Relation="Relation"
+                v-bind:Fictions="Fictions"
+                />                    
               </div>
             </div>
           </div>
@@ -66,6 +60,7 @@
       </div>
     </div>
   </div>
+
 </template>
 <script>
 import CharacterService from "../../../services/CharacterService";
@@ -122,9 +117,10 @@ export default {
     getCharacter(id) {
       CharacterService.getCharacterByName(id)
         .then((response) => {
-          // console.log(response.data.ob.GameCharacters)
+          console.log(response.data.ob)
           this.character = response.data.ob;
           this.Symbol = this.character.Clan.Symbol;
+          console.log(this.Symbol)
           this.ClanId = this.character.Clan.Id
           this.NameClan = this.character.Clan.Name;
           this.image = response.data.ob.Image;

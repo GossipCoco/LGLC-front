@@ -6,7 +6,10 @@
         <td>
           <span class="text-white"><strong>Clan</strong></span>
         </td>
-        <td>{{ NameClan }}</td>
+        <td>
+          <router-link type="button" class="btn btn-primary" :to="'/clan/'+ClanId">
+            {{ NameClan }}
+          </router-link></td>
       </tr>
       <tr>
         <td>
