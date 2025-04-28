@@ -461,19 +461,16 @@
 .login-card .card-body{
     height: 30vh;
 }
+.summmary-book-height-dashboard{
+    height: 27vh;
+}
+.title-dashboard-container-header {
+    height: 12vh;
+}
 /* en REM */
 .card.fiction-container .card-header h4 {    
     width: 100%;
     height: 2.5rem;
-}
-.card-img-top.background-image-quest-image-container{
-    height: 10rem;
-}
-.summmary-book-height-dashboard{
-  height: 11rem;
-}
-.title-dashboard-container-header {
-    height: 6rem;
 }
 .all-characters-of-fiction{
     width: 14rem;
