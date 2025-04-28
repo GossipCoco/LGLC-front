@@ -255,3 +255,39 @@ span.name-characatrer-link{
 .quest-button-text p.quest-button-link {
     margin: -7vh 0 0 0;
 }
+/* Rating */
+.rating {
+    margin: -2rem 0 0 2rem;
+}
+.rating svg {
+    flex: 1
+}
+.rating svg {
+    cursor: pointer;
+}
+.rating svg.checked {
+    fill: rgba(var(--active-hover), 1);
+}
+.send--message-by-container, .send--message-by-container p {
+    margin: 1rem 1rem;
+}
+.list-group-item.messagerie-list-container p {
+margin: 0 0 0 1rem;
+}
+.star {
+fill: rgba(var(--ternary-green), 1);
+/* Couleur des étoiles non sélectionnées */
+cursor: pointer;
+/* Indique que les étoiles sont cliquables */
+transition: fill 0.3s ease;
+}
+.star.checked {
+fill: rgba(var(--active-hover), 1);
+}
+.title-text-novel{
+    margin: 0 0 0 1rem;
+    padding: 0;
+}
+.row.list-quest-card-container{
+    margin: 0 0 0 7vh;
+}

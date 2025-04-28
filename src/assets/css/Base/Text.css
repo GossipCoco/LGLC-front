@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import '../variables.scss';
 
-
-.margin-liss-allfictions-dashboard{
-  margin: 0.25rem 0;
-}
 .title-author-container h1 {
   font: 500 2.25rem petite-caps;
   font-variant: all-petite-caps;
@@ -24,18 +20,7 @@
 .summary-title-text p a.last-chapter-text:hover {
   color: rgba(var(--active-hover), 1);
 }
-.rating {
-  margin: -2rem 0 0 2rem;
-}
-.rating svg {
-  flex: 1
-}
-.rating svg {
-  cursor: pointer;
-}
-.rating svg.checked {
-  fill: rgba(var(--active-hover), 1);
-}
+
 .card-header h2 {
   font: 2em capitalize all-petite-caps;
 }
@@ -49,18 +34,9 @@
 .select-message-container h3 {
   text-align: center;
 }
-.send--message-by-container {
-  margin: 1rem 1rem;
-}
-.send--message-by-container p {
-  margin: 1rem 1rem;
-}
+
 .text-bg-primary {
   background-color: rgba(var(--dark-green-01), 1) !important;
-}
-
-.list-group-item.messagerie-list-container p {
-  margin: 0 0 0 1rem;
 }
 .informations-gamer-container {
   overflow-y: scroll;
@@ -68,22 +44,12 @@
 h1.card-title {
   font-size: 2.75em;
 }
-.star {
-  fill: rgba(var(--ternary-green), 1);
-  /* Couleur des étoiles non sélectionnées */
-  cursor: pointer;
-  /* Indique que les étoiles sont cliquables */
-  transition: fill 0.3s ease;
-}
-.star.checked {
-  fill: rgba(var(--active-hover), 1);
-  /* Couleur des étoiles sélectionnées (rating) */
-}
+
 .user-info-text p {
   line-height: 0.85;
   font-size: 0.85em;
   color: rgba(var(--main-white), 1);
-   font-family: 'Poppins';
+  font-family: 'Poppins';
 }
 .user-info-text p span.label-profil {
   font-size: 0.95em;
@@ -92,7 +58,8 @@ h1.card-title {
   color: rgba(var(--ternary-green), 1)
 }
 .character-illustration-container{
-  background-position: 50%;}
+  background-position: 50%;
+}
 h5.card-title {
   font-size: 1.5em;
 }
@@ -107,10 +74,6 @@ h5.card-title {
 }
 h5.card-title a, .my-oc-character-container p a{
   font-size: 1em;
-}
-.title-text-novel{
-  margin: 0 0 0 1rem;
-  padding: 0;
 }
 .title-text-novel p{
   text-align: left;
@@ -150,7 +113,4 @@ h5.card-title a, .my-oc-character-container p a{
 }
 .quest-button-text p.quest-description{
   text-align: justify;
-}
-.row.list-quest-card-container{
-  margin: 0 0 0 7vh;
 }
