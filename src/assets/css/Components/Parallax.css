@@ -50,6 +50,7 @@
   top: 0;
   left: 0;
   height: 176vh;
+  width: 250vh;
   transition: transform 1s ease;
   background-repeat: no-repeat;
 }
