@@ -14,38 +14,26 @@
             class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 col-xxl-10"
           >
             <div class="display-flex-column user-profil-image">
-              <!-- <div class="display-flex-row">
-                <div class="display-flex-column user-profil-image">
-                  <p class="text-white poppins-text">
-                    Level : {{ usrInformation.Level }}
+              
+              <div class="row">
+                <!-- {{  usrInformation.Role }} -->
+                <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 col-xxl-10">
+                  <p class="roboto roboto">
+                    {{ usrInformation.LastName }} {{ usrInformation.FirstName }} - {{ usrInformation.UserName }}
                   </p>
-                  <img
-                    :src="'/images/Levels/' + usrInformation.Level.Image"
-                    :alt="usrInformation.Level.Image"
-                    loading="lazy"
-                    class="level-role-width"
-                  />
+                  <p class="roboto roboto">{{ usrInformation.Description }}</p>
+                  <p class="roboto roboto">{{ usrInformation.Biography }}</p>
                 </div>
-                <div class="display-flex-column user-profil-image">
-                  <p class="text-white poppins-text">
-                    Rôle : {{ usrInformation.Role }}
-                  </p>
-                  <img
-                    :src="'/images/Levels/' + usrInformation.Role.Image"
-                    :alt="usrInformation.Role.Image"
-                    loading="lazy"
-                    class="level-role-width"
-                  />
+                <div class="col-xs-12 col-sm-12 col-md-10 col-lg-2 col-xl-2 col-xxl-2">
+                  <div class="display-flex-column">
+                    <p class="roboto roboto">Niveau {{  usrInformation.Level.Name }}</p>
+                  <img :src="'/images/Levels/' + usrInformation.Level.Image" :alt="usrInformation.Level.Image" loading="lazy" class="profil-user-lever-img"/>
+                  
+                  <p class="roboto roboto">Rôle {{  usrInformation.Role.Name }}</p>
+                  <img :src="'/images/Levels/' + usrInformation.Role.Image" :alt="usrInformation.Role.Image" loading="lazy" class="profil-user-lever-img"/>
                 </div>
-              </div> -->
-              <p class="roboto roboto">
-                {{ usrInformation.LastName }} {{ usrInformation.FirstName }} -
-                {{ usrInformation.UserName }}
-              </p>
-              <p class="roboto roboto">{{ usrInformation.Description }}</p>
-              <p class="roboto roboto">
-                {{ usrInformation.Biography }}
-              </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
