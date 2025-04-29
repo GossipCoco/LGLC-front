@@ -24,7 +24,7 @@
             v-bind:alt="fiction.Image"
           />
           <div
-            class="title-text-novel display-block flex-one display-flex-column justify-content-left"
+            class="title-text-novel font-variant-small-caps display-block flex-one display-flex-column justify-content-left"
           >
             <p>
               <router-link
