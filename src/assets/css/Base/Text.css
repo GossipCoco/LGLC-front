@@ -60,10 +60,9 @@ h5.card-title {
 .card-text.summary-text-font p{
   line-height: 1.2;
 }
-.h5-container a{
+.h5-container a, #collapseExample3 p{
   font-weight: 800;
 }
-
 h5.card-title a, .my-oc-character-container p a{
   font-size: 1em;
 }

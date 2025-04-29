@@ -8,8 +8,7 @@
           <router-link :to="'/getUserBy/' + Author" class="text-white author-text cinzel">
             {{ Author }}
           </router-link>
-        </h3>
-        <!-- <p>{{ formatDate(dateCreation) }}</p> -->
+        </h3>        
       </div>
     </div>
   </div>
