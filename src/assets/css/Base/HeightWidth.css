@@ -124,7 +124,9 @@
     height: 10vh;
 }
  /* #book-container .fiction-container .card-body, */
-.illustration-arc-container, .one-book-container-wrapper .fiction-container .card-body,
+
+.illustration-arc-container,
+.one-book-container-wrapper .fiction-container .card-body,
 .row.top-dashboard .card {
     height: 60vh;
 }
