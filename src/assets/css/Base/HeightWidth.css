@@ -241,7 +241,10 @@
     width: 14vh; 
 }
 .image-fiction-container-background{
-    height: 15vh;
+    height: 17vh;
+}
+.fiction-summary-card h5.card-title{
+    margin: 1vh 0 0 0;
 }
 .fiction-summary-card{
     height: 17vh;

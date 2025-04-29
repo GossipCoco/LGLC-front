@@ -185,7 +185,7 @@
       <li class="li-level1 display-flex-column align-items-content-justify-content">
         <div class="menu-level1">
           <div class="icon-menu-container background-color-clear-green-02  display-flex align-items-content-justify-content">
-            <a href="#" @click.prevent="logout" class="logout-li-container">
+            <a href="#" @click.prevent="logout" class="logout-li-container display-flex-row">
               <img
                 src="../../../public//images//icons/right-from-bracket-solid-colored.svg"
                 width="25px"

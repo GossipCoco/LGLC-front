@@ -18,7 +18,7 @@
               <li class="nav-item roboto text-white"  v-if="isLoggedIn">
                 <router-link to="/dashboard" class="nav-item roboto text-white">Aller sur son Dashboard</router-link>
               </li>
-              <li class="nav-item logout-li-container roboto text-white" v-if="isLoggedIn">
+              <li class="nav-item logout-li-container display-flex-row roboto text-white" v-if="isLoggedIn">
                 <a href="#" @click.prevent="logout" class="logout-li-container roboto text-white">
                     Logout <img src="../../../../public/images/icons/right-from-bracket-solid.svg" width="25px"/>
                 </a>

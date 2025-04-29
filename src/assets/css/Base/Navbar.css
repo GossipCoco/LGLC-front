@@ -14,7 +14,6 @@
   vertical-align: -0.125em;
   fill: currentColor;
 }
-
 .dropdown-toggle {
   outline: 0;
 }
@@ -97,20 +96,12 @@ ul {
 }
 .link-collapse .link-collapse {
   display: flex;
-  flex: 1
-}
-.logout-li-container {
-  display: flex;
-  flex-direction: row;
-}
-.container-fluid.header-container{
-  display: flex;
-  flex-direction: row;
+  flex: 1;
 }
 .logo-accueil-container{
-    flex: 1;
-    padding: 0;    
-    margin: -7vh 0 0 -29vh;
+  flex: 1;
+  padding: 0;
+  margin: -7vh 0 0 -29vh;
 }
 #accueil .navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark{
   padding: 0;
