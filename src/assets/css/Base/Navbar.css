@@ -51,9 +51,9 @@
   background: var(--lineart-other03);
   margin: 0.5rem 0rem;
 }
-.icon-menu-container svg.svg-inline--fa.fa-chevron-down {
+/* .icon-menu-container svg.svg-inline--fa.fa-chevron-down {
   color: rgba(var(--clear-green-01), 1);
-}
+} */
 .menu-left ul {
   padding: 0 0 0 10vh;
 }

@@ -42,9 +42,6 @@
                   style="width: 1.25rem"
                 />
               </div>
-              <div class="chevron-container">
-                <i class="fa-solid fa-chevron-down"></i>
-              </div>
             </div>
           </div>
         </div>
@@ -77,9 +74,6 @@
               <div class="icon-menu-container background-color-clear-green-02  display-flex align-items-content-justify-content">
                 <img src="/images/icons/cloud-solid.svg" />
               </div>
-              <div class="chevron-container">
-                <i class="fa-solid fa-chevron-down"></i>
-              </div>
             </div>
           </div>
         </div>
@@ -109,9 +103,7 @@
               <div class="icon-menu-container background-color-clear-green-02  display-flex align-items-content-justify-content">
                 <img src="/images/icons/pen-nib-solid.svg" />
               </div>
-              <div class="chevron-container">
-                <i class="fa-solid fa-chevron-down"></i>
-              </div>
+
             </div>
           </div>
         </div>
@@ -137,9 +129,6 @@
             <div class="menu-li-contain">
               <div class="icon-menu-container background-color-clear-green-02  display-flex align-items-content-justify-content">
                 <img src="/images/icons/gamepad-solid.svg" />
-              </div>
-              <div class="chevron-container">
-                <i class="fa-solid fa-chevron-down"></i>
               </div>
             </div>
           </div>
