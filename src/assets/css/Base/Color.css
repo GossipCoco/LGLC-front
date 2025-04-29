@@ -29,3 +29,6 @@
 .black-text{
     color: rgba(var(--main-black), 1)
 }
+.color-clear-green-01{
+    color: rgba(var(--clear-green-01), 1);
+}
