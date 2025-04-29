@@ -10,7 +10,6 @@ th {
 .Comment-icon > div{
     margin: -.5rem 0rem 0 0;
 }
-
 .card-header.fiction-chapter-container {
     margin: -2rem -2rem 0 0;
 }
@@ -23,9 +22,6 @@ th {
     font-weight: 600;
     font-family: 'Montserrat';
 }
-/* .title-author-container{
-    margin: 2rem 0 0 0;
-} */
 .card-header.fiction-chapter-container h3 {
     margin-left: 2rem;
     font-variant: small-caps;
@@ -38,13 +34,11 @@ th {
     padding: 20px;
     box-shadow: 0 4px 8px rgba(var(--main-black), 0.1);
 }
-
 #book-container.dashboard-max-card-container {
     padding: 20px;
     box-shadow: 0 4px 8px rgba(var(--main-black), 0.1);
     margin: 2rem 0 0 -4rem;
 }
-
 .chapter-title-content {
     text-align: center;
 }
@@ -71,28 +65,15 @@ th {
     margin: 0rem 0 1rem 0;
     gap: 1rem;
 }
-.character-chapters-fiction-container .character-chapters-container {
-    width: 75rem;
-}
-
-.original-character-image-container img{
-    width: 100%;
-}
-
 .all-chapters-list-container {    
-    width: 52vh;
     padding: 0 1rem;
     overflow: auto;
-}
-.character-chapters-container img {
-    width: 40%;
 }
 .summary-height-container{
     padding: 1rem;
 }
 .summary-container {
     padding: 4rem 1rem 0 0;
-    width: 100rem;
     overflow: hidden;
 }
 .back-to-all-fictions-container > div {

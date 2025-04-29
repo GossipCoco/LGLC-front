@@ -24,8 +24,14 @@
     width: 25vh;
     height: 25vh;
 }
+.all-chapters-list-container {    
+    width: 52vh;
+}
 .row.bottom-dashboard-levele-three .card, .row.bottom-dashboard-levele-three .card .card-body{
     height: 38vh;
+}
+.summary-container {
+    width: 200vh;
 }
 .middle-dashboard{
     width: 192vh;
