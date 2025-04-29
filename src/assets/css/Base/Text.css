@@ -2,7 +2,7 @@
 @import '../variables.scss';
 
 .title-author-container h1 {
-  font: 500 2.25rem petite-caps;
+  font: 500 2.25rem all-petite-caps;
   font-variant: all-petite-caps;
 }
 .summary-title-text p a {
@@ -21,14 +21,16 @@
   font-variant-caps: small-caps;
   margin: 0 0 0 -50vh;
 }
-#list-events p span, .text-bg-primary, .user-info-text p span, h5.card-title {
+#list-events p span, .text-bg-primary, .user-info-text p span, h5.card-title,
+.title-text-novel p a, .quest-container .card-header h6 {
   font-weight: 600;
+}
+#list-events p span, .text-bg-primary, .user-info-text p span, h5.card-title {
   color: rgba(var(--ternary-green), 1);
 }
 .select-message-container h3 {
   text-align: center;
 }
-
 .text-bg-primary {
   background-color: rgba(var(--dark-green-01), 1) !important;
 }
@@ -38,18 +40,14 @@
 h1.card-title {
   font-size: 2.75em;
 }
-
 .user-info-text p {
   line-height: 0.85;
   font-size: 0.85em;
-  color: rgba(var(--main-white), 1);
-  font-family: 'Poppins';
 }
 .user-info-text p span.label-profil {
   font-size: 0.95em;
   font-weight: 400;
   text-transform: capitalize;
-  color: rgba(var(--ternary-green), 1)
 }
 .character-illustration-container{
   background-position: 50%;
@@ -71,9 +69,9 @@ h5.card-title a, .my-oc-character-container p a{
   text-wrap: wrap;
   font-family: "Poppins";
   text-align: justify;
+  font-variant-caps: normal;
 }
 .title-text-novel p a{
-  font-weight: 600;
   font-size: 1.25em;
   line-height: 70%;
   overflow-wrap: break-word;
@@ -99,7 +97,6 @@ h5.card-title a, .my-oc-character-container p a{
 }
 .quest-container .card-header h6{
   color: rgba(var(--main-white), 1);
-  font-weight: 600;
 }
 .quest-button-text p.quest-description{
   text-align: justify;

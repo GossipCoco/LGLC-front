@@ -16,19 +16,19 @@
       </p>
       <p class="display-flex-row">
         <span>{{ nBFiction }}</span
-        >&nbsp;fictions
+        >&nbsp;<span class="text-white poppins-text">fictions</span>
       </p>
       <p class="display-flex-row">
         <span> {{ totalWords }}</span
-        >&nbsp;mots.
+        >&nbsp;<span class="text-white poppins-text">mots</span>
       </p>
       <p class="display-flex-row">
         <span>{{ totalPoints }}</span
-        >&nbsp; points.
+        >&nbsp; <span class="text-white poppins-text">points</span>
       </p>
       <p class="display-flex-row">
         <span>{{ NbOCs }}</span
-        >&nbsp; personnages.
+        >&nbsp; <span class="text-white poppins-text">personnages</span>
       </p>
     </div>
   </div>
