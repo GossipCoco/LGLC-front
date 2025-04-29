@@ -94,12 +94,7 @@ ul {
   white-space: normal;
   overflow-wrap: break-word;
 }
-.link-collapse .link-collapse {
-  display: flex;
-  flex: 1;
-}
 .logo-accueil-container{
-  flex: 1;
   padding: 0;
   margin: -7vh 0 0 -29vh;
 }
