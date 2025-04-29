@@ -42,9 +42,11 @@
     }
 }
 h2{
-    color: rgba(var(--clear-green-01), 1);
     font-weight: 600;
     text-shadow: rgba(var(--dark-green-01), 1) 2px 0px 10px;
+}
+.mentions-legales-text .card{
+    background-color: rgba(var(--clear-green-02), 0);
 }
 #accueil .parallax {
     perspective: -5px;
@@ -253,8 +255,8 @@ h2{
 }
 #mentions-legales-page {
     margin: 5rem;
-    height: 50vh;
-    overflow-y: hidden;
+    height: 90vh;
+    overflow-y: scroll;
 }
 #about-page{
     margin: 0 3rem -5rem 3rem;

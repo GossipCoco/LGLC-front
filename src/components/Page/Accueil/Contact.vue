@@ -3,7 +3,7 @@
     <HeaderAccueil />
     <main class="link-faq-about-contact-container">
       <div id="about-page">
-        <h2>Nous contacter</h2>
+        <h2  class="color-clear-green-01">Nous contacter</h2>
         <div class="row">
           <div class="col-12">
             <div class="mb-3">

@@ -4,7 +4,7 @@
     <main class="link-faq-about-contact-container">
       <div id="mentions-legales-page">
         <div class="mentions-legales-text">
-          <h2>Foire aux questions</h2>
+          <h2  class="color-clear-green-01">Foire aux questions</h2>
           <h3>FAQ</h3>
 
           <div v-for="(faq, index) in AllFaq" :key="index">
