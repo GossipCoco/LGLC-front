@@ -19,7 +19,7 @@
                     {{ fiction.Title }}
                   </router-link> </span
                 ><br />
-                <span class="text-white " v-html="truncateText(fiction.Summary, 160)"></span>
+                <span class="text-white font-variant-normal" v-html="truncateText(fiction.Summary, 160)"></span>
               </p>
             </div>
           </div>
