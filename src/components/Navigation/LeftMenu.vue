@@ -5,6 +5,7 @@
   <div
     :class="[ 
       'menu-left', 
+      'background-lineart-other03', 
       { 'menu-hidden': !isMenuOpen }, 
       'd-flex', 
       'flex-column', 

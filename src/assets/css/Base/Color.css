@@ -7,6 +7,9 @@
 .background-lineart{
     background: var(--lineart-other00);
 }
+.background-lineart-other03{    
+  background: var(--lineart-other03);
+}
 .background-color-white{
     background-color: rgba(var(--main-white), 1);
 }

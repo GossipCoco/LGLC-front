@@ -113,3 +113,6 @@ h5.card-title a, .my-oc-character-container p a{
 .quest-button-text p.quest-description{
   text-align: justify;
 }
+.text-small {
+  font-size: 85%;
+}
