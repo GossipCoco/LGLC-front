@@ -78,9 +78,7 @@ th {
 .original-character-image-container img{
     width: 100%;
 }
-.gap-2{
-    width: 28rem;
-}
+
 .all-chapters-list-container {    
     width: 52vh;
     padding: 0 1rem;
@@ -115,10 +113,6 @@ th {
 .rond-image-illustration img {
     aspect-ratio: 1;
 }
-.page-profil-user-container .rond-image-illustration.avatar-profil-container img {
-    height: 25vh;
-    width: 25vh;
-}
 .row.bottom-top-dashboard {
     margin-top: 1rem;
 }
@@ -133,15 +127,6 @@ th {
 }
 .row.bottom-left-dashboard{
     margin: 1rem 0 0 -0.75rem;
-}
-.fiche-fiction {
-    background-color: rgba(var(--middle-green-01), 1);
-}
-.fiche-fiction h5,.fiche-fiction p {
-    color: rgba(var(--main-white), 1)
-}
-.fiche-fiction .link-text-a {
-    color: rgba(var(--active-hover), 1)
 }
 .card-text.summary-text-font{
     padding: 0.5rem 0 0 0;

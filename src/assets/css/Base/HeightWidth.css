@@ -2,7 +2,9 @@
 @import '../variables.scss';
 
 /* en VH */
-
+.gap-2{
+    width: 56vh;
+}
 .fiction-container{    
     width: 186vh;
 }
@@ -51,6 +53,10 @@
 }
 .title-container-card, 
 .all-characters-of-fiction > button{
+    width: 25vh;
+}
+.page-profil-user-container .rond-image-illustration.avatar-profil-container img {
+    height: 25vh;
     width: 25vh;
 }
 #all-characters-container-card .character-card.card {
