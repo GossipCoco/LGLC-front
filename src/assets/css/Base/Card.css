@@ -232,7 +232,7 @@ li.quest-container {
     margin: -0.5rem 0 0 0;
 }
 #original-characters-list{
-    margin: -5vh 0 0 0rem;
+    margin: -5vh 0 0 30vh;
     overflow-y: hidden;
     padding: 0;
 }

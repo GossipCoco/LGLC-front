@@ -92,7 +92,7 @@ export default {
       nav: {
         current: 0,
         pages: 0,
-        step: 12,
+        step: 8,
       },
       showspinner: false,
     };
@@ -127,10 +127,10 @@ export default {
     },
     GetOriginaleCharacterByUser(user, nav) {
       if(window.innerWidth >= this.width){
-          this.nav.step = 12
+          this.nav.step = 8
         }else if(window.innerWidth < this.width)
         {
-          this.nav.step = 12
+          this.nav.step = 8
         }
       CharacterService.GetOriginaleCharacterByUser(user, nav)
         .then((response) => {
