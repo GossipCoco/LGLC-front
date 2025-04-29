@@ -53,7 +53,6 @@ export default {
   },
   computed: {
     limitedCharacters() {
-      // Limite le nombre de personnages à 3
       return this.clan.Warriors ? this.clan.Warriors.slice(0, 2) : [];
     },
   },
@@ -68,7 +67,6 @@ export default {
       ClanService.getClanByName(this.url)
         .then((response) => {
           this.clan = response.data.ob;
-          console.log(response.data.ob.Warriors)
           this.Image = response.data.ob.Image;
         })
         .catch((e) => {
