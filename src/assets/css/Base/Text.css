@@ -109,7 +109,6 @@ h5.card-title a, .my-oc-character-container p a{
 .quest-container .card-header h6{
   color: rgba(var(--main-white), 1);
   font-weight: 600;
-  width: 30vh;
 }
 .quest-button-text p.quest-description{
   text-align: justify;

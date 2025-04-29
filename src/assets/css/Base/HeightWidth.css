@@ -36,14 +36,12 @@
 .middle-dashboard{
     width: 192vh;
 }
-.height-all-fictions-container{
-    height: 75vh;
+.quest-container .card-header h6{
+    width: 30vh;
 }
-.global-container {
-    height: 98v
-}
-.game, .clan-detail-card.image-illustration-right.border-card-color,
-.all-characters-by-user-container, .book-containe{
+.all-characters-by-user-container, .book-containe,
+.dashboard-max-card-container.roll-dice-container .card-body
+#edit-chapter-contain .character-details-chatper.card.mb-3.fiction-container{
     height: 75vh;
 }
 #one-book-container-wrapper .row,
@@ -83,7 +81,8 @@
 .location-clan-card-details-body{
     height: 44vh;
 }
-.border-card-color{
+.character-details-card.border-card-color,
+.character-list-wrapper .border-card-color{
     height: 88.5vh;
 }
 .character-card.card .card-image {
@@ -365,9 +364,7 @@
     height: 4vh;
     width: 4vh;
 }
-.dashboard-max-card-container.roll-dice-container .card-body{
-    height: 75vh;
-}
+
 #book-container.dashboard-max-card-container.card-height .card-body{
     height: 80vh;
 }
@@ -378,9 +375,6 @@
 }
 .carousel {
     width: 24vh;
-}
-#edit-chapter-contain .character-details-chatper.card.mb-3.fiction-container{
-    height: 75vh;
 }
 .create-chapter-card-container{
     height: 85vh;

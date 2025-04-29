@@ -285,10 +285,10 @@ li.quest-container {
 .last-chapter-card.card-body{
     margin: -1rem 0 0 0;
 }
-.clan-detail-card.image-illustration-right.border-card-color{
+/* .clan-detail-card.image-illustration-right.border-card-color{
     display: flex;
     flex: 0.25;
-}
+} */
 .clan-detail-layout .card-body .text-align-justify.poppins-text{
     overflow-y: scroll;
 }
