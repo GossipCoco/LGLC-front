@@ -2,13 +2,13 @@
   <hr />
   <h1 class="text-white">Fiche personnages</h1>
   <hr />
-  <div class="all-characters-by-user-container overflowY-scroll overflowX-hidden">
-    <div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="all-characters-by-user-container height-75-vh overflowY-scroll overflowX-hidden">
+    <div class="row row-cols-1 row-cols-md-4 g-4">
       <div class="col-3" v-for="(gamer, index) in gamers" :key="index">        
-          <div class="display-flex  align-items-content-justify-content">
+          <div class="display-flex width-40-vh align-items-content-justify-content">
             <div class="card display-flex align-items-content-justify-content">
               <div class="card-header">
-                <h3 class="card-title cinzel">{{ gamer.CurrentName }}</h3>
+                <h3 class="card-title cinzel margin-1-0-0-0">{{ gamer.CurrentName }}</h3>
               </div>
               <div class="card-body display-flex-row">
                 <img
@@ -16,7 +16,7 @@
                   class="card-img-top avatar-gamer"
                   :alt="gamer.UserName"
                 />
-                <div class="information-character-container overflowY-X-hidden">
+                <div class="information-character-container overflowY-X-hidden width-20-vh">
                   <p>Clan de naissance : {{ gamer.Clan.Name }}</p>
                   <p>Statut actuel : {{ gamer.Status }}</p>
                   <p>Genre du personnage : {{ gamer.Genre }}</p>

@@ -290,3 +290,6 @@ fill: rgba(var(--active-hover), 1);
 .row.list-quest-card-container{
     margin: 0 0 0 7vh;
 }
+.all-characters-by-user-container .card-header{
+    padding: 1rem 0 0 0;
+}

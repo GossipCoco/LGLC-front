@@ -39,7 +39,7 @@
 .quest-container .card-header h6{
     width: 30vh;
 }
-.all-characters-by-user-container, .book-containe,
+.book-containe,
 .dashboard-max-card-container.roll-dice-container .card-body
 #edit-chapter-contain .character-details-chatper.card.mb-3.fiction-container{
     height: 75vh;
@@ -437,8 +437,8 @@
     height: 4vh;
 }
 .avatar-gamer{
-    width: 20vh;
-    height: 20vh;
+    width: 15vh;
+    height: 15vh;
 }
 .level-role-width{
     width: 20vh;

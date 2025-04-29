@@ -159,7 +159,9 @@
     border: 1px solid #ddd;
     border-radius: 5px;
 }
-
+.avatar-gamer{
+    border: rgba(var(--clear-green-02), 1) 5px solid;
+}
 .bubble-dialog {
     border-radius: 15px;
 }

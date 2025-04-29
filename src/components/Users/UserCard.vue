@@ -1,5 +1,5 @@
 <template>
-    <div class="dashboard-max flex-one card display-flex-column height-100 background-color-main-lineart margin-3-rem page-profil-user-container">
+    <div class="dashboard-max flex-one card display-flex-column height-100 background-color-main-lineart margin-1-0-1-0 page-profil-user-container overflowY-scroll">
         <CardHeader v-bind:Title="url" />
         <UserInformations v-bind:user="url"></UserInformations>
     </div>

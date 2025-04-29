@@ -100,12 +100,19 @@
 .width-50-vh{
     width: 50vh;
 }
+.width-40-vh{
+    width: 40vh;
+}
 .width-30-vh{
     width: 30vh;
 }
 .width-25-vh
 {
     width: 25vh;
+}
+.width-20-vh
+{
+    width: 20vh;
 }
 .width-10-vh{
     width: 10vh;
@@ -178,6 +185,12 @@
 }
 .margin-3-rem{
     margin: 3rem;
+}
+.margin-1-0-1-0{
+    margin: 1rem 0 1rem 0;
+}
+.margin-3-rem-0-1-rem-0{
+    margin: 3rem 0 1rem 0;
 }
 .padding-0-rem{
     padding: 0;
