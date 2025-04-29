@@ -11,10 +11,10 @@
     background-color: rgba(var(--main-white), 1);
 }
 .background-color-clear-green-01{
-    background-color: rgba(var(--dark-clear-01), 1);
+    background-color: rgba(var(--clear-green-01), 1);
 }
 .background-color-clear-green-02{
-    background-color: rgba(var(--dark-clear-02), 1);
+    background-color: rgba(var(--clear-green-02), 1);
 }
 .background-color-middle-green-01{
     background-color: rgba(var(--middle-green-01), 1);
@@ -47,12 +47,11 @@
 .color-clear-green-02{
     color: rgba(var(--clear-green-02), 1);
 }
-
-.background-color-middle-green-01{
-    background-color: rgba(var(--middle-green-01), 1);
+.color-middle-green-01{
+    color: rgba(var(--middle-green-01), 1);
 }
-.background-color-middle-green-02{
-    background-color: rgba(var(--middle-green-02), 1);
+.color-middle-green-02{
+    color: rgba(var(--middle-green-02), 1);
 }
 .color-dark-green-01{
     color: rgba(var(--dark-green-01), 1);

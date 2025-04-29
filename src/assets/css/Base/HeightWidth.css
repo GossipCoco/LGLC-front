@@ -388,7 +388,10 @@
 .pagination{
     max-width: 50vh;
 }
-#accueil li.nav-item, .number-page-container{
+#accueil li.nav-item{
+    width: 40vh;
+}
+.number-page-container{
     width: 17vh;
 }
 .row.bottom-dashboard-levele-one .card.last-book-container{

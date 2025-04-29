@@ -37,7 +37,7 @@
   margin-top: -0.5rem
 }
 #navbarCollapse {
-  margin: 3vh 0 0 180vh;
+  margin: 3vh 0 0 170vh;
 }
 .nav-item a {
   font-size: 18px;
@@ -69,9 +69,6 @@
 .menu-level1 {
   margin: 0 0 0 2rem;
 }
-.icon-menu-container {
-  background-color: rgba(var(--clear-green-02), 1);
-}
 .icon-menu-container:hover {
   background-color: rgba(var(--active-hover), 1);
 }
@@ -84,8 +81,6 @@
 ul {
   list-style: none;
 }
-
-
 .li-level1:hover {
   color: rgba(var(--active-hove), 1);
 }
@@ -93,10 +88,6 @@ ul {
   position: fixed;  
   margin: 0.5rem 0rem;
   transition: transform 0.3s ease-in-out;
-}
-.bg-dark {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-dark-rgb), 0) !important;
 }
 .menu-hidden {
   display: none;

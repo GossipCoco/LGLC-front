@@ -18,7 +18,7 @@
         <router-link to="/dashboard">
           <div class="menu-level1">
             <div class="menu-li-contain">
-              <div class="icon-menu-container display-flex align-items-content-justify-content">
+              <div class="icon-menu-container background-color-clear-green-02  display-flex align-items-content-justify-content">
                 <img src="/images/icons/home.svg" />
               </div>
               <div class="chevron-container"></div>
@@ -36,7 +36,7 @@
         >
           <div class="menu-level1">
             <div class="menu-li-contain">
-              <div class="icon-menu-container display-flex align-items-content-justify-content">
+              <div class="icon-menu-container background-color-clear-green-02  display-flex align-items-content-justify-content">
                 <img
                   src="/images/icons/Logo-thunderclan-textless.png"
                   style="width: 1.25rem"
@@ -74,7 +74,7 @@
         >
           <div class="menu-level1">
             <div class="menu-li-contain">
-              <div class="icon-menu-container display-flex align-items-content-justify-content">
+              <div class="icon-menu-container background-color-clear-green-02  display-flex align-items-content-justify-content">
                 <img src="/images/icons/cloud-solid.svg" />
               </div>
               <div class="chevron-container">
@@ -106,7 +106,7 @@
         >
           <div class="menu-level1">
             <div class="menu-li-contain">
-              <div class="icon-menu-container display-flex align-items-content-justify-content">
+              <div class="icon-menu-container background-color-clear-green-02  display-flex align-items-content-justify-content">
                 <img src="/images/icons/pen-nib-solid.svg" />
               </div>
               <div class="chevron-container">
@@ -135,7 +135,7 @@
         >
           <div class="menu-level1">
             <div class="menu-li-contain">
-              <div class="icon-menu-container display-flex align-items-content-justify-content">
+              <div class="icon-menu-container background-color-clear-green-02  display-flex align-items-content-justify-content">
                 <img src="/images/icons/gamepad-solid.svg" />
               </div>
               <div class="chevron-container">
@@ -165,7 +165,7 @@
         <router-link to="/EventGlobal">
           <div class="menu-level1">
             <div class="menu-li-contain">
-              <div class="icon-menu-container display-flex align-items-content-justify-content">
+              <div class="icon-menu-container background-color-clear-green-02  display-flex align-items-content-justify-content">
                 <img src="/images/icons/calendar-days-solid.svg" />
               </div>
               <div class="chevron-container"></div>
@@ -176,7 +176,7 @@
       <li class="li-level1" v-if="role === 'Administrateur'">
         <router-link to="/admin">
           <div class="menu-level1">
-            <div class="icon-menu-container display-flex align-items-content-justify-content">
+            <div class="icon-menu-container background-color-clear-green-02  display-flex align-items-content-justify-content">
               <img src="/images/icons/profil.svg" />
             </div>
             <div class="chevron-container"></div>
@@ -186,7 +186,7 @@
       <li class="li-level1 display-flex-column align-items-content-justify-content">
         <router-link :to="'/user/' + usrId">
           <div class="menu-level1">
-            <div class="icon-menu-container display-flex align-items-content-justify-content">
+            <div class="icon-menu-container background-color-clear-green-02  display-flex align-items-content-justify-content">
               <img src="/images/icons/user.svg" />
             </div>
             <div class="chevron-container">
@@ -197,7 +197,7 @@
       </li>
       <li class="li-level1 display-flex-column align-items-content-justify-content">
         <div class="menu-level1">
-          <div class="icon-menu-container display-flex align-items-content-justify-content">
+          <div class="icon-menu-container background-color-clear-green-02  display-flex align-items-content-justify-content">
             <a href="#" @click.prevent="logout" class="logout-li-container">
               <img
                 src="../../../public//images//icons/right-from-bracket-solid-colored.svg"
