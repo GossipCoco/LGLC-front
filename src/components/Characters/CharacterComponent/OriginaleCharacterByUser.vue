@@ -1,5 +1,5 @@
 <template>
-  <div class="row row-filter background-color-dark-green-01 display-flex vertical-align-middle">
+  <div class="row row-filter white-text background-color-dark-green-01 display-flex vertical-align-middle">
     <InputName
       class="input-name-margin"
       v-bind:col="'col-xxl-4 col-xl-3 col-lg-12 col-md-12 col-sm-12 col-xs-12'"

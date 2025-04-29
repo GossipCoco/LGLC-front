@@ -24,6 +24,7 @@ import 'bootstrap/dist/js/bootstrap.min.js'
 
 import './assets/css/Base/Base.css'
 import './assets/css/Base/Utilities.css'
+import './assets/css/Base/Color.css'
 import './assets/css/Base/HeightWidth.css'
 import './assets/css/Base/Border.css'
 import './assets/css/Base/Layout.css'
