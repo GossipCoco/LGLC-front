@@ -1,5 +1,5 @@
 <template>
-  <div class="card-body">
+  <div class="card-body height-80">
     <SearchBarComponent
       :For="'SearchCharacter'"
       :label="'Sélectionner un personnage'"

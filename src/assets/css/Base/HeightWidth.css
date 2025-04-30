@@ -158,7 +158,7 @@
 .row.top-dashboard .card-body.user-info-text > div, .fiction-summary-card{
     width: 44vh;
 }
-.fiction-container .card-body,.card-body.user-inbformation-conter, .profil-user-card .avatar-container,
+.card-body.user-inbformation-conter, .profil-user-card .avatar-container,
 .dashboard-max-card-container.card-height.fiction-container .card-body, 
 .dashboard-max-card-container.card-height .card-body {
     height: 80vh;

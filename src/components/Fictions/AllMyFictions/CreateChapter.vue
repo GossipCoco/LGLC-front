@@ -3,6 +3,7 @@
     class="dashboard-max-card-container height-77-vh border-none background-color-main-lineart card display-flex-column fiction-container overflowY-X-hiddencreate-chapter-card-container"
   >
     <CardHeader v-bind:Title="'Chapitre' + NextChapter" />
+    <div class="card-body height-80">
     <form
       class="create-character-form width-180-vh"
       @submit.stop.prevent="onSubmit"
@@ -41,6 +42,7 @@
         <div class="col-1 btn-validate-container"></div>
       </div>
     </form>
+  </div>
   </div>
 </template>
 <script>

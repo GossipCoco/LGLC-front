@@ -3,6 +3,7 @@
     id="comment-container"
     class="background-color-main-lineart fiction-globale-container text-white card display-flex-column fiction-container overflowY-scroll overflowX-hidden opensans-text"
   >
+  <div class="card-body height-80">
     <div class="row">
       <div class="col-12">
         <p class="card-text text-align-justify">
@@ -49,6 +50,7 @@
       </div>
     </div>
   </div>
+</div>
 </template>
   <script>
 import FictionService from "../../../services/FictionService";

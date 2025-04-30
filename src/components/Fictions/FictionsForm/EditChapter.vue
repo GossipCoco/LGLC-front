@@ -3,7 +3,7 @@
     <div
       class="character-details-chatper background-color-main-lineart card mb-3 display-flex-column fiction-container"
     >
-      <div class="card-body">
+      <div class="card-body height-80">
         <form
           class="create-character-form width-180-vh"
           @submit.stop.prevent="handleOk"

@@ -18,7 +18,7 @@
                 </router-link>
             </div>
         </div>
-        <div class="card-body">
+        <div class="card-body height-80">
             <div class="row">
                 <div class="col-12">
                     <div class="display-flex align-items-content-justify-content chapter-button-content">
