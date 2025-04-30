@@ -4,7 +4,7 @@
       <div class="col-12">
         <div class="flex-one profil-user-card background-color-main-lineart card">
           <div class="card-body display-flex-row">
-            <div class="display-flex-column align-items-content-justify-content avatar-container width-10-vh border-100">
+            <div class="display-flex-column align-items-content-justify-content avatar-container height-10-vh width-10-vh border-100">
               <h2>{{ Role }}</h2>
               <img class="height-30-vh align-items-content-justify-content border-100" :src="'/images/Avatars/' + form.Avatar" /><br>
               <label class="btn btn-default p-0" for="upload-avatar">

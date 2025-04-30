@@ -14,7 +14,6 @@
 }
 /* .modal-footer, */
 .form-first-part-container .col-md-6,
-.avatar-container,
 .avatar-wrapper img,
 .avatar-wrapper,
 .one-quest h6{
@@ -207,9 +206,6 @@
 .all-characters-container-card {
     width: 173vh;
 }
-.avatar-container {
-    height: 8vh;
-}
 .opacity-container, .illustration-background .background-fiction-contain{
     height: 80vh;
 }
@@ -269,9 +265,6 @@
 }
 .all-fictions-container-global{
     height: 95vh;
-}
-.welcome-dashboard-container .avatar-container{
-    height: 14vh;
 }
 .welcome-dashboard-container img.mini-rond-avatar-image, 
 .dashboard-card-header .avatar-wrapper img{
