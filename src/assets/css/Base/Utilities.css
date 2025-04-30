@@ -166,55 +166,7 @@
 .overflowX-hidden{
     overflow-x: hidden;
 }
-/* FONTS */
-.opensans-text{
-    font-family: var(--opensans-text);
-}
-.poppins-text{
-    font-family: 'Poppins';
-}
-.cinzel{
-    font-family: 'Cinzel';
-}
-.roboto{
-    font-family: 'Roboto';
-}
-.montesserat{
-    font-family: 'Montserrat';
-}
-.font-size-1em{
-    font-size: 1em;
-}
-.font-size-1-25{
-    font-size: 1.25em;
-}
-.font-weight-600{
-    font-weight: 600;
-}
-.font-variant-small-caps{    
-    font-variant: small-caps;
-}
-.text-align-justify{
-    text-align: justify;
-}
-.text-white{
-    color: rgba(var(--main-white), 1);
-}
-.text-clear-green{    
-    color: rgba(var(--clear-green-0), 1);
-}
-.text-middle-green{    
-    color: rgba(var(--middle-green-01), 1);
-}
-.text-dark-green{
-    color: rgba(var(--dark-green-01), 1);
-}
-.text-ternary-green{
-    color: rgba(var(--ternary-green), 1);
-}
-.text-active{
-    color: rgba(var(--active-hover), 1);
-}
+
 /* BORDER */
 .border-100{
     border-radius: 100%
