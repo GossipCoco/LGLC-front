@@ -32,7 +32,7 @@
     margin : 0;
 }
 .flex-one .middle-fiction-card .btn {
-    margin : 2rem 0 0 0;
+    margin : 1vh 0 0 0;
 }
 #original-character-global-container .flex-one .btn {
     margin: 0rem 5rem 0 0
@@ -145,7 +145,9 @@
     background-position: 50%;   
     vertical-align: bottom;
 }
-
+.summary-container .row.top-fiction{
+    margin: -3vh 0 0 0;
+}
 .all-characters-by-user-container .card{
     background: var(--lineart-other00);
 }

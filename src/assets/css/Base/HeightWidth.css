@@ -257,7 +257,7 @@
     height: 12vh;
 }
 .carousel__item img{
-    width: 69%;
+    width: 40%;
 }
 .all-characters-by-user-container .card{
     height: 33vh;
@@ -321,7 +321,7 @@
     height: 8vh;
 }
 .summary-height-container{
-    height: 60vh;
+    height: 66vh;
 }
 .character-list-wrapper .card-body{
     height: 6vh;
@@ -386,6 +386,7 @@
 }
 .carousel {
     width: 24vh;
+    height: 18vh;
 }
 .create-chapter-card-container{
     height: 85vh;
