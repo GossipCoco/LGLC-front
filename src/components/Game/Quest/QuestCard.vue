@@ -13,7 +13,7 @@
           <router-link
             :to="'/QuestById/' + quest.Id"
             type="button"
-            class="display-flex-column btn btn-primary"
+            class="display-flex-column btn btn-primary margin-1-0-0-0"
           >
             Relever le défi
           </router-link>

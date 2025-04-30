@@ -33,7 +33,7 @@
             <div class="face face6 display-flex align-items-content-justify-content">6</div>
           </div>
         </div>
-        <div class="text-game-container  flex-one">
+        <div class="text-game-container flex-one">
         <button type="button" class="btn btn-primary" @click="lancerDes">
           Lancer les dés
         </button>

@@ -13,7 +13,7 @@
           </div>
           <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
             <div class="dice-container">
-                <button @click="rollDice">Lancer le dé</button>
+                <button  class="btn btn-primary" @click="rollDice">Lancer le dé</button>
                 <p>Résultat du dé: {{ diceResult }}</p>
                 <p>Joueur actuel: {{ currentPlayerIndex + 1 }}</p>
             </div>
