@@ -1,10 +1,10 @@
 <template>
-  <div class="card card-image-layout clan-detail-layout mb-3 background-color-white display-flex-row">
+  <div class="card card-image-layout clan-detail-layout location-detail-container mb-3 background-color-white display-flex-row">
     <div class="row g-0">
-      <div class="col-4 col-md-4">
+      <div class="col-3 col-md-3">
         <cardImageBackground v-bind:Image=" location.Image"/>
       </div>
-      <div class="col-8 col-md-8 display-flex-column flex-one location-clan-card-details">
+      <div class="col-9 col-md-9 display-flex-column flex-one location-clan-card-details">
         <div class="card background-color-main-lineart location-clan-card">
           <CardHeader v-bind:Title="location.Name" />        
         <div class="card-body height-77-vh location-clan-body text-white background-color-main-lineart details-infos-characters poppins-text text-white">         

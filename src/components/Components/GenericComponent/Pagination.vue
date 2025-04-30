@@ -10,7 +10,7 @@
                 :key="p"
                 :disabled="navPage.current == p - 1"
                 type="button"
-                class="page-link background-color-dark-green-01  "
+                class="page-link background-color-dark-green-01 white-text"
                 @click="getData(p - 1)"
               >
                 {{ p }}
