@@ -22,7 +22,7 @@
   margin: 0 0 0 -50vh;
 }
 h5.card-title,
-.title-text-novel p a, .quest-container .card-header h6, .quest-description {
+.title-text-novel p a, .quest-container .card-header h6 {
   font-weight: 600;
 }
 #list-events p span, .text-bg-primary, .user-info-text p span, h5.card-title {
@@ -93,7 +93,7 @@ h5.card-title a, .my-oc-character-container p a{
   color: rgba(var(--main-white), 1);
 }
 .quest-button-text p.quest-description{
-  text-align: justify;
+  text-align: left;
 }
 .text-small {
   font-size: 85%;

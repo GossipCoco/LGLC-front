@@ -14,10 +14,9 @@
     height: 50vh;
 }
 /* .modal-footer, */
-.form-first-part-container .col-md-6,
+/* .form-first-part-container .col-md-6, */
 .avatar-wrapper img,
-.avatar-wrapper,
-.one-quest h6{
+.avatar-wrapper{
     height: 10vh;
 }
 .row.list-quest-card-container{
@@ -430,8 +429,9 @@
 .one-quest h6{
     width: 18vh;
 }
-.background-image-quest{
-    height: 23vh;
+.list-quest-card-container .background-image-quest{
+    height: 24vh;
+    width: 12vh;
 }
 .quest-container .card-header h6{
     height: 4vh;
