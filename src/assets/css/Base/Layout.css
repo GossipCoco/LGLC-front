@@ -112,10 +112,10 @@
     margin: 0.5rem 0 0.5rem 0;
 }
 .row.top-left-dashboard{
-    margin: -0.15rem 0 0 0
+    margin: 2vh 0 2vh 0;
 }
 .row.fictions-games-container{
-    margin: -1rem 0 0 -2rem;
+    margin: 0vh 0 0 -2rem;
 }
 .card.border-none.background-lineart.profil-card.fiction-card.gamer-character-card{
     margin: 0 0 1rem 0.15rem;

@@ -8,6 +8,7 @@
 .fiction-container{    
     width: 186vh;
 }
+
 .create-character-form-modal{
     width: 138vh;
     height: 50vh;
@@ -400,7 +401,7 @@
     height: 80vh;
 }
 .row.bottom-dashboard-levele-one .card.all-fictions-card{
-    height: 86vh;
+    height: 138vh;
 }
 .col-8.location-clan-card-details{
     height: 90vh;

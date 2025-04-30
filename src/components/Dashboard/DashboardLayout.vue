@@ -41,6 +41,8 @@
       </div>
       <div class="row bottom-dashboard-levele-one">
         <div class="col-xxl-5 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          
+          <Video v-if="!showspinner" ></Video>
           <LastBook v-if="!showspinner"/>
           <CharacterRandom v-if="!showspinner" v-bind:randomCharacters="randomCharacters"/>
         </div>
@@ -84,6 +86,7 @@ import CharacterByGamerV2 from "./Components/CharacterByGamerV2.vue";
 import Separator from "./ComponentGeneric/Separator.vue";
 import EasyAction from "./Components/EasyAction.vue";
 import MusicPlayer from "./Components/MusicPlayer.vue";
+import Video from "./Components/Video.vue";
 export default {
   name: "DashboardLayout",
   components: {
@@ -99,7 +102,8 @@ export default {
     CharacterByGamerV2,
     Separator,
     EasyAction,
-    MusicPlayer
+    MusicPlayer,
+    Video
   },
   data() {
     return {

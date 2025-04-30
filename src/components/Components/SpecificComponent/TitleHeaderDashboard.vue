@@ -35,7 +35,7 @@
         </div>
       </div>
     </div>
-    <div class="width-100-percent" v-else-if="type === 'myCharacters' || type === 'chapters' ">
+    <div class="width-100-percent" v-else-if="type === 'myCharacters' || type === 'chapters' || type === 'video'">
       <div class="row">
         <div class="col-12">
           <h4 class="text-white" >
