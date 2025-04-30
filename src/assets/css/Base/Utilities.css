@@ -81,6 +81,12 @@
 .height-30-vh{
     height: 30vh;
 }
+.height-20-vh{
+    height: 20vh;
+}
+.height-10-vh{
+    height: 10vh;
+}
 /* Width */
 .width-190-vh{
     width: 190vh;

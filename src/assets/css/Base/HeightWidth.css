@@ -12,7 +12,12 @@
     width: 138vh;
     height: 50vh;
 }
-.modal-footer{
+/* .modal-footer, */
+.form-first-part-container .col-md-6,
+.avatar-container,
+.avatar-wrapper img,
+.avatar-wrapper,
+.one-quest h6{
     height: 10vh;
 }
 .row.list-quest-card-container{
@@ -118,11 +123,7 @@
 #original-characters-list .border-card-color {
     height: 35vh;
 }
-.form-first-part-container .col-md-6,.character-illustration-container,
-.avatar-container, .avatar-wrapper img, .avatar-wrapper
- {
-    height: 10vh;
-}
+
  /* #book-container .fiction-container .card-body, */
 
 .illustration-arc-container,
@@ -440,7 +441,6 @@
 }
 .one-quest h6{
     width: 18vh;
-    height: 10vh;
 }
 .background-image-quest{
     height: 23vh;
