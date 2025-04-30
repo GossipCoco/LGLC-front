@@ -18,7 +18,6 @@
     margin-top: -3rem;
     justify-content: right;
 }
-
 .row.search-pagination-container .col-2{
     padding: 0 0 1rem 0;
 }
@@ -40,11 +39,9 @@
 .nav-btn-contain button{
     height: 40px;
 }
-
-.pagination .page-link{
-    background-color: rgba(var(--dark-green-01),1);
+/* .pagination .page-link{
     color: rgba(var(--main-white),1)
-}
+} */
 .pagination .page-link:hover{
     background-color: rgba(var(--clear-green-01),1);
     color: rgba(var(--active-hover),1)
