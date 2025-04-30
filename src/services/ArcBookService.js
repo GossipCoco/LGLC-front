@@ -15,9 +15,8 @@ class ArcBook{
     GetLastPublishedBook(){
         return http.get('/ArcBook/GetLastPublishedBook')
     }
-    GetCurrentArc(nav) {
-        console.log(nav)
-        return http.post('/ArcBook/GetCurrentArc', nav)
+    GetCurrentArc() {
+        return http.get('/ArcBook/GetCurrentArc')
     }
 }
 export default new ArcBook()

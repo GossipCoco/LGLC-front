@@ -26,11 +26,15 @@ export default {
       Arc: {},
     };
   },
+  created() {
+    this.GetCurrentArc();
+  },
   methods: {
     GetCurrentArc() {
-      ArcBookService.GetCurrentArc.then((response) => {
+      ArcBookService.GetCurrentArc((response) => {
+        console.log(response.data.ob)
         this.Arc = response.data.ob;
-      }).catch((err) => {
+        }).catch((err) => {
         console.log(err);
       });
     },
