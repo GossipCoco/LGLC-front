@@ -28,6 +28,10 @@
 .font-variant-small-caps{    
     font-variant: small-caps;
 }
+.font-variant-all-small-caps{    
+    font-variant-caps: all-small-caps;
+}
+
 .font-variant-normal{
     font-variant-caps: normal;
   }

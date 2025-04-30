@@ -369,15 +369,15 @@
     width: 10vh;
     height: 17vh;
 }
+.summary-container .middle-fiction-card .image-fiction-container{
+    width: 31vh;
+}
 .carousel {
     width: 24vh;
     height: 18vh;
 }
 .create-chapter-card-container{
     height: 85vh;
-}
-.one-book-container-wrapper .clan-detail-card {
-    width: 50vh;
 }
 #edit-chapter-contain{
     width: 140vh;
