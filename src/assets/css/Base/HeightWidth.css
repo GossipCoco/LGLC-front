@@ -376,6 +376,9 @@
 .create-chapter-card-container{
     height: 85vh;
 }
+.one-book-container-wrapper .clan-detail-card {
+    width: 50vh;
+}
 #edit-chapter-contain{
     width: 140vh;
     height: 80vh;
