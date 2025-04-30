@@ -22,7 +22,7 @@
   margin: 0 0 0 -50vh;
 }
 #list-events p span, .text-bg-primary, .user-info-text p span, h5.card-title,
-.title-text-novel p a, .quest-container .card-header h6 {
+.title-text-novel p a, .quest-container .card-header h6, .quest-description {
   font-weight: 600;
 }
 #list-events p span, .text-bg-primary, .user-info-text p span, h5.card-title {
@@ -42,7 +42,6 @@ h1.card-title {
 }
 .user-info-text p {
   line-height: 0.85;
-  font-size: 0.85em;
 }
 .user-info-text p span.label-profil {
   font-size: 0.95em;
@@ -76,7 +75,9 @@ h5.card-title a, .my-oc-character-container p a{
   line-height: 70%;
   overflow-wrap: break-word;
 }
-.title-text-novel .text-white.text-align-justify.poppins-text p{
+.character-details-router a, .user-info-text p
+.title-text-novel .text-white.text-align-justify.poppins-text p,
+.summaray-title-text p span.text-white .text-white.text-align-justify.poppins-text p{
   font-size: 0.85em;
 }
 .author-text{
@@ -86,15 +87,10 @@ h5.card-title a, .my-oc-character-container p a{
 .summary-title-text span.text-white p{
   text-align: justify;
 }
-.mini-rond-messages p{
-  color: rgba(var(--main-white), 1)
-}
 .last-chapter-text-link{
   font-size: .9em;
 }
-.quest-description{
-  font-size: 0.85em;
-}
+
 .quest-container .card-header h6{
   color: rgba(var(--main-white), 1);
 }

@@ -145,9 +145,7 @@
     background-position: 50%;   
     vertical-align: bottom;
 }
-.character-details-router a {
-    font-size: 0.85em;
-}
+
 .all-characters-by-user-container .card{
     background: var(--lineart-other00);
 }
