@@ -79,7 +79,7 @@
 .card-form-create-character, .fiction-globale-container ul {
     height: 90vh;
 }
-.clan-detail-layout .card-body, .clan-detail-layout .card-body.location-clan-body {
+.card-form-create-character .card-body {
     height: 77vh;
 }
 .location-clan-card-details-body{
@@ -197,18 +197,12 @@
 .clans-location-container{
     height: 92vh;
 }
-.character-details-chatper.card.mb-3.fiction-container {
-    height: 95vh;
-}
 .character-details .card-body {
     height: 90.5vh;
 }
 .all-characters-container-card {
     width: 173vh;
 }
-/* .illustration-background .background-fiction-contain{
-    height: 80vh;
-} */
 .all-characters-list-containers{
     width: 112vh;
 }
@@ -223,10 +217,7 @@
     width: 8vh;
     height: 8vh;
 }
-.create-character-form,
-.card-form-create-character .card-body{
-    height: 77vh;
-}
+
 .create-character-form > div:nth-child(2),.card.location-clan-background-width-container,
 .select-message-container .card-body{
     height: 40vh;
