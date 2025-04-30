@@ -5,7 +5,7 @@
     content: var(--cat-corner);
     position: absolute;
     top: -2%;
-    left: 94%;
+    left: 30%;
     z-index: 99999;
 }
 .character-container-global, .fiction-container .card-body,.character-details,
@@ -38,7 +38,7 @@
 .fiction-globale-container.card.fiction-container {
     margin: 1vh 1vh 2vh 1vh;
 }
-.cat-corner::before
+/* .cat-corner::before
 .dashboard-max-card-container::before,
 .fiction-globale-container::before,
 .character-card.card::before,
@@ -56,7 +56,7 @@
 .character-card.card::before{
     top: -2rem;
     left: 75%;
-}
+} */
 .display-flex-row.card-group.clan-group .card.location-clan-background-width-container::before {
     left: 66%;
     top: -2rem;
