@@ -124,12 +124,10 @@
     width: 25vh;
     height: 25vh;
 }
-.width-9v-vh-height-9v-vh
-{
+.width-9v-vh-height-9v-vh{
     width: 9vh;
     height: 9vh;
 }
-
 /* Background */
 .background-size-cover{
     background-size: cover;
@@ -166,7 +164,6 @@
 .overflowX-hidden{
     overflow-x: hidden;
 }
-
 /* BORDER */
 .border-100{
     border-radius: 100%

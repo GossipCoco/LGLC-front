@@ -100,12 +100,6 @@ h5.card-title a, .my-oc-character-container p a{
 .text-small {
   font-size: 85%;
 }
-.font-variant-normal{
-  font-variant-caps: normal;
-}
-.font-variant-all-small-caps{
-  font-variant-caps: all-petite-caps;
-}
 .title-fiction-links{
   font-size: 1.25em;
 }
