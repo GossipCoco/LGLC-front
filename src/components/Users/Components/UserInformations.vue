@@ -10,13 +10,9 @@
               v-bind:classe="'card-img-top mini-rond-avatar-image'"
             />
           </div>
-          <div
-            class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 col-xxl-10"
-          >
-            <div class="display-flex-column user-profil-image">
-              
+          <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 col-xxl-10">
+            <div class="display-flex-column user-profil-image">              
               <div class="row">
-                <!-- {{  usrInformation.Role }} -->
                 <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 col-xxl-10">
                   <p class="roboto roboto">
                     {{ usrInformation.LastName }} {{ usrInformation.FirstName }} - {{ usrInformation.UserName }}
@@ -24,14 +20,12 @@
                   <p class="roboto roboto">{{ usrInformation.Description }}</p>
                   <p class="roboto roboto">{{ usrInformation.Biography }}</p>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-10 col-lg-2 col-xl-2 col-xxl-2">
+                 <div class="col-xs-12 col-sm-12 col-md-10 col-lg-2 col-xl-2 col-xxl-2">                  
                   <div class="display-flex-column">
-                    <p class="roboto roboto">Niveau {{  usrInformation.Level.Name }}</p>
-                  <img :src="'/images/Levels/' + usrInformation.Level.Image" :alt="usrInformation.Level.Image" loading="lazy" class="profil-user-lever-img"/>
-                  
-                  <p class="roboto roboto">Rôle {{  usrInformation.Role.Name }}</p>
-                  <img :src="'/images/Levels/' + usrInformation.Role.Image" :alt="usrInformation.Role.Image" loading="lazy" class="profil-user-lever-img"/>
-                </div>
+                    <p class="roboto roboto">Niveau {{  nameLevel }}</p>
+                    <img :src="'/images/Levels/' + imageLevel" :alt="imageLevel" loading="lazy" class="profil-user-lever-img"/>
+                    <p class="roboto roboto">Rôle {{  nameRole }}</p>
+                    <img :src="'/images/Levels/' + imageRole" :alt="imageRole" loading="lazy" class="profil-user-lever-img"/>
                 </div>
               </div>
             </div>
@@ -39,8 +33,9 @@
         </div>
       </div>
     </div>
-    <OCGamerCard v-bind:gamers="usrInformation.Gamers" v-if="!showspinner" />
   </div>
+  <OCGamerCard v-bind:gamers="usrInformation.Gamers" v-if="!showspinner" />
+</div>
 </template>
 <script>
 import UserService from "../../../services/UserService";
@@ -55,6 +50,13 @@ export default {
       showspinner: false,
       usr: this.user,
       usrInformation: {},
+      level: {},
+      role: {},
+      nameRole: null,
+      nameLevel: null,
+      imageRole: null,
+      imageLevel: null
+
     };
   },
   created() {
@@ -64,8 +66,14 @@ export default {
     GetUser(username) {
       UserService.GetUserByUsername(username)
         .then((response) => {
-          console.log(response.data.ob);
           this.usrInformation = response.data.ob;
+          this.level = response.data.ob.Level
+          this.role = response.data.ob.Role
+          console.log(this.level, this.role)
+          this.nameLevel = this.level.Name
+          this.nameRole = this.role.Name
+          this.imageLevel = this.level.Image
+          this.imageRole = this.role.Image          
         })
         .catch((error) => {
           console.error(error);
