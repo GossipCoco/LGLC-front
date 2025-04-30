@@ -26,7 +26,7 @@
           <div
             class="title-text-novel font-variant-small-caps display-block flex-one display-flex-column justify-content-left"
           >
-            <p>
+            <p class="poppins-text">
               <router-link
                 class="poppins-text text-ternary-green font-size-1em"
                 :to="'/fiction/' + fiction.Title"
