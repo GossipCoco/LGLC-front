@@ -134,6 +134,9 @@
     padding: 1rem 0 0.5rem 0;
     background-position: 50%;
 }
+.image-fiction-container{
+    background-position: 50%;
+}
 .fiction-summary-card{
     padding: 0 0.5rem 0 0.75rem;
 }

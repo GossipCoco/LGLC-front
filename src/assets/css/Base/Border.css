@@ -128,7 +128,7 @@
 }
 /* Fiction chapter */
 .image-fiction-container {
-    border-radius: 12px;
+    border-radius: 12px 0 0 12px;
 }
 .dashboard-max-card-container {
     border-radius: 10px;
