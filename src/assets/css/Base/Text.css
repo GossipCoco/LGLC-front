@@ -74,14 +74,13 @@ h5.card-title a, .my-oc-character-container p a{
   line-height: 70%;
   overflow-wrap: break-word;
 }
-.character-details-router a, .user-info-text p
+.user-info-text p
 .title-text-novel .text-white.text-align-justify.poppins-text p,
 .summaray-title-text p span.text-white .text-white.text-align-justify.poppins-text p{
   font-size: 0.85em;
 }
 .author-text{
   font-size: 1.2em;
-  font-variant-caps: all-small-caps;
 }
 .summary-title-text span.text-white p{
   text-align: justify;

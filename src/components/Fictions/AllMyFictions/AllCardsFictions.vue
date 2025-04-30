@@ -23,7 +23,7 @@
                     >
                   </h5>
                 </div>
-                <p class="author-text">
+                <p class="author-text font-variant-small-caps">
                   Auteur : &nbsp;
                   <router-link
                     :to="'/getUserBy/' + fiction.User.UserName"
