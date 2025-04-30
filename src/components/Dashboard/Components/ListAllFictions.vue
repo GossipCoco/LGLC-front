@@ -3,8 +3,11 @@
     <div class="card background-lineart border-none fiction-card all-fictions-card">
       <TitleHeaderDashboard v-bind:title="'Lire des fictions'"  v-bind:type="'fictions'" v-bind:route="'/AllExistingFictionsLayout'" v-bind:nameRoute="'Lire des fictions'"/>
       <div class="card-body display-flex-column">        
-          <div class="list-fictions-dashboard display-flex-row list-all-fictions-globale--container width-100-vh last-all-list-fiction-container" 
-          v-for="(fiction, index) in fiveGames" :key="index">
+          <div
+            class="list-fictions-dashboard display-flex-row list-all-fictions-globale--container width-100-vh last-all-list-fiction-container padding-1-rem"
+            v-for="(fiction, index) in fiveGames"
+            :key="index"
+          >
               <ImageRondDashboard
                 v-bind:src="fiction.Image"
                 v-bind:alt="fiction.Image"
