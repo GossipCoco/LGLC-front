@@ -210,7 +210,7 @@
     height: 8vh;
 }
 .opacity-container, .illustration-background .background-fiction-contain{
-    height: 77vh;
+    height: 80vh;
 }
 .all-characters-list-containers{
     width: 112vh;
@@ -409,7 +409,7 @@
 }
 .illustration-background {
     width: 183vh;
-    height: 77vh;
+    height: 80vh;
 }
 .row.bottom-dashboard-levele-one .card.all-fictions-card{
     height: 86vh;
@@ -417,14 +417,10 @@
 .col-8.location-clan-card-details{
     height: 90vh;
 }
-.quest-button-text {
-    height: 30vh;
-}
 .col-btn-container .btn.btn-primary{
     width: 38vh;
 }
 /* QUEST */
-
 .quest--global-container {
     height: 30vh;
 }
@@ -437,7 +433,8 @@
 }
 .quest-button-text p {
     height: 20vh;
-}.quest-button-text p.quest-description {
+}
+.quest-button-text p.quest-description {
     height: 20vh;
     width: 18vh;
 }
