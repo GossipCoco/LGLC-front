@@ -21,7 +21,7 @@
   font-variant-caps: small-caps;
   margin: 0 0 0 -50vh;
 }
-#list-events p span, .text-bg-primary, .user-info-text p span, h5.card-title,
+h5.card-title,
 .title-text-novel p a, .quest-container .card-header h6, .quest-description {
   font-weight: 600;
 }

@@ -238,7 +238,7 @@
     height: 9vh;
 }
 .user-info-text img{
-    width: 14vh; 
+    width: 10vh; 
 }
 .image-fiction-container-background{
     height: 17vh;
@@ -255,6 +255,9 @@
 .rond-character-background{
     width: 12vh;
     height: 12vh;
+}
+.carousel__item img{
+    width: 69%;
 }
 .all-characters-by-user-container .card{
     height: 33vh;
@@ -311,7 +314,7 @@
     height: 12vh;
 }
 .user-info-text .row.avatar-row{
-    height: 15vh;
+    height: 13vh;
 }
 .btn.btn-primary.btn-character-in-clan-detail{
     width: 14vh;

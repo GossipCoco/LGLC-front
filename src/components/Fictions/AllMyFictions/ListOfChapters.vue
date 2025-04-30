@@ -1,7 +1,7 @@
 <template>
   <div class="opacity-container display-flex-row">
     <div class="summary-container height-70-vh overflowY-auto overflowX-hidden">
-      <div class="row top-fiction">
+      <div class="row top-fiction" v-if="AuthorId === usrCurrent">
         <div class="col-3">
            <UploadImage
             v-bind:id="IdFiction"

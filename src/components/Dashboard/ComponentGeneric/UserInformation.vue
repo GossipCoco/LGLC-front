@@ -8,25 +8,25 @@
       </p>
     </div>
     <div class="col-5">
-      <p class="display-flex-row">
+      <p class="display-flex-row font-weight-600">
         <span>{{ formatDate(Inscription) }}</span>
       </p>
-      <p class="display-flex-row">
+      <p class="display-flex-row font-weight-600">
         <span>{{ formatDate(LastConnexion) }}</span>
       </p>
-      <p class="display-flex-row">
+      <p class="display-flex-row font-weight-600">
         <span>{{ nBFiction }}</span
         >&nbsp;<span class="text-white poppins-text">fictions</span>
       </p>
-      <p class="display-flex-row">
+      <p class="display-flex-row font-weight-600">
         <span> {{ totalWords }}</span
         >&nbsp;<span class="text-white poppins-text">mots</span>
       </p>
-      <p class="display-flex-row">
+      <p class="display-flex-row font-weight-600">
         <span>{{ totalPoints }}</span
         >&nbsp; <span class="text-white poppins-text">points</span>
       </p>
-      <p class="display-flex-row">
+      <p class="display-flex-row font-weight-600">
         <span>{{ NbOCs }}</span
         >&nbsp; <span class="text-white poppins-text">personnages</span>
       </p>

@@ -12,7 +12,7 @@
               @click="selectMessage(message)"
               style="cursor: pointer"
             >
-              <span class="badge text-bg-primary flex-one display-flex-row flex-one align-items-content-justify-content rounded-pill">{{
+              <span class="badge text-bg-primary font-weight-600 flex-one display-flex-row flex-one align-items-content-justify-content rounded-pill">{{
                 new Date(message.DateSend).toLocaleString()
               }}</span>
               <p class="display-flex-row flex-one">{{ message.Title }}</p>
