@@ -12,7 +12,7 @@
       <div
         class="card-body all-last-three-fictions-container display-flex-column align-items-content-justify-content"
       >
-        <div class="btn-all-my-fictions">
+        <div class="btn-all-my-fictions display-flex">
           <router-link class="btn btn-primary" :to="'allFictions/' + usrId"
             >Mes fictions</router-link
           >
@@ -34,11 +34,7 @@
                 {{ fiction.Title }}
               </router-link>
             </p>
-            <div
-              v-html="truncateText(fiction.Summary, 50)"
-              class="text-white text-align-justify poppins-text"
-            ></div>
-
+            <div v-html="truncateText(fiction.Summary, 50)" class="text-white text-align-justify poppins-text"></div>
           </div>
         </div>
         </div>

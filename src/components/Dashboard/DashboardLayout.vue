@@ -48,6 +48,7 @@
         </div>
         <div class="col-xxl-7 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <div class="row fictions-games-container">
+            <new-arc />
             <ListAllFictions v-if="!showspinner" />          
           </div>
         </div>
@@ -87,6 +88,7 @@ import Separator from "./ComponentGeneric/Separator.vue";
 import EasyAction from "./Components/EasyAction.vue";
 import MusicPlayer from "./Components/MusicPlayer.vue";
 import Video from "./Components/Video.vue";
+import NewArc from "./Components/NewArc.vue";
 export default {
   name: "DashboardLayout",
   components: {
@@ -103,7 +105,8 @@ export default {
     Separator,
     EasyAction,
     MusicPlayer,
-    Video
+    Video,
+    NewArc
   },
   data() {
     return {
