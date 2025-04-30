@@ -1,5 +1,5 @@
 <template>
-  <div class="opacity-container display-flex-row">
+  <div class="opacity-container height-80 display-flex-row">
     <div class="summary-container height-70-vh overflowY-auto overflowX-hidden">
       <div class="row top-fiction" v-if="AuthorId === usrCurrent">
         <div class="col-3">

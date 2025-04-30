@@ -32,7 +32,7 @@
               <div class="display-flex-row character-chapters-container">
                 <div v-if="nbIllus > 0">
                   <div
-                    class="illustration-background"
+                    class="illustration-background height-80"
                     v-for="(illus, index) in illustration.slice(0, 1)"
                     :key="index"
                   >
@@ -58,12 +58,12 @@
                     </div>
                   </div>
                 </div>
-                <div v-else class="background-fiction-contain">
+                <div v-else class="background-fiction-contain height-80">
                   <div
                       :style="{
                         backgroundImage: 'url(' + backgroundImageFiction + ')',
                       }"
-                      class="background-size-cover display-flex-column background-fiction-contain width-180-vh"
+                      class="background-size-cover display-flex-column background-fiction-contain height-80 width-180-vh"
                     >
                   <ListOfChapter
                     v-bind:AuthorId="AuthorId"
