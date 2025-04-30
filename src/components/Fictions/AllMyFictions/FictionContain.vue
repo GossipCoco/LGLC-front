@@ -1,11 +1,11 @@
 <template>
   <div
-    class="fiction-globale-container background-lineart card display-flex-column fiction-container overflowY-X-hiddenpadding-0-rem text-white flex-one opensans-text"
+    class="fiction-globale-container background-lineart card display-flex-column fiction-container padding-1-rem overflowY-X-hiddenpadding-0-rem text-white flex-one opensans-text"
   >
     <Spinner v-if="showspinner" />
     <div
       v-if="!showspinner"
-      id="card-display-flex-column fiction-container"
+      id="card-display-flex-column fiction-container padding-1-rem"
       class="card-header fiction-global-information-container-hearder display-flex-row align-items-content-justify-content"
     >
       <CreateCommentModal
@@ -27,7 +27,7 @@
       <div class="row">
         <div class="col-12">
           <div class="display-flex-column flex-one">
-            <div class="character-chapters display-flex-column flex-one fiction-container
+            <div class="character-chapters display-flex-column flex-one fiction-container padding-1-rem
               overflowY-X-hidden background-summary-global-container">
               <div class="display-flex-row character-chapters-container">
                 <div v-if="nbIllus > 0">

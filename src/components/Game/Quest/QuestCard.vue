@@ -1,5 +1,5 @@
 <template>  
-  <div class="display-flex-column card-fiction-container">
+  <div class="display-flex-column card-fiction-container padding-1-rem">
   <div class="card-header">
     <h6 class="width-5-vh">{{ quest.Title }}</h6>
   </div>

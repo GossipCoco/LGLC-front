@@ -1,7 +1,7 @@
 <template>
     <div
       v-if="!showspinner" 
-      id="card-display-flex-column fiction-container"
+      id="card-display-flex-column fiction-container padding-1-rem"
       class="card-header fiction-global-informarion-container-hearder display-flex-row align-items-content-justify-content"
     >
       <div class="Comment-icon">

@@ -28,7 +28,7 @@
         <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12 right-column-image-container">
           <div class="display-flex-column all-characters-of-fiction">
             <div
-              class="display-flex-column image-fiction-container overflowY-X-hidden background-size-cover"
+              class="display-flex-column image-fiction-container padding-1-rem overflowY-X-hidden background-size-cover"
               v-bind:style="{
                 backgroundImage: 'url(' + backgroundImageFiction + ')',
               }"
