@@ -172,7 +172,7 @@ li.quest-container {
     left: 0;
     transition: transform 0.1s ease-out;
 }
-.display-flex-column button{
+.pagination-container .display-flex-column button{
     margin: 0.5rem 0;
 }
 .buttons-container{
