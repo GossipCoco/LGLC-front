@@ -1,5 +1,5 @@
 <template>
-  <div class="one-book-container-wrapper">
+  <div class="one-book-container-wrapper margin-1-0-0-0">
     <div class="display-flex-row flex-one">
       <card-image-background v-bind:Image="background">
         <img :src="book.Image" :alt="book.Title" class="image-book height-30-vh" />

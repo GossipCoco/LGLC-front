@@ -19,12 +19,6 @@
 .flex-one .title-puzzle.display-flex-column .btn {
     margin : 2vh 0 0 0;
 }
-/* .flex-one .quest-button-text .btn.btn-primary, */
-.easy-action-container .flex-one .btn,
-.one-book-container-wrapper, .flex-one .button-validate-container .btn.btn-primary,
-.flex-one .create-character-button .btn.btn-primary{
-    margin: 1rem 0 0 0;
-}
 .avatar-container{
     margin: -1vh 0 0 0;
 }

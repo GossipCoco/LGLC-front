@@ -99,7 +99,7 @@
       </div>
       <div class="row">
         <LinkGenerateImage />
-        <div class="col-md-6">
+        <div class="col-md-4">
           <label for="inputImage" class="form-label text-white"
             >Envoyer une image (2Mo max ou 1000 * 1000)</label
           >
@@ -110,14 +110,14 @@
             @change="handleFileUpload"
           />
         </div>
-        <div class="col-md-2 create-character-button display-flex">
+        <div class="col-md-4 create-character-button display-flex">
           <button
-            class="btn btn-primary"
+            class="btn btn-primary margin-1-0-0-0"
             type="submit"
             v-on:click="handleOk"
             title="endpart"
           >
-            Créer le personnage
+            Créer le nouveau personnage
           </button>
         </div>
       </div>
