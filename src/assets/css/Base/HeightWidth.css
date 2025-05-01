@@ -5,9 +5,7 @@
 .gap-2{
     width: 56vh;
 }
-.fiction-container{    
-    width: 186vh;
-}
+.fiction-container, 
 #edit-chapter-contain .character-details-chatper{    
     width: 186vh;
 }
@@ -44,9 +42,6 @@
 }
 .middle-dashboard{
     width: 192vh;
-}
-.quest-container .card-header h6{
-    width: 30vh;
 }
 .book-containe,
 .dashboard-max-card-container.roll-dice-container .card-body
@@ -469,9 +464,6 @@
 }
 .row.list-fiction-card-container{
     height: 38rem;
-}
-.left-fiction-summary-container{
-    width: 20rem;
 }
 audio{
     width: 14rem;
