@@ -1,6 +1,6 @@
 <template>
   <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
-    <div class="display-flex-column flex-one all-chapters-list-container">
+    <div class="display-flex-column flex-one all-chapters-list-container overflowY-auto">
       <ul class="list-group width-50-vh">
         <li
           class="list-group-item"
