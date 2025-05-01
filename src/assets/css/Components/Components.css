@@ -148,6 +148,9 @@
 .summary-container .row.top-fiction{
     margin: -3vh 0 0 0;
 }
+.btn.btn-primary.edit-summary-btn{
+    margin: -6vh 0 0 0;
+}
 .all-characters-by-user-container .card{
     background: var(--lineart-other00);
 }
@@ -292,4 +295,39 @@ fill: rgba(var(--active-hover), 1);
 }
 .all-characters-by-user-container .card-header{
     padding: 1rem 0 0 0;
+}
+.list-group-item{
+    background-color: rgba(var(--active-hover), 0);
+    border: solid 0px  rgba(var(--active-hover), 0);
+}
+.custom-scroll-list {
+    max-height: 70vh;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+/* Scrollbar globale pour la liste des chapitres */
+.all-chapter-ul-scroll::-webkit-scrollbar,
+.background-color-dark-green-01::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Couleur de fond de la scrollbar */
+.all-chapter-ul-scroll::-webkit-scrollbar-track,
+.background-color-dark-green-01::-webkit-scrollbar-track {
+  background: rgba(var(--dark-green-01), 1); /* vert foncé */
+  border-radius: 10px;
+}
+
+/* Barre de scroll */
+.all-chapter-ul-scroll::-webkit-scrollbar-thumb,
+.background-color-dark-green-01::-webkit-scrollbar-thumb {
+  background-color: rgba(var(--clear-green-01), 1); /* vert clair */
+  border-radius: 10px;
+  border: 2px solid rgba(var(--dark-green-01), 1);
+}
+
+/* Au survol */
+.all-chapter-ul-scroll::-webkit-scrollbar-thumb:hover,
+.background-color-dark-green-01::-webkit-scrollbar-thumb:hover {
+  background-color:  rgba(var(--dark-green-01), 1);
 }

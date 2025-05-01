@@ -31,8 +31,9 @@
 .all-chapters-list-container {    
     width: 75vh;
     max-height: 85vh;
-    padding: 0 1vh 0 0;
-    overflow: scroll;
+    padding: 0 1rem;
+    overflow: auto;
+    margin: -5vh 0 0 0;
 }
 .row.bottom-dashboard-levele-three .card, .row.bottom-dashboard-levele-three .card .card-body{
     height: 38vh;
@@ -80,7 +81,7 @@
     height: 5vh
 }
 .fiction-globale-container.card.fiction-container,
-.card-form-create-character, .fiction-globale-container ul {
+.card-form-create-character {
     height: 90vh;
 }
 .card-form-create-character .card-body {
@@ -138,7 +139,7 @@
     height: 48vh;
 }
 .illustration-background .background-fiction-contain{    
-    width: 183vh;
+    width: 186vh;
 }
 .character-details {
     height: 95vh;
@@ -401,7 +402,7 @@
     height: 36vh;
 }
 .illustration-background {
-    width: 183vh;
+    width: 186vh;
     height: 80vh;
 }
 .row.bottom-dashboard-levele-one .card.all-fictions-card{

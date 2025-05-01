@@ -1,6 +1,6 @@
 <template>
   <div
-    class="fiction-globale-container background-lineart card display-flex-column fiction-container overflowY-scroll overflowX-scroll padding-0-rem text-white flex-one opensans-text"
+    class="fiction-globale-container background-lineart card display-flex-column fiction-container overflowY-scroll overflowX-hidden padding-0-rem text-white flex-one opensans-text"
   >
     <Spinner v-if="showspinner" />
     <div
@@ -23,7 +23,7 @@
       <BackToFileBtnGroup v-bind:Author="Author" />
     </div>    
     <Spinner v-if="showspinner" />
-    <div class="card-body height-80" v-if="!showspinner">
+    <div class="card-body height-80-vh" v-if="!showspinner">
       <div class="row">
         <div class="col-12">
           <div class="display-flex-column flex-one">

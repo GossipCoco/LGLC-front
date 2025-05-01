@@ -9,7 +9,7 @@
             v-bind:css="'mb-3'"
             v-if="AuthorId === usrCurrent"
           /></div>
-        <div class="col-6">
+        <div class="col-2">
           <EditSummary v-bind:FictionId="IdFiction" v-bind:Summary="Summary" v-if="AuthorId === usrCurrent"/>
         </div>
         <div class="col-3">
