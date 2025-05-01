@@ -64,10 +64,10 @@ th {
     margin: 0rem 0 1rem 0;
     gap: 1rem;
 }
-.all-chapters-list-container {    
+/* .all-chapters-list-container {    
     padding: 0 1rem;
     overflow: auto;
-}
+} */
 .summary-height-container{
     padding: 1rem;
 }
