@@ -174,7 +174,6 @@
 .file-input {
     display: none; /* Cache l'input file */
 }
-
 .fiction-summary-card p{
     margin: 0 0 0.25rem 0;
 }
@@ -208,17 +207,17 @@ span.name-characatrer-link{
     margin: 1rem 1rem;
 }
 .list-group-item.messagerie-list-container p {
-margin: 0 0 0 1rem;
+    margin: 0 0 0 1rem;
 }
 .star {
-fill: rgba(var(--ternary-green), 1);
-/* Couleur des étoiles non sélectionnées */
-cursor: pointer;
-/* Indique que les étoiles sont cliquables */
-transition: fill 0.3s ease;
+    fill: rgba(var(--ternary-green), 1);
+    /* Couleur des étoiles non sélectionnées */
+    cursor: pointer;
+    /* Indique que les étoiles sont cliquables */
+    transition: fill 0.3s ease;
 }
 .star.checked {
-fill: rgba(var(--active-hover), 1);
+    fill: rgba(var(--active-hover), 1);
 }
 .title-text-novel{
     margin: 0 0 0 1rem;
@@ -248,14 +247,12 @@ fill: rgba(var(--active-hover), 1);
 .background-color-dark-green-01::-webkit-scrollbar {
   width: 8px;
 }
-
 /* Couleur de fond de la scrollbar */
 .all-chapter-ul-scroll::-webkit-scrollbar-track,
 .background-color-dark-green-01::-webkit-scrollbar-track {
   background: rgba(var(--dark-green-01), 1); /* vert foncé */
   border-radius: 10px;
 }
-
 /* Barre de scroll */
 .all-chapter-ul-scroll::-webkit-scrollbar-thumb,
 .background-color-dark-green-01::-webkit-scrollbar-thumb {
@@ -263,7 +260,6 @@ fill: rgba(var(--active-hover), 1);
   border-radius: 10px;
   border: 2px solid rgba(var(--dark-green-01), 1);
 }
-
 /* Au survol */
 .all-chapter-ul-scroll::-webkit-scrollbar-thumb:hover,
 .background-color-dark-green-01::-webkit-scrollbar-thumb:hover {

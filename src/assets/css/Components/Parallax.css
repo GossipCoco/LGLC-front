@@ -21,7 +21,6 @@
 .card-container-parallax .card {
   width: 325px;
   height: 350px;
-  background-color: rg;
   position: relative;
   z-index: 99999999;
 }

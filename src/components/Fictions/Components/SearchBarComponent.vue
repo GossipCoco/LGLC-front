@@ -16,13 +16,13 @@
       @getAuthor="getAuthor"
     />
     <div class="col-2 display-flex align-items-content-justify-content">
-      <button type="button" class="btn btn-primary">Rechercher une fiction</button>
+      <button type="button" class="btn btn-primary search-fiction-button">Rechercher une fiction</button>
     </div>
     <div class="col-3 display-flex align-items-content-justify-content">
-      <router-link class="btn btn-primary" :to="'/allFictions/' + userId">
+      <router-link class="btn btn-primary back-my-all-fictions-button" :to="'/allFictions/' + userId">
         Mes fictions
       </router-link>
-      <router-link class="btn btn-primary" to="/createANewFiction">
+      <router-link class="btn btn-primary back-all-fictions-button" to="/createANewFiction">
         Nouvelle fiction
       </router-link>
     </div>

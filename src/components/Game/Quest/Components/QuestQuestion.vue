@@ -15,7 +15,7 @@
         <label :for="'option' + indexdeux">{{ option.OptionText }}</label>
       </div>
     </div>
-    <button class="btn btn-primary" @click="submitAnswer">
+    <button class="btn btn-primary quest-validate-question-button" @click="submitAnswer">
       Valider la réponse
     </button>
     <div v-if="feedback">{{ feedback }}</div>

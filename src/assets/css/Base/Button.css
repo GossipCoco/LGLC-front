@@ -5,16 +5,13 @@
 /* .flex-one .btn {
     margin : -2rem 0 0 0;
 } */
-.search-bar-component .btn.btn-primary{
+.search-fiction-button, .back-my-all-fictions-button, .back-all-fictions-button{
     margin: -5vh 2vh 0 0;
  }
-.flex-one .quest-content .btn {
-    margin : 5vh 0 0 0;
+.quest-validate-question-button {
+    margin : 4vh 0 0 0;
 }
-.flex-one .bubble-dialog .btn {
-    margin : 2rem 0 0 0;
-}
-.flex-one .title-puzzle.display-flex-column .btn {
+.title-puzzle.display-flex-column .btn {
     margin : 2vh 0 0 0;
 }
 .avatar-container{
