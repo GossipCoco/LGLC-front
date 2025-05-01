@@ -2,7 +2,7 @@
   <!-- Button trigger modal -->
   <button
     type="button"
-    class="btn btn-primary"
+    class="btn btn-primary margin-1vh-0-0-0"
     data-bs-toggle="modal"
     data-bs-target="#AddANewCharacterModal"
   >

@@ -4,49 +4,53 @@
     <div class="card-body">
       <div class="display-flex-row">
         <div class="display-flex-column">
-          <div class="title-puzzle display-flex-column">
-            <button
-              type="button"
-              class="btn btn-primary shufflePieces"
-              @click="shufflePieces"
-            >
-              Mélanger les pièces
-            </button>
-            <button
-              type="button"
-              class="btn btn-primary shufflePieces"
-              @click="changeImage"
-            >
-              Changer l'image
-            </button>
-            <button
-              type="button"
-              class="btn btn-secondary"
-              @click="setDifficulty('facile')"
-            >
-              Facile (3x3)
-            </button>
-            <button
-              type="button"
-              class="btn btn-secondary"
-              @click="setDifficulty('moyen')"
-            >
-              Moyen (6x6)
-            </button>
-            <button
-              type="button"
-              class="btn btn-secondary"
-              @click="setDifficulty('difficile')"
-            >
-              Difficile (9x9)
-            </button>
-            <div class="puzzle-preview">
-              <p>Image de prévisualisation :</p>
-              <img
-                :src="selectedImage"
-                alt="Prévisualisation"
-                class="preview-image"
-              />
+          <div class="display-flex-row width-70-vh">
+            <div class="title-puzzle display-flex-column">
+              <button
+                type="button"
+                class="btn btn-primary shufflePieces margin-2vh-0-0-0"
+                @click="shufflePieces"
+              >
+                Mélanger les pièces
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary shufflePieces margin-2vh-0-0-0"
+                @click="changeImage"
+              >
+                Changer l'image
+              </button>
+            </div>
+            <div class="title-puzzle display-flex-column">
+              <button
+                type="button"
+                class="btn btn-primary margin-2vh-0-0-0"
+                @click="setDifficulty('facile')"
+              >
+                Facile (3x3)
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary margin-2vh-0-0-0"
+                @click="setDifficulty('moyen')"
+              >
+                Moyen (6x6)
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary margin-2vh-0-0-0"
+                @click="setDifficulty('difficile')"
+              >
+                Difficile (9x9)
+              </button>
+              <div class="puzzle-preview">
+                <p>Image de prévisualisation :</p>
+                <img
+                  :src="selectedImage"
+                  alt="Prévisualisation"
+                  class="preview-image"
+                />
+              </div>
             </div>
           </div>
           <div class="display-flex-column">
@@ -62,10 +66,7 @@
             </div>
           </div>
         </div>
-
-        <div
-          class="display-flex-row align-items-content-justify-content flex-one"
-        >
+        <div class="display-flex-row align-items-content-justify-content flex-one">
           <div class="puzzle-container" :style="containerStyle">
             <div
               v-for="(piece, index) in shuffledPieces"
