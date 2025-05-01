@@ -17,7 +17,7 @@
               <div class="d-grid gap-2 col-8 mx-auto">
                 <router-link
                   type="button"
-                  class="btn btn-primary"
+                  class="btn btn-primary margin-15vh"
                   :to="'/LocationsDetails/' + location.Id"
                   >{{ location.Name }}</router-link
                 >

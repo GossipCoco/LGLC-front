@@ -286,9 +286,9 @@
 .card-form-create-character .card-body{
     height: 80vh;   
 }
-#original-character-global-container .flex-one .btn {
+/* #original-character-global-container .flex-one .btn {
     height: 7vh;
-}
+} */
 .avatar-avatar-card-container{
     height: 12vh;
 }

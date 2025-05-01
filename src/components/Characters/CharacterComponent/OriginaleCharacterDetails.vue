@@ -15,10 +15,10 @@
             </div>            
             <div class="display-flex flex-one justify-content-right">
               <router-link
-                class="btn btn-primary"
+                class="btn btn-primary margin-0-rem height-5-vh"
                 to="/OriginaleCharacterByUser"
               >
-                Mes personnages
+                Retour à tous mes personnages
               </router-link>
             </div>
           </div>
