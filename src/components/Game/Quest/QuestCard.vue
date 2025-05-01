@@ -3,7 +3,7 @@
     <div class="card-header">
       <h6 class="width-5-vh">{{ quest.Title }}</h6>
     </div>
-    <div class="card-body padding-1-rem">
+    <div class="card-body card-quest-by-id-container">
       <div class="display-flex-row flex-one">
         <div
           class="background-image-quest width-10-vh height-16-rem background-size-cover flex-one"

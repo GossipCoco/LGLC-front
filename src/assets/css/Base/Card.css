@@ -8,6 +8,12 @@
     left: 30%;
     z-index: 99999;
 }
+.card-fiction-container .background-image-quest{
+    margin: -2vh;
+}
+.card-quest-by-id-container .card-body{
+    margin: -2vh 0 1vh 4vh;
+}
 /* .character-container-global,*/ .fiction-container .card-body,.character-details, 
 .game-container .card-boy > div > div .display-flex-column.align-items-content-justify-content {
     padding: 1rem;
