@@ -54,7 +54,7 @@
           </div>
           <div class="row">
             <div class="col-6">
-              <div class="margin-top-0-5rem-0-0-0">
+              <div class="margin-1vh-0-0-0">
                 <label for="selectClan" class="text-white form-label">
                   Clan principal
                 </label>
@@ -77,7 +77,7 @@
               </div>
             </div>
             <div class="col-6">
-              <div class="margin-top-0-5rem-0-0-0">
+              <div class="margin-1vh-0-0-0">
                 <label for="selectClan" class="text-white form-label">
                   Sélectionnez un type de fiction
                 </label>
@@ -119,7 +119,7 @@
               </div>
             </div>
             <div class="col-2 display-flex button-validate-container">
-              <div class="d-grid gap-2 margin-top-0-5rem-0-0-0">
+              <div class="d-grid gap-2 ">
                 <button type="submit" class="btn btn-primary margin-2vh-0-0-0">
                   Créer la fiction
                 </button>
