@@ -5,13 +5,13 @@
     >
       <router-link
         type="button"
-        class="btn btn-primary margin-1-0-0-0"
+        class="btn btn-primary margin-2vh-0-0-0"
         :to="'/allFictions/' + Author"
         >Retour à la liste mes fictions</router-link
       >
       <router-link
         type="button"
-        class="btn btn-primary margin-1-0-0-0"
+        class="btn btn-primary margin-2vh-0-0-0"
         :to="'/AllExistingFictionsLayout'"
         >Retour à la liste des fictions</router-link
       >

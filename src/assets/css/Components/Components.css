@@ -16,7 +16,6 @@
 /* CARD */
 .card.clan-detail-layout{
     background-color: rgb(var(--main-white), 0);
-    margin: 3rem 0 0 0;
 }
 .create-character-form,
 .card-form-create-character .card-body{

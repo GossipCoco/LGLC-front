@@ -8,7 +8,7 @@
           <div class="display-flex width-40-vh align-items-content-justify-content">
             <div class="card display-flex align-items-content-justify-content">
               <div class="card-header">
-                <h3 class="card-title cinzel margin-1-0-0-0">
+                <h3 class="card-title cinzel margin-2vh-0-0-0">
                   <router-link :to="'/OriginaleCharacterDetails/' + gamer.CurrentName" class="text-white">
                     {{ gamer.CurrentName }}
                   </router-link>

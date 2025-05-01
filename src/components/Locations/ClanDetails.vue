@@ -1,5 +1,5 @@
 <template>
-  <div class="card clan-detail-layout display-flex-row mb-3">
+  <div class="card clan-detail-layout margin-1vh-0-0-0 height-95-vh display-flex-row mb-3">
     <div class="row">
       <div
           class="col-3">

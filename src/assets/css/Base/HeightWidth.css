@@ -13,8 +13,6 @@
     width: 138vh;
     height: 50vh;
 }
-/* .modal-footer, */
-/* .form-first-part-container .col-md-6, */
 .avatar-wrapper img,
 .avatar-wrapper{
     height: 10vh;
@@ -163,14 +161,9 @@
 .row.top-dashboard .card-body.user-info-text > div, .fiction-summary-card{
     width: 44vh;
 }
-.card-body.user-inbformation-conter, .profil-user-card .avatar-container,
 .dashboard-max-card-container.card-height.fiction-container .card-body, 
 .dashboard-max-card-container.card-height .card-body {
     height: 80vh;
-}
-.quest-container{
-    width: 35vh;
-    height: 30vh;
 }
 .rating, .button-validate-container .btn.btn-primary,
 .dashboard-home-max-card-container .avatar-container,
@@ -286,9 +279,6 @@
 .card-form-create-character .card-body{
     height: 80vh;   
 }
-/* #original-character-global-container .flex-one .btn {
-    height: 7vh;
-} */
 .avatar-avatar-card-container{
     height: 12vh;
 }
@@ -426,7 +416,6 @@
 /* QUEST */
 #quest-by-id {
     width: 185vh;
-    height: 95vh;
 }
 #quest-by-id .parallax-container {
     height: 78vh;
