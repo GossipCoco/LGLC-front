@@ -101,9 +101,12 @@ export default {
     };
   },
   created(){
-    console.log(Object.keys(this.Kinds).length)
-    console.log(this.Kinds)
-    this.nbKind = Object.keys(this.Kinds).length
+    this.getNbKind()
+  },
+  methods: {
+    getNbKind(){
+      this.nbKind = Object.keys(this.Kinds).length
+    }
   }
 };
 </script>
