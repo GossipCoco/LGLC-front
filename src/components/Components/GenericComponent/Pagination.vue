@@ -10,7 +10,7 @@
                 :key="p"
                 :disabled="navPage.current == p - 1"
                 type="button"
-                class="page-link background-color-dark-green-01 white-text"
+                class="page-link background-color-dark-green-01 white-text roboto"
                 @click="getData(p - 1)"
               >
                 {{ p }}
@@ -21,7 +21,7 @@
             <li class="page-item display-flex-row  flex-one">
               <button
                 type="button"
-                class="page-link background-color-dark-green-01 white-text pagination-text"
+                class="page-link background-color-dark-green-01 white-text pagination-text roboto"
                 :disabled="navPage.current == 0"
                 @click="getData(0)"
               >
@@ -31,7 +31,7 @@
             <li class="page-item display-flex-row  flex-one">
               <button
                 type="button"
-                class="page-link background-color-dark-green-01 white-text pagination-text"
+                class="page-link background-color-dark-green-01 white-text pagination-text roboto"
                 :disabled="navPage.current <= 0"
                 @click="getData(navPage.current - 1)"
               >
@@ -41,7 +41,7 @@
             <li class="page-item display-flex-row  flex-one">
               <button
                 type="button"
-                class="page-link background-color-dark-green-01 white-text"
+                class="page-link background-color-dark-green-01 white-text roboto"
                 :disabled="navPage.current == 0"
                 @click="getData(0)"
               >
@@ -51,7 +51,7 @@
             <li class="page-item display-flex-row  flex-one">
               <button
                 type="button"
-                class="page-link background-color-dark-green-01 white-text"
+                class="page-link background-color-dark-green-01 white-text roboto"
                 :disabled="navPage.current == 1"
                 @click="getData(1)"
               >
@@ -62,7 +62,7 @@
               <span class="page-item">
                 <button
                   type="button"
-                  class="page-link background-color-dark-green-01 white-text"
+                  class="page-link background-color-dark-green-01 white-text roboto"
                   :disabled="navPage.current == 2"
                   @click="getData(2)"
                 >
@@ -74,7 +74,7 @@
               <span class="page-item">
                 <button
                   type="button"
-                  class="page-link background-color-dark-green-01 white-text"
+                  class="page-link background-color-dark-green-01 white-text roboto"
                   :disabled="navPage.current == 2"
                   @click="getData(2)"
                 >
@@ -84,7 +84,7 @@
               <span class="page-item">
                 <button
                   type="button"
-                  class="page-link background-color-dark-green-01 white-text"
+                  class="page-link background-color-dark-green-01 white-text roboto"
                   :disabled="navPage.current == 3"
                   @click="getData(3)"
                 >
@@ -100,7 +100,7 @@
               <li class="page-item display-flex-row  flex-one">
                 <button
                   type="button"
-                  class="page-link background-color-dark-green-01 white-text"
+                  class="page-link background-color-dark-green-01 white-text roboto"
                   :disabled="navPage.current == getMiddle(navPage) - 2"
                   @click="getData(getMiddle(navPage) - 2)"
                 >
@@ -110,7 +110,7 @@
               <li class="page-item display-flex-row  flex-one">
                 <button
                   type="button"
-                  class="page-link background-color-dark-green-01 white-text"
+                  class="page-link background-color-dark-green-01 white-text roboto"
                   :disabled="navPage.current == getMiddle(navPage) - 1"
                   @click="getData(getMiddle(navPage) - 1)"
                 >
@@ -120,21 +120,21 @@
               <li class="page-item display-flex-row  flex-one">
                 <button
                   type="button"
-                  class="page-link background-color-dark-green-01 white-text"
+                  class="page-link background-color-dark-green-01 white-text roboto"
                   :disabled="navPage.current == navPage.middle"
                   @click="getData(getMiddle(navPage))"
                 >
                   {{ getMiddle(navPage) + 1 }}
                 </button>
               </li>
-              <span class="nav-space-contain white-text">...</span>
+              <span class="nav-space-contain white-text roboto">...</span>
             </div>
             <span class="pagination " v-else>
-              <span class="nav-space-contain white-text">...</span>
+              <span class="nav-space-contain white-text roboto">...</span>
               <li class="page-item display-flex-row  flex-one">
                 <button
                   type="button"
-                  class="page-link background-color-dark-green-01 white-text"
+                  class="page-link background-color-dark-green-01 white-text roboto"
                   :disabled="navPage.current - 1 == navPage.current"
                   @click="getData(navPage.current - 1)"
                 >
@@ -144,7 +144,7 @@
               <li class="page-item display-flex-row  flex-one">
                 <button
                   type="button"
-                  class="page-link background-color-dark-green-01 white-text"
+                  class="page-link background-color-dark-green-01 white-text roboto"
                   :disabled="navPage.current == navPage.current"
                   @click="getData(navPage.current)"
                 >
@@ -154,14 +154,14 @@
               <li class="page-item display-flex-row  flex-one">
                 <button
                   type="button"
-                  class="page-link background-color-dark-green-01 white-text"
+                  class="page-link background-color-dark-green-01 white-text roboto"
                   :disabled="navPage.current + 1 == navPage.current"
                   @click="getData(navPage.current + 1)"
                 >
                   {{ navPage.current + 2 }}
                 </button>
               </li>
-              <span class="nav-space-contain white-text">...</span>
+              <span class="nav-space-contain white-text roboto">...</span>
             </span>
             <span
               class="pagination pagination-div-container-center"
@@ -170,7 +170,7 @@
               <li class="page-item display-flex-row  flex-one">
                 <button
                   type="button"
-                  class="page-link background-color-dark-green-01 white-text"
+                  class="page-link background-color-dark-green-01 white-text roboto"
                   :disabled="navPage.current == navPage.pages - 4"
                   @click="getData(navPage.pages - 4)"
                 >
@@ -180,7 +180,7 @@
               <li class="page-item display-flex-row  flex-one">
                 <button
                   type="button"
-                  class="page-link background-color-dark-green-01 white-text"
+                  class="page-link background-color-dark-green-01 white-text roboto"
                   :disabled="nav.current == nav.pages - 3"
                   @click="getData(nav.pages - 3)"
                 >
@@ -192,7 +192,7 @@
               <li class="page-item display-flex-row flex-one">
                 <button
                   type="button"
-                  class="page-link background-color-dark-green-01 white-text"
+                  class="page-link background-color-dark-green-01 white-text roboto"
                   :disabled="navPage.current == navPage.pages - 3"
                   @click="getData(navPage.pages - 3)"
                 >
@@ -204,7 +204,7 @@
             <li class="page-item display-flex-row  flex-one">
               <button
                 type="button"
-                class="page-link background-color-dark-green-01 white-text"
+                class="page-link background-color-dark-green-01 white-text roboto"
                 :disabled="navPage.current == navPage.pages - 2"
                 @click="getData(navPage.pages - 2)"
               >
@@ -214,7 +214,7 @@
             <li class="page-item display-flex-row  flex-one">
               <button
                 type="button"
-                class="page-link background-color-dark-green-01 white-text"
+                class="page-link background-color-dark-green-01 white-text roboto"
                 :disabled="navPage.current + 1 == navPage.pages"
                 @click="getData(navPage.pages - 1)"
               >
@@ -225,7 +225,7 @@
             <li class="page-item display-flex-row  flex-one">
               <button
                 type="button"
-                class="page-link background-color-dark-green-01 white-text pagination-text"
+                class="page-link background-color-dark-green-01 white-text pagination-text roboto"
                 :disabled="navPage.current + 1 == navPage.pages"
                 @click="getData(navPage.current + 1)"
               >
@@ -235,7 +235,7 @@
             <li class="page-item display-flex-row flex-one">
               <button
                 type="button"
-                class="page-link background-color-dark-green-01 white-text pagination-text"
+                class="page-link background-color-dark-green-01 white-text pagination-text roboto"
                 :disabled="navPage.current + 1 == navPage.pages"
                 @click="getData(navPage.pages - 1)"
               >
@@ -245,7 +245,7 @@
           </ul>
         </div>
         <div class="col-md-2 col-sm-2 col-xl-2 col-xxl-2 col-xs-2">
-          <div class="number-page-container background-color-dark-green-01 align-items-content-justify-content display-flex-row">
+          <div class="number-page-container roboto background-color-dark-green-01 align-items-content-justify-content display-flex-row">
             <p v-if="!nav.current" class="padding-1rem-0-0-0 white-text">Page : 1</p>
             <p v-else class="padding-1rem-0-0-0 white-text">Page : {{ nav.current + 1 }}</p>
           </div>

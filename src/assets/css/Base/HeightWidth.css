@@ -384,7 +384,8 @@
     height: 80vh;
 }
 .pagination{
-    max-width: 50vh;
+    max-width: 79vh;
+    height: 5vh;
 }
 #accueil li.nav-item{
     width: 40vh;
