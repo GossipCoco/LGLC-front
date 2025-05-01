@@ -9,7 +9,7 @@
     />
 
     <map name="clan-map">
-        <area target="_parent" alt="Clan du Tonnerre" title="Clan du Tonnerre" href="/clan/clandutonnerre" coords="1351,864,158" shape="circle">
+        <area target="_parent" alt="Clan du Tonnerre" title="Clan du Tonnerre" href="/clan/clandutonnerre" coords="1374,868,161" shape="circle">
     </map>
   </div>
     </div>
