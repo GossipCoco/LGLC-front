@@ -1,5 +1,5 @@
 <template>
-  <div style="padding: 1rem 0 0 0">
+  <div class="upload-image-input-container">
     <div :class="css">
       <input
         class="form-control"

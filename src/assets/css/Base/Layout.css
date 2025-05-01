@@ -83,7 +83,7 @@
     position: relative;
 }
 .opacity-container{
-    background-color: rgba(var(--dark-green-01), 0.75);
+    background-color: rgba(var(--dark-green-01), 0.85);
 }
 .illustration-background .background-fiction-contain .characters-list-container{
     padding: 0.5rem 0 0.5rem 0;

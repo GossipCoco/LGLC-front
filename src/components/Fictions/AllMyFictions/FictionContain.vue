@@ -30,41 +30,12 @@
             <div class="character-chapters display-flex-column flex-one fiction-container
               overflowY-X-hidden background-summary-global-container">
               <div class="display-flex-row character-chapters-container">
-                <div v-if="nbIllus > 0">
-                  <div
-                    class="illustration-background height-80"
-                    v-for="(illus, index) in illustration.slice(0, 1)"
-                    :key="index"
-                  >
-                    <div
-                      :style="{
-                        backgroundImage: 'url(' + illus.IllustrationId + ')',
-                      }"
-                      class="background-size-cover display-flex-column background-fiction-contain width-180-vh"
-                    >
-                      <ListOfChapter
-                        v-bind:AuthorId="AuthorId"
-                        v-bind:usrCurrent="usrCurrent"
-                        v-bind:IdFiction="IdFiction"
-                        v-bind:lastChap="lastChap"
-                        v-bind:fiction="fiction"
-                        v-bind:Summary="Summary"
-                        v-bind:IdGame="IdGame"
-                        v-bind:backgroundImageFiction="backgroundImageFiction"
-                        v-bind:Characters="listOfCharacter"
-                        v-bind:OCCharacters="Gamers"
-                        v-bind:IllustrationId="illus.IllustrationId"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div v-else class="background-fiction-contain height-80">
-                  <div
-                      :style="{
-                        backgroundImage: 'url(' + backgroundImageFiction + ')',
-                      }"
-                      class="background-size-cover display-flex-column background-fiction-contain height-80 width-180-vh"
-                    >
+                <div
+                  :style="{
+                    backgroundImage: 'url(' + backgroundImageFiction + ')',
+                  }"
+                  class="background-size-cover display-flex-column background-fiction-contain width-180-vh"
+                >
                   <ListOfChapter
                     v-bind:AuthorId="AuthorId"
                     v-bind:usrCurrent="usrCurrent"
@@ -73,12 +44,13 @@
                     v-bind:fiction="fiction"
                     v-bind:Summary="Summary"
                     v-bind:IdGame="IdGame"
+                    v-bind:backgroundImageFiction="backgroundImageFiction"
                     v-bind:Characters="listOfCharacter"
                     v-bind:OCCharacters="Gamers"
+                    v-bind:IllustrationId="illustration"
+                    v-bind:Kinds="Kinds"
                   />
-
-                  </div>
-                </div>
+                </div>             
               </div>
             </div>
           </div>
@@ -137,6 +109,7 @@ export default {
       nbIllus: null,
       nbBackground: null,
       Gamers: {},
+      Kinds:{}
     };
   },
   created() {
@@ -172,7 +145,7 @@ export default {
       this.showspinner = true;
       FictionService.getFictionByName(id, this.nav)
         .then((response) => {
-          console.log(response.data.ob)
+          // console.log(response.data.ob)
           this.fiction = response.data.ob;
           this.rating = response.data.ob.AverageRating;
           this.IdFiction = this.fiction.Id;
@@ -188,6 +161,7 @@ export default {
           this.dateCreation = this.fiction.DateCreation;
           this.nbChapter = this.fiction.lenght;
           this.illustration = this.fiction.FictionIllustrations;
+          this.Kinds = this.fiction.FictionKinds;
           this.nbIllus =  Object.keys(this.illustration).length;
           this.nbBackground =  Object.keys(this.backgroundImageFiction).length;
           if (this.fiction.Chapters.length > 0) {

@@ -1,18 +1,26 @@
 <template>
   <div class="opacity-container height-80 display-flex-row">
     <div class="summary-container height-70-vh overflow-hidden">
-      <div class="row top-fiction" v-if="AuthorId === usrCurrent">
-        <div class="col-3">
+      <div class="row top-fiction" v-if="AuthorId === usrCurrent">        
+        <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
+          <div v-if="nbKind > 0 " class="display-flex-row kind-fiction-container">
+            <p v-for="(kind, index) in Kinds" :key="index" class="display-flex-row">
+              <span>{{ kind.KindId }}</span>&nbsp;-&nbsp; 
+            </p>
+          </div>
+        </div>
+        <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
+          <EditSummary v-bind:FictionId="IdFiction" v-bind:Summary="Summary" v-if="AuthorId === usrCurrent"/>
+        </div>
+        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3 upload-input-component">
            <UploadImage
             v-bind:id="IdFiction"
             v-bind:service="'UploadFictionBackgroundIllustration'"
             v-bind:css="'mb-3'"
             v-if="AuthorId === usrCurrent"
-          /></div>
-        <div class="col-2">
-          <EditSummary v-bind:FictionId="IdFiction" v-bind:Summary="Summary" v-if="AuthorId === usrCurrent"/>
+          />
         </div>
-        <div class="col-3">
+        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
             <router-link
               type="button"
               class="btn btn-primary btn-lg"
@@ -27,12 +35,12 @@
       <div class="row middle-fiction-card">
         <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12 right-column-image-container">
           <div class="display-flex-column all-characters-of-fiction">
-            <div
+            <!-- <div
               class="display-flex-column image-fiction-container padding-1-rem overflowY-X-hidden background-size-cover"
               v-bind:style="{
                 backgroundImage: 'url(' + backgroundImageFiction + ')',
               }"
-            ></div>
+            ></div> -->
             <AddANewCharacterModal
             v-if="AuthorId === usrCurrent"
             v-bind:IdGame="IdGame"
@@ -42,7 +50,9 @@
           </div>
         </div>
         <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12">
-          <p class="text-align-justify overflowY-auto summary-height-container" v-html="Summary"></p>
+          <div class="summary-fiction-container-wrapper">
+            <p class="text-align-justify overflowY-auto summary-height-container" v-html="Summary"></p>
+          </div>
         </div>
         <ListAllChapters v-bind:Chapters="fiction.Chapters" />
       </div>
@@ -71,6 +81,7 @@ export default {
     "OCCharacters",
     "UploadIllustration",
     "IllustrationId",
+    "Kinds"
   ],
   components: {
     EditSummary,
@@ -85,7 +96,13 @@ export default {
       currentImage: undefined,
       previewImage: undefined,
       file: null, // Ajout de cette ligne pour stocker le fichier
+      nbKind: null
     };
   },
+  created(){
+    console.log(Object.keys(this.Kinds).length)
+    console.log(this.Kinds)
+    this.nbKind = Object.keys(this.Kinds).length
+  }
 };
 </script>

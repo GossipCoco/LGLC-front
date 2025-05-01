@@ -23,7 +23,7 @@
     margin : 0 0 0 0;
 }
 .flex-one .top-fiction .btn.btn-primary.btn-lg  {
-    margin: 1vh 0 1vh 0;
+    margin: 5vh 0 0 0;
 }
 .name-characatrer-link.flex-one .btn {
     margin : 0 0 0 1vh;
@@ -147,9 +147,14 @@
 }
 .summary-container .row.top-fiction{
     margin: -3vh 0 0 0;
+    height: 5vh;
+    /* background-color: aliceblue; */
+}
+.summary-container .row.top-fiction .kind-fiction-container {
+    padding: 6vh 0 0 0;
 }
 .btn.btn-primary.edit-summary-btn{
-    margin: -6vh 0 0 0;
+    margin: -7vh 0 0 0;
 }
 .all-characters-by-user-container .card{
     background: var(--lineart-other00);
@@ -334,4 +339,7 @@ fill: rgba(var(--active-hover), 1);
 .all-chapter-ul-scroll::-webkit-scrollbar-thumb:hover,
 .background-color-dark-green-01::-webkit-scrollbar-thumb:hover {
   background-color:  rgba(var(--dark-green-01), 1);
+}
+.upload-input-component .upload-image-input-container{
+    margin: -2vh 0 0 0;
 }
