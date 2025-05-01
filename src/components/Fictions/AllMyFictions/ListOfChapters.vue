@@ -3,7 +3,7 @@
     <div class="summary-container height-70-vh overflow-hidden">
       <div class="row top-fiction" v-if="AuthorId === usrCurrent">        
         <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
-          <div v-if="nbKind > 0 " class="display-flex-row kind-fiction-container">
+          <div v-if="nbKind > 0 " class="display-flex-row kind-fiction-container Noto-Sans">
             Genre(s) : &nbsp;
             <p v-for="(kind, index) in Kinds" :key="index" class="display-flex-row">
               <span>{{ kind.KindId }}</span><span v-if="index < Kinds.length - 1">&nbsp;-&nbsp;</span>
@@ -52,7 +52,7 @@
         </div>
         <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12">
           <div class="summary-fiction-container-wrapper">
-            <p class="text-align-justify overflowY-auto summary-height-container" v-html="Summary"></p>
+            <p class="text-align-justify overflowY-auto summary-height-container Noto-Sans" v-html="Summary"></p>
           </div>
         </div>
         <ListAllChapters v-bind:Chapters="fiction.Chapters" />

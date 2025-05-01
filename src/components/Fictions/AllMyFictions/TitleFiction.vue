@@ -4,7 +4,7 @@
     <div class="info-fan">
       <div class="display-flex-row flex-on align-items-content-justify-content">
         <h3 class="text-white">
-          par
+          par 
           <router-link :to="'/getUserBy/' + Author" class="text-white author-text montesserat font-variant-small-caps">
             {{ Author }}
           </router-link>
