@@ -1,7 +1,7 @@
 <template>
-  <div class="dashboard-max flex-one card display-flex-column height-100 background-color-main-lineart">
+  <div id="message-container" class="dashboard-max flex-one card display-flex-column height-100 background-color-main-lineart">
     <CardHeader v-bind:Title="'Ma messagerie'" />
-    <div class="card-body">
+    <div class="card-body width-80-vh">
       <div class="row">
         <div class="col-4">
           <ul class="list-group">
@@ -24,7 +24,7 @@
             <div class="card-header display-flex-row align-items-content-justify-content">
               <h3 class="card-title cinzel">{{ selectedMessage.Title }}</h3>
             </div>
-            <div class="card-body">
+            <div class="card-body width-40-vh">
               <div class="send--message-by-container text-dark-green display-flex-row">
                 <p class="flex-on text-dark-green">
                   <strong>Envoyé par :</strong>

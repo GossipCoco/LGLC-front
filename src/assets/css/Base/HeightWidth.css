@@ -204,11 +204,11 @@
     width: 173vh;
 }
 .all-characters-list-containers{
-    width: 112vh;
+    width: 133vh;
 }
 .all-characters-list-containers,
 .all-characters-list-containers .row{
-    height: 28vh;
+    height: 25vh;
 }
 .clan-detail-layout .card-header .row{
     width: 120vh;
@@ -217,11 +217,11 @@
     width: 8vh;
     height: 8vh;
 }
-
-.create-character-form > div:nth-child(2),.card.location-clan-background-width-container,
+/* .create-character-form > div:nth-child(2), 
+.card.location-clan-background-width-container,
 .select-message-container .card-body{
     height: 40vh;
-}
+}*/
 .h5-container{
     height: 9vh;
 }
