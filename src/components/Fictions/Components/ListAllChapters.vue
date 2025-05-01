@@ -9,7 +9,7 @@
         >
           <router-link
             :to="'/chapter/' + chapter.Title"
-            class="font-variant-small-caps title-fiction-links font-weight-600 white-text"
+            class="font-variant-small-caps title-fiction-links font-weight-600 white-text montesserat"
         
           >
             {{ chapter.Title }}

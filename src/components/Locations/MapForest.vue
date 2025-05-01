@@ -9,7 +9,7 @@
     />
 
     <map name="clan-map">
-        <area target="_parent" alt="Clan du Tonnerre" title="Clan du Tonnerre" href="/clan/clandutonnerre" coords="1374,868,161" shape="circle">
+        <area target="_parent" alt="Clan du Tonnerre" title="Clan du Tonnerre" href="/clan/clandutonnerre" coords="1412,839,151" shape="circle">
     </map>
   </div>
     </div>
@@ -26,8 +26,6 @@ export default {
 </script>
 <style scoped>
 .map-image {
-  width: 1000px;
-  height: auto;
   display: block;
   margin: 0 auto;
 }

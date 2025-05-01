@@ -2,7 +2,7 @@
 @import '../variables.scss';
 /* FONTS */
 .opensans-text{
-    font-family: var(--opensans-text);
+    font-family: 'Open Sans';
 }
 .poppins-text{
     font-family: 'Poppins';
@@ -16,6 +16,7 @@
 .montesserat{
     font-family: 'Montserrat';
 }
+
 .font-size-1em{
     font-size: 1em;
 }

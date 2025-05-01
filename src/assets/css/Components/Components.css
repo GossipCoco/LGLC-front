@@ -218,7 +218,7 @@ span.name-characatrer-link{
     fill: rgba(var(--active-hover), 1);
 }
 .title-text-novel{
-    margin: 0 0 0 1rem;
+    margin: 0 0 0 1vh;
     padding: 0;
 }
 .list-group-item{

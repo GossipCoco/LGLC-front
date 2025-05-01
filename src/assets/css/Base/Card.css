@@ -111,7 +111,6 @@
     padding: 2rem;
 }
 .fiction-card .card-header {
-    font-family: var(--montserratRegular);
     font-size: 18px;
     z-index: 9999;
     margin-left: 1rem;
@@ -260,7 +259,6 @@ li.quest-container {
     margin: 0.25rem 0 0.25rem 0;
     line-height: 0.95;
     text-align: left;
-    font-family: 'Open Sans';
 }
 .my-oc-card .card-body{
     padding: 0;

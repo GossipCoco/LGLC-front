@@ -7,7 +7,7 @@
     </p>
     <p>
       <router-link
-        class="last-chapter-text-link poppins-text font-size-1-25 font-weight-600 font-variant-small-caps text-white"
+        class="last-chapter-text-link opensans-text font-size-1-25 font-weight-600 font-variant-small-caps text-white"
         :to="'/chapter/' + ChapterTitle"
       >
         {{ ChapterTitle }}
