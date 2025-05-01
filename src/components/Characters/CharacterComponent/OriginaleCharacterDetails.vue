@@ -1,7 +1,7 @@
 <template>
   <div
     id="original-character-global-container"
-    class="character-details card mb-3"
+    class="character-details padding-1-rem card mb-3"
   >
     <div class="row g-0">
       <CharacterImageDetail v-bind:Image="character.Image">

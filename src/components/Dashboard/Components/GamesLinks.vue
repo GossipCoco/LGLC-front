@@ -12,7 +12,7 @@
       <div class="card-body">
         <div class="row">
           <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
-            <div class="display-flex-column align-items-content-justify-content">
+            <div class="display-flex-column align-items-content-justify-content padding-1-rem">
               <div class="display-flex-column align-items-content-justify-content">
                 <div class="display-flex-row align-items-content-justify-content">
                   <img loading="lazy" src="../../../../public/images/Game/puzzle.png"/>

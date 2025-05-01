@@ -14,10 +14,6 @@
 .card-quest-by-id-container .card-body{
     margin: -2vh 0 1vh 4vh;
 }
-/* .character-container-global,*/ .fiction-container .card-body,.character-details, 
-.game-container .card-boy > div > div .display-flex-column.align-items-content-justify-content {
-    padding: 1rem;
-}
 .character-card.card {
     margin: 1rem 1rem 0 0;
     padding: 0rem 1rem 1rem 1.5rem;
@@ -28,7 +24,6 @@
 #all-characters-container-card .character-card.card {
     margin: 1rem 0rem 0 2rem;
     padding: 0rem 1rem 1rem 0.5rem;
-    overflow: hidden;
 }
 .clan-detail-card {
     background-position: 50%;

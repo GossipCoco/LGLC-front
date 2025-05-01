@@ -1,5 +1,5 @@
 <template>
-  <div class="character-details background-color-main-lineart card mb-3">
+  <div class="character-details padding-1-rem background-color-main-lineart card mb-3">
     <div class="row g-0">
       <CharacterImageDetail v-bind:Image="background">
         <img
