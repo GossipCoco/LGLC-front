@@ -16,6 +16,7 @@ class ArcBook{
         return http.get('/ArcBook/GetLastPublishedBook')
     }
     GetCurrentArc() {
+        console.log('Service test GetCurrentArc')
         return http.get('/ArcBook/GetCurrentArc')
     }
 }

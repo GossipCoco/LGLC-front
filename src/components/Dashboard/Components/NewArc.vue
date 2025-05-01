@@ -10,7 +10,13 @@
           v-bind:title="'Dernier arc en cours'"
           v-bind:type="'chapters'"
         />
-        <div class="card-body last-chapter-card text-white"></div>
+        <div class="card-body last-chapter-card text-white">
+            <div v-if="currentArc">
+                <h2>Arc actuel : {{ currentArc.Title }}</h2>
+                <div v-html="currentArc.Summary"></div>
+                <img :src="currentArc.Image" width="25%"/>
+            </div>
+        </div>
       </div>
     </div>
   </div>
@@ -23,21 +29,18 @@ export default {
   components: { TitleHeaderDashboard },
   data() {
     return {
-      Arc: {},
+        currentArc: null,
     };
   },
-  created() {
-    this.GetCurrentArc();
-  },
-  methods: {
-    GetCurrentArc() {
-      ArcBookService.GetCurrentArc((response) => {
-        console.log(response.data.ob)
-        this.Arc = response.data.ob;
-        }).catch((err) => {
-        console.log(err);
+  mounted() {
+    ArcBookService.GetCurrentArc()
+      .then(response => {
+        console.log("Current Arc reçu :", response.data);
+        this.currentArc = response.data.ob;
+      })
+      .catch(err => {
+        console.error("Erreur lors de la récupération de l'arc :", err);
       });
-    },
-  },
+  }
 };
 </script>
