@@ -408,6 +408,9 @@
 .col-btn-container .btn.btn-primary{
     width: 38vh;
 }
+.event-container .card-body{
+    height: 75vh;
+}
 /* QUEST */
 .quest--global-container {
     height: 30vh;

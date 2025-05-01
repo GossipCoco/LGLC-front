@@ -8,7 +8,7 @@
     left: 30%;
     z-index: 99999;
 }
-.character-container-global, .fiction-container .card-body,.character-details,
+/* .character-container-global,*/ .fiction-container .card-body,.character-details, 
 .game-container .card-boy > div > div .display-flex-column.align-items-content-justify-content {
     padding: 1rem;
 }

@@ -1,39 +1,41 @@
 <template>
   <div
     id="mouse-shot"
-    class="dashboard-max-card-container border-none background-color-main-lineart flex-one card display-flex-column fiction-container "
+    class="dashboard-max-card-container border-none background-color-main-lineart flex-one card display-flex-column fiction-container"
   >
     <CardHeader v-bind:Title="'Jeu du chat et de la souris'" />
-    <div class="game height-75-vh" @keydown="handleKeyPress" tabindex="0">
-      <div
-        v-if="gameStarted"
-        ref="gameArea"
-        :style="{ backgroundImage: 'url(' + backgroundImage + ')' }"
-        class="game-area"
-        @mousemove="handleMouseMove"
-      >
-        <img :src="mouseImage" :style="mouseStyle" class="mouse" />
-        <img :src="catImage" :style="catStyle" class="cat" />
-      </div>
-      <button
-        class="btn btn-primary"
-        type="button"
-        v-if="!gameStarted"
-        @click="startGame"
-      >
-        Start Game
-      </button>
-      <button
-        class="btn btn-primary"
-        type="button"
-        v-if="!gameStarted"
-        @click="resetGame"
-      >
-        Nouvelle Partie
-      </button>
-      <div v-if="gameOver" class="score">
-        <div class="alert alert-success" role="alert">
-          Score: {{ score }} / 35
+    <div class="card-body padding-1-rem">
+      <div class="game height-75-vh" @keydown="handleKeyPress" tabindex="0">
+        <div
+          v-if="gameStarted"
+          ref="gameArea"
+          :style="{ backgroundImage: 'url(' + backgroundImage + ')' }"
+          class="game-area"
+          @mousemove="handleMouseMove"
+        >
+          <img :src="mouseImage" :style="mouseStyle" class="mouse" />
+          <img :src="catImage" :style="catStyle" class="cat" />
+        </div>
+        <button
+          class="btn btn-primary"
+          type="button"
+          v-if="!gameStarted"
+          @click="startGame"
+        >
+          Start Game
+        </button>
+        <button
+          class="btn btn-primary"
+          type="button"
+          v-if="!gameStarted"
+          @click="resetGame"
+        >
+          Nouvelle Partie
+        </button>
+        <div v-if="gameOver" class="score">
+          <div class="alert alert-success" role="alert">
+            Score: {{ score }} / 35
+          </div>
         </div>
       </div>
     </div>
@@ -42,7 +44,7 @@
 <script>
 import CardHeader from "../../Components/GenericComponent/CardHeader.vue";
 // import PointService from '../../../services/PointService';
-import EventService from '../../../services/EventService';
+import EventService from "../../../services/EventService";
 export default {
   name: "MouseShot",
   components: { CardHeader },
@@ -50,8 +52,7 @@ export default {
     return {
       mouseImage: "/images/Game/mouse.png", // Adjust path as necessary
       catImage: "/images/Game/Etoiledefeu.png", // Adjust path as necessary
-      backgroundImage:
-        "/images/paysage/Warriors_3538.png", // Adjust path as necessary
+      backgroundImage: "/images/paysage/Warriors_3538.png", // Adjust path as necessary
       mouseStyle: { top: "0px", left: "0px" },
       catStyle: { bottom: "20px", left: "50px" },
       score: 0,
@@ -110,14 +111,14 @@ export default {
       }, 10);
       const results = {
         foundTreasures: "ShotMouse",
-        points: this.score
+        points: this.score,
       };
       EventService.saveGameResults(this.$store.state.auth.user.usrID, results)
-        .then(response => {
-          console.log('Results saved:', response.data);
+        .then((response) => {
+          console.log("Results saved:", response.data);
         })
-        .catch(error => {
-          console.error('Error saving results:', error);
+        .catch((error) => {
+          console.error("Error saving results:", error);
         });
     },
     handleKeyPress(event) {
