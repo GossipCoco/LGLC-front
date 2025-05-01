@@ -419,9 +419,6 @@
     height: 75vh;
 }
 /* QUEST */
-.quest--global-container {
-    height: 30vh;
-}
 #quest-by-id {
     width: 185vh;
     height: 95vh;
@@ -450,9 +447,7 @@
     width: 15vh;
     height: 15vh;
 }
-.level-role-width{
-    width: 20vh;
-}
+
 .card-body.one-quest {
     height: 32vh;
     width: 18vh;
