@@ -3,7 +3,7 @@
     <div class="row g-0">
       <CharacterImageDetail v-bind:Image="background">
         <img
-            class="height-auto display-block width-100-percent"
+            class="height-auto display-block width-100-percent overflow-hidden"
             :src="image"
             :alt="image"
           />

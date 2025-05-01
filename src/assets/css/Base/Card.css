@@ -73,9 +73,6 @@
     margin: 0rem 1rem 0 0;
     background: none;
 }
-.character-details.card .card-image img {
-    overflow: hidden;
-}
 .clan-card {
     background-position: 50%;    
     margin: 0.75rem 0 0 1rem;
