@@ -89,7 +89,7 @@
 .character-list-wrapper .border-card-color{
     height: 88.5vh;
 }
-.character-card.card .card-image {
+.character-card.card .card-image, .card-image img  {
     width: 23vh;
 }
 .card.card-image-layout.clan-detail-layout.mb-3,
@@ -447,13 +447,9 @@
     width: 15vh;
     height: 15vh;
 }
-
 .card-body.one-quest {
     height: 32vh;
     width: 18vh;
-}
-.card-image img {
-    width: 23vh;
 }
 .login-card .card-body{
     height: 30vh;
