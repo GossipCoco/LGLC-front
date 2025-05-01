@@ -29,13 +29,17 @@
     height: 15vh;
 }
 .all-chapters-list-container {    
-    width: 52vh;
+    width: 75vh;
+    max-height: 85vh;
+    padding: 0 1vh 0 0;
+    overflow: scroll;
 }
 .row.bottom-dashboard-levele-three .card, .row.bottom-dashboard-levele-three .card .card-body{
     height: 38vh;
 }
 .summary-container {
     width: 200vh;
+    height: 80vh;
 }
 .middle-dashboard{
     width: 192vh;

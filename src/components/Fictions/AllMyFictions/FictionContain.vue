@@ -1,6 +1,6 @@
 <template>
   <div
-    class="fiction-globale-container background-lineart card display-flex-column fiction-container overflowY-X-hiddenpadding-0-rem text-white flex-one opensans-text"
+    class="fiction-globale-container background-lineart card display-flex-column fiction-container overflowY-scroll overflowX-scroll padding-0-rem text-white flex-one opensans-text"
   >
     <Spinner v-if="showspinner" />
     <div
@@ -172,6 +172,7 @@ export default {
       this.showspinner = true;
       FictionService.getFictionByName(id, this.nav)
         .then((response) => {
+          console.log(response.data.ob)
           this.fiction = response.data.ob;
           this.rating = response.data.ob.AverageRating;
           this.IdFiction = this.fiction.Id;

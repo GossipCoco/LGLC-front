@@ -1,6 +1,6 @@
 <template>
   <div class="opacity-container height-80 display-flex-row">
-    <div class="summary-container height-70-vh overflowY-auto overflowX-hidden">
+    <div class="summary-container height-70-vh overflow-hidden">
       <div class="row top-fiction" v-if="AuthorId === usrCurrent">
         <div class="col-3">
            <UploadImage
@@ -41,7 +41,7 @@
             <CarrouselCharacter v-bind:Characters="OCCharacters" />
           </div>
         </div>
-        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+        <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12">
           <p class="text-align-justify overflowY-auto summary-height-container" v-html="Summary"></p>
         </div>
         <ListAllChapters v-bind:Chapters="fiction.Chapters" />
