@@ -1,7 +1,7 @@
 <template>
   <div
-    class="character-container  overflowY-X-hidden clans-location-container"
-    style="overflow-y: auto"
+    class="character-container overflowX-hidden clans-location-container overflowY-auto"
+
   >
     <div class="display-flex-row card-group clan-group">
       <div v-for="(location, index) in allLocations" :key="index">
