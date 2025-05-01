@@ -8,7 +8,6 @@
     margin: 4rem 0 0 0;
 }
 .number-page-container {
-    background-color: rgba(var(--dark-green-01), 1);
     vertical-align: middle;
     padding: 0.65rem 0;
     margin: -2vh 0 0 0;
@@ -39,9 +38,6 @@
 .nav-btn-contain button{
     height: 40px;
 }
-/* .pagination .page-link{
-    color: rgba(var(--main-white),1)
-} */
 .pagination .page-link:hover{
     background-color: rgba(var(--clear-green-01),1);
     color: rgba(var(--active-hover),1)
@@ -53,7 +49,7 @@
     margin: -3rem 0 0 0;
 }
 .list-all-characters-container .row.pagination-container-row{
-    margin: 8vh 0 0 0;
+    margin: 13vh 10vh 0 10vh;
 }
 .nav-space-contain{
     font-size: 2.5em;
