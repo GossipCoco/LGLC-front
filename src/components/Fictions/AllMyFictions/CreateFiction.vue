@@ -1,9 +1,9 @@
 <template>
   <div
-    class="dashboard-max-card-container height-80 border-none background-color-main-lineart flex-one card display-flex-column fiction-container padding-1-rem"
+    class="height-77-vh margin-0-0-4-0 border-none background-color-main-lineart flex-one card display-flex-column padding-1-rem"
   >
     <CardHeader v-bind:Title="'Créer une nouvelle fanfiction'" />
-    <div class="card-body height-80">
+    <div class="card-body height-75-vh">
       <form
         class="create-character-form width-180-vh"
         @submit.stop.prevent="handleOk"

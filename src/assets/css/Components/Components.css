@@ -27,7 +27,8 @@
 .card-form-create-character .card-body{
     padding: 2vh 2vh 0 2vh;
 }
-.fiction-container, .fiction-container .card-header,
+/* .fiction-container,  */
+.fiction-container .card-header,
 .fiction-container.all-fictions-container-global .card-header{
     padding: 0;
 }

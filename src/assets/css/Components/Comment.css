@@ -3,7 +3,8 @@
 
 #comment-container {
   width: 100%;
-  padding: 20px;  
+  padding: 8vh;
+  margin: 2vh 0 4vh;
 }
 .message {
   margin-bottom: 20px;

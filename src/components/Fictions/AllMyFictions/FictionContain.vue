@@ -1,11 +1,11 @@
 <template>
   <div
-    class="fiction-globale-container background-lineart card display-flex-column fiction-container overflowY-scroll overflowX-hidden padding-0-rem text-white flex-one opensans-text"
+    class="fiction-globale-container background-lineart margin-0-0-4-0 card display-flex-column padding-0-rem overflowY-scroll overflowX-hidden text-white flex-one opensans-text"
   >
     <Spinner v-if="showspinner" />
     <div
       v-if="!showspinner"
-      id="card-display-flex-column fiction-container padding-1-rem"
+      id="card-display-flex-column padding-1-rem"
       class="card-header fiction-global-information-container-hearder display-flex-row align-items-content-justify-content"
     >
       <CreateCommentModal
@@ -27,14 +27,13 @@
       <div class="row">
         <div class="col-12">
           <div class="display-flex-column flex-one">
-            <div class="character-chapters display-flex-column flex-one fiction-container
-              overflowY-X-hidden background-summary-global-container">
+            <div class="character-chapters display-flex-column flex-one overflowY-X-hidden background-summary-global-container width-190-vh">
               <div class="display-flex-row character-chapters-container">
                 <div
                   :style="{
                     backgroundImage: 'url(' + backgroundImageFiction + ')',
                   }"
-                  class="background-size-cover display-flex-column background-fiction-contain width-180-vh"
+                  class="background-size-cover display-flex-column background-fiction-contain width-190-vh"
                 >
                   <ListOfChapter
                     v-bind:AuthorId="AuthorId"

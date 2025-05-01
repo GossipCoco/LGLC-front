@@ -8,7 +8,9 @@
 .fiction-container{    
     width: 186vh;
 }
-
+#edit-chapter-contain .character-details-chatper{    
+    width: 186vh;
+}
 .create-character-form-modal{
     width: 138vh;
     height: 50vh;

@@ -112,6 +112,9 @@
     height: 5vh;
 }
 /* Width */
+.width-200-vh{
+    width: 200vh;
+}
 .width-190-vh{
     width: 190vh;
 }
