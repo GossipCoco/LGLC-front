@@ -102,3 +102,6 @@ h5.card-title a, .my-oc-character-container p a{
 .title-fiction-links{
   font-size: 1.2em;
 }
+td{
+  color: rgba(var(--main-white), 1)
+}

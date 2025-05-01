@@ -1,49 +1,27 @@
 <template>
-  <div class="display-flex-column flex-one">
-    <table class="table table-borderless text-white">
-      <tbody>
-      <tr>
-        <td>
-          <span class="text-white"><strong>Clan</strong></span>
-        </td>
-        <td>
-          <router-link type="button" class="btn btn-primary" :to="'/clan/'+ClanId">
-            {{ NameClan }}
-          </router-link></td>
-      </tr>
-      <tr>
-        <td>
-          <span class="text-white"><strong>Genre</strong></span>
-        </td>
-        <td>{{ genre }}</td>
-      </tr>
-      <tr>
-        <td>
-          <span class="text-white"><strong>Grade</strong></span>
-        </td>
-        <td>{{ Grade }}</td>
-      </tr>
-      <tr></tr>
-      <tr>
-        <td>
-          <span class="text-white"><strong>Chaton</strong></span>
-        </td>
-        <td>{{ kitty }}</td>
-      </tr>
-      <tr>
-        <td>
-          <span class="text-white"><strong>Apprenti</strong></span>
-        </td>
-        <td>{{ apprentice }}</td>
-      </tr>
-      <tr>
-        <td>
-          <span class="text-white"><strong>Guerrier</strong></span>
-        </td>
-        <td>{{ warrior }}</td>
-      </tr>
-    </tbody>
-    </table>
+  <div class="display-flex-column flex-one padding-1-rem">
+    <div class="row width-80-vh">
+      <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-3 col-sm-3 col-xs-3">
+        <p class="text-white"><strong>Genre</strong></p>
+        <p class="text-white"><strong>{{ genre }}</strong></p>
+      </div>
+      <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-3 col-sm-3 col-xs-3">
+        <p class="text-white"><strong>Grade</strong></p>
+        <p class="text-white"><strong>{{ Grade }}</strong></p>
+      </div>
+      <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-3 col-sm-3 col-xs-3">
+        <p class="text-white"><strong>Chaton</strong></p>
+        <p class="text-white"><strong>{{ kitty }}</strong></p>
+      </div>
+      <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-3 col-sm-3 col-xs-3">
+        <p class="text-white"><strong>Apprenti</strong></p>
+        <p class="text-white"><strong>{{ apprentice }}</strong></p>
+      </div>
+      <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-3 col-sm-3 col-xs-3">
+        <p class="text-white"><strong>Guerrier</strong></p>
+        <p class="text-white"><strong>{{ warrior }}</strong></p>
+      </div>
+    </div>
   </div>
 </template>
 <script>

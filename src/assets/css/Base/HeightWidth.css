@@ -554,3 +554,7 @@ audio{
 .header-container.container {
     max-width: 100%;
 }
+#pills-tabContent{
+    height: 50vh;
+    overflow-y: scroll;
+}

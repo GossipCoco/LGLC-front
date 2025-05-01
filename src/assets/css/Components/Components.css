@@ -83,6 +83,9 @@
     padding: 1rem 0 0 0;
 }
 /* IMAGE */
+.clan-logo-container .btn.btn-primary img {
+    width: 8vh;
+}
 .row .top-dashboard .all-last-three-fictions-container .btn-all-my-fictions .btn{
     width: 16.5vh;
     margin: 0 0 0 -2.5vh;
@@ -259,4 +262,8 @@ span.name-characatrer-link{
 }
 .upload-input-component .upload-image-input-container{
     margin: -2vh 0 0 0;
+}
+.information-global-character td{
+    width: 5vh;
+    height: 3vh;
 }
