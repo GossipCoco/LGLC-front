@@ -51,6 +51,9 @@
           <router-link class="link-collapse color-clear-green-02  display-flex-column align-items-content-justify-content " to="/AllClansLayout">
             Clans
           </router-link>
+          <router-link class="link-collapse color-clear-green-02  display-flex-column align-items-content-justify-content " to="/MapForest">
+            Map
+          </router-link>
           <router-link class="link-collapse color-clear-green-02  display-flex-column align-items-content-justify-content " to="/AllLocationsLayout">
             Lieux
           </router-link>

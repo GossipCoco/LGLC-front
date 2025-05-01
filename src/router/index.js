@@ -24,6 +24,7 @@ import ArcBookLayout from '../components/ArcBook/ArcBookLayout.vue'
 import OneBook from "../components/ArcBook/Components/OneBook.vue";
 import CreateAnOriginalCharacter from '../components/Characters/CharacterForm/CreateAnOriginalCharacter.vue'
 import EditAnOriginalCharacter from "../components/Characters/CharacterForm/EditAnOriginalCharacter.vue";
+import MapForest from '../components/Locations/MapForest.vue'
 
 import AllExistingFictionsLayout from '../components/Fictions/AllExistingFictionsLayout.vue'
 import FictionContain from '../components/Fictions/AllMyFictions/FictionContain'
@@ -148,6 +149,11 @@ const routes = [
         path: "/OriginaleCharacterByUser",
         name: 'OriginaleCharacterByUser',
         component: OriginaleCharacterByUser
+      },
+      {
+        path: "/MapForest",
+        name: "MapForest",
+        component: MapForest,
       },
       {
         path: "/AllClansLayout",
