@@ -4,17 +4,19 @@
       class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 card-global"
     >
       <div
-        class="card background-lineart border-none arc-card last-arc-container"
+        class="card background-lineart border-none arc-card last-arc-container height-50-vh"
       >
         <TitleHeaderDashboard
           v-bind:title="'Dernier arc en cours'"
           v-bind:type="'chapters'"
         />
-        <div class="card-body last-chapter-card text-white">
+        <div class="card-body last-chapter-card new-current-arc-container padding-1-rem text-white">
             <div v-if="currentArc">
-                <h2>Arc actuel : {{ currentArc.Title }}</h2>
-                <div v-html="currentArc.Summary"></div>
-                <img :src="currentArc.Image" width="25%"/>
+                <h2 class="white-text">Arc actuel : {{ currentArc.Title }}</h2>
+                <div class="display-flex-row">
+                  <img :src="currentArc.Image" width="25%"/>
+                  <div v-html="currentArc.Summary"></div>
+              </div>
             </div>
         </div>
       </div>

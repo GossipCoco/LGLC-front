@@ -280,10 +280,15 @@ li.quest-container {
 .last-chapter-card.card-body{
     margin: -1rem 0 0 0;
 }
-/* .clan-detail-card.image-illustration-right.border-card-color{
-    display: flex;
-    flex: 0.25;
-} */
+.card-body.last-chapter-card.new-current-arc-container{
+    margin: 2vh auto;
+}
 .clan-detail-layout .card-body .text-align-justify.poppins-text{
     overflow-y: scroll;
+}
+.card.video{
+    margin: 0 0 0 1vh;
+}
+.card.arc-card.last-arc-container{
+    margin: 0 0 0 -2vh;
 }
