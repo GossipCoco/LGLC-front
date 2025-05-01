@@ -1,7 +1,7 @@
 <template>
   <div
     id="arc-book-container"
-    class="dashboard-max-card-container border-none background-color-main-lineart flex-one card display-flex-column cat-corner fiction-container padding-1-rem"
+    class="dashboard-max-card-container border-none background-color-main-lineart flex-one card display-flex-column cat-corner padding-1-rem"
   >
     <CardHeader v-bind:Title="'Les romans de La Guerre des Clans'" />
     <div class="card-body padding-1-rem">

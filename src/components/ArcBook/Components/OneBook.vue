@@ -1,10 +1,10 @@
 <template>
-  <div class="one-book-container-wrapper -0-0">
+  <div class="one-book-container-wrapper">
     <div class="display-flex-row flex-one">
       <card-image-background v-bind:Image="background">
         <img :src="book.Image" :alt="book.Title" class="image-book height-30-vh" />
       </card-image-background>
-      <div id="book-container" class="dashboard-max-card-container border-none background-color-main-lineart flex-one card display-flex-column fiction-container padding-1-rem">
+      <div id="book-container" class="dashboard-max-card-container border-none background-color-main-lineart flex-one card display-flex-column height-90-vh padding-1-rem">
         <CardHeader v-bind:Title="book.Title">
           <router-link to="/ArcBookLayout" class="btn btn-primary">Retour à la liste des arcs & romans</router-link>
         </CardHeader>

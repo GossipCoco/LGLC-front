@@ -1,5 +1,5 @@
 <template>
-  <div class="dashboard-max-card-container border-none background-color-main-lineart flex-one card display-flex-column fiction-container event-container padding-1-rem">
+  <div class="dashboard-max-card-container border-none background-color-main-lineart flex-one card display-flex-column event-container padding-1-rem">
     <CardHeader v-bind:Title="'évènements'" />
     <div class="card-body padding-1-rem">
       <div class="row event-container">
