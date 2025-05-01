@@ -25,6 +25,9 @@
 .flex-one .top-fiction .btn.btn-primary.btn-lg  {
     margin: 5vh 0 0 0;
 }
+.flex-one .top-fiction .btn.btn-primary.btn-lg.btn-create-chapter-button  {
+    margin: -5vh 0 0 0;
+}
 .name-characatrer-link.flex-one .btn {
     margin : 0 0 0 1vh;
 }
@@ -151,7 +154,7 @@
     /* background-color: aliceblue; */
 }
 .summary-container .row.top-fiction .kind-fiction-container {
-    padding: 6vh 0 0 0;
+    margin: -4vh 0 0 -1vh;
 }
 .btn.btn-primary.edit-summary-btn{
     margin: -7vh 0 0 0;
