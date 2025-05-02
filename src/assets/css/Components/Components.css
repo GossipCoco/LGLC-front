@@ -3,7 +3,10 @@
 
 .one-fiction-container, .mini-rond-messages,
 .all-fictions-container-global .search-bar-component .col-1{
-    padding: 1rem 0 0 0;
+    padding: 1vh 0 0 0;
+}
+.all-fictions-container-global{
+    margin: 0 0 2vh -2vh;
 }
 /* PAGINATION */
 .one-quest-container .row.pagination-zone-container{
@@ -91,23 +94,21 @@
     margin: 0 0 0 -2.5vh;
 }
 .h5-container{
-    font-size: 0.65em;
-    font-weight: 800;
     margin: 0.15rem 0 -0.5rem -1rem;
 }
-.left-fiction-summary-container .all-characters-of-fiction{
+/* .left-fiction-summary-container .all-characters-of-fiction{
     flex-wrap: wrap;
-}
-.image-fiction-container-background{
+} */
+/* .image-fiction-container-background{
     padding: 1rem 0 0.5rem 0;
     background-position: 50%;
-}
+} */
 .image-fiction-container{
     background-position: 50%;
 }
-.height-all-fictions-container{
-    margin: -1rem 0 -1rem 0;
-}
+/* .height-all-fictions-container{
+    margin: -2vh 0 -2vh 0;
+} */
 .mini-rond-messages{
     margin: 0 0 0 -1rem;
     z-index: 99;
@@ -162,9 +163,7 @@
     font-family: 'Roboto';
     font-weight: 500;
 }
-.all-fictions-container-global{
-    margin: 0rem 0 1rem 1rem;
-}
+
 .info-original-character-height{
     padding: 1rem;
 }

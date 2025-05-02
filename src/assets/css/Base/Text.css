@@ -58,7 +58,7 @@ h5.card-title {
 .card-text.summary-text-font p{
   line-height: 1.2;
 }
-.h5-container a, #collapseExample3 p{
+.h5-container a, #collapseExample3 p, .h5-container{
   font-weight: 800;
 }
 h5.card-title a, .my-oc-character-container p a{
@@ -67,7 +67,6 @@ h5.card-title a, .my-oc-character-container p a{
 .title-text-novel p{
   text-align: left;
   text-wrap: wrap;
-  text-align: justify;
   font-variant-caps: normal;
 }
 .title-text-novel p a{
@@ -104,4 +103,7 @@ h5.card-title a, .my-oc-character-container p a{
 }
 td{
   color: rgba(var(--main-white), 1)
+}
+.h5-container{
+  font-size: 0.65em;
 }
