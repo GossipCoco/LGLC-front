@@ -18,13 +18,13 @@
           >
         </div>
         <div v-for="(fiction, index) in GamesAndFictions" :key="index" class="title-text-novel display-block flex-one display-flex-column justify-content-left">
-          <div class="title-text-novel flex-one display-flex-row justify-content-left">
+          <div class="title-text-novel margin-0-0-0-1vh padding-0-rem flex-one display-flex-row justify-content-left">
           <ImageRondDashboard
             v-bind:src="fiction.Image"
             v-bind:alt="fiction.Image"
           />
           <div
-            class="title-text-novel font-variant-small-caps display-block flex-one display-flex-column justify-content-left"
+            class="title-text-novel margin-0-0-0-1vh padding-0-rem font-variant-small-caps display-block flex-one display-flex-column justify-content-left"
           >
             <p class="poppins-text">
               <router-link

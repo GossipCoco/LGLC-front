@@ -180,10 +180,6 @@ span.name-characatrer-link{
 .star.checked {
     fill: rgba(var(--active-hover), 1);
 }
-.title-text-novel{
-    margin: 0 0 0 1vh;
-    padding: 0;
-}
 .list-group-item{
     background-color: rgba(var(--active-hover), 0);
     border: solid 0px  rgba(var(--active-hover), 0);

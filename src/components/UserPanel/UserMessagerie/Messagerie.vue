@@ -1,10 +1,10 @@
 <template>
   <div id="message-container" class="dashboard-max flex-one card display-flex-column height-100 background-color-main-lineart">
     <CardHeader v-bind:Title="'Ma messagerie'" />
-    <div class="card-body width-80-vh">
+    <div class="card-body height-90-vh width-180-vh">
       <div class="row">
         <div class="col-4">
-          <ul class="list-group">
+          <ul class="list-group width-50-vh height-50-vh background-color-middle-green-01">
             <li
               class="list-group-item messagerie-list-container display-flex-row flex-one"
               v-for="(message, index) in allMessages"
@@ -15,7 +15,7 @@
               <span class="badge text-bg-primary font-weight-600 flex-one display-flex-row flex-one align-items-content-justify-content rounded-pill">{{
                 new Date(message.DateSend).toLocaleString()
               }}</span>
-              <p class="display-flex-row flex-one">{{ message.Title }}</p>
+              <p class="display-flex-row flex-one white-text">{{ message.Title }}</p>
             </li>
           </ul>
         </div>
