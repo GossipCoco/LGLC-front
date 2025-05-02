@@ -15,7 +15,7 @@
     border: 8px solid rgba(var(--active-hover), 1);
 }
 .image-book{
-    border-radius: 20px;
+    border-radius: 100%;
 }
 .icon-menu-container, .avatar-navabar img, .rond-character-background,
 .user-info-text img,.mini-rond-messages, .dashboard-card-header .avatar-wrapper img,
