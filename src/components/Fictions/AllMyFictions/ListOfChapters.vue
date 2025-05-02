@@ -52,7 +52,7 @@
             v-if="AuthorId === usrCurrent"
             v-bind:IdGame="IdGame"
             />
-            <div class="row width-50-vh">
+            <div class="row width-60-vh">
               <div class="col-6">
                 <CarrouselCharacter v-bind:Characters="Characters" />
               </div>
