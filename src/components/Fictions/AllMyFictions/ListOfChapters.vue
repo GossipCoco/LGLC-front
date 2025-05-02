@@ -52,8 +52,14 @@
             v-if="AuthorId === usrCurrent"
             v-bind:IdGame="IdGame"
             />
-            <CarrouselCharacter v-bind:Characters="Characters" />
-            <CarrouselCharacter v-bind:Characters="OCCharacters" />
+            <div class="row width-50-vh">
+              <div class="col-6">
+                <CarrouselCharacter v-bind:Characters="Characters" />
+              </div>
+              <div class="col-6">
+                <CarrouselCharacter v-bind:Characters="OCCharacters" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
