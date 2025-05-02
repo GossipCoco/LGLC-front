@@ -93,27 +93,21 @@
 }
 .card.card-image-layout.clan-detail-layout.mb-3,
 .card.card-image-layout.clan-detail-layout.mb-3 .row.g-0,
-.welcome-dashboard-container, .list-all-characters-container .row-filter {
+.welcome-dashboard-container,
+.list-all-characters-container .row-filter {
     width: 188vh;
 }
 .card.card-image-layout.clan-detail-layout.mb-3,
 .card.card-image-layout.clan-detail-layout.mb-3 .row.g-0 {
     height: 94vh;
 }
-.card.card-image-layout.clan-detail-layout.mb-3 .card-image-layout {
-    width: 95rem;
-}
 .profil-user-card.card .avatar-container img {
     width: 30vh;
-}
-.form-profil-user-card {
-    height: 20vh;
 }
 .all-clans-cards .card-body, .bottom-top-dashboard .card,
 #original-characters-list .border-card-color {
     height: 35vh;
 } 
-.illustration-arc-container,
 .one-book-container-wrapper .fiction-container .card-body,
 .row.top-dashboard .card {
     height: 60vh;
@@ -491,7 +485,7 @@ audio{
     height: 75%;
 }
 .illustration-background .background-fiction-contain,
-.illustration-arc-container img, .row.bottom-dashboard-levele-one .card-header > div{
+.row.bottom-dashboard-levele-one .card-header > div{
     width: 100%;
 }
 .logo img{

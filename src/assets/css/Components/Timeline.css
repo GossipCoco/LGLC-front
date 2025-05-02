@@ -2,7 +2,7 @@
 @import '../variables.scss';
 
 #arc-book-container .row.book-container.overflowY-scroll.overflowX-hidden{    
-    height: 70vh;
+    height: 80vh;
 }
 
 .apland-timeline-area{
