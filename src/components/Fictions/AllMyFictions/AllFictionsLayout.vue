@@ -1,6 +1,6 @@
 
 <template>
-  <div class="border-none background-color-main-lineart flex-one card display-flex-column fiction-container overflowY-X-hidden all-fictions-container-global">
+  <div class="border-none background-color-main-lineart flex-one card display-flex-column fiction-container overflowY-X-hidden height-100-vh all-fictions-container-global">
     <CardHeader v-bind:Title="'Lire toutes mes fictions'" />
     <div class="card-body height-75-vh">
       <SearchBarComponent 
