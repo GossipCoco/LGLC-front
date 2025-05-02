@@ -1,7 +1,7 @@
 <template>
   <div id="edit-chapter-contain" class="width-180-vh">
     <div
-      class="character-details-chatper width-180-vh background-color-main-lineart card mb-3 display-flex-column padding-0-rem"
+      class="character-details-chatper width-180-vh background-color-main-lineart card mb-3 display-flex-column padding-0"
     >
       <div class="card-body padding-1-rem width-170-vh height-80">
         <form

@@ -1,5 +1,5 @@
 <template>
-    <div class="character-details-chatper background-color-main-lineart card mb-3 display-flex-column padding-0-rem">
+    <div class="character-details-chatper background-color-main-lineart card mb-3 display-flex-column padding-0">
         <div class="card-header display-flex-row align-items-content-justify-content">
             <div class="chapter-title-content text-white cinzel">
                 <h1 class="chapter-title text-white cinzel">

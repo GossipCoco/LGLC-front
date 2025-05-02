@@ -1,7 +1,7 @@
 <template>
   <div class="row bottom-left-dashboard">
   <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 card-global">
-    <div class="card border-none background-lineart fiction-card random-characters-card padding-0-rem margin-0-rem">
+    <div class="card border-none background-lineart fiction-card random-characters-card padding-0 margin-0-rem">
       <TitleHeaderDashboard v-bind:title="'Personnages aléatoires'" v-bind:type="'myCharacters'"/>
       <div class="card-body display-flex-row align-items-content-justify-content">
          <div class="display-flex-row align-items-content-justify-content width-10-rem margin-bottom-1-rem" 
