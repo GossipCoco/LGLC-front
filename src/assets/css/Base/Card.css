@@ -8,12 +8,12 @@
     left: 30%;
     z-index: 99999;
 }
-.background-summary-global-container::before{
+.fiction-globale-container .card-body::before{
     content: var(--feather-01);
-    background-image: var(--feather-01);
+    /* background-image: var(); */
     position: absolute;
     top: 16%;
-    left: 99%;
+    left: 90%;
     z-index: 99999;
 }
 .card-fiction-container .background-image-quest{
