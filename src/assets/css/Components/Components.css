@@ -8,6 +8,17 @@
 .all-fictions-container-global{
     margin: 0 0 2vh -2vh;
 }
+/* Menu left */
+.nav-link, .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    color: rgba(var(--main-white), 1);
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    background-color: rgba(var(--clear-green-01), 1);
+}
+.nav-pills .nav-link.active:hover, .nav-pills .show>.nav-link:hover{
+    color: rgba(var(--clear-green-01), 1);
+    background-color: var(--active-hover);
+}
 /* PAGINATION */
 .one-quest-container .row.pagination-zone-container{
     margin: 10vh 0 0 0;
@@ -70,26 +81,9 @@
 .clan-logo-container .btn.btn-primary img {
     width: 8vh;
 }
-.row .top-dashboard .all-last-three-fictions-container .btn-all-my-fictions .btn{
-    width: 16.5vh;
-    margin: 0 0 0 -2.5vh;
-}
-.h5-container{
-    margin: 0.15rem 0 -0.5rem -1rem;
-}
-/* .left-fiction-summary-container .all-characters-of-fiction{
-    flex-wrap: wrap;
-} */
-/* .image-fiction-container-background{
-    padding: 1rem 0 0.5rem 0;
-    background-position: 50%;
-} */
 .image-fiction-container{
     background-position: 50%;
 }
-/* .height-all-fictions-container{
-    margin: -2vh 0 -2vh 0;
-} */
 .mini-rond-messages{
     margin: 0 0 0 -1rem;
     z-index: 99;
@@ -101,7 +95,6 @@
 .summary-container .row.top-fiction{
     margin: -3vh 0 0 0;
     height: 5vh;
-    /* background-color: aliceblue; */
 }
 .summary-container .row.top-fiction .kind-fiction-container {
     margin: -4vh 0 0 -1vh;
@@ -112,20 +105,7 @@
 .list-all-characters-container{
     padding: 0rem 1rem 1rem 1rem;
 }
-.all-my-characters-container{
-    padding: 3rem;
-    margin: 0 auto;
-}
-.nav-link, .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
-    color: rgba(var(--main-white), 1);
-}
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
-    background-color: rgba(var(--clear-green-01), 1);
-}
-.nav-pills .nav-link.active:hover, .nav-pills .show>.nav-link:hover{
-    color: rgba(var(--clear-green-01), 1);
-    background-color: var(--active-hover);
-}
+
 .margin-top-2-rem, .input-name-margin{
     margin: 0.2rem 0 0 0;
 }

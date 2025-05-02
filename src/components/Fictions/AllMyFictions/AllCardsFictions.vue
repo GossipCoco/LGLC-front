@@ -11,7 +11,7 @@
           ></div>
           <div class="col-10 col-xl-10 col-xxl-8 col-lg-12 col-md-12 col-sm-12 col xs-12">
             <div
-              class="h5-container display-flex-column align-items-content-justify-content"
+              class="h5-container margin-0-rem display-flex-column align-items-content-justify-content"
             >
               <div class="display-flex-column text-dark-green montesserat">
                 <div class="display-flex-row title-container-card width-25-vh display-block align-items-content-justify-content">

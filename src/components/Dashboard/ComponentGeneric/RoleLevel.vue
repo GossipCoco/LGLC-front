@@ -3,7 +3,7 @@
     <div class="col-6">
       <div class="image_user_grade_level">
         <div clas="display-flex-column">
-          <p class="text-white poppins-text">Rôle : {{ NameRole }}</p>
+          <p class="text-white poppins-text">{{ NameRole }}</p>
           <img :src="'/images/Levels/' + Image" :alt="Image" loading="lazy"/>
         </div>
       </div>
