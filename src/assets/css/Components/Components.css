@@ -19,6 +19,9 @@
     color: rgba(var(--clear-green-01), 1);
     background-color: var(--active-hover);
 }
+.nav-link:focus, .nav-link:hover {
+    color: var(--active-hover);
+}
 /* PAGINATION */
 .one-quest-container .row.pagination-zone-container{
     margin: 10vh 0 0 0;
@@ -65,8 +68,8 @@
     object-fit: cover;
     transition: opacity 0.3s ease-in-out;
 }
-.fiction-summary-card p{
-    margin: 0 0 0.25rem 0;
+.fiction-summary-card h5.card-title{
+    margin: 3vh 0 0 0;
 }
 .card-form-create-character .card-header{
     margin: -1rem 0 0 0;
@@ -92,9 +95,11 @@
     background-position: 50%;   
     vertical-align: bottom;
 }
+.summary-container {
+    padding: 2vh 1vh 0 0;
+}
 .summary-container .row.top-fiction{
-    margin: -3vh 0 0 0;
-    height: 5vh;
+    margin: 2vh 0 0 0;
 }
 .summary-container .row.top-fiction .kind-fiction-container {
     margin: -4vh 0 0 -1vh;
@@ -102,15 +107,8 @@
 .all-fictions-container-global .row.search-bar-component{
     margin: -1vh 0 1vh 0;
 }
-.list-all-characters-container{
-    padding: 0rem 1rem 1rem 1rem;
-}
-
 .margin-top-2-rem, .input-name-margin{
     margin: 0.2rem 0 0 0;
-}
-.nav-link:focus, .nav-link:hover {
-    color: var(--active-hover);
 }
 .create-character-button{
     margin: 1.5rem 0 0 0;

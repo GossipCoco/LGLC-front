@@ -11,7 +11,7 @@
           ></div>
           <div class="col-10 col-xl-10 col-xxl-8 col-lg-12 col-md-12 col-sm-12 col xs-12">
             <div
-              class="h5-container margin-0-rem display-flex-column align-items-content-justify-content"
+              class="h5-container width-30-vh margin-0-rem display-flex-column align-items-content-justify-content"
             >
               <div class="display-flex-column text-dark-green montesserat">
                 <div class="display-flex-row title-container-card width-25-vh display-block align-items-content-justify-content">
@@ -35,8 +35,8 @@
               </div>
             </div>
             <div
-              class="card-text text-align-justify summary-text-font display-none-responsive"
-              v-html="truncateText(fiction.Summary, 50)"
+              class="card-text width-30-vh text-align-justify summary-text-font display-none-responsive padding-1-vh"
+              v-html="truncateText(fiction.Summary, 65)"
             ></div>
           </div>
         </div>

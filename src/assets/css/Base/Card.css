@@ -295,9 +295,6 @@ li.quest-container {
     background-color: rgba(var(--dark-green-01), 0.5);
     border-radius: 12px;
 }
-.kind-fiction-container{
-    margin: -9vh 0 0 -10vh;
-}
 .avatar-container{
     margin: -1vh 0 0 0;
 }

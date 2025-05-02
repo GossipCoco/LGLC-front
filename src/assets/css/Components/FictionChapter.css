@@ -64,16 +64,6 @@ th {
     margin: 0rem 0 1rem 0;
     gap: 1rem;
 }
-/* .all-chapters-list-container {    
-    padding: 0 1rem;
-    overflow: auto;
-} */
-.summary-height-container{
-    padding: 1rem;
-}
-.summary-container {
-    padding: 4rem 1rem 0 0;
-}
 .back-to-all-fictions-container > div {
     margin: 3rem 0 0 0;
 }
@@ -115,4 +105,8 @@ th {
 }
 .Comment-icon .flex-one .btn{    
     margin: 0.5rem 0 0 0;
+}
+.kind-fiction-container p{
+    height: 3vh;
+    margin: 0;
 }

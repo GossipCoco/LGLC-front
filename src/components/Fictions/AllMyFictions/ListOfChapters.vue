@@ -1,13 +1,14 @@
 <template>
   <div class="opacity-container height-80 display-flex-row">
     <div class="summary-container height-70-vh overflow-hidden">
-      <div class="row top-fiction" v-if="AuthorId === usrCurrent">        
+      <div class="row top-fiction height-5-vh" v-if="AuthorId === usrCurrent">        
         <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
-          <div v-if="nbKind > 0 " class="display-flex-row kind-fiction-container Noto-Sans">
-            Genre(s) : &nbsp;
-            <p v-for="(kind, index) in Kinds" :key="index" class="display-flex-row">
-              <span>{{ kind.KindId }}</span><span v-if="index < Kinds.length - 1">&nbsp;-&nbsp;</span>
-            </p>
+          <div
+              class="display-flex-column image-fiction-container all-illustrations-fiction-container padding-1-rem overflowY-X-hidden background-size-cover"
+              v-bind:style="{
+                backgroundImage: 'url(' + backgroundImageFiction + ')',
+              }"
+            >
           </div>
         </div>
         <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
@@ -34,14 +35,18 @@
         </div>
       </div>
       <div class="row middle-fiction-card">
-        <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12 right-column-image-container">
+        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 right-column-image-container">
           <div class="display-flex-column all-characters-of-fiction">
-            <!-- <div
-              class="display-flex-column image-fiction-container padding-1-rem overflowY-X-hidden background-size-cover"
-              v-bind:style="{
-                backgroundImage: 'url(' + backgroundImageFiction + ')',
-              }"
-            ></div> -->
+            <!--  -->
+
+            <div v-if="nbKind > 0 " class="display-flex-column kind-fiction-container Noto-Sans">
+              <p>Genre(s) : &nbsp;</p>
+              <div v-for="(kind, index) in Kinds" :key="index" class="display-flex-row">
+                <p>
+                  <span>{{ kind.KindId }}</span>                
+                </p>
+              </div>
+            </div>
             <AddANewCharacterModal
             v-if="AuthorId === usrCurrent"
             v-bind:IdGame="IdGame"
@@ -50,7 +55,7 @@
             <CarrouselCharacter v-bind:Characters="OCCharacters" />
           </div>
         </div>
-        <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12">
+        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
           <div class="summary-fiction-container-wrapper">
             <p class="text-align-justify overflowY-auto summary-height-container Noto-Sans" v-html="Summary"></p>
           </div>
@@ -97,15 +102,21 @@ export default {
       currentImage: undefined,
       previewImage: undefined,
       file: null, // Ajout de cette ligne pour stocker le fichier
-      nbKind: null
+      nbKind: null,
+      Illustration:{}
     };
   },
   created(){
     this.getNbKind()
+    this.getAllIllustration()
   },
   methods: {
     getNbKind(){
       this.nbKind = Object.keys(this.Kinds).length
+    },
+    getAllIllustration(){
+      this.Illustration = this.IllustrationId
+      console.log(this.Illustration)
     }
   }
 };

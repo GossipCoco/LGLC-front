@@ -1,5 +1,5 @@
 <template>
-  <div class="height-fixe character-container list-all-characters-container">
+  <div class="height-fixe character-container list-all-characters-container padding-2-vh">
     <div class="row row-filter background-color-dark-green-01 display-flex vertical-align-middle">
       <div class="col-xxl-2 col-xl-2 col-lg-12 col-md-12 col-sm-12 col-xs-12 display-flex-row align-items-content-justify-content vertical-align-middle height-character">
         <p class="text-white">{{ labelFilter }}</p>

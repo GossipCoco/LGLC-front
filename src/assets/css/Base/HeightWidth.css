@@ -225,9 +225,7 @@
 .image-fiction-container-background{
     height: 17vh;
 }
-.fiction-summary-card h5.card-title{
-    margin: 1vh 0 0 0;
-}
+
 .fiction-summary-card{
     height: 17vh;
 }
@@ -359,6 +357,11 @@
 .image-fiction-container {
     width: 10vh;
     height: 17vh;
+}
+.image-fiction-container.all-illustrations-fiction-container{
+    width: 20vh;
+    height: 10vh;
+    margin: -5vh 0 0 0;
 }
 .summary-container .middle-fiction-card .image-fiction-container{
     width: 31vh;
