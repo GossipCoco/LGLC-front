@@ -6,8 +6,7 @@
 }
 
 /* Border Radius */
-.avatar-navabar img, 
-.dashboard-card-header .avatar-wrapper img,
+
 .title-dashboard-container-header img, .character-illustration-container, .message__avatar img  {
     border-radius: 100%;
 }
