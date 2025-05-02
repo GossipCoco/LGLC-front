@@ -359,16 +359,14 @@
     height: 17vh;
 }
 .image-fiction-container.all-illustrations-fiction-container{
-    width: 20vh;
-    height: 10vh;
-    margin: -5vh 0 0 0;
+    height: 30vh;
 }
 .summary-container .middle-fiction-card .image-fiction-container{
-    width: 31vh;
+    width: 50vh;
 }
 .carousel {
     width: 24vh;
-    height: 18vh;
+    height: 24vh;
 }
 .create-chapter-card-container{
     height: 85vh;

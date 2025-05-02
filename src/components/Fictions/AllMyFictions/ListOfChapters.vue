@@ -3,24 +3,10 @@
     <div class="summary-container height-70-vh overflow-hidden">
       <div class="row top-fiction height-5-vh" v-if="AuthorId === usrCurrent">        
         <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
-          <div
-              class="display-flex-column image-fiction-container all-illustrations-fiction-container padding-1-rem overflowY-X-hidden background-size-cover"
-              v-bind:style="{
-                backgroundImage: 'url(' + backgroundImageFiction + ')',
-              }"
-            >
-          </div>
+          <EditSummary v-bind:FictionId="IdFiction" v-bind:Summary="Summary" v-if="AuthorId === usrCurrent"/>         
         </div>
         <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
-          <EditSummary v-bind:FictionId="IdFiction" v-bind:Summary="Summary" v-if="AuthorId === usrCurrent"/>
-        </div>
-        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3 upload-input-component">
-           <!-- <UploadImage
-            v-bind:id="IdFiction"
-            v-bind:service="'UploadFictionBackgroundIllustration'"
-            v-bind:css="'mb-3'"
-            v-if="AuthorId === usrCurrent"
-          /> -->
+          
         </div>
         <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3 btn-create-chapter-container">
             <router-link
@@ -33,12 +19,27 @@
               Créer le chapitre {{ lastChap }}
             </router-link>
         </div>
+        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3 upload-input-component">
+        </div>
       </div>
       <div class="row middle-fiction-card">
+        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 padding-0-0-0-5vh">
+          <div class="display-flex-column">
+            <div
+                class="display-flex-column image-fiction-container margin-21vh-0-0-0 all-illustrations-fiction-container padding-1-rem overflowY-X-hidden background-size-cover"
+                v-bind:style="{
+                  backgroundImage: 'url(' + backgroundImageFiction + ')',
+                }"
+              >
+            </div>
+            <div class="summary-fiction-container-wrapper width-50-vh height-35-vh overflowY-scroll margin-1vh-0-0-1vh">
+              <p class="text-align-justify overflowY-auto summary-height-container Noto-Sans" v-html="Summary"></p>
+            </div>
+          </div>
+        </div>
+        <ListAllChapters v-bind:Chapters="fiction.Chapters" />
         <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 right-column-image-container">
           <div class="display-flex-column all-characters-of-fiction">
-            <!--  -->
-
             <div v-if="nbKind > 0 " class="display-flex-column kind-fiction-container Noto-Sans">
               <p>Genre(s) : &nbsp;</p>
               <div v-for="(kind, index) in Kinds" :key="index" class="display-flex-row">
@@ -55,12 +56,6 @@
             <CarrouselCharacter v-bind:Characters="OCCharacters" />
           </div>
         </div>
-        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
-          <div class="summary-fiction-container-wrapper">
-            <p class="text-align-justify overflowY-auto summary-height-container Noto-Sans" v-html="Summary"></p>
-          </div>
-        </div>
-        <ListAllChapters v-bind:Chapters="fiction.Chapters" />
       </div>
     </div>
   </div>

@@ -12,7 +12,10 @@
     margin: 1vh 0 0 0;
 }
 .margin-0-0-0-1vh{
-    margin: 0h 0 0 1vh;
+    margin: 0 0 0 1vh;
+}
+.margin-1vh-0-0-1vh{
+    margin: 1vh 0 0 1vh;
 }
 .margin-2vh-0-0-0{
     margin: 2vh 0 0 0;
@@ -25,6 +28,10 @@
 }
 .margin-4-0-0-0{
     margin: 4vh 0 0 0;
+}
+.margin-0-0-4-0
+{
+    margin: 0 0 4vh 0;
 }
 .margin-0-0-4-0
 {
@@ -56,5 +63,8 @@
 }
 .padding-0-1-vh-0-1vh{
     padding: 0 1vh 0 1vh
+}
+.padding-0-0-0-5vh{
+    padding: 0 0 0 5vh;
 }
 
