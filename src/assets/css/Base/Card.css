@@ -10,7 +10,8 @@
 }
 .fiction-globale-container .card-body::before{
     content: var(--feather-01);
-    /* background-image: var(); */
+    background-image: var(--feather-01);
+    background-repeat: no-repeat;
     position: absolute;
     top: 16%;
     left: 90%;
