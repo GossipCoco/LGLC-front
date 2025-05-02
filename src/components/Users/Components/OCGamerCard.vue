@@ -17,7 +17,7 @@
               <div class="card-body display-flex-row">
                 <img
                   :src="gamer.Image"
-                  class="card-img-top avatar-gamer"
+                  class="card-img-top avatar-gamer border-radius-100"
                   :alt="gamer.UserName"
                 />
                 <div class="information-character-container overflowY-X-hidden width-20-vh">
