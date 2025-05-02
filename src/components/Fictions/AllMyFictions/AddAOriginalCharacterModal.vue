@@ -98,7 +98,7 @@
   },
   methods:{
     GetMyCharacter(){
-      CharacterService.GetAllCharactersByUser(this.usr)
+      CharacterService.GetOriginaleCharacterByUser(this.usr)
       .then((response) => {
         console.log(response.data.ob)
           this.characters = response.data.ob;
