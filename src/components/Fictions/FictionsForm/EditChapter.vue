@@ -1,11 +1,11 @@
 <template>
-  <div id="edit-chapter-contain">
+  <div id="edit-chapter-contain" class="width-180-vh">
     <div
-      class="character-details-chatper background-color-main-lineart card mb-3 display-flex-column padding-0-rem"
+      class="character-details-chatper width-180-vh background-color-main-lineart card mb-3 display-flex-column padding-0-rem"
     >
-      <div class="card-body padding-1-rem height-80">
+      <div class="card-body padding-1-rem width-170-vh height-80">
         <form
-          class="create-character-form width-180-vh"
+          class="create-character-form width-160-vh"
           @submit.stop.prevent="handleOk"
           ref="uploadForm"
         >
@@ -24,8 +24,13 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-11"></div>
-            <div class="col-1 btn-validate-container">
+            <div class="col-6"></div>
+            <div class="col-4">
+              <router-link :to="'/fiction/' + Back" class="btn btn-primary">
+                    Retour à la fiction
+              </router-link>
+            </div>
+            <div class="col-2 btn-validate-container">
               <button type="button" class="btn btn-primary" @click="handleOk">
                 Enregistrer
               </button>
@@ -46,7 +51,7 @@ export default {
         Id: null,
         Title: null,
         Content: null,
-        
+        Back: null,       
       },
     };
   },
@@ -58,14 +63,13 @@ export default {
     GetAChapterById(id) {
       FictionService.GetAChapterById(id)
         .then((response) => {
-          console.log(response)
+          this.Back = response.data.ob.Fiction.Title
           this.chapter = response.data.ob
           this.form.Content = this.chapter.Content;
           this.Author = this.chapter.Fiction.UserId;
           this.AuthorId = this.chapter.Fiction.UserId;
           this.form.Id = this.chapter.Id
           this.form.Title = this.chapter.Title
-          //this.typeText(this.chapter.Content);
         })
         .catch((e) => {
           console.log(e);

@@ -7,7 +7,7 @@
           v-bind:type="'username'"
         />
         <div class="card-body user-info-text">
-          <div class="row avatar-row">
+          <div class="row margin-2vh-0 avatar-row">
             <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 avatar-avatar-card-container display-flex align-items-content-justify-content">
               <ImageRondDashboard v-bind:src="'/images/Avatars/' + Avatar" v-bind:alt="Avatar" v-bind:classe="'card-img-top mini-rond-avatar-image'" v-bind:edit="true"/>
             </div>

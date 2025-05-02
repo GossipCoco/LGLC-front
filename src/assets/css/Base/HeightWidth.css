@@ -5,9 +5,8 @@
 .gap-2{
     width: 56vh;
 }
-.fiction-container, 
-#edit-chapter-contain .character-details-chatper{    
-    width: 186vh;
+.fiction-container{    
+    width: 180vh;
 }
 .create-character-form-modal{
     width: 138vh;

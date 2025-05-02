@@ -32,28 +32,12 @@
 .card.clan-detail-layout{
     background-color: rgb(var(--main-white), 0);
 }
-.create-character-form,
-.card-form-create-character .card-body{
-    padding: 2vh 2vh 0 2vh;
-}
 .fiction-container .card-header,
 .fiction-container.all-fictions-container-global .card-header{
     padding: 0;
 }
-.row.list-fiction-card-container{
-    padding: 1rem;
-}
-#dashboard .row.top-dashboard .card-global{
-    margin: 0 auto;
-}
-.card-body.user-info-text .row{
-    margin: 1rem 0;
-}
 .fiction-summary-card{
     padding: 0 0.5rem 0 0.75rem;
-}
-.all-characters-by-user-container .card{
-    background: var(--lineart-other00);
 }
 .original-character-contain.card-image{
     background-position: 50%;
