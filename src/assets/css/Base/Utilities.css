@@ -96,6 +96,9 @@
 .height-70-vh{
     height: 70vh;
 }
+.height-60-vh{
+    height: 60vh;
+}
 .height-50-vh{
     height: 50vh;
 }
@@ -105,10 +108,16 @@
 .height-20-vh{
     height: 20vh;
 }
+.height-15-vh{
+    height: 15vh;
+}
 .height-10-vh{
     height: 10vh;
 }
-.height-5-vh{
+.height-6-vh{
+    height: 5vh;
+}
+.height-6-vh{
     height: 5vh;
 }
 /* Width */
