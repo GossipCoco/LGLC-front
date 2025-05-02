@@ -69,7 +69,7 @@
             <button
               type="button"
               class="btn btn-primary"
-              @click="AddAOriginalCharacterModalToGameAndFiction"
+              @click="AddAOriginalCharacterModal"
             >
               Ajouter le personnage
             </button>
@@ -80,6 +80,7 @@
   </template>
   <script>
   import CharacterService from '../../../services/CharacterService';
+  import GameService from '../../../services/GameService';
   export default {
     name: "AddAOriginalCharacterModalModal",
     props: ["IdGame"],
@@ -102,6 +103,22 @@
       .then((response) => {
         console.log(response.data.ob)
           this.characters = response.data.ob;
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+    },
+    AddAOriginalCharacterModal(){
+      const idGame = this.IdGame;
+      this.form.Id = idGame + " - " + this.form.CharacterId;
+      this.form.GameId = idGame;
+      console.log(this.form)
+      GameService.AddANewOriginalCharacter(idGame, this.form)
+      .then((response) => {
+          if (response) {
+            this.$router.push({ path: "/fiction/" + idGame });
+            window.location.reload();
+          }
         })
         .catch((e) => {
           console.log(e);
