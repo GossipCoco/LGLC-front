@@ -8,7 +8,7 @@
           :key="index"
         >
           <router-link :to="'/chapter/' + chapter.Title"
-            class="font-variant-small-caps title-fiction-links font-weight-600 white-text cinzel"       
+            class="font-variant-small-caps title-fiction-links font-weight-400 color-clear-green-01 Noto-Sans"       
           >
             {{ chapter.Title }}
           </router-link>

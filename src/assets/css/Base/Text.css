@@ -99,7 +99,10 @@ h5.card-title a, .my-oc-character-container p a{
   font-size: 85%;
 }
 .title-fiction-links{
-  font-size: 1.2em;
+  font-size: 1em;
+}
+.title-fiction-links:hover{
+  color: rgba(var(--active-hover), 1);
 }
 td{
   color: rgba(var(--main-white), 1)

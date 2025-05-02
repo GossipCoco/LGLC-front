@@ -11,7 +11,7 @@
         <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3 btn-create-chapter-container">
             <router-link
               type="button"
-              class="btn btn-primary btn-lg btn-create-chapter-button"
+              class="btn btn-primary btn-create-chapter-button"
               v-if="AuthorId === usrCurrent"
               :to="'/fiction/createChapter/' + IdFiction"
               v-bind="lastChap"
@@ -48,10 +48,20 @@
                 </p>
               </div>
             </div>
-            <AddANewCharacterModal
-            v-if="AuthorId === usrCurrent"
-            v-bind:IdGame="IdGame"
-            />
+            <div class="row width-60-vh">
+              <div class="col-6">
+                <AddANewCharacterModal
+                v-if="AuthorId === usrCurrent"
+                v-bind:IdGame="IdGame"
+                />
+              </div>
+              <div class="col-6">
+                <AddAOriginalCharacterModal            
+                v-if="AuthorId === usrCurrent"
+                v-bind:IdGame="IdGame"
+                />
+              </div>
+            </div>
             <div class="row width-60-vh">
               <div class="col-6">
                 <CarrouselCharacter v-bind:Characters="Characters" />
@@ -59,9 +69,9 @@
               <div class="col-6">
                 <CarrouselCharacter v-bind:Characters="OCCharacters" />
               </div>
-              <div>
+              <!-- <div>
                 <img src="/images/icons/leaf-1.svg" />
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -73,6 +83,7 @@
 <script>
 import EditSummary from "../FictionsForm/EditSummary.vue";
 import AddANewCharacterModal from "./AddANewCharacterModal.vue";
+import AddAOriginalCharacterModal from "./AddAOriginalCharacterModal.vue";
 import CarrouselCharacter from "./CarrouselCharacter.vue";
 // import UploadImage from "../../Components/GenericComponent/UploadImage.vue";
 import ListAllChapters from "../Components/ListAllChapters.vue";
@@ -97,6 +108,7 @@ export default {
     EditSummary,
     CarrouselCharacter,
     AddANewCharacterModal,
+    AddAOriginalCharacterModal,
     // UploadImage,
     ListAllChapters,
   },
