@@ -227,14 +227,9 @@ span.name-characatrer-link{
     width: 5vh;
     height: 3vh;
 }
-.fade-slide-enter-active {
-    transition: all 0.3s ease-out;
-  }
-  .fade-slide-enter-from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  .fade-slide-enter-to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.badge-genre {
+    padding: 5px 10px;
+    margin-right: 6px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+}

@@ -42,9 +42,9 @@
           <div class="display-flex-column all-characters-of-fiction">
             <div v-if="nbKind > 0 " class="display-flex-column kind-fiction-container Noto-Sans">
               <p>Genre(s) : &nbsp;</p>
-              <div v-for="(kind, index) in Kinds" :key="index" class="display-flex-row">
+              <div v-for="(kind, index) in Kinds" :key="index" class="display-flex-row genres">
                 <p>
-                  <span>{{ kind.KindId }}</span>                
+                  <span class="badge-genre background-color-dark-green-01 white-text">{{ kind.KindId }}</span>                
                 </p>
               </div>
             </div>
@@ -62,7 +62,7 @@
                 />
               </div>
             </div>
-            <div class="row width-60-vh">
+            <div class="row width-60-vh margin-2vh-0-0-0">
               <div class="col-6">
                 <CarrouselCharacter v-bind:Characters="Characters" />
               </div>

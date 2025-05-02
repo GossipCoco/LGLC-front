@@ -36,7 +36,7 @@
                 <div class="display-flex-row align-items-content-justify-content">
                   <img loading="lazy" src="../../../../public/images/Game/mouse01.png"/>
                   <p>
-                    <router-link class="text-white" to="/puzzle"
+                    <router-link class="text-white" to="/mouseShot"
                       >Attrape la souris!
                     </router-link>
                   </p>
@@ -59,7 +59,7 @@
                 <div class="display-flex-row align-items-content-justify-content">
                   <img loading="lazy" src="../../../../public/images/Game/oie01.png"/>
                   <p>
-                    <router-link class="text-white" to="/puzzle">Jeu de l'Oie</router-link>
+                    <router-link class="text-white" to="/GooseGameLayout">Jeu de l'Oie</router-link>
                   </p>
                 </div>
                 <div class="display-flex-column align-items-content-justify-content">
