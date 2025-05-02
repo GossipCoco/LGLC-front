@@ -29,6 +29,9 @@
 .pagination-container{
     margin-top: -8vh;
 }
+.row.pagination-container.all-locations-pagination-container{
+    margin: 9vh 0 0 0;
+}
 .all-fictions-container-global .row.pagination-container{
     margin: 1vh 0 2vh -2vh;
 }
@@ -228,4 +231,7 @@ span.name-characatrer-link{
     margin-right: 6px;
     border-radius: 20px;
     font-size: 0.85rem;
+}
+.location-group-margin{
+    margin: 0 0 0 20vh;
 }

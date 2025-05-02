@@ -4,6 +4,9 @@ class ClanService {
     countAllClans(){
         return http.get('/clan/countAllClans')
     }
+    countAllLocations(){
+        return http.get('/clan/countAllLocations')
+    }
     getAllClans(data) {
         return http.post('/clan', data)
     }
