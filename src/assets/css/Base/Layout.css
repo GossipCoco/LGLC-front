@@ -24,19 +24,18 @@
 .container-fluid>.row>.col-10.col-sm-10.col-md-10.col-lg-10.col-xl-10.col-xxl-10 {
     margin: 0;
 }
-.container {
+/* .container {
     background-color: rgba(var(--main-white), 0);
-}
+} */
 .profil-user-card {
-    padding: 10rem 0 0 0;
+    padding: 20vh 0 0 0;
 }
 .avatar-container {
     flex: .45;
 }
 .character-container {
-    margin: -3rem auto;
+    margin: -6vh auto;
     flex-wrap: wrap;
-    padding: 0;
 }
 .character-details .card-body {
     z-index: -222

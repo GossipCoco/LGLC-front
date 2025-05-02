@@ -1,8 +1,8 @@
 
 <template>
-  <div class="border-none background-color-main-lineart flex-one card display-flex-column fiction-container overflowY-X-hidden height-100-vh all-fictions-container-global">
+  <div class="border-none background-color-main-lineart flex-one card display-flex-column width-190-vh overflowY-X-hidden height-100-vh all-fictions-container-global">
     <CardHeader v-bind:Title="'Lire toutes mes fictions'" />
-    <div class="card-body height-75-vh">
+    <div class="card-body height-80-vh">
       <SearchBarComponent 
         v-bind:For="'SearchCharacter'"
         v-bind:label="'Sélectionner un personnage'"

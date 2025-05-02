@@ -29,11 +29,11 @@
 .pagination-container{
     margin-top: -8vh;
 }
+.all-fictions-container-global .row.pagination-container{
+    margin: 1vh 0 2vh -2vh;
+}
 .pagination-container.all-clans-pagination-container{
     margin-top: 4vh;
-}
-.all-fictions-container-global .pagination-container{
-    margin: 0;
 }
 .logo-wrapper-contain .logo{
     flex: 0.25

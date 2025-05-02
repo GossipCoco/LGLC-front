@@ -1,5 +1,5 @@
 <template>
-  <div class="row row-cols-md-4 g-4 .margin---4vh-0--2vh-0 height-80-vh">
+  <div class="row row-cols-md-4 g-4 maTB-4vh-2vh height-80-vh width-180-vh">
     <div class="col" v-for="(fiction, index) in allFictions" :key="index">
       <div class="card fiction-summary-card padding-0-1-vh-0-1vh clear-green-bacground height-15-vh">
         <div class="row">

@@ -38,10 +38,10 @@
     margin: 0 0 4vh 0;
 }
 /* EN négatif */
-.margin---4vh-0--2vh-0{
-    margin: -4vh 0 -2vh 0;
-}
 
+.maTB-4vh-2vh{
+    margin: -4vh 0 -2vh 2vh;
+}
 /*  PADDING */
 .padding-0-rem{
     padding: 0;
