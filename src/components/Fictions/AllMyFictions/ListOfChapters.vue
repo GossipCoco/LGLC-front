@@ -60,7 +60,7 @@
                 <CarrouselCharacter v-bind:Characters="OCCharacters" />
               </div>
               <div>
-                <img src="/images/Icons/leaf-1.svg" />
+                <img src="/images/icons/leaf-1.svg" />
               </div>
             </div>
           </div>

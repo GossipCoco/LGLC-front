@@ -8,6 +8,14 @@
     left: 30%;
     z-index: 99999;
 }
+.background-summary-global-container::before{
+    content: var(--feather-01);
+    background-image: var(--feather-01);
+    position: absolute;
+    top: 16%;
+    left: 99%;
+    z-index: 99999;
+}
 .card-fiction-container .background-image-quest{
     margin: -2vh;
 }
