@@ -23,7 +23,7 @@
     background-color: rgb(var(--dark-green-01), 1);
 }
 .search-fiction-button, .back-my-all-fictions-button, .back-all-fictions-button{
-    margin: -5vh 2vh 0 0;
+    margin: -2vh 2vh 0 0;
 }
 .btn-create-chapter-button {
     margin: -5vh 0 0 0;

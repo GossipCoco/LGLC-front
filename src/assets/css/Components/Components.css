@@ -36,9 +36,6 @@
 .fiction-container.all-fictions-container-global .card-header{
     padding: 0;
 }
-.fiction-summary-card{
-    padding: 0 0.5rem 0 0.75rem;
-}
 .original-character-contain.card-image{
     background-position: 50%;
 }
@@ -49,17 +46,13 @@
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    padding: 1rem;
 }
 .profil-user-card .card-body{
-    margin: -10rem 0 0 0;
+    margin: -20vh 0 0 0;
 }
 .dashboard-card-header .avatar-wrapper img {
     object-fit: cover;
     transition: opacity 0.3s ease-in-out;
-}
-.dashboard-card-header .avatar-wrapper{
-    margin: -1rem 0 0 0;
 }
 .fiction-summary-card p{
     margin: 0 0 0.25rem 0;
@@ -113,7 +106,9 @@
 .summary-container .row.top-fiction .kind-fiction-container {
     margin: -4vh 0 0 -1vh;
 }
-
+.all-fictions-container-global .row.search-bar-component{
+    margin: -1vh 0 1vh 0;
+}
 .list-all-characters-container{
     padding: 0rem 1rem 1rem 1rem;
 }

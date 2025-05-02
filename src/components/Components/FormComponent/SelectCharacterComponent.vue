@@ -1,10 +1,10 @@
 <template>
   <div :class="col">
     <div class="mb-3 row">
-      <label :for="For" class="col-sm-4 text-white form-label form-select-sm">
+      <label :for="For" class="col-sm-6 text-white form-label form-select-sm">
         {{ label }}
       </label>
-      <div class="col-sm-8">
+      <div class="col-sm-6">
         <select
           :id="For"
           class="form-select"

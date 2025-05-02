@@ -1,7 +1,7 @@
 <template>
   <div class="row row-cols-md-4 g-4 .margin---4vh-0--2vh-0 height-80-vh">
     <div class="col" v-for="(fiction, index) in allFictions" :key="index">
-      <div class="card fiction-summary-card clear-green-bacground height-15-vh">
+      <div class="card fiction-summary-card padding-0-1-vh-0-1vh clear-green-bacground height-15-vh">
         <div class="row">
           <div
             class="col-2 col-xl-2 col-xxl-4 col-lg-12 col-md-12 col-sm-12 col xs-12 image-fiction-container height-15-vh width-10-vh background-size-cover"

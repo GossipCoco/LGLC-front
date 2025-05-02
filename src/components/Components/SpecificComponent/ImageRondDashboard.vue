@@ -1,5 +1,5 @@
 <template>
-  <div class="avatar-container height-10-vh" v-if="edit === true">
+  <div class="avatar-container padding-2-vh height-10-vh" v-if="edit === true">
     <div
       class="avatar-wrapper rond-image-illustration avatar-profil-container"
       @mouseenter="showEditIcon = true"
@@ -7,7 +7,7 @@
       @click="triggerFileInput"
     >
       <!-- Avatar actuel -->
-      <img v-if="!showspinner"  loading="lazy"  :src="src" :alt="alt" :class="'display-flex-column;' + classe" />
+      <img v-if="!showspinner"  loading="lazy"  :src="src" :alt="alt" :class="'display-flex-column margin-0-0-0-2vh ' + classe" />
 
       <!-- Icône "+" affiché au survol -->
       <div v-if="showEditIcon" class="edit-overlay display-flex align-items-content-justify-content">
@@ -25,7 +25,7 @@
     />
   </div>
   <div class="rond-image-illustration avatar-profil-container" v-else>
-    <img v-if="!showspinner" :src="src" :alt="alt" class="display-flex-column"  />
+    <img v-if="!showspinner" :src="src" :alt="alt" class="display-flex-column padding-2-vh"  />
   </div>
 </template>
 <script>
