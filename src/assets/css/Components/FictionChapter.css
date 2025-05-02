@@ -110,3 +110,24 @@ th {
     height: 3vh;
     margin: 0;
 }
+
+.all-chapters-list-container {
+    position: relative; /* nécessaire pour positionner l'élément décoratif */
+    z-index: 1;
+  }
+  
+  .all-chapters-list-container::after {
+    content: var(--feather-01);
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 60px;
+    height: 60px;
+    background-image: var(--feather-01); /* ton chemin réel */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top right;
+    opacity: 0.3; /* effet discret */
+    pointer-events: none;
+    z-index: 2;
+  }

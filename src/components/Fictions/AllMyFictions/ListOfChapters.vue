@@ -59,6 +59,9 @@
               <div class="col-6">
                 <CarrouselCharacter v-bind:Characters="OCCharacters" />
               </div>
+              <div>
+                <img src="/images/Icons/leaf-1.svg" />
+              </div>
             </div>
           </div>
         </div>
