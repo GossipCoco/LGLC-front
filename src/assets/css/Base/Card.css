@@ -48,25 +48,6 @@
 .fiction-globale-container.card.fiction-container {
     margin: 1vh 1vh 2vh -1vh;
 }
-/* .cat-corner::before
-.dashboard-max-card-container::before,
-.fiction-globale-container::before,
-.character-card.card::before,
-.display-flex-row.card-group.clan-group .card.location-clan-background-width-container::before {
-    content: var(--second-cat-corner);
-    position: relative;
-    top: 4rem;
-    left: 95%;
-    transform: scale(0.45);
-}
-.dashboard-max-card-container::before{
-    top: -1rem;
-    left: 96%;
-}
-.character-card.card::before{
-    top: -2rem;
-    left: 75%;
-} */
 .display-flex-row.card-group.clan-group .card.location-clan-background-width-container::before {
     left: 66%;
     top: -2rem;
@@ -79,7 +60,7 @@
 }
 /* Character Details */
 .character-details {
-    margin: 0rem 1rem 0 0;
+    margin: 0 2vh 0 0;
     background: none;
 }
 .clan-card {

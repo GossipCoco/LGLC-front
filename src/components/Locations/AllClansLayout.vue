@@ -4,7 +4,7 @@
       <div v-for="(clan, index) in clans" :key="index">
         <div class="card background-color-dark-green-01 location-clan-background-width-container">
           <div
-            class="card-image clan-card height-30-vh background-size-cover background-color-dark-green-01"
+            class="card-image clan-card width-30-vh height-30-vh background-size-cover background-color-dark-green-01"
             v-bind:style="{
               backgroundImage: 'url(' + clan.Image + ')',
             }"
@@ -14,7 +14,7 @@
               <div class="display-flex align-items-content-justify-content">
                 <router-link
                   type="button"
-                  class="btn btn-primary clan-btn"
+                  class="btn btn-primary clan-btn width-30-vh"
                   :to="'/clan/' + clan.Id"
                   >
                     {{ clan.Name }}

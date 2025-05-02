@@ -5,7 +5,7 @@
         <div v-for="(location, index) in allLocations" :key="index">
           <div class="card background-color-dark-green-01 location-clan-background-width-container">
             <div
-              class="card-image clan-card height-30-vh background-size-cover"
+              class="card-image clan-card width-30-vh height-30-vh background-size-cover"
               v-bind:style="{
                 backgroundImage: 'url(' + location.Image + ')',
               }"
@@ -15,7 +15,7 @@
                 <div class="d-grid gap-2 col-8 mx-auto">
                   <router-link
                     type="button"
-                    class="btn btn-primary margin-15vh"
+                    class="btn btn-primary margin-15vh width-30-vh"
                     :to="'/LocationsDetails/' + location.Id"
                     >{{ location.Name }}</router-link
                   >

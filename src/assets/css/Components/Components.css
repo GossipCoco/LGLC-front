@@ -174,10 +174,8 @@ span.name-characatrer-link{
     margin: 0 0 0 1rem;
 }
 .star {
-    fill: rgba(var(--ternary-green), 1);
-    /* Couleur des étoiles non sélectionnées */
+    fill: rgba(var(--ternary-green), 1);    /* Couleur des étoiles non sélectionnées */
     cursor: pointer;
-    /* Indique que les étoiles sont cliquables */
     transition: fill 0.3s ease;
 }
 .star.checked {

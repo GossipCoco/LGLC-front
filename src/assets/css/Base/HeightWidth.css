@@ -59,12 +59,12 @@
     height: 9vh;
 }
 .title-container-card, 
-.all-characters-of-fiction > button{
+.all-characters-of-fiction > button,
+.page-profil-user-container .rond-image-illustration.avatar-profil-container img{
     width: 25vh;
 }
 .page-profil-user-container .rond-image-illustration.avatar-profil-container img {
     height: 25vh;
-    width: 25vh;
 }
 #all-characters-container-card .character-card.card {
     min-width: 25vh;
@@ -103,16 +103,8 @@
 .card.card-image-layout.clan-detail-layout.mb-3 .card-image-layout {
     width: 95rem;
 }
-.profil-user-card.card .avatar-container img, .h5-container, 
-.location-clan-background-width-container .btn.btn-primary, .clan-card,
-.table.table-borderless {
+.profil-user-card.card .avatar-container img {
     width: 30vh;
-}
-.clan-detail-layout .card-body .text-align-justify.poppins-text{
-    height: 40vh;
-}
-.dashboard-home-max-card-container .avatar-container {
-    width: 5vh;
 }
 .form-profil-user-card {
     height: 20vh;
@@ -120,10 +112,7 @@
 .all-clans-cards .card-body, .bottom-top-dashboard .card,
 #original-characters-list .border-card-color {
     height: 35vh;
-}
-
- /* #book-container .fiction-container .card-body, */
-
+} 
 .illustration-arc-container,
 .one-book-container-wrapper .fiction-container .card-body,
 .row.top-dashboard .card {
@@ -139,13 +128,15 @@
     height: 95vh;
     width: 190vh;
 }
-#original-characters-list .card-group {
+#original-characters-list .card-group,
+.carousel {
     width: 24vh;
 }
 #original-characters-list{
     height: 87vh;
 }
-.clan-detail-layout .card-image img{
+.clan-detail-layout .card-image img,
+.number-page-container{
     width: 17vh;
 }
 .row.top-dashboard .card-body > div{
@@ -365,7 +356,6 @@
     width: 50vh;
 }
 .carousel {
-    width: 24vh;
     height: 24vh;
 }
 .create-chapter-card-container{
@@ -381,9 +371,6 @@
 }
 #accueil li.nav-item{
     width: 40vh;
-}
-.number-page-container{
-    width: 17vh;
 }
 .row.bottom-dashboard-levele-one .card.last-book-container{
     height: 36vh;

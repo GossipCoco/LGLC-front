@@ -1,5 +1,5 @@
 <template>
-  <div class="avatar-container padding-2-vh height-10-vh" v-if="edit === true">
+  <div class="avatar-container width-10-vh padding-2-vh height-10-vh" v-if="edit === true">
     <div
       class="avatar-wrapper rond-image-illustration avatar-profil-container"
       @mouseenter="showEditIcon = true"
