@@ -1,9 +1,9 @@
 <template>
   <div class="margin-2vh border-none background-color-main-lineart flex-one card padding-0 one-quest-container height-16-rem align-items-content-justify-content padding-zero">
     <CardHeader class="width-100-percent" v-bind:Title="'Liste des quêtes à réaliser'" />
-    <div class="card-body">
+    <div class="card-body height-90-vh">
       <Spinner v-if="showspinner" />
-      <div v-if="!showspinner" class="row list-quest-card-container height-70-vh">
+      <div v-if="!showspinner" class="row list-quest-card-container width-190-vh height-70-vh">
         <div
           class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 display-flex-row flex-wrap quest--global-container flex-wrap height-18-rem"
           v-for="(quest, index) in allQuests"
