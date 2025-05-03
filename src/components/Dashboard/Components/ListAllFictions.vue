@@ -12,9 +12,9 @@
                 v-bind:src="fiction.Image"
                 v-bind:alt="fiction.Image"
               />
-            <div class="summary-title-text font-variant-small-caps text-ternary-green">
+            <div class="summary-title-text text-ternary-green">
               <p>
-                <span class="link-to-fiction-text">
+                <span>
                   <router-link class="poppins-text text-ternary-green font-size-1-25 font-weight-600" :to="'/fiction/' + fiction.Title">
                     {{ fiction.Title }}
                   </router-link> </span

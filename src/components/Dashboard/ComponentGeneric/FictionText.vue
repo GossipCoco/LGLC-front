@@ -12,7 +12,7 @@
         class="last-chapter-text-link poppins-text font-size-1 font-weight-400 text-white"
         :to="'/chapter/' + ChapterTitle"
       >
-        {{ ChapterTitle }}
+        {{ truncateText(ChapterTitle, 30) }}
       </router-link>
     </p>
   </div>
@@ -21,5 +21,13 @@
 export default {
   name: "FictionText",
   props: ["FictionTitle", "ChapterTitle"],
+  methods: {
+    truncateText(text, maxLength) {
+      if (text.length <= maxLength) {
+        return text;
+      }
+      return text.substring(0, maxLength) + "...";
+    },
+  }
 };
 </script>

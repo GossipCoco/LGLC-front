@@ -10,11 +10,11 @@
           v-bind:title="'Dernier arc en cours'"
           v-bind:type="'chapters'"
         />
-        <div class="card-body last-chapter-card new-current-arc-container padding-2-vh text-white">
+        <div class="card-body new-current-arc-container padding-2-vh text-white">
             <div v-if="currentArc">
                 <h2 class="white-text">Arc actuel : {{ currentArc.Title }}</h2>
                 <div class="display-flex-row">
-                  <img :src="currentArc.Image" width="25%" class="border-radius-12px"/>
+                  <img :src="currentArc.Image" width="20%" class="border-radius-12px"/>
                   <div v-html="currentArc.Summary" class="poppins-text padding-1-vh"></div>
               </div>
             </div>
