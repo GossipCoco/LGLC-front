@@ -29,7 +29,7 @@
             <div class="message__avatar">
               <img
                 :src="'/images/Avatars/' + comment.User.avatar"
-                class="card-img-top"
+                class="card-img-top border-radius-100"
                 alt="avatar"
               /><br />
               <div class="message__status">

@@ -71,9 +71,6 @@
               <div class="col-6">
                 <CarrouselCharacter v-bind:Characters="OCCharacters" />
               </div>
-              <!-- <div>
-                <img src="/images/icons/leaf-1.svg" />
-              </div> -->
             </div>
           </div>
         </div>
@@ -134,7 +131,6 @@ export default {
     },
     getAllIllustration(){
       this.Illustration = this.IllustrationId
-      console.log(this.Illustration)
     }
   }
 };

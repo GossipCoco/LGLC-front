@@ -14,7 +14,7 @@
           <div v-for="(character, index) in gamer" :key="index" class="row">
             <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-6 col-sm-12 col-xs-12">
               <div class="display-flex-column my-oc-character-containe align-items-content-justify-content">
-                <div class="character-illustration-container height-10-vh width-10-vh background-size-cover"
+                <div class="character-illustration-container border-radius-100 height-10-vh width-10-vh background-size-cover"
                   v-bind:style="{
                     backgroundImage: 'url(' + character.Image + ')',
                   }"

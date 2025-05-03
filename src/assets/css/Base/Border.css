@@ -4,17 +4,15 @@
 .border-radius-100{
     border-radius: 100%;
 }
-
 /* Border Radius */
 
-.title-dashboard-container-header img, .character-illustration-container, .message__avatar img  {
-    border-radius: 100%;
+.image-fiction-container-background,
+.image-fiction-container{
+    border-radius: 12px;
+    border: rgba(var(--clear-green-01), 1) 5px solid;
 }
-.image-fiction-container-background{
-    border-radius: 12px 0 0 12px;
-}
-.fiction-summary-card{
-    border-radius: 8px
+.fiction-summary-card, .character-chapters.background-summary-global-container{
+    border-radius: 12px
 }
 .card.location-clan-background-width-container{
     border-radius: 100% 100% 8% 8%;
@@ -80,9 +78,6 @@
 }
 .message__bubble {
     border-radius: 10px;
-}
-.image-fiction-container {
-    border-radius: 12px 0 0 12px;
 }
 .dashboard-max-card-container {
     border-radius: 10px;

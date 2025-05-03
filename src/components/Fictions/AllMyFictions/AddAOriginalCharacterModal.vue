@@ -101,7 +101,6 @@
     GetMyCharacter(){
       CharacterService.GetOriginaleCharacterByUser(this.usr)
       .then((response) => {
-        console.log(response.data.ob)
           this.characters = response.data.ob;
         })
         .catch((e) => {
@@ -112,7 +111,6 @@
       const idGame = this.IdGame;
       this.form.Id = idGame + " - " + this.form.CharacterId;
       this.form.GameId = idGame;
-      console.log(this.form)
       GameService.AddANewOriginalCharacter(idGame, this.form)
       .then((response) => {
           if (response) {
