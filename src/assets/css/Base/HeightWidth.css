@@ -125,7 +125,9 @@
     height: 95vh;
     width: 190vh;
 }
-#original-characters-list .card-group,
+#original-characters-list .card-group{
+    width: 30vh;
+}
 .carousel {
     width: 24vh;
 }
@@ -289,9 +291,6 @@
 }
 .logo-container img {
   width: 14vh;
-}
-#original-characters-list{
-    width: 125vh;
 }
 #navbarCollapse {
     height: 14vh;

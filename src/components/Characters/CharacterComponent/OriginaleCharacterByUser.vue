@@ -1,29 +1,4 @@
 <template>
-  <div class="row row-filter white-text background-color-dark-green-01 display-flex vertical-align-middle">
-    <InputName
-      class="input-name-margin"
-      v-bind:col="'col-xxl-4 col-xl-3 col-lg-12 col-md-12 col-sm-12 col-xs-12'"
-      v-bind:forId="'inputName'"
-      v-bind:label="'Nom du personnage'"
-      v-bind:getNameData="'getCurrentName'"
-      @getCurrentName="getCurrentName"
-    />
-    <GenericSelect
-      v-bind:col="'col-xxl-3 col-xl-3 col-lg-12 col-md-12 col-sm-12 col-xs-12'"
-      v-bind:For="'SearchClan'"
-      v-bind:label="'Clan'"
-      v-bind:formdata="'getclans'"
-      v-bind:clans="clans"
-      @getclans="getclans"
-    />
-    <GenericSelect
-      v-bind:col="'col-xxl-3 col-xl-3 col-lg-12 col-md-12 col-sm-12 col-xs-12'"
-      v-bind:For="'SearchGrade'"
-      v-bind:label="'Grade'"
-      v-bind:formdata="'getgrade'"
-      @getgrade="getgrades"
-    />
-  </div>
   <div class="row btn-create-character">
     <div clss="'col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12'">
       <router-link to="/CreateAnOriginalCharacter" class="btn btn-primary">
@@ -33,10 +8,12 @@
   </div>
   <div
     id="original-characters-list"
-    class="row row-cols-1 row-cols-md-2 g-4 all-my-characters-container display-flex align-items-content-justify-content overflowY-X-hidden"
+    class="row row-cols-1 row-cols-md-2 g-4 all-my-characters-container
+    display-flex align-items-content-justify-content overflowY-X-hidden width-100-vh"
   >
     <div
-      class="col card-character-container width-25-vh height-30-vh original-character-card-container"
+      class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4 card-character-container
+      width-30-vh height-30-vh original-character-card-container"
       v-for="(character, index) in allMyCharacters"
       :key="index"
     >
@@ -70,8 +47,6 @@ import CharacterService from "../../../services/CharacterService";
 import Pagination from "../../Components/GenericComponent/Pagination.vue";
 import BackgroundImage from "./BackgroundImage.vue";
 import CharacterCardBody from "./CharacterCardBody.vue";
-import InputName from "../../Components/FormComponent/InputName.vue";
-import GenericSelect from "../../Components/FormComponent/GenericSelect.vue";
 
 export default {
   name: "OriginaleCharacterByUser",
@@ -79,8 +54,6 @@ export default {
     Pagination,
     BackgroundImage,
     CharacterCardBody,
-    InputName,
-    GenericSelect,
   },
   data() {
     return {
@@ -127,10 +100,10 @@ export default {
     },
     GetOriginaleCharacterByUser(user, nav) {
       if(window.innerWidth >= this.width){
-          this.nav.step = 8
+          this.nav.step = 6
         }else if(window.innerWidth < this.width)
         {
-          this.nav.step = 8
+          this.nav.step = 6
         }
       CharacterService.GetOriginaleCharacterByUser(user, nav)
         .then((response) => {

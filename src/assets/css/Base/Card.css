@@ -27,8 +27,8 @@
     margin: 1rem 1rem 0 0;
     padding: 0rem 1rem 1rem 1.5rem;
 }
-.card-character-container{
-    margin: 0 0.5rem 0.5rem 0.5rem;
+#original-characters-list .card-character-container{
+    margin: 4vh 0 4vh 0;
 }
 #all-characters-container-card .character-card.card {
     margin: 2vh 0 0 3vh;
@@ -218,7 +218,7 @@ li.quest-container {
     margin: -0.5rem 0 0 0;
 }
 #original-characters-list{
-    margin: -5vh 0 0 30vh;
+    margin: -5vh 0 0 40vh;
     overflow-y: hidden;
     padding: 0;
 }
