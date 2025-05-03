@@ -31,9 +31,6 @@
 .quest-by-id-card .card-body{
   height: 85vh;
 }
-#quest-by-id .quest-by-id-card.card.quest-by-id-card.background-color-main-lineart {
-  height: 106vh;
-}
 #quest-by-id .parallax-container {
   position: relative;
   overflow-y: scroll;
@@ -41,7 +38,7 @@
   perspective: 20vh;
   transform-style: preserve-3d;
   background-repeat: no-repeat;
-  width: 175vh;
+  width: 177vh;
 }
 #quest-by-id .parallax-layer {
   position: absolute;

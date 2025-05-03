@@ -1,8 +1,9 @@
 <template>
   <div id="quest-by-id"
-      class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 card-global flex-wrap quest-container flex-one width-100-percent"
+      class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 card-global
+      flex-wrap quest-container flex-one width-200-vh"
   >
-    <div class="card quest-by-id-card background-color-main-lineart width-100-percent">
+    <div class="card quest-by-id-card background-color-main-lineart width-200-vh">
       <card-header v-bind:Title="quest.Title"
         ><router-link class="btn btn-primary" to="/Quest"
           >Retour à la liste de quêtes</router-link
@@ -10,7 +11,7 @@
       >
       <div class="card-body">
         <div id="quest-by-id" class="quest-container height-95-vh">
-          <div class="parallax-container">
+          <div class="parallax-container height-80-vh">
             <div v-for="(layer, index) in layers" 
                 :key="index" 
                 class="parallax-layer"
