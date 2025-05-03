@@ -173,14 +173,8 @@
 .character-container {
     height: 105vh;
 }
-.clans-location-container{
-    height: 92vh;
-}
 .character-details .card-body {
     height: 95vh;
-}
-.all-characters-container-card {
-    width: 150vh;
 }
 .all-characters-list-containers{
     width: 133vh;

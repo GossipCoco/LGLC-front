@@ -1,6 +1,6 @@
 <template>
-  <div class="overflowX-hidden clans-location-container">
-    <div class="display-flex-row card-group clan-group">
+  <div class="overflowX-hidden clans-location-container height-90-vh overflow-y-hidden">
+    <div class="display-flex-row card-group clan-group width-120-vh overflow-y-hidden height-80-vh ">
       <div v-for="(clan, index) in clans" :key="index">
         <div class="card background-color-dark-green-01 location-clan-background-width-container">
           <div
@@ -73,9 +73,9 @@ export default {
         const response = await ClanService.countAllClans();
         this.NbAllClans = response.data.ob.count;
         if (window.innerWidth >= this.width) {
-          this.nav.step = 12;
+          this.nav.step = 6;
         } else {
-          this.nav.step = 8;
+          this.nav.step = 6;
         }
         this.nav.pages = Math.ceil(this.NbAllClans / this.nav.step);
       } catch (e) {
@@ -85,9 +85,9 @@ export default {
     async ClanPagination(page) {
       this.nav.current = page;
       if (window.innerWidth >= this.width) {
-        this.nav.step = 12;
+        this.nav.step = 6;
       } else {
-        this.nav.step = 8;
+        this.nav.step = 6;
       }
       await this.getAllClans(this.nav);
     },
