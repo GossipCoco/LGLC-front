@@ -94,23 +94,6 @@
     max-width: 30px;
     margin-right: 15px;
 }
-.single-timeline-area .single-timeline-content .timeline-icon i {
-    color: rgba(var(--middle-green-02), 1);
-    line-height: 30px;
-}
-.single-timeline-area .single-timeline-content .timeline-text h6 {
-    -webkit-transition-duration: 500ms;
-    transition-duration: 500ms;
-}
 .single-timeline-area .single-timeline-content .timeline-text p {
-    font-size: 13px;
     margin-bottom: 0;
-}
-.single-timeline-area .single-timeline-content:hover .timeline-icon,
-.single-timeline-area .single-timeline-content:focus .timeline-icon {
-    background-color: rgba(var(--middle-green-02), 1);
-}
-.single-timeline-area .single-timeline-content:hover .timeline-text h6,
-.single-timeline-area .single-timeline-content:focus .timeline-text h6 {
-    color: rgba(var(--middle-green-02), 1);
 }
