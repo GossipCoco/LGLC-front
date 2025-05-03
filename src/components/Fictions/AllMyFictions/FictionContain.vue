@@ -3,7 +3,7 @@
     <Spinner v-if="showspinner" />
     <div
       v-if="!showspinner"
-      id="card-display-flex-column padding-1-rem"
+      id="card-display-flex-column padding-2-vh"
       class="card-header fiction-global-information-container-hearder display-flex-row align-items-content-justify-content"
     >
       <CreateCommentModal

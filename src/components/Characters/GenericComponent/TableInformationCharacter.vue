@@ -1,5 +1,5 @@
 <template>
-  <div class="display-flex-column flex-one padding-1-rem">
+  <div class="display-flex-column flex-one padding-2-vh">
     <div class="row width-80-vh">
       <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-3 col-sm-3 col-xs-3">
         <p class="text-white"><strong>Genre</strong></p>

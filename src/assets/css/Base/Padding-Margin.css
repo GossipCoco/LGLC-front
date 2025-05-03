@@ -29,19 +29,16 @@
 .margin-4-0-0-0{
     margin: 4vh 0 0 0;
 }
-.margin-0-0-4-0
-{
+.margin-0-0-4-0{
     margin: 0 0 4vh 0;
 }
-.margin-0-0-4-0
-{
+.margin-0-0-4-0{
     margin: 0 0 4vh 0;
 }
 .margin-5-0-0-0{
     margin: 5vh 0 0 0;
 }
-/* EN négatif */
-
+/* EN négatif & spécific*/
 .maTB-4vh-2vh{
     margin: -4vh 0 -2vh 2vh;
 }

@@ -1,10 +1,10 @@
 <template>
   <div
     id="mouse-shot"
-    class="dashboard-max-card-container border-none background-color-main-lineart flex-one card display-flex-column padding-1-rem"
+    class="dashboard-max-card-container border-none background-color-main-lineart flex-one card display-flex-column padding-2-vh"
   >
     <CardHeader v-bind:Title="'Jeu du chat et de la souris'" />
-    <div class="card-body padding-1-rem">
+    <div class="card-body padding-2-vh">
       <div class="game height-75-vh" @keydown="handleKeyPress" tabindex="0">
         <div
           v-if="gameStarted"
