@@ -6,7 +6,7 @@
       data-bs-toggle="modal"
       data-bs-target="#AddAOriginalCharacterModalModal"
     >
-      Ajouter un personnage
+      Ajouter un nouvel OC
     </button>
   
     <!-- Modal -->

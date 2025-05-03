@@ -23,7 +23,7 @@
         </div>
       </div>
       <div class="row middle-fiction-card">
-        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 padding-0-0-0-5vh">
+        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 padding-0-0-0-5vh col-left">
           <div class="display-flex-column">
             <div
                 class="display-flex-column image-fiction-container margin-21vh-0-0-0 all-illustrations-fiction-container padding-1-rem overflowY-X-hidden background-size-cover"
@@ -38,7 +38,7 @@
           </div>
         </div>
         <ListAllChapters v-bind:Chapters="fiction.Chapters" />
-        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 right-column-image-container">
+        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 right-column-image-container col-right">
           <div class="display-flex-column all-characters-of-fiction">
             <div v-if="nbKind > 0 " class="display-flex-column kind-fiction-container Noto-Sans">
               <p>Genre(s) : &nbsp;</p>
