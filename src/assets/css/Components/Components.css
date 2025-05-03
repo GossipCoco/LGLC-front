@@ -21,19 +21,7 @@
 .nav-link:focus, .nav-link:hover {
     color: var(--active-hover);
 }
-/* PAGINATION */
-.one-quest-container .row.pagination-zone-container{
-    margin: 10vh 0 0 0;
-}
-.row.pagination-container.all-locations-pagination-container{
-    margin: 9vh 0 0 0;
-}
-.all-fictions-container-global .row.pagination-container{
-    margin: 1vh 0 2vh -2vh;
-}
-.pagination-container.all-clans-pagination-container{
-    margin-top: 4vh;
-}
+
 .logo-wrapper-contain .logo{
     flex: 0.25
 }

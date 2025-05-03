@@ -160,9 +160,7 @@ li.quest-container {
     left: 0;
     transition: transform 0.1s ease-out;
 }
-.pagination-container .display-flex-column button{
-    margin: 0.5rem 0;
-}
+
 .buttons-container{
     margin: 0.25rem;
 }

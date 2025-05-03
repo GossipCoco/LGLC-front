@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid">
-    <div class="padding-0 overflowX-hidden clans-location-container overflowY-auto">
+    <div class="padding-0 overflowX-hidden clans-location-container overflowY-hidden">
       <div class="display-flex-row card-group clan-group location-group-margin width-120-vh">
         <div v-for="(location, index) in allLocations" :key="index">
           <div class="card background-color-dark-green-01 location-clan-background-width-container">

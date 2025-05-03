@@ -59,3 +59,22 @@
 .pagination .page-link, .pagination .page-link:hover{
     border: 1px solid rgba(var(--dark-green-01),1);
 }
+.pagination-container .display-flex-column button{
+    margin: 0.5rem 0;
+}
+.pagination{
+    max-width: 79vh;
+    height: 5vh;
+}
+.one-quest-container .row.pagination-zone-container{
+    margin: 10vh 0 0 0;
+}
+.row.pagination-container.all-locations-pagination-container{
+    margin: 9vh 0 0 0;
+}
+.all-fictions-container-global .row.pagination-container{
+    margin: 1vh 0 2vh -2vh;
+}
+.pagination-container.all-clans-pagination-container{
+    margin-top: 4vh;
+}
