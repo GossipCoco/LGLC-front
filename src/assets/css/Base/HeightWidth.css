@@ -143,7 +143,7 @@
 .row.top-dashboard .card-body.user-info-text > div, .fiction-summary-card{
     width: 44vh;
 }
-.dashboard-max-card-container.card-height.fiction-container .card-body, 
+/* .dashboard-max-card-container.card-height.fiction-container .card-body,  */
 .dashboard-max-card-container.card-height .card-body {
     height: 80vh;
 }

@@ -3,7 +3,7 @@
     <div class="display-flex-column">
       <div class="flex-one display-flex-column">
         <router-link :to="'/CommentByFiction/' + Title" class="btn btn-primary">
-          Lire les commentaire
+          Lire les commentaires
         </router-link>
         <button
           type="button"

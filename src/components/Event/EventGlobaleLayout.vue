@@ -1,7 +1,7 @@
 <template>
   <div class="dashboard-max-card-container border-none background-color-main-lineart flex-one card display-flex-column event-container padding-2-vh">
     <CardHeader v-bind:Title="'évènements'" />
-    <div class="card-body padding-2-vh">
+    <div class="card-body height-80-vh padding-2-vh">
       <div class="row event-container">
         <div class="col-6 col-sm-12 col-md-6">
           <ListEvents v-bind:events="events" />

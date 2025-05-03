@@ -2,7 +2,7 @@
   <div class="Comment-icon">
     <div class="display-flex-column">
       <router-link :to="'/CommentByFiction/' + Title" class="btn btn-primary">
-        Lire les commentaire
+        Lire les commentaires
       </router-link>
       <CreateCommentModal
         v-bind:fanfiction="Title"
