@@ -1,7 +1,7 @@
 <template>
   <div
     id="mouse-shot"
-    class="dashboard-max-card-container border-none background-color-main-lineart flex-one card display-flex-column padding-2-vh"
+    class="margin-2vh border-none background-color-main-lineart flex-one card display-flex-column padding-2-vh"
   >
     <CardHeader v-bind:Title="'Jeu du chat et de la souris'" />
     <div class="card-body padding-2-vh">

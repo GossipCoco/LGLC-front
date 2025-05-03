@@ -1,5 +1,5 @@
 <template>
-  <div id="goose-game" class="dashboard-max-card-container border-none background-color-main-lineart flex-one card display-flex-column padding-2-vh">
+  <div id="goose-game" class="margin-2vh border-none background-color-main-lineart flex-one card display-flex-column padding-2-vh">
     <CardHeader v-bind:Title="'Jeu de l\'oie'" />
     <div class="card-body padding-2-vh">
       <div class="row list-fiction-card-container game-map-container-global">
