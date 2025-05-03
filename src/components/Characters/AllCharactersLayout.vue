@@ -1,40 +1,8 @@
 <template>
-  <div class="character-container padding-0 list-all-characters-container padding-2-vh">
-    <!-- <div class="row row-filter background-color-dark-green-01 display-flex vertical-align-middle">
-      <div class="col-xxl-2 col-xl-2 col-lg-12 col-md-12 col-sm-12 col-xs-12 display-flex-row align-items-content-justify-content vertical-align-middle height-character">
-        <p class="text-white poppins-text">{{ labelFilter }}</p>
-      </div>
-      <InputName
-      class="input-name-margin"
-        v-bind:col="'col-xxl-4 col-xl-4 col-lg-12 col-md-12 col-sm-12 col-xs-12'"
-        v-bind:forId="'inputName'"
-        v-bind:label="'Nom du personnage'"
-        v-bind:getNameData="'getCurrentName'"
-        @getCurrentName="getCurrentName"
-      />
-      <GenericSelect
-        v-bind:col="'col-xxl-3 col-xl-3 col-lg-12 col-md-12 col-sm-12 col-xs-12 search-clan'"
-        v-bind:For="'SearchClan'"
-        v-bind:label="'Clan'"
-        v-bind:formdata="'getclans'"
-        v-bind:clans="clans"
-        @getclans="getclans"
-      />
-      <GenericSelect
-        v-bind:col="'col-xxl-2 col-xl-2 col-lg-12 col-md-12 col-sm-12 col-xs-12 search-grade'"
-        v-bind:For="'SearchGrade'"
-        v-bind:label="'Grade'"
-        v-bind:formdata="'getgrade'"
-        @getgrade="getgrades"
-      />
-    </div> -->
-    
-    <character-card v-bind:characters_props="allCharacters"  v-if="!showMyCharacter"/>
+  <div class="character-container width-120-vh padding-0 list-all-characters-container padding-2-vh">
+  <character-card v-bind:characters_props="allCharacters"  v-if="!showMyCharacter"/>
     <div class="row pagination-container-row">
       <div class="pagination-container">
-        <!-- <div class="row bottom-top-dashboard">
-          <Spinner v-if="showspinner" />
-        </div> -->
         <pagination
           v-if="!showspinner && nav.pages > 0"
           v-bind:nav="nav"
@@ -51,12 +19,8 @@ import functions from "../../services/functions";
 import CharacterService from "../../services/CharacterService";
 import ClansService from "../../services/ClansServices";
 import GradeService from "../../services/GradeService";
-
-// import GenericSelect from "../Components/FormComponent/GenericSelect.vue";
-// import InputName from "../Components/FormComponent/InputName.vue";
 import CharacterCard from "./CharacterComponent/CharacterCard.vue";
 import Pagination from "../Components/GenericComponent/Pagination.vue";
-// import Spinner from "../Components/GenericComponent/Spinner.vue";
 
 export default {
   name: "AllCharacters",
@@ -76,7 +40,7 @@ export default {
       nav: {
         current: 0,
         pages: 0,
-        step: 8,
+        step: 6,
       },
       showspinner: false,
     };
@@ -153,10 +117,10 @@ export default {
     },
     getAllCharacters(nav) {
       if(window.innerWidth >= this.width){
-          this.nav.step = 10
+          this.nav.step = 6
         }else if(window.innerWidth < this.width)
         {
-          this.nav.step = 8
+          this.nav.step = 6
         }
       CharacterService.getAllCharacters({ nav })
         .then((response) => {

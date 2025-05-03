@@ -67,9 +67,9 @@
     height: 25vh;
 }
 #all-characters-container-card .character-card.card {
-    min-width: 25vh;
-    max-width: 25vh;
-    height: 37vh;
+    min-width: 30vh;
+    max-width: 30vh;
+    height: 40vh;
 }
 .height-character{
     height: 7vh
@@ -88,7 +88,10 @@
 .character-list-wrapper .border-card-color{
     height: 88.5vh;
 }
-.character-card.card .card-image, .card-image img  {
+.character-card.card .card-image{
+    width: 28vh;
+}
+.card-image img  {
     width: 23vh;
 }
 .card.card-image-layout.clan-detail-layout.mb-3,
