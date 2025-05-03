@@ -1,8 +1,8 @@
 <template>
-  <div class="height-fixe character-container padding-0 list-all-characters-container padding-2-vh">
-    <div class="row row-filter background-color-dark-green-01 display-flex vertical-align-middle">
+  <div class="character-container padding-0 list-all-characters-container padding-2-vh">
+    <!-- <div class="row row-filter background-color-dark-green-01 display-flex vertical-align-middle">
       <div class="col-xxl-2 col-xl-2 col-lg-12 col-md-12 col-sm-12 col-xs-12 display-flex-row align-items-content-justify-content vertical-align-middle height-character">
-        <p class="text-white">{{ labelFilter }}</p>
+        <p class="text-white poppins-text">{{ labelFilter }}</p>
       </div>
       <InputName
       class="input-name-margin"
@@ -27,7 +27,7 @@
         v-bind:formdata="'getgrade'"
         @getgrade="getgrades"
       />
-    </div>
+    </div> -->
     <character-card v-bind:characters_props="allCharacters" v-if="!showMyCharacter"/>
     <div class="row pagination-container-row">
       <div class="pagination-container">
@@ -51,15 +51,15 @@ import CharacterService from "../../services/CharacterService";
 import ClansService from "../../services/ClansServices";
 import GradeService from "../../services/GradeService";
 
-import GenericSelect from "../Components/FormComponent/GenericSelect.vue";
-import InputName from "../Components/FormComponent/InputName.vue";
+// import GenericSelect from "../Components/FormComponent/GenericSelect.vue";
+// import InputName from "../Components/FormComponent/InputName.vue";
 import CharacterCard from "./CharacterComponent/CharacterCard.vue";
 import Pagination from "../Components/GenericComponent/Pagination.vue";
 import Spinner from "../Components/GenericComponent/Spinner.vue";
 
 export default {
   name: "AllCharacters",
-  components: { CharacterCard, Pagination, GenericSelect, InputName, Spinner },
+  components: { CharacterCard, Pagination, Spinner },
   data() {
     return {
       labelFilter: "Chercher des fictions par",

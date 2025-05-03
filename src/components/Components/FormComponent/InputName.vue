@@ -1,7 +1,7 @@
 <template>
   <div :class="col">
     <div class="mb-3 row">
-      <label :for="forId" class="col-sm-5 col-form-label white-text">{{ label }}</label>
+      <label :for="forId" class="col-sm-5 col-form-label white-text poppins-text">{{ label }}</label>
       <div class="col-sm-7">
         <input
           type="text"

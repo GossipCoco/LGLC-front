@@ -1,10 +1,10 @@
 <template>
   <div :class="col">
     <div class="mb-3 row">
-      <label :for="For" class="col-sm-4 text-white form-label form-select-sm">
+      <label :for="For" class="col-sm-2 text-white form-label form-select-sm poppins-text">
         {{ label }}
       </label>
-      <div class="col-sm-8">
+      <div class="col-sm-10">
         <select
         v-if="label !== 'Auteur'"
         :id="For"
