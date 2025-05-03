@@ -84,7 +84,6 @@
 .location-clan-card-details-body{
     height: 44vh;
 }
-.character-details-card.border-card-color,
 .character-list-wrapper .border-card-color{
     height: 30vh;
 }
@@ -455,7 +454,7 @@ audio{
 }
 /* % */
 .character-details.card .card-image img {
-    width: 75%;
+    width: 50%;
 }
 .card-img-top.background-image-quest-image-container img,
 .character-l1 img {
