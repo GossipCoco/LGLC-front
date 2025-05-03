@@ -94,7 +94,6 @@ export default {
   created() {
     this.form.FictionId = this.fictionId;
     this.form.ChapterId = this.ChapterId;
-    console.log(this.form);
   },
   methods: {
     getData() {

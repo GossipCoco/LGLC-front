@@ -40,6 +40,10 @@
         <ListAllChapters v-bind:Chapters="fiction.Chapters" />
         <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 right-column-image-container col-right">
           <div class="display-flex-column all-characters-of-fiction">
+            <p>Il y a {{ lastChap - 1 }} chapitre<span v-if="lastChap - 1 > 1">s</span></p>
+            <p class="white-text font-size-medium margin-bottom-2">
+              Nombre total de mots : {{ totalNbWords }}
+            </p>
             <div v-if="nbKind > 0 " class="display-flex-column kind-fiction-container Noto-Sans">
               <p>Genre(s) : &nbsp;</p>
               <div class="display-flex-row">
@@ -101,14 +105,14 @@ export default {
     "OCCharacters",
     "UploadIllustration",
     "IllustrationId",
-    "Kinds"
+    "Kinds",
+    "nbChapter"
   ],
   components: {
     EditSummary,
     CarrouselCharacter,
     AddANewCharacterModal,
     AddAOriginalCharacterModal,
-    // UploadImage,
     ListAllChapters,
   },
   data() {
@@ -118,12 +122,24 @@ export default {
       previewImage: undefined,
       file: null, // Ajout de cette ligne pour stocker le fichier
       nbKind: null,
-      Illustration:{}
+      Illustration:{},
+      nbWord: null
     };
   },
   created(){
     this.getNbKind()
     this.getAllIllustration()
+    this.getNbWords()
+  },
+  mounted() {
+    console.log("Chapters type:", typeof this.fiction.Chapters);
+    console.log("Chapters value:", this.fiction.Chapters);
+  },
+  computed: {
+    totalNbWords() {
+      const chapters = [...this.fiction.Chapters];
+      return chapters.reduce((total, chapter) => total + parseInt(chapter.NbWords || 0), 0).toLocaleString();
+    }
   },
   methods: {
     getNbKind(){
@@ -131,6 +147,9 @@ export default {
     },
     getAllIllustration(){
       this.Illustration = this.IllustrationId
+    },
+    getNbWords(){
+      console.log(this.fiction.Chapters)
     }
   }
 };

@@ -10,7 +10,7 @@
           <router-link :to="'/chapter/' + chapter.Title"
             class="font-variant-small-caps title-fiction-links font-weight-400 color-clear-green-01 Noto-Sans"       
           >
-            {{ chapter.Title }}
+            {{ chapter.Title }} -  {{ chapter.NbWords }} mots
           </router-link>
         </li>
       </ul>
