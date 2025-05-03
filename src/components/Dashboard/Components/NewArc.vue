@@ -14,8 +14,8 @@
             <div v-if="currentArc">
                 <h2 class="white-text">Arc actuel : {{ currentArc.Title }}</h2>
                 <div class="display-flex-row">
-                  <img :src="currentArc.Image" width="25%"/>
-                  <div v-html="currentArc.Summary"></div>
+                  <img :src="currentArc.Image" width="25%" class="border-radius-12px"/>
+                  <div v-html="currentArc.Summary" class="poppins-text padding-1-vh"></div>
               </div>
             </div>
         </div>

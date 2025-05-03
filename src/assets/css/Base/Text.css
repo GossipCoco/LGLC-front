@@ -5,12 +5,14 @@
   font: 500 2.25rem all-petite-caps;
   font-variant: all-petite-caps;
 }
-.summary-title-text p a {
+/* .summary-title-text p a {
   font-weight: 500;
   font-size:  1.15em;
   font-family: 'Poppins';
-}
-.summary-title-text p a:hover, .summary-title-text p a.last-chapter-text:hover, .h5-container a:hover {
+} */
+.summary-title-text p a:hover,
+.summary-title-text p a.last-chapter-text:hover,
+.h5-container a:hover {
   color: rgba(var(--active-hover), 1);
 }
 .summary-text-font p {
@@ -61,7 +63,8 @@ h5.card-title {
 .h5-container a, #collapseExample3 p, .h5-container{
   font-weight: 800;
 }
-h5.card-title a, .my-oc-character-container p a{
+/* h5.card-title a,*/ 
+.my-oc-character-container p a{ 
   font-size: 1em;
 }
 .title-text-novel p{
@@ -70,14 +73,8 @@ h5.card-title a, .my-oc-character-container p a{
   font-variant-caps: normal;
 }
 .title-text-novel p a{
-  font-size: 1.25em;
   line-height: 70%;
   overflow-wrap: break-word;
-}
-.user-info-text p
-.title-text-novel .text-white.text-align-justify.poppins-text p,
-.summaray-title-text p span.text-white .text-white.text-align-justify.poppins-text p{
-  font-size: 0.85em;
 }
 .info-fan h3{
   font-size: 1.2em;
@@ -85,10 +82,6 @@ h5.card-title a, .my-oc-character-container p a{
 .summary-title-text span.text-white p{
   text-align: justify;
 }
-.last-chapter-text-link{
-  font-size: .9em;
-}
-
 .quest-container .card-header h6{
   color: rgba(var(--main-white), 1);
 }
@@ -97,9 +90,6 @@ h5.card-title a, .my-oc-character-container p a{
 }
 .text-small {
   font-size: 85%;
-}
-.title-fiction-links{
-  font-size: 1em;
 }
 .title-fiction-links:hover{
   color: rgba(var(--active-hover), 1);

@@ -18,7 +18,7 @@
                   <h5 class="card-title text-dark-green montesserat">
                     <router-link
                       :to="'/fiction/' + fiction.Title"
-                      class="text-dark-green montesserat"
+                      class="text-dark-green montesserat "
                       >{{ fiction.Title }}</router-link
                     >
                   </h5>
@@ -35,7 +35,7 @@
               </div>
             </div>
             <div
-              class="card-text width-30-vh text-align-justify summary-text-font display-none-responsive padding-1-vh"
+              class="card-text width-30-vh text-align-justify Noto-Sans summary-text-font display-none-responsive padding-1-vh"
               v-html="truncateText(fiction.Summary, 65)"
             ></div>
           </div>

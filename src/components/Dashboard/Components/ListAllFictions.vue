@@ -15,11 +15,11 @@
             <div class="summary-title-text font-variant-small-caps text-ternary-green">
               <p>
                 <span class="link-to-fiction-text">
-                  <router-link class="poppins-text text-ternary-green" :to="'/fiction/' + fiction.Title">
+                  <router-link class="poppins-text text-ternary-green font-size-1-25 font-weight-600" :to="'/fiction/' + fiction.Title">
                     {{ fiction.Title }}
                   </router-link> </span
                 ><br />
-                <span class="text-white font-variant-normal" v-html="truncateText(fiction.Summary, 160)"></span>
+                <span class="text-white font-variant-normal poppins-text" v-html="truncateText(fiction.Summary, 160)"></span>
               </p>
             </div>
           </div>

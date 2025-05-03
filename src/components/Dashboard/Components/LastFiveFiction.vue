@@ -34,7 +34,7 @@
                 {{ fiction.Title }}
               </router-link>
             </p>
-            <div v-html="truncateText(fiction.Summary, 50)" class="text-white text-align-justify poppins-text"></div>
+            <div v-html="truncateText(fiction.Summary, 50)" class="font-size-1 text-white text-align-justify poppins-text"></div>
           </div>
         </div>
         </div>

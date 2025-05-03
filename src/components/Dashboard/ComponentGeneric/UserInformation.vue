@@ -1,32 +1,32 @@
 <template>
   <div class="row user-all-information-container">
     <div class="col-7">
-      <p class="display-flex-row" v-for="(info, index) in information" :key="index">
-        <span class="label-profil poppins-text text-white flex-one" v-for="(name, index) in info" :key="index">
+      <p class="display-flex-row font-size-0-85" v-for="(info, index) in information" :key="index">
+        <span class="label-profil poppins-text text-white flex-one font-size-0-85" v-for="(name, index) in info" :key="index">
           {{ name }}</span
         >
       </p>
     </div>
     <div class="col-5">
-      <p class="display-flex-row font-weight-600">
+      <p class="display-flex-row font-weight-600 font-size-0-85">
         <span>{{ formatDate(Inscription) }}</span>
       </p>
-      <p class="display-flex-row font-weight-600">
+      <p class="display-flex-row font-weight-600 font-size-0-85">
         <span>{{ formatDate(LastConnexion) }}</span>
       </p>
-      <p class="display-flex-row font-weight-600">
+      <p class="display-flex-row font-weight-600 font-size-0-85">
         <span>{{ nBFiction }}</span
         >&nbsp;<span class="text-white poppins-text">fictions</span>
       </p>
-      <p class="display-flex-row font-weight-600">
+      <p class="display-flex-row font-weight-600 font-size-0-85">
         <span> {{ totalWords }}</span
-        >&nbsp;<span class="text-white poppins-text">mots</span>
+        >&nbsp;<span class="text-white poppins-text font-size-0-85">mots</span>
       </p>
-      <p class="display-flex-row font-weight-600">
+      <p class="display-flex-row font-weight-600 font-size-0-85">
         <span>{{ totalPoints }}</span
         >&nbsp; <span class="text-white poppins-text">points</span>
       </p>
-      <p class="display-flex-row font-weight-600">
+      <p class="display-flex-row font-weight-600 font-size-0-85">
         <span>{{ NbOCs }}</span
         >&nbsp; <span class="text-white poppins-text">personnages</span>
       </p>
