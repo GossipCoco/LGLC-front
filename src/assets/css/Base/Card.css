@@ -297,3 +297,6 @@ li.quest-container {
     align-items: center;
     padding: 2vh 0 0 6vh;
 }
+.quest--global-container.flex-wrap.height-18-rem{
+    margin: 0 -4vh 0 -2vh;
+}

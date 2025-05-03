@@ -1,5 +1,5 @@
 <template>
-  <div class="quest-details align-items-content-justify-content">
+  <div class="quest-details align-items-content-justify-content width-80-vh">
     <div class="display-flex-column">
       <div class="display-flex-column">
         <p class="text-align-justify flex-one">{{ questDatas.Description }}</p>
@@ -7,7 +7,6 @@
         <p class="text-align-justify flex-one">{{ questDatas.ObjectiveDescription }}</p>
       </div>
     </div>
-  </div>
   <div class="display-flex-column">
     <button class="btn btn-success width-50-vh" @click="completeQuest">
       Compléter la quête
@@ -17,7 +16,8 @@
         <p class="text-align-justify">Félicitations ! Vous avez gagné 100 points !</p>
       </div>
     </div>
-  </div>
+  </div>  
+</div>
 </template>
 <script>
 export default {
