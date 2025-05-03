@@ -1,17 +1,13 @@
 <template>
-  <div class="card-body align-items-content-justify-content">
-    <p class="display-flex align-items-content-justify-content">
-      <span class="name-characatrer-link flex-one align-items-content-justify-content">
-        <router-link
-          :to="route + name"
-          type="button"
-          class="btn btn-primary poppins-text padding-2-vh-0 margin-0-0-0-1vh"
-        >
-          {{ name }}
-        </router-link>
-      </span>
-    </p>
-  </div>
+  <div class="card-body align-items-content-justify-content name-characatrer-link">
+    <router-link
+      :to="route + name"
+      type="button"
+      class="btn btn-primary poppins-text background-color-active"
+    >
+        {{ name }}
+      </router-link>
+    </div>
 </template>
 <script>
 export default {
