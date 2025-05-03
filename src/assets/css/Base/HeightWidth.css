@@ -325,7 +325,7 @@
     height: 8vh;
 }
 .list-all-characters-container .row-filter{
-    height: 13vh;
+    height: 10vh;
 }
 #accueil header {
     height: 14vh;
@@ -427,7 +427,7 @@
     height: 30vh;
 }
 .summmary-book-height-dashboard{
-    height: 24vh;
+    height: 18vh;
 }
 .title-dashboard-container-header {
     height: 12vh;
@@ -440,9 +440,7 @@
 .all-characters-of-fiction{
     width: 28vh;
 }
-.card-body.last-chapter-card.text-white{
-    height: 30rem;
-}
+
 .row.list-fiction-card-container{
     height: 38rem;
 }

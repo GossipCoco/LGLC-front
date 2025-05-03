@@ -17,13 +17,13 @@
                 <div class="display-flex-row align-items-content-justify-content">
                   <img loading="lazy" src="../../../../public/images/Game/puzzle.png"/>
                   <p>
-                    <router-link class="text-white" to="/puzzle">
+                    <router-link class="text-white poppins-text" to="/puzzle">
                       Jeu du puzzle
                     </router-link>
                   </p>
                 </div>
                 <div class="display-flex-column align-items-content-justify-content">
-                  <p class="text-white">
+                  <p class="text-white poppins-text">
                     Résous des puzzles en temps record et gagne des points
                   </p>
                 </div>
@@ -36,13 +36,13 @@
                 <div class="display-flex-row align-items-content-justify-content">
                   <img loading="lazy" src="../../../../public/images/Game/mouse01.png"/>
                   <p>
-                    <router-link class="text-white" to="/mouseShot"
+                    <router-link class="text-white poppins-text" to="/mouseShot"
                       >Attrape la souris!
                     </router-link>
                   </p>
                 </div>
                 <div class="display-flex-column align-items-content-justify-content">
-                  <p class="text-white">
+                  <p class="text-white poppins-text">
                     Fais preuve d'habilité pour capturer un maximum de sours et
                     gagne des points
                   </p>
@@ -59,11 +59,11 @@
                 <div class="display-flex-row align-items-content-justify-content">
                   <img loading="lazy" src="../../../../public/images/Game/oie01.png"/>
                   <p>
-                    <router-link class="text-white" to="/GooseGameLayout">Jeu de l'Oie</router-link>
+                    <router-link class="text-white poppins-text" to="/GooseGameLayout">Jeu de l'Oie</router-link>
                   </p>
                 </div>
                 <div class="display-flex-column align-items-content-justify-content">
-                  <p class="text-white">
+                  <p class="text-white poppins-text">
                     Joue au jeu de l'oie, trouve des trésors et gagne des points
                   </p>
                 </div>
@@ -76,11 +76,11 @@
                 <div class="display-flex-row align-items-content-justify-content">
                   <img loading="lazy" src="../../../../public/images/Game/quête.png"/>
                   <p>
-                    <router-link class="text-white" to="/Quest">Quêtes</router-link>
+                    <router-link class="text-white poppins-text" to="/Quest">Quêtes</router-link>
                   </p>
                 </div>
                 <div class="display-flex-column align-items-content-justify-content">
-                  <p class="text-white">
+                  <p class="text-white poppins-text">
                     Réalise et accomplis des quêtes pour gagner des points
                   </p>
                 </div>

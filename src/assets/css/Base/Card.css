@@ -291,3 +291,10 @@ li.quest-container {
 .avatar-container{
     margin: -1vh 0 0 0;
 }
+.music-card button{
+    margin: 0 1vh 0 1vh;
+}
+.card-body.last-chapter-card.text-white{
+    align-items: center;
+    padding: 2vh 0 0 6vh;
+}

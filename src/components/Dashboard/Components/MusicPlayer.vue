@@ -1,6 +1,6 @@
 <template>
   <div class="col-xxl-3 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12 card-global">
-    <div class="card background-lineart border-none fiction-card scheduler">
+    <div class="card background-lineart border-none music-card">
         <TitleHeaderDashboard v-bind:title="'Musique'" v-bind:type="'fictions'"/>
         <div class="card-body">
       <div class="music-player">
@@ -8,9 +8,9 @@
           <source :src="currentTrack.url" type="audio/mpeg" />
           Your browser does not support the audio element.
         </audio>
-        <div class="controls display-flex-column">
-          <button class="btn btn-primary" @click="previousTrack">Précédent</button>
-          <button class="btn btn-primary" @click="nextTrack">Suivant</button>
+        <div class="controls display-flex-row width-40-vh">
+          <button class="btn btn-primary poppins-text width-20-vh" @click="previousTrack">Précédent</button>
+          <button class="btn btn-primary poppins-text width-20-vh" @click="nextTrack">Suivant</button>
           </div>
         </div>
       </div>

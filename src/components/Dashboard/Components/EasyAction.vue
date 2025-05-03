@@ -6,10 +6,12 @@
         />    
       <div class="card-body easy-action-container">
         <div class="display-flex-column flex-one">
-        <router-link to="/CreateAnOriginalCharacter" type="button" class="btn btn-primary margin-2vh-0-0-0">
+        <router-link to="/CreateAnOriginalCharacter" type="button" class="btn btn-primary margin-2vh-0-0-0 poppins-text">
           Créer un nouveau personnage
         </router-link>
-        <router-link type="button" class="btn btn-primary margin-2vh-0-0-0" to="/createANewFiction">Créer une nouvelle fiction</router-link>
+        <router-link type="button" class="btn btn-primary margin-2vh-0-0-0 poppins-text" to="/createANewFiction">
+          Créer une nouvelle fiction
+        </router-link>
       </div>
       </div>
     </div>

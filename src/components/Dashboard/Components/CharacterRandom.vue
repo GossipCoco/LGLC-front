@@ -9,7 +9,7 @@
               :key="character.Id"
             >
               <router-link :to="'/characterDetails/' + character.CurrentName" class="display-flex-column">
-                <p class="text-white">{{ character.CurrentName }}</p>
+                <p class="text-white poppins-text">{{ character.CurrentName }}</p>
                 <div
                   class="rond-character-background border-radius-100 background-size-cover display-flex-row align-items-content-justify-content"
                   v-bind:style="{
