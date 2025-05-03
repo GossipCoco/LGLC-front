@@ -1,6 +1,6 @@
 <template> 
-  <div  id="all-characters-container-card" class="row all-characters-container-card">
-    <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-3 mb-sm-0 display-flex-row
+  <div id="all-characters-container-card" class="row all-characters-container-card">
+    <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 display-flex-row
                 align-items-content-justify-content character-container overflowY-X-hidden">
       <div
         v-for="(character, index) in characters_props"

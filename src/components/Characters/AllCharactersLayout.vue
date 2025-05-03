@@ -28,12 +28,13 @@
         @getgrade="getgrades"
       />
     </div> -->
-    <character-card v-bind:characters_props="allCharacters" v-if="!showMyCharacter"/>
+    
+    <character-card v-bind:characters_props="allCharacters"  v-if="!showMyCharacter"/>
     <div class="row pagination-container-row">
       <div class="pagination-container">
-        <div class="row bottom-top-dashboard">
+        <!-- <div class="row bottom-top-dashboard">
           <Spinner v-if="showspinner" />
-        </div>
+        </div> -->
         <pagination
           v-if="!showspinner && nav.pages > 0"
           v-bind:nav="nav"
@@ -55,11 +56,11 @@ import GradeService from "../../services/GradeService";
 // import InputName from "../Components/FormComponent/InputName.vue";
 import CharacterCard from "./CharacterComponent/CharacterCard.vue";
 import Pagination from "../Components/GenericComponent/Pagination.vue";
-import Spinner from "../Components/GenericComponent/Spinner.vue";
+// import Spinner from "../Components/GenericComponent/Spinner.vue";
 
 export default {
   name: "AllCharacters",
-  components: { CharacterCard, Pagination, Spinner },
+  components: { CharacterCard, Pagination },
   data() {
     return {
       labelFilter: "Chercher des fictions par",

@@ -54,7 +54,7 @@
     margin: 0.25rem 0 0 5rem;
 }
 .all-characters-container-card {
-    margin: 0 14vh 0 3vh;
+    margin: 0 5vh 0 10vh;
 }
 .character-l1 img:hover {
     transform: scale(1.5);
