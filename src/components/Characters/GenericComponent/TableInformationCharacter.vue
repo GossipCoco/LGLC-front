@@ -1,25 +1,25 @@
 <template>
   <div class="display-flex-column flex-one padding-2-vh">
-    <div class="row width-80-vh">
-      <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-3 col-sm-3 col-xs-3">
+    <div class="row width-120-vh">
+      <div class="col-xxl-1 col-xl-1 col-lg-1 col-md-2 col-sm-2 col-sm-2 col-xs-2">
         <p class="text-white"><strong>Genre</strong></p>
-        <p class="text-white"><strong>{{ genre }}</strong></p>
+        <p class="text-white">{{ genre }}</p>
       </div>
       <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-3 col-sm-3 col-xs-3">
         <p class="text-white"><strong>Grade</strong></p>
-        <p class="text-white"><strong>{{ Grade }}</strong></p>
+        <p class="text-white">{{ Grade }}</p>
       </div>
-      <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-3 col-sm-3 col-xs-3">
+      <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-sm-2 col-xs-2">
         <p class="text-white"><strong>Chaton</strong></p>
-        <p class="text-white"><strong>{{ kitty }}</strong></p>
+        <p class="text-white">{{ kitty }}</p>
       </div>
-      <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-3 col-sm-3 col-xs-3">
+      <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-sm-3 col-xs-3">
         <p class="text-white"><strong>Apprenti</strong></p>
-        <p class="text-white"><strong>{{ apprentice }}</strong></p>
+        <p class="text-white">{{ apprentice }}</p>
       </div>
-      <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-3 col-sm-3 col-xs-3">
+      <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-sm-3 col-xs-3">
         <p class="text-white"><strong>Guerrier</strong></p>
-        <p class="text-white"><strong>{{ warrior }}</strong></p>
+        <p class="text-white">{{ warrior }}</p>
       </div>
     </div>
   </div>
