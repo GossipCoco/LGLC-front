@@ -10,13 +10,8 @@
         v-bind:nameRoute="'Nouvelle fiction'"
       />
       <div
-        class="card-body all-last-three-fictions-container display-flex-column align-items-content-justify-content"
+        class="card-body all-last-three-fictions-container padding-0 margin-0-rem display-flex-column align-items-content-justify-content"
       >
-        <div class="btn-all-my-fictions display-flex">
-          <router-link class="btn btn-primary" :to="'allFictions/' + usrId"
-            >Mes fictions</router-link
-          >
-        </div>
         <div v-for="(fiction, index) in GamesAndFictions" :key="index" class="title-text-novel display-block flex-one display-flex-column justify-content-left">
           <div class="title-text-novel margin-0-0-0-1vh padding-0 flex-one display-flex-row justify-content-left">
           <ImageRondDashboard

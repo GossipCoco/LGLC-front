@@ -124,7 +124,7 @@
     margin: 0 0.5rem;
 }
 .list-all-fictions-globale--container.three-last-chapters-container{
-    margin: 1rem 0 0 0;
+    margin: 0.5vh 0 0.5vh 0;
 }
 li.quest-container {
     margin: 0 0.25rem;
@@ -246,8 +246,8 @@ li.quest-container {
     margin: 0 0 0.25rem 0;
 }
 .summaray-title-text p{
-    margin: 0.25rem 0 0.25rem 0;
-    line-height: 0.95;
+    margin: 0.5vh 0;
+    line-height: 1;
     text-align: left;
 }
 .my-oc-card .card-body{
@@ -267,7 +267,7 @@ li.quest-container {
     margin: 0;
 }
 .last-chapter-card.card-body{
-    margin: -1rem 0 0 0;
+    margin: 0;
 }
 .card-body.last-chapter-card.new-current-arc-container{
     margin: 2vh auto;

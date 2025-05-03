@@ -1,13 +1,15 @@
 <template>
   <div class="summaray-title-text flex-one display-flex-column margin-0-0-0-2vh">
     <p>
-      <span class="last-chapter-text poppins-text font-weight-600 font-variant-small-caps text-ternary-green">
-      <router-link class="poppins-text text-ternary-green font-size-1em title-fiction-link" :to="'/fiction/' + FictionTitle">{{ FictionTitle }}</router-link>
+      <span class="last-chapter-text poppins-text font-weight-600 text-ternary-green">
+        <router-link class="poppins-text text-ternary-green font-size-1em title-fiction-link" :to="'/fiction/' + FictionTitle">
+          {{ FictionTitle }}
+        </router-link>
       </span>
     </p>
     <p>
       <router-link
-        class="last-chapter-text-link opensans-text font-size-1 font-weight-600 text-white"
+        class="last-chapter-text-link poppins-text font-size-1 font-weight-400 text-white"
         :to="'/chapter/' + ChapterTitle"
       >
         {{ ChapterTitle }}
