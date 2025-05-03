@@ -1,7 +1,7 @@
 <template>
   <div v-if="position === 'left'">
     <div
-      class="timeline-date wow fadeInLeft"
+      class="timeline-date width-20-vh wow fadeInLeft"
       data-wow-delay="0.1s"
       style="
         visibility: visible;

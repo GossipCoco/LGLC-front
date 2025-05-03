@@ -1,13 +1,13 @@
 <template>
   <div
     id="arc-book-container"
-    class="height-80-vh  border-none background-color-main-lineart flex-one card display-flex-column cat-corner padding-2-vh"
+    class="height-80-vh border-none background-color-main-lineart flex-one card display-flex-column cat-corner padding-2-vh"
   >
     <CardHeader v-bind:Title="'Les romans de La Guerre des Clans'" />
     <div class="card-body padding-2-vh height-80-vh">
-      <div class="row book-container overflowY-scroll overflowX-hidden">
+      <div class="row book-container overflowY-scroll overflowX-hidden height-80-vh">
         <div class="col-12 col-sm-12 col-md-12">
-          <div class="apland-timeline-area">
+          <div class="apland-timeline-area height-70-vh">
             <div v-for="(arc, index) in allBooks" :key="index">
               <TimeLayout v-bind:arc="arc" />
             </div>

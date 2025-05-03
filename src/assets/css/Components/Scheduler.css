@@ -10,7 +10,6 @@
 .card-body.scheduler-container a, .fc-toolbar-title{
     color: rgba(var(--main-white),1)
 }
-
 .fc .fc-button-primary{
     background-color: rgba(var(--dark-green-01),1)
 }
