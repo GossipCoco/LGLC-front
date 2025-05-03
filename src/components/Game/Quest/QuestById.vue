@@ -1,11 +1,8 @@
 <template>
-  <div
-    id="quest-by-id"
-    class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 card-global  flex-wrap quest-container flex-one width-100-percent"
+  <div id="quest-by-id"
+      class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 card-global flex-wrap quest-container flex-one width-100-percent"
   >
-    <div
-      class="card quest-by-id-card background-color-main-lineart width-100-percent"
-    >
+    <div class="card quest-by-id-card background-color-main-lineart width-100-percent">
       <card-header v-bind:Title="quest.Title"
         ><router-link class="btn btn-primary" to="/Quest"
           >Retour à la liste de quêtes</router-link
@@ -22,8 +19,7 @@
                   zIndex: layer.Position,
                   transform: `translate3d(${layer.translateX}, ${layer.translateY}, ${layer.translateZ}) scale(${layer.scale})`
                 }">
-            </div>
-            <!-- Composants interactifs au-dessus des layers -->
+            </div>           
             <div class="quest-content">
               <QuestMissionTarget :questDatas="quest" />
               <QuestQuestion v-if="quest.TypeQuest === 'question'" :questData="quest" />

@@ -18,6 +18,6 @@
 <script>
 export default {
   name: "CardHeader",
-  props: ["Title"],
+  props: ["Title", ""],
 };
 </script>

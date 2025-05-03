@@ -1,7 +1,7 @@
 <template>
   <div class="display-flex-column card-fiction-container">
     <div class="card-header">
-      <h6 class="width-5-vh">{{ quest.Title }}</h6>
+      <h6 class="width-20-vh">{{ quest.Title }}</h6>
     </div>
     <div class="card-body card-quest-by-id-container">
       <div class="display-flex-row flex-one">
