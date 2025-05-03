@@ -1,6 +1,6 @@
 <template>
   <div class="row pagination-zone-container width-180-vh display-flex align-items-content-justify-content vertical-align-middle">
-    <div class="pagination-container-row col-lg-12 col-md-12 col-sm-12 col-xxl-12 col-xs-12">
+    <div class="pagination-container-row margin-0-rem align-items-content-justify-content col-lg-12 col-md-12 col-sm-12 col-xxl-12 col-xs-12">
       <div class="row pagination-container width-180-vh align-items-content-justify-content">        
         <div class="col-md-6 col-sm-6 col-xl-6 col-xxl-6 col-xs-6 col-lg-6 col-pagination-container align-items-content-justify-content">
           <ul class="pagination" v-if="navPage.pages < 6">

@@ -9,8 +9,7 @@
     padding: 0.65rem 0;
     margin: -2vh 0 0 0;
 }
-.pagination li, .pagination-container,
-.pagination-container-row.col-lg-12.col-md-12.col-sm-12.col-xxl-12.col-xs-12 {
+.pagination li, .pagination-container {
     margin: 0;
     justify-content: center;
 }
