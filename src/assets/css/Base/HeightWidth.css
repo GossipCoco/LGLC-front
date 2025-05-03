@@ -131,9 +131,6 @@
 .carousel {
     width: 24vh;
 }
-#original-characters-list{
-    height: 87vh;
-}
 .clan-detail-layout .card-image img,
 .number-page-container{
     width: 17vh;
@@ -248,9 +245,7 @@
     height: 7vh;
     width: 28vh;
 }
-.all-my-characters-container{
-    height: 110vh;
-}
+
 .fiction-container .card-header{
     height: 13vh;
 }
