@@ -1,6 +1,6 @@
 <template>
   <div v-if="!showspinner" class="card-body user-information-container">
-    <div class="padding-2-rem white-text">
+    <div class="padding-4-vh white-text">
       <div class="display-flex-row">
         <div class="row">
           <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 col-xxl-2">
