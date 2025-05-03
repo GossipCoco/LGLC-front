@@ -127,8 +127,8 @@
 .file-input {
     display: none; /* Cache l'input file */
 }
-span.name-characatrer-link{
-    margin: -0.5rem;
+.name-characatrer-link .btn{
+    margin: -2vh 0 0 0;
 }
 .right-column-image-container{
     margin: -5rem 0 0 0;

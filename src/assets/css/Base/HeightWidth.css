@@ -86,7 +86,7 @@
 }
 .character-details-card.border-card-color,
 .character-list-wrapper .border-card-color{
-    height: 88.5vh;
+    height: 30vh;
 }
 .character-card.card .card-image{
     width: 28vh;
@@ -244,7 +244,7 @@
 }
 .name-characatrer-link .btn{
     height: 7vh;
-    width: 19vh;
+    width: 28vh;
 }
 .all-my-characters-container{
     height: 110vh;
