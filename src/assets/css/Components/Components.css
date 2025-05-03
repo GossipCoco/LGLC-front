@@ -21,7 +21,6 @@
 .nav-link:focus, .nav-link:hover {
     color: var(--active-hover);
 }
-
 .logo-wrapper-contain .logo{
     flex: 0.25
 }

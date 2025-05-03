@@ -61,9 +61,6 @@
 .height-20-rem{
     height: 20rem;
 }
-.height-70-vh{
-    height: 70vh;
-}
 /* VH */
 /*height*/
 .height-100{
@@ -107,6 +104,9 @@
 }
 .height-35-vh{
     height: 35vh;
+}
+.height-32-vh{
+    height: 32vh;
 }
 .height-30-vh{
     height: 30vh;
