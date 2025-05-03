@@ -8,7 +8,7 @@
         <CardHeader v-bind:Title="book.Title">
           <router-link to="/ArcBookLayout" class="btn btn-primary">Retour à la liste des arcs & romans</router-link>
         </CardHeader>
-        <div class="card-body width-60-vh padding-2-vh">
+        <div class="card-body width-60-vh height-80-vh padding-2-vh">
           <div class="row">
             <div class="col-12">
               <div
