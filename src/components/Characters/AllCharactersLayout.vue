@@ -25,13 +25,13 @@
             </div>
             </div>
           </div>
-          <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-10 col-xs-12">
+          <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-10 col-xs-12" v-if="ListAllCharacter && !useFiltered">
             <character-card
               v-bind:characters_props="allCharacters"              
             />
           </div>
-          <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-10 col-xs-12" v-if="!ListAllCharacter">
-
+          <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-10 col-xs-12" v-if="useFiltered">
+            <searched-character-card v-bind:SearchedCharacter="filteredCharacters" />
           </div>
         </div>
         <div class="row pagination-container-row">
@@ -58,10 +58,11 @@ import CardHeader from "./GenericComponent/CardHeader.vue";
 import CharacterCard from "./CharacterComponent/CharacterCard.vue";
 import Pagination from "../Components/GenericComponent/Pagination.vue";
 import InputComponent from "./GenericComponent/InputComponent.vue";
+import SearchedCharacterCard from "./SearchedCharacterCard.vue";
 
 export default {
   name: "AllCharacters",
-  components: { CharacterCard, Pagination, InputComponent, CardHeader },
+  components: { CharacterCard, Pagination, InputComponent, CardHeader,SearchedCharacterCard },
   data() {
     return {
       ListAllCharacter: true,
