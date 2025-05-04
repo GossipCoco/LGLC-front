@@ -27,6 +27,7 @@ export default {
   },
   created() {
     this.allcharacters = this.characters_props;
+    console.log(this.allCharacters)
   },
 };
 </script>

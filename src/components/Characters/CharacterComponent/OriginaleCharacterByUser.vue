@@ -49,7 +49,7 @@ import functions from "../../../services/functions";
 import CharacterService from "../../../services/CharacterService";
 import Pagination from "../../Components/GenericComponent/Pagination.vue";
 import BackgroundImage from "./BackgroundImage.vue";
-import CharacterCardBody from "./CharacterCardBody.vue";
+import CharacterCardBody from "../GenericComponent/CharacterCardBody.vue";
 
 export default {
   name: "OriginaleCharacterByUser",

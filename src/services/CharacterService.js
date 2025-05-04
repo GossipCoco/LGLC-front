@@ -28,8 +28,8 @@ class CharacterService {
     GetAllCharactersDashboard(nav) {
         return http.post('/character/GetAllCharactersDashboard', nav)
     }
-    getCharacterByNameSearch(name) {
-        return http.get(`/character/search/${name}`)
+    getCharacterByNameSearch(name, nav) {
+        return http.post(`/character/search/${name}`, nav)
     }
     GetAllNamesAndIdsCharacters() {
         return http.get('/character/GetAllNamesAndIdsCharacters')

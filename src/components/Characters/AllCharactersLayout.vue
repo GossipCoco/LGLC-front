@@ -2,17 +2,7 @@
   <div
     class="card card-all-my-characters background-none align-items-content-justify-content width-190-vh"
   >
-    <div
-      class="card-header background-lineart border-radius-12px background-color-dark-green-01 display-flex-row align-items-content-justify-content width-190-vh"
-    >
-      <h1 class="text-white poppins-text">Tous les personnages</h1>
-      <router-link
-        to="/CreateAnOriginalCharacter"
-        class="btn btn-lg btn-primary margin-0-0-0-2vh"
-      >
-        Nouveau personnage
-      </router-link>
-    </div>
+    <card-header v-bind:label="'Tous les personnages'" v-bind:route="'/CreateAnOriginalCharacter'" v-bind:NameLink="'Nouveau personnage'" />
     <div class="card-body width-190-vh height-90-vh">
       <div class="character-container padding-0 list-all-characters-container padding-2-vh">
         <div class="row width-190-vh">                    
@@ -37,9 +27,11 @@
           </div>
           <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-10 col-xs-12">
             <character-card
-              v-bind:characters_props="allCharacters"
-              v-if="!showMyCharacter"
+              v-bind:characters_props="allCharacters"              
             />
+          </div>
+          <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-10 col-xs-12" v-if="!ListAllCharacter">
+
           </div>
         </div>
         <div class="row pagination-container-row">
@@ -62,15 +54,17 @@ import functions from "../../services/functions";
 import CharacterService from "../../services/CharacterService";
 import ClansService from "../../services/ClansServices";
 import GradeService from "../../services/GradeService";
+import CardHeader from "./GenericComponent/CardHeader.vue";
 import CharacterCard from "./CharacterComponent/CharacterCard.vue";
 import Pagination from "../Components/GenericComponent/Pagination.vue";
 import InputComponent from "./GenericComponent/InputComponent.vue";
 
 export default {
   name: "AllCharacters",
-  components: { CharacterCard, Pagination, InputComponent },
+  components: { CharacterCard, Pagination, InputComponent, CardHeader },
   data() {
     return {
+      ListAllCharacter: true,
       labelFilter: "Chercher des fictions par",
       usr: this.$store.state.auth.user.usrID,
       userCurrent: this.$store.state.auth.user.usrID,
@@ -87,6 +81,10 @@ export default {
         step: 6,
       },
       showspinner: false,
+      nameSearch: null,
+      NameCharacterSearch:{},
+      useFiltered: false,
+      filteredCharacters: [],
     };
   },
   provide() {
@@ -101,8 +99,24 @@ export default {
     this.GetAllGrade();
   },
   methods: {
-    getCurrentName(e) {
-      console.log(e);
+    getCurrentName(e) {      
+      this.nameSearch = e
+        if (!this.nameSearch || this.nameSearch.trim() === '') {
+        this.useFiltered = false;
+        this.initPage(); // Recharge tout si champ vide
+        return;
+      }
+      CharacterService.getCharacterByNameSearch(this.nameSearch, this.nav)
+      .then((response) => {
+          console.log("this.filteredCharacters : ",response.data.ob);
+          this.filteredCharacters = response.data.ob;
+          this.ImageCharacter = this
+          this.useFiltered = true;
+        })
+        .catch((e) => {
+          console.log(e);          
+          this.useFiltered = false;
+        });
     },
     getclans(e) {
       console.log(e);
@@ -165,6 +179,7 @@ export default {
       CharacterService.getAllCharacters({ nav })
         .then((response) => {
           this.allCharacters = response.data.ob;
+          console.log("this.allCharacters : ", this.allCharacters)
           this.showspinner = false;
           functions.CalcPagination(
             this.NbAllCharacters,
