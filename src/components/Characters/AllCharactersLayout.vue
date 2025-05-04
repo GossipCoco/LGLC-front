@@ -106,8 +106,10 @@ export default {
   methods: {
     async CharacterFilteredPagination(page) {
       this.nav.current = page;
+      console.log(this.nav)
       try {
         const response = await CharacterService.getCharacterByNameSearch(this.nameSearch, this.nav);
+        
         this.filteredCharacters = response.data.ob;
         this.useFiltered = true;
       } catch (error) {

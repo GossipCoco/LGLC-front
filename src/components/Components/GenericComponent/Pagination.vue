@@ -257,7 +257,11 @@
 <script>
 export default {
   name: "Pagination",
-  props: ["nav", "filters", "getDatas"],
+  props: {
+    nav: Object,
+    filters: Array,
+    getDatas: String 
+  },
   data() {
     return {
       nbFound: null,
@@ -268,7 +272,7 @@ export default {
     };
   },
   created() {
-    // console.log(this.navPage)
+    console.log("Pagination - getDatas:", this.getDatas);
   },
   methods: {
     getMiddle() {
