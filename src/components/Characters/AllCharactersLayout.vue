@@ -116,7 +116,6 @@ export default {
         const response = await CharacterService.getCharacterByNameSearch(this.nameSearch, this.nav);
         this.filteredCharacters = response.data.ob;
         this.useFiltered = true;
-        console.log("useFiltered:", this.useFiltered);
       } catch (error) {
         console.error("Error in filtered pagination:", error);
       }
@@ -155,8 +154,6 @@ export default {
         if (this.useFiltered && this.nameSearch && this.nameSearch.trim() !== '') {
           const response = await CharacterService.getCharacterByNameSearch(this.nameSearch, this.nav);
           this.filteredCharacters = response.data.ob;
-          console.log("showspinner:", this.showspinner)
-          console.log("nav.pages:", this.nav.pages); 
         } else {
           await this.getAllCharacters(this.nav);
           console.log("nav.pages:", this.nav.pages); 
@@ -169,7 +166,6 @@ export default {
       try {
         const response = await CharacterService.CountAllCharacters();
         this.NbAllCharacters = response.data.ob.count;
-        console.log(this.NbAllCharacters)
         functions.CalcPagination(this.NbAllCharacters, this.nav, this.nav.step);
       } catch (error) {
         console.error("Error counting characters:", error);
@@ -179,7 +175,7 @@ export default {
       try {
         const response = await CharacterService.CountCharacterByNameSearch(name);
         this.NbAllCharacters = response.data.ob.count;
-        functions.CalcPagination(this.NbAllCharacters, this.nav, this.nav.step);
+        this.nav.pages = functions.CalcPagination(this.NbAllCharacters, this.nav, this.nav.step);
       } catch (error) {
         console.error(error);
       }
@@ -194,7 +190,7 @@ export default {
         const response = await CharacterService.getAllCharacters({ nav });
         this.allCharacters = response.data.ob;
         this.showspinner = false;
-        functions.CalcPagination(this.NbAllCharacters, this.nav, this.nav.step);
+        this.nav.pages = functions.CalcPagination(this.NbAllCharacters, this.nav, this.nav.step);
         console.log("nav.pages:", this.nav); 
 
       } catch (e) {

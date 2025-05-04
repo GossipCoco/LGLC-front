@@ -33,20 +33,16 @@ const getDate = (value) => {
     const date = dateTest.toLocaleDateString("fr-FR");
     return date;
 }
-const CalcPagination = (total, showPagination, nav) => {
-    nav.pages =
-      Math.trunc(total / nav.step) +
-      (total % nav.step ? 1 : 0);
-    nav.middle = Math.trunc(nav.pages / 2);
-    if(nav){
-        showPagination = true;
-    }
+const CalcPagination = (total, nav) => {
+  console.log('nav function', nav)
+  const pages = Math.trunc(total / nav.step) + (total % nav.step ? 1 : 0);
+  nav.pages = pages;
+  nav.middle = Math.trunc(pages / 2);
+  return pages; 
 }
 const fonctions = {
     getDate,
     CalcPagination,
     resizeImage
 }
-
-
 module.exports = fonctions
