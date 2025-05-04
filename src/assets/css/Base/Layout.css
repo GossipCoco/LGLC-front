@@ -34,7 +34,7 @@
     flex: .45;
 }
 .character-container {
-    margin: -5vh 0 0 -7vh;
+    margin: -5vh 0 0 0vh;
     flex-wrap: wrap;
 }
 .character-details .card-body {

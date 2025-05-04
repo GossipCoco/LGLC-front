@@ -13,18 +13,26 @@
         Nouveau personnage
       </router-link>
     </div>
-    <div class="card-body height-90-vh">
+    <div class="card-body width-190-vh height-90-vh">
       <div class="character-container padding-0 list-all-characters-container padding-2-vh">
-        <div class="row width-200-vh">
-                    
+        <div class="row width-190-vh">                    
           <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-12">
             <div class="card background-color-dark-green-01 margin-2vh-0-0-0 height-80-vh">
               <div class="card-header ">
                 <hh3 class="text-white poppins-text">Filtrer</hh3>
               </div>
-              <div class="card-body">
-
+              <div class="card-body ">
+                <div class="row">
+                  <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <input-component
+                    v-bind:forId="'inputName'"
+                    v-bind:label="'Nom du personnage'"
+                    v-bind:getNameData="'getCurrentName'"
+                    @getCurrentName="getCurrentName"
+                    />
+                </div>
               </div>
+            </div>
             </div>
           </div>
           <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-10 col-xs-12">
@@ -56,10 +64,11 @@ import ClansService from "../../services/ClansServices";
 import GradeService from "../../services/GradeService";
 import CharacterCard from "./CharacterComponent/CharacterCard.vue";
 import Pagination from "../Components/GenericComponent/Pagination.vue";
+import InputComponent from "./GenericComponent/InputComponent.vue";
 
 export default {
   name: "AllCharacters",
-  components: { CharacterCard, Pagination },
+  components: { CharacterCard, Pagination, InputComponent },
   data() {
     return {
       labelFilter: "Chercher des fictions par",
