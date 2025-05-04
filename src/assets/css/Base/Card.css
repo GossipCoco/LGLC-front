@@ -281,7 +281,7 @@ li.quest-container {
     margin: 0 0 0 1vh;
 }
 .card.arc-card.last-arc-container{
-    margin: 0 0 0 -2vh;
+    margin: 0 0 0 1vh;
 }
 .summary-fiction-container-wrapper{
     background-color: rgba(var(--dark-green-01), 0.5);

@@ -112,7 +112,7 @@
     height: 60vh;
 }
 .row.bottom-dashboard-levele-one .card.random-characters-card{
-    height: 48vh;
+    width: 112vh;
 }
 .illustration-background .background-fiction-contain{    
     width: 186vh;
@@ -358,13 +358,13 @@
     height: 80vh;
 }
 .row.bottom-dashboard-levele-one .card.all-fictions-card{
-    height: 86vh;
+    height: 84vh;
 }
 .card.video{
     width: 74vh;
 }
 .card.arc-card.last-arc-container{
-    width: 112vh;
+    width: 74vh;
 }
 .col-8.location-clan-card-details{
     height: 90vh;

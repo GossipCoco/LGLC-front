@@ -1,5 +1,5 @@
 <template>
-  <div id="dashboard-layout-container" class="scroll-bar-container">
+  <div id="dashboard-layout-container" class="scroll-bar-container" v-if="!showspinner">
     <div class="row title-dashboard">
       <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <TitleHeader
@@ -41,15 +41,15 @@
       </div>
       <div class="row bottom-dashboard-levele-one">
         <div class="col-xxl-5 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          
           <Video v-if="!showspinner" ></Video>
+          <new-arc v-if="!showspinner" />
           <LastBook v-if="!showspinner"/>
-          <CharacterRandom v-if="!showspinner" v-bind:randomCharacters="randomCharacters"/>
+          
         </div>
         <div class="col-xxl-7 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <div class="row fictions-games-container">
-            <new-arc />
-            <ListAllFictions v-if="!showspinner" />          
+            <CharacterRandom v-if="!showspinner" v-bind:randomCharacters="randomCharacters"/>            
+            <ListAllFictions v-if="!showspinner" />       
           </div>
         </div>
       </div>
