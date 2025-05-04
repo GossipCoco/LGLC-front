@@ -1,15 +1,42 @@
 <template>
-  <div class="character-container width-120-vh padding-0 list-all-characters-container padding-2-vh">
-  <character-card v-bind:characters_props="allCharacters"  v-if="!showMyCharacter"/>
-    <div class="row pagination-container-row">
-      <div class="pagination-container">
-        <pagination
-          v-if="!showspinner && nav.pages > 0"
-          v-bind:nav="nav"
-          v-bind:filters="filters"
-          v-bind:getDatas="'CharacterPagination'"
-          @CharacterPagination="CharacterPagination"
-        />
+  <div
+    class="card card-all-my-characters background-none align-items-content-justify-content width-190-vh"
+  >
+    <div
+      class="card-header border-radius-12px background-color-dark-green-01 display-flex-row align-items-content-justify-content width-190-vh"
+    >
+      <h1 class="text-white poppins-text">Tous les personnages</h1>
+      <router-link
+        to="/CreateAnOriginalCharacter"
+        class="btn btn-lg btn-primary margin-0-0-0-2vh"
+      >
+        Nouveau personnage
+      </router-link>
+    </div>
+    <div class="card-body height-90-vh">
+      <div class="character-container padding-0 list-all-characters-container padding-2-vh">
+        <div class="row width-190-vh">
+          <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-12">
+            <character-card
+              v-bind:characters_props="allCharacters"
+              v-if="!showMyCharacter"
+            />
+          </div>          
+          <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-12">
+
+          </div>
+        </div>
+        <div class="row pagination-container-row">
+          <div class="pagination-container">
+            <pagination
+              v-if="!showspinner && nav.pages > 0"
+              v-bind:nav="nav"
+              v-bind:filters="filters"
+              v-bind:getDatas="'CharacterPagination'"
+              @CharacterPagination="CharacterPagination"
+            />
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -116,12 +143,11 @@ export default {
       }
     },
     getAllCharacters(nav) {
-      if(window.innerWidth >= this.width){
-          this.nav.step = 6
-        }else if(window.innerWidth < this.width)
-        {
-          this.nav.step = 6
-        }
+      if (window.innerWidth >= this.width) {
+        this.nav.step = 6;
+      } else if (window.innerWidth < this.width) {
+        this.nav.step = 6;
+      }
       CharacterService.getAllCharacters({ nav })
         .then((response) => {
           this.allCharacters = response.data.ob;

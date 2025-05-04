@@ -34,7 +34,7 @@
     flex: .45;
 }
 .character-container {
-    margin: -6vh 0 0 15vh;
+    margin: -5vh 0 0 -10vh;
     flex-wrap: wrap;
 }
 .character-details .card-body {
@@ -54,7 +54,7 @@
     margin: 0.25rem 0 0 5rem;
 }
 .all-characters-container-card {
-    margin: 0 5vh 0 2vh;
+    margin: 0 5vh 0 8vh;
 }
 .character-l1 img:hover {
     transform: scale(1.5);
