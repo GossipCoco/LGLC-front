@@ -25,7 +25,7 @@
 </template>
 <script>
 import CharacterService from "../../../services/CharacterService";
-import AllMyFictionService from "../../../services/AllMyFictionService";
+import FictionService from "../../../services/FictionService";
 import CardHeader from "../../Components/GenericComponent/CardHeader.vue";
 import SearchBarComponent from "../Components/SearchBarComponent.vue";
 import Pagination from "../../Components/GenericComponent/Pagination.vue";
@@ -105,7 +105,7 @@ export default {
     },
     async countAllMyFictions() {
       try {
-        const response = await AllMyFictionService.CountAllMyFictions(this.userCurrent);
+        const response = await FictionService.CountAllMyFictions(this.userCurrent);
         this.NbAllMyGamesFictions = response.data.ob.count;
         if(window.innerWidth >= this.width){
           this.nav.step = 16
@@ -120,7 +120,7 @@ export default {
     },
     async GetAllFictionsByUser(usr) {     
       try {
-        const response = await AllMyFictionService.GetAllFictionsByUser(usr, this.nav);       
+        const response = await FictionService.GetAllFictionsByUser(usr, this.nav);       
         this.allFictions = response.data.ob;        
       } catch (error) {
         console.error(error);

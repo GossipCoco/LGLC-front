@@ -1,14 +1,17 @@
 import http from '../http/http-common'
 
 class FictionService {
+    CountAllMyFictions(id){
+        return http.get(`/fiction/countAllMyFictions/${id}`);
+    }
     CountAllFictionsOnBases(){
         return http.get('/fiction/CountAllFictionsOnBases')
     }
-    countAllMyFictions(id){
-        return http.get(`/fiction/CountAllMyFictions/${id}`);
-    }
     GetAllAUthors(){
         return http.get('/fiction/GetAllAUthors')
+    }
+    GetAllFictionsByUser(id, data){
+        return http.post(`/fiction/GetAllFictionsByUserId/${id}`, data);
     }
     getFictionByName(id, data){
         return http.post(`/fiction/GetAllFictionsByName/${id}`, data);

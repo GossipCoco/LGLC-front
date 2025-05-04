@@ -1,6 +1,9 @@
 import http from '../http/http-common'
 
 class AllMyFictionService {
+    CountAllFictionsOnBases(){
+        return http.get('/fiction/CountAllFictionsOnBases')
+    }
     GetAllFictionsByUser(id, data){
         return http.post(`/fiction/GetAllFictionsByUserId/${id}`, data);
     }
@@ -23,6 +26,10 @@ class AllMyFictionService {
         return http.get(`/fiction/GetFiveLastChapByUser/${id}`);
     }
     getChapter(id, data){
+        return http.post(`/fiction/chapitre/${id}`, data);
+    }
+    
+    GetChapter(id, data){
         return http.post(`/fiction/chapitre/${id}`, data);
     }
     CreateANewChapter(id, data) {
