@@ -72,7 +72,7 @@ export default {
 
     upload() {
       this.progress = 0;
-      UploadService.uploadAvatar(this.currentImage, this.usrId, (event) => {
+      UploadService.uploadAvatar(this.usrId, this.currentImage,  (event) => {
         this.progress = Math.round((100 * event.loaded) / event.total);
       })
         .then((response) => {

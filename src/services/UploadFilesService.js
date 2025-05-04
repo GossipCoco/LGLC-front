@@ -12,14 +12,11 @@ class UploadFilesService {
       onUploadProgress
     });
   }
-  uploadAvatar(file, user, onUploadProgress) {
+  uploadAvatar(user, file, onUploadProgress) {
     let formData = new FormData();
-    console.log(user)
-    formData.append("file", file);
-    formData.append("user", user)
-    console.log("upload user service : ", file)
-    console.log(http+`/image/uploadAvatar/${user}`)
-    return http.put(`/image/uploadAvatar/${user}`, formData, {
+    formData.append("image", file); // doit matcher avec .single('image') dans le back
+    console.log(user, file, onUploadProgress, `/image/UploadAvatar/${user}`)
+    return http.post(`/image/UploadAvatar/${user}`, formData, {
       headers: {
         "Content-Type": "multipart/form-data"
       },
