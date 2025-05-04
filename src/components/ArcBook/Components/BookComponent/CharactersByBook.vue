@@ -8,7 +8,7 @@
           :key="index"
         >
           <img
-            class="height-auto width-100-percent"
+            class="height-auto width-20-vh"
             :src="character.Character.Image"
             :alt="image"
           />

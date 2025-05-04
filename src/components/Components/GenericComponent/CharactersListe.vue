@@ -4,7 +4,7 @@
       <div class="col-2" v-for="(character, index) in characters" :key="index">
         <div v-if="character.Character">
         <img
-          class="height-auto width-100-percent"
+          class="height-auto width-20-vh"
           :src="character.Character.Image"
           :alt="image"
           loading="lazy"

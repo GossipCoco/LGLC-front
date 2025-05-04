@@ -450,9 +450,6 @@ audio{
     width: 6rem;
 }
 /* % */
-.character-details.card .card-image img {
-    width: 50%;
-}
 .card-img-top.background-image-quest-image-container img,
 .character-l1 img {
     width: 75%;
