@@ -110,7 +110,6 @@ export default {
     getgrades(e) {
       console.log(e);
     },
-
     GetAllClans() {
       ClansService.getAllClans()
         .then((response) => {
@@ -129,7 +128,6 @@ export default {
           console.log(e);
         });
     },
-
     async initPage() {
       this.showspinner = true;
       try {
@@ -141,7 +139,6 @@ export default {
         this.showspinner = false;
       }
     },
-
     async CharacterPagination(page) {
       this.nav.current = page;
       try {
