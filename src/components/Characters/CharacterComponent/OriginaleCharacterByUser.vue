@@ -1,9 +1,9 @@
 <template>
-  <div class="card card-all-my-characters align-items-content-justify-content">
-    <div class="card-header display-flex-row">
+  <div class="card card-all-my-characters background-none align-items-content-justify-content width-190-vh">
+    <div class="card-header border-radius-12px background-color-dark-green-01 display-flex-row align-items-content-justify-content width-190-vh">
       <h1 class="text-white poppins-text">Mes personnages</h1>
       <router-link to="/CreateAnOriginalCharacter" class="btn btn-lg btn-primary margin-0-0-0-2vh">
-                Nouveau personnage
+        Nouveau personnage
        </router-link>
     </div>
     <div class="card-body height-90-vh">

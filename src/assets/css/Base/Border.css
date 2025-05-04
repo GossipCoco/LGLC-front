@@ -7,7 +7,7 @@
 .border-radius-50{
     border-radius: 50%;
 }
-.border-radius-12px{
+.border-radius-12px, #original-characters-list .card-header:first-child{
     border-radius: 2vh;
 }
 .border-none{
