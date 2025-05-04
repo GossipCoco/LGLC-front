@@ -23,23 +23,25 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-2">
-              <p>Grade : </p>
-              <p>Genre : </p>
-              <p>Nom de chaton</p>
-              <p>Nom d'apprenti</p>
-              <p>Nom de guerrier</p>
-            </div>
-            <div class="col-4">
-              <p>{{ grade }}</p>
-              <p>{{ character.Genre }}</p>
-              <p>{{ character.KitName }}</p>
-              <p>{{ character.WarriorName }}</p>
-              <p>{{ character.ApprenticeName }}</p>
-            </div>
-            <div class="col-4"></div>
-            <div class="col-2 display-flex align-items-content-justify-content">
-              <img :src="'/images/clans/' + symbol" />
+            <div class="col-12">
+              <div class="information-global-character">
+                <div class="display-flex-row character-info-general-container">
+                  <div class="clan-logo-container">
+                    <router-link type="button" class="btn btn-primary" :to="'/clan/'+Clan.Id">
+                      <img :src="'/images/clans/'+symbol" />
+                    </router-link>
+                  </div>
+                  <TableInformationCharacter
+                    v-bind:NameClan="Clan.Name"
+                    v-bind:genre="character.Genre"
+                    v-bind:Grade="grade"
+                    v-bind:kitty="character.KitName"
+                    v-bind:apprentice="character.ApprenticeName"
+                    v-bind:warrior="character.WarriorName"
+                    v-bind:ClanId="Clan.Id"
+                  />
+                </div>
+              </div>
             </div>
           </div>
           <div class="row">
@@ -60,11 +62,13 @@
 import CharacterService from "../../../services/CharacterService";
 import CharacterImageDetail from "../GenericComponent/CharacterImageDetail.vue";
 import CharacterTabs from "../GenericComponent/CharacterTabs.vue";
+import TableInformationCharacter from "../GenericComponent/TableInformationCharacter.vue";
 export default {
   name: "OriginalCharacterDetails",
   components: {
     CharacterImageDetail,
     CharacterTabs,
+    TableInformationCharacter
   },
   data() {
     return {
@@ -72,7 +76,8 @@ export default {
       url: this.$route.params.id,
       symbol: null,
       grade: null,
-      relation: {}
+      relation: {},
+      Clan:{}
     };
   },
   created() {
@@ -82,7 +87,8 @@ export default {
     GetOneOriginaleCharacterByName(name) {
       CharacterService.GetOneOriginaleCharacterByName(name)
         .then((response) => {
-          console.log(response.data.ob)
+          console.log(response.data.ob.Clan)
+          this.Clan = response.data.ob.Clan
           this.character = response.data.ob;
           this.symbol = response.data.ob.Clan.Symbol
           this.grade = response.data.ob.Grade.Name
