@@ -13,7 +13,7 @@ class FictionService {
     GetAllFictionsByUser(id, data){
         return http.post(`/fiction/GetAllFictionsByUserId/${id}`, data);
     }
-    getFictionByName(id, data){
+    GetFictionByName(id, data){
         return http.post(`/fiction/GetAllFictionsByName/${id}`, data);
     }
     CountTotalWordBuUser(id, data){
@@ -27,6 +27,23 @@ class FictionService {
     }
     GetAllFictionsOnBase(nav){
         return http.post('/fiction/GetAllFictionsOfALlUsers', nav)
+    }    
+    UpdateFictionIllustration(id, data) {
+        return http.post(`/fiction/UpdateFictionIllustration/${id}`, data, {
+            headers: {
+                'Content-Type': 'multipart/form-data',
+            },
+        });
+    }
+    UploadFictionBackgroundIllustration(id, data){
+        return http.post(`/fiction/UploadFictionBackgroundIllustration/${id}`, data, {
+            headers: {
+                'Content-Type': 'multipart/form-data',
+            },
+        });   
+    }
+    CreateCommentForAFiction(id, data){
+        return http.post(`/fiction/CreateCommentForAFiction/${id}`, data)
     }
     GetFiveLastChapByUser(id){
         return http.get(`/chapter/GetFiveLastChapByUser/${id}`);
@@ -44,33 +61,14 @@ class FictionService {
             },
         });
     }
-    UpdateFictionIllustration(id, data) {
-        return http.post(`/fiction/UpdateFictionIllustration/${id}`, data, {
-            headers: {
-                'Content-Type': 'multipart/form-data',
-            },
-        });
-    }
-    UploadFictionBackgroundIllustration(id, data){
-        return http.post(`/fiction/UploadFictionBackgroundIllustration/${id}`, data, {
-            headers: {
-                'Content-Type': 'multipart/form-data',
-            },
-        });   
-    }
     GetLastChapterOfAFiction(id, data){
         return http.post(`/chapter/GetLastChapterOfAFiction/${id}`, data);
     }
     GetAllChaptersByFiction(id){
         return http.get(`/chapter/GetAllChaptersByFiction/${id}`);
     }
-    CreateCommentForAFiction(id, data){
-        return http.post(`/fiction/CreateCommentForAFiction/${id}`, data)
-    }
     EditChapter(id, data){
         return http.post(`/Chapter/EditChapter/${id}`, data)
     }
-
 }
-
 export default new FictionService()

@@ -142,7 +142,7 @@ export default {
     },
     getFictionByName(id) {
       this.showspinner = true;
-      FictionService.getFictionByName(id, this.nav)
+      FictionService.GetFictionByName(id, this.nav)
         .then((response) => {
           this.fiction = response.data.ob;
           this.rating = response.data.ob.AverageRating;
