@@ -12,11 +12,6 @@
 }
 /* Border Radius */
 
-/* .image-fiction-container-background,
-.image-fiction-container{
-    border: rgba(var(--middle-green-01), 1) 5px solid;
-    box-shadow: 10px 5px 5px rgba(var(--dark-green-01), 1);
-} */
 .image-fiction-container-background,
 .image-fiction-container
 .fiction-summary-card,
@@ -40,6 +35,7 @@
     border : 1rem solid rgba(var(--clear-green-01), 1);
 }
 .character-card.card .card-image {
+    border : 2px solid rgba(var(--clear-green-01), 1);
     border-radius: 100% 100% 0 0;
 }
 .card.card-image-layout.clan-detail-layout {

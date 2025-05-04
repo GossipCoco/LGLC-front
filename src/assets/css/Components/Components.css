@@ -80,6 +80,7 @@
 .rond-character-background{
     background-position: 50%;   
     vertical-align: bottom;
+    border : 1vh solid rgba(var(--clear-green-01), 1);
 }
 .summary-container {
     padding: 2vh 1vh 0 0;
