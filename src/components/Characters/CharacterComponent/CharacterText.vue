@@ -1,7 +1,7 @@
 <template>
   <div class="character-list-wrapper display-flex-column">
      <BackgroundImage v-bind:Image="character.Clan.Image">
-      <img v-if="character.Image" :src="character.Image"/>
+      <img v-if="character.Image" :src="character.Image" class="border-radius-12px"/>
     </BackgroundImage>
     <CharacterCardBody v-bind:id="character.Id" v-bind:name="character.CurrentName" v-bind:route="'/characterDetails/'"/>
   </div>

@@ -24,8 +24,9 @@
     <div class="card-body height-60-vh padding-1-0-0-1vh" v-if="!showspinner">
       <div class="row">
         <div class="col-12">
-          <div class="display-flex-column flex-one">
-            <div class="character-chapters width-190-vh display-flex-column flex-one overflowY-X-hidden background-summary-global-container">
+          <div class="display-flex-column flex-one width-190-vh">
+            <div class="character-chapters width-190-vh display-flex-column flex-one
+            overflowY-X-hidden background-summary-global-container border-radius-12px">
               <div class="display-flex-row character-chapters-container width-190-vh">
                 <div
                   :style="{

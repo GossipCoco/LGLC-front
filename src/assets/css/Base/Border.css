@@ -13,28 +13,21 @@
 .border-none{
     border: none;
 }
-/* Border Radius */
-
-/* .image-fiction-container-background, */
-.image-fiction-container
-.fiction-summary-card,
-.character-chapters.background-summary-global-container,
-.card-image img,
-.details-infos-characters
-{
-    border-radius: 12px;
+.border-radius-2vh-0-0-2vh{
+    border-radius: 2vh 0 0 2vh;
 }
+/* Border Radius */
 .card.location-clan-background-width-container{
     border-radius: 100% 100% 8% 8%;
 }
 #all-characters-container-card .character-card.card {
-    border-radius: 8rem 8rem 1rem 1rem;
+    border-radius: 16vh 16vh 1vh 1vh;
 }
 .clan-card {
     border-radius: 70% 70% 0 0;
 }
 .image-illustration-right{
-    border-radius: 50% 0 0 50%;
+    border-radius: 100% 0 0 100%;
     border : 1rem solid rgba(var(--clear-green-01), 1);
 }
 .character-card.card .card-image {

@@ -7,7 +7,8 @@
       <div class="col-9 col-md-9 display-flex-column flex-one location-clan-card-details">
         <div class="card background-color-main-lineart location-clan-card">
           <CardHeader v-bind:Title="location.Name" />        
-        <div class="card-body height-77-vh location-clan-body text-white background-color-main-lineart details-infos-characters poppins-text text-white">         
+        <div class="card-body height-77-vh location-clan-body text-white background-color-main-lineart
+         details-infos-characters border-radius-12px poppins-text text-white">         
           <div class="card-text text-align-justify">
             <router-link to="/AllLocationsLayout" class="btn btn-primary">Retour à la liste des lieux</router-link>
             <div class="text-align-justify"  v-html="location.Description"></div>

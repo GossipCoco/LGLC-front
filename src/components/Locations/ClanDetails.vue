@@ -24,7 +24,7 @@
             <img :src="'/images/clans/' + clan.Symbol"/>            
           </div>
         </CardHeader>
-        <div class="card-body height-77-vh text-white background-color-main-lineart details-infos-characters poppins-text text-white">
+        <div class="card-body height-77-vh text-white background-color-main-lineart details-infos-characters border-radius-12px poppins-text text-white">
           <div class="card-text text-align-justify">
             <router-link to="/AllClansLayout" class="btn btn-primary">Retour à la liste des clans</router-link>
             <div class="text-align-justify poppins-text height-40-vh" v-html="clan.Description"></div>

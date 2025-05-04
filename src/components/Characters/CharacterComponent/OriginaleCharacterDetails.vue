@@ -8,7 +8,7 @@
         
       </CharacterImageDetail>
       <div class="col-8 col-md-8">
-        <div class="card-body overflowY-X-hidden background-color-main-lineart details-infos-characters text-white">
+        <div class="card-body overflowY-X-hidden background-color-main-lineart details-infos-characters border-radius-12px text-white">
           <div class="display-flex-row">
             <div class="display-flex flex-one">
               <h1 class="text-white card-title cinzel">{{ character.CurrentName }}</h1>
