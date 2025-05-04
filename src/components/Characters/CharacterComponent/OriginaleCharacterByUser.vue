@@ -1,45 +1,48 @@
 <template>
-  <div class="row btn-create-character">
-    <div clss="'col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12'">
-      <router-link to="/CreateAnOriginalCharacter" class="btn btn-primary">
-            Nouveau personnage
-      </router-link>
+  <div class="card card-all-my-characters align-items-content-justify-content">
+    <div class="card-header display-flex-row">
+      <h1 class="text-white poppins-text">Mes personnages</h1>
+      <router-link to="/CreateAnOriginalCharacter" class="btn btn-lg btn-primary margin-0-0-0-2vh">
+                Nouveau personnage
+       </router-link>
     </div>
-  </div>
-  <div
-    id="original-characters-list"
-    class="row row-cols-1 row-cols-md-2 g-4 all-my-characters-container
-    display-flex align-items-content-justify-content overflowY-X-hidden height-90-vh width-120-vh"
-  >
-    <div
-      class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4 card-character-container
-      width-30-vh height-40-vh original-character-card-container"
-      v-for="(character, index) in allMyCharacters"
-      :key="index"
-    >
-      <div class="card-group display-flex">
-        <div class="card individual-character-card height-35-vh">
-          <BackgroundImage v-bind:Image="character.Image" />
-          <CharacterCardBody
-            v-bind:id="character.Id"
-            v-bind:name="character.CurrentName"
-            v-bind:route="'/OriginaleCharacterDetails/'"
-          />
+    <div class="card-body height-90-vh">
+      <div
+        id="original-characters-list"
+        class="row row-cols-1 row-cols-md-2 g-4 all-my-characters-container
+        display-flex align-items-content-justify-content overflowY-X-hidden height-80-vh width-120-vh"
+      >
+        <div
+          class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4 card-character-container
+          width-30-vh height-35-vh original-character-card-container"
+          v-for="(character, index) in allMyCharacters"
+          :key="index"
+        >
+          <div class="card-group display-flex width-35-vh">
+            <div class="card individual-character-card height-35-vh background-color-dark-green-01 margin-1vh">
+              <BackgroundImage v-bind:Image="character.Image" />
+              <CharacterCardBody
+                v-bind:id="character.Id"
+                v-bind:name="character.CurrentName"
+                v-bind:route="'/OriginaleCharacterDetails/'"
+              />
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="row pagination-row-container">
+        <div clss="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <Pagination
+            v-if="!showspinner && nav.pages > 0"
+            v-bind:nav="nav"
+            v-bind:filters="filters"
+            v-bind:getDatas="'CharacterPagination'"
+            @CharacterPagination="CharacterPagination"
+          />
       </div>
     </div>
   </div>
-  <div class="row pagination-row-container">
-    <div clss="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-      <Pagination
-        v-if="!showspinner && nav.pages > 0"
-        v-bind:nav="nav"
-        v-bind:filters="filters"
-        v-bind:getDatas="'CharacterPagination'"
-        @CharacterPagination="CharacterPagination"
-      />
-  </div>
-  </div>
+</div>
 </template>
 <script>
 import functions from "../../../services/functions";

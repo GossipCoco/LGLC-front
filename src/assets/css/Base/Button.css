@@ -48,3 +48,7 @@
     margin: -2vh 0 0 -2vh;
     background-color: rgba(var(--middle-green-02), 1);
 }
+.btn-create-character .btn{
+    background-color: rgba(var(--dark-green-01), 1);
+    border: 1px solid rgba(var(--dark-green-01), 1);
+}

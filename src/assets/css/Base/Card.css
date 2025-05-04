@@ -201,22 +201,13 @@ li.quest-container {
     padding: 0;
 }
 /* SPECIFIC */
-
-#original-characters-list .border-card-color
-{
-    margin: 0.5rem;
-    background-position: 50%;
-    aspect-ratio: 1;
-}
+#original-characters-list .border-card-color,
 #original-characters-list .card.individual-character-card{
-    margin: 0.5rem;
     background-position: 50%;
     aspect-ratio: 1;
-    background-color: rgba(var(--dark-green-01), 1);
-
 }
 .individual-character-card .card-body {
-    margin: 0vh 0 0 -0.5vh;
+    margin: -5vh 0 0 0vh;
 }
 #original-characters-list{
     margin: -5vh 0 0 30vh;

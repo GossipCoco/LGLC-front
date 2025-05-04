@@ -121,9 +121,6 @@
     height: 95vh;
     width: 190vh;
 }
-#original-characters-list .card-group{
-    width: 30vh;
-}
 .carousel {
     width: 24vh;
 }
@@ -241,7 +238,10 @@
     height: 7vh;
     width: 28vh;
 }
-
+#original-characters-list .name-characatrer-link .btn{
+    height: 6vh;
+    width: 32vh;
+}
 .fiction-container .card-header{
     height: 13vh;
 }
