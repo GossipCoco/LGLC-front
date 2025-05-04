@@ -6,11 +6,11 @@
     <div class="card-body card-quest-by-id-container">
       <div class="display-flex-row flex-one">
         <div
-          class="background-image-quest width-10-vh height-32-vh background-size-cover flex-one"
+          class="background-image-quest width-15-vh height-32-vh background-size-cover flex-one"
           v-bind:style="{ backgroundImage: 'url(' + image.Image + ')' }"
         ></div>
         <div
-          class="card-body display-flex-column one-quest flex-one width-10-rem"
+          class="card-body display-flex-column one-quest flex-one"
         >
           <div
             class="display-flex-column quest-button-text height-30-vh align-items-content-justify-content vertical-align-middle"

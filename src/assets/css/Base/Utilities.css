@@ -43,24 +43,6 @@
 .height-auto{
     height: auto;
 }
-.width-100-percent{
-    width: 100%;
-}
-.width-10-rem{
-    width: 10rem;
-}
-.width-10-rem{
-    width: 10rem
-}
-.height-18-rem{
-    height: 18rem;
-}
-.height-16-rem{
-    height: 16rem;
-}
-.height-20-rem{
-    height: 20rem;
-}
 /* VH */
 /*height*/
 .height-100{
@@ -209,10 +191,7 @@
     background-size: contain;
     background-repeat: no-repeat;
 }
-.clear-green-bacground{
-    background-color: rgba(var(--ternary-green), 1);
-    border: 1px solid  rgba(var(--ternary-green), 1);
-}
+
 /* OVERFRLOW */
 .overflowY-X-hidden{
     overflow-y: hidden;

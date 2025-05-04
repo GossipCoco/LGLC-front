@@ -394,7 +394,6 @@
 }
 .list-quest-card-container .background-image-quest{
     height: 26vh;
-    width: 12vh;
 }
 .quest-container .card-header h6{
     height: 4vh;
@@ -405,7 +404,7 @@
 }
 .card-body.one-quest {
     height: 32vh;
-    width: 18vh;
+    width: 16vh;
 }
 .login-card .card-body{
     height: 30vh;
