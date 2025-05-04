@@ -70,39 +70,37 @@ export default {
     },
   },
   methods: {
-    initPage() {
+    async initPage() {
       this.showspinner = true;
-      this.GetTotalQuest();
-      this.GetAllQuests(this.nav);
+      try {
+        await this.GetTotalQuest();
+        await this.GetAllQuests(this.nav);
+      } catch (e) {
+        console.log(e);
+      } finally {
+        this.showspinner = false;
+      }
     },
-    QuestPagination(e) {
+    async QuestPagination(e) {
       this.nav.current = e;
-      this.GetAllQuests(this.nav);
+      await this.GetAllQuests(this.nav);
     },
-    GetTotalQuest() {
-      QuestService.GetTotalQuest()
-        .then((response) => {
-          this.nbQuests = response.data.ob.count;
-        })
-        .catch((e) => {
-          console.log(e);
-        });
+    async GetTotalQuest() {
+      try {
+        const response = await QuestService.GetTotalQuest();
+        this.nbQuests = response.data.ob.count;
+      } catch (e) {
+        console.log(e);
+      }
     },
-    GetAllQuests(nav) {
-      QuestService.GetAllQuests(nav)
-        .then((response) => {
-          this.allQuests = response.data.ob;
-          this.showspinner = false;
-          functions.CalcPagination(
-            this.nbQuests,
-            this.showPagination,
-            this.nav,
-            this.loading
-          );
-        })
-        .catch((e) => {
-          console.log(e);
-        });
+    async GetAllQuests(nav) {
+      try {
+        const response = await QuestService.GetAllQuests(nav);
+        this.allQuests = response.data.ob;
+        functions.CalcPagination(this.nbQuests, this.nav);
+      } catch (e) {
+        console.log(e);
+      }
     },
   },
 };
