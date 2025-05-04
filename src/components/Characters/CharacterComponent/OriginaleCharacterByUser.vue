@@ -1,25 +1,32 @@
 <template>
-  <div class="card card-all-my-characters background-none align-items-content-justify-content width-190-vh">
-    <div class="card-header border-radius-12px background-color-dark-green-01 display-flex-row align-items-content-justify-content width-190-vh">
+  <div
+    class="card card-all-my-characters background-none align-items-content-justify-content width-190-vh"
+  >
+    <div
+      class="card-header border-radius-12px background-color-dark-green-01 display-flex-row align-items-content-justify-content width-190-vh"
+    >
       <h1 class="text-white poppins-text">Mes personnages</h1>
-      <router-link to="/CreateAnOriginalCharacter" class="btn btn-lg btn-primary margin-0-0-0-2vh">
+      <router-link
+        to="/CreateAnOriginalCharacter"
+        class="btn btn-lg btn-primary margin-0-0-0-2vh"
+      >
         Nouveau personnage
-       </router-link>
+      </router-link>
     </div>
     <div class="card-body height-90-vh">
       <div
         id="original-characters-list"
-        class="row row-cols-1 row-cols-md-2 g-4 all-my-characters-container
-        display-flex align-items-content-justify-content overflowY-X-hidden height-80-vh width-120-vh"
+        class="row row-cols-1 row-cols-md-2 g-4 all-my-characters-container display-flex align-items-content-justify-content overflowY-X-hidden height-80-vh width-120-vh"
       >
         <div
-          class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4 card-character-container
-          width-30-vh height-35-vh original-character-card-container"
+          class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4 card-character-container width-30-vh height-35-vh original-character-card-container"
           v-for="(character, index) in allMyCharacters"
           :key="index"
         >
           <div class="card-group display-flex width-35-vh">
-            <div class="card individual-character-card height-35-vh background-color-dark-green-01 margin-1vh">
+            <div
+              class="card individual-character-card height-35-vh background-color-dark-green-01 margin-1vh"
+            >
               <BackgroundImage v-bind:Image="character.Image" />
               <CharacterCardBody
                 v-bind:id="character.Id"
@@ -31,7 +38,9 @@
         </div>
       </div>
       <div class="row pagination-row-container">
-        <div clss="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div
+          clss="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12"
+        >
           <Pagination
             v-if="!showspinner && nav.pages > 0"
             v-bind:nav="nav"
@@ -39,10 +48,10 @@
             v-bind:getDatas="'CharacterPagination'"
             @CharacterPagination="CharacterPagination"
           />
+        </div>
       </div>
     </div>
   </div>
-</div>
 </template>
 <script>
 import functions from "../../../services/functions";
@@ -82,45 +91,55 @@ export default {
         ? text
         : text.substring(0, maxLength) + "...";
     },
-    init() {
-      console.log(this.usr);
-      this.CountNbOriginaleCharacterByUser(this.usr);
-      this.GetOriginaleCharacterByUser(this.usr, this.nav);
+    async init() {
+      try {
+        console.log("User :", this.usr);
+
+        // On attend d’abord que le comptage soit terminé
+        await this.CountNbOriginaleCharacterByUser(this.usr);
+
+        // Ensuite, on récupère les personnages (car il faut nav.pages déjà calculé !)
+        await this.GetOriginaleCharacterByUser(this.usr, this.nav);
+      } catch (error) {
+        console.error("Erreur dans init :", error);
+      }
     },
-    CountNbOriginaleCharacterByUser(user) {
-      CharacterService.CountNbOriginaleCharacterByUser(user)
-        .then((response) => {
-          this.showspinner = false;
-          this.NbAllCharacters = response.data.ob.count;
-        })
-        .catch((err) => {
-          console.log(err);
-        });
+    async CountNbOriginaleCharacterByUser(user) {
+      try {
+        const response = await CharacterService.CountNbOriginaleCharacterByUser(
+          user
+        );
+        this.NbAllCharacters = response.data.ob.count;
+        functions.CalcPagination(this.NbAllCharacters, this.nav);
+        console.log("NbAllCharacters :", this.NbAllCharacters);
+        console.log("nav.pages :", this.nav.pages);
+      } catch (error) {
+        console.error("Erreur dans CountNbOriginaleCharacterByUser :", error);
+      }
     },
-    CharacterPagination(page) {
+    async CharacterPagination(page) {
       this.nav.current = page;
-      this.GetOriginaleCharacterByUser(this.usr, this.nav);
+      await this.GetOriginaleCharacterByUser(this.usr, this.nav);
     },
-    GetOriginaleCharacterByUser(user, nav) {
-      if(window.innerWidth >= this.width){
-          this.nav.step = 6
-        }else if(window.innerWidth < this.width)
-        {
-          this.nav.step = 6
-        }
-      CharacterService.GetOriginaleCharacterByUser(user, nav)
-        .then((response) => {
-          this.allMyCharacters = response.data.ob;
-          functions.CalcPagination(
-            this.NbAllCharacters,
-            this.showPagination,
-            this.nav,
-            this.loading
-          );
-        })
-        .catch((err) => {
-          console.log(err);
-        });
+    async GetOriginaleCharacterByUser(user, nav) {
+      if (window.innerWidth >= this.width) {
+        this.nav.step = 6;
+      } else {
+        this.nav.step = 6;
+      }
+
+      try {
+        const response = await CharacterService.GetOriginaleCharacterByUser(
+          user,
+          nav
+        );
+        this.allMyCharacters = response.data.ob;
+
+        // Ce log est utile pour vérifier que tout est cohérent
+        console.log("Personnages récupérés :", this.allMyCharacters.length);
+      } catch (error) {
+        console.error("Erreur dans GetOriginaleCharacterByUser :", error);
+      }
     },
   },
 };

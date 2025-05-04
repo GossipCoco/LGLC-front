@@ -34,7 +34,7 @@ const getDate = (value) => {
     return date;
 }
 const CalcPagination = (total, nav) => {
-  console.log('nav function', nav)
+  console.log('nav function',total, nav)
   const pages = Math.trunc(total / nav.step) + (total % nav.step ? 1 : 0);
   nav.pages = pages;
   nav.middle = Math.trunc(pages / 2);
