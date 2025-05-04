@@ -11,8 +11,8 @@
           v-bind:type="'chapters'"
         />
         <div class="card-body new-current-arc-container padding-2-vh text-white">
-            <div v-if="currentArc">
-                <h2 class="white-text">Arc actuel : {{ currentArc.Title }}</h2>
+            <div v-if="currentArc" class="text-align-center">
+                <h2 class="white-text poppins-text text-align-center">Arc actuel : {{ currentArc.Title }}</h2>
                 <div class="display-flex-row">
                   <img :src="currentArc.Image" width="20%" class="border-radius-12px"/>
                   <div v-html="currentArc.Summary" class="poppins-text padding-1-vh"></div>

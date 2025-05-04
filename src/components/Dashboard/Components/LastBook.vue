@@ -9,7 +9,7 @@
       <div class="card-body last-chapter-card text-white height-60-vh">
         <h4 class="text-white align-items-content-justify-content">
           <router-link
-            class="text-white poppins-text"
+            class="text-white poppins-text font-size-1-25"
             :to="'/BookByTitle/' + lastBook.Title"
           >
           {{ lastBook.Title }}</router-link>

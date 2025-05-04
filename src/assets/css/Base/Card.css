@@ -186,13 +186,13 @@ li.quest-container {
     font-size: 1.2em;
     line-height: 1.6;
 }
-.accordion-button.collapsed,
+/* .accordion-button.collapsed,
 .accordion-item:first-of-type>.accordion-header .accordion-button,
 .accordion-button:not(.collapsed),
 .accordion-item:last-of-type>.accordion-header .accordion-button.collapsed,
 .accordion-button:focus{
     background-color: rgb(var(--clear-green-02), 0.6);
-}
+} */
 #original-characters-list .card-group {
     flex-flow: row wrap;
     margin: 2vh 2vh;
