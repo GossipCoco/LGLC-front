@@ -19,15 +19,6 @@ export default {
   name: "CharacterCard",
   props: ["characters_props"],
   inject: ["allCharacters"],
-  components: { CharacterText },
-  data() {
-    return {
-      allcharacters: null,
-    };
-  },
-  created() {
-    this.allcharacters = this.characters_props;
-    console.log(this.allCharacters)
-  },
+  components: { CharacterText },  
 };
 </script>
