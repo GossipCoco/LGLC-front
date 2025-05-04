@@ -4,9 +4,7 @@
     class="character-details padding-2-vh card mb-3"
   >
     <div class="row g-0">
-      <CharacterImageDetail v-bind:Image="character.Image">
-        
-      </CharacterImageDetail>
+      <CharacterImageDetail v-bind:Image="character.Image" />
       <div class="col-8 col-md-8">
         <div class="card-body overflowY-X-hidden background-color-main-lineart details-infos-characters border-radius-12px text-white">
           <div class="display-flex-row">
