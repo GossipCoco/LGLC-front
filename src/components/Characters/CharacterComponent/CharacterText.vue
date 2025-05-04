@@ -7,7 +7,7 @@
   </div>
 </template>
 <script>
-import BackgroundImage from './BackgroundImage.vue';
+import BackgroundImage from '../GenericComponent/BackgroundImage.vue';
 import CharacterCardBody from '../GenericComponent/CharacterCardBody.vue';
 export default {
   name: "CharacterText",

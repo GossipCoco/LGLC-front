@@ -48,7 +48,7 @@
 import functions from "../../../services/functions";
 import CharacterService from "../../../services/CharacterService";
 import Pagination from "../../Components/GenericComponent/Pagination.vue";
-import BackgroundImage from "./BackgroundImage.vue";
+import BackgroundImage from "../GenericComponent/BackgroundImage.vue";
 import CharacterCardBody from "../GenericComponent/CharacterCardBody.vue";
 
 export default {
