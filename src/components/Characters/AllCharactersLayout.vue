@@ -37,18 +37,12 @@
         <div class="row pagination-container-row">
           <div class="pagination-container">
             <pagination
-              v-if="!showspinner && useFiltered && nav.pages > 0"
-              v-bind:nav="nav"
-              v-bind:filters="filters"
-              v-bind:getDatas="'CharacterFilteredPagination'"
-              @CharacterFilteredPagination="CharacterFilteredPagination"
-            />
-            <pagination
-              v-if="!showspinner && !useFiltered && nav.pages > 0"
-              v-bind:nav="nav"
-              v-bind:filters="filters"
-              v-bind:getDatas="'CharacterPagination'"
+              v-if="!showspinner && nav.pages > 0"
+              :nav="nav"
+              :filters="filters"
+              :getDatas="useFiltered ? 'CharacterFilteredPagination' : 'CharacterPagination'"
               @CharacterPagination="CharacterPagination"
+              @CharacterFilteredPagination="CharacterFilteredPagination"
             />
           </div>
         </div>
