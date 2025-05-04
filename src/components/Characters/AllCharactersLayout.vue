@@ -15,15 +15,23 @@
     </div>
     <div class="card-body height-90-vh">
       <div class="character-container padding-0 list-all-characters-container padding-2-vh">
-        <div class="row width-190-vh">
-          <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-12">
+        <div class="row width-200-vh">
+                    
+          <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-12">
+            <div class="card background-color-dark-green-01 margin-2vh-0-0-0 height-80-vh">
+              <div class="card-header ">
+                <hh3 class="text-white poppins-text">Filtrer</hh3>
+              </div>
+              <div class="card-body">
+
+              </div>
+            </div>
+          </div>
+          <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-10 col-xs-12">
             <character-card
               v-bind:characters_props="allCharacters"
               v-if="!showMyCharacter"
             />
-          </div>          
-          <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-12">
-
           </div>
         </div>
         <div class="row pagination-container-row">
@@ -144,9 +152,9 @@ export default {
     },
     getAllCharacters(nav) {
       if (window.innerWidth >= this.width) {
-        this.nav.step = 6;
+        this.nav.step = 8;
       } else if (window.innerWidth < this.width) {
-        this.nav.step = 6;
+        this.nav.step = 8;
       }
       CharacterService.getAllCharacters({ nav })
         .then((response) => {
