@@ -2,14 +2,12 @@ import http from '../http/http-common'
 
 class AllMyFictionService {
     GetAllFictionsByUser(id, data){
-        console.log("service", data)
         return http.post(`/fiction/GetAllFictionsByUserId/${id}`, data);
     }
     CountAllMyFictions(id){
         return http.get(`/fiction/countAllMyFictions/${id}`);
     }
     GetFictionByName(id, data){
-        console.log(id, data)
         return http.post(`/fiction/getFictionByName/${id}`, data);
     }
     CountTotalWordBuUser(id, data){

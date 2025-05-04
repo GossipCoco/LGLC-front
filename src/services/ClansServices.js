@@ -20,7 +20,6 @@ class ClanService {
         return http.post('/clan/Location/GetAllLocations', nav)
     }
     GetLocationById(id){
-        console.log(id)
         return http.get(`/clan/Location/${id}`);
     }
 }

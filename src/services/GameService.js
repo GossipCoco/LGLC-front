@@ -29,12 +29,10 @@ class GameService {
             },
         });
     }
-    AddANewCharacterToGameAndFiction(id, data){        
-        console.log(id, data)
+    AddANewCharacterToGameAndFiction(id, data){
         return http.post(`/game/AddANewCharacterToGameAndFiction/${id}`, data)
     }
     AddANewOriginalCharacter(id, data){
-        console.log(id, data)
         return http.post(`/game/AddANewOriginalCharacter/${id}`, data)
     }
 }

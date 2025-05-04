@@ -5,7 +5,6 @@ class EventService{
         return http.post(`/event`, nav)
     }
     saveGameResults(id, data){
-        console.log(id, data)
         return http.post(`/event/GetPointParId/${id}`, data)
     }
 }

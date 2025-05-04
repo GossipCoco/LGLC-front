@@ -28,9 +28,6 @@ class AuthService {
 
     logout() {
         console.log('logout')
-        // localStorage.removeItem('user')
-        // user.user = {}
-        // user.isSuccess = false
     }
 }
 

@@ -272,7 +272,6 @@ export default {
     };
   },
   created() {
-    console.log("Pagination - getDatas:", this.getDatas);
   },
   methods: {
     getMiddle() {

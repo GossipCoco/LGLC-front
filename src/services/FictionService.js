@@ -42,7 +42,6 @@ class FictionService {
         });
     }
     UpdateFictionIllustration(id, data) {
-        console.log(data)
         return http.post(`/fiction/UpdateFictionIllustration/${id}`, data, {
             headers: {
                 'Content-Type': 'multipart/form-data',
@@ -50,7 +49,6 @@ class FictionService {
         });
     }
     UploadFictionBackgroundIllustration(id, data){
-        console.log(id, data)
         return http.post(`/fiction/UploadFictionBackgroundIllustration/${id}`, data, {
             headers: {
                 'Content-Type': 'multipart/form-data',

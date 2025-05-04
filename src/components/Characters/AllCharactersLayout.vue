@@ -106,7 +106,6 @@ export default {
   methods: {
     async CharacterFilteredPagination(page) {
       this.nav.current = page;
-      console.log(this.nav)
       try {
         const response = await CharacterService.getCharacterByNameSearch(this.nameSearch, this.nav);
         
@@ -152,7 +151,6 @@ export default {
           this.filteredCharacters = response.data.ob;
         } else {
           await this.getAllCharacters(this.nav);
-          console.log("nav.pages:", this.nav.pages); 
         }
       } catch (error) {
         console.error("Error in pagination:", error);
@@ -187,7 +185,6 @@ export default {
         this.allCharacters = response.data.ob;
         this.showspinner = false;
         this.nav.pages = functions.CalcPagination(this.NbAllCharacters, this.nav, this.nav.step);
-
       } catch (e) {
         console.log(e);
       }
