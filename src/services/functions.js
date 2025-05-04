@@ -41,7 +41,6 @@ const CalcPagination = (total, showPagination, nav) => {
     if(nav){
         showPagination = true;
     }
-   
 }
 const fonctions = {
     getDate,

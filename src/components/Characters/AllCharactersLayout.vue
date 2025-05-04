@@ -37,7 +37,14 @@
         <div class="row pagination-container-row">
           <div class="pagination-container">
             <pagination
-              v-if="!showspinner && nav.pages > 0"
+              v-if="!showspinner && useFiltered && nav.pages > 0"
+              v-bind:nav="nav"
+              v-bind:filters="filters"
+              v-bind:getDatas="'CharacterFilteredPagination'"
+              @CharacterFilteredPagination="CharacterFilteredPagination"
+            />
+            <pagination
+              v-if="!showspinner && !useFiltered && nav.pages > 0"
               v-bind:nav="nav"
               v-bind:filters="filters"
               v-bind:getDatas="'CharacterPagination'"
@@ -52,8 +59,6 @@
 <script>
 import functions from "../../services/functions";
 import CharacterService from "../../services/CharacterService";
-import ClansService from "../../services/ClansServices";
-import GradeService from "../../services/GradeService";
 import CardHeader from "./GenericComponent/CardHeader.vue";
 import CharacterCard from "./CharacterComponent/CharacterCard.vue";
 import Pagination from "../Components/GenericComponent/Pagination.vue";
@@ -62,29 +67,36 @@ import SearchedCharacterCard from "./SearchedCharacterCard.vue";
 
 export default {
   name: "AllCharacters",
-  components: { CharacterCard, Pagination, InputComponent, CardHeader,SearchedCharacterCard },
+  components: {
+    CharacterCard,
+    Pagination,
+    InputComponent,
+    CardHeader,
+    SearchedCharacterCard
+  },
   data() {
     return {
+      width: 1700,
       ListAllCharacter: true,
+      showMyCharacter: false,
+      showspinner: false,
+      useFiltered: false,
       labelFilter: "Chercher des fictions par",
       usr: this.$store.state.auth.user.usrID,
       userCurrent: this.$store.state.auth.user.usrID,
-      showMyCharacter: false,
-      allMyCharacter: {},
       NbAllCharacters: null,
-      allCharacters: {},
-      grades: {},
-      filters: [],
-      width: 1700,
+      nameSearch: null,
+      nbSearchCharacters: null,
       nav: {
         current: 0,
         pages: 0,
         step: 6,
       },
-      showspinner: false,
-      nameSearch: null,
-      NameCharacterSearch:{},
-      useFiltered: false,
+      allMyCharacter: {},
+      allCharacters: {},
+      grades: {},
+      NameCharacterSearch: {},
+      filters: [],
       filteredCharacters: [],
     };
   },
@@ -93,55 +105,38 @@ export default {
       allCharacters: this.allCharacters,
     };
   },
-  created() {
+  async created() {
     this.userCurrent = this.$store.state.auth.user.usrID;
-    this.initPage();
-    this.GetAllClans();
-    this.GetAllGrade();
+    await this.initPage();
   },
   methods: {
-    getCurrentName(e) {      
-      this.nameSearch = e
-        if (!this.nameSearch || this.nameSearch.trim() === '') {
+    async CharacterFilteredPagination(page) {
+      this.nav.current = page;
+      try {
+        const response = await CharacterService.getCharacterByNameSearch(this.nameSearch, this.nav);
+        this.filteredCharacters = response.data.ob;
+        this.useFiltered = true;
+        console.log("useFiltered:", this.useFiltered);
+      } catch (error) {
+        console.error("Error in filtered pagination:", error);
+      }
+    },
+    async getCurrentName(e) {
+      this.nameSearch = e;
+      if (!this.nameSearch || this.nameSearch.trim() === '') {
         this.useFiltered = false;
-        this.initPage(); // Recharge tout si champ vide
+        await this.initPage();
         return;
       }
-      CharacterService.getCharacterByNameSearch(this.nameSearch, this.nav)
-      .then((response) => {
-          console.log("this.filteredCharacters : ",response.data.ob);
-          this.filteredCharacters = response.data.ob;
-          this.ImageCharacter = this
-          this.useFiltered = true;
-        })
-        .catch((e) => {
-          console.log(e);          
-          this.useFiltered = false;
-        });
-    },
-    getclans(e) {
-      console.log(e);
-    },
-    getgrades(e) {
-      console.log(e);
-    },
-    GetAllClans() {
-      ClansService.getAllClans()
-        .then((response) => {
-          this.clans = response.data.ob;
-        })
-        .catch((e) => {
-          console.log(e);
-        });
-    },
-    GetAllGrade() {
-      GradeService.getAllGrades()
-        .then((response) => {
-          this.grades = response.data.ob;
-        })
-        .catch((e) => {
-          console.log(e);
-        });
+      try {
+        const response = await CharacterService.getCharacterByNameSearch(this.nameSearch, this.nav);
+        this.filteredCharacters = response.data.ob;
+        await this.countFilteredCharactersByName(this.nameSearch);
+        this.useFiltered = true;
+      } catch (e) {
+        console.log(e);
+        this.useFiltered = false;
+      }
     },
     async initPage() {
       this.showspinner = true;
@@ -157,7 +152,15 @@ export default {
     async CharacterPagination(page) {
       this.nav.current = page;
       try {
-        await this.getAllCharacters(this.nav);
+        if (this.useFiltered && this.nameSearch && this.nameSearch.trim() !== '') {
+          const response = await CharacterService.getCharacterByNameSearch(this.nameSearch, this.nav);
+          this.filteredCharacters = response.data.ob;
+          console.log("showspinner:", this.showspinner)
+          console.log("nav.pages:", this.nav.pages); 
+        } else {
+          await this.getAllCharacters(this.nav);
+          console.log("nav.pages:", this.nav.pages); 
+        }
       } catch (error) {
         console.error("Error in pagination:", error);
       }
@@ -166,32 +169,37 @@ export default {
       try {
         const response = await CharacterService.CountAllCharacters();
         this.NbAllCharacters = response.data.ob.count;
+        console.log(this.NbAllCharacters)
         functions.CalcPagination(this.NbAllCharacters, this.nav, this.nav.step);
       } catch (error) {
         console.error("Error counting characters:", error);
       }
     },
-    getAllCharacters(nav) {
+    async countFilteredCharactersByName(name) {
+      try {
+        const response = await CharacterService.CountCharacterByNameSearch(name);
+        this.NbAllCharacters = response.data.ob.count;
+        functions.CalcPagination(this.NbAllCharacters, this.nav, this.nav.step);
+      } catch (error) {
+        console.error(error);
+      }
+    },
+    async getAllCharacters(nav) {
       if (window.innerWidth >= this.width) {
         this.nav.step = 8;
       } else if (window.innerWidth < this.width) {
         this.nav.step = 8;
       }
-      CharacterService.getAllCharacters({ nav })
-        .then((response) => {
-          this.allCharacters = response.data.ob;
-          console.log("this.allCharacters : ", this.allCharacters)
-          this.showspinner = false;
-          functions.CalcPagination(
-            this.NbAllCharacters,
-            this.showPagination,
-            this.nav,
-            this.loading
-          );
-        })
-        .catch((e) => {
-          console.log(e);
-        });
+      try {
+        const response = await CharacterService.getAllCharacters({ nav });
+        this.allCharacters = response.data.ob;
+        this.showspinner = false;
+        functions.CalcPagination(this.NbAllCharacters, this.nav, this.nav.step);
+        console.log("nav.pages:", this.nav); 
+
+      } catch (e) {
+        console.log(e);
+      }
     },
   },
 };

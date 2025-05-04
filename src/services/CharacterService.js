@@ -18,7 +18,10 @@ class CharacterService {
     }
     CountAllCharacters(){
         return http.get('/character/countAllcharacters')
-    }    
+    }
+    CountCharacterByNameSearch(id){
+        return http.get(`/character/CountCharacterByNameSearch/${id}`)
+    }
     GetAllCharactersByUser(id){
         return http.get(`/character/GetAllCharactersByUser/${id}`)
     }
