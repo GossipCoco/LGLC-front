@@ -8,11 +8,14 @@
     border-radius: 50%;
 }
 .border-radius-12px{
-    border-radius: 12px;
+    border-radius: 2vh;
+}
+.border-none{
+    border: none;
 }
 /* Border Radius */
 
-.image-fiction-container-background,
+/* .image-fiction-container-background, */
 .image-fiction-container
 .fiction-summary-card,
 .character-chapters.background-summary-global-container,

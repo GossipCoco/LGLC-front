@@ -284,8 +284,7 @@ li.quest-container {
     margin: 0 0 0 1vh;
 }
 .summary-fiction-container-wrapper{
-    background-color: rgba(var(--dark-green-01), 0.5);
-    border-radius: 12px;
+    background-color: rgba(var(--dark-green-01), 0.85);
 }
 .avatar-container{
     margin: -1vh 0 0 0;

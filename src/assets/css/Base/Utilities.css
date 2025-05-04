@@ -215,13 +215,6 @@
 .overflowX-hidden{
     overflow-x: hidden;
 }
-/* BORDER */
-.border-100{
-    border-radius: 100%
-}
-.border-none{
-    border: none;
-}
 /* TABLE */
 table.table-borderless, .table.table-borderless>:not(caption)>*>*, .table-borderl {
     background-color: rgba(var(--main-white), 0);
