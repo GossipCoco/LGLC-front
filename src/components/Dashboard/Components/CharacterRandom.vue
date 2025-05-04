@@ -16,7 +16,7 @@
                     backgroundImage: 'url(' + character.Clan.Image + ')',
                   }"
                 >
-                  <img class="height-auto width-100-percent" loading="lazy" :src="character.Image" :alt="character.Image"/>
+                  <img class="height-auto width-15-vh" loading="lazy" :src="character.Image" :alt="character.Image"/>
                 </div>
               </router-link>
             </div>

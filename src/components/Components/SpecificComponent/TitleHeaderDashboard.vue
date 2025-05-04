@@ -1,6 +1,6 @@
 <template>
   <div class="card-header dashboard-card-header display-flex-row align-items-content-justify-content height-10-vh">
-    <div class="width-100-percent" v-if="type === 'username'">
+    <div class="width-40-vh" v-if="type === 'username'">
       <div class="row">
         <div class="col-12">
           <h4>
@@ -9,7 +9,7 @@
         </div>
       </div>
     </div>
-    <div class="width-100-percent" v-else-if="type === 'fictions' ">
+    <div class="width-40-vh" v-else-if="type === 'fictions' ">
       <div class="row">
         <div class="col-12">
           <h4 class="text-white" >
@@ -23,7 +23,7 @@
         </div>--> 
       </div>
     </div>
-    <div class="width-100-percent" v-else-if="type === 'Lastfictions' ">
+    <div class="width-40-vh" v-else-if="type === 'Lastfictions' ">
       <div class="row">
         <div class="col-12">
           <h4>
@@ -32,7 +32,7 @@
         </div>
       </div>
     </div>
-    <div class="width-100-percent"
+    <div class="width-40-vh"
       v-else-if="type === 'myCharacters' || type === 'chapters' || type === 'video'">
       <div class="row">
         <div class="col-12">

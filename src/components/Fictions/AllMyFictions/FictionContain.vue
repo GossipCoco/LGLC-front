@@ -25,13 +25,13 @@
       <div class="row">
         <div class="col-12">
           <div class="display-flex-column flex-one">
-            <div class="character-chapters width-100-percent display-flex-column flex-one overflowY-X-hidden background-summary-global-container">
-              <div class="display-flex-row character-chapters-container width-100-percent">
+            <div class="character-chapters width-190-vh display-flex-column flex-one overflowY-X-hidden background-summary-global-container">
+              <div class="display-flex-row character-chapters-container width-190-vh">
                 <div
                   :style="{
                     backgroundImage: 'url(' + backgroundImageFiction + ')',
                   }"
-                  class="background-size-cover width-100-percent display-flex-column background-fiction-contain"
+                  class="background-size-cover width-190-vh display-flex-column background-fiction-contain"
                 >
                   <ListOfChapter
                     v-bind:AuthorId="AuthorId"

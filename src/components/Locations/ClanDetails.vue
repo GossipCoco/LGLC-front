@@ -10,7 +10,7 @@
           :key="index"
         >
           <img
-            class="height-auto width-100-percent"
+            class="height-auto"
             :src="character.Character.Image"
             :alt="character.Characterimage"
           />

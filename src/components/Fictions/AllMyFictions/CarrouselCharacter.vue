@@ -3,7 +3,7 @@
     <Slide v-for="(character, slide) in Characters" :key="slide">
       <div class="display-flex-column align-items-content-justify-content carousel__item">
         <img v-if="character.Character"
-            class="height-auto width-100-percent"
+            class="height-auto"
             :src="character.Character.Image"
             :alt="character.Character.CurrentName"
           />
