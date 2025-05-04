@@ -191,7 +191,6 @@ export default {
         this.allCharacters = response.data.ob;
         this.showspinner = false;
         this.nav.pages = functions.CalcPagination(this.NbAllCharacters, this.nav, this.nav.step);
-        console.log("nav.pages:", this.nav); 
 
       } catch (e) {
         console.log(e);
