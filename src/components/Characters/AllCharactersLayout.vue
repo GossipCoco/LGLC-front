@@ -3,7 +3,7 @@
     class="card card-all-my-characters background-none align-items-content-justify-content width-190-vh"
   >
     <div
-      class="card-header border-radius-12px background-color-dark-green-01 display-flex-row align-items-content-justify-content width-190-vh"
+      class="card-header background-lineart border-radius-12px background-color-dark-green-01 display-flex-row align-items-content-justify-content width-190-vh"
     >
       <h1 class="text-white poppins-text">Tous les personnages</h1>
       <router-link
