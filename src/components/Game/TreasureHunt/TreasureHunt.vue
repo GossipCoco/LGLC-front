@@ -7,9 +7,10 @@
           <div>Treasures: {{ foundTreasures }}</div>
           <div>Points: {{ points }}</div>
         </div>
-        <img :src="backgroundImage" alt="background" class="background">
-        <img :src="characterImage" :style="characterStyle" alt="character" class="character">
-        <div v-for="(treasure, index) in treasures" :key="index" :style="treasureStyle(treasure)" class="treasure">💎
+        <div class="game-wrapper height-80-vh width-180-vh" :style="{ backgroundImage: 'url(' + backgroundImage + ')' }">
+          <img :src="characterImage" :style="characterStyle" alt="character" class="character">
+          <div v-for="(treasure, index) in treasures" :key="index" :style="treasureStyle(treasure)" class="treasure">💎
+          </div>
         </div>
       </div>
     </div>
@@ -20,12 +21,14 @@
 import Swal from 'sweetalert2';
 import EventService from '../../../services/EventService';
 import CardHeader from '../../Components/GenericComponent/CardHeader.vue';
+import ImageService from '../../../services/ImageService';
 export default {
   name: 'TreasureHunt',
   components:{CardHeader},
   data() {
     return {
-      backgroundImage: '/images/paysage/paysage_1122.png', // Path to your background image in the public folder
+      AllIllustration:[],
+      backgroundImage: null, // Path to your background image in the public folder
       characterImage: '/images/Characters/Ravenpaw.warrior.webp', // Path to your character image in the public folder
       characterPosition: { top: 50, left: 50 }, // Initial position of the character
       treasures: [],
@@ -33,7 +36,10 @@ export default {
       points: 0 // Counter for points
     }
   },
-
+  mounted() {
+    this.$el.focus();
+    this.getRandomBackground();  
+  },
   computed: {
     characterStyle() {
       return {
@@ -50,6 +56,16 @@ export default {
     this.generateRandomTreasures();
   },
   methods: {
+    async getRandomBackground() {
+      try {
+        const res = await ImageService.GetAllIllustrations(); // ta méthode d’appel
+        this.allIllustrations = res.data.ob; // si c’est bien "ob" dans ta réponse
+        const randomIndex = Math.floor(Math.random() * this.allIllustrations.length);
+        this.backgroundImage = this.allIllustrations[randomIndex].Id;
+      } catch (error) {
+        console.error("Erreur lors du chargement des illustrations :", error);
+      }
+    },
     handleKeydown(event) {
       switch (event.key) {
         case 'ArrowUp':
@@ -114,6 +130,7 @@ export default {
             confirmButtonText: 'Super!'
           });
           this.saveResults();
+          this.$router.push("/dashboard");
         } else {
           // A single treasure found
           Swal.fire({
@@ -149,9 +166,6 @@ export default {
       }
     }
   },
-  mounted() {
-    this.$el.focus();
-  }
 }
 </script>
 

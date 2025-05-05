@@ -90,6 +90,7 @@
 }
 .card.card-image-layout.clan-detail-layout.mb-3 {
     background: none;
+    border: none;
 }
 .card.card-image-layout.clan-detail-layout.mb-3 .card-image-layout {
     margin: 4rem 0 0 3rem;
@@ -292,4 +293,9 @@ li.quest-container {
 }
 .quest--global-container.flex-wrap.height-18-rem{
     margin: 0 -4vh 0 -2vh;
+}
+.game-wrapper{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50%;
 }
