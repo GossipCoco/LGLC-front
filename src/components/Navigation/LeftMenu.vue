@@ -45,21 +45,11 @@
         </div>
         <div class="collapse display-flex-column align-items-content-justify-content " id="collapseExample3">
           <p class="text-white">LGDC</p>
-          <router-link to="/allCharacters" class="link-collapse color-clear-green-02  display-flex-column align-items-content-justify-content ">
-            Personnnages
-            </router-link>            
-          <router-link class="link-collapse color-clear-green-02  display-flex-column align-items-content-justify-content " to="/MapForest">
-            Map
-          </router-link>
-          <router-link class="link-collapse color-clear-green-02  display-flex-column align-items-content-justify-content " to="/AllClansLayout">
-            Clans
-          </router-link>
-          <router-link class="link-collapse color-clear-green-02  display-flex-column align-items-content-justify-content " to="/AllLocationsLayout">
-            Lieux
-          </router-link>
-          <router-link class="link-collapse color-clear-green-02  display-flex-column align-items-content-justify-content " to="/ArcBookLayout">
-            Arcs & Livres
-          </router-link>
+          <div v-for="(menu, index) in SecondeSubMenu" :key="index">
+            <router-link :to="menu.link" class="link-collapse color-clear-green-02  display-flex-column align-items-content-justify-content ">
+            {{ menu.title }}
+            </router-link>  
+          </div>
         </div>
       </li>
       <li class="li-level1 display-flex-column align-items-content-justify-content">
@@ -79,8 +69,6 @@
           </div>
         </div>
         <div class="collapse display-flex-column align-items-content-justify-content " id="collapseExample1">
-          <!-- <router-link class="link-collapse color-clear-green-02  display-flex-column align-items-content-justify-content " to="/CreateAnOriginalCharacter" >
-            Nouvel OC</router-link> -->
           <router-link class="link-collapse color-clear-green-02  display-flex-column align-items-content-justify-content " to="/OriginaleCharacterByUser" >
             Mes personnages</router-link>
           <router-link class="link-collapse color-clear-green-02  display-flex-column align-items-content-justify-content " :to="'/allFictions/' + usrId">
@@ -135,20 +123,11 @@
           </div>
         </div>
         <div class="collapse display-flex-column align-items-content-justify-content " id="collapseExample0">
-          <router-link class="link-collapse color-clear-green-02  display-flex-column align-items-content-justify-content " to="/rollOfDice"
-            >Jeu de dé</router-link
-          >
-          <router-link class="link-collapse color-clear-green-02  display-flex-column align-items-content-justify-content " to="/puzzle">Puzzle</router-link>
-          <router-link class="link-collapse color-clear-green-02  display-flex-column align-items-content-justify-content " to="/mouseShot"
-            >Attrape la souris !</router-link
-          >
-          <router-link class="link-collapse color-clear-green-02  display-flex-column align-items-content-justify-content " to="/GooseGameLayout"
-            >Jeu de l'oie</router-link
-          >
-          <router-link class="link-collapse color-clear-green-02  display-flex-column align-items-content-justify-content " to="/TreasureHunt"
-            >Chasse au trésor</router-link
-          >
-          <router-link class="link-collapse color-clear-green-02  display-flex-column align-items-content-justify-content " v-if="role === 'Administrateur'" to="/Quest">Quêtes</router-link>
+          <div v-for="(menu, index) in GameMenu" :key="index">
+            <router-link :to="menu.link" class="link-collapse color-clear-green-02  display-flex-column align-items-content-justify-content ">
+            {{ menu.title }}
+            </router-link>  
+          </div>
         </div>
       </li>
       <li class="li-level1 display-flex-column align-items-content-justify-content">
@@ -190,7 +169,7 @@
           <div class="icon-menu-container  border-radius-100  background-color-clear-green-02  display-flex align-items-content-justify-content">
             <a href="#" @click.prevent="logout" class="logout-li-container display-flex-row">
               <img
-                src="../../../public//images//icons/right-from-bracket-solid-colored.svg"
+                src="../../../public//images/icons/right-from-bracket-solid-colored.svg"
                 width="25px"
               />
             </a>
@@ -213,6 +192,20 @@ export default {
       role: null,
       isMenuOpen: false,
       logo: "/images/Logos/LaGuerredesClansLogos2.png",
+      SecondeSubMenu:
+            [{ title: "Personnages", link: "/allCharacters" },
+            {title: 'Map', link: '/MapForest'},
+            { title: "Clans", link: "/AllClansLayout" },
+            { title: "Lieux", link: "/AllLocationsLayout" },
+            { title: "Arcs & Livres", link: "/ArcBookLayout" },],
+      GameMenu:  [
+            { title: "Jeu de dé", link: "/rollOfDice" },
+            { title: "Puzzle", link: "/puzzle" },
+            { title: "Attrape la souris", link: "/mouseShot" },
+            { title: "Jeu de l'oie", link: "/GooseGameLayout" },
+            { title: "Chasse au trésor", link: "/TreasureHunt" },
+            { title: "Quêtes", link: "/Quest" },
+          ],
       menuItems: [
         {
           title: "Dashboard",
