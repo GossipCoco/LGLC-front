@@ -79,8 +79,8 @@
           </div>
         </div>
         <div class="collapse display-flex-column align-items-content-justify-content " id="collapseExample1">
-          <router-link class="link-collapse color-clear-green-02  display-flex-column align-items-content-justify-content " to="/CreateAnOriginalCharacter" >
-            Nouvel OC</router-link>
+          <!-- <router-link class="link-collapse color-clear-green-02  display-flex-column align-items-content-justify-content " to="/CreateAnOriginalCharacter" >
+            Nouvel OC</router-link> -->
           <router-link class="link-collapse color-clear-green-02  display-flex-column align-items-content-justify-content " to="/OriginaleCharacterByUser" >
             Mes personnages</router-link>
           <router-link class="link-collapse color-clear-green-02  display-flex-column align-items-content-justify-content " :to="'/allFictions/' + usrId">
