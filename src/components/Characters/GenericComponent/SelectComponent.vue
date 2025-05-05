@@ -1,5 +1,6 @@
 <template>
-    <div class="form-group margin-top-2vh">
+  <div class="col-12">
+    <div class="form-group">
       <label :for="forId" class="text-white poppins-text">{{ label }}</label>
       <select
         :id="forId"
@@ -17,38 +18,38 @@
         </option>
       </select>
     </div>
-  </template>
-  
-  <script>
-  export default {
-    name: "SelectComponent",
-    props: {
-      label: String,
-      forId: String,
-      options: Array,
-      optionKey: {
-        type: String,
-        default: "Id"
-      },
-      optionLabel: {
-        type: String,
-        default: "Name"
-      },
-      defaultOption: {
-        type: String,
-        default: "Tous"
-      }
+  </div>
+</template>
+<script>
+export default {
+  name: "SelectComponent",
+  props: {
+    label: String,
+    forId: String,
+    options: Array,
+    optionKey: {
+      type: String,
+      default: "Id",
     },
-    data() {
-      return {
-        selectedValue: ""
-      };
+    optionLabel: {
+      type: String,
+      default: "Name",
     },
-    methods: {
-      emitSelection() {
-        this.$emit("selectChange", this.selectedValue);
-      }
-    }
-  };
-  </script>
+    defaultOption: {
+      type: String,
+      default: "Tous",
+    },
+  },
+  data() {
+    return {
+      selectedValue: "",
+    };
+  },
+  methods: {
+    emitSelection() {
+      this.$emit("selectChange", this.selectedValue);
+    },
+  },
+};
+</script>
   
