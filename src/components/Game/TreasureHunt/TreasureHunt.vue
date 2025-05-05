@@ -58,10 +58,10 @@ export default {
   methods: {
     async getRandomBackground() {
       try {
-        const res = await ImageService.GetAllIllustrations(); // ta méthode d’appel
+        const res = await ImageService.GetAllBackground(); // ta méthode d’appel
         this.allIllustrations = res.data.ob; // si c’est bien "ob" dans ta réponse
         const randomIndex = Math.floor(Math.random() * this.allIllustrations.length);
-        this.backgroundImage = this.allIllustrations[randomIndex].Id;
+        this.backgroundImage = this.allIllustrations[randomIndex].Image;
       } catch (error) {
         console.error("Erreur lors du chargement des illustrations :", error);
       }

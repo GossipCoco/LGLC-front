@@ -6,5 +6,8 @@ class ImageService{
     GetAllIllustrations() {
         return http.get('/image/GetAllIllustrations')
     }
+    GetAllBackground(){
+        return http.get('/image/GetAllBackground')
+    }
 }
 export default new ImageService
