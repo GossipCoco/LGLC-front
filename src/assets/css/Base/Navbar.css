@@ -7,8 +7,7 @@
   overflow-x: hidden;
   scrollbar-color: rgba(var(--clear-green-02), 1) rgba(var(--dark-green-02), 1);
   scrollbar-width: thin;
-  margin: 0.25rem 1rem 1rem 0rem;
-
+  margin: 0.5vh 1vh 1vh 0
 }
 .bi {
   vertical-align: -0.125em;
@@ -42,7 +41,7 @@
   padding: 0 0 0 10vh;
 }
 .menu-left ul li {
-  margin: 0.5rem 0 0 -7rem
+  margin: 1vh 0 0 -14vh
 }
 #collapseExample3 p {
   font-size: 0.865em;
@@ -68,7 +67,6 @@ ul {
 }
 .menu-left {
   position: fixed;  
-  margin: 0.5rem 0rem;
   transition: transform 0.3s ease-in-out;
 }
 .menu-hidden {
@@ -83,7 +81,7 @@ ul {
   font-size: 1.75em;
   word-wrap: normal;
   word-break: break-word;
-  margin: -1rem 0 1rem 2rem;
+  margin: 0.5vh 0 1vh 5vh;
 }
 .menu-li-contain svg {
   margin: 1rem -1rem 0 1rem;
@@ -93,6 +91,7 @@ ul {
   font-size: 0.45em;
   white-space: normal;
   overflow-wrap: break-word;
+  line-height: 1.75;
 }
 .logo-accueil-container{
   padding: 0;

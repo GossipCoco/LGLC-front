@@ -11,7 +11,7 @@
     ]"
   >
     <Logo v-bind:img="logo" />    
-    <ul class="nav nav-pills flex-column mb-auto display-flex align-items-content-justify-content">
+    <ul class="nav nav-pills flex-column mb-auto display-flex align-items-content-justify-content width-10-vh">
       <li class="li-level1 display-flex-column align-items-content-justify-content">
         <router-link to="/dashboard">
           <div class="menu-level1">
@@ -19,7 +19,6 @@
               <div class="icon-menu-container  border-radius-100  background-color-clear-green-02  display-flex align-items-content-justify-content">
                 <img src="/images/icons/home.svg" />
               </div>
-              <div class="chevron-container"></div>
             </div>
           </div>
         </router-link>
@@ -100,8 +99,8 @@
           <router-link class="link-collapse color-clear-green-02  display-flex-column align-items-content-justify-content " to="/createANewFiction">
             Nouvelle fiction
           </router-link>
-          <router-link v-if="role === 'Administrateur'" to="/CreateAnOriginalCharacter" class="link-collapse color-clear-green-02  display-flex-column align-items-content-justify-content ">
-            Nouveau personnage
+          <router-link to="/CreateAnOriginalCharacter" class="link-collapse color-clear-green-02  display-flex-column align-items-content-justify-content ">
+            Nouvel OC
           </router-link> 
         </div>
       </li>
@@ -137,7 +136,6 @@
               <div class="icon-menu-container  border-radius-100  background-color-clear-green-02  display-flex align-items-content-justify-content">
                 <img src="/images/icons/calendar-days-solid.svg" />
               </div>
-              <div class="chevron-container"></div>
             </div>
           </div>
         </router-link>
@@ -148,7 +146,6 @@
             <div class="icon-menu-container  border-radius-100  background-color-clear-green-02  display-flex align-items-content-justify-content">
               <img src="/images/icons/profil.svg" />
             </div>
-            <div class="chevron-container"></div>
           </div>
         </router-link>
       </li>
