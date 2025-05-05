@@ -15,5 +15,9 @@ class ArcBook{
     GetCurrentArc() {
         return http.get('/ArcBook/GetCurrentArc')
     }
+    GetArcByName(id){
+        return http.get(`/ArcBook/GetArcByName/${id}`)
+    }
+
 }
 export default new ArcBook()
