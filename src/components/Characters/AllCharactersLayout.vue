@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="card card-all-my-characters background-none align-items-content-justify-content width-190-vh"
-  >
+  <div class="card card-all-my-characters background-none align-items-content-justify-content width-190-vh">
     <card-header v-bind:label="'Tous les personnages'" v-bind:route="'/CreateAnOriginalCharacter'" v-bind:NameLink="'Nouveau personnage'" />
     <div class="card-body width-190-vh height-90-vh">
       <div class="character-container padding-0 list-all-characters-container padding-2-vh">
@@ -21,6 +19,10 @@
                     @getCurrentName="getCurrentName"
                     />
                 </div>
+              </div>
+              <div class="row">
+                  <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  </div>
               </div>
             </div>
             </div>

@@ -1,10 +1,6 @@
 <template>
-  <div
-    class="card card-all-my-characters background-none align-items-content-justify-content width-190-vh"
-  >
-    <div
-      class="card-header border-radius-12px background-color-dark-green-01 display-flex-row align-items-content-justify-content width-190-vh"
-    >
+  <div class="card card-all-my-characters background-none align-items-content-justify-content width-190-vh">
+    <div class="card-header border-radius-12px background-color-dark-green-01 display-flex-row align-items-content-justify-content width-190-vh">
       <h1 class="text-white poppins-text">Mes personnages</h1>
       <router-link
         to="/CreateAnOriginalCharacter"
@@ -24,9 +20,7 @@
           :key="index"
         >
           <div class="card-group display-flex width-35-vh">
-            <div
-              class="card individual-character-card height-35-vh background-lineart margin-1vh"
-            >
+            <div class="card individual-character-card height-35-vh background-lineart margin-1vh">
               <BackgroundImage v-bind:Image="character.Image" />
               <CharacterCardBody
                 v-bind:id="character.Id"
@@ -37,10 +31,8 @@
           </div>
         </div>
       </div>
-      <div class="row pagination-row-container">
-        <div
-          clss="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12"
-        >
+      <div class="row pagination-row-container margin--1vh-0-0-0">
+        <div clss="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <Pagination
             v-if="!showspinner && nav.pages > 0"
             v-bind:nav="nav"
