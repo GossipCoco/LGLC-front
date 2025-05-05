@@ -59,7 +59,7 @@ import CardHeader from "./GenericComponent/CardHeader.vue";
 import CharacterCard from "./CharacterComponent/CharacterCard.vue";
 import Pagination from "../Components/GenericComponent/Pagination.vue";
 import InputComponent from "./GenericComponent/InputComponent.vue";
-import SearchedCharacterCard from "./SearchedCharacterCard.vue";
+import SearchedCharacterCard from "./GenericComponent/SearchedCharacterCard.vue";
 
 export default {
   name: "AllCharacters",

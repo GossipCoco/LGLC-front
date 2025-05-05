@@ -14,7 +14,7 @@
   </div>
 </template>
 <script>
-import CharacterText from '../SearchedCharacterCard.vue';
+import CharacterText from '../CharacterComponent/CharacterText.vue';
 export default {
     name: 'SearchCharacterCard',
     props:['SearchedCharacter'],
