@@ -55,7 +55,7 @@
   background-color: rgba(var(--active-hover), 1);
 }
 .li-level1:hover, .link-collapse:hover {
-  color: rgba(var(--active-hove), 1);
+  color: rgba(var(--active-hover), 1);
 }
 .icon-menu-container svg,
 .icon-menu-container i,

@@ -22,13 +22,16 @@
 .card-group.clan-group .card{
     border-radius: 100% 100% 8px 8px;
 }
+.character-card-border{
+    border-radius: 16vh 16vh 1vh 1vh;
+}
 /* Border Radius */
 /* .card.location-clan-background-width-container{
     border-radius: 100% 100% 8% 8%;
 } */
-#all-characters-container-card .character-card.card {
+/* #all-characters-container-card .character-card.card {
     border-radius: 16vh 16vh 1vh 1vh;
-}
+} */
 .clan-card, .character-card.card .card-image,
 #original-characters-list .border-card-color {
     border-radius: 100% 100% 0 0;
