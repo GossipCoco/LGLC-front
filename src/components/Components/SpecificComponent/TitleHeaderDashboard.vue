@@ -1,5 +1,5 @@
 <template>
-  <div class="card-header dashboard-card-header display-flex-row align-items-content-justify-content height-10-vh">
+  <div class="card-header background-color-dark-green-01 dashboard-card-header display-flex-row align-items-content-justify-content height-10-vh">
     <div class="width-40-vh" v-if="type === 'username'">
       <div class="row">
         <div class="col-12">
