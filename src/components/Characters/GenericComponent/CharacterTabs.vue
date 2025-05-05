@@ -72,9 +72,9 @@
         </button>
       </li>
     </ul>
-    <div class="tab-content" id="pills-tabContent">
+    <div class="tab-content  height-60-vh" id="pills-tabContent">
       <div
-        class="tab-pane fade show active"
+        class="tab-pane fade show active height-60-vh"
         id="pills-home"
         role="tabpanel"
         aria-labelledby="pills-home-tab"

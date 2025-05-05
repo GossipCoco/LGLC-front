@@ -4,7 +4,7 @@
     <div class="card border-none background-lineart fiction-card random-characters-card height-45-vh padding-0 margin-0-rem">
       <TitleHeaderDashboard v-bind:title="'Personnages aléatoires'" v-bind:type="'myCharacters'"/>
       <div class="card-body display-flex-row align-items-content-justify-content">
-         <div class="display-flex-row align-items-content-justify-content height-15-vh margin-0-3vh-0-0" 
+         <div class="display-flex-row align-items-content-justify-content height-15-vh margin-0-2vh-0-0" 
               v-for="character in randomCharacters"
               :key="character.Id"
             >

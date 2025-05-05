@@ -64,6 +64,10 @@
     background: none;
     border: none;
 }
+#existing-character .character-details .card{
+    background: none;
+    border: none;
+}
 .clan-card {
     background-position: 50%;    
     margin: 0.75rem 0 0 1rem;

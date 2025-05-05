@@ -21,7 +21,7 @@
               </router-link>
             </div>
           </div>
-          <div class="row">
+          <div class="row margin--3vh-0-0-0">
             <div class="col-12">
               <div class="information-global-character">
                 <div class="display-flex-row character-info-general-container">

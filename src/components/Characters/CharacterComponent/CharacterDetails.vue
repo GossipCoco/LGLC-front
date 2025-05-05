@@ -1,5 +1,5 @@
 <template>
-  <div class="character-details padding-2-vh background-color-main-lineart card mb-3">
+  <div id="existing-character" class="character-details padding-2-vh background-color-main-lineart card mb-3">
     <div class="row g-0">
       <CharacterImageDetail v-bind:Image="background">
         <img
@@ -9,7 +9,8 @@
           />
       </CharacterImageDetail>
       <div class="col-8 col-md-8">
-        <div class="card-body background-color-main-lineart details-infos-characters border-radius-12px poppins-text text-white">
+        <div class="card border-none height-95-vh background-color-main-lineart details-infos-characters border-radius-12px poppins-text text-white">
+        <div class="card-body">
           <div class="row display-flex-row">
             <div class="col-6">
               <h1 class="card-title cinzel">{{ currentName }}</h1>
@@ -27,7 +28,7 @@
               </router-link>                
             </div>
           </div>
-          <div class="row">
+          <div class="row margin--3vh-0-0-0">
             <div class="col-12">
               <div class="information-global-character">
                 <div class="display-flex-row character-info-general-container">
@@ -58,6 +59,7 @@
           </div>
         </div>
       </div>
+    </div>
     </div>
   </div>
 </template>

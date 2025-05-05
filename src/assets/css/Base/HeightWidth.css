@@ -503,7 +503,6 @@ audio{
     max-width: 100%;
 }
 #pills-tabContent{
-    height: 50vh;
     overflow-y: scroll;
     background: var(--lineart-other02);
     border-radius: 12px;
