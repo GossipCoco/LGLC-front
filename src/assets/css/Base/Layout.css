@@ -38,7 +38,7 @@
     flex-wrap: wrap;
 }
 .character-details .card-body {
-    z-index: -222
+    z-index: 9999;
 }
 .welcome-dashboard-container{
     margin: 0 0 0 -1rem;

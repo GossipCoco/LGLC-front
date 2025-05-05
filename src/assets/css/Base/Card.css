@@ -62,6 +62,7 @@
 .character-details {
     margin: 0 2vh 0 0;
     background: none;
+    border: none;
 }
 .clan-card {
     background-position: 50%;    
@@ -171,8 +172,7 @@ li.quest-container {
     transform: scale(1.05);
 }
 .details-infos-characters {
-    box-shadow: 0 4px 8px rgba(var(--main-black), 0.1);
-    padding: 15px;
+    padding: 2vh;
 }
 .card-title {
     font-size: 1.5em;
