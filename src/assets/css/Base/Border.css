@@ -52,7 +52,7 @@
 }
 #original-characters-list .card.individual-character-card{
     border-radius: 100% 100% 12px 12px;
-    border: rgba(var(--dark-green-01), 1) 5px solid;
+    border: rgba(var(--lineart-other00), 1) 5px solid;
 }
 /* #original-characters-list  .card.individual-character-card{
     border-radius: 46% 46% 12px 12px; 

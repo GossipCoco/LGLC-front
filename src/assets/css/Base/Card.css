@@ -28,7 +28,7 @@
     padding: 0rem 1rem 1rem 1.5rem;
 }
 #original-characters-list .card-character-container{
-    margin: 1vh 4vh 1vh 0;
+    margin: 4vh 6vh 1vh 0;
 }
 #all-characters-container-card .character-card.card {
     margin: 2vh 3vh 0 3vh;
@@ -208,13 +208,14 @@ li.quest-container {
 #original-characters-list .border-card-color,
 #original-characters-list .card.individual-character-card{
     background-position: 50%;
-    aspect-ratio: 1;
+    aspect-ratio: auto 3 / 4;
+    transform: scale(0.95);
 }
 .individual-character-card .card-body {
-    margin: -5vh 0 0 0vh;
+    margin: -1vh 0 0 0vh;
 }
 #original-characters-list{
-    margin: -5vh 0 0 30vh;
+    margin: -13vh 0 0 30vh;
     overflow-y: hidden;
     padding: 0;
 }

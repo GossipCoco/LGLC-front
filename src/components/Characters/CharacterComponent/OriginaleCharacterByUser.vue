@@ -16,7 +16,7 @@
     <div class="card-body height-90-vh">
       <div
         id="original-characters-list"
-        class="row row-cols-1 row-cols-md-2 g-4 all-my-characters-container display-flex align-items-content-justify-content overflowY-X-hidden height-80-vh width-120-vh"
+        class="row row-cols-1 row-cols-md-2 g-4 all-my-characters-container display-flex align-items-content-justify-content overflowY-X-hidden height-90-vh width-120-vh"
       >
         <div
           class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4 card-character-container width-30-vh height-35-vh original-character-card-container"
@@ -25,7 +25,7 @@
         >
           <div class="card-group display-flex width-35-vh">
             <div
-              class="card individual-character-card height-35-vh background-color-dark-green-01 margin-1vh"
+              class="card individual-character-card height-35-vh background-lineart margin-1vh"
             >
               <BackgroundImage v-bind:Image="character.Image" />
               <CharacterCardBody
