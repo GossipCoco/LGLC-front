@@ -1,22 +1,37 @@
 <template>
-    <div class="one-book-container-wrapper one-arc-container-wrapper margin-2vh-0">
+    <div class="one-book-container-wrapper one-arc-container-wrapper margin-2vh-0 display-flex-row flex-one">
         <div class="display-flex-row flex-one">
             <card-image-background v-bind:Image="background">                
             </card-image-background>
         </div>
-        <div id="arc-container" class="border-none background-color-main-lineart flex-one card display-flex-column height-90-vh padding-2-vh">
-
+        <div id="arc-container" class="one-arc-container border-none background-color-main-lineart flex-one card display-flex-column width-120-vh height-90-vh padding-2-vh">
+            <CardHeader v-bind:Title="arc.Title">
+                <router-link to="/ArcBookLayout" class="btn btn-primary">Retour à la liste des arcs</router-link>
+            </CardHeader>
+            <div class="card-body width-120-vh height-80-vh padding-2-vh margin-2vh-0">
+                <div class="row">
+                    <div class="col-12">
+                        <p class="white-text">Résumé : </p>
+                        <p class="white-text" v-html="arc.Summary"></p>
+                        <div v-for="(books, index) in arc.Books" :key="index">
+                            <p  class="white-text">{{ books.Title }}</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </template>
 <script>
 import ArcBookService from '../../../services/ArcBookService';
-
+import CardHeader from '../../Components/GenericComponent/CardHeader.vue';
 import cardImageBackground from "../../Components/GenericComponent/cardImageBackground.vue";
 export default {
     name: 'OneArc',
     components:{
-        cardImageBackground
+        cardImageBackground,
+        CardHeader
     },
     data(){
         return{
