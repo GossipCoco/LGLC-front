@@ -55,6 +55,7 @@
 <script>
 import functions from "../../services/functions";
 import CharacterService from "../../services/CharacterService";
+import ClansServices from '../../services/ClansServices'
 import CardHeader from "./GenericComponent/CardHeader.vue";
 import CharacterCard from "./CharacterComponent/CharacterCard.vue";
 import Pagination from "../Components/GenericComponent/Pagination.vue";
@@ -83,6 +84,7 @@ export default {
       NbAllCharacters: null,
       nameSearch: null,
       nbSearchCharacters: null,
+      searchClan: "",
       nav: {
         current: 0,
         pages: 0,
@@ -90,10 +92,16 @@ export default {
       },
       allMyCharacter: {},
       allCharacters: {},
+      clans: {},
       grades: {},
       NameCharacterSearch: {},
       filters: [],
       filteredCharacters: [],
+      navClans: {
+        current: 0,
+        pages: 0,
+        step: 100,
+      },
     };
   },
   provide() {
@@ -111,10 +119,20 @@ export default {
       try {
         await this.countAllCharacter();
         await this.getAllCharacters(this.nav);
+        await this.getAllClans(this.navClans);
       } catch (error) {
         console.error("Error initializing page:", error);
       } finally {
         this.showspinner = false;
+      }
+    },
+    async getAllClans(nav) {
+      try {
+        const response = await ClansServices.getAllClans(nav);
+        this.clans = response.data.ob;
+        console.log(this.clans)
+      } catch (e) {
+        console.log(e);
       }
     },
     async CharacterFilteredPagination(page) {
