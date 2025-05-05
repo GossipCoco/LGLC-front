@@ -240,6 +240,7 @@ export default {
     GetAllIllustrations() {
       ImageService.GetAllIllustrations()
         .then((response) => {
+          console.log(response.data.ob)
           this.imagesByRequest = response.data.ob.map((item) => item.Id);
         })
         .catch((err) => {

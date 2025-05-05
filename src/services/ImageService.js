@@ -4,7 +4,7 @@ class ImageService{
         return http.get('/image/Image')
     }
     GetAllIllustrations() {
-        return http.get('/image/Illustration')
+        return http.get('/image/GetAllIllustrations')
     }
 }
 export default new ImageService
