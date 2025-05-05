@@ -3,7 +3,7 @@
     <TimelineArc v-bind:Title="arc.Title" v-bind:position="'left'"/>
     <div class="row">      
       <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xxl-12">
-        <TimelineArc v-bind:Title="arc.Title" v-bind:position="'title-main'"/>
+        <TimelineArc v-bind:Title="arc.Title" v-bind:id="arc.Id" v-bind:position="'title-main'"/>
         <div class="row">
           <BookImage v-bind:Illustration="illustration" v-bind:Title="arc.Title"/>
           <SummaryArc v-bind:Summary="arc.Summary" />

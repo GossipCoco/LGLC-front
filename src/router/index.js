@@ -21,6 +21,7 @@ import AllLocationsLayout from "../components/Locations/AllLocationsLayout.vue"
 import ClanDetails from "../components/Locations/ClanDetails"
 import LocationsDetails from "../components/Locations/LocationsDetails.vue";
 import ArcBookLayout from '../components/ArcBook/ArcBookLayout.vue'
+import OneArc from "../components/ArcBook/Components/OneArc.vue";
 import OneBook from "../components/ArcBook/Components/OneBook.vue";
 import CreateAnOriginalCharacter from '../components/Characters/CharacterForm/CreateAnOriginalCharacter.vue'
 import EditAnOriginalCharacter from "../components/Characters/CharacterForm/EditAnOriginalCharacter.vue";
@@ -209,6 +210,17 @@ const routes = [
         component: ArcBookLayout
       },
       {
+        path: '/OneArc/:id',
+        name: 'OneArc',
+        component: OneArc
+      },
+      {
+        path: '/BookByTitle/:id',
+        name: 'OneBook',
+        component: OneBook,
+        props: true
+      },
+      {
         path: '/rollOfDice',
         name: 'RollOfDiceLayout',
         component: RollOfDiceLayout,
@@ -262,12 +274,6 @@ const routes = [
         path: '/chapter/:id',
         name: 'ChapterLayout',
         component: ChapterLayout,
-        props: true
-      },
-      {
-        path: '/BookByTitle/:id',
-        name: 'OneBook',
-        component: OneBook,
         props: true
       },
       {

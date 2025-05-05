@@ -20,7 +20,7 @@ export default {
         this.GetArcByName(this.url)
     },
     methods:{
-        GetArcByName(){
+        GetArcByName(id){
             ArcBookService.GetArcByName(id)
             .then((response) => {
                 console.log(response.data.ob)

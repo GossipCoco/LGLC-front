@@ -22,8 +22,6 @@
       </div>
     </div>
   </div>
-
-
 </template>
 <script>
 import ArcBookService from "../../../services/ArcBookService";
