@@ -1,7 +1,7 @@
 <template>
   <div class="margin-2vh roll-dice-container card-height border-none background-color-main-lineart flex-one card display-flex-column overflowY-X-hiddengame-card">
     <CardHeader v-bind:Title="'Lancé de Dés'" />
-    <div class="card-body">
+    <div class="card-body height-70-vh">
       <div class="display-flex align-items-content-justify-content">
         <div class="text-game-container  flex-one">
           <p class="white-text">Utilisateur actuel : {{ userCurrent }}</p>

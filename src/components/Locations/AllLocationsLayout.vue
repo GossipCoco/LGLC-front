@@ -2,7 +2,7 @@
   <div class="height-90-vh clans-location-container overflowX-hiddenoverflowY-hidden">
     <div class="height-80-vh display-flex-row card-group clan-group location-group-margin width-120-vh">
       <div v-for="(location, index) in allLocations" :key="index">
-        <div class="card background-color-dark-green-01 location-clan-background-width-container">
+        <div class="card background-color-dark-green-01 border-radius-100-100-8-8 location-clan-background-width-container">
           <div
             class="card-image clan-card width-30-vh height-30-vh background-size-cover"
             v-bind:style="{
