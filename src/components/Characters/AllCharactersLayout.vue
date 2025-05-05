@@ -34,6 +34,14 @@
           </div>
           <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-10 col-xs-12" v-if="useFiltered">
             <searched-character-card v-bind:SearchedCharacter="filteredCharacters" />
+            <select-component
+              :label="'Filtrer par Clan'"
+              :forId="'selectClan'"
+              :options="clans"
+              :optionKey="'Id'"
+              :optionLabel="'Name'"
+              @selectChange="onSelectClan"
+            />
           </div>
         </div>
         <div class="row pagination-container-row">
@@ -60,6 +68,7 @@ import CardHeader from "./GenericComponent/CardHeader.vue";
 import CharacterCard from "./CharacterComponent/CharacterCard.vue";
 import Pagination from "../Components/GenericComponent/Pagination.vue";
 import InputComponent from "./GenericComponent/InputComponent.vue";
+import SelectComponent from "./GenericComponent/SelectComponent.vue";
 import SearchedCharacterCard from "./GenericComponent/SearchedCharacterCard.vue";
 
 export default {
@@ -68,6 +77,7 @@ export default {
     CharacterCard,
     Pagination,
     InputComponent,
+    SelectComponent,
     CardHeader,
     SearchedCharacterCard
   },
@@ -113,7 +123,11 @@ export default {
     this.userCurrent = this.$store.state.auth.user.usrID;
     await this.initPage();
   },
-  methods: {    
+  methods: {
+    onSelectClan(clanId) {
+      this.selectedClan = clanId;
+      // this.filterByClan(); // que tu ajouteras plus tard
+    },
     async initPage() {
       this.showspinner = true;
       try {
