@@ -105,12 +105,22 @@ export default {
     this.userCurrent = this.$store.state.auth.user.usrID;
     await this.initPage();
   },
-  methods: {
+  methods: {    
+    async initPage() {
+      this.showspinner = true;
+      try {
+        await this.countAllCharacter();
+        await this.getAllCharacters(this.nav);
+      } catch (error) {
+        console.error("Error initializing page:", error);
+      } finally {
+        this.showspinner = false;
+      }
+    },
     async CharacterFilteredPagination(page) {
       this.nav.current = page;
       try {
-        const response = await CharacterService.getCharacterByNameSearch(this.nameSearch, this.nav);
-        
+        const response = await CharacterService.getCharacterByNameSearch(this.nameSearch, this.nav);        
         this.filteredCharacters = response.data.ob;
         this.useFiltered = true;
       } catch (error) {
@@ -132,17 +142,6 @@ export default {
       } catch (e) {
         console.log(e);
         this.useFiltered = false;
-      }
-    },
-    async initPage() {
-      this.showspinner = true;
-      try {
-        await this.countAllCharacter();
-        await this.getAllCharacters(this.nav);
-      } catch (error) {
-        console.error("Error initializing page:", error);
-      } finally {
-        this.showspinner = false;
       }
     },
     async CharacterPagination(page) {
@@ -185,6 +184,7 @@ export default {
       try {
         const response = await CharacterService.getAllCharacters({ nav });
         this.allCharacters = response.data.ob;
+        console.log(this.allCharacters)
         this.showspinner = false;
         this.nav.pages = functions.CalcPagination(this.NbAllCharacters, this.nav, this.nav.step);
       } catch (e) {
