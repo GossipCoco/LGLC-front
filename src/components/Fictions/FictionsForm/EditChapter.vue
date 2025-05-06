@@ -13,7 +13,7 @@
           <div class="row">
             <div class="col-12">
               <div class="mb-12">
-                <label for="Content" class="form-label text-white">Votre Chapitre {{ form.Name }}</label>
+                <label for="Content" class="form-label text-white">Editer le {{ form.Title }}</label>
                 <textarea
                   v-model="form.Content"
                   class="form-control"
@@ -64,6 +64,7 @@ export default {
     GetAChapterById(id) {
       FictionService.GetAChapterById(id)
         .then((response) => {
+          console.log(response.data.ob)
           this.Back = response.data.ob.Fiction.Title
           this.chapter = response.data.ob
           this.form.Content = this.chapter.Content;
