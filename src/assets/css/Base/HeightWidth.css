@@ -5,9 +5,7 @@
 /* .avatar-wrapper img{
     height: 10vh;
 } */
-.user-information-container .mini-rond-avatar-image,
-.user-information-container .rond-image-illustration img
-.character-card.card .card-image, img.profil-user-lever-img{
+.character-card.card .card-image{
     width: 15vh;
     height: 15vh;
 }
