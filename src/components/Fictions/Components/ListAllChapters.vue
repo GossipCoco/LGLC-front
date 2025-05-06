@@ -1,6 +1,6 @@
 <template>
   <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 col-middle padding-0-0-0-4vh">
-    <div class="display-flex-column flex-one all-chapters-list-container overflowY-scroll width-70-vh">
+    <div class="display-flex-column flex-one all-chapters-list-container overflowY-scroll width-70-vh margin-0-rem">
       <ul class="list-group width-50-vh overflowY-scroll background-color-dark-green-01 custom-scroll-list all-chapter-ul-scroll">
         <li
           class="list-group-item"

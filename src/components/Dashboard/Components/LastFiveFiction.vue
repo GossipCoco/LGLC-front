@@ -2,7 +2,7 @@
   <div
     class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 card-global"
   >
-    <div class="card background-lineart border-none fiction-card">
+    <div class="card height-60-vh background-lineart border-none fiction-card">
       <TitleHeaderDashboard
         v-bind:title="'Mes 4 dernières fictions'"
         v-bind:type="'fictions'"

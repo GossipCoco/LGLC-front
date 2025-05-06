@@ -1,6 +1,6 @@
 <template>
   <div class="opacity-container height-80 display-flex-row">
-    <div class="summary-container height-70-vh overflow-hidden">
+    <div class="summary-container width-200-vh height-870-vh overflow-hidden">
       <div class="row top-fiction height-5-vh" v-if="AuthorId === usrCurrent">        
         <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
           <EditSummary v-bind:FictionId="IdFiction" v-bind:Summary="Summary" v-if="AuthorId === usrCurrent"/>         

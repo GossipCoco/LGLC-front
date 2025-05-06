@@ -1,6 +1,6 @@
 <template>
   <div
-    class="card card-all-my-characters background-none align-items-content-justify-content width-190-vh"
+    class="card border-none card-all-my-characters background-none align-items-content-justify-content width-190-vh"
   >
     <card-header
       v-bind:label="'Tous les personnages'"

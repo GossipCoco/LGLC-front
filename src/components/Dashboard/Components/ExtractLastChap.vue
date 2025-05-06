@@ -1,6 +1,6 @@
 <template>
   <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 card-global">
-    <div class="card background-lineart border-none fiction-card">
+    <div class="card height-60-vh background-lineart border-none fiction-card">
       <TitleHeaderDashboard v-bind:title="'Mes 4 derniers chapitres'" v-bind:type="'chapters'"/>
       <div class="card-body last-chapter-card display-flex-column align-items-content-justify-content height-50-vh padding-1-vh-0-0-0">
         <div

@@ -3,7 +3,7 @@
     class="col-xxl-3 col-xl-12 col-lg-12 col-md-6 col-sm-12 col-xs-12 card-global all-my-oc-card"
   >
     <div
-      class="card border-none display-flex-column profil-card fiction-card background-lineart my-oc-card"
+      class="card height-60-vh border-none display-flex-column profil-card fiction-card background-lineart my-oc-card"
     >
       <TitleHeaderDashboard
         v-bind:title="'Mes OC\'s'"

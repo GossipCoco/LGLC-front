@@ -2,29 +2,11 @@
 @import '../variables.scss';
 
 /* en VH */
-/* .avatar-wrapper img{
-    height: 10vh;
-} */
-/* .character-card.card .card-image{
-    width: 15vh;
-    height: 15vh;
-} */
 .all-chapters-list-container {    
     width: 55vh;
     max-height: 85vh;
-    padding: 0 1rem;
+    padding: 0 2vh;
     overflow: auto;
-    margin: 0;
-}
-.row.bottom-dashboard-levele-three .card, .row.bottom-dashboard-levele-three .card .card-body{
-    height: 50vh;
-}
-.summary-container {
-    width: 200vh;
-    height: 80vh;
-}
-.middle-dashboard{
-    width: 192vh;
 }
 .book-containe,
 .dashboard-max-card-container.roll-dice-container .card-body
@@ -79,27 +61,10 @@
 .card-image img  {
     width: 23vh;
 }
-.card.card-image-layout.clan-detail-layout.mb-3,
-.card.card-image-layout.clan-detail-layout.mb-3 .row.g-0,
-.welcome-dashboard-container,
-.list-all-characters-container .row-filter {
-    width: 188vh;
-}
-.card.card-image-layout.clan-detail-layout.mb-3,
-.card.card-image-layout.clan-detail-layout.mb-3 .row.g-0 {
-    height: 94vh;
-}
-.profil-user-card.card .avatar-container img {
-    width: 30vh;
-}
 .all-clans-cards .card-body, .bottom-top-dashboard .card,
 #original-characters-list .border-card-color {
     height: 35vh;
 } 
-.one-book-container-wrapper .fiction-container .card-body,
-.row.top-dashboard .card {
-    height: 60vh;
-}
 .row.bottom-dashboard-levele-one .card.random-characters-card{
     width: 112vh;
 }
@@ -126,10 +91,9 @@
 .row.top-dashboard .card-body.user-info-text > div, .fiction-summary-card{
     width: 44vh;
 }
-/* .dashboard-max-card-container.card-height.fiction-container .card-body,  */
-.dashboard-max-card-container.card-height .card-body {
+/* .dashboard-max-card-container.card-height .card-body {
     height: 80vh;
-}
+} */
 .rating, .button-validate-container .btn.btn-primary,
 .dashboard-home-max-card-container .avatar-container,
 .create-character-button .btn, .number-page-container{
@@ -174,11 +138,6 @@
     width: 8vh;
     height: 8vh;
 }
-/* .create-character-form > div:nth-child(2), 
-.card.location-clan-background-width-container,
-.select-message-container .card-body{
-    height: 40vh;
-}*/
 .h5-container{
     height: 9vh;
 }
@@ -307,7 +266,6 @@
     height: 4vh;
     width: 4vh;
 }
-
 #book-container.dashboard-max-card-container.card-height .card-body{
     height: 80vh;
 }
@@ -332,7 +290,6 @@
     width: 140vh;
     height: 80vh;
 }
-
 #accueil li.nav-item{
     width: 40vh;
 }
@@ -409,7 +366,6 @@
 .all-characters-of-fiction{
     width: 28vh;
 }
-
 .row.list-fiction-card-container{
     height: 38rem;
 }
