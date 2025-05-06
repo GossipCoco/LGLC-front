@@ -6,7 +6,7 @@
         v-bind:title="'Dernier roman paru'"
         v-bind:type="'chapters'"
       />
-      <div class="card-body last-chapter-card text-white height-60-vh">
+      <div class="card-body last-chapter-card text-white height-30-vh">
         <h4 class="text-white align-items-content-justify-content">
           <router-link
             class="text-white poppins-text font-size-1-25"
