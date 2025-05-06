@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import '../variables.scss';
+/* HEIGHT and WIDTH*/
+.height-auto{
+    height: auto;
+}
+/* VH */
+/*height*/
+.height-100{
+    height: 100vh;
+}
+.height-90{
+    height: 90vh
+}
+.height-80{
+    height: 80vh
+}
+.height-100-vh{
+    height: 100vh;
+}
+.height-95-vh{
+    height: 95vh
+}
+.height-90-vh{
+    height: 90vh
+}
+.height-85-vh{
+    height: 85vh
+}
+.height-80-vh{
+    height: 80vh
+}
+.height-77-vh{
+    height: 77vh;
+}
+.height-75-vh{
+    height: 75vh;
+}
+.height-70-vh{
+    height: 70vh;
+}
+.height-60-vh{
+    height: 60vh;
+}
+.height-50-vh{
+    height: 50vh;
+}
+.height-45-vh{
+    height: 45vh;
+}
+.height-40-vh{
+    height: 40vh;
+}
+.height-35-vh{
+    height: 35vh;
+}
+.height-32-vh{
+    height: 32vh;
+}
+.height-30-vh{
+    height: 30vh;
+}
+.height-20-vh{
+    height: 20vh;
+}
+.height-15-vh{
+    height: 15vh;
+}
+.height-10-vh{
+    height: 10vh;
+}
+.height-6-vh{
+    height: 5vh;
+}
+.height-5-vh{
+    height: 5vh;
+}
+/* Width */
+.width-200-vh{
+    width: 200vh;
+}
+.width-190-vh{
+    width: 190vh;
+}
+.width-180-vh{
+    width: 180vh;
+}
+.width-170-vh{
+    width: 170vh;
+}
+.width-160-vh{
+    width: 160vh;
+}
+.width-150-vh{
+    width: 150vh;
+}
+.width-140-vh{
+    width: 140vh;
+}
+.width-130-vh{
+    width: 130vh;
+}
+.width-120-vh{
+    width: 120vh;
+}
+.width-110-vh{
+    width: 110vh;
+}
+.width-100-vh{
+    width: 100vh;
+}
+.width-90-vh{
+    width: 90vh;
+}
+.width-80-vh{
+    width: 80vh;
+}
+.width-70-vh{
+    width: 70vh;
+}
+.width-60-vh{
+    width: 60vh;
+}
+.width-50-vh{
+    width: 50vh;
+}
+.width-40-vh{
+    width: 40vh;
+}
+.width-35-vh{
+    width: 35vh;
+}
+.width-30-vh{
+    width: 30vh;
+}
+.width-25-vh
+{
+    width: 25vh;
+}
+.width-20-vh
+{
+    width: 20vh;
+}
+.width-15-vh{
+    width: 15vh;
+}
+.width-10-vh{
+    width: 10vh;
+}
+.width-5-vh{
+    width: 5vh;
+}
+.width-25-vh-height-25-vh{
+    width: 25vh;
+    height: 25vh;
+}
+.width-9v-vh-height-9v-vh{
+    width: 9vh;
+    height: 9vh;
+}
