@@ -91,14 +91,6 @@
 .row.top-dashboard .card-body.user-info-text > div, .fiction-summary-card{
     width: 44vh;
 }
-/* .dashboard-max-card-container.card-height .card-body {
-    height: 80vh;
-} */
-.rating, .button-validate-container .btn.btn-primary,
-.dashboard-home-max-card-container .avatar-container,
-.create-character-button .btn, .number-page-container{
-    height: 5vh;
-}
 .rating {
     width: 16vh;
 }
@@ -170,11 +162,6 @@
 }
 .all-fictions-container-global{
     height: 95vh;
-}
-.welcome-dashboard-container img.mini-rond-avatar-image, 
-.dashboard-card-header .avatar-wrapper img{
-    width: 8vh;
-    height: 8vh;
 }
 .flex-one .quest-button-text .btn.btn-primary{
     width: 18vh;

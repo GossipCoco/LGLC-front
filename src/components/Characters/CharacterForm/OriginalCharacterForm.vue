@@ -112,7 +112,7 @@
         </div>
         <div class="col-md-4 create-character-button display-flex">
           <button
-            class="btn btn-primary margin-2vh-0-0-0"
+            class="btn btn-primary margin-2vh-0-0-0 height-5-vh"
             type="submit"
             v-on:click="handleOk"
             title="endpart"
