@@ -23,11 +23,11 @@
                     >
                   </h5>
                 </div>
-                <p class="author-text font-variant-small-caps">
+                <p class="author-text font-variant-small-caps font-size-1-5em">
                   Auteur : &nbsp;
                   <router-link
                     :to="'/getUserBy/' + fiction.User.UserName"
-                    class="text-dark-green montesserat"
+                    class="text-dark-green montesserat font-size-1-25em"
                   >
                     {{ fiction.User.UserName }}
                   </router-link>
@@ -35,7 +35,7 @@
               </div>
             </div>
             <div
-              class="card-text width-30-vh text-align-justify Noto-Sans summary-text-font display-none-responsive padding-1-vh"
+              class="card-text width-30-vh text-align-justify poppins-text summary-text-font display-none-responsive padding-1-vh"
               v-html="truncateText(fiction.Summary, 65)"
             ></div>
           </div>

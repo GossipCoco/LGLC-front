@@ -186,7 +186,6 @@ li.quest-container {
     color: rgba(var(--main-white), 1)
 }
 .card-text {
-    font-family: 'Roboto', sans-serif;
     font-size: 1.2em;
     line-height: 1.6;
 }
