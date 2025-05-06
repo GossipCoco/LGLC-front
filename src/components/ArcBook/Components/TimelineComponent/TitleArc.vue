@@ -9,14 +9,14 @@
         animation-name: fadeInLeft;
       "
     >
-      <p class="text-white poppins-text">{{ Title }} {{ id }}</p>
+      <p class="text-white poppins-text">{{ Title }}</p>
     </div>
   </div>
   <div v-else>
     <div class="row">
       <div class="col-12 display-flex-row align-items-content-justify-content">
         <h2 class="text-white">
-          <router-link :to="'/OneArc/'+id">
+          <router-link :to="'/OneArc/'+id" class="color-clear-green-01">
             {{ Title }} 
           </router-link>
         </h2>
