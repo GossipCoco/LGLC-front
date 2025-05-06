@@ -1,6 +1,6 @@
 <template>
-  <div class="card card-all-my-characters background-none align-items-content-justify-content width-190-vh">
-    <div class="card-header border-radius-12px background-color-dark-green-01 display-flex-row align-items-content-justify-content width-190-vh">
+  <div class="card border-none card-all-my-characters background-none align-items-content-justify-content width-190-vh">
+    <div class="card-header z-index-9999 border-radius-12px background-color-dark-green-01 display-flex-row align-items-content-justify-content width-190-vh">
       <h1 class="text-white poppins-text">Mes personnages</h1>
       <router-link
         to="/CreateAnOriginalCharacter"
@@ -12,7 +12,7 @@
     <div class="card-body height-90-vh">
       <div
         id="original-characters-list"
-        class="row row-cols-1 row-cols-md-2 g-4 display-flex align-items-content-justify-content overflowY-X-hidden overflowY-hidden padding-0-rem height-90-vh width-120-vh"
+        class="row row-cols-1 row-cols-md-2 g-4 display-flex align-items-content-justify-content overflowY-X-hidden overflowY-hidden padding-0-rem height-90-vh width-120-vh border-none"
       >
         <div
           class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4 card-character-container width-30-vh height-35-vh original-character-card-container"

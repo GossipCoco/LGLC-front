@@ -81,3 +81,6 @@ table.table-borderless, .table.table-borderless>:not(caption)>*>*, .table-border
 th{
     font-weight: 200;
 }
+.z-index-9999{
+    z-index: 9999;
+}

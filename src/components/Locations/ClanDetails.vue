@@ -1,8 +1,7 @@
 <template>
-  <div class="card clan-detail-layout margin-1vh-0-0-0 height-95-vh display-flex-row mb-3">
+  <div class="card border-none clan-detail-layout margin-1vh-0-0-0 height-95-vh display-flex-row mb-3">
     <div class="row">
-      <div
-          class="col-3">
+      <div class="col-3">
       <cardImageBackground v-bind:Image="Image">
         <div
           class="col-2 display-flex-row align-items-content-justify-content"

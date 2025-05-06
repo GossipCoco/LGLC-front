@@ -25,13 +25,6 @@
 .character-card-border{
     border-radius: 16vh 16vh 1vh 1vh;
 }
-/* Border Radius */
-/* .card.location-clan-background-width-container{
-    border-radius: 100% 100% 8% 8%;
-} */
-/* #all-characters-container-card .character-card.card {
-    border-radius: 16vh 16vh 1vh 1vh;
-} */
 .clan-card, .character-card.card .card-image,
 #original-characters-list .border-card-color {
     border-radius: 100% 100% 0 0;
@@ -54,12 +47,6 @@
     border-radius: 100% 100% 12px 12px;
     border: rgba(var(--lineart-other00), 1) 5px solid;
 }
-/* #original-characters-list  .card.individual-character-card{
-    border-radius: 46% 46% 12px 12px; 
-} */
- .card.card-all-my-characters .card-header{
-    border: none;
- }
 .card-image.clan-detail > .col-8{
     border-radius: 20%;
 }
@@ -137,9 +124,6 @@
 
 .fiction-card .card-header {
     border-bottom: rgba(var(--clear-green-02), 0);
-}
-#original-characters-list.border {
-    border: none
 }
 
 /* .card {
