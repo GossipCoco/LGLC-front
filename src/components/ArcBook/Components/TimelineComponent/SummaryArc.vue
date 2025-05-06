@@ -1,5 +1,5 @@
 <template>
-  <div class="col-3 col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+  <div class="col-6 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
     <div
       class="single-timeline-content d-flex wow fadeInLeft"
       data-wow-delay="0.3s"

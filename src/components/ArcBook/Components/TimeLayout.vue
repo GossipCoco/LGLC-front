@@ -8,7 +8,7 @@
           <BookImage v-bind:Illustration="illustration" v-bind:Title="arc.Title"/>
           <SummaryArc v-bind:Summary="arc.Summary" />
           <ListAllBooksByArc v-bind:Books="arc.Books"/>
-          <CharacterByArc />
+          <!-- <CharacterByArc /> -->
         </div>
       </div>
     </div>
@@ -19,11 +19,11 @@ import TimelineArc from './TimelineComponent/TitleArc.vue'
 import BookImage from './TimelineComponent/BookImage.vue';
 import SummaryArc from './TimelineComponent/SummaryArc.vue'
 import ListAllBooksByArc from './TimelineComponent/ListAllBooksByArc.vue'
-import CharacterByArc from './TimelineComponent/CharactersByArc.vue'
+// import CharacterByArc from './TimelineComponent/CharactersByArc.vue'
 export default {
   name: "TimeLayout",
   props: ["arc"],
-  components: {TimelineArc, BookImage, SummaryArc, ListAllBooksByArc, CharacterByArc},
+  components: {TimelineArc, BookImage, SummaryArc, ListAllBooksByArc},
   data(){
     return{
       illustration: this.arc.IllustrationOne

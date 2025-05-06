@@ -300,3 +300,6 @@ li.quest-container {
     background-repeat: no-repeat;
     background-position: 50%;
 }
+.last-arc-container p{
+    text-align: justify;
+}
