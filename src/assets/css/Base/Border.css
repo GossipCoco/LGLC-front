@@ -4,6 +4,9 @@
 .border-radius-100{
     border-radius: 100%;
 }
+.border-radius-top-100{
+    border-radius: 100% 100% 0 0;
+}
 .border-radius-50{
     border-radius: 50%;
 }
@@ -35,10 +38,6 @@
 }
 .character-card.card .card-image {
     border : 1vh solid rgba(var(--clear-green-01), 1);
-}
-.card.card-image-layout.clan-detail-layout {
-    border-radius: 20px 0 0 20px;
-    margin: 1rem;
 }
 #original-characters-list .border-card-color{
     border: 6px solid rgba(var(--middle-green-02), 1);

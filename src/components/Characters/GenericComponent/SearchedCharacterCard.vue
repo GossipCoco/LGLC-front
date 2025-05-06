@@ -5,7 +5,7 @@
       <div
         v-for="(character, index) in SearchedCharacter"
         :key="index"
-        class="character-card card overflowY-X-hidden border-none text-white
+        class="character-card card border-radius-top-100 overflowY-X-hidden border-none text-white
         background-lineart background-size-cover flex-one opensans-text"
       >      
         <character-text v-bind:character="character" />

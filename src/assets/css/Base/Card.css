@@ -211,7 +211,8 @@ li.quest-container {
 }
 .clan-detail-layout .card-image img{
     position: relative;
-    top: 5rem;
+    top: 10vh;
+    right: 10vh;
 }
 .clan-detail-card > .col-2{
     margin: 0 2rem;
