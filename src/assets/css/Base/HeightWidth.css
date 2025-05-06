@@ -2,17 +2,9 @@
 @import '../variables.scss';
 
 /* en VH */
-.fiction-container{    
-    width: 180vh;
-}
-.create-character-form-modal{
-    width: 138vh;
-    height: 50vh;
-}
-.avatar-wrapper img,
-.avatar-wrapper{
+/* .avatar-wrapper img{
     height: 10vh;
-}
+} */
 .user-information-container .mini-rond-avatar-image,
 .user-information-container .rond-image-illustration img
 .character-card.card .card-image, img.profil-user-lever-img{

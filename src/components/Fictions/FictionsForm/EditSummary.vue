@@ -32,7 +32,7 @@
         </div>
         <div class="modal-body">
           <form
-            class="create-character-form-modal"
+            class="margin--1vh-0-0-0 height-50-vh width-140-vh"
             @submit.stop.prevent="handleOk"
             ref="uploadForm"
           >

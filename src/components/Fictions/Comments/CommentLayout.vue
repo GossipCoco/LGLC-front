@@ -1,7 +1,7 @@
 <template>
   <div
     id="comment-container"
-    class="background-color-main-lineart fiction-globale-container text-white card display-flex-column fiction-container  overflowY-scroll overflowX-hidden opensans-text"
+    class="background-color-main-lineart fiction-globale-container text-white card display-flex-column width-180-vh overflowY-scroll overflowX-hidden opensans-text"
   >
   <div class="card-body padding-2-vh height-80">
     <div class="row">
