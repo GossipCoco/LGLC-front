@@ -11,6 +11,8 @@
         <div class="card-body width-120-vh height-80-vh padding-2-vh margin-2vh-0">
           <div class="row">
             <div class="col-12">
+              <p class="text-white text-align-justify">{{ book.Arc.Title }}</p>
+              <p class="text-white text-align-justify">{{ book.TypeBook }}</p>
               <div
                 class="text-white text-align-justify"
                 v-html="book.Summary"
