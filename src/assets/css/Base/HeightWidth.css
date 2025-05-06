@@ -180,23 +180,20 @@
 .fiction-container .card-header{
     height: 13vh;
 }
-.card-form-create-character .card-body{
-    height: 80vh;   
-}
-.avatar-avatar-card-container{
+/* .avatar-avatar-card-container{
     height: 12vh;
-}
+} */
 .avatar-avatar-card-container .avatar-container {
     width: 14vh;
     height: 14vh;
 }
-.avatar-avatar-card-container .avatar-container .avatar-wrapper {
+/* .avatar-avatar-card-container .avatar-container .avatar-wrapper {
     width: 12vh;
-}
-.avatar-avatar-card-container .avatar-container .avatar-wrapper img{
+} */
+/* .avatar-avatar-card-container .avatar-container .avatar-wrapper img{
     width: 12vh;
     height: 12vh;
-}
+} */
 .user-info-text .row.avatar-row{
     height: 13vh;
 }
