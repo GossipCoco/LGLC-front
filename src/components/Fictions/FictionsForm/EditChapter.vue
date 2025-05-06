@@ -1,9 +1,10 @@
 <template>
-  <div id="edit-chapter-contain" class="width-180-vh">
+  <div id="edit-chapter-contain" class="width-180-vh height-80vh margin-4vh ">
     <div
-      class="character-details-chatper width-180-vh background-color-main-lineart card mb-3 display-flex-column padding-0"
+      class="width-180-vh height-80 background-color-main-lineart border-none 
+            card mb-3 display-flex-column padding-0 margin-4vh"
     >
-      <div class="card-body padding-2-vh width-170-vh height-80">
+      <div class="card-body width-170-vh height-80">
         <form
           class="create-character-form width-160-vh"
           @submit.stop.prevent="handleOk"
@@ -23,7 +24,7 @@
               </div>
             </div>
           </div>
-          <div class="row">
+          <div class="row margin-4-0-0-0">
             <div class="col-6"></div>
             <div class="col-4">
               <router-link :to="'/fiction/' + Back" class="btn btn-primary">

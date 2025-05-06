@@ -6,12 +6,6 @@
     width: 55vh;
     max-height: 85vh;
     padding: 0 2vh;
-    overflow: auto;
-}
-.book-containe,
-.dashboard-max-card-container.roll-dice-container .card-body
-#edit-chapter-contain .character-details-chatper.card.mb-3.fiction-container{
-    height: 75vh;
 }
 #one-book-container-wrapper .row,
 .character-container-global,
@@ -266,10 +260,10 @@
 .create-chapter-card-container{
     height: 85vh;
 }
-#edit-chapter-contain{
-    width: 140vh;
-    height: 80vh;
-}
+/* #edit-chapter-contain{
+    width: 190vh;
+    height: 100vh;
+} */
 #accueil li.nav-item{
     width: 40vh;
 }

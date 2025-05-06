@@ -2,17 +2,17 @@
   <div class="one-book-container-wrapper margin-2vh-0">
     <div class="display-flex-row flex-one">
       <card-image-background v-bind:Image="background">
-        <img :src="book.Image" :alt="book.Title" class="image-book border-radius-2vh-0-0-2vh height-30-vh" />
+        <img :src="Image" :alt="Title" class="image-book border-radius-2vh-0-0-2vh height-30-vh" />
       </card-image-background>
       <div id="book-container" class="border-none background-color-main-lineart flex-one card display-flex-column height-90-vh padding-2-vh">
-        <CardHeader v-bind:Title="book.Title">
+        <CardHeader v-bind:Title="Title">
           <router-link to="/ArcBookLayout" class="btn btn-primary">Retour à la liste des arcs & romans</router-link>
         </CardHeader>
         <div class="card-body width-120-vh height-80-vh padding-2-vh margin-2vh-0">
           <div class="row">
             <div class="col-12">
-              <p class="text-white text-align-justify">{{ book.Arc.Title }}</p>
-              <p class="text-white text-align-justify">{{ book.TypeBook }}</p>
+              <p class="text-white text-align-justify">{{ Title }}</p>
+              <p class="text-white text-align-justify">{{ TypeBook }}</p>
               <div
                 class="text-white text-align-justify"
                 v-html="book.Summary"
@@ -37,7 +37,10 @@ export default {
     return {
       url: null,
       book: {},
-      background: null
+      background: null,
+      Title: null,
+      TypeBook: null,
+      Image: null
     };
   },
   created() {
@@ -48,9 +51,12 @@ export default {
     GetBookByTitle(title) {
       ArcBookService.GetBookByTitle(title)
         .then((response) => {
-          console.log(response.data.ob);
+          console.log(response.data.ob.Title);
           this.book = response.data.ob;
           this.background = response.data.ob.IllustrationOne
+          this.Title = response.data.ob.Title
+          this.TypeBook = response.data.ob.TypeBook
+          this.Image = response.data.ob.Image
 
         })
         .catch((e) => {
