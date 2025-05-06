@@ -55,6 +55,9 @@
 .text-align-center{
     text-align: center;
 }
+.text-align-justify{
+    text-align: justify;
+}
 .text-white{
     color: rgba(var(--main-white), 1);
 }
