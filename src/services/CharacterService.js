@@ -22,6 +22,9 @@ class CharacterService {
     CountCharacterByNameSearch(id){
         return http.get(`/character/CountCharacterByNameSearch/${id}`)
     }
+    CountNbCharactersByClan(id){
+        return http.get(`/character/CountNbCharactersByClan${id}`)
+    }
     GetAllCharactersByUser(id){
         return http.get(`/character/GetAllCharactersByUser/${id}`)
     }
