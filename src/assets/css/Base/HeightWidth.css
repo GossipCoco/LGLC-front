@@ -2,9 +2,6 @@
 @import '../variables.scss';
 
 /* en VH */
-.gap-2{
-    width: 56vh;
-}
 .fiction-container{    
     width: 180vh;
 }

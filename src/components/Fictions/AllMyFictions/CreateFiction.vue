@@ -118,12 +118,10 @@
                 />
               </div>
             </div>
-            <div class="col-2 display-flex button-validate-container">
-              <div class="d-grid gap-2 ">
-                <button type="submit" class="btn btn-primary margin-2vh-0-0-0">
+            <div class="col-2 display-flex button-validate-container margin-2vh-0-0-0">              
+                <button type="submit" class="btn btn-primary btn-button-validate margin-2vh-0-0-0">
                   Créer la fiction
                 </button>
-              </div>
             </div>
           </div>
         </div>
