@@ -147,11 +147,6 @@ export default {
     await this.initPage();
   },
   methods: {
-    onSelectClan(clanId) {
-      this.selectedClan = clanId;
-      console.log(this.selectedClan)
-      // this.filterByClan(); // que tu ajouteras plus tard
-    },
     async initPage() {
       this.showspinner = true;
       try {
@@ -162,6 +157,23 @@ export default {
         console.error("Error initializing page:", error);
       } finally {
         this.showspinner = false;
+      }
+    },
+    async onSelectClan(clanId){
+      console.log(clanId)
+      try{
+        this.selectedClan = clanId
+        await this.CountNbCharactersByClan(clanId)
+      }catch (error) {
+        console.error("Error initializing page:", error);
+      } 
+    },    
+    async CountNbCharactersByClan(id){
+      try{
+        const response = await CharacterService.CountNbCharactersByClan(id)
+        console.log(response.data.ob)
+      }catch (e) {
+        console.log(e);
       }
     },
     async getAllClans(nav) {
