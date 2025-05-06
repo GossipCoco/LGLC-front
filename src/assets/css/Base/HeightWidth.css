@@ -49,6 +49,9 @@
 .card-form-create-character .card-header {
     width: 185vh;
 }
+#arc-container .card-header{
+    width: 140vh;
+}
 .title-text-novel .rond-image-illustration img, 
 .last-chapter-card .rond-image-illustration img,
 .list-fictions-dashboard .rond-image-illustration img{

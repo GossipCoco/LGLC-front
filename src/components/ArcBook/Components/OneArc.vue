@@ -8,11 +8,11 @@
             <CardHeader v-bind:Title="arc.Title">
                 <router-link to="/ArcBookLayout" class="btn btn-primary">Retour à la liste des arcs</router-link>
             </CardHeader>
-            <div class="card-body width-130-vh height-80-vh padding-2-vh margin-2vh-0">
+            <div class="card-body width-135-vh height-80-vh padding-2-vh margin-2vh-0">
                 <div class="row">
                     <div class="col-12">
-                        <p class="white-text">Résumé : </p>
-                        <p class="white-text text-align-justify" v-html="arc.Summary"></p>
+                        <p class="white-text font-variant-all-small-caps poppins-text font-size-1-25">Résumé</p>
+                        <p class="white-text text-align-justify Noto-Sans" v-html="arc.Summary"></p>
                         <div  class="display-flex-row">
                             <div v-for="(books, index) in arc.Books" :key="index">
                                 <p class="white-text display-flex-column">
