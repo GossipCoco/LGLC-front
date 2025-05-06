@@ -25,13 +25,13 @@
             </div>
           </div>
           <div class="row margin-4-0-0-0">
-            <div class="col-6"></div>
-            <div class="col-4">
+            <div class="col-9"></div>
+            <div class="col-2">
               <router-link :to="'/fiction/' + Back" class="btn btn-primary">
                     Retour à la fiction
               </router-link>
             </div>
-            <div class="col-2 btn-validate-container">
+            <div class="col-1 btn-validate-container">
               <button type="button" class="btn btn-primary" @click="handleOk">
                 Enregistrer
               </button>
