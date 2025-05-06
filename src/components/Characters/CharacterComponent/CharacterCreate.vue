@@ -1,14 +1,15 @@
 <template>
   <div
-    class="display-flex-column form-character-container  overflowY-X-hidden  flex-one opensans-text"
+    class="display-flex-column form-character-container overflowY-X-hidden flex-one opensans-text"
   >
     <div class="
       card border-none text-white display-flex-column background-color-dark-green-01
-      card-form-create-character width-180-vh overflowY-X-hidden align-items-content-justify-content flex-one mb-12 text-white"
+      card-form-create-character height-90 width-15-vh overflowY-X-hidden
+       align-items-content-justify-content flex-one mb-12 text-white"
     >
       <CardHeader v-bind:Title="'Création de personnage'" />
       <div class="card-body  overflowY-X-hidden">
-        <form class="create-character-form height-77-vh width-180-vh overflow-hidden" @submit.stop.prevent="onSubmit">
+        <form class="create-character-form height-77-vh width-185-vh overflow-hidden" @submit.stop.prevent="onSubmit">
           <Transition name="slide-fade">
             <div v-if="formPart1" class="character-detail-form">
               <div class="row form-first-part-container overflowY-X-hidden">

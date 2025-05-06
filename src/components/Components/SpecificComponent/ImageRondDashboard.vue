@@ -27,7 +27,7 @@
     />
   </div>
   <div class="rond-image-illustration border-radius-100 avatar-profil-container" v-else>
-    <img v-if="!showspinner" :src="src" :alt="alt" class="border-radius-100 display-flex-column"  />
+    <img v-if="!showspinner" :src="src" :alt="alt" class="illustratrion-fiction-rond-containter width-9v-vh-height-9v-vh border-radius-100 display-flex-column"  />
   </div>
 </template>
 <script>

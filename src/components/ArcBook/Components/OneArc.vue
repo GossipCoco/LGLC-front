@@ -4,7 +4,7 @@
             <card-image-background v-bind:Image="background">                
             </card-image-background>
         </div>
-        <div id="arc-container" class="one-arc-container border-none background-color-main-lineart flex-one card display-flex-column width-120-vh height-90-vh padding-2-vh">
+        <div id="arc-container" class="one-arc-container border-none background-color-main-lineart flex-one card display-flex-column width-140-vh height-90-vh padding-2-vh">
             <CardHeader v-bind:Title="arc.Title">
                 <router-link to="/ArcBookLayout" class="btn btn-primary">Retour à la liste des arcs</router-link>
             </CardHeader>

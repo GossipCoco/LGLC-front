@@ -82,6 +82,9 @@
 .width-190-vh{
     width: 190vh;
 }
+.width-150-vh{
+    width: 150vh;
+}
 .width-180-vh{
     width: 180vh;
 }
@@ -153,6 +156,7 @@
 .width-5-vh{
     width: 5vh;
 }
+/* Combinaison */
 .width-25-vh-height-25-vh{
     width: 25vh;
     height: 25vh;

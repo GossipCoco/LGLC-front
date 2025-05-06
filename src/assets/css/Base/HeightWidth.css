@@ -5,27 +5,10 @@
 .all-chapters-list-container {    
     width: 55vh;
     max-height: 85vh;
-    padding: 0 2vh;
 }
-#one-book-container-wrapper .row,
-.character-container-global,
-.card-form-create-character .card-header {
-    width: 185vh;
-}
-#arc-container .card-header{
-    width: 140vh;
-}
-.title-text-novel .rond-image-illustration img, 
-.last-chapter-card .rond-image-illustration img,
-.list-fictions-dashboard .rond-image-illustration img{
-    width: 9vh;
-    height: 9vh;
-}
-.all-characters-of-fiction > button,
+/* .all-characters-of-fiction > button, */
 .page-profil-user-container .rond-image-illustration.avatar-profil-container img{
     width: 25vh;
-}
-.page-profil-user-container .rond-image-illustration.avatar-profil-container img {
     height: 25vh;
 }
 #all-characters-container-card .character-card.card {
@@ -36,18 +19,11 @@
 .height-character{
     height: 7vh
 }
-.fiction-globale-container.card.fiction-container,
-.card-form-create-character {
-    height: 90vh;
-}
 .card-form-create-character .card-body {
     height: 77vh;
 }
 .location-clan-card-details-body{
     height: 44vh;
-}
-.character-list-wrapper .border-card-color{
-    height: 30vh;
 }
 .character-card.card .card-image{
     width: 28vh;
