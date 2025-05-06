@@ -35,8 +35,7 @@
     padding: 0 1vh 1vh 1vh;
 }
 .clan-detail-card {
-    background-position: 50%;
-    margin: 5rem 0 0 0;
+    margin: 10vh 0 0 0;
 }
 .dashboard-max-card-container, .character-details-chatper.card,.profil-user-card, .admin-dashboard{
     margin: 2rem;
@@ -69,7 +68,6 @@
     border: none;
 }
 .clan-card {
-    background-position: 50%;    
     margin: 0.75rem 0 0 1rem;
 }
 .card-image-layout {
@@ -189,13 +187,6 @@ li.quest-container {
     font-size: 1.2em;
     line-height: 1.6;
 }
-/* .accordion-button.collapsed,
-.accordion-item:first-of-type>.accordion-header .accordion-button,
-.accordion-button:not(.collapsed),
-.accordion-item:last-of-type>.accordion-header .accordion-button.collapsed,
-.accordion-button:focus{
-    background-color: rgb(var(--clear-green-02), 0.6);
-} */
 #original-characters-list .card-group {
     flex-flow: row wrap;
     margin: 2vh 2vh;
@@ -206,12 +197,8 @@ li.quest-container {
 /* SPECIFIC */
 #original-characters-list .border-card-color,
 #original-characters-list .card.individual-character-card{
-    background-position: 50%;
     aspect-ratio: auto 3 / 4;
     transform: scale(0.95);
-}
-.individual-character-card .card-body {
-    margin: -1vh 0 0 0vh;
 }
 #original-characters-list{
     margin: -13vh 0 0 30vh;

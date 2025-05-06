@@ -48,6 +48,9 @@
     background-size: contain;
     background-repeat: no-repeat;
 }
+.background-position-50-percent{
+    background-position: 50%;
+};
 /* OVERFRLOW */
 .overflowY-X-hidden{
     overflow-y: hidden;
