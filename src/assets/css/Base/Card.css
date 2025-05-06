@@ -202,8 +202,6 @@ li.quest-container {
 }
 #original-characters-list{
     margin: -13vh 0 0 30vh;
-    overflow-y: hidden;
-    padding: 0;
 }
 .row.btn-create-character{
     margin:0;
