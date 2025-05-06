@@ -252,9 +252,9 @@ export default {
     },
     async getAllCharacters(nav) {
       if (window.innerWidth >= this.width) {
-        this.nav.step = 8;
+        this.nav.step = 6;
       } else if (window.innerWidth < this.width) {
-        this.nav.step = 8;
+        this.nav.step = 6;
       }
       try {
         const response = await CharacterService.getAllCharacters({ nav });
