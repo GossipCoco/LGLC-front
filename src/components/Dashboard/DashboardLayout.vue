@@ -6,7 +6,6 @@
           v-if="!showspinner"
           v-bind:UserName="UserName"
           v-bind:User="usr"
-          v-bind:NbMessages="Nbmessages"        
           v-bind:usrId="usrId"
         />
       </div>
@@ -222,8 +221,7 @@ export default {
           this.LevelName = this.userInfo.Level.Name
           this.role = this.userInfo.Role;
           this.NameRole = this.userInfo.Role.Name
-          this.roleImage = this.userInfo.Role.Image;
-          this.Nbmessages = this.userInfo.Messages.length;
+          this.roleImage = this.userInfo.Role.Image;          
           this.totalPoints = this.calculateTotalPoints(this.userInfo.Points);
           this.level = this.userInfo.Level;
           this.gamer = this.userInfo.Gamers;          

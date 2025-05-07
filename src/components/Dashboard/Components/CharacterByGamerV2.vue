@@ -1,4 +1,5 @@
 <template>
+
   <div
     class="col-xxl-3 col-xl-12 col-lg-12 col-md-6 col-sm-12 col-xs-12 card-global all-my-oc-card"
   >
@@ -10,7 +11,8 @@
         v-bind:route="'OriginaleCharacterByUser'"
         v-bind:type="'Lastfictions'"
       />
-      <div class="card-body display-flex-row flex-wrap align-items-content-justify-content">        
+      <Spinner v-if="showspinner" />
+      <div class="card-body display-flex-row flex-wrap align-items-content-justify-content" v-if="!showspinner">        
           <div v-for="(character, index) in gamer" :key="index" class="row">
             <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-6 col-sm-12 col-xs-12">
               <div class="display-flex-column my-oc-character-containe align-items-content-justify-content">
@@ -31,9 +33,15 @@
 </template>
 <script>
 import TitleHeaderDashboard from "../../Components/SpecificComponent/TitleHeaderDashboard.vue";
+import Spinner from "../../Components/GenericComponent/Spinner.vue";
 export default {
   name: "CharacterByUser",
-  components: { TitleHeaderDashboard },
-  props: ["gamer"],
+  components: { TitleHeaderDashboard, Spinner },
+  props: ["gamer"],  
+  data() {
+    return {      
+      showspinner: false,
+    }
+  }
 };
 </script>
