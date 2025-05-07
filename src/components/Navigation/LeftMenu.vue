@@ -87,7 +87,7 @@
               <div class="icon-menu-container  border-radius-100  background-color-clear-green-02  display-flex align-items-content-justify-content">
                 <img src="/images/icons/pen-nib-solid.svg" />
               </div>
-
+              <span class="menu-text poppins-text font-size-1em white-text">Imaginer</span>
             </div>
           </div>
         </div>
@@ -114,6 +114,7 @@
               <div class="icon-menu-container  border-radius-100  background-color-clear-green-02  display-flex align-items-content-justify-content">
                 <img src="/images/icons/gamepad-solid.svg" />
               </div>
+              <span class="menu-text poppins-text font-size-1em white-text">Jouer</span>
             </div>
           </div>
         </div>
@@ -131,7 +132,8 @@
             <div class="menu-li-contain">
               <div class="icon-menu-container  border-radius-100  background-color-clear-green-02  display-flex align-items-content-justify-content">
                 <img src="/images/icons/calendar-days-solid.svg" />
-              </div>
+              </div>              
+              <span class="menu-text poppins-text font-size-1em white-text">Évènement</span>
             </div>
           </div>
         </router-link>
@@ -141,14 +143,15 @@
           <div class="menu-level1">
             <div class="icon-menu-container  border-radius-100  background-color-clear-green-02  display-flex align-items-content-justify-content">
               <img src="/images/icons/profil.svg" />
-            </div>
+            </div>            
+            <span class="menu-text poppins-text font-size-1em white-text">Admin</span>
           </div>
         </router-link>
       </li>
-      <li class="li-level1 display-flex-column align-items-content-justify-content">
+      <!-- <li class="li-level1 display-flex-column align-items-content-justify-content">
         <router-link :to="'/user/' + usrId">
           <div class="menu-level1">
-            <div class="icon-menu-container  border-radius-100  background-color-clear-green-02  display-flex align-items-content-justify-content">
+            <div class="icon-menu-container border-radius-100  background-color-clear-green-02  display-flex align-items-content-justify-content">
               <img src="/images/icons/user.svg" />
             </div>
             <div class="chevron-container">
@@ -156,7 +159,7 @@
             </div>
           </div>
         </router-link>
-      </li>
+      </li> -->
       <li class="li-level1 display-flex-column align-items-content-justify-content">
         <div class="menu-level1">
           <div class="icon-menu-container  border-radius-100  background-color-clear-green-02  display-flex align-items-content-justify-content">
@@ -167,6 +170,7 @@
               />
             </a>
           </div>
+          <span class="menu-text poppins-text font-size-1em white-text">Logout</span>
         </div>
       </li>
     </ul>
