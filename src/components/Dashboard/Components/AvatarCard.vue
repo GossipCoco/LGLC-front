@@ -8,8 +8,17 @@
         />
         <div class="card-body user-info-text">
           <div class="row margin-2vh-0 avatar-row">
-            <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 avatar-avatar-card-container display-flex align-items-content-justify-content">
-              <ImageRondDashboard v-bind:src="'/images/Avatars/' + Avatar" v-bind:alt="Avatar" v-bind:classe="'card-img-top'" v-bind:edit="true"/>
+            <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 avatar-avatar-card-container display-flex display-flex-row align-items-content-justify-content">
+              <div class="row width-100-vh">
+                <div class="col-xxl-11 col-xl-11 col-lg-11 col-md-11 col-sm-11 col-xs-11 avatar-col">
+                  <ImageRondDashboard v-bind:src="'/images/Avatars/' + Avatar" v-bind:alt="Avatar" v-bind:classe="'card-img-top'" v-bind:edit="true"/>
+                </div>                
+                <div class="col-xxl-1 col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                  <router-link :to="'/user/' + usrId">
+                    <font-awesome-icon icon="pen" />
+                  </router-link>
+                </div>
+              </div>
             </div>
           </div>
           <role-level
@@ -57,6 +66,7 @@ export default {
   components: { TitleHeaderDashboard, RoleLevel, UserInformation, ImageRondDashboard },
   data() {
     return {
+      usrId: this.$store.state.auth.user.usrID,
       avatar: this.Avatar,
       lev: this.level,
       roleUser: this.Role,

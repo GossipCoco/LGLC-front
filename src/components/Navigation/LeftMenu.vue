@@ -148,7 +148,7 @@
           </div>
         </router-link>
       </li>
-      <!-- <li class="li-level1 display-flex-column align-items-content-justify-content">
+      <li class="li-level1 display-flex-column align-items-content-justify-content">
         <router-link :to="'/user/' + usrId">
           <div class="menu-level1">
             <div class="icon-menu-container border-radius-100  background-color-clear-green-02  display-flex align-items-content-justify-content">
@@ -159,7 +159,7 @@
             </div>
           </div>
         </router-link>
-      </li> -->
+      </li>
       <li class="li-level1 display-flex-column align-items-content-justify-content">
         <div class="menu-level1">
           <div class="icon-menu-container  border-radius-100  background-color-clear-green-02  display-flex align-items-content-justify-content">
