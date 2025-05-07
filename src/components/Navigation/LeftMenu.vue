@@ -7,7 +7,9 @@
       'd-flex', 
       'flex-column', 
       'flex-shrink-0', 
-      'p-3' 
+      'p-3',
+      'height-98-vh',
+      'width-15-vh' 
     ]"
   >
     <Logo v-bind:img="logo" />    

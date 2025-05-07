@@ -7,7 +7,7 @@
   overflow-x: hidden;
   scrollbar-color: rgba(var(--clear-green-02), 1) rgba(var(--dark-green-02), 1);
   scrollbar-width: thin;
-  margin: 0.5vh 1vh 1vh 0
+  margin: 0vh 1vh 1vh 0
 }
 .bi {
   vertical-align: -0.125em;

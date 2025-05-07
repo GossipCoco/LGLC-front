@@ -5,8 +5,7 @@
 .all-chapters-list-container {    
     max-height: 85vh;
 }
-/* .all-characters-of-fiction > button, */
-#all-characters-container-card .character-card.card {
+.character-card.card {
     min-width: 30vh;
     max-width: 30vh;
     height: 42vh;
@@ -145,13 +144,6 @@
     height: 7vh;
 }
 /* NavNar en Vh */
-.menu-left.menu-hidden.d-flex.flex-column.flex-shrink-0.p-3 {
-    width: 15vh;
-    height: 98vh;
-}
-.logo-container img {
-  width: 14vh;
-}
 #navbarCollapse {
     height: 14vh;
     width: 90vh;
