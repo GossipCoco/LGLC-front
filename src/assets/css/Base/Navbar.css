@@ -123,4 +123,17 @@ ul {
 }
 .menu-level1 span{
   margin: 1vh 0 0 -1vh;
+  background: var(--lineart-menu-title);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text; /* nécessaire */
+  -webkit-text-fill-color: transparent; /* nécessaire */
+}
+.menu-level1 span:hover{
+  margin: 1vh 0 0 -1vh;
+ 
+  color: rgba(var(--active-hover), 1);
+  background-clip: text;
+  -webkit-background-clip: text; /* nécessaire */
+  -webkit-text-fill-color: transparent; /* nécessaire */
 }

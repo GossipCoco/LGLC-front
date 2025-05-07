@@ -12,7 +12,11 @@
         />
         <div class="card-body new-current-arc-container padding-2-vh text-white">
             <div v-if="currentArc" class="text-align-center">
-                <h2 class="white-text poppins-text text-align-center">Arc actuel : {{ currentArc.Title }}</h2>
+                <h2 class="white-text poppins-text text-align-center">
+                  <router-link :to="'/OneArc/'+currentArc.Id" class="color-clear-green-01">
+                    {{ currentArc.Title }}
+                  </router-link>                  
+                </h2>
                 <div class="display-flex-row height-30-vh overflowY-scroll">
                   <img :src="currentArc.Image" width="20%" class="border-radius-12px"/>
                   <div v-html="currentArc.Summary" class="poppins-text padding-1-vh text-align-center"></div>
@@ -37,7 +41,6 @@ export default {
   mounted() {
     ArcBookService.GetCurrentArc()
       .then(response => {
-        console.log("Current Arc reçu :", response.data);
         this.currentArc = response.data.ob;
       })
       .catch(err => {

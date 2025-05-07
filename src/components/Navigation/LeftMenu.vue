@@ -13,7 +13,7 @@
               <div class="icon-menu-container  border-radius-100 background-color-clear-green-02  display-flex align-items-content-justify-content">
                 <img src="/images/icons/home.svg" />                
               </div>
-              <span class="menu-text poppins-text font-size-1em white-text">Dashboard</span>
+              <span class="menu-text poppins-text font-size-1em font-weight-600">Dashboard</span>
             </div>
           </div>
         </router-link>
@@ -34,7 +34,7 @@
                   style="width: 1.5rem"
                 />
               </div>
-              <span class="menu-text poppins-text font-size-1em white-text">LGDC</span>
+              <span class="menu-text poppins-text font-size-1em font-weight-600">LGDC</span>
             </div>
           </div>
         </div>
@@ -59,7 +59,7 @@
               <div class="icon-menu-container  border-radius-100  background-color-clear-green-02  display-flex align-items-content-justify-content">
                 <img src="/images/icons/cloud-solid.svg" />
               </div>
-              <span class="menu-text poppins-text font-size-1em white-text">Créations</span>
+              <span class="menu-text poppins-text font-size-1em font-weight-600">Créations</span>
             </div>
           </div>
         </div>
@@ -87,7 +87,7 @@
               <div class="icon-menu-container  border-radius-100  background-color-clear-green-02  display-flex align-items-content-justify-content">
                 <img src="/images/icons/pen-nib-solid.svg" />
               </div>
-              <span class="menu-text poppins-text font-size-1em white-text">Imaginer</span>
+              <span class="menu-text poppins-text font-size-1em font-weight-600">Imaginer</span>
             </div>
           </div>
         </div>
@@ -114,7 +114,7 @@
               <div class="icon-menu-container  border-radius-100  background-color-clear-green-02  display-flex align-items-content-justify-content">
                 <img src="/images/icons/gamepad-solid.svg" />
               </div>
-              <span class="menu-text poppins-text font-size-1em white-text">Jouer</span>
+              <span class="menu-text poppins-text font-size-1em font-weight-600">Jouer</span>
             </div>
           </div>
         </div>
@@ -133,7 +133,7 @@
               <div class="icon-menu-container  border-radius-100  background-color-clear-green-02  display-flex align-items-content-justify-content">
                 <img src="/images/icons/calendar-days-solid.svg" />
               </div>              
-              <span class="menu-text poppins-text font-size-1em white-text">Évènement</span>
+              <span class="menu-text poppins-text font-size-1em font-weight-600">Évènement</span>
             </div>
           </div>
         </router-link>
@@ -144,19 +144,7 @@
             <div class="icon-menu-container  border-radius-100  background-color-clear-green-02  display-flex align-items-content-justify-content">
               <img src="/images/icons/profil.svg" />
             </div>            
-            <span class="menu-text poppins-text font-size-1em white-text">Admin</span>
-          </div>
-        </router-link>
-      </li>
-      <li class="li-level1 display-flex-column align-items-content-justify-content">
-        <router-link :to="'/user/' + usrId">
-          <div class="menu-level1">
-            <div class="icon-menu-container border-radius-100  background-color-clear-green-02  display-flex align-items-content-justify-content">
-              <img src="/images/icons/user.svg" />
-            </div>
-            <div class="chevron-container">
-              <i class="fa-solid fa-chevron-down" style="opacity: 0"></i>
-            </div>
+            <span class="menu-text poppins-text font-size-1em font-weight-600">Admin</span>
           </div>
         </router-link>
       </li>
@@ -170,7 +158,7 @@
               />
             </a>
           </div>
-          <span class="menu-text poppins-text font-size-1em white-text">Logout</span>
+          <span class="menu-text poppins-text font-size-1em font-weight-600">Logout</span>
         </div>
       </li>
     </ul>

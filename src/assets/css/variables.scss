@@ -52,6 +52,11 @@
     linear-gradient(127deg, rgba(rgba(var(--clear-green-01), 1), rgba(0,255,0,0) 70.71%)),
     linear-gradient(336deg, rgba(var(--middle-green-01), 1), rgba(0,0,255,0) 70.71%);
 
+    --lineart-menu-title: linear-gradient(
+    rgba(var(--clear-green-01), 1) 0%,
+    rgba(var(--middle-green-01), 1) 100%
+  );
+
     /* Image */
     --background-image: url('/images/Backgrounds/Warriors_3820.png');
     --cat-corner: url('/images/icons/cat02.svg');
