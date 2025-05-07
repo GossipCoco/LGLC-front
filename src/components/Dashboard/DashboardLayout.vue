@@ -33,7 +33,7 @@
         <ExtractLastChap v-if="!showspinner" />
         <CharacterByGamerV2 v-bind:gamer="gamer" v-if="!showspinner" />
       </div>
-      <div class="row middle-dashboard width-200-vh">
+      <div class="row middle-dashboard">
         <separator v-bind:Title="'Tout sur l\'univers de la Guerre des Clans'" />
       </div>
       <div class="row bottom-dashboard-levele-one">
