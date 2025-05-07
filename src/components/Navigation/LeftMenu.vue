@@ -39,7 +39,7 @@
         <div class="collapse display-flex-column align-items-content-justify-content " id="univers-LGDC">
           <p class="text-white poppins-text font-size-0-85 margin-0-rem">LGDC</p>
           <div v-for="(menu, index) in SecondeSubMenu" :key="index">
-            <router-link :to="menu.link" class="link-collapse color-clear-green-02  display-flex-column align-items-content-justify-content ">
+            <router-link :to="menu.link" class="link-collapse color-clear-green-02 font-size-0-65 display-flex-column align-items-content-justify-content ">
             {{ menu.title }}
             </router-link>  
           </div>
@@ -62,12 +62,12 @@
           </div>
         </div>
         <div class="collapse display-flex-column align-items-content-justify-content " id="creation-LGDC">
-          <router-link class="link-collapse color-clear-green-02  display-flex-column align-items-content-justify-content " to="/OriginaleCharacterByUser" >
+          <router-link class="link-collapse color-clear-green-02 font-size-0-65 display-flex-column align-items-content-justify-content " to="/OriginaleCharacterByUser" >
             Mes personnages</router-link>
-          <router-link class="link-collapse color-clear-green-02  display-flex-column align-items-content-justify-content " :to="'/allFictions/' + usrId">
+          <router-link class="link-collapse color-clear-green-02 font-size-0-65 display-flex-column align-items-content-justify-content " :to="'/allFictions/' + usrId">
             Mes fictions
           </router-link>
-          <router-link class="link-collapse color-clear-green-02  display-flex-column align-items-content-justify-content " to="/AllExistingFictionsLayout">
+          <router-link class="link-collapse color-clear-green-02 font-size-0-65 display-flex-column align-items-content-justify-content " to="/AllExistingFictionsLayout">
             Lire des fictions
           </router-link>
         </div>
@@ -90,10 +90,10 @@
           </div>
         </div>
         <div class="collapse display-flex-column align-items-content-justify-content " id="creation-fiction-oc">
-          <router-link class="link-collapse color-clear-green-02  display-flex-column align-items-content-justify-content " to="/createANewFiction">
+          <router-link class="link-collapse color-clear-green-02 font-size-0-65 display-flex-column align-items-content-justify-content " to="/createANewFiction">
             Nouvelle fiction
           </router-link>
-          <router-link to="/CreateAnOriginalCharacter" class="link-collapse color-clear-green-02  display-flex-column align-items-content-justify-content ">
+          <router-link to="/CreateAnOriginalCharacter" class="link-collapse color-clear-green-02 font-size-0-65 display-flex-column align-items-content-justify-content ">
             Nouvel OC
           </router-link> 
         </div>
@@ -117,7 +117,7 @@
         </div>
         <div class="collapse display-flex-column align-items-content-justify-content " id="collapseExample0">
           <div v-for="(menu, index) in GameMenu" :key="index">
-            <router-link :to="menu.link" class="link-collapse color-clear-green-02  display-flex-column align-items-content-justify-content ">
+            <router-link :to="menu.link" class="link-collapse color-clear-green-02 font-size-0-65 display-flex-column align-items-content-justify-content ">
             {{ menu.title }}
             </router-link>  
           </div>

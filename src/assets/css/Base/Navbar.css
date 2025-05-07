@@ -85,10 +85,10 @@ ul {
 }
 .link-collapse {
   font-family: "Poppins", sans-serif;
-  font-size: 0.45em;
+  font-size: 0.5em;
   white-space: normal;
   overflow-wrap: break-word;
-  line-height: 1.75;
+  line-height: 1.5;
 }
 .logo-accueil-container{
   padding: 0;

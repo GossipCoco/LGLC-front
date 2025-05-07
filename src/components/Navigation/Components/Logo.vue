@@ -1,7 +1,7 @@
 <template>
   <div class="logo-container">
     <router-link to="/dashboard">
-      <img :src="img" class="height-20-vh"/>
+      <img :src="img" class="width-20-vh height-auto"/>
     </router-link>
     </div>
 </template>
