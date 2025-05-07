@@ -72,9 +72,9 @@
         </button>
       </li>
     </ul>
-    <div class="tab-content  height-60-vh" id="pills-tabContent">
+    <div class="tab-content height-50-vh" id="pills-tabContent">
       <div
-        class="tab-pane fade show active height-60-vh"
+        class="tab-pane fade show active height-50-vh"
         id="pills-home"
         role="tabpanel"
         aria-labelledby="pills-home-tab"
@@ -92,7 +92,7 @@
         </TextAreaOriginalCharacter>
       </div>
       <div
-        class="tab-pane fade"
+        class="tab-pane fade height-50-vh"
         id="pills-profile"
         role="tabpanel"
         aria-labelledby="pills-profile-tab"
@@ -110,7 +110,7 @@
         </TextAreaOriginalCharacter>
       </div>
       <div
-        class="tab-pane fade"
+        class="tab-pane fade height-50-vh"
         id="pills-contact"
         role="tabpanel"
         aria-labelledby="pills-contact-tab"
@@ -128,7 +128,7 @@
         </TextAreaOriginalCharacter>
       </div>
       <div
-        class="tab-pane fade"
+        class="tab-pane fade height-50-vh"
         id="pills-family"
         role="tabpanel"
         aria-labelledby="pills-family-tab"
@@ -137,7 +137,7 @@
         <RelationCharacterComponent v-bind:Relation="Relation" />
       </div>
       <div
-        class="tab-pane fade"
+        class="tab-pane fade height-50-vh"
         id="pills-fiction"
         role="tabpanel"
         aria-labelledby="pills-fiction-tab"
