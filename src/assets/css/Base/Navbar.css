@@ -35,7 +35,7 @@
   position: fixed;
 }
 .menu-left ul {
-  padding: 0 0 0 5vh;
+  width: 16vh;
 }
 /* .menu-left ul li {
   margin: 1vh 0 0 0;
@@ -46,7 +46,7 @@
   margin: 0;
 }
 .menu-level1 {
-  margin: 0 0 0 4vh;
+  margin: 0 0 1vh 4vh;
 }
 .icon-menu-container:hover {
   background-color: rgba(var(--active-hover), 1);
@@ -110,20 +110,9 @@ ul {
 .menu-hidden {
   display: none;
 }
-@media (max-width: 1400px) {
-  .burger-menu {
-    display: block;
-    font-size: 1.5rem;
-    padding: 1rem;
-  }
-  .menu-left {
-    position: fixed;
-    top: 0;
-    left: 0;
-    transform: translateX(-250px);
-    transition: transform 0.3s ease-in-out;
-  }
-  .menu-left.menu-hidden {
-    transform: translateX(0);
-  }
+.menu-left ul li {
+  margin: 1vh 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }

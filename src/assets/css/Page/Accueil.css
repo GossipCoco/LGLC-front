@@ -188,7 +188,7 @@ h2{
     text-align: justify;
 }
 #accueil .navbar-brand img {
-    margin: 3rem 0 0 13rem;
+    margin: 8vh 0 0 26vh;
 }
 #accueil .image-accueil .image-one {
     animation: slideInRight 2s ease-out;

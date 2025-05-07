@@ -20,10 +20,10 @@
       <li class="li-level1 display-flex-column align-items-content-justify-content">
         <div
           data-bs-toggle="collapse"
-          href="#collapseExample3"
+          href="#univers-LGDC"
           role="button"
           aria-expanded="false"
-          aria-controls="collapseExample3"
+          aria-controls="univers-LGDC"
         >
           <div class="menu-level1">
             <div class="menu-li-contain">
@@ -36,8 +36,8 @@
             </div>
           </div>
         </div>
-        <div class="collapse display-flex-column align-items-content-justify-content " id="collapseExample3">
-          <p class="text-white">LGDC</p>
+        <div class="collapse display-flex-column align-items-content-justify-content " id="univers-LGDC">
+          <p class="text-white poppins-text font-size-0-85 margin-0-rem">LGDC</p>
           <div v-for="(menu, index) in SecondeSubMenu" :key="index">
             <router-link :to="menu.link" class="link-collapse color-clear-green-02  display-flex-column align-items-content-justify-content ">
             {{ menu.title }}
@@ -48,10 +48,10 @@
       <li class="li-level1 display-flex-column align-items-content-justify-content">
         <div
           data-bs-toggle="collapse"
-          href="#collapseExample1"
+          href="#creation-LGDC"
           role="button"
           aria-expanded="false"
-          aria-controls="collapseExample1"
+          aria-controls="creation-LGDC"
         >
           <div class="menu-level1">
             <div class="menu-li-contain">
@@ -61,7 +61,7 @@
             </div>
           </div>
         </div>
-        <div class="collapse display-flex-column align-items-content-justify-content " id="collapseExample1">
+        <div class="collapse display-flex-column align-items-content-justify-content " id="creation-LGDC">
           <router-link class="link-collapse color-clear-green-02  display-flex-column align-items-content-justify-content " to="/OriginaleCharacterByUser" >
             Mes personnages</router-link>
           <router-link class="link-collapse color-clear-green-02  display-flex-column align-items-content-justify-content " :to="'/allFictions/' + usrId">
@@ -75,10 +75,10 @@
       <li class="li-level1 display-flex-column align-items-content-justify-content">
         <div
           data-bs-toggle="collapse"
-          href="#creation"
+          href="#creation-fiction-oc"
           role="button"
           aria-expanded="false"
-          aria-controls="creation"
+          aria-controls="creation-fiction-oc"
         >
           <div class="menu-level1">
             <div class="menu-li-contain">
@@ -89,7 +89,7 @@
             </div>
           </div>
         </div>
-        <div class="collapse display-flex-column align-items-content-justify-content " id="creation">
+        <div class="collapse display-flex-column align-items-content-justify-content " id="creation-fiction-oc">
           <router-link class="link-collapse color-clear-green-02  display-flex-column align-items-content-justify-content " to="/createANewFiction">
             Nouvelle fiction
           </router-link>
@@ -183,6 +183,7 @@ export default {
       usrId: this.$store.state.auth.user.usrID,
       role: null,
       isMenuOpen: false,
+      showSubMenu: false,
       logo: "/images/Logos/LaGuerredesClansLogos2.png",
       SecondeSubMenu:
             [{ title: "Personnages", link: "/allCharacters" },
@@ -262,6 +263,9 @@ export default {
     },
     toggleMenu() {
       this.isMenuOpen = !this.isMenuOpen;
+    },
+    toggleSubMenu() {
+      this.showSubMenu = !this.showSubMenu;
     },
     logout() {
       this.$store.dispatch("auth/logout");
