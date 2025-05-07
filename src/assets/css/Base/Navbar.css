@@ -7,7 +7,6 @@
   overflow-x: hidden;
   scrollbar-color: rgba(var(--clear-green-02), 1) rgba(var(--dark-green-02), 1);
   scrollbar-width: thin;
-  margin: 0vh 1vh 1vh 0
 }
 .bi {
   vertical-align: -0.125em;
@@ -20,10 +19,10 @@
   padding: 0;  
 }
 .navbar {
-  margin-top: -0.5rem
+  margin: -1vh 0 0 0;
 }
 #navbarCollapse {
-  margin: 3vh 0 0 150vh;
+  margin: 0 0 0 160vh;
 }
 .nav-item a {
   font-size: 18px;
@@ -34,10 +33,9 @@
 }
 .menu-left {
   position: fixed;
-  margin: 0.5rem 0rem;
 }
 .menu-left ul {
-  padding: 0 0 0 10vh;
+  padding: 0 0 0 15vh;
 }
 .menu-left ul li {
   margin: 1vh 0 0 -14vh

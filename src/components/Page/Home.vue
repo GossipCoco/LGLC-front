@@ -1,10 +1,5 @@
 <template>
   <div class="container-fluid">
-    <div class="row height-10-vh">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-        <nav-bar />
-      </div>      
-    </div>
     <div class="row height-100">
       <div class="col-xs-12 col-sm-12 col-md-1 col-lg-1 col-xl-1 col-xxl-1">
         <LeftMenu />
@@ -22,10 +17,9 @@ import EventBus from "../../http/EventBus";
 import UserService from "../../services/UserService";
 import jwtAPI from "../../api/JwtApi";
 import LeftMenu from "../Navigation/LeftMenu.vue";
-import NavBar from "../Navigation/NavBar.vue";
 export default {
   name: "Home",
-  components: { LeftMenu, NavBar },
+  components: { LeftMenu },
   data() {
     return {
       publicPath: process.env.BASE_URL,

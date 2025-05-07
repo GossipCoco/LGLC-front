@@ -8,12 +8,12 @@
       <div class="collapse navbar-collapse display-flex-row flex-one overflow-hidden" id="navbarCollapse">
         <ul class="navbar-nav">
           <li class="nav-item width-15-vh">
-            <router-link class="nav-link active" aria-current="page" to="/dashboard">Dashboard</router-link>
+            <router-link class="nav-link active poppins-text" aria-current="page" to="/dashboard">Dashboard</router-link>
           </li>
           <li class="nav-item width-15-vh padding-1-vh-0-0-0">
-            <router-link class="text-white" :to="'/getUserBy/' + usrId">Profil</router-link>  
+            <router-link class="text-white poppins-text" :to="'/getUserBy/' + usrId">Profil</router-link>  
           </li>
-          <li class="nav-item width-15-vh">
+          <li class="nav-item width-15-vh margin--4-0-0-0">
             <div class="avatar-navabar">
               <img v-if="avatar" :src="'/images/Avatars/' + avatar" class="card-img-top" alt="avatar">
             </div>
