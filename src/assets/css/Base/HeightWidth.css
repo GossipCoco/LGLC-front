@@ -134,20 +134,11 @@
 .fiction-container .card-header{
     height: 13vh;
 }
-/* .avatar-avatar-card-container{
-    height: 12vh;
-} */
+
 .avatar-avatar-card-container .avatar-container {
     width: 14vh;
     height: 14vh;
 }
-/* .avatar-avatar-card-container .avatar-container .avatar-wrapper {
-    width: 12vh;
-} */
-/* .avatar-avatar-card-container .avatar-container .avatar-wrapper img{
-    width: 12vh;
-    height: 12vh;
-} */
 .user-info-text .row.avatar-row{
     height: 13vh;
 }
@@ -375,10 +366,6 @@ audio{
     width: 70px;
     height: 70px;
 }
-/* .edit-overlay {
-    width: 10vh;
-    height: 10vh;
-} */
 .clans-location-container .gap-2 {
     width: 0;
 }
