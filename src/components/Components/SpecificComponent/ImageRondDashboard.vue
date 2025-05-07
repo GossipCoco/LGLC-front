@@ -1,14 +1,14 @@
 <template>
-  <div class="avatar-container avatar-container-in-dashboard width-12-vh padding-2-vh height-10-vh border-radius-50"  v-if="edit === true">
+  <div class="avatar-container width-15-vh height-15-vh avatar-container-in-dashboard padding-2-vh border-radius-50"  v-if="edit === true">
     <div
-      class="avatar-wrapper height-10-vh rond-image-illustration
-      border-radius-100 avatar-profil-container width-12-vh"
+      class="avatar-wrapper height-15-vh rond-image-illustration
+      border-radius-100 avatar-profil-container width-15-vh"
       @mouseenter="showEditIcon = true"
       @mouseleave="showEditIcon = false"
       @click="triggerFileInput"
     >
       <!-- Avatar actuel -->
-      <img v-if="!showspinner"  loading="lazy"  :src="src" :alt="alt" :class="'border-radius-100 display-flex-column margin-0-0-0-2vh height-10-vh width-10-vh ' + classe" />
+      <img v-if="!showspinner"  loading="lazy"  :src="src" :alt="alt" :class="'border-radius-100 display-flex-column margin-0-0-0-2vh height-15-vh width-15-vh ' + classe" />
 
       <!-- Icône "+" affiché au survol -->
       <div v-if="showEditIcon" class="edit-overlay width-10-vh height-10-vh border-radius-50 display-flex

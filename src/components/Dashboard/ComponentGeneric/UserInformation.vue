@@ -1,5 +1,5 @@
 <template>
-  <div class="row user-all-information-container">
+  <div class="row user-all-information-container padding-0-0-0-4vh">
     <div class="col-7">
       <p class="display-flex-row font-size-0-85" v-for="(info, index) in information" :key="index">
         <span class="label-profil poppins-text text-white flex-one font-size-0-85" v-for="(name, index) in info" :key="index">

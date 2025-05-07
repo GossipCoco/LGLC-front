@@ -9,7 +9,7 @@
         <div class="card-body user-info-text">
           <div class="row margin-2vh-0 avatar-row">
             <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 avatar-avatar-card-container display-flex align-items-content-justify-content">
-              <ImageRondDashboard v-bind:src="'/images/Avatars/' + Avatar" v-bind:alt="Avatar" v-bind:classe="'card-img-top height-15-vh width-15-vh border-radius-50'" v-bind:edit="true"/>
+              <ImageRondDashboard v-bind:src="'/images/Avatars/' + Avatar" v-bind:alt="Avatar" v-bind:classe="'card-img-top'" v-bind:edit="true"/>
             </div>
           </div>
           <role-level

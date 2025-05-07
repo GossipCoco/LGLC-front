@@ -134,14 +134,6 @@
 .fiction-container .card-header{
     height: 13vh;
 }
-
-.avatar-avatar-card-container .avatar-container {
-    width: 14vh;
-    height: 14vh;
-}
-.user-info-text .row.avatar-row{
-    height: 13vh;
-}
 .btn.btn-primary.btn-character-in-clan-detail{
     width: 14vh;
     height: 8vh;
