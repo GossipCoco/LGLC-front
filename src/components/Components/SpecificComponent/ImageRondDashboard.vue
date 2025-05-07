@@ -11,7 +11,7 @@
       <img v-if="!showspinner"  loading="lazy"  :src="src" :alt="alt" :class="'border-radius-100 display-flex-column margin-0-0-0-2vh height-10-vh width-10-vh ' + classe" />
 
       <!-- Icône "+" affiché au survol -->
-      <div v-if="showEditIcon" class="edit-overlay border-radius-50 display-flex
+      <div v-if="showEditIcon" class="edit-overlay width-10-vh height-10-vh border-radius-50 display-flex
       align-items-content-justify-content">
         <i class="fa fa-plus"></i>
       </div>

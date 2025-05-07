@@ -375,10 +375,10 @@ audio{
     width: 70px;
     height: 70px;
 }
-.edit-overlay {
-    width: 40px;
-    height: 40px;
-}
+/* .edit-overlay {
+    width: 10vh;
+    height: 10vh;
+} */
 .clans-location-container .gap-2 {
     width: 0;
 }
