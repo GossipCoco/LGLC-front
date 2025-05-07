@@ -17,6 +17,8 @@
           <ImageRondDashboard
             v-bind:src="fiction.Image"
             v-bind:alt="fiction.Image"
+            v-bind:edit="false"
+            v-bind:ImgClass="'width-10-vh height-10-vh'"
           />
           <div
             class="title-text-novel margin-0-0-0-1vh padding-0 font-variant-small-caps display-block flex-one display-flex-column justify-content-left"

@@ -11,6 +11,8 @@
               <ImageRondDashboard
                 v-bind:src="fiction.Image"
                 v-bind:alt="fiction.Image"
+                v-bind:edit="false"
+                v-bind:ImgClass="'width-10-vh height-10-vh'"
               />
             <div class="summary-title-text text-ternary-green">
               <p>

@@ -16,10 +16,9 @@
     </div>
 </template>
 <script>
-// import ImageRondDashboard from '../../Components/SpecificComponent/ImageRondDashboard.vue';
+
 export default {
     name: "TitleHeader",
-    // components: {ImageRondDashboard},
     props: ['UserName', 'Avatar', 'User', 'NbMessages', 'usrId']
 
 }

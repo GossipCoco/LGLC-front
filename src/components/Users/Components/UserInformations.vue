@@ -8,7 +8,8 @@
               v-bind:src="'/images/Avatars/' + usrInformation.Avatar"
               v-bind:alt="usrInformation.Avatar"
               v-bind:classe="'card-img-top border-radius-50 mini-rond-avatar-image'"
-              v-bind:ImgClass="'width-25-vh height-25-vh'"
+              v-bind:ImgClass="'width-25-vh height-25-vh'"              
+              v-bind:edit="false"
             />
           </div>
           <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 col-xxl-10">

@@ -11,6 +11,8 @@
             <ImageRondDashboard
               v-bind:src=" chapter.Image"
               v-bind:alt="chapter.Image"
+               v-bind:edit="false"
+               v-bind:ImgClass="'width-10-vh height-10-vh'"
             />
             <fiction-text
             v-bind:FictionTitle="chapter.Fiction.Title"
