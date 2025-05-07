@@ -3,14 +3,9 @@
 
 /* en VH */
 .all-chapters-list-container {    
-    width: 55vh;
     max-height: 85vh;
 }
 /* .all-characters-of-fiction > button, */
-.page-profil-user-container .rond-image-illustration.avatar-profil-container img{
-    width: 25vh;
-    height: 25vh;
-}
 #all-characters-container-card .character-card.card {
     min-width: 30vh;
     max-width: 30vh;

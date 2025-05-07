@@ -60,6 +60,9 @@
 .height-30-vh{
     height: 30vh;
 }
+.height-25-vh{
+    height: 25vh;
+}
 .height-20-vh{
     height: 20vh;
 }
@@ -126,6 +129,9 @@
 }
 .width-50-vh{
     width: 50vh;
+}
+.width-55-vh{
+    width: 55vh;
 }
 .width-40-vh{
     width: 40vh;
