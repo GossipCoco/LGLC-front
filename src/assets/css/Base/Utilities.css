@@ -88,3 +88,6 @@ th{
 .z-index-9999{
     z-index: 9999;
 }
+.scrollbar-color{
+    scrollbar-color: rgba(var(--clear-green-02), 1) rgba(var(--dark-green-02), 1);
+}

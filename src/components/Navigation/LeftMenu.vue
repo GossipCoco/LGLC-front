@@ -2,7 +2,7 @@
   <div class="left-menu-content" :class="{ 'menu-expanded': isExpanded }">
   <div
     class="menu-left background-lineart-other03 d-flex flex-column overflowY-auto
-    flex-shrink-0 height-100-vh width-20-vh margin--0-0--2"
+    flex-shrink-0 height-100-vh width-20-vh margin--0-0--2 scrollbar-color"
   >
     <Logo v-bind:img="logo" />
     <ul class="nav nav-pills flex-column mb-auto display-flex align-items-content-justify-content width-10-vh">
