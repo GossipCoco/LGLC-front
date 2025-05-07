@@ -35,18 +35,18 @@
   position: fixed;
 }
 .menu-left ul {
-  padding: 0 0 0 15vh;
+  padding: 0 0 0 5vh;
 }
-.menu-left ul li {
-  margin: 1vh 0 0 -14vh
-}
+/* .menu-left ul li {
+  margin: 1vh 0 0 0;
+} */
 #collapseExample3 p {
   font-size: 0.865em;
   font-variant-caps: all-small-caps;
   margin: 0;
 }
 .menu-level1 {
-  margin: 0 0 0 2rem;
+  margin: 0 0 0 4vh;
 }
 .icon-menu-container:hover {
   background-color: rgba(var(--active-hover), 1);
