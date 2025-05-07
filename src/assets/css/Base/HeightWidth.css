@@ -204,15 +204,15 @@
 #accueil li.nav-item{
     width: 40vh;
 }
-.row.bottom-dashboard-levele-one .card.last-book-container{
+/* .row.bottom-dashboard-levele-one .card.last-book-container{
     height: 36vh;
-}
+} */
 .illustration-background {
     width: 186vh;
     height: 80vh;
 }
 .row.bottom-dashboard-levele-one .card.all-fictions-card{
-    height: 84vh;
+    height: 92vh;
 }
 .card.video{
     width: 74vh;

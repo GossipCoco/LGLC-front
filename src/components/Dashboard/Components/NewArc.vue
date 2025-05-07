@@ -4,7 +4,7 @@
       class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 card-global"
     >
       <div
-        class="card background-lineart border-none arc-card last-arc-container height-45-vh"
+        class="card background-lineart border-none arc-card last-arc-container height-50-vh margin-0-0-0-1vh"
       >
         <TitleHeaderDashboard
           v-bind:title="'Dernier arc en cours'"

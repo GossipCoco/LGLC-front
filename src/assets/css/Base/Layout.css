@@ -31,9 +31,6 @@
 .character-details .card-body {
     z-index: 9999;
 }
-.welcome-dashboard-container{
-    margin: 0 0 0 -1rem;
-}
 .title-dashboard-container-header img {
     margin: 0 0 0 1rem;
 }

@@ -73,9 +73,6 @@
 .card-image-layout {
     margin: 4rem 0 0 3rem;
 }
-.middle-dashboard{
-    margin: 0 0 1rem 1rem;
-}
 .clans-location-container {
     margin: 0 auto;
     padding: 4vh 0 0 8vh;
@@ -230,9 +227,6 @@ li.quest-container {
 .my-oc-card .card-body{
     padding: 0;
     margin: -8vh 0 0 0;
-}
-.row.middle-dashboard .card-global{
-    margin: 0 2rem 0 1rem;
 }
 .title-container-card{
     margin: -0.5rem 0 0 0;
