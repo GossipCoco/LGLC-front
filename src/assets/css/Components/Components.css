@@ -114,8 +114,8 @@
 }
 .edit-overlay {
     position: absolute;
-    top: 50%;
-    left: 40%;
+    top: 25%;
+    left: 50%;
     transform: translate(-50%, -50%);
     background: rgba(var(--main-black), 0.5);
     color: rgb(var(--main-white), 1);

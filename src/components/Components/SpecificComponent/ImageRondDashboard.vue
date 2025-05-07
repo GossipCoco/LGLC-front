@@ -1,5 +1,5 @@
 <template>
-  <div class="avatar-container width-15-vh height-15-vh avatar-container-in-dashboard padding-2-vh border-radius-50"  v-if="edit === true">
+  <div class="width-15-vh height-15-vh"  v-if="edit === true">
     <div
       class="avatar-wrapper height-15-vh rond-image-illustration
       border-radius-100 avatar-profil-container width-15-vh"
