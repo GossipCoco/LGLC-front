@@ -35,7 +35,7 @@
               </div>
             </div>
             <div
-              class="card-text width-30-vh text-align-justify poppins-text summary-text-font display-none-responsive padding-1-vh"
+              class="card-text width-30-vh text-align-justify poppins-text summary-text-font font-size-0-75 display-none-responsive padding-1-vh"
               v-html="truncateText(fiction.Summary, 65)"
             ></div>
           </div>

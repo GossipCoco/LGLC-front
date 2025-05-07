@@ -5,11 +5,6 @@
   font: 500 2.25rem all-petite-caps;
   font-variant: all-petite-caps;
 }
-/* .summary-title-text p a {
-  font-weight: 500;
-  font-size:  1.15em;
-  font-family: 'Poppins';
-} */
 .summary-title-text p a:hover,
 .summary-title-text p a.last-chapter-text:hover,
 .h5-container a:hover {
