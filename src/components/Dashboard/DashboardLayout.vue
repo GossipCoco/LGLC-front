@@ -27,7 +27,6 @@
           v-bind:roleImage="roleImage"
           v-bind:NameRole="NameRole"
           v-bind:LevelName="LevelName"
-          v-bind:gamer="gamer"
           v-bind:NbOCs="NbOCs"
         />      
         <LastFiveFiction v-if="!showspinner" />

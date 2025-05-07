@@ -117,9 +117,6 @@
 .quest-container{
     margin: 2vh 4vh 0 0;
 }
-.row.bottom-dashboard-levele-one .card.last-book-container{
-    margin: 0rem 0.5rem;
-}
 .random-characters-card .card-body{
     flex-wrap: wrap;
 }

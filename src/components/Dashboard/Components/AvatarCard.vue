@@ -60,7 +60,6 @@ export default {
     "roleImage",
     "NameRole",
     "LevelName",
-    "gamer",
     "NbOCs",
   ],
   components: { TitleHeaderDashboard, RoleLevel, UserInformation, ImageRondDashboard },
