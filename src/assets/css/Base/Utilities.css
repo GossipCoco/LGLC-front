@@ -64,6 +64,7 @@
 }
 .overflowY-auto{
     overflow-y: auto;
+    overflow-x: hidden;
 }
 .overflowY-scroll{
     overflow-y: scroll;

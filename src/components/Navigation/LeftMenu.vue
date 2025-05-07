@@ -1,6 +1,7 @@
 <template>
+  <div class="left-menu-content" :class="{ 'menu-expanded': isExpanded }">
   <div
-    class="menu-left background-lineart-other03 d-flex flex-column 
+    class="menu-left background-lineart-other03 d-flex flex-column overflowY-auto
     flex-shrink-0 height-100-vh width-20-vh margin--0-0--2"
   >
     <Logo v-bind:img="logo" />
@@ -168,6 +169,7 @@
       </li>
     </ul>
   </div>
+</div>
 </template>
 <script>
 import UserService from "../../services/UserService";
