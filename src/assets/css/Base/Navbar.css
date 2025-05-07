@@ -17,14 +17,13 @@
   outline: 0;
 }
 .logo-container {
-  padding: 0;
-  margin: -1rem 0 0 -1rem;
+  padding: 0;  
 }
 .navbar {
   margin-top: -0.5rem
 }
 #navbarCollapse {
-  margin: 3vh 0 0 170vh;
+  margin: 3vh 0 0 150vh;
 }
 .nav-item a {
   font-size: 18px;

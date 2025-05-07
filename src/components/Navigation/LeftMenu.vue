@@ -8,11 +8,12 @@
       'flex-column', 
       'flex-shrink-0', 
       'p-3',
-      'height-98-vh',
-      'width-15-vh' 
-    ]"
+      'height-85-vh',
+      'width-15-vh',
+      'margin-1vh-0-0-1vh'
+      ]"
   >
-    <Logo v-bind:img="logo" />    
+    <!-- <Logo v-bind:img="logo" /> -->
     <ul class="nav nav-pills flex-column mb-auto display-flex align-items-content-justify-content width-10-vh">
       <li class="li-level1 display-flex-column align-items-content-justify-content">
         <router-link to="/dashboard">
@@ -180,11 +181,11 @@
 </template>
 <script>
 import UserService from "../../services/UserService";
-import Logo from "./Components/Logo.vue";
+// import Logo from "./Components/Logo.vue";
 
 export default {
   name: "LeftMenu",
-  components: { Logo },
+  // components: { Logo },
   data() {
     return {
       usrId: this.$store.state.auth.user.usrID,
