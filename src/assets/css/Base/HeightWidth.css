@@ -149,9 +149,13 @@
     width: 90vh;
 }
 .menu-level1 {
-  height: 6vh;
+  height: 8vh;
+  width: 8vh;
 }
-.icon-menu-container,.avatar-navabar, .avatar-navabar img {
+.icon-menu-container{
+    width: 8vh;
+    height: 8vh;
+}.avatar-navabar, .avatar-navabar img {
     width: 6vh;
     height: 6vh;
 }
@@ -268,6 +272,9 @@
 .title-dashboard-container-header {
     height: 12vh;
 }
+.icon-menu-container img {
+    width: 3.5vh;
+}
 /* en REM */
 .card.fiction-container .card-header h4 {    
     width: 100%;
@@ -294,9 +301,7 @@ audio{
 .quest-button-text .btn.btn-primary {
     width: 10rem;
 }
-.icon-menu-container img {
-    width: 1.25rem;
-}
+
 .link-collapse {
     width: 6rem;
 }

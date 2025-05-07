@@ -48,6 +48,11 @@
 .menu-level1 {
   margin: 0 0 1vh 4vh;
 }
+.icon-menu-container{
+  width: 8vh;
+  height: 8vh;
+  margin: 0 0 1vh 0;
+}
 .icon-menu-container:hover {
   background-color: rgba(var(--active-hover), 1);
 }
@@ -111,8 +116,11 @@ ul {
   display: none;
 }
 .menu-left ul li {
-  margin: 1vh 0;
+  margin: 2vh 0;
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+.menu-level1 span{
+  margin: 1vh 0 0 -1vh;
 }

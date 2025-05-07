@@ -10,9 +10,10 @@
         <router-link to="/dashboard">
           <div class="menu-level1">
             <div class="menu-li-contain">
-              <div class="icon-menu-container  border-radius-100  background-color-clear-green-02  display-flex align-items-content-justify-content">
-                <img src="/images/icons/home.svg" />
+              <div class="icon-menu-container  border-radius-100 background-color-clear-green-02  display-flex align-items-content-justify-content">
+                <img src="/images/icons/home.svg" />                
               </div>
+              <span class="menu-text poppins-text font-size-1em white-text">Dashboard</span>
             </div>
           </div>
         </router-link>
@@ -30,14 +31,14 @@
               <div class="icon-menu-container  border-radius-100  background-color-clear-green-02  display-flex align-items-content-justify-content">
                 <img
                   src="/images/icons/Logo-thunderclan-textless.png"
-                  style="width: 1.25rem"
+                  style="width: 1.5rem"
                 />
               </div>
+              <span class="menu-text poppins-text font-size-1em white-text">LGDC</span>
             </div>
           </div>
         </div>
-        <div class="collapse display-flex-column align-items-content-justify-content " id="univers-LGDC">
-          <p class="text-white poppins-text font-size-0-85 margin-0-rem">LGDC</p>
+        <div class="collapse display-flex-column align-items-content-justify-content " id="univers-LGDC">          
           <div v-for="(menu, index) in SecondeSubMenu" :key="index">
             <router-link :to="menu.link" class="link-collapse color-clear-green-02 font-size-0-65 display-flex-column align-items-content-justify-content ">
             {{ menu.title }}
@@ -58,6 +59,7 @@
               <div class="icon-menu-container  border-radius-100  background-color-clear-green-02  display-flex align-items-content-justify-content">
                 <img src="/images/icons/cloud-solid.svg" />
               </div>
+              <span class="menu-text poppins-text font-size-1em white-text">Créations</span>
             </div>
           </div>
         </div>
