@@ -97,10 +97,6 @@
 .character-details .col-md-4 {
     padding-top: 3vh;
 }
-.card-form-create-character {
-    margin: 4vh;
-    padding: 4vh;
-}
 .fiction-card .card-header {
     font-size: 1.5em;
     z-index: 9999;

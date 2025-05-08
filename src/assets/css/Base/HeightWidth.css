@@ -270,10 +270,6 @@
     width: 3.5vh;
 }
 /* en REM */
-
-.create-chapter-btn-container .btn, .select-character-container .form-check {
-    width: 15rem;
-}
 .quest-button-text .btn.btn-primary {
     width: 10rem;
 }
