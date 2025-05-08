@@ -223,15 +223,9 @@
 .col-btn-container .btn.btn-primary{
     width: 38vh;
 }
-.event-container .card-body{
-    height: 75vh;
-}
 /* QUEST */
 #quest-by-id {
     width: 185vh;
-}
-#quest-by-id .parallax-container {
-    height: 80vh;
 }
 .quest-button-text p {
     height: 20vh;
@@ -269,14 +263,6 @@
 .icon-menu-container img {
     width: 3.5vh;
 }
-/* en REM */
-.quest-button-text .btn.btn-primary {
-    width: 10rem;
-}
-
-.link-collapse {
-    width: 6rem;
-}
 /* % */
 .card-img-top.background-image-quest-image-container img,
 .character-l1 img {
@@ -301,14 +287,14 @@
 .row.all-calls-pagination-container{
     height: 100px;
 }
-.cat-corner::before
+/* .cat-corner::before
 .dashboard-max-card-container::before,
 .fiction-globale-container::before,
 .character-card.card::before,
 .display-flex-row.card-group.clan-group .card.location-clan-background-width-container::before {
     width: 10px;
     height: 10px;
-}
+} */
 .character-l1{
     width: 110px;
 }

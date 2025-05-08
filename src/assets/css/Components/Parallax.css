@@ -3,7 +3,6 @@
 
 .parallax-container {
   position: relative;
-  height: 400px;
   overflow: hidden;
 }
 .parallax-layer {
