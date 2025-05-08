@@ -1,6 +1,6 @@
 <template>
 <div class="card-container-parallax display-flex-column" >
-  <div  class="card bubble-dialog">
+  <div  class="card bubble-dialog height-40-vh width-40-vh">
     <div v-for="(text, index) in questData.QuestQuestions" :key="index">
       <p class="poppins-text">{{ text.QuestionText }}</p>
     </div>

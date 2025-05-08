@@ -11,7 +11,7 @@
       >
       <div class="card-body">
         <div id="quest-by-id" class="quest-container height-90-vh">
-          <div class="parallax-container height-80-vh">
+          <div class="parallax-container height-80-vh overflowY-scroll overflowX-hidden">
             <div v-for="(layer, index) in layers" 
                 :key="index" 
                 class="parallax-layer width-250-vh height-150-vh"

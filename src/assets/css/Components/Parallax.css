@@ -3,7 +3,6 @@
 
 .parallax-container {
   position: relative;
-  overflow: hidden;
 }
 .parallax-layer {
   position: absolute;
@@ -23,8 +22,6 @@
   margin: 12vh 120vh 0 0;
 }
 .card-container-parallax .card {
-  width: 325px;
-  height: 350px;
   position: relative;
   z-index: 99999999;
 }
@@ -37,8 +34,6 @@
 }
 #quest-by-id .parallax-container {
   position: relative;
-  overflow-y: scroll;
-  overflow-x: hidden;
   perspective: 20vh;
   transform-style: preserve-3d;
   background-repeat: no-repeat;
