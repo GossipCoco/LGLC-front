@@ -12,8 +12,8 @@
         />
         <div class="card-body new-current-arc-container padding-2-vh text-white">
             <div v-if="currentArc" class="text-align-center">
-                <h2 class="white-text poppins-text text-align-center">
-                  <router-link :to="'/OneArc/'+currentArc.Id" class="color-clear-green-01">
+                <h2 class="text-align-center">
+                  <router-link :to="'/OneArc/'+currentArc.Id" class="poppins-text color-clear-green-01">
                     {{ currentArc.Title }}
                   </router-link>                  
                 </h2>

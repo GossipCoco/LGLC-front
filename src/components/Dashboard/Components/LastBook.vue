@@ -7,14 +7,14 @@
         v-bind:type="'chapters'"
       />
       <div class="card-body last-chapter-card text-white height-30-vh">
-        <h4 class="text-white align-items-content-justify-content">
+        <h2 class="text-white align-items-content-justify-content">
           <router-link
-            class="text-white poppins-text font-size-1-25"
+            class="color-clear-green-01 poppins-text"
             :to="'/BookByTitle/' + lastBook.Title"
           >
           {{ lastBook.Title }}</router-link>
-        </h4>
-        <div class="summary-book-dashboard display-flex-row align-items-content-justify-content width-60-vh">
+        </h2>
+        <div class="summary-book-dashboard display-flex-row align-items-content-justify-content width-70-vh margin--0-0--4">
           <img :src="lastBook.Image" width="20%"  loading="lazy" />
           <div class="text-white text-align-justify overflowY-scroll summmary-book-height-dashboard poppins-text text-white padding-1-vh" v-html="lastBook.Summary"></div>
         </div>

@@ -313,8 +313,7 @@ audio{
 .character-l1 img {
     height: 75%;
 }
-.illustration-background .background-fiction-contain,
-.row.bottom-dashboard-levele-one .card-header > div{
+.illustration-background .background-fiction-contain{
     width: 100%;
 }
 .logo img{
