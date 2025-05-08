@@ -1,10 +1,8 @@
 <template>
-  <div :class="col">
-    <div class="mb-3 row">
-      <label :for="For" class="col-sm-4 text-white form-label form-select-sm poppins-text">
+    <div class="col-md-3">
+      <label :for="For" class="text-white form-label poppins-text">
         {{ label }}
       </label>
-      <div class="col-sm-8">
         <select
         v-if="label !== 'Auteur'"
         :id="For"
@@ -30,8 +28,6 @@
           </option>
         </select>
       </div>
-    </div>    
-  </div>
 </template>
 <script>
 import GradeServices from '../../../services/GradeService';
