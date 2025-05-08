@@ -102,13 +102,13 @@
     z-index: 9999;
     font-variant: small-caps;
 }
-.card-group.clan-group .card, .avatar-gamer, .quest-container,
+.card-group.clan-group .card, .avatar-gamer, 
 .summary-container, #quest-by-id .quest-by-id-card.card.quest-by-id-card.background-color-main-lineart,
 .row.bottom-dashboard-levele-one-level-two {
     margin: 1rem;
 }
 .quest-container{
-    margin: 2vh 4vh 0 0;
+    margin: 1vh 2vh 1vh 2vh;
 }
 .random-characters-card .card-body{
     flex-wrap: wrap;

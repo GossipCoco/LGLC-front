@@ -81,7 +81,6 @@
   overflow-x: hidden;
   overflow-y: auto;
 }
-
 .parallax-layer-back {
   transform: translateZ(-1px) scale(2);
 }
