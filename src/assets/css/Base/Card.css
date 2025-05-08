@@ -23,10 +23,6 @@
 .card-quest-by-id-container .card-body{
     margin: -2vh 0 1vh 4vh;
 }
-.character-card.card {
-    margin: 1rem 1rem 0 0;
-    padding: 0rem 1rem 1rem 1.5rem;
-}
 #original-characters-list .card-character-container{
     margin: 4vh 6vh 1vh 0;
 }
@@ -37,13 +33,10 @@
 .clan-detail-card {
     margin: 10vh 0 0 0;
 }
-.dashboard-max-card-container, .character-details-chatper.card,.profil-user-card, .admin-dashboard{
-    margin: 2rem;
-}
-.dashboard-max-card-container.card.one-quest-container,
+/* .dashboard-max-card-container.card.one-quest-container,
 .dashboard-max-card-container.one-quest-container{
     margin: 1rem 0 1rem 1rem;
-}
+} */
 .fiction-globale-container.card.fiction-container {
     margin: 1vh 1vh 2vh -1vh;
 }

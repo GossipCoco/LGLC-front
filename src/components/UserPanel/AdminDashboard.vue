@@ -1,5 +1,5 @@
 <template>
-    <div class="admin-dashboard border-none background-color-main-lineart flex-one card display-flex-column height-100 background-color-main-lineart">
+    <div class="admin-dashboard admin-dashboard border-none background-color-main-lineart flex-one card display-flex-column height-100 background-color-main-lineart">
         <div class="card-header height-10-vh">
             <div class="row">
                 <div class="col-4"></div>
