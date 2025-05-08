@@ -2,7 +2,7 @@
   <div id="goose-game" class="margin-2vh border-none background-color-main-lineart flex-one card display-flex-column padding-2-vh">
     <CardHeader v-bind:Title="'Jeu de l\'oie'" />
     <div class="card-body padding-2-vh">
-      <div class="row list-fiction-card-container game-map-container-global">
+      <div class="row goose-game-card-container game-map-container-global height-80-vh">
         <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-8 col-sm-12 col-xs-12">
           <div class="game-map-container">             
               <img src="/images/Game/Forest.OS-2.webp" alt="Map" class="game-map">

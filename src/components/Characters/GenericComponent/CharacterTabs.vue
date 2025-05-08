@@ -85,7 +85,7 @@
             <font-awesome-icon icon="pen" />
           </button>
         </p>
-        <div v-if="!EditDescriptionTextArea" class="text-align-justify  info-original-character-height overflowY-auto" v-html="Description"></div>
+        <div v-if="!EditDescriptionTextArea" class="text-align-justify  height-30-vh overflowY-auto" v-html="Description"></div>
         <TextAreaOriginalCharacter v-if="EditDescriptionTextArea" v-bind:Title="'Description'" v-bind:Text="Description" v-bind:getDatas="'getDescription'" @getDescription="getDescription">
           <button type="button" class="btn btn-primary" v-on:click="editAndSendDescription">Editer la description</button>
           <button type="button" class="btn btn-primary" v-on:click="cancel">Annuler</button>
@@ -103,7 +103,7 @@
             <font-awesome-icon icon="pen" />
           </button>
         </p>
-        <div v-if="!EditPersonnalityTextArea" class="text-align-justify  info-original-character-height overflowY-auto" v-html="Personnality"></div>
+        <div v-if="!EditPersonnalityTextArea" class="text-align-justify    height-30-vh  overflowY-auto" v-html="Personnality"></div>
         <TextAreaOriginalCharacter v-if="EditPersonnalityTextArea" v-bind:Title="'Personnalité'" v-bind:Text="Personnality" v-bind:getDatas="'getPersonnality'" @getPersonnality="getPersonnality">
           <button type="button" class="btn btn-primary" v-on:click="editAndSendPersonnality">Editer la personnalité</button>
           <button type="button" class="btn btn-primary" v-on:click="cancel">Annuler</button>
@@ -121,7 +121,7 @@
             <font-awesome-icon icon="pen" />
           </button>
         </p>
-        <div v-if="!EditBiographyTextArea" class="text-align-justify  info-original-character-height overflowY-auto" v-html="Biography"></div>
+        <div v-if="!EditBiographyTextArea" class="text-align-justify    height-30-vh  overflowY-auto" v-html="Biography"></div>
         <TextAreaOriginalCharacter v-if="EditBiographyTextArea" v-bind:Title="'Biographie'" v-bind:Text="Biography" v-bind:getDatas="'getBiography'" @getBiography="getBiography">
           <button type="button" class="btn btn-primary" v-on:click="editAndSendBiography">Editer la biographie</button>
           <button type="button" class="btn btn-primary" v-on:click="cancel">Annuler</button>

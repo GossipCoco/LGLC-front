@@ -270,25 +270,7 @@
     width: 3.5vh;
 }
 /* en REM */
-.card.fiction-container .card-header h4 {    
-    width: 100%;
-    height: 2.5rem;
-}
-.all-characters-of-fiction{
-    width: 28vh;
-}
-.row.list-fiction-card-container{
-    height: 38rem;
-}
-audio{
-    width: 14rem;
-}
-.info-original-character-height{
-    height: 28vh;
-}
-.card-body.all-last-three-fictions-container .list-all-fictions-globale--container{
-    width: 20rem;
-}
+
 .create-chapter-btn-container .btn, .select-character-container .form-check {
     width: 15rem;
 }
@@ -318,10 +300,6 @@ audio{
 }
 .logo img{
     width: 55%;
-}
-.image-width{
-    width: 45%;
-    height: 45%;
 }
 /*  px */
 .row.all-calls-pagination-container{
