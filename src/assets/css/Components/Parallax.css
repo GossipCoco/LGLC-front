@@ -7,11 +7,18 @@
 }
 .parallax-layer {
   position: absolute;
-  height: 100%;
   top: 0;
+  bottom: 0;
+  right: 0;
   left: 0;
-  transition: transform 0.1s ease-out;
+  transition: transform 1s ease-out;
+  background-size: contain;
+  background-position: center;
+  pointer-events: none;
 }
+/* #quest-by-id .parallax-layer {
+  transition: transform 1s ease;
+} */
 .card-container-parallax {
   align-items: flex-end;
   vertical-align: middle;
@@ -39,11 +46,7 @@
   background-repeat: no-repeat;
   width: 177vh;
 }
-#quest-by-id .parallax-layer {
-  position: absolute;
-  transition: transform 1s ease;
-  background-repeat: no-repeat;
-}
+
 #quest-by-id .chat-image {
   position: absolute;
   z-index: 4;
@@ -86,13 +89,7 @@
   overflow-x: hidden;
   overflow-y: auto;
 }
-.parallax-layer {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-}
+
 .parallax-layer-back {
   transform: translateZ(-1px) scale(2);
 }
@@ -195,6 +192,7 @@ img.key-object-img {
   flex-direction: column;
   height: 6rem;
   background-color: rgba(var(--main-white), 0);
+  border: none;
 }
 #quest-by-id .parallax-container{
   background-repeat: no-repeat;
@@ -224,13 +222,6 @@ img.key-object-img {
   background-size: cover;
   background-position: center;
   z-index: 1;
-}
-.parallax-layer {
-  top: 0;
-  left: 0;
-  background-size: contain;
-  background-position: center;
-  pointer-events: none;
 }
 .quest-content {
   position: relative;
