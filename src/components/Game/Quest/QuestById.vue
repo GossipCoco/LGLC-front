@@ -1,7 +1,7 @@
 <template>
   <div id="quest-by-id"
       class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 card-global
-      flex-wrap quest-container flex-one width-185-vh"
+      flex-wrap quest-container flex-one width-185-vh padding-0-rem overflow-hidden margin-1vh"
   >
     <div class="card border-none quest-by-id-card background-color-main-lineart width-200-vh">
       <card-header v-bind:Title="quest.Title"
@@ -9,7 +9,7 @@
           >Retour à la liste de quêtes</router-link
         ></card-header
       >
-      <div class="card-body">
+      <div class="card-body height-85-vh ">
         <div id="quest-by-id" class="quest-container height-90-vh">
           <div class="parallax-container height-80-vh overflowY-scroll overflowX-hidden">
             <div v-for="(layer, index) in layers" 

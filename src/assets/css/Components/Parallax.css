@@ -25,19 +25,18 @@
   position: relative;
   z-index: 99999999;
 }
-#quest-by-id {
+/* #quest-by-id {
   padding: 0;
   overflow: hidden;
-}
-.quest-by-id-card .card-body{
+} */
+/* .quest-by-id-card .card-body{
   height: 85vh;
-}
+} */
 #quest-by-id .parallax-container {
   position: relative;
   perspective: 20vh;
   transform-style: preserve-3d;
   background-repeat: no-repeat;
-  width: 177vh;
 }
 
 #quest-by-id .quest-details {
