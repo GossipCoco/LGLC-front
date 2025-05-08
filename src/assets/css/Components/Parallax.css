@@ -17,9 +17,6 @@
   pointer-events: none;
   background-repeat: no-repeat ;
 }
-/* #quest-by-id .parallax-layer {
-  transition: transform 1s ease;
-} */
 .card-container-parallax {
   align-items: flex-end;
   vertical-align: middle;
@@ -194,20 +191,20 @@ img.key-object-img {
 .quest-container {
   position: relative;
 }
-.quest-card {
+/* .quest-card {
   background: none;
   box-shadow: none;
-}
-.quest-body {
+} */
+/* .quest-body {
   position: relative;
   overflow: hidden;
-}
-.parallax-wrapper {
+} */
+/* .parallax-wrapper {
   position: relative;
   min-height: 80vh;
   overflow: hidden;
-}
-.parallax-background {
+} */
+/* .parallax-background {
   position: absolute;
   top: 0;
   left: 0;
@@ -216,7 +213,7 @@ img.key-object-img {
   background-size: cover;
   background-position: center;
   z-index: 1;
-}
+} */
 .quest-content {
   position: relative;
   z-index: 10;

@@ -2,7 +2,7 @@
 <div class="card-container-parallax display-flex-column" >
   <div  class="card bubble-dialog">
     <div v-for="(text, index) in questData.QuestQuestions" :key="index">
-      <p>{{ text.QuestionText }}</p>
+      <p class="poppins-text">{{ text.QuestionText }}</p>
     </div>
     <div v-for="(options, index) in questData.QuestQuestions" :key="index">
       <div v-for="(option, indexdeux) in options.QuestionOptions" :key="indexdeux">
@@ -12,13 +12,15 @@
           :value="option.Id"
           v-model="selectedOption"
         />
-        <label :for="'option' + indexdeux">{{ option.OptionText }}</label>
+        <label :for="'option' + indexdeux" class="poppins-text">{{ option.OptionText }}</label>
       </div>
     </div>
-    <button class="btn btn-primary margin-4-0-0-0" @click="submitAnswer">
+    <button class="btn btn-primary margin-4-0-0-0 poppins-text" @click="submitAnswer">
       Valider la réponse
     </button>
-    <div v-if="feedback">{{ feedback }}</div>
+    <div v-if="feedback">
+      <p class="poppins-text">{{ feedback }}</p>
+    </div>
   </div>
 </div>
 </template>
