@@ -3,13 +3,13 @@
     class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 card-global"
   >
     <div
-      class="card height-50-vh background-lineart border-none fiction-card game-container"
+      class="card height-60-vh background-lineart border-none fiction-card game-container"
     >
       <TitleHeaderDashboard
         v-bind:title="'Nos jeux'"
         v-bind:type="'chapters'"
       />
-      <div class="card-body height-50-vh ">
+      <div class="card-body height-60-vh ">
         <div class="row">
           <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
             <div class="display-flex-column align-items-content-justify-content padding-2-vh">
@@ -51,7 +51,46 @@
             </div>
           </div>
         </div>
-
+        <div class="row">
+          <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+            <div class="display-flex-column align-items-content-justify-content padding-2-vh">
+              <div class="display-flex-column align-items-content-justify-content">
+                <div class="display-flex-row align-items-content-justify-content">
+                  <img loading="lazy" src="../../../../public/images/Game/treasure.png"/>
+                  <p>
+                    <router-link class="text-white poppins-text" to="/TreasureHunt">
+                      Chasse au trésor
+                    </router-link>
+                  </p>
+                </div>
+                <div class="display-flex-column align-items-content-justify-content">
+                  <p class="text-white poppins-text">
+                    Trouve tous les trésors et gagne des points
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+            <div class="display-flex-column align-items-content-justify-content">
+              <div class="display-flex-column align-items-content-justify-content">
+                <div class="display-flex-row align-items-content-justify-content">
+                  <img loading="lazy" src="../../../../public/images/Game/dice.png"/>
+                  <p>
+                    <router-link class="text-white poppins-text" to="/rollOfDice"
+                      >Jeu de Dé
+                    </router-link>
+                  </p>
+                </div>
+                <div class="display-flex-column align-items-content-justify-content">
+                  <p class="text-white poppins-text">
+                    Réalise un beau score et gagne des points
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="row">
           <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
             <div class="display-flex-column align-items-content-justify-content">

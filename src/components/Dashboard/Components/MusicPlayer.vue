@@ -1,27 +1,35 @@
 <template>
-  <div class="col-xxl-3 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12 card-global">
-    <div class="card height-50-vh background-lineart border-none music-card">
-        <TitleHeaderDashboard v-bind:title="'Musique'" v-bind:type="'fictions'"/>
-        <div class="card-body height-50-vh ">
+  <div class="card background-lineart border-none music-card">
+    <TitleHeaderDashboard v-bind:title="'Musique'" v-bind:type="'fictions'" />
+    <div class="card-body height-20-vh">
       <div class="music-player">
         <audio ref="audioPlayer" controls @ended="nextTrack" width="14rem">
           <source :src="currentTrack.url" type="audio/mpeg" />
           Your browser does not support the audio element.
         </audio>
         <div class="controls display-flex-row width-40-vh">
-          <button class="btn btn-primary poppins-text width-20-vh" @click="previousTrack">Précédent</button>
-          <button class="btn btn-primary poppins-text width-20-vh" @click="nextTrack">Suivant</button>
-          </div>
+          <button
+            class="btn btn-primary poppins-text width-20-vh"
+            @click="previousTrack"
+          >
+            Précédent
+          </button>
+          <button
+            class="btn btn-primary poppins-text width-20-vh"
+            @click="nextTrack"
+          >
+            Suivant
+          </button>
         </div>
       </div>
     </div>
   </div>
 </template>
 <script>
-import TitleHeaderDashboard from '../../Components/SpecificComponent/TitleHeaderDashboard.vue';
+import TitleHeaderDashboard from "../../Components/SpecificComponent/TitleHeaderDashboard.vue";
 export default {
-    name: 'MusicPlayer',
-    components: {TitleHeaderDashboard},
+  name: "MusicPlayer",
+  components: { TitleHeaderDashboard },
   data() {
     return {
       // Liste des pistes musicales
@@ -30,7 +38,10 @@ export default {
         { name: "Musique 2", url: "/musics/LaTragédiedeFléau(1).mp3" },
         { name: "Musique 3", url: "/musics/LaTragédiedeFléau(2).mp3" },
         { name: "Musique 4", url: "/musics/LaTragédiedeFléau(3).mp3" },
-        { name: "Musique 5", url: "/musics/La destinée d'Etoile Bleue (1).mp3" },
+        {
+          name: "Musique 5",
+          url: "/musics/La destinée d'Etoile Bleue (1).mp3",
+        },
         { name: "Musique 6", url: "/musics/Le courage de Plume Grise (1).mp3" },
       ],
       currentTrackIndex: 0, // Index de la musique actuelle
@@ -62,6 +73,5 @@ export default {
   text-align: center;
   margin-top: 20px;
 }
-
 </style>
   
