@@ -22,11 +22,11 @@ export default {
     };
   },
   mounted() {
-    IOController.initSocket();
-    // Écoute des messages entrants
-    IOController.socket.on("receiveMessage", (msg) => {
-      this.messages.push(msg);
-    });
+    // IOController.initSocket();
+    // // Écoute des messages entrants
+    // IOController.socket.on("receiveMessage", (msg) => {
+    //   this.messages.push(msg);
+    // });
   },
   methods: {
     send() {
