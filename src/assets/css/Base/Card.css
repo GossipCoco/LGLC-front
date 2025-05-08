@@ -33,25 +33,17 @@
 .clan-detail-card {
     margin: 10vh 0 0 0;
 }
-/* .dashboard-max-card-container.card.one-quest-container,
-.dashboard-max-card-container.one-quest-container{
-    margin: 1rem 0 1rem 1rem;
-} */
-.fiction-globale-container.card.fiction-container {
-    margin: 1vh 1vh 2vh -1vh;
-}
 .display-flex-row.card-group.clan-group .card.location-clan-background-width-container::before {
     left: 66%;
     top: -2rem;
 }
-.display-flex-row.card-group.clan-group
-.character-card.card::before {
+.display-flex-row.card-group.clan-group .character-card.card::before {
     top: -1rem;
     left: -20%;
     transform: scale(.5);
 }
 /* Character Details */
-.character-details {
+.clan-group {
     margin: 0 2vh 0 0;
     background: none;
     border: none;
