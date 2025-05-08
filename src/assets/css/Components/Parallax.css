@@ -41,8 +41,6 @@
 }
 #quest-by-id .parallax-layer {
   position: absolute;
-  height: 150vh;
-  width: 250vh;
   transition: transform 1s ease;
   background-repeat: no-repeat;
 }
@@ -228,15 +226,10 @@ img.key-object-img {
   z-index: 1;
 }
 .parallax-layer {
-  position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
   background-size: contain;
-  background-repeat: no-repeat;
   background-position: center;
-  z-index: 2;
   pointer-events: none;
 }
 .quest-content {

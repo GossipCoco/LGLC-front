@@ -3,7 +3,7 @@
     <div
       v-for="(layer, index) in layersData"
       :key="index"
-      class="parallax-layer"
+      class="parallax-layer height-150-vh"
       :style="{
         backgroundImage: `url(${layer.Image})`,
         transform: `translate3d(${layer.translateX}, ${layer.translateY}, ${layer.translateZ}) scale(${layer.scale})`

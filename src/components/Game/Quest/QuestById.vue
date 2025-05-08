@@ -14,7 +14,7 @@
           <div class="parallax-container height-80-vh">
             <div v-for="(layer, index) in layers" 
                 :key="index" 
-                class="parallax-layer"
+                class="parallax-layer width-250-vh height-150-vh"
                 :style="{
                   backgroundImage: `url(${layer.Image})`,
                   zIndex: layer.Position,
