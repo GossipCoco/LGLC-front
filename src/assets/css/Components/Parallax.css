@@ -15,6 +15,7 @@
   background-size: contain;
   background-position: center;
   pointer-events: none;
+  background-repeat: no-repeat ;
 }
 /* #quest-by-id .parallax-layer {
   transition: transform 1s ease;
