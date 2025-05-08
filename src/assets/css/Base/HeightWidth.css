@@ -224,16 +224,6 @@
     width: 38vh;
 }
 /* QUEST */
-#quest-by-id {
-    width: 185vh;
-}
-.quest-button-text p {
-    height: 20vh;
-}
-.quest-button-text p.quest-description {
-    height: 20vh;
-    width: 18vh;
-}
 .one-quest h6{
     width: 18vh;
 }
@@ -264,14 +254,7 @@
     width: 3.5vh;
 }
 /* % */
-/* .card-img-top.background-image-quest-image-container img,
-.character-l1 img {
-    width: 75%;
-} */
 
-/* .title-dashboard-container-header .image-messenger-container img {
-    width: 20%;
-} */
 .character-l1 img {
     height: 75%;
 }
@@ -281,31 +264,6 @@
 .logo img{
     width: 55%;
 }
-/*  px */
-/* .row.all-calls-pagination-container{
-    height: 100px;
-} */
-/* .cat-corner::before
-.dashboard-max-card-container::before,
-.fiction-globale-container::before,
-.character-card.card::before,
-.display-flex-row.card-group.clan-group .card.location-clan-background-width-container::before {
-    width: 10px;
-    height: 10px;
-} */
-/* .illustration-background .background-fiction-contain .characters-list-container img{
-    width: 150px;
-} */
-/* .mini-rond-avatar-image{
-    width: 70px;
-    height: 70px;
-} */
-/* .clans-location-container .gap-2 {
-    width: 0;
-} */
-/* .header-container.container {
-    max-width: 100%;
-} */
 #pills-tabContent{
     overflow-y: scroll;
     background: var(--lineart-other02);

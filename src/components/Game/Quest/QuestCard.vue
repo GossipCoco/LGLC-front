@@ -16,15 +16,15 @@
             class="display-flex-column quest-button-text height-30-vh align-items-content-justify-content vertical-align-middle"
           >
             <p
-              class="display-flex-column quest-description font-weight-400 text-white display-none-responsive"
+              class="display-flex-column quest-description height-20-vh width-20-vh font-weight-400 text-white display-none-responsive"
             >
               {{ quest.Description }}
             </p>
-            <p class="display-flex-column quest-button-link">
+            <p class="display-flex-column quest-button-link height-20-vh">
               <router-link
                 :to="'/QuestById/' + quest.Id"
                 type="button"
-                class="display-flex-column btn btn-primary margin-4-0-0-0"
+                class="display-flex-column btn btn-primary margin-4-0-0-0 width-20-vh"
               >
                 Relever le défi
               </router-link>

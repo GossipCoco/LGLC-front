@@ -1,7 +1,7 @@
 <template>
   <div id="quest-by-id"
       class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 card-global
-      flex-wrap quest-container flex-one width-200-vh"
+      flex-wrap quest-container flex-one width-185-vh"
   >
     <div class="card quest-by-id-card background-color-main-lineart width-200-vh">
       <card-header v-bind:Title="quest.Title"
