@@ -1,10 +1,9 @@
 <template>
-  <div :class="col">
-    <div class="mb-3 row">
-      <label :for="For" class="col-sm-6 text-white form-label form-select-sm">
+
+    <div class="col-md-3">
+      <label :for="For" class="text-white form-label form-select-sm poppins-text">
         {{ label }}
       </label>
-      <div class="col-sm-6">
         <select
           :id="For"
           class="form-select"
@@ -22,8 +21,8 @@
           </option>
         </select>
       </div>
-    </div>
-  </div>
+
+
 </template>
 <script>
 export default {

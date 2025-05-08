@@ -55,7 +55,7 @@
           <div class="row">
             <div class="col-6">
               <div class="margin-1vh-0-0-0">
-                <label for="selectClan" class="text-white form-label">
+                <label for="selectClan" class="text-white form-label poppins-text">
                   Clan principal
                 </label>
                 <select
@@ -78,7 +78,7 @@
             </div>
             <div class="col-6">
               <div class="margin-1vh-0-0-0">
-                <label for="selectClan" class="text-white form-label">
+                <label for="selectClan" class="text-white form-label poppins-text">
                   Sélectionnez un type de fiction
                 </label>
                 <select
@@ -108,7 +108,7 @@
             <LinkGenerateImage />
             <div class="col-6">
               <div class="mb-3">
-                <label for="file" class="form-label text-white"
+                <label for="file" class="form-label text-white poppins-text"
                   >Image de couverture</label
                 >
                 <input
@@ -119,7 +119,7 @@
               </div>
             </div>
             <div class="col-2 display-flex button-validate-container margin-2vh-0-0-0">              
-                <button type="submit" class="btn btn-primary btn-button-validate margin-2vh-0-0-0 height-5-vh">
+                <button type="submit" class="btn btn-primary btn-button-validate margin-2vh-0-0-0 height-5-vh poppins-text">
                   Créer la fiction
                 </button>
             </div>
