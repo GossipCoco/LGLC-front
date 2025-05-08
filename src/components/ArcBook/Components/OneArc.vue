@@ -12,7 +12,7 @@
                 <div class="row">
                     <div class="col-12">
                         <p class="white-text font-variant-all-small-caps poppins-text font-size-1-25">Résumé</p>
-                        <p class="white-text text-align-justify Noto-Sans" v-html="arc.Summary"></p>
+                        <p class="white-text text-align-justify poppins-text" v-html="arc.Summary"></p>
                         <div  class="display-flex-row">
                             <div v-for="(books, index) in arc.Books" :key="index">
                                 <p class="white-text display-flex-column">

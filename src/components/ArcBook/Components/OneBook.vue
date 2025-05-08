@@ -6,15 +6,15 @@
       </card-image-background>
       <div id="book-container" class="border-none background-color-main-lineart flex-one card display-flex-column height-90-vh padding-2-vh">
         <CardHeader v-bind:Title="Title">
-          <router-link to="/ArcBookLayout" class="btn btn-primary">Retour à la liste des arcs & romans</router-link>
+          <router-link to="/ArcBookLayout" class="btn btn-primary arc-back-btn">Retour à la liste des arcs & romans</router-link>
         </CardHeader>
         <div class="card-body width-120-vh height-80-vh padding-2-vh margin-2vh-0">
           <div class="row">
             <div class="col-12">
-              <p class="text-white text-align-justify">{{ Title }}</p>
-              <p class="text-white text-align-justify">{{ TypeBook }}</p>
+              <p class="text-white text-align-justify poppins-text">{{ Title }}</p>
+              <p class="text-white text-align-justify poppins-text">{{ TypeBook }}</p>
               <div
-                class="text-white text-align-justify"
+                class="text-white text-align-justify poppins-text"
                 v-html="book.Summary"
               ></div>
             </div>
