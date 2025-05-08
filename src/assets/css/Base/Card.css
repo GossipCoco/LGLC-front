@@ -283,5 +283,13 @@ li.quest-container {
     padding: 4vh 10vh;
 }
 .avatar-col{
-    padding: 0 0 0 14vh;
+    padding: 0 0 0 23vh;
+}
+.image_user_grade_level{
+    margin: 0 0 2vh 0;
+}
+.avatar-dahboard-container{
+    position: absolute;
+    left: 18vh;
+    top: 9vh;
 }

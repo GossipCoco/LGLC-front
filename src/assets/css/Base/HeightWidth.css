@@ -39,13 +39,13 @@
 .number-page-container{
     width: 17vh;
 }
-.row.top-dashboard .card-body > div{
+.row.top-dashboard .card-body .title-text-novel{
     width: 42vh;
 }
 .row.top-dashboard .all-my-oc-card .card-body > div{
     width: 22vh;
 }
-.row.top-dashboard .card-body.user-info-text > div, .fiction-summary-card{
+.fiction-summary-card{
     width: 44vh;
 }
 .rating {
@@ -204,9 +204,6 @@
 #accueil li.nav-item{
     width: 40vh;
 }
-/* .row.bottom-dashboard-levele-one .card.last-book-container{
-    height: 36vh;
-} */
 .illustration-background {
     width: 186vh;
     height: 80vh;

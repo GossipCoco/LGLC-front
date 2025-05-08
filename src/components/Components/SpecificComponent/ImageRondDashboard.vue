@@ -1,14 +1,16 @@
 <template>
-  <div class="width-15-vh height-15-vh"  v-if="edit === true">
+  <div class="width-12-vh height-12-vh"  v-if="edit === true">
     <div
-      class="avatar-wrapper height-15-vh rond-image-illustration
-      border-radius-100 avatar-profil-container width-15-vh"
+      class="avatar-wrapper height-12-vh rond-image-illustration
+      border-radius-100 avatar-profil-container width-12-vh"
       @mouseenter="showEditIcon = true"
       @mouseleave="showEditIcon = false"
       @click="triggerFileInput"
     >
       <!-- Avatar actuel -->
-      <img v-if="!showspinner"  loading="lazy"  :src="src" :alt="alt" :class="'border-radius-100 display-flex-column margin-0-0-0-2vh height-15-vh width-15-vh ' + classe" />
+      <img v-if="!showspinner"  loading="lazy"  :src="src" :alt="alt" 
+      :class="'avatar-dahboard-container border-radius-100 display-flex-column width-12-vh height-12-vh ' + classe" 
+      />
 
       <!-- Icône "+" affiché au survol -->
       <div v-if="showEditIcon" class="edit-overlay width-10-vh height-10-vh border-radius-50 display-flex
