@@ -7,7 +7,7 @@
             <ImageRondDashboard
               v-bind:src="'/images/Avatars/' + usrInformation.Avatar"
               v-bind:alt="usrInformation.Avatar"
-              v-bind:classe="'card-img-top border-radius-50 mini-rond-avatar-image'"
+              v-bind:classe="'card-img-top border-radius-50'"
               v-bind:ImgClass="'width-25-vh height-25-vh'"              
               v-bind:edit="false"
             />

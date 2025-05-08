@@ -16,7 +16,7 @@
                 l'Ombre rôde dans les marécages sombres.
             </p>
         </div>
-        <div class="col-md-5 accueil-image-one border-radius-50 background-size-cover">
+        <div class="col-md-5 accueil-image-one border-radius-100 background-size-cover">
             
         </div>
         <div class="col-md-1"></div>
@@ -39,7 +39,7 @@
                 l'enrichissement de ce monde fascinant.
             </p>
         </div>
-        <div class="col-md-5 order-md-2 accueil-image-two border-radius-50 background-size-cover">
+        <div class="col-md-5 order-md-2 accueil-image-two border-radius-100 background-size-cover">
 
         </div>
 
@@ -58,7 +58,7 @@
                 vos pas !
             </p>
         </div>
-        <div class="col-md-5 accueil-image-tree border-radius-50 background-size-cover">
+        <div class="col-md-5 accueil-image-tree border-radius-100 background-size-cover">
         </div>
         <div class="col-md-1"></div>
     </div>

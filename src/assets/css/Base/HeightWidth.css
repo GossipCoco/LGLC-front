@@ -282,9 +282,9 @@
     width: 55%;
 }
 /*  px */
-.row.all-calls-pagination-container{
+/* .row.all-calls-pagination-container{
     height: 100px;
-}
+} */
 /* .cat-corner::before
 .dashboard-max-card-container::before,
 .fiction-globale-container::before,
@@ -296,16 +296,16 @@
 /* .illustration-background .background-fiction-contain .characters-list-container img{
     width: 150px;
 } */
-.mini-rond-avatar-image{
+/* .mini-rond-avatar-image{
     width: 70px;
     height: 70px;
-}
-.clans-location-container .gap-2 {
+} */
+/* .clans-location-container .gap-2 {
     width: 0;
-}
-.header-container.container {
+} */
+/* .header-container.container {
     max-width: 100%;
-}
+} */
 #pills-tabContent{
     overflow-y: scroll;
     background: var(--lineart-other02);

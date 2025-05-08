@@ -28,9 +28,6 @@
       @change="selectImage"
     />
   </div>
-  <!-- <div class="avatar-container width-30-vh padding-2-vh height-30-vh border-radius-50"  v-if="ImgClass">
-    <img v-if="!showspinner" :src="src" :alt="alt" :class="'illustratrion-fiction-rond-containter border-radius-100 display-flex-column ' + ImgClass"  />
-  </div> -->
   <div class="rond-image-illustration border-radius-100 avatar-profil-container" v-else>
     <img v-if="!showspinner" :src="src" :alt="alt" :class="'illustratrion-fiction-rond-containter border-radius-100 display-flex-column ' + ImgClass"  />
   </div>
