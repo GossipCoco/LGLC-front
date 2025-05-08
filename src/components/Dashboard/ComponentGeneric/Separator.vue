@@ -4,6 +4,7 @@
             <h1 class=" font-variant-small-caps cinzel text-white">
                 {{ Title }}
             </h1>
+            <img src="/images/Logos/clan-active.png" class="height-10-vh"/>
         </div>
     </div>
 </template>

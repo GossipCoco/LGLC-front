@@ -6,7 +6,7 @@
              <!-- <ImageRondDashboard v-bind:src="'/images/Avatars/' + Avatar" v-bind:alt="Avatar" v-bind:classe="'card-img-top border-radius-50 mini-rond-avatar-image'" v-bind:edit="true"/> -->
              <div class="image-messenger-container">
                 <router-link :to="'/user/messagerie/'+User" class="display-flex-row message-sent-container" >
-                    <img src="/images/icons/envelope-solid.svg" class="border-radius-100" loading="lazy"/>
+                    <img src="/images/icons/envelope-solid.svg" class="border-radius-100 height-10-vh" loading="lazy"/>
                     <div class="mini-rond-messages padding-1-vh-0-0-0 border-radius-100 background-color-active display-flex align-items-content-justify-content text-dark-green">
                         <p class="text-white">{{ NbUnreadMessage }}</p>
                     </div>
