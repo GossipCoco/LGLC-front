@@ -1,7 +1,7 @@
 <template>
     <div class="row featurette">
         <div class="col-md-1"></div>
-        <div class="col-md-5">
+        <div class="col-md-5 text-accueil-container">
             <h2 class="featurette-heading fw-normal lh-1">
                 <span class="text-body-secondary">Un univers fascinant</span>
             </h2>
@@ -25,7 +25,7 @@
     <div class="row featurette">
 
         <div class="col-md-1  order-md-1"></div>
-        <div class="col-md-5 order-md-3">
+        <div class="col-md-5 order-md-3 text-accueil-container">
             <h2 class="featurette-heading fw-normal lh-1">
                 <span class="text-body-secondary">Continuez l'aventure</span>
             </h2>
@@ -48,7 +48,7 @@
     <hr class="featurette-divider">
     <div class="row featurette">
         <div class="col-md-1"></div>
-        <div class="col-md-5">
+        <div class="col-md-5 text-accueil-container">
             <h2 class="featurette-heading fw-normal lh-1">
                 <span class="text-body-secondary">Rejoignez-nous dès aujourd'hui</span>
             </h2>

@@ -173,7 +173,12 @@ h2{
     display: grid;
     vertical-align: middle;
     padding: 1rem;
-    background-color: rgba(var(--dark-green-01), 0.25);
+}
+#accueil .col-md-5.text-accueil-container{
+    display: grid;
+    vertical-align: middle;
+    padding: 1rem;
+    background-color: rgba(var(--dark-green-01), 0.55);
 }
 #accueil .image-row-second{
     display: flex;
