@@ -160,11 +160,7 @@
 .avatar-gamer{
     border: rgba(var(--clear-green-02), 1) 5px solid;
 }
-.bubble-dialog:after {
-    border-width: 0 100px 100px 0;
-    border-style: solid;
-    border-color: rgba(var(--main-white), 1) transparent;    
-}
+
 /* Accueil */
 
 
