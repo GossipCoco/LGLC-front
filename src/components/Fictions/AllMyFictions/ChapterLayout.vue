@@ -59,22 +59,18 @@
                     </div>
                 </div>
             </div>
-            <div class="row chapter-navigation-buttons display-flex-row justify-content-space-between mt-3">
-                
-            </div>
             <div class="display-flex-row chapter-global-content height-70-vh display-flex width-180-vh">        
                 <chapter-image v-bind:ImageChapter="ImageChapter" />
                 <chapter-text v-bind:Content="Content" />
-            </div>
-            
+            </div>            
         </div>
     </div>      
 </template>
 <script>
 import FictionService from '../../../services/FictionService'
-// import CreateCommentModal from '../Comments/CreateCommentModal.vue';
+
 import ChapterImage from '../Chapters/ChapterImage.vue'
-import ChapterText from './Chapters/ChapterText.vue';
+import ChapterText from '../Chapters/ChapterText.vue';
 export default {
     name: 'ChapterLayout',
     components: {ChapterImage, ChapterText},
