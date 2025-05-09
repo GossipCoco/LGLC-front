@@ -6,19 +6,13 @@
           v-bind:title="'Dernier arc en cours'"
           v-bind:type="'chapters'"
         />
-        <div class="card-body new-current-arc-container padding-2-vh text-white height-30-vh">
-          <h2 class="align-items-content-justify-content">
-            <router-link            
-            class="poppins-text color-clear-green-01"
-            :to="'/OneArc/'+ Id">
-                  {{ Title }}
-             </router-link>
-          </h2>
-          <div class="summary-book-dashboard display-flex-row align-items-content-justify-content width-70-vh margin--0-0--4">
-            <img :src="Image" width="20%" class="border-radius-12px"/>
-            <div v-html="Summary" class="text-white text-align-justify overflowY-scroll summmary-book-height-dashboard poppins-text text-white padding-1-vh"></div>
-          </div>
-        </div>
+        <arc-book-summary
+          v-bind:route="'/OneArc/'"
+          v-bind:Id="Id"
+          v-bind:Title="Title"
+          v-bind:Image="Image"
+          v-bind:Summary="Summary"
+        />
       </div>
     </div>
   </div>
@@ -26,9 +20,12 @@
 <script>
 import ArcBookService from "../../../services/ArcBookService";
 import TitleHeaderDashboard from "../../Components/SpecificComponent/TitleHeaderDashboard.vue";
+import ArcBookSummary from "../ComponentGeneric/ArcBookSummary.vue";
 export default {
   name: "NewArc",
-  components: { TitleHeaderDashboard },
+  components: { TitleHeaderDashboard,
+    ArcBookSummary
+   },
   data() {
     return {
         currentArc: null,

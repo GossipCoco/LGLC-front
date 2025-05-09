@@ -6,19 +6,13 @@
         v-bind:title="'Dernier roman paru'"
         v-bind:type="'chapters'"
       />
-      <div class="card-body last-chapter-card text-white height-30-vh">
-        <h2 class="align-items-content-justify-content">
-          <router-link
-            class="color-clear-green-01 poppins-text"
-            :to="'/BookByTitle/' + lastBook.Title"
-          >
-          {{ lastBook.Title }}</router-link>
-        </h2>
-        <div class="summary-book-dashboard display-flex-row align-items-content-justify-content width-70-vh margin--0-0--4">
-          <img :src="lastBook.Image" width="20%"  loading="lazy" />
-          <div class="text-white text-align-justify overflowY-scroll summmary-book-height-dashboard poppins-text text-white padding-1-vh" v-html="lastBook.Summary"></div>
-        </div>
-      </div>
+      <arc-book-summary
+        v-bind:route="'/BookByTitle/'"
+        v-bind:Id="lastBook.Title"
+        v-bind:Title="lastBook.Title"
+        v-bind:Image="lastBook.Image"
+        v-bind:Summary="lastBook.Summary"
+      />
     </div>
   </div>
 </div>
@@ -26,9 +20,10 @@
 <script>
 import ArcBookService from "../../../services/ArcBookService";
 import TitleHeaderDashboard from "../../Components/SpecificComponent/TitleHeaderDashboard.vue";
+import ArcBookSummary from "../ComponentGeneric/ArcBookSummary.vue";
 export default {
   name: "LastBook",
-  components: { TitleHeaderDashboard },
+  components: { TitleHeaderDashboard, ArcBookSummary },
   data() {
     return {
       lastBook: {},
