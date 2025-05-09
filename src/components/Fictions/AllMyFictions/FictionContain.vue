@@ -60,7 +60,7 @@
 </template>
 <script>
 import FictionService from "../../../services/FictionService";
-import Rating from "./Rating.vue";
+import Rating from "../Components/Rating.vue";
 import TitleFiction from "./TitleFiction.vue";
 import ListOfChapter from "./ListOfChapters.vue";
 import CreateCommentModal from "../Comments/CreateCommentModal.vue";
