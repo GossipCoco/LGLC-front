@@ -16,7 +16,7 @@
       <div class="col-10 col-xl-10 col-xxl-10 col-lg-10 col-md-10 col-sm-12 col xs-12">
         <Spinner v-if="showspinner" />
         <AllCardsFictions v-else :allFictions="allFictions" />
-        <div class="row pagination-container">
+        <div class="row pagination-container margin-2vh">
           <Pagination
             v-if="!showspinner"
             :nav="nav"

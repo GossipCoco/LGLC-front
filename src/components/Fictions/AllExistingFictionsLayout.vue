@@ -1,6 +1,6 @@
 <template>
   <div class="all-fictions-container-global border-none display-flex-column padding-0 overflowY-X-hidden height-100-vh">
-    <CardHeader :Title="title"/>
+    <CardHeader :Title="title" />
     <SummaryFiction :typePage="typePage" />
   </div>
 </template>
