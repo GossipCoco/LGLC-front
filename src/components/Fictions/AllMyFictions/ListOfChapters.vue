@@ -45,18 +45,14 @@
               </div>
             </div>
             <div class="row width-60-vh">
-              <div class="col-6">
-                <AddANewCharacterModal
+              <AddANewCharacterModal
                 v-if="AuthorId === usrCurrent"
                 v-bind:IdGame="IdGame"
                 />
-              </div>
-              <div class="col-6">
                 <AddAOriginalCharacterModal            
                 v-if="AuthorId === usrCurrent"
                 v-bind:IdGame="IdGame"
                 />
-              </div>
             </div>
             <div class="row width-60-vh margin-2vh-0-0-0">
               <CarrouselCharacter v-bind:Characters="Characters" />

@@ -1,4 +1,5 @@
 <template>
+  <div class="col-6">
     <!-- Button trigger modal -->
     <button
       type="button"
@@ -8,7 +9,7 @@
     >
       Ajouter un nouvel OC
     </button>
-  
+  </div>
     <!-- Modal -->
     <div
       class="modal fade"
