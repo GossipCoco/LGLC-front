@@ -110,7 +110,7 @@ li.quest-container {
     margin: 0 0.25rem;
 }
 .quest--global-container {
-    flex: 0.1;
+    flex: 0;
 }
 .quest-image-container, .background-image-quest-image-container {
     background-position: 50% 55%;

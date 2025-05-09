@@ -1,9 +1,9 @@
 <template>
-  <div class="display-flex-column width-40-vh">
+  <div class="display-flex-column width-35-vh">
     <div class="card-header">
       <h6 class="width-30-vh">{{ quest.Title }}</h6>
     </div>
-    <div class="card-body card-quest-by-id-container">
+    <div class="card-body card-quest-by-id-container padding-0">
       <div class="display-flex-row flex-one">
         <div
           class="background-image-quest width-15-vh height-32-vh background-size-cover flex-one"
