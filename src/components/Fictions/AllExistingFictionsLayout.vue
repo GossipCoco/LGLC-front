@@ -1,5 +1,5 @@
 <template>
-  <div class="border-none display-flex-column padding-0 overflowY-X-hidden height-100-vh all-fictions-container-global">
+  <div class="all-fictions-container-global border-none display-flex-column padding-0 overflowY-X-hidden height-100-vh">
     <CardHeader :Title="title"/>
     <SummaryFiction :typePage="typePage" />
   </div>

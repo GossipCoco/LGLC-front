@@ -1,10 +1,18 @@
 <template>
-  <div class="height-90-vh">
+  <div class="height-90-vh width-185-vh">
     <div class="row">
       <div class="col-2 col-xl-2 col-xxl-2 col-lg-2 col-md-2 col-sm-12 col xs-12">
+        <div class="card background-color-dark-green-01 margin-2vh-0-0-0 height-80-vh">
+          <div class="card-header">
+            <h3 class="text-white poppins-text">Filtrer</h3>
+          </div>
+          <div class="card-body">
+            <div class="row">
 
-      </div>
-      
+            </div>
+          </div>
+        </div>
+      </div>      
       <div class="col-10 col-xl-10 col-xxl-10 col-lg-10 col-md-10 col-sm-12 col xs-12">
         <Spinner v-if="showspinner" />
         <AllCardsFictions v-else :allFictions="allFictions" />
