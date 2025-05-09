@@ -89,7 +89,7 @@ import EasyAction from "./Components/EasyAction.vue";
 import MusicPlayer from "./Components/MusicPlayer.vue";
 import Video from "./Components/Video.vue";
 import NewArc from "./Components/NewArc.vue";
-import TchatComponent from '../Components/GenericComponent/TchatComponent.vue';
+// import TchatComponent from '../Components/GenericComponent/TchatComponent.vue';
 export default {
   name: "DashboardLayout",
   components: {
@@ -108,7 +108,7 @@ export default {
     MusicPlayer,
     Video,
     NewArc,
-    TchatComponent
+    // TchatComponent
   },
   data() {
     return {
