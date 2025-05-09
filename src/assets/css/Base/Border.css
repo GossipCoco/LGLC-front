@@ -13,6 +13,12 @@
 .border-radius-12px, #original-characters-list .card-header:first-child{
     border-radius: 2vh;
 }
+.nav-link{
+   border-radius: 2vh 2vh 0 0.
+}
+.tab-pane{
+    border-radius: 0 2vh 2vh 2vh;
+}
 .border-radius-100-100-8-8{
     border-radius: 2vh 0 0 2vh;
 } 

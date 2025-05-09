@@ -1,9 +1,9 @@
 <template>
   <div class="col-12">
-    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <ul class="nav nav-pills" id="pills-tab" role="tablist">
       <li class="nav-item" role="presentation">
         <button
-          class="nav-link active"
+          class="nav-link active color-dark-green-01"
           id="pills-home-tab"
           data-bs-toggle="pill"
           data-bs-target="#pills-home"
@@ -17,7 +17,7 @@
       </li>
       <li class="nav-item" role="presentation">
         <button
-          class="nav-link"
+          class="nav-link white-text"
           id="pills-profile-tab"
           data-bs-toggle="pill"
           data-bs-target="#pills-profile"
@@ -31,7 +31,7 @@
       </li>
       <li class="nav-item" role="presentation">
         <button
-          class="nav-link"
+          class="nav-link white-text"
           id="pills-contact-tab"
           data-bs-toggle="pill"
           data-bs-target="#pills-contact"
@@ -45,7 +45,7 @@
       </li>
       <li class="nav-item" role="presentation">
         <button
-          class="nav-link"
+          class="nav-link white-text"
           id="pills-fiction-tab"
           data-bs-toggle="pill"
           data-bs-target="#pills-fiction"
@@ -59,7 +59,7 @@
       </li>
       <li class="nav-item" role="family">
         <button
-          class="nav-link"
+          class="nav-link white-text"
           id="pills-family-tab"
           data-bs-toggle="pill"
           data-bs-target="#pills-family"

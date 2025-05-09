@@ -5,11 +5,11 @@
     margin: 1vh 0 2vh 0;
 }
 /* Menu left */
-.nav-link, .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+/* .nav-link, .nav-pills .show>.nav-link{
     color: rgba(var(--main-white), 1);
-}
+} */
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
-    background-color: rgba(var(--clear-green-01), 1);
+    background-color: rgba(var(--dark-green-01), 1);
 }
 .nav-pills .nav-link.active:hover, .nav-pills .show>.nav-link:hover{
     color: rgba(var(--clear-green-01), 1);
