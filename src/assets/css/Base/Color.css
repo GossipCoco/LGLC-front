@@ -14,6 +14,9 @@
 .background-lineart{
     background: var(--lineart-other00);
 }
+.background-lineart02{
+    background: var(--lineart-other02);
+}
 .background-lineart-other03{    
   background: var(--lineart-other03);
 }

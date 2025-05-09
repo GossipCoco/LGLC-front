@@ -253,19 +253,3 @@
 .icon-menu-container img {
     width: 3.5vh;
 }
-/* % */
-
-.character-l1 img {
-    height: 75%;
-}
-.illustration-background .background-fiction-contain{
-    width: 100%;
-}
-.logo img{
-    width: 55%;
-}
-#pills-tabContent{
-    overflow-y: scroll;
-    background: var(--lineart-other02);
-    border-radius: 12px;
-}
