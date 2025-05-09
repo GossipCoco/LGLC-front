@@ -9,6 +9,7 @@
             :key="character.Id"
           >
             <character-link
+              v-bind:typeCharacter="'ExistedCharacter'"
               v-bind:route="'/characterDetails/'"
               v-bind:ClanImage="character.Clan.Image"
               v-bind:CharacterImage="character.Image"

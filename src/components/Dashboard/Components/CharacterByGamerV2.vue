@@ -10,11 +10,12 @@
       <div class="card-body display-flex-row flex-wrap align-items-content-justify-content" v-if="!showspinner">
         <div class="row width-30-vh">
           <div v-for="(character, index) in gamer" :key="index" class="col">
-            <router-link class="text-white roboto" :to="'/OriginaleCharacterDetails/' + character.CurrentName">
-              <div class="character-illustration-container border-radius-100 height-10-vh width-10-vh background-size-cover"
-                v-bind:style="{ backgroundImage: 'url(' + character.Image + ')', }"></div>
-                {{ character.CurrentName }}
-            </router-link>
+            <character-link
+              v-bind:typeCharacter="'OC'"
+              v-bind:route="'/OriginaleCharacterDetails/'"              
+              v-bind:CharacterImage="character.Image"
+              v-bind:CurrentName="character.CurrentName"
+              />
           </div>
         </div>
       </div>
@@ -23,10 +24,11 @@
 </template>
 <script>
 import TitleHeaderDashboard from "../../Components/SpecificComponent/TitleHeaderDashboard.vue";
+import CharacterLink from "../ComponentGeneric/CharacterLink.vue";
 import Spinner from "../../Components/GenericComponent/Spinner.vue";
 export default {
   name: "CharacterByUser",
-  components: { TitleHeaderDashboard, Spinner},
+  components: { TitleHeaderDashboard, Spinner, CharacterLink},
   props: ["gamer"],  
   data() {
     return {      
