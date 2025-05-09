@@ -46,7 +46,6 @@ export default {
       return result;
     },
     rate(star) {
-      console.log(star)
       const newId = this.generateRandomId(10)
       axios
         .post(Config.Url + "/rating/AddRating/" + this.fictionId, {
