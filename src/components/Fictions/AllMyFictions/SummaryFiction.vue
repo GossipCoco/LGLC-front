@@ -1,28 +1,29 @@
 <template>
-  <div class="card-body height-90-vh">
-    <SearchBarComponent
-      :For="'SearchCharacter'"
-      :label="'Sélectionner un personnage'"
-      :characters="characters"
-      @form-info="getInfo"
-    />
-    <Spinner v-if="showspinner" />
-    <AllCardsFictions v-else :allFictions="allFictions" />
-    <div class="row pagination-container">
-      <Pagination
-        v-if="!showspinner"
-        :nav="nav"
-        :filters="filters"
-        :getDatas="'FictionPagination'"
-        @FictionPagination="FictionPagination"
-      />
+  <div class="height-90-vh">
+    <div class="row">
+      <div class="col-2 col-xl-2 col-xxl-2 col-lg-2 col-md-2 col-sm-12 col xs-12">
+
+      </div>
+      
+      <div class="col-10 col-xl-10 col-xxl-10 col-lg-10 col-md-10 col-sm-12 col xs-12">
+        <Spinner v-if="showspinner" />
+        <AllCardsFictions v-else :allFictions="allFictions" />
+        <div class="row pagination-container">
+          <Pagination
+            v-if="!showspinner"
+            :nav="nav"
+            :filters="filters"
+            :getDatas="'FictionPagination'"
+            @FictionPagination="FictionPagination"
+          />
+        </div>
+      </div>
     </div>
   </div>
 </template>
 <script>
 import CharacterService from "../../../services/CharacterService";
 import GameService from "../../../services/GameService";
-import SearchBarComponent from "../Components/SearchBarComponent.vue";
 import Pagination from "../../Components/GenericComponent/Pagination.vue";
 import FictionService from "../../../services/FictionService";
 import AllCardsFictions from "./AllCardsFictions.vue";
@@ -30,7 +31,7 @@ import Spinner from "../../Components/GenericComponent/Spinner.vue";
 export default {
   name: "SummaryFiction",
   props: ["typePage"],
-  components: { AllCardsFictions, SearchBarComponent, Pagination, Spinner },
+  components: { AllCardsFictions, Pagination, Spinner },
   data() {
     return {
       userCurrent: this.$store.state.auth.user.usrID,
@@ -58,13 +59,13 @@ export default {
       if (width >= 4400) {
         return 20; // Très grands écrans
       } else if (width >= 1920) {
-        return 16; // Grand écran standard
+        return 12; // Grand écran standard
       } else if (width >= 1600) {
-        return 16; // Écran intermédiaire        
+        return 12; // Écran intermédiaire        
       }else if (width >= 1400) {
-        return 12; // Écran intermédiaire
+        return 10; // Écran intermédiaire
       } else if (width >= 1366) {
-        return 12; // Portable classique
+        return 10; // Portable classique
       } else {
         return 8; // Tablettes / petits écrans
       }
