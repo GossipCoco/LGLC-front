@@ -7,9 +7,7 @@
             <h3 class="text-white poppins-text">Filtrer</h3>
           </div>
           <div class="card-body">
-            <div class="row">
-
-            </div>
+            <div class="row"></div>
           </div>
         </div>
       </div>      
