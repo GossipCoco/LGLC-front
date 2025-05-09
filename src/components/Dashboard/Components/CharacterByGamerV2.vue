@@ -1,18 +1,13 @@
 <template>
-
-  <div
-    class="col-xxl-3 col-xl-12 col-lg-12 col-md-6 col-sm-12 col-xs-12 card-global all-my-oc-card"
-  >
-    <div
-      class="card height-60-vh border-none display-flex-column profil-card fiction-card background-lineart my-oc-card"
-    >
+  <div class="col-xxl-3 col-xl-12 col-lg-12 col-md-6 col-sm-12 col-xs-12 card-global all-my-oc-card">
+    <div class="card height-60-vh border-none display-flex-column profil-card fiction-card background-lineart my-oc-card">
       <TitleHeaderDashboard
         v-bind:title="'Mes OC\'s'"
         v-bind:route="'OriginaleCharacterByUser'"
         v-bind:type="'Lastfictions'"
       />
       <Spinner v-if="showspinner" />
-      <div class="card-body display-flex-row flex-wrap align-items-content-justify-content" v-if="!showspinner">        
+      <div class="card-body display-flex-row flex-wrap align-items-content-justify-content" v-if="!showspinner">
           <div v-for="(character, index) in gamer" :key="index" class="row">
             <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-6 col-sm-12 col-xs-12">
               <div class="display-flex-column my-oc-character-containe align-items-content-justify-content">
