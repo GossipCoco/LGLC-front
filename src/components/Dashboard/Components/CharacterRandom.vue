@@ -5,28 +5,15 @@
       <TitleHeaderDashboard v-bind:title="'Personnages aléatoires'" v-bind:type="'myCharacters'"/>
       <div class="card-body display-flex-row align-items-content-justify-content">
          <div class="display-flex-row align-items-content-justify-content height-15-vh margin-0-2vh-0-0" 
-              v-for="character in randomCharacters"
-              :key="character.Id"
-            >
+            v-for="character in randomCharacters"
+            :key="character.Id"
+          >
             <character-link
               v-bind:route="'/characterDetails/'"
               v-bind:ClanImage="character.Clan.Image"
               v-bind:CharacterImage="character.Image"
               v-bind:CurrentName="character.CurrentName"
               />
-              <!-- <router-link :to="'/characterDetails/' + character.CurrentName" class="display-flex-column">
-                <div
-                  class="rond-character-background border-radius-100 background-size-cover display-flex-row align-items-content-justify-content"
-                  v-bind:style="{
-                    backgroundImage: 'url(' + character.Clan.Image + ')',
-                  }"
-                >
-                  <div class="display-flex-column">
-                    <img class="height-auto width-15-vh" loading="lazy" :src="character.Image" :alt="character.Image"/>                  
-                    <p class="text-white poppins-text">{{ character.CurrentName }}</p>
-                  </div>
-                </div>
-              </router-link> -->
             </div>
           </div>
        </div>
