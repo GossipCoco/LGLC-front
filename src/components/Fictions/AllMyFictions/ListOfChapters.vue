@@ -78,7 +78,6 @@ import EditSummary from "../FictionsForm/EditSummary.vue";
 import AddANewCharacterModal from "../Components/AddANewCharacterModal.vue";
 import AddAOriginalCharacterModal from "../Components/AddANewCharacterModal.vue";
 import CarrouselCharacter from "../Components/CarrouselCharacter.vue";
-// import UploadImage from "../../Components/GenericComponent/UploadImage.vue";
 import ListAllChapters from "../Components/ListAllChapters.vue";
 import CreateChapterButton from '../Components/CreateChapterButton.vue';
 import IllustrationSummaryCol from '../Components/IllustrationSummaryCol.vue';
