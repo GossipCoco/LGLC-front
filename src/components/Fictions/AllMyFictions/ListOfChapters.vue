@@ -75,8 +75,8 @@
 
 <script>
 import EditSummary from "../FictionsForm/EditSummary.vue";
-import AddANewCharacterModal from "./AddANewCharacterModal.vue";
-import AddAOriginalCharacterModal from "./AddAOriginalCharacterModal.vue";
+import AddANewCharacterModal from "../Components/AddANewCharacterModal.vue";
+import AddAOriginalCharacterModal from "../Components/AddANewCharacterModal.vue";
 import CarrouselCharacter from "./CarrouselCharacter.vue";
 // import UploadImage from "../../Components/GenericComponent/UploadImage.vue";
 import ListAllChapters from "../Components/ListAllChapters.vue";
