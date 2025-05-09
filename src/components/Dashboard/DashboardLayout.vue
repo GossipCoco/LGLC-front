@@ -64,7 +64,7 @@
           <music-player />
         </div>        
         <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
-          <tchat-component />
+          <!-- <tchat-component /> -->
         </div>
       </div>
   </div>
