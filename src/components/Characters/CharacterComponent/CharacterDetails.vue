@@ -1,5 +1,5 @@
 <template>
-  <div id="existing-character" class="character-details width-190-vh height-95-vh padding-2-vh background-color-main-lineart card mb-3">
+  <div id="existing-character" class="character-details width-190-vh height-95-vh background-none border-none padding-2-vh card mb-3">
     <div class="row g-0">
       <CharacterImageDetail v-bind:Image="background">
         <img
