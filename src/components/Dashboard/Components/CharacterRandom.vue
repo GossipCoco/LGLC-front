@@ -8,7 +8,13 @@
               v-for="character in randomCharacters"
               :key="character.Id"
             >
-              <router-link :to="'/characterDetails/' + character.CurrentName" class="display-flex-column">
+            <character-link
+              v-bind:route="'/characterDetails/'"
+              v-bind:ClanImage="character.Clan.Image"
+              v-bind:CharacterImage="character.Image"
+              v-bind:CurrentName="character.CurrentName"
+              />
+              <!-- <router-link :to="'/characterDetails/' + character.CurrentName" class="display-flex-column">
                 <div
                   class="rond-character-background border-radius-100 background-size-cover display-flex-row align-items-content-justify-content"
                   v-bind:style="{
@@ -20,7 +26,7 @@
                     <p class="text-white poppins-text">{{ character.CurrentName }}</p>
                   </div>
                 </div>
-              </router-link>
+              </router-link> -->
             </div>
           </div>
        </div>
@@ -29,9 +35,10 @@
 </template>
 <script>
 import TitleHeaderDashboard from "../../Components/SpecificComponent/TitleHeaderDashboard.vue";
+import CharacterLink from "../ComponentGeneric/CharacterLink.vue";
 export default {
   name: "CharacterRandom",
-  components: { TitleHeaderDashboard },
+  components: { TitleHeaderDashboard, CharacterLink },
   props: ["randomCharacters"],
 };
 </script>
