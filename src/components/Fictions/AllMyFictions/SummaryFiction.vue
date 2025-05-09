@@ -10,11 +10,11 @@
             <div class="row"></div>
           </div>
         </div>
-      </div>      
-      <div class="col-10 col-xl-10 col-xxl-10 col-lg-10 col-md-10 col-sm-12 col xs-12">
-        <Spinner v-if="showspinner" />
-        <AllCardsFictions v-else :allFictions="allFictions" />
-        <div class="row pagination-container margin-2vh">
+      </div>
+      <div class="col-10 col-xl-10 col-xxl-10 col-lg-10 col-md-10 col-sm-12 col xs-12">      
+        <AllCardsFictions :allFictions="allFictions" />        
+      </div>
+      <div class="row pagination-container margin-2vh">
           <Pagination
             v-if="!showspinner"
             :nav="nav"
@@ -23,7 +23,6 @@
             @FictionPagination="FictionPagination"
           />
         </div>
-      </div>
     </div>
   </div>
 </template>
@@ -33,11 +32,11 @@ import GameService from "../../../services/GameService";
 import Pagination from "../../Components/GenericComponent/Pagination.vue";
 import FictionService from "../../../services/FictionService";
 import AllCardsFictions from "./AllCardsFictions.vue";
-import Spinner from "../../Components/GenericComponent/Spinner.vue";
+
 export default {
   name: "SummaryFiction",
   props: ["typePage"],
-  components: { AllCardsFictions, Pagination, Spinner },
+  components: { AllCardsFictions, Pagination },
   data() {
     return {
       userCurrent: this.$store.state.auth.user.usrID,
