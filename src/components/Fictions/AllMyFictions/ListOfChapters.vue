@@ -1,10 +1,8 @@
 <template>
   <div class="opacity-container height-80 display-flex-row">
     <div class="summary-container width-200-vh height-870-vh overflow-hidden">
-      <div class="row top-fiction height-5-vh" v-if="AuthorId === usrCurrent">        
-        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
-          <EditSummary v-bind:FictionId="IdFiction" v-bind:Summary="Summary" v-if="AuthorId === usrCurrent"/>         
-        </div>
+      <div class="row top-fiction height-5-vh" v-if="AuthorId === usrCurrent">
+        <EditSummary v-bind:FictionId="IdFiction" v-bind:Summary="Summary" v-if="AuthorId === usrCurrent"/>         
         <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
         <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3 btn-create-chapter-container">
           <create-chapter-button v-if="AuthorId === usrCurrent" v-bind:="lastChap" v-bind:IdFiction="IdFiction"/>

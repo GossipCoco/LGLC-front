@@ -1,5 +1,5 @@
-<template>
-  
+<template>  
+  <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
     <button
       type="button"
       class="btn btn-primary edit-summary-btn"
@@ -8,7 +8,7 @@
     >
       Editer le résumé
     </button>
-
+  </div>
   <!-- Modal -->
   <div
     class="modal fade"

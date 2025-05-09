@@ -39,7 +39,7 @@
     </div>
 </template>
 <script>
-import Rating from "./Rating.vue";
+import Rating from '../Components/Rating'
 import TitleFiction from "./TitleFiction.vue";
 
 import CreateCommentModal from "../Comments/CreateCommentModal.vue";
