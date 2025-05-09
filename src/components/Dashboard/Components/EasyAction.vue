@@ -6,22 +6,33 @@
         />    
       <div class="card-body  height-25-vh easy-action-container">
         <div class="display-flex-column flex-one">
-        <router-link to="/CreateAnOriginalCharacter" type="button" class="btn btn-primary margin-2vh-0-0-0 poppins-text">
-          Créer un nouveau personnage
-        </router-link>
-        <router-link type="button" class="btn btn-primary margin-2vh-0-0-0 poppins-text" to="/createANewFiction">
-          Créer une nouvelle fiction
-        </router-link>
-      </div>
+          <div v-for="(button, index) in buttons" :key="index">
+            <router-link :to="button.route" type="button" class="btn btn-primary margin-2vh-0-0-0 poppins-text width-40-vh">
+              {{ button.title }}
+            </router-link>
+          </div>
+        </div>
       </div>
     </div>
 </template>
 <script>
-
 import TitleHeaderDashboard from '../../Components/SpecificComponent/TitleHeaderDashboard.vue';
 export default {
   name: 'EasyAction',
-    components:{TitleHeaderDashboard}
-  
+  components:{TitleHeaderDashboard},
+  data(){
+    return{
+      buttons: [
+        {
+          route: '/CreateAnOriginalCharacter',
+          title: 'Créer un nouveau personnage'
+        },
+        {
+          route: '/createANewFiction',
+          title: 'Créer une nouvelle fiction'
+        }
+      ]
+    }
+  }  
 }
 </script>
