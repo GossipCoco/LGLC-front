@@ -73,8 +73,8 @@
 <script>
 import FictionService from '../../../services/FictionService'
 // import CreateCommentModal from '../Comments/CreateCommentModal.vue';
-import ChapterImage from './ChapterImage.vue'
-import ChapterText from './ChapterText.vue';
+import ChapterImage from '../Chapters/ChapterImage.vue'
+import ChapterText from './Chapters/ChapterText.vue';
 export default {
     name: 'ChapterLayout',
     components: {ChapterImage, ChapterText},
