@@ -1,7 +1,7 @@
 <template>
-  <div class="row row-cols-md-4 g-4 maTB-4vh-2vh height-80-vh width-180-vh">
+  <div class="row row-cols-md-4 maTB-4vh-2vh height-80-vh width-180-vh">
     <div class="col" v-for="(fiction, index) in allFictions" :key="index">
-      <div class="card fiction-summary-card border-radius-12px padding-0-1-vh-0-1vh clear-green-bacground height-15-vh">
+      <div class="card fiction-summary-card height-15-vh width-40-vh border-radius-12px padding-0-1-vh-0-1vh clear-green-bacground height-15-vh">
         <div class="row">
           <div
             class="col-2 col-xl-2 col-xxl-4 col-lg-12 col-md-12 col-sm-12 col xs-12 image-fiction-container border-radius-12px border-radius-2vh-0-0-2vh height-15-vh width-10-vh background-size-cover"
@@ -11,7 +11,7 @@
           ></div>
           <div class="col-10 col-xl-10 col-xxl-8 col-lg-12 col-md-12 col-sm-12 col xs-12">
             <div
-              class="h5-container width-30-vh margin-0-rem display-flex-column align-items-content-justify-content"
+              class="h5-container width-30-vh margin--0-0--2 display-flex-column align-items-content-justify-content"
             >
               <div class="display-flex-column text-dark-green montesserat">
                 <div class="display-flex-row title-container-card width-25-vh display-block align-items-content-justify-content">
@@ -36,7 +36,7 @@
             </div>
             <div
               class="card-text width-30-vh text-align-justify poppins-text summary-text-font font-size-0-75 display-none-responsive padding-1-vh"
-              v-html="truncateText(fiction.Summary, 65)"
+              v-html="truncateText(fiction.Summary, 45)"
             ></div>
           </div>
         </div>

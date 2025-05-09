@@ -27,6 +27,8 @@
 .all-fictions-container-global .row-cols-md-4>* {
     flex: 1;
     width: 22%;
+    height: 16vh;
+    margin: 0 0 -5vh 0;
 }
 /* CARD */
 .card.clan-detail-layout{

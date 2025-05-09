@@ -45,9 +45,7 @@
 .row.top-dashboard .all-my-oc-card .card-body > div{
     width: 22vh;
 }
-.fiction-summary-card{
-    width: 44vh;
-}
+
 .rating {
     width: 16vh;
 }
@@ -93,9 +91,7 @@
 .image-fiction-container-background{
     height: 17vh;
 }
-.fiction-summary-card{
-    height: 17vh;
-}
+
 .game-container img{
     width: 6vh;
 }
@@ -183,7 +179,7 @@
 /* Fiction */
 .image-fiction-container {
     width: 10vh;
-    height: 17vh;
+    height: 15vh;
 }
 .image-fiction-container.all-illustrations-fiction-container{
     height: 30vh;
