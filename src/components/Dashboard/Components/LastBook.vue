@@ -7,7 +7,7 @@
         v-bind:type="'chapters'"
       />
       <div class="card-body last-chapter-card text-white height-30-vh">
-        <h2 class="text-white align-items-content-justify-content">
+        <h2 class="align-items-content-justify-content">
           <router-link
             class="color-clear-green-01 poppins-text"
             :to="'/BookByTitle/' + lastBook.Title"

@@ -1,27 +1,23 @@
 <template>
   <div class="row top-left-dashboard">
-    <div
-      class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 card-global"
-    >
-      <div
-        class="card background-lineart border-none arc-card last-arc-container height-50-vh margin-0-0-0-1vh"
-      >
+    <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 card-global">
+      <div class="card background-lineart border-none arc-card last-arc-container height-40-vh margin-0-0-0-1vh">
         <TitleHeaderDashboard
           v-bind:title="'Dernier arc en cours'"
           v-bind:type="'chapters'"
         />
-        <div class="card-body new-current-arc-container padding-2-vh text-white">
-            <div v-if="currentArc" class="text-align-center">
-                <h2 class="text-align-center">
-                  <router-link :to="'/OneArc/'+currentArc.Id" class="poppins-text color-clear-green-01">
-                    {{ currentArc.Title }}
-                  </router-link>                  
-                </h2>
-                <div class="display-flex-row height-30-vh overflowY-scroll">
-                  <img :src="currentArc.Image" width="20%" class="border-radius-12px"/>
-                  <div v-html="currentArc.Summary" class="poppins-text padding-1-vh text-align-center"></div>
-              </div>
-            </div>
+        <div class="card-body new-current-arc-container padding-2-vh text-white height-30-vh">
+          <h2 class="align-items-content-justify-content">
+            <router-link            
+            class="poppins-text color-clear-green-01"
+            :to="'/OneArc/'+ Id">
+                  {{ Title }}
+             </router-link>
+          </h2>
+          <div class="summary-book-dashboard display-flex-row align-items-content-justify-content width-70-vh margin--0-0--4">
+            <img :src="Image" width="20%" class="border-radius-12px"/>
+            <div v-html="Summary" class="text-white text-align-justify overflowY-scroll summmary-book-height-dashboard poppins-text text-white padding-1-vh"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -36,12 +32,20 @@ export default {
   data() {
     return {
         currentArc: null,
+        Id: null,
+        Image: null,
+        Title: null,
+        Summary: null
     };
   },
   mounted() {
     ArcBookService.GetCurrentArc()
-      .then(response => {
+      .then(response => {        
         this.currentArc = response.data.ob;
+        this.Id = this.currentArc.Id
+        this.Image = this.currentArc.Image
+        this.Title = this.currentArc.Title
+        this.Summary = this.currentArc.Summary
       })
       .catch(err => {
         console.error("Erreur lors de la récupération de l'arc :", err);
