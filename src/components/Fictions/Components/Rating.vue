@@ -57,7 +57,10 @@ export default {
           DateRated: new Date(),
         })
         .then((response) => {
-          this.currentRating = response.data.averageRating;
+          this.currentRating = response.data.res;
+          if(this.currentRating === true){
+            location.reload()
+          }
         })
         .catch((error) => {
           console.error("Erreur lors de l'envoi de la note:", error);
