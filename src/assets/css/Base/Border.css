@@ -13,6 +13,9 @@
 .border-radius-12px, #original-characters-list .card-header:first-child{
     border-radius: 2vh;
 }
+.nav-pills .nav-link,.border-radius-none{
+    border-radius:0px ;
+}
 .nav-link{
    border-radius: 2vh 2vh 0 0.
 }
@@ -162,15 +165,10 @@
     border: 1px solid rgbargba(var(--main-black), 0.2);    
     box-sizing: border-box;
 }
-
 .avatar-gamer{
     border: rgba(var(--clear-green-02), 1) 5px solid;
 }
-
 /* Accueil */
-
-
-
   .form-signin input[type="email"] {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
@@ -179,4 +177,8 @@
 .form-signin input[type="password"] {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+}
+/* TabPanel */
+#pills-home-tab{
+    border-radius: 4vh 0 0 0;
 }

@@ -3,7 +3,7 @@
     <ul class="nav nav-pills" id="pills-tab" role="tablist">
       <li class="nav-item" role="presentation">
         <button
-          class="nav-link active color-dark-green-01"
+          class="nav-link active color-clear-green-01"
           id="pills-home-tab"
           data-bs-toggle="pill"
           data-bs-target="#pills-home"
@@ -17,7 +17,7 @@
       </li>
       <li class="nav-item" role="presentation">
         <button
-          class="nav-link white-text"
+          class="nav-link white-text background-color-dark-green-01 border-radius-none"
           id="pills-profile-tab"
           data-bs-toggle="pill"
           data-bs-target="#pills-profile"
@@ -31,7 +31,7 @@
       </li>
       <li class="nav-item" role="presentation">
         <button
-          class="nav-link white-text"
+          class="nav-link white-text background-color-dark-green-01 border-radius-none"
           id="pills-contact-tab"
           data-bs-toggle="pill"
           data-bs-target="#pills-contact"
@@ -45,7 +45,7 @@
       </li>
       <li class="nav-item" role="presentation">
         <button
-          class="nav-link white-text"
+          class="nav-link background-color-dark-green-01 white-text border-radius-none"
           id="pills-fiction-tab"
           data-bs-toggle="pill"
           data-bs-target="#pills-fiction"
@@ -59,7 +59,7 @@
       </li>
       <li class="nav-item" role="family">
         <button
-          class="nav-link white-text"
+          class="nav-link  background-color-dark-green-01 white-text"
           id="pills-family-tab"
           data-bs-toggle="pill"
           data-bs-target="#pills-family"
