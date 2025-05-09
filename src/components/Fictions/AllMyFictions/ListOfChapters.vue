@@ -59,12 +59,8 @@
               </div>
             </div>
             <div class="row width-60-vh margin-2vh-0-0-0">
-              <div class="col-6">
-                <CarrouselCharacter v-bind:Characters="Characters" />
-              </div>
-              <div class="col-6">
-                <CarrouselCharacter v-bind:Characters="OCCharacters" />
-              </div>
+              <CarrouselCharacter v-bind:Characters="Characters" />
+              <CarrouselCharacter v-bind:Characters="OCCharacters" />
             </div>
           </div>
         </div>
