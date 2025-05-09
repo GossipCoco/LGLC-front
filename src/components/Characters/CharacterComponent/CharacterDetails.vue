@@ -12,23 +12,23 @@
         <div class="card border-none height-95-vh background-color-main-lineart details-infos-characters border-radius-12px poppins-text text-white">
         <div class="card-body">
           <div class="row display-flex-row">
-            <div class="col-6">
+            <div class="col-9">
               <h1 class="card-title cinzel">{{ currentName }}</h1>
-            </div>
-            <div class="col-3">
-              <router-link type="button" class="btn btn-primary" :to="'/EditAnOriginalCharacter/'+ currentName">Editer le personnage</router-link>
-            </div>
-            <div class="col-3">
+            </div>            
+            <div class="col-3 display-flex-column">
               <router-link
                 to="/allCharacters"
                 type="button"
-                class="btn btn-primary text-align-justify poppins-text text-white file-character-btn"
+                class="btn btn-primary text-align-justify poppins-text text-white file-character-btn margin-0-0-2vh-0"
               >
                 Tous les personnages
-              </router-link>                
+              </router-link>  
+              <router-link type="button" class="btn btn-primary" :to="'/EditAnOriginalCharacter/'+ currentName">
+                Editer le personnage
+              </router-link>              
             </div>
           </div>
-          <div class="row margin--3vh-0-0-0">
+          <div class="row margin-3vh-0-0-0">
             <div class="col-12">
               <div class="information-global-character">
                 <div class="display-flex-row character-info-general-container">
