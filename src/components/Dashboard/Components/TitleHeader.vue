@@ -31,7 +31,6 @@ export default {
         CountUnreadMessages(id){
             UserService.CountUnreadMessages(id)
             .then((response) => {
-                console.log(response)
                 this.NbUnreadMessage = response.data.ob
             })
             .catch((error) => {
