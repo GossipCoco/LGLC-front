@@ -94,7 +94,11 @@ h5.card-title {
   color: rgba(var(--main-white), 1);
 }
 .quest-button-text p.quest-description{
-  text-align: left;
+    text-align: justify;
+    text-wrap: auto;
+    padding: 1vh;
+    word-wrap: break-word;
+    word-break: break-word;
 }
 .text-small {
   font-size: 85%;
