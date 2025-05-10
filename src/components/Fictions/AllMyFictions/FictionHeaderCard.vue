@@ -40,7 +40,7 @@
 </template>
 <script>
 import Rating from '../Components/Rating'
-import TitleFiction from "./TitleFiction.vue";
+import TitleFiction from "../Components/TitleFiction.vue";
 
 import CreateCommentModal from "../Comments/CreateCommentModal.vue";
 

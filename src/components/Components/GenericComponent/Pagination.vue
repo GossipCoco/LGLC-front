@@ -246,8 +246,8 @@
         </div>
         <div class="col-md-4 col-sm-4 col-xl-4 col-xxl-4 col-xs-4 col-lg-4">
           <div class="number-page-container height-5-vh roboto background-color-dark-green-01 align-items-content-justify-content display-flex-row">
-            <p v-if="!nav.current" class="padding-2-vh-0 white-text">Page : 1</p>
-            <p v-else class="padding-2-vh-0 white-text">Page : {{ nav.current + 1 }}</p>
+            <p v-if="!nav.current" class="white-text">Page : 1</p>
+            <p v-else class="white-text">Page : {{ nav.current + 1 }}</p>
           </div>
         </div>
       </div>
