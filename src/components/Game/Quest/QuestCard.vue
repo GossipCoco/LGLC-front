@@ -21,7 +21,7 @@
               Difficulté : {{ quest.DifficultyLevel }}
             </p>
              <p
-              class="display-flex-column quest-description height-30-vh width-20-vh
+              class="display-flex-column quest-description height-40-vh width-20-vh
               font-weight-400 color-dark-green-01 display-none-responsive poppins-text"
             >
               {{ quest.Description }}

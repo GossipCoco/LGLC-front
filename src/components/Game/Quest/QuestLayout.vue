@@ -1,5 +1,5 @@
 <template>
-  <div class="margin-2vh-0 border-none background-none flex-one card padding-0 one-quest-container height-32-vh align-items-content-justify-content padding-zero">
+  <div class=" border-none background-none flex-one card padding-0 one-quest-container height-32-vh align-items-content-justify-content padding-zero">
     <CardHeader class="width-190-vh" v-bind:Title="'Liste des quêtes à réaliser'" />
     <div class="card-body height-90-vh">
       <Spinner v-if="showspinner" />
