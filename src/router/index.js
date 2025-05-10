@@ -29,10 +29,10 @@ import MapForest from '../components/Locations/MapForest.vue'
 
 import AllExistingFictionsLayout from '../components/Fictions/AllExistingFictionsLayout.vue'
 import FictionContain from '../components/Fictions/AllMyFictions/FictionContain'
-import ChapterLayout from '../components/Fictions/AllMyFictions/ChapterLayout.vue'
+import ChapterLayout from '../components/Fictions/Chapters/ChapterLayout.vue'
 import CreateFiction from '../components/Fictions/FictionsForm/CreateFiction.vue'
 import AllMyFictionsLayout from '../components/Fictions/AllMyFictions/AllFictionsLayout.vue'
-import CreateChapter from '../components/Fictions/AllMyFictions/CreateChapter.vue'
+import CreateChapter from '../components/Fictions/Chapters/CreateChapter.vue'
 import EditChapter from '../components/Fictions/FictionsForm/EditChapter.vue'
 import CommentLayout from "../components/Fictions/Comments/CommentLayout.vue";
 

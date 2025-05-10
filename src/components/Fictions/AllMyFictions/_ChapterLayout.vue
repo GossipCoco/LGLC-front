@@ -6,14 +6,7 @@
                     {{ chapter.Title }}
                 </h1>
             </div>
-            <!-- <CreateCommentModal
-                v-bind:fanfiction="TitleFiction"
-                v-bind:fictionId="FictionId"
-                v-bind:chapterId="chapterId"
-                v-bind:chapterTitle="chapter.Title"
-            /> -->
             <div class="back-to-fiction-btn-container">
-
                 <router-link :to="'/fiction/' + TitleFiction" class="btn btn-primary">
                     Retour à la liste de chapitres
                 </router-link>
