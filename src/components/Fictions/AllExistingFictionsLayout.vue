@@ -1,6 +1,10 @@
 <template>
   <div class="border-none background-none flex-one card display-flex-column width-190-vh overflowY-X-hidden height-100-vh all-fictions-container-global">
-    <CardHeader :Title="title" />
+    <CardHeader :Title="title">
+      <router-link to="/createANewFiction" type="button" class="btn btn-primary margin-2vh-0-0-0 poppins-text width-40-vh">
+        Créer une nouvelle fiction
+      </router-link>
+    </CardHeader>
     <SummaryFiction :typePage="typePage" />
   </div>
 </template>

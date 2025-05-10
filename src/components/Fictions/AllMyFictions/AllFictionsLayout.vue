@@ -1,8 +1,12 @@
 
 <template>
   <div class="border-none background-none flex-one card display-flex-column width-190-vh overflowY-X-hidden height-100-vh all-fictions-container-global">
-    <CardHeader v-bind:Title="'Lire toutes mes fictions'" />
-    <div class="card-body height-80-vh">
+    <CardHeader v-bind:Title="'Lire toutes mes fictions'">
+      <router-link to="/createANewFiction" type="button" class="btn btn-primary margin-2vh-0-0-0 poppins-text width-40-vh">
+        Créer une nouvelle fiction
+      </router-link>
+    </CardHeader>
+    <div class="card-body height-80-vh margin--3-0-0-0">
       <div class="row">
          <div class="col-2 col-xl-2 col-xxl-2 col-lg-2 col-md-2 col-sm-12 col xs-12">
           <div class="card background-color-dark-green-01 margin-2vh-0-0-0 height-80-vh">
