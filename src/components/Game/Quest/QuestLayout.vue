@@ -1,16 +1,16 @@
 <template>
-  <div class="margin-2vh-0 border-none background-color-main-lineart flex-one card padding-0 one-quest-container height-32-vh align-items-content-justify-content padding-zero">
+  <div class="margin-2vh-0 border-none background-none flex-one card padding-0 one-quest-container height-32-vh align-items-content-justify-content padding-zero">
     <CardHeader class="width-190-vh" v-bind:Title="'Liste des quêtes à réaliser'" />
     <div class="card-body height-90-vh">
       <Spinner v-if="showspinner" />
       <div v-if="!showspinner" class="row list-quest-card-container width-190-vh height-70-vh">
         <div
-          class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 display-flex-row flex-wrap quest--global-container flex-wrap height-35-vh"
+          class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 display-flex-row flex-wrap quest--global-container flex-wrap height-40-vh margin-0-0-2vh-0"
           v-for="(quest, index) in allQuests"
           :key="index"
         >
           <div
-            class="card border-none display-flex-column quest-container height-32-vh flex-wrap mb-4 background-color-main-lineart"
+            class="card border-none display-flex-column quest-container height-40-vh flex-wrap mb-4 background-color-clear-green-01"
             v-for="(image, index) in quest.QuestImages"
             :key="index"
           >
@@ -97,6 +97,7 @@ export default {
       try {
         const response = await QuestService.GetAllQuests(nav);
         this.allQuests = response.data.ob;
+        console.log(this.allQuests)
         functions.CalcPagination(this.nbQuests, this.nav);
       } catch (e) {
         console.log(e);

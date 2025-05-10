@@ -90,9 +90,6 @@ h5.card-title {
 .summary-title-text span.text-white p{
   text-align: justify;
 }
-.quest-container .card-header h6{
-  color: rgba(var(--main-white), 1);
-}
 .quest-button-text p.quest-description{
     text-align: justify;
     text-wrap: auto;
