@@ -10,7 +10,7 @@
           :key="index"
         >
           <div
-            class="card border-none display-flex-column quest-container height-40-vh flex-wrap mb-4 background-color-clear-green-01"
+            class="card border-none display-flex-column quest-container height-40-vh flex-wrap mb-4 background-lineart-other03"
             v-for="(image, index) in quest.QuestImages"
             :key="index"
           >

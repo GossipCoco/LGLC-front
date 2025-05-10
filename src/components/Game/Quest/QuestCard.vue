@@ -1,7 +1,7 @@
 <template>
   <div class="display-flex-column width-35-vh">
     <div class="card-header">
-      <h6 class="width-30-vh color-dark-green-01">{{ quest.Title }}</h6>
+      <h6 class="width-30-vh white-text">{{ quest.Title }}</h6>
     </div>
     <div class="card-body card-quest-by-id-container padding-0">
       <div class="display-flex-row flex-one">
@@ -16,13 +16,13 @@
           >
             <p
               class="display-flex-column quest-description height-5-vh width-20-vh
-              font-weight-400 color-dark-green-01 display-none-responsive poppins-text"
+              font-weight-400 white-text display-none-responsive poppins-text"
             >
               Difficulté : {{ quest.DifficultyLevel }}
             </p>
              <p
               class="display-flex-column quest-description height-40-vh width-20-vh
-              font-weight-400 color-dark-green-01 display-none-responsive poppins-text"
+              font-weight-400 white-text display-none-responsive poppins-text"
             >
               {{ quest.Description }}
             </p>
