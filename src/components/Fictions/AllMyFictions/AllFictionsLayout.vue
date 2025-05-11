@@ -1,29 +1,23 @@
 
 <template>
-  <div class="border-none background-none flex-one card display-flex-column width-190-vh overflowY-X-hidden height-100-vh all-fictions-container-global">
-    <CardHeader v-bind:Title="'Lire toutes mes fictions'">
-      <router-link to="/createANewFiction" type="button" class="btn btn-primary margin-2vh-0-0-0 poppins-text width-40-vh">
-        Créer une nouvelle fiction
-      </router-link>
-    </CardHeader>
-    <div class="card-body height-80-vh margin--3-0-0-0">
-      <div class="row">
-         <div class="col-2 col-xl-2 col-xxl-2 col-lg-2 col-md-2 col-sm-12 col xs-12">
-          <div class="card background-color-dark-green-01 margin-2vh-0-0-0 height-80-vh">
-            <div class="card-header">
-              <h3 class="text-white poppins-text">Filtrer</h3>
-            </div>
-            <div class="card-body height-85-vh">
-              <div class="row"></div>
-            </div>
+  <div class="card-body height-80-vh margin--3-0-0-0">
+    <div class="row">
+        <div class="col-2 col-xl-2 col-xxl-2 col-lg-2 col-md-2 col-sm-12 col xs-12">
+        <div class="card background-color-dark-green-01 margin-2vh-0-0-0 height-80-vh">
+          <div class="card-header">
+            <h3 class="text-white poppins-text">Filtrer</h3>
           </div>
-        </div> 
-        <div class="col-10 col-xl-10 col-xxl-10 col-lg-10 col-md-10 col-sm-12 col xs-12">
-          <Spinner v-if="showspinner" />
-          <AllCardsFictions v-else :allFictions="allFictions" />
-        </div>        
-      </div>
-      <div class="row pagination-container">
+          <div class="card-body height-85-vh">
+            <div class="row"></div>
+          </div>
+        </div>
+      </div> 
+      <div class="col-10 col-xl-10 col-xxl-10 col-lg-10 col-md-10 col-sm-12 col xs-12">
+        <Spinner v-if="showspinner" />
+        <AllCardsFictions v-else :allFictions="allFictions" />
+      </div>        
+    </div>
+    <div class="row pagination-container">
       <Pagination
         v-if="!showspinner"
         :nav="nav"
@@ -32,13 +26,11 @@
         @FictionPagination="FictionPagination"
       />
     </div>
-    </div>
   </div>
 </template>
 <script>
 import CharacterService from "../../../services/CharacterService";
 import FictionService from "../../../services/FictionService";
-import CardHeader from "../../Components/GenericComponent/CardHeader.vue";
 import Pagination from "../../Components/GenericComponent/Pagination.vue";
 import AllCardsFictions from "./AllCardsFictions.vue";
 import Spinner from "../../Components/GenericComponent/Spinner.vue";
@@ -48,7 +40,6 @@ export default {
   components: {
     Pagination,
     AllCardsFictions,
-    CardHeader,
     Spinner,
   },
   data() {
