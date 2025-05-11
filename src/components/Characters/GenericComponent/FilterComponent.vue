@@ -18,7 +18,7 @@
             :options="clans"
             :optionKey="'Id'"
             :optionLabel="'Name'"
-            @onSelectClan="onSelectClan"
+            @selectChange="onSelectClan"
           />
         </div>
       </div>
@@ -69,11 +69,10 @@ export default {
             }
         },
         getCurrentName(e) {
-            console.log(e)
              this.$emit('getCurrentName', e);
         },
         onSelectClan(e){
-            console.log(e)
+            this.$emit('onSelectClan', e);
         }
     }
 };

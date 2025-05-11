@@ -15,31 +15,6 @@
               @getCurrentName="getCurrentName"
               @onSelectClan="onSelectClan"
             />
-            <!-- <div class="card background-color-dark-green-01 margin-2vh-0-0-0 height-80-vh">
-              <div class="card-header">
-                <h3 class="text-white poppins-text">Filtrer</h3>
-              </div>
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <input-component
-                      v-bind:forId="'inputName'"
-                      v-bind:label="'Nom du personnage'"
-                      v-bind:getNameData="'getCurrentName'"
-                      @getCurrentName="getCurrentName"
-                    />
-                    <select-component
-                      :label="'Filtrer par Clan'"
-                      :forId="'selectClan'"
-                      :options="clans"
-                      :optionKey="'Id'"
-                      :optionLabel="'Name'"
-                      @selectChange="onSelectClan"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div> -->
           </div>
           <character-card v-if="ListAllCharacter && !useFiltered" v-bind:characters_props="allCharacters" />
           <searched-character-card v-if="useFiltered" v-bind:SearchedCharacter="filteredCharacters" />
@@ -65,12 +40,9 @@
 <script>
 import functions from "../../services/functions";
 import CharacterService from "../../services/CharacterService";
-import ClansServices from "../../services/ClansServices";
 import CardHeader from "./GenericComponent/CardHeader.vue";
 import CharacterCard from "./CharacterComponent/CharacterCard.vue";
 import Pagination from "../Components/GenericComponent/Pagination.vue";
-// import InputComponent from "./GenericComponent/InputComponent.vue";
-// import SelectComponent from "./GenericComponent/SelectComponent.vue";
 import SearchedCharacterCard from "./GenericComponent/SearchedCharacterCard.vue";
 import FilterComponent from "./GenericComponent/FilterComponent.vue";
 
@@ -109,6 +81,7 @@ export default {
       filteredCharacters: [],
       clans: {},
       selectedClan: null,
+      filterType: null,
     };
   },
   provide() {
@@ -127,7 +100,6 @@ export default {
       try {
         await this.countAllCharacter();
         await this.getAllCharacters(this.nav);
-        await this.getAllClans(this.navClans);
       } catch (error) {
         console.error("Error initializing page:", error);
       } finally {
@@ -136,15 +108,6 @@ export default {
     },
 
     // --- CLANS ---
-    async getAllClans(nav) {
-      try {
-        const response = await ClansServices.getAllClans(nav);
-        this.clans = response.data.ob;
-      } catch (e) {
-        console.log(e);
-      }
-    },
-
     async onSelectClan(clanId) {
       if (!clanId) {
         this.useFiltered = false;
@@ -153,7 +116,8 @@ export default {
       }
       try {
         this.selectedClan = clanId;
-        const responseCount = await CharacterService.CountNbCharactersByClan(clanId);
+        this.filterType = 'clan'
+        const responseCount = await CharacterService.CountNbCharactersByClan(this.selectedClan);
         this.NbAllCharacters = responseCount.data.ob.count;
         this.nav.pages = functions.CalcPagination(this.NbAllCharacters, this.nav, this.nav.step);
         const responseData = await CharacterService.GetAllCharactersByClan(clanId, this.nav);
@@ -165,20 +129,32 @@ export default {
       }
     },
 
-    async CharacterFilteredByClanPagination(page) {
+    async CharacterFilteredPagination(page) {
       this.nav.current = page;
+
       try {
-        const response = await CharacterService.GetAllCharactersByClan(this.selectedClan, this.nav);
-        this.filteredCharacters = response.data.ob;
-        this.useFiltered = true;
+        if (this.filterType === 'name' && this.nameSearch && this.nameSearch.trim() !== "") {
+          const response = await CharacterService.getCharacterByNameSearch(this.nameSearch, this.nav);
+          this.filteredCharacters = response.data.ob;
+          this.useFiltered = true;
+        } else if (this.filterType === 'clan' && this.selectedClan) {
+          const response = await CharacterService.GetAllCharactersByClan(this.selectedClan, this.nav);
+          this.filteredCharacters = response.data.ob;
+          this.useFiltered = true;
+        } else {
+          console.warn("Aucun filtre valide défini");
+          this.useFiltered = false;
+          await this.initPage(); // Revenir à l'état initial si pas de filtre
+        }
       } catch (error) {
-        console.error("Erreur lors de la pagination par clan :", error);
+        console.error("Error in filtered pagination:", error);
       }
     },
 
     // --- NOM ---
     async getCurrentName(e) {
-      this.nameSearch = e;
+      this.nameSearch = e;   
+      this.filterType = 'name';
       if (!this.nameSearch || this.nameSearch.trim() === "") {
         this.useFiltered = false;
         await this.initPage();
@@ -205,16 +181,16 @@ export default {
       }
     },
 
-    async CharacterFilteredPagination(page) {
-      this.nav.current = page;
-      try {
-        const response = await CharacterService.getCharacterByNameSearch(this.nameSearch, this.nav);
-        this.filteredCharacters = response.data.ob;
-        this.useFiltered = true;
-      } catch (error) {
-        console.error("Error in filtered pagination:", error);
-      }
-    },
+    // async CharacterFilteredPagination(page) {
+    //   this.nav.current = page;
+    //   try {
+    //     const response = await CharacterService.getCharacterByNameSearch(this.nameSearch, this.nav);
+    //     this.filteredCharacters = response.data.ob;
+    //     this.useFiltered = true;
+    //   } catch (error) {
+    //     console.error("Error in filtered pagination:", error);
+    //   }
+    // },
 
     // --- PAGINATION GLOBALE ---
     async CharacterPagination(page) {
