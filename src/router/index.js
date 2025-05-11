@@ -31,7 +31,7 @@ import AllExistingFictionsLayout from '../components/Fictions/AllExistingFiction
 import FictionContain from '../components/Fictions/AllMyFictions/FictionContain'
 import ChapterLayout from '../components/Fictions/Chapters/ChapterLayout.vue'
 import CreateFiction from '../components/Fictions/FictionsForm/CreateFiction.vue'
-import AllMyFictionsLayout from '../components/Fictions/AllMyFictions/AllFictionsLayout.vue'
+import MyAllFictions from "../components/Fictions/AllMyFictions/MyAllFictions.vue";
 import CreateChapter from '../components/Fictions/Chapters/CreateChapter.vue'
 import EditChapter from '../components/Fictions/FictionsForm/EditChapter.vue'
 import CommentLayout from "../components/Fictions/Comments/CommentLayout.vue";
@@ -242,8 +242,8 @@ const routes = [
       },
       {
         path:'/allFictions/:id',
-        name: 'AllFictionsLayout',
-        component: AllMyFictionsLayout
+        name: 'MyAllFictions',
+        component: MyAllFictions
       },
       {
         path: '/fiction/:id',
