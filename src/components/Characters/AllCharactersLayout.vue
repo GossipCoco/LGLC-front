@@ -17,7 +17,7 @@
               class="card background-color-dark-green-01 margin-2vh-0-0-0 height-80-vh"
             >
               <div class="card-header">
-                <hh3 class="text-white poppins-text">Filtrer</hh3>
+                <h3 class="text-white poppins-text">Filtrer</h3>
               </div>
               <div class="card-body">
                 <div class="row">
@@ -111,31 +111,24 @@ export default {
       showMyCharacter: false,
       showspinner: false,
       useFiltered: false,
-      labelFilter: "Chercher des fictions par",
       usr: this.$store.state.auth.user.usrID,
       userCurrent: this.$store.state.auth.user.usrID,
       NbAllCharacters: null,
       nameSearch: null,
-      nbSearchCharacters: null,
       searchClan: "",
       nav: {
         current: 0,
         pages: 0,
         step: 6,
       },
-      allMyCharacter: {},
-      allCharacters: {},
-      clans: {},
-      grades: {},
-      NameCharacterSearch: {},
-      filters: [],
-      filteredCharacters: [],
       navClans: {
         current: 0,
         pages: 0,
         step: 100,
       },
-      ClanSearched: null,
+      allCharacters: {},
+      filteredCharacters: [],
+      clans: {},
       selectedClan: null,
     };
   },
@@ -149,6 +142,7 @@ export default {
     await this.initPage();
   },
   methods: {
+    // --- INITIALISATION ---
     async initPage() {
       this.showspinner = true;
       try {
@@ -160,20 +154,18 @@ export default {
       } finally {
         this.showspinner = false;
       }
-    },    
-    async CharacterFilteredByClanPagination(page) {
-      this.nav.current = page;
+    },
+
+    // --- CLANS ---
+    async getAllClans(nav) {
       try {
-        const response = await CharacterService.GetAllCharactersByClan(
-          this.nameSearch,
-          this.nav
-        );
-        this.filteredCharacters = response.data.ob;
-        this.useFiltered = true;
-      } catch (error) {
-        console.error("Error in filtered pagination:", error);
+        const response = await ClansServices.getAllClans(nav);
+        this.clans = response.data.ob;
+      } catch (e) {
+        console.log(e);
       }
     },
+
     async onSelectClan(clanId) {
       if (!clanId) {
         this.useFiltered = false;
@@ -184,45 +176,28 @@ export default {
         this.selectedClan = clanId;
         const responseCount = await CharacterService.CountNbCharactersByClan(clanId);
         this.NbAllCharacters = responseCount.data.ob.count;
-
+        this.nav.pages = functions.CalcPagination(this.NbAllCharacters, this.nav, this.nav.step);
         const responseData = await CharacterService.GetAllCharactersByClan(clanId, this.nav);
         this.filteredCharacters = responseData.data.ob;
-
-        this.nav.pages = functions.CalcPagination(this.NbAllCharacters, this.nav, this.nav.step);
+        console.log(this.filteredCharacters)
         this.useFiltered = true;
       } catch (e) {
-        console.error("Erreur lors du filtrage par clan :", e);
-      }
-    }, 
-    async CountNbCharactersByClan(id){
-      try{
-        const response = await CharacterService.CountNbCharactersByClan(id)
-        this.nav.pages = functions.CalcPagination(response.data.ob, this.nav, this.nav.step);
-      }catch (e) {
-        console.log(e);
+        console.log("Erreur lors du filtrage par clan :", e);
       }
     },
-    async getAllClans(nav) {
-      try {
-        const response = await ClansServices.getAllClans(nav);
-        this.clans = response.data.ob;
-      } catch (e) {
-        console.log(e);
-      }
-    },
-    async CharacterFilteredPagination(page) {
+
+    async CharacterFilteredByClanPagination(page) {
       this.nav.current = page;
       try {
-        const response = await CharacterService.getCharacterByNameSearch(
-          this.nameSearch,
-          this.nav
-        );
+        const response = await CharacterService.GetAllCharactersByClan(this.selectedClan, this.nav);
         this.filteredCharacters = response.data.ob;
         this.useFiltered = true;
       } catch (error) {
-        console.error("Error in filtered pagination:", error);
+        console.error("Erreur lors de la pagination par clan :", error);
       }
     },
+
+    // --- NOM ---
     async getCurrentName(e) {
       this.nameSearch = e;
       if (!this.nameSearch || this.nameSearch.trim() === "") {
@@ -231,10 +206,7 @@ export default {
         return;
       }
       try {
-        const response = await CharacterService.getCharacterByNameSearch(
-          this.nameSearch,
-          this.nav
-        );
+        const response = await CharacterService.getCharacterByNameSearch(this.nameSearch, this.nav);
         this.filteredCharacters = response.data.ob;
         await this.countFilteredCharactersByName(this.nameSearch);
         this.useFiltered = true;
@@ -243,18 +215,34 @@ export default {
         this.useFiltered = false;
       }
     },
+
+    async countFilteredCharactersByName(name) {
+      try {
+        const response = await CharacterService.CountCharacterByNameSearch(name);
+        this.NbAllCharacters = response.data.ob.count;
+        this.nav.pages = functions.CalcPagination(this.NbAllCharacters, this.nav, this.nav.step);
+      } catch (error) {
+        console.error(error);
+      }
+    },
+
+    async CharacterFilteredPagination(page) {
+      this.nav.current = page;
+      try {
+        const response = await CharacterService.getCharacterByNameSearch(this.nameSearch, this.nav);
+        this.filteredCharacters = response.data.ob;
+        this.useFiltered = true;
+      } catch (error) {
+        console.error("Error in filtered pagination:", error);
+      }
+    },
+
+    // --- PAGINATION GLOBALE ---
     async CharacterPagination(page) {
       this.nav.current = page;
       try {
-        if (
-          this.useFiltered &&
-          this.nameSearch &&
-          this.nameSearch.trim() !== ""
-        ) {
-          const response = await CharacterService.getCharacterByNameSearch(
-            this.nameSearch,
-            this.nav
-          );
+        if (this.useFiltered && this.nameSearch && this.nameSearch.trim() !== "") {
+          const response = await CharacterService.getCharacterByNameSearch(this.nameSearch, this.nav);
           this.filteredCharacters = response.data.ob;
         } else {
           await this.getAllCharacters(this.nav);
@@ -263,30 +251,8 @@ export default {
         console.error("Error in pagination:", error);
       }
     },
-    async countAllCharacter() {
-      try {
-        const response = await CharacterService.CountAllCharacters();
-        this.NbAllCharacters = response.data.ob.count;
-        functions.CalcPagination(this.NbAllCharacters, this.nav, this.nav.step);
-      } catch (error) {
-        console.error("Error counting characters:", error);
-      }
-    },
-    async countFilteredCharactersByName(name) {
-      try {
-        const response = await CharacterService.CountCharacterByNameSearch(
-          name
-        );
-        this.NbAllCharacters = response.data.ob.count;
-        this.nav.pages = functions.CalcPagination(
-          this.NbAllCharacters,
-          this.nav,
-          this.nav.step
-        );
-      } catch (error) {
-        console.error(error);
-      }
-    },
+
+    // --- TOUS LES PERSONNAGES ---
     async getAllCharacters(nav) {
       if (window.innerWidth >= this.width) {
         this.nav.step = 8;
@@ -297,13 +263,19 @@ export default {
         const response = await CharacterService.getAllCharacters({ nav });
         this.allCharacters = response.data.ob;
         this.showspinner = false;
-        this.nav.pages = functions.CalcPagination(
-          this.NbAllCharacters,
-          this.nav,
-          this.nav.step
-        );
+        this.nav.pages = functions.CalcPagination(this.NbAllCharacters, this.nav, this.nav.step);
       } catch (e) {
         console.log(e);
+      }
+    },
+
+    async countAllCharacter() {
+      try {
+        const response = await CharacterService.CountAllCharacters();
+        this.NbAllCharacters = response.data.ob.count;
+        functions.CalcPagination(this.NbAllCharacters, this.nav, this.nav.step);
+      } catch (error) {
+        console.error("Error counting characters:", error);
       }
     },
   },
