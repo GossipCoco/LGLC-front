@@ -11,7 +11,11 @@
       <div class="character-container padding-0 list-all-characters-container padding-2-vh">
         <div class="row width-190-vh">
           <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-12">
-            <div class="card background-color-dark-green-01 margin-2vh-0-0-0 height-80-vh">
+            <filter-component
+              @getCurrentName="getCurrentName"
+              @onSelectClan="onSelectClan"
+            />
+            <!-- <div class="card background-color-dark-green-01 margin-2vh-0-0-0 height-80-vh">
               <div class="card-header">
                 <h3 class="text-white poppins-text">Filtrer</h3>
               </div>
@@ -35,7 +39,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
           <character-card v-if="ListAllCharacter && !useFiltered" v-bind:characters_props="allCharacters" />
           <searched-character-card v-if="useFiltered" v-bind:SearchedCharacter="filteredCharacters" />
@@ -65,19 +69,19 @@ import ClansServices from "../../services/ClansServices";
 import CardHeader from "./GenericComponent/CardHeader.vue";
 import CharacterCard from "./CharacterComponent/CharacterCard.vue";
 import Pagination from "../Components/GenericComponent/Pagination.vue";
-import InputComponent from "./GenericComponent/InputComponent.vue";
-import SelectComponent from "./GenericComponent/SelectComponent.vue";
+// import InputComponent from "./GenericComponent/InputComponent.vue";
+// import SelectComponent from "./GenericComponent/SelectComponent.vue";
 import SearchedCharacterCard from "./GenericComponent/SearchedCharacterCard.vue";
+import FilterComponent from "./GenericComponent/FilterComponent.vue";
 
 export default {
   name: "AllCharacters",
   components: {
     CharacterCard,
     Pagination,
-    InputComponent,
-    SelectComponent,
     CardHeader,
     SearchedCharacterCard,
+    FilterComponent,
   },
   data() {
     return {
