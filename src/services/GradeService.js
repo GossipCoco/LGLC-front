@@ -4,6 +4,7 @@ class GradeServices {
     getAllGrades() {
         return http.get('/grade')
     }
+    
 
 }
 

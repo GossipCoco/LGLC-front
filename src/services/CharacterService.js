@@ -25,6 +25,10 @@ class CharacterService {
     CountNbCharactersByClan(id){
         return http.get(`/character/CountNbCharactersByClan/${id}`)
     }
+    CountCharacterByGrade(id){
+        console.log(id)
+        return http.get(`/character/CountNbCharactersByClan/${id}`)
+    }
     GetAllCharactersByUser(id){
         return http.get(`/character/GetAllCharactersByUser/${id}`)
     }

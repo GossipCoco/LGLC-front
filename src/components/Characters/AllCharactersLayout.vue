@@ -13,6 +13,7 @@
           <filter-component
               @getCurrentName="getCurrentName"
               @onSelectClan="onSelectClan"
+              @onSelectGrade="onSelectGrade"
           />
           <character-card v-if="ListAllCharacter && !useFiltered" v-bind:characters_props="allCharacters" />
           <searched-character-card v-if="useFiltered" v-bind:SearchedCharacter="filteredCharacters" />
@@ -80,6 +81,7 @@ export default {
       clans: {},
       selectedClan: null,
       filterType: null,
+      selectedGrade: null
     };
   },
   provide() {
@@ -124,6 +126,20 @@ export default {
       }
     },
     // --- CLANS ---
+    async onSelectGrade(GradeId){
+      console.log(GradeId)
+        if (!GradeId) {
+        this.useFiltered = false;
+        await this.initPage();
+        return;
+        }
+        try {
+          const response = CharacterService.CountCharacterByGrade(GradeId)
+          console.log(response)
+        }catch (e) {
+        console.log("Erreur lors du filtrage par clan :", e);
+      }
+      },
     async onSelectClan(clanId) {
       if (!clanId) {
         this.useFiltered = false;

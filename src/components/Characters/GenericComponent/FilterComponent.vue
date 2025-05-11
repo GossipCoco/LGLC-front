@@ -20,6 +20,13 @@
             :optionKey="'Id'"
             :optionLabel="'Name'"
             @selectChange="onSelectClan"
+          /><select-component
+            :label="'Filtrer par Grade'"
+            :forId="'selectGrade'"
+            :options="grades"
+            :optionKey="'Id'"
+            :optionLabel="'Name'"
+            @selectChange="onSelectGrade"
           />
         </div>
       </div>
@@ -29,6 +36,7 @@
 </template>
 <script>
 import ClansServices from '../../../services/ClansServices';
+import GradeService from '../../../services/GradeService';
 import InputComponent from './InputComponent.vue';
 import SelectComponent from './SelectComponent.vue';
 
@@ -46,6 +54,7 @@ export default {
                 step: 100,
             },
             clans: {},
+            grades:{}
         }
     },
     async created() {
@@ -57,6 +66,7 @@ export default {
         async initPage() {
             try {
                 await this.getAllClans(this.navClans);
+                await this.getAllGrades()
             }
             catch (error) {
                 console.error("Error initializing page:", error);
@@ -70,11 +80,23 @@ export default {
                 console.log(e);
             }
         },
+        async getAllGrades(){
+          try{
+            const response = await GradeService.getAllGrades()
+            this.grades = response.data.ob;
+            console.log(this.grades)
+          }catch (e) {
+            console.log(e);
+          }
+        },
         getCurrentName(e) {
              this.$emit('getCurrentName', e);
         },
         onSelectClan(e){
             this.$emit('onSelectClan', e);
+        },
+        onSelectGrade(e){
+          this.$emit('onSelectGrade', e);
         }
     }
 };
