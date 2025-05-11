@@ -20,14 +20,15 @@
             :optionKey="'Id'"
             :optionLabel="'Name'"
             @selectChange="onSelectClan"
-          /><select-component
+          />
+          <!-- <select-component
             :label="'Filtrer par Grade'"
             :forId="'selectGrade'"
             :options="grades"
             :optionKey="'Id'"
             :optionLabel="'Name'"
             @selectChange="onSelectGrade"
-          />
+          /> -->
         </div>
       </div>
     </div>
@@ -84,7 +85,6 @@ export default {
           try{
             const response = await GradeService.getAllGrades()
             this.grades = response.data.ob;
-            console.log(this.grades)
           }catch (e) {
             console.log(e);
           }

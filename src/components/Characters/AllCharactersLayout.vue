@@ -125,20 +125,6 @@ export default {
         console.error(error);
       }
     },
-    // --- CLANS ---
-    async onSelectGrade(GradeId){
-        if (!GradeId) {
-        this.useFiltered = false;
-        await this.initPage();
-        return;
-        }
-        try {
-          const response = CharacterService.CountCharacterByGrade(GradeId)
-          console.log(response)
-        }catch (e) {
-        console.log("Erreur lors du filtrage par clan :", e);
-      }
-    },
     async onSelectClan(clanId) {
       if (!clanId) {
         this.useFiltered = false;
