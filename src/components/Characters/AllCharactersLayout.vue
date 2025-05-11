@@ -127,7 +127,6 @@ export default {
     },
     // --- CLANS ---
     async onSelectGrade(GradeId){
-      console.log(GradeId)
         if (!GradeId) {
         this.useFiltered = false;
         await this.initPage();
@@ -139,7 +138,7 @@ export default {
         }catch (e) {
         console.log("Erreur lors du filtrage par clan :", e);
       }
-      },
+    },
     async onSelectClan(clanId) {
       if (!clanId) {
         this.useFiltered = false;
