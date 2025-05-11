@@ -8,7 +8,6 @@ class ClanService {
         return http.get('/clan/countAllLocations')
     }
     getAllClans(data) {
-        console.log("getallClans servivce")
         return http.post('/clan', data)
     }
     getClanByName(id){

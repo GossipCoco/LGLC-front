@@ -135,7 +135,8 @@ export default {
         pages: 0,
         step: 100,
       },
-      ClanSearched: null
+      ClanSearched: null,
+      selectedClan: null,
     };
   },
   provide() {
@@ -167,9 +168,10 @@ export default {
         return;
       }
       try{
+        await this.CountNbCharactersByClan(clanId)
         this.ClanSearched = clanId
         this.selectedClan = clanId
-        await this.CountNbCharactersByClan(clanId)
+        this.nav.step = 100       
       }catch (error) {
         console.error("Error initializing page:", error);
       } 
@@ -178,6 +180,11 @@ export default {
       try{
         const response = await CharacterService.CountNbCharactersByClan(id)
         console.log(response.data.ob)
+        const responses = await CharacterService.GetAllCharactersByClan(this.selectedClan, this.nav);
+        console.log(responses.data.ob)
+        this.filteredCharacters = response.data.ob;
+        this.useFiltered = true;
+
       }catch (e) {
         console.log(e);
       }
@@ -186,7 +193,6 @@ export default {
       try {
         const response = await ClansServices.getAllClans(nav);
         this.clans = response.data.ob;
-        console.log(this.clans);
       } catch (e) {
         console.log(e);
       }
