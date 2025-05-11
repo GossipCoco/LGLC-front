@@ -160,43 +160,7 @@ export default {
       } finally {
         this.showspinner = false;
       }
-    },
-    async onSelectClan(clanId){
-      if (!clanId) {
-        this.useFiltered = false;
-        await this.initPage();
-        return;
-      }
-      try{
-        await this.CountNbCharactersByClan(clanId)
-        this.ClanSearched = clanId
-        this.selectedClan = clanId
-        this.nav.step = 100       
-      }catch (error) {
-        console.error("Error initializing page:", error);
-      } 
     },    
-    async CountNbCharactersByClan(id){
-      try{
-        const response = await CharacterService.CountNbCharactersByClan(id)
-        console.log(response.data.ob)
-        const responses = await CharacterService.GetAllCharactersByClan(this.selectedClan, this.nav);
-        console.log(responses.data.ob)
-        this.filteredCharacters = response.data.ob;
-        this.useFiltered = true;
-
-      }catch (e) {
-        console.log(e);
-      }
-    },
-    async getAllClans(nav) {
-      try {
-        const response = await ClansServices.getAllClans(nav);
-        this.clans = response.data.ob;
-      } catch (e) {
-        console.log(e);
-      }
-    },
     async CharacterFilteredByClanPagination(page) {
       this.nav.current = page;
       try {
@@ -208,6 +172,42 @@ export default {
         this.useFiltered = true;
       } catch (error) {
         console.error("Error in filtered pagination:", error);
+      }
+    },
+    async onSelectClan(clanId) {
+      if (!clanId) {
+        this.useFiltered = false;
+        await this.initPage();
+        return;
+      }
+      try {
+        this.selectedClan = clanId;
+        const responseCount = await CharacterService.CountNbCharactersByClan(clanId);
+        this.NbAllCharacters = responseCount.data.ob.count;
+
+        const responseData = await CharacterService.GetAllCharactersByClan(clanId, this.nav);
+        this.filteredCharacters = responseData.data.ob;
+
+        this.nav.pages = functions.CalcPagination(this.NbAllCharacters, this.nav, this.nav.step);
+        this.useFiltered = true;
+      } catch (e) {
+        console.error("Erreur lors du filtrage par clan :", e);
+      }
+    }, 
+    async CountNbCharactersByClan(id){
+      try{
+        const response = await CharacterService.CountNbCharactersByClan(id)
+        this.nav.pages = functions.CalcPagination(response.data.ob, this.nav, this.nav.step);
+      }catch (e) {
+        console.log(e);
+      }
+    },
+    async getAllClans(nav) {
+      try {
+        const response = await ClansServices.getAllClans(nav);
+        this.clans = response.data.ob;
+      } catch (e) {
+        console.log(e);
       }
     },
     async CharacterFilteredPagination(page) {
