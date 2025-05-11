@@ -10,12 +10,10 @@
     <div class="card-body width-190-vh height-90-vh">
       <div class="character-container padding-0 list-all-characters-container padding-2-vh">
         <div class="row width-190-vh">
-          <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-12">
-            <filter-component
+          <filter-component
               @getCurrentName="getCurrentName"
               @onSelectClan="onSelectClan"
-            />
-          </div>
+          />
           <character-card v-if="ListAllCharacter && !useFiltered" v-bind:characters_props="allCharacters" />
           <searched-character-card v-if="useFiltered" v-bind:SearchedCharacter="filteredCharacters" />
         </div>

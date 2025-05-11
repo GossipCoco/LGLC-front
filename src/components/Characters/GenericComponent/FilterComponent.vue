@@ -1,4 +1,5 @@
 <template>
+<div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-12">
   <div class="card background-color-dark-green-01 margin-2vh-0-0-0 height-80-vh">
     <div class="card-header">
       <h3 class="text-white poppins-text">Filtrer</h3>
@@ -24,6 +25,7 @@
       </div>
     </div>
   </div>
+</div>
 </template>
 <script>
 import ClansServices from '../../../services/ClansServices';
