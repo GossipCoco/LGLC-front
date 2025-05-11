@@ -17,9 +17,6 @@
     left: 90%;
     z-index: 99999;
 }
-/* .card-fiction-container .background-image-quest{
-    margin: -2vh;
-} */
 .card-quest-by-id-container .card-body{
     margin: -2vh 0 1vh 4vh;
 }

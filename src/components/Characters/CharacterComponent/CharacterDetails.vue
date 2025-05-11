@@ -68,7 +68,6 @@ import CharacterService from "../../../services/CharacterService";
 import CharacterImageDetail from "../GenericComponent/CharacterImageDetail.vue";
 import CharacterTabs from "../GenericComponent/CharacterTabs.vue";
 import TableInformationCharacter from "../GenericComponent/TableInformationCharacter.vue";
-// import ButtonCreationCharacter from "../../Components/FormComponent/ButtonCreationCharacter.vue";
 export default {
   name: "CharacterDetails",
   components: {TableInformationCharacter, CharacterTabs, CharacterImageDetail},
