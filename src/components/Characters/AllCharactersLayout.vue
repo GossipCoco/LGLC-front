@@ -15,6 +15,7 @@
           <filter-component
             @getCurrentName="getCurrentName"
             @onSelectClan="onSelectClan"
+            @onSelectGrade="onSelectGrade"
           />
 
           <character-card
@@ -87,8 +88,11 @@ export default {
       allCharacters: {},
       filteredCharacters: [],
       clans: {},
+      searchByGrade:{},
       selectedClan: null,
       filterType: null,
+      selectGrade: null,
+      NbGrade: null
     };
   },
   provide() {
@@ -192,6 +196,32 @@ export default {
         console.log("Erreur lors du filtrage par clan :", e);
       }
     },
+    // ------ GRADE ---------
+
+    async onSelectGrade(e){
+       if (!e) {
+        this.useFiltered = false;
+        await this.initPage();
+        return;
+      }
+      try{        
+        this.filterType = "grade";
+        this.selectGrade = e
+        const response = await CharacterService.CountCharacterByGrade(this.selectGrade)
+        this.CountCharacterByGrade = response.data.ob.count
+        this.nav.pages = functions.CalcPagination(
+          this.CountCharacterByGrade,
+          this.nav,
+          this.nav.step
+        );
+        const responseData = await CharacterService.GetAllCharactersByGrade(this.selectGrade, this.nav)
+        console.log(responseData.data.ob)
+        this.filteredCharacters = responseData.data.ob;
+        this.useFiltered = true;
+      } catch (e) {
+        console.log("Erreur lors du filtrage par grade :", e);
+      }
+    },
 
     // ***** PAGINATION *****
     // --- PAGINATION GLOBALE ---
@@ -231,6 +261,11 @@ export default {
             this.selectedClan,
             this.nav
           );
+        } else if (this.selectGrade){
+          response = await CharacterService.GetAllCharactersByGrade(
+            this.selectGrade,
+            this.nav
+          )
         }
 
         if (response) {

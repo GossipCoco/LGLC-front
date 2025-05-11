@@ -21,14 +21,14 @@
             :optionLabel="'Name'"
             @selectChange="onSelectClan"
           />
-          <!-- <select-component
+          <select-component
             :label="'Filtrer par Grade'"
             :forId="'selectGrade'"
             :options="grades"
             :optionKey="'Id'"
             :optionLabel="'Name'"
             @selectChange="onSelectGrade"
-          /> -->
+          />
         </div>
       </div>
     </div>

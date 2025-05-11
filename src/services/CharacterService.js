@@ -27,7 +27,7 @@ class CharacterService {
     }
     CountCharacterByGrade(id){
         console.log(id)
-        return http.get(`/character/CountNbCharactersByClan/${id}`)
+        return http.get(`/character/CountCharacterByGrade/${id}`)
     }
     GetAllCharactersByUser(id){
         return http.get(`/character/GetAllCharactersByUser/${id}`)
@@ -36,9 +36,13 @@ class CharacterService {
         return http.post('/character/allcharacters', nav)
     }
     GetAllCharactersByClan(id, nav){
-        console.log(id, nav)
         return http.post(`/character/GetAllCharactersByClan/${id}`, nav)
     }
+    
+    GetAllCharactersByGrade(id, nav){
+        return http.post(`/character/GetAllCharactersByGrade/${id}`, nav)
+    }
+
     GetAllCharactersDashboard(nav) {
         return http.post('/character/GetAllCharactersDashboard', nav)
     }
