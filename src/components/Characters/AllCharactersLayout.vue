@@ -135,6 +135,7 @@ export default {
         pages: 0,
         step: 100,
       },
+      ClanSearched: null
     };
   },
   provide() {
@@ -160,8 +161,13 @@ export default {
       }
     },
     async onSelectClan(clanId){
-      console.log(clanId)
+      if (!clanId) {
+        this.useFiltered = false;
+        await this.initPage();
+        return;
+      }
       try{
+        this.ClanSearched = clanId
         this.selectedClan = clanId
         await this.CountNbCharactersByClan(clanId)
       }catch (error) {
@@ -183,6 +189,19 @@ export default {
         console.log(this.clans);
       } catch (e) {
         console.log(e);
+      }
+    },
+    async CharacterFilteredByClanPagination(page) {
+      this.nav.current = page;
+      try {
+        const response = await CharacterService.GetAllCharactersByClan(
+          this.nameSearch,
+          this.nav
+        );
+        this.filteredCharacters = response.data.ob;
+        this.useFiltered = true;
+      } catch (error) {
+        console.error("Error in filtered pagination:", error);
       }
     },
     async CharacterFilteredPagination(page) {
@@ -271,7 +290,6 @@ export default {
       try {
         const response = await CharacterService.getAllCharacters({ nav });
         this.allCharacters = response.data.ob;
-        console.log(this.allCharacters);
         this.showspinner = false;
         this.nav.pages = functions.CalcPagination(
           this.NbAllCharacters,
