@@ -8,22 +8,16 @@
       v-bind:NameLink="'Nouveau personnage'"
     />
     <div class="card-body width-190-vh height-90-vh">
-      <div
-        class="character-container padding-0 list-all-characters-container padding-2-vh"
-      >
+      <div class="character-container padding-0 list-all-characters-container padding-2-vh">
         <div class="row width-190-vh">
           <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-12">
-            <div
-              class="card background-color-dark-green-01 margin-2vh-0-0-0 height-80-vh"
-            >
+            <div class="card background-color-dark-green-01 margin-2vh-0-0-0 height-80-vh">
               <div class="card-header">
                 <h3 class="text-white poppins-text">Filtrer</h3>
               </div>
               <div class="card-body">
                 <div class="row">
-                  <div
-                    class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12"
-                  >
+                  <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <input-component
                       v-bind:forId="'inputName'"
                       v-bind:label="'Nom du personnage'"
@@ -40,44 +34,25 @@
                     />
                   </div>
                 </div>
-                <div class="row">
-                  <div
-                    class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12"
-                  ></div>
-                </div>
               </div>
             </div>
           </div>
-          <div
-            class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-10 col-xs-12"
-            v-if="ListAllCharacter && !useFiltered"
-          >
-            <character-card v-bind:characters_props="allCharacters" />
-          </div>
-          <div
-            class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-10 col-xs-12"
-            v-if="useFiltered"
-          >
-            <searched-character-card
-              v-bind:SearchedCharacter="filteredCharacters"
-            />
-          </div>
+          <character-card v-if="ListAllCharacter && !useFiltered" v-bind:characters_props="allCharacters" />
+          <searched-character-card v-if="useFiltered" v-bind:SearchedCharacter="filteredCharacters" />
         </div>
         <div class="row pagination-container-row">
-          <div class="pagination-container">
-            <pagination
-              v-if="!showspinner && nav.pages > 0"
-              :nav="nav"
-              :filters="filters"
-              :getDatas="
-                useFiltered
-                  ? 'CharacterFilteredPagination'
-                  : 'CharacterPagination'
-              "
-              @CharacterPagination="CharacterPagination"
-              @CharacterFilteredPagination="CharacterFilteredPagination"
-            />
-          </div>
+          <pagination
+            v-if="!showspinner && nav.pages > 0"
+            :nav="nav"
+            :filters="filters"
+            :getDatas="
+              useFiltered
+                ? 'CharacterFilteredPagination'
+                : 'CharacterPagination'
+            "
+            @CharacterPagination="CharacterPagination"
+            @CharacterFilteredPagination="CharacterFilteredPagination"
+          />
         </div>
       </div>
     </div>
