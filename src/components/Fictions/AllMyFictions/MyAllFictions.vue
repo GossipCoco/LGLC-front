@@ -10,4 +10,3 @@ export default {
     components: { AllFictionsLayout }
 }
 </script>
-        AllCardsFictions
