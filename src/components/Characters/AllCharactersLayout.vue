@@ -106,7 +106,6 @@ export default {
         this.showspinner = false;
       }
     },
-
     // --- CLANS ---
     async onSelectClan(clanId) {
       if (!clanId) {
@@ -122,16 +121,13 @@ export default {
         this.nav.pages = functions.CalcPagination(this.NbAllCharacters, this.nav, this.nav.step);
         const responseData = await CharacterService.GetAllCharactersByClan(clanId, this.nav);
         this.filteredCharacters = responseData.data.ob;
-        console.log(this.filteredCharacters)
         this.useFiltered = true;
       } catch (e) {
         console.log("Erreur lors du filtrage par clan :", e);
       }
     },
-
     async CharacterFilteredPagination(page) {
       this.nav.current = page;
-
       try {
         if (this.filterType === 'name' && this.nameSearch && this.nameSearch.trim() !== "") {
           const response = await CharacterService.getCharacterByNameSearch(this.nameSearch, this.nav);
@@ -180,18 +176,6 @@ export default {
         console.error(error);
       }
     },
-
-    // async CharacterFilteredPagination(page) {
-    //   this.nav.current = page;
-    //   try {
-    //     const response = await CharacterService.getCharacterByNameSearch(this.nameSearch, this.nav);
-    //     this.filteredCharacters = response.data.ob;
-    //     this.useFiltered = true;
-    //   } catch (error) {
-    //     console.error("Error in filtered pagination:", error);
-    //   }
-    // },
-
     // --- PAGINATION GLOBALE ---
     async CharacterPagination(page) {
       this.nav.current = page;
@@ -223,7 +207,6 @@ export default {
         console.log(e);
       }
     },
-
     async countAllCharacter() {
       try {
         const response = await CharacterService.CountAllCharacters();
