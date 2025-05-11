@@ -10,11 +10,12 @@
     <div class="card-body width-190-vh height-90-vh">
       <div class="character-container padding-0 list-all-characters-container padding-2-vh">
         <div class="row width-190-vh">
-          <filter-component
+
+            <filter-component
               @getCurrentName="getCurrentName"
               @onSelectClan="onSelectClan"
-              @onSelectGrade="onSelectGrade"
-          />
+            />
+
           <character-card v-if="ListAllCharacter && !useFiltered" v-bind:characters_props="allCharacters" />
           <searched-character-card v-if="useFiltered" v-bind:SearchedCharacter="filteredCharacters" />
         </div>
@@ -81,7 +82,6 @@ export default {
       clans: {},
       selectedClan: null,
       filterType: null,
-      selectedGrade: null
     };
   },
   provide() {
@@ -106,25 +106,7 @@ export default {
         this.showspinner = false;
       }
     },
-    // ---- COUNT -------    
-    async countAllCharacter() {
-      try {
-        const response = await CharacterService.CountAllCharacters();
-        this.NbAllCharacters = response.data.ob.count;
-        functions.CalcPagination(this.NbAllCharacters, this.nav, this.nav.step);
-      } catch (error) {
-        console.error("Error counting characters:", error);
-      }
-    },
-    async countFilteredCharactersByName(name) {
-      try {
-        const response = await CharacterService.CountCharacterByNameSearch(name);
-        this.NbAllCharacters = response.data.ob.count;
-        this.nav.pages = functions.CalcPagination(this.NbAllCharacters, this.nav, this.nav.step);
-      } catch (error) {
-        console.error(error);
-      }
-    },
+    // --- CLANS ---
     async onSelectClan(clanId) {
       if (!clanId) {
         this.useFiltered = false;
@@ -144,33 +126,21 @@ export default {
         console.log("Erreur lors du filtrage par clan :", e);
       }
     },
-    // ---- PAGINATION ----
-    // --- PAGINATION GLOBALE ---
-    async CharacterPagination(page) {
-      this.nav.current = page;
-      try {
-        if (this.useFiltered && this.nameSearch && this.nameSearch.trim() !== "") {
-          const response = await CharacterService.getCharacterByNameSearch(this.nameSearch, this.nav);
-          this.filteredCharacters = response.data.ob;
-        } else {
-          await this.getAllCharacters(this.nav);
-        }
-      } catch (error) {
-        console.error("Error in pagination:", error);
-      }
-    },
     async CharacterFilteredPagination(page) {
       this.nav.current = page;
       try {
-        let response;
-        if (this.nameSearch && this.nameSearch.trim() !== "") {
-          response = await CharacterService.getCharacterByNameSearch(this.nameSearch, this.nav);
-        } else if (this.selectedClan) {
-          response = await CharacterService.GetAllCharactersByClan(this.selectedClan, this.nav);
-        }
-        if (response) {
+        if (this.filterType === 'name' && this.nameSearch && this.nameSearch.trim() !== "") {
+          const response = await CharacterService.getCharacterByNameSearch(this.nameSearch, this.nav);
           this.filteredCharacters = response.data.ob;
           this.useFiltered = true;
+        } else if (this.filterType === 'clan' && this.selectedClan) {
+          const response = await CharacterService.GetAllCharactersByClan(this.selectedClan, this.nav);
+          this.filteredCharacters = response.data.ob;
+          this.useFiltered = true;
+        } else {
+          console.warn("Aucun filtre valide défini");
+          this.useFiltered = false;
+          await this.initPage(); // Revenir à l'état initial si pas de filtre
         }
       } catch (error) {
         console.error("Error in filtered pagination:", error);
@@ -196,6 +166,31 @@ export default {
         this.useFiltered = false;
       }
     },
+
+    async countFilteredCharactersByName(name) {
+      try {
+        const response = await CharacterService.CountCharacterByNameSearch(name);
+        this.NbAllCharacters = response.data.ob.count;
+        this.nav.pages = functions.CalcPagination(this.NbAllCharacters, this.nav, this.nav.step);
+      } catch (error) {
+        console.error(error);
+      }
+    },
+    // --- PAGINATION GLOBALE ---
+    async CharacterPagination(page) {
+      this.nav.current = page;
+      try {
+        if (this.useFiltered && this.nameSearch && this.nameSearch.trim() !== "") {
+          const response = await CharacterService.getCharacterByNameSearch(this.nameSearch, this.nav);
+          this.filteredCharacters = response.data.ob;
+        } else {
+          await this.getAllCharacters(this.nav);
+        }
+      } catch (error) {
+        console.error("Error in pagination:", error);
+      }
+    },
+
     // --- TOUS LES PERSONNAGES ---
     async getAllCharacters(nav) {
       if (window.innerWidth >= this.width) {
@@ -210,6 +205,15 @@ export default {
         this.nav.pages = functions.CalcPagination(this.NbAllCharacters, this.nav, this.nav.step);
       } catch (e) {
         console.log(e);
+      }
+    },
+    async countAllCharacter() {
+      try {
+        const response = await CharacterService.CountAllCharacters();
+        this.NbAllCharacters = response.data.ob.count;
+        functions.CalcPagination(this.NbAllCharacters, this.nav, this.nav.step);
+      } catch (error) {
+        console.error("Error counting characters:", error);
       }
     },
   },

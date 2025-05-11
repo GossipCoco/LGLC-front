@@ -36,6 +36,7 @@ class CharacterService {
         return http.post('/character/allcharacters', nav)
     }
     GetAllCharactersByClan(id, nav){
+        console.log(id, nav)
         return http.post(`/character/GetAllCharactersByClan/${id}`, nav)
     }
     GetAllCharactersDashboard(nav) {
