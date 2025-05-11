@@ -2,11 +2,11 @@
   <div id="change-user-information-container" class="container-fluid height-100 profil-user-container">
     <div class="row">
       <div class="col-12">
-        <div class="flex-one profil-user-card margin-4vh background-color-main-lineart card">
+        <div class="flex-one profil-user-card margin-4vh background-color-main-lineart card border-none">
           <div class="card-body  display-flex-row">
-            <div class="display-flex-column align-items-content-justify-content avatar-container border-radius-50 padding-2-vh height-80-vh width-10-vh border-100">
-              <h2>{{ Role }}</h2>
-              <img class="height-30-vh align-items-content-justify-content border-100" :src="'/images/Avatars/' + form.Avatar" /><br>
+            <div class="display-flex-column align-items-content-justify-content avatar-container border-radius-100 padding-2-vh height-80-vh width-10-vh border-100">
+              <h2 class="white-text">{{ Role }}</h2>
+              <img class="height-30-vh align-items-content-justify-content border-radius-100" :src="'/images/Avatars/' + form.Avatar" /><br>
               <label class="btn btn-default p-0" for="upload-avatar">
                 <input id="upload-avatar" class="text-white" type="file" accept="image/png, image/jpeg, image/jpg, image/webp" ref="file"
                   @change="selectImage" />
