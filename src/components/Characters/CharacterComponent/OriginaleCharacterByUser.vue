@@ -22,7 +22,7 @@
           />
           <my-characters-card v-bind:allMyCharacters="allMyCharacters" />
         </div>
-        <div class="row pagination-row-container margin--10vh-0-0-0">
+        <div class="row pagination-row-container margin--3-0-0-0">
           <div clss="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <Pagination
               v-if="!showspinner && nav.pages > 0"
