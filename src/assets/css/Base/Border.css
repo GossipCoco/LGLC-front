@@ -52,7 +52,7 @@
     border: 6px solid rgba(var(--middle-green-02), 1);
 }
 #original-characters-list .card.individual-character-card{
-    border-radius: 100% 100% 12px 12px;
+    border-radius: 16vh 16vh 12px 12px;
     border: rgba(var(--lineart-other00), 1) 5px solid;
 }
 .card-image.clan-detail > .col-8{

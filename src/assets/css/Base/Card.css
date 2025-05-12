@@ -149,7 +149,6 @@ li.quest-container {
 }
 #original-characters-list .card-group {
     flex-flow: row wrap;
-    margin: 2vh 2vh;
 }
 .card-body.user-info-text{
     padding: 0;

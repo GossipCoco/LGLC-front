@@ -10,7 +10,8 @@
                     :key="index"
                 >
                     <div class="card-group display-flex height-35-vh width-35-vh">
-                        <div class="card individual-character-card background-position-50-percent height-40-vh background-lineart margin-1vh">
+                        <div class="card individual-character-card background-position-50-percent
+                        height-40-vh background-lineart margin-1vh padding-1-vh">
                             <BackgroundImage v-bind:Image="character.Image" />
                             <CharacterCardBody
                             v-bind:id="character.Id"
