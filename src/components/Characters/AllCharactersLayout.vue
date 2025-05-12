@@ -128,7 +128,7 @@ export default {
     },
     async countFilteredCharactersByName(name) {
       try {
-        const response = await CharacterService.CountCharacterByNameSearch(
+        const response = await CharacterService.CountNbOriginaleCharacterByName(
           name
         );
         this.NbAllCharacters = response.data.ob.count;

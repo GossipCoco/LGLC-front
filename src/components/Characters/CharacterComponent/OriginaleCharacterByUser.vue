@@ -94,9 +94,26 @@ export default {
         console.error("Erreur dans CountNbOriginaleCharacterByUser :", error);
       }
     },
+    async CountNbOriginaleCharacterByName(id){
+      try{
+        const response = await CharacterService.CountNbOriginaleCharacterByName(id)
+        console.log(response)
+      } catch (error) {
+        console.error("Erreur dans CountNbOriginaleCharacterByUser :", error);
+      }
+    },
     async CharacterPagination(page) {
       this.nav.current = page;
       await this.GetOriginaleCharacterByUser(this.usr, this.nav);
+    },
+    async getCurrentName(e) {
+      try{
+        console.log(e)
+        await this.CountNbOriginaleCharacterByName(e)
+      }
+      catch (error){
+        console.error("Erreur dans CountNbOriginaleCharacterByUser :", error);
+      }
     },
     async GetOriginaleCharacterByUser(user, nav) {
       if (window.innerWidth >= this.width) {
