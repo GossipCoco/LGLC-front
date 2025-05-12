@@ -9,7 +9,7 @@
           :key="index"
         >
           <img
-            class="height-auto"
+            class="width-17-vh"
             :src="character.Character.Image"
             :alt="character.Characterimage"
           />

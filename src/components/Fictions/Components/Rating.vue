@@ -1,5 +1,5 @@
 <template>
-  <div class="rating height-5-vh display-flex-column">
+  <div class="rating width-16-vh height-5-vh display-flex-column">
     <div class="display-flex-row">
       <svg
         v-for="star in 5"

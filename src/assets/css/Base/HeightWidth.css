@@ -25,19 +25,10 @@
 .row.bottom-dashboard-levele-one .card.random-characters-card{
     width: 112vh;
 }
-.carousel {
-    width: 24vh;
-}
-.clan-detail-layout .card-image img,
-.number-page-container{
-    width: 17vh;
-}
 .row.top-dashboard .card-body .title-text-novel{
     width: 42vh;
 }
-.rating {
-    width: 16vh;
-}
+
 .rating svg {
     width: 1vh;
     height: 3vh

@@ -1,6 +1,6 @@
 <template>
   <div class="col-6">
-    <Carousel>
+    <Carousel class="width-24-vh">
       <Slide v-for="(character, slide) in Characters" :key="slide">
         <div class="display-flex-column align-items-content-justify-content carousel__item">
           <img v-if="character.Character"
