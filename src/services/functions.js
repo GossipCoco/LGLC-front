@@ -39,9 +39,30 @@ const CalcPagination = (total, nav) => {
   nav.middle = Math.trunc(pages / 2);
   return pages; 
 }
+
+const getStepByScreenWidth = (width) => {
+  if (width >= 4400 && width <= 10000) {
+    return 10;
+  } else if (width >= 1920 && width < 4400) {
+    return 8;
+  } else if (width >= 1600 && width < 1920) {
+    return 8;
+  } else if (width >= 1400 && width < 1600) {
+    return 8;
+  } else if (width >= 1280 && width < 1400) {
+    return 4;
+  } else if (width >= 768 && width < 1280) {
+    return 3;
+  } else {
+    return 2;
+  }
+};
+
+
 const fonctions = {
     getDate,
     CalcPagination,
-    resizeImage
+    resizeImage,
+    getStepByScreenWidth
 }
 module.exports = fonctions

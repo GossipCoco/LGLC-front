@@ -295,7 +295,7 @@ export default {
     async getAllCharacters(nav) {
       try {
         const screenWidth = window.innerWidth;
-        this.nav.step = this.getStepByScreenWidth(screenWidth);
+        this.nav.step = functions.getStepByScreenWidth(screenWidth);
         this.nav.pages = functions.CalcPagination(
           this.NbAllCharacters,
           this.nav,
