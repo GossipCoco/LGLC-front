@@ -15,9 +15,9 @@
 .character-card.card .card-image{
     width: 28vh;
 }*/
-.card-image img  {
+/* .card-image img  {
     width: 23vh;
-}
+} */
 .all-clans-cards .card-body, .bottom-top-dashboard .card,
 #original-characters-list .border-card-color {
     height: 35vh;
@@ -120,9 +120,6 @@
 }
 .summary-height-container{
     height: 66vh;
-}
-.character-list-wrapper .card-body{
-    height: 7vh;
 }
 /* NavNar en Vh */
 #navbarCollapse {

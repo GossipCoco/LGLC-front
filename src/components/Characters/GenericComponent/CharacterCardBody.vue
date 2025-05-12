@@ -1,9 +1,10 @@
 <template>
-    <div class="card-body margin--1vh-0-0-0 align-items-content-justify-content name-characatrer-link">
+    <div class="card-body height-7-vh margin--1vh-0-0-0 align-items-content-justify-content
+    name-characatrer-link">
       <router-link
         :to="route + name"
         type="button"
-        class="btn btn-primary poppins-text background-color-active height-8-vh width-28-vh"
+        class="btn btn-primary poppins-text background-color-active height-6-vh width-28-vh"
       >
           {{ name }}
         </router-link>
