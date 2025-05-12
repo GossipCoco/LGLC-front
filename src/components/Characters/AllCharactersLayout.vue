@@ -105,23 +105,6 @@ export default {
     await this.initPage();
   },
   methods: {
-    getStepByScreenWidth(width) {
-      if (width >= 4400 && width <= 10000) {
-        return 10; // Très grands écrans
-      } else if (width >= 1920 && width < 4400) {
-        return 8; // Grands écrans (4K ou WQHD)
-      } else if (width >= 1600 && width < 1920) {
-        return 8; // Écrans intermédiaires
-      } else if (width >= 1400 && width < 1600) {
-        return 8; // Écran intermédiaire (ex : laptop haut de gamme)
-      } else if (width >= 1280 && width < 1400) {
-        return 4; // Portable classique
-      } else if (width >= 768 && width < 1280) {
-        return 3; // Tablettes / petits laptops
-      } else {
-        return 2; // Smartphones ou petits écrans
-      }
-    },
     // --- INITIALISATION ---
     async initPage() {
       this.showspinner = true;
