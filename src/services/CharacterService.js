@@ -26,11 +26,17 @@ class CharacterService {
         return http.get(`/character/CountNbCharactersByClan/${id}`)
     }
     CountCharacterByGrade(id){
-        console.log(id)
+        return http.get(`/character/CountNbOriginaleCharacterByName/${id}`)
+    }
+    CountNbOriginaleCharacterByName(id){
+        
         return http.get(`/character/CountCharacterByGrade/${id}`)
     }
     GetAllCharactersByUser(id){
         return http.get(`/character/GetAllCharactersByUser/${id}`)
+    }
+    GetOriginalCharacterByName(id, data){
+        return http.get(`/character/GetOriginalCharacterByName/${id}`, data)
     }
     getAllCharacters(nav) {
         return http.post('/character/allcharacters', nav)

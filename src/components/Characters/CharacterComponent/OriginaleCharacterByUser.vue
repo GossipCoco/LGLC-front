@@ -87,9 +87,7 @@ export default {
     },
     async CountNbOriginaleCharacterByUser(user) {
       try {
-        const response = await CharacterService.CountNbOriginaleCharacterByUser(
-          user
-        );
+        const response = await CharacterService.CountNbOriginaleCharacterByUser(user);
         this.NbAllCharacters = response.data.ob.count;
         functions.CalcPagination(this.NbAllCharacters, this.nav);
       } catch (error) {
@@ -112,9 +110,6 @@ export default {
           nav
         );
         this.allMyCharacters = response.data.ob;
-
-        // Ce log est utile pour vérifier que tout est cohérent
-        console.log("Personnages récupérés :", this.allMyCharacters.length);
       } catch (error) {
         console.error("Erreur dans GetOriginaleCharacterByUser :", error);
       }
