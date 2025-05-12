@@ -157,7 +157,7 @@ li.quest-container {
 /* SPECIFIC */
 #original-characters-list .border-card-color,
 #original-characters-list .card.individual-character-card{
-    aspect-ratio: auto 3 / 4;
+    aspect-ratio: auto 3/2;
     transform: scale(0.95);
 }
 #original-characters-list{

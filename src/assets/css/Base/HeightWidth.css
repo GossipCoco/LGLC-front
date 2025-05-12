@@ -9,26 +9,13 @@
     min-width: 30vh;
     max-width: 30vh;
 }
-/* .location-clan-card-details-body{
-    height: 44vh;
-} 
-.character-card.card .card-image{
-    width: 28vh;
-}*/
-/* .card-image img  {
-    width: 23vh;
-} */
-.all-clans-cards .card-body, .bottom-top-dashboard .card,
-#original-characters-list .border-card-color {
-    height: 35vh;
-} 
+
 .row.bottom-dashboard-levele-one .card.random-characters-card{
     width: 112vh;
 }
 .row.top-dashboard .card-body .title-text-novel{
     width: 42vh;
 }
-
 .rating svg {
     width: 1vh;
     height: 3vh
@@ -39,9 +26,9 @@
 .title-text-novel p a{
     width: 26vh;
 }
-.informations-gamer-container {
+/* .informations-gamer-container {
     height: 45vh;
-}
+} */
 .profil-user-card {
     height: 85vh;
 }

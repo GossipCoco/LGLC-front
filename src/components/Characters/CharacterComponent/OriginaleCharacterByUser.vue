@@ -19,8 +19,8 @@
           v-for="(character, index) in allMyCharacters"
           :key="index"
         >
-          <div class="card-group display-flex width-35-vh">
-            <div class="card individual-character-card background-position-50-percent height-35-vh background-lineart margin-1vh">
+          <div class="card-group display-flex height-35-vh width-35-vh">
+            <div class="card individual-character-card background-position-50-percent height-32-vh background-lineart margin-1vh">
               <BackgroundImage v-bind:Image="character.Image" />
               <CharacterCardBody
                 v-bind:id="character.Id"
