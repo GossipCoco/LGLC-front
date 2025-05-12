@@ -114,8 +114,8 @@ export default {
     },
     async GetOriginalCharacterByName(id, nav){
       try{
-        const responseData = CharacterService.GetOriginalCharacterByName(id, nav)
-        this.searchCharacter = responseData
+        const responseData = await CharacterService.GetOriginalCharacterByName(id, nav)
+        this.searchCharacter = responseData.data.ob
         console.log(this.searchCharacter)
       }
       catch (error){
