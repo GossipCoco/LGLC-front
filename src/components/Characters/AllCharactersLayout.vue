@@ -78,7 +78,7 @@ export default {
       nav: {
         current: 0,
         pages: 0,
-        step: 6,
+        step:8,
       },
       navClans: {
         current: 0,
@@ -105,6 +105,23 @@ export default {
     await this.initPage();
   },
   methods: {
+    getStepByScreenWidth(width) {
+      if (width >= 4400 && width <= 10000) {
+        return 10; // Très grands écrans
+      } else if (width >= 1920 && width < 4400) {
+        return 8; // Grands écrans (4K ou WQHD)
+      } else if (width >= 1600 && width < 1920) {
+        return 8; // Écrans intermédiaires
+      } else if (width >= 1400 && width < 1600) {
+        return 8; // Écran intermédiaire (ex : laptop haut de gamme)
+      } else if (width >= 1280 && width < 1400) {
+        return 4; // Portable classique
+      } else if (width >= 768 && width < 1280) {
+        return 3; // Tablettes / petits laptops
+      } else {
+        return 2; // Smartphones ou petits écrans
+      }
+    },
     // --- INITIALISATION ---
     async initPage() {
       this.showspinner = true;
@@ -215,7 +232,6 @@ export default {
           this.nav.step
         );
         const responseData = await CharacterService.GetAllCharactersByGrade(this.selectGrade, this.nav)
-        console.log(responseData.data.ob)
         this.filteredCharacters = responseData.data.ob;
         this.useFiltered = true;
       } catch (e) {
@@ -267,7 +283,6 @@ export default {
             this.nav
           )
         }
-
         if (response) {
           this.filteredCharacters = response.data.ob;
           this.useFiltered = true;
@@ -278,20 +293,18 @@ export default {
     },
     // --- TOUS LES PERSONNAGES ---
     async getAllCharacters(nav) {
-      if (window.innerWidth >= this.width) {
-        this.nav.step = 8;
-      } else if (window.innerWidth < this.width) {
-        this.nav.step = 8;
-      }
       try {
-        const response = await CharacterService.getAllCharacters({ nav });
-        this.allCharacters = response.data.ob;
-        this.showspinner = false;
+        const screenWidth = window.innerWidth;
+        this.nav.step = this.getStepByScreenWidth(screenWidth);
         this.nav.pages = functions.CalcPagination(
           this.NbAllCharacters,
           this.nav,
           this.nav.step
         );
+        const response = await CharacterService.getAllCharacters({ nav });
+        this.allCharacters = response.data.ob;
+        this.showspinner = false;
+     
       } catch (e) {
         console.log(e);
       }
