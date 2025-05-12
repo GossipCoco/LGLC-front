@@ -8,10 +8,6 @@
 .character-card.card {
     min-width: 30vh;
     max-width: 30vh;
-    height: 42vh;
-}
-.height-character{
-    height: 7vh
 }
 .card-form-create-character .card-body {
     height: 77vh;
@@ -113,10 +109,6 @@
 }
 .location-clan-background-width-container .btn.btn-primary{
     max-width: 30vh;
-}
-.name-characatrer-link .btn{
-    height: 7vh;
-    width: 28vh;
 }
 #original-characters-list .name-characatrer-link .btn{
     height: 6vh;

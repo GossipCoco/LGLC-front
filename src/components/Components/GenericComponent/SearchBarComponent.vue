@@ -1,6 +1,6 @@
 <template>
     <div class="row row-filter background-color-dark-green-01 display-flex vertical-align-middle">
-      <div class="col-xxl-2 col-xl-2 col-lg-12 col-md-12 col-sm-12 col-xs-12 display-flex-row align-items-content-justify-content vertical-align-middle height-character">
+      <div class="col-xxl-2 col-xl-2 col-lg-12 col-md-12 col-sm-12 col-xs-12 display-flex-row align-items-content-justify-content vertical-align-middle height-7-vh">
         <p class="text-white poppins-text">{{ labelFilter }}</p>
       </div>
       <InputName
