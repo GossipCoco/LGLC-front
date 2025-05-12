@@ -36,7 +36,7 @@ class CharacterService {
         return http.get(`/character/GetAllCharactersByUser/${id}`)
     }
     GetOriginalCharacterByName(id, data){
-        return http.get(`/character/GetOriginalCharacterByName/${id}`, data)
+        return http.post(`/character/GetOriginalCharacterByName/${id}`, data)
     }
     getAllCharacters(nav) {
         return http.post('/character/allcharacters', nav)

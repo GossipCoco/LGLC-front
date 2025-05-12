@@ -66,6 +66,7 @@ export default {
         step: 8,
       },
       showspinner: false,
+      searchCharacter:{}
     };
   },
   created() {
@@ -97,7 +98,12 @@ export default {
     async CountNbOriginaleCharacterByName(id){
       try{
         const response = await CharacterService.CountNbOriginaleCharacterByName(id)
-        console.log(response)
+        this.nav.pages = functions.CalcPagination(
+          response.data.ob.ob.count,
+          this.nav,
+          this.nav.step
+        );
+        await this.GetOriginalCharacterByName(id, this.nav)
       } catch (error) {
         console.error("Erreur dans CountNbOriginaleCharacterByUser :", error);
       }
@@ -105,6 +111,16 @@ export default {
     async CharacterPagination(page) {
       this.nav.current = page;
       await this.GetOriginaleCharacterByUser(this.usr, this.nav);
+    },
+    async GetOriginalCharacterByName(id, nav){
+      try{
+        const responseData = CharacterService.GetOriginalCharacterByName(id, nav)
+        this.searchCharacter = responseData
+        console.log(this.searchCharacter)
+      }
+      catch (error){
+        console.error("Erreur dans CountNbOriginaleCharacterByUser :", error);
+      }
     },
     async getCurrentName(e) {
       try{
