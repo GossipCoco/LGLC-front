@@ -72,6 +72,9 @@
 .height-25-vh{
     height: 25vh;
 }
+.height-23-vh{
+    height: 23vh;
+}
 .height-20-vh{
     height: 20vh;
 }
@@ -87,11 +90,11 @@
 .height-10-vh{
     height: 10vh;
 }
-.height-7-vh{
-    height: 7vh;
+.height-8-vh{
+    height: 8vh;
 }
 .height-7-vh{
-    height: 5vh;
+    height: 7vh;
 }
 .height-5-vh{
     height: 5vh;
@@ -176,6 +179,10 @@
 .width-25-vh
 {
     width: 25vh;
+}
+.width-23-vh
+{
+    width: 23vh;
 }
 .width-20-vh
 {

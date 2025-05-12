@@ -9,15 +9,12 @@
     min-width: 30vh;
     max-width: 30vh;
 }
-.card-form-create-character .card-body {
-    height: 77vh;
-}
-.location-clan-card-details-body{
+/* .location-clan-card-details-body{
     height: 44vh;
-}
+} 
 .character-card.card .card-image{
     width: 28vh;
-}
+}*/
 .card-image img  {
     width: 23vh;
 }

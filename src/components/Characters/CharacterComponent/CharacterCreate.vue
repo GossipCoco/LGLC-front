@@ -8,7 +8,7 @@
        align-items-content-justify-content flex-one mb-12 text-white"
     >
       <CardHeader v-bind:Title="'Création de personnage'" />
-      <div class="card-body  overflowY-X-hidden">
+      <div class="card-body height-77-vh overflowY-X-hidden">
         <form class="create-character-form height-77-vh width-185-vh overflow-hidden" @submit.stop.prevent="onSubmit">
           <Transition name="slide-fade">
             <div v-if="formPart1" class="character-detail-form">

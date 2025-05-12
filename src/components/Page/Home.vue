@@ -4,7 +4,7 @@
       <div class="col-xs-12 col-sm-12 col-md-1 col-lg-1 col-xl-1 col-xxl-1">
         <LeftMenu />
       </div>
-      <div class="height-100 col-xs-12 col-sm-12 col-md-11 col-lg-11 col-xl-11 col-xxl-11 padding-1-vh">
+      <div class="height-100 col-xs-12 col-sm-12 col-md-11 col-lg-11 col-xl-11 col-xxl-11 padding-1-vh-0-0-1vh">
         <main class="container-fluid height-100 display-flex-column main-global-container">          
           <router-view></router-view>
         </main>
