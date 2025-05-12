@@ -1,6 +1,6 @@
 <template>
-  <div class="display-flex-row flex-one align-items-content-justify-content all-characters-list-containers">
-    <div class="row">
+  <div class="display-flex-row flex-one align-items-content-justify-content all-characters-list-containers height-25-vh width-133-vh">
+    <div class="row height-25-vh">
       <div class="col-2" v-for="(character, index) in characters" :key="index">
         <div v-if="character.Character">
         <img
