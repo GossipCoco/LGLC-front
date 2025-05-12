@@ -21,7 +21,7 @@
     margin: -2vh 0 1vh 4vh;
 }
 #original-characters-list .card-character-container{
-    margin: 4vh 6vh 1vh 0;
+    margin: 0vh 6vh 1vh 0;
 }
 #all-characters-container-card .character-card.card {
     margin: 1vh 3vh 0 3vh;
@@ -161,7 +161,7 @@ li.quest-container {
     transform: scale(0.95);
 }
 #original-characters-list{
-    margin: -13vh 0 0 30vh;
+    margin: -2vh 0 0 2vh;;
 }
 .row.btn-create-character{
     margin:0;

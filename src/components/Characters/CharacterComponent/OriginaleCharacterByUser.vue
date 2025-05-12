@@ -1,41 +1,70 @@
 <template>
-  <div class="card border-none card-all-my-characters background-none align-items-content-justify-content width-190-vh">
-        <card-header
+  <div
+    class="card border-none card-all-my-characters background-none align-items-content-justify-content width-190-vh"
+  >
+    <card-header
       v-bind:label="'Tous Mes personnages'"
       v-bind:route="'/CreateAnOriginalCharacter'"
       v-bind:NameLink="'Nouveau personnage'"
     />
-    <div class="card-body width-190-vh height-90-vh">
+    <div class="card-body width-200-vh height-90-vh">
       <div
-        id="original-characters-list"
-        class="row row-cols-1 row-cols-md-2 g-4 display-flex align-items-content-justify-content overflowY-X-hidden overflowY-hidden padding-0-rem height-90-vh width-120-vh border-none"
+        class="character-container padding-0 list-all-characters-container padding-2-vh-0-0-1vh"
       >
         <div
-          class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4 card-character-container width-30-vh height-35-vh original-character-card-container"
-          v-for="(character, index) in allMyCharacters"
-          :key="index"
+          id="original-characters-list"
+          class="row row-cols-1 row-cols-md-4 g-4 width-190-vh"
         >
-          <div class="card-group display-flex height-35-vh width-35-vh">
-            <div class="card individual-character-card background-position-50-percent height-32-vh background-lineart margin-1vh">
-              <BackgroundImage v-bind:Image="character.Image" />
-              <CharacterCardBody
-                v-bind:id="character.Id"
-                v-bind:name="character.CurrentName"
-                v-bind:route="'/OriginaleCharacterDetails/'"
-              />
+          <filter-component
+            @getCurrentName="getCurrentName"
+            @onSelectClan="onSelectClan"
+            @onSelectGrade="onSelectGrade"
+          />
+
+          <div
+            class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-10 col-xs-10"
+          >
+            <div
+              id="all-characters-container-card"
+              class="row all-characters-container-card width-150-vh"
+            >
+              <div
+                class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 display-flex-row align-items-content-justify-content character-container overflowY-X-hidden"
+              >
+                <div
+                  class="card-character-container width-30-vh height-35-vh original-character-card-container"
+                  v-for="(character, index) in allMyCharacters"
+                  :key="index"
+                >
+                  <div class="card-group display-flex height-35-vh width-35-vh">
+                    <div
+                      class="card individual-character-card background-position-50-percent height-32-vh background-lineart margin-1vh"
+                    >
+                      <BackgroundImage v-bind:Image="character.Image" />
+                      <CharacterCardBody
+                        v-bind:id="character.Id"
+                        v-bind:name="character.CurrentName"
+                        v-bind:route="'/OriginaleCharacterDetails/'"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="row pagination-row-container margin--1vh-0-0-0">
-        <div clss="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          <Pagination
-            v-if="!showspinner && nav.pages > 0"
-            v-bind:nav="nav"
-            v-bind:filters="filters"
-            v-bind:getDatas="'CharacterPagination'"
-            @CharacterPagination="CharacterPagination"
-          />
+        <div class="row pagination-row-container margin--10vh-0-0-0">
+          <div
+            clss="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12"
+          >
+            <Pagination
+              v-if="!showspinner && nav.pages > 0"
+              v-bind:nav="nav"
+              v-bind:filters="filters"
+              v-bind:getDatas="'CharacterPagination'"
+              @CharacterPagination="CharacterPagination"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -48,20 +77,23 @@ import CharacterService from "../../../services/CharacterService";
 import Pagination from "../../Components/GenericComponent/Pagination.vue";
 import BackgroundImage from "../GenericComponent/BackgroundImage.vue";
 import CharacterCardBody from "../GenericComponent/CharacterCardBody.vue";
+import FilterComponent from "../GenericComponent/FilterComponent.vue";
+// import CharacterCard from "./CharacterCard.vue";
 
 export default {
   name: "OriginaleCharacterByUser",
   components: {
     Pagination,
+    CardHeader,
+    FilterComponent,
     BackgroundImage,
     CharacterCardBody,
-    CardHeader
   },
   data() {
     return {
       usr: this.$store.state.auth.user.usrID,
       NbAllCharacters: null,
-      allMyCharacters: {},
+      allMyCharacters: [],
       filters: [],
       width: 1750,
       nav: {
@@ -83,12 +115,7 @@ export default {
     },
     async init() {
       try {
-        console.log("User :", this.usr);
-
-        // On attend d’abord que le comptage soit terminé
         await this.CountNbOriginaleCharacterByUser(this.usr);
-
-        // Ensuite, on récupère les personnages (car il faut nav.pages déjà calculé !)
         await this.GetOriginaleCharacterByUser(this.usr, this.nav);
       } catch (error) {
         console.error("Erreur dans init :", error);
@@ -101,8 +128,6 @@ export default {
         );
         this.NbAllCharacters = response.data.ob.count;
         functions.CalcPagination(this.NbAllCharacters, this.nav);
-        console.log("NbAllCharacters :", this.NbAllCharacters);
-        console.log("nav.pages :", this.nav.pages);
       } catch (error) {
         console.error("Erreur dans CountNbOriginaleCharacterByUser :", error);
       }
@@ -117,7 +142,6 @@ export default {
       } else {
         this.nav.step = 6;
       }
-
       try {
         const response = await CharacterService.GetOriginaleCharacterByUser(
           user,
