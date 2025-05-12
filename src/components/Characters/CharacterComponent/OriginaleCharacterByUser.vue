@@ -20,7 +20,8 @@
             @onSelectClan="onSelectClan"
             @onSelectGrade="onSelectGrade"
           />
-          <my-characters-card v-bind:allMyCharacters="allMyCharacters" />
+          <my-characters-card v-if="allCharacters" v-bind:allMyCharacters="allMyCharacters" />          
+          <my-characters-card v-if="allSearchedCharacter" v-bind:allMyCharacters="searchCharacter" />
         </div>
         <div class="row pagination-row-container margin--5vh-0-0-0">
           <div clss="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -66,18 +67,16 @@ export default {
         step: 8,
       },
       showspinner: false,
-      searchCharacter:{}
+      searchCharacter:{},
+      allCharacters: true,
+      allSearchedCharacter : false
+
     };
   },
   created() {
     this.init();
   },
   methods: {
-    truncateText(text, maxLength) {
-      return text.length <= maxLength
-        ? text
-        : text.substring(0, maxLength) + "...";
-    },
     async init() {
       try {
         await this.CountNbOriginaleCharacterByUser(this.usr);
@@ -96,6 +95,14 @@ export default {
       }
     },
     async CountNbOriginaleCharacterByName(id){
+      this.allCharacters = false
+      this.allSearchedCharacter = true
+      if (!id || id.trim() === "") {
+        this.allCharacters = true
+        this.allSearchedCharacter = false
+        await this.initPage();
+        return;
+      }
       try{
         const response = await CharacterService.CountNbOriginaleCharacterByName(id)
         this.nav.pages = functions.CalcPagination(
@@ -124,7 +131,6 @@ export default {
     },
     async getCurrentName(e) {
       try{
-        console.log(e)
         await this.CountNbOriginaleCharacterByName(e)
       }
       catch (error){
@@ -143,6 +149,7 @@ export default {
           nav
         );
         this.allMyCharacters = response.data.ob;
+        console.log(this.allMyCharacters)
       } catch (error) {
         console.error("Erreur dans GetOriginaleCharacterByUser :", error);
       }
