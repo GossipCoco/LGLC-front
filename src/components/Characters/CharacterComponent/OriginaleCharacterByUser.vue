@@ -29,8 +29,9 @@
               v-if="!showspinner && nav.pages > 0"
               v-bind:nav="nav"
               v-bind:filters="filters"
-              v-bind:getDatas="'CharacterPagination'"
+              :getDatas="useFiltered ? 'CharacterFilteredPagination' : 'CharacterPagination'"
               @CharacterPagination="CharacterPagination"
+              @CharacterFilteredPagination="CharacterFilteredPagination"
             />
           </div>
         </div>
@@ -69,9 +70,23 @@ export default {
       showspinner: false,
       searchCharacter:{},
       allCharacters: true,
-      allSearchedCharacter : false
+      allSearchedCharacter : false,      
+      useFiltered: false,
 
     };
+  },
+  watch: {
+    nameSearch(newVal) {
+      if (!newVal || newVal.trim() === "") {
+        this.useFiltered = false;
+        this.nav.current = 0;
+        this.getAllOriginalCharactersByUser(this.nav);
+      } else {
+        this.useFiltered = true;
+        this.nav.current = 0;
+        this.getOriginalCharacterByName(this.nameSearch, this.nav);
+      }
+    },
   },
   created() {
     this.init();
@@ -118,6 +133,10 @@ export default {
     async CharacterPagination(page) {
       this.nav.current = page;
       await this.GetOriginaleCharacterByUser(this.usr, this.nav);
+    },    
+    async CharacterFilteredPagination(page) {
+      this.nav.current = page;
+      await this.getOriginalCharacterByName(this.nameSearch, this.nav);
     },
     async GetOriginalCharacterByName(id, nav){
       try{
