@@ -1,15 +1,11 @@
 <template>
   <div class="card border-none card-all-my-characters background-none align-items-content-justify-content width-190-vh">
-    <div class="card-header z-index-9999 border-radius-12px background-color-dark-green-01 display-flex-row align-items-content-justify-content width-190-vh">
-      <h1 class="text-white poppins-text">Mes personnages</h1>
-      <router-link
-        to="/CreateAnOriginalCharacter"
-        class="btn btn-lg btn-primary margin-0-0-0-2vh"
-      >
-        Nouveau personnage
-      </router-link>
-    </div>
-    <div class="card-body height-90-vh">
+        <card-header
+      v-bind:label="'Tous Mes personnages'"
+      v-bind:route="'/CreateAnOriginalCharacter'"
+      v-bind:NameLink="'Nouveau personnage'"
+    />
+    <div class="card-body width-190-vh height-90-vh">
       <div
         id="original-characters-list"
         class="row row-cols-1 row-cols-md-2 g-4 display-flex align-items-content-justify-content overflowY-X-hidden overflowY-hidden padding-0-rem height-90-vh width-120-vh border-none"
@@ -47,6 +43,7 @@
 </template>
 <script>
 import functions from "../../../services/functions";
+import CardHeader from "../GenericComponent/CardHeader.vue";
 import CharacterService from "../../../services/CharacterService";
 import Pagination from "../../Components/GenericComponent/Pagination.vue";
 import BackgroundImage from "../GenericComponent/BackgroundImage.vue";
@@ -58,6 +55,7 @@ export default {
     Pagination,
     BackgroundImage,
     CharacterCardBody,
+    CardHeader
   },
   data() {
     return {

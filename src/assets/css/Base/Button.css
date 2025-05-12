@@ -45,7 +45,6 @@
     margin: 0 0 0 -2.5vh;
 }
 .name-characatrer-link .btn{
-    margin: -2vh 0 0 -2vh;
     background-color: rgba(var(--middle-green-02), 1);
 }
 .btn-create-character .btn{

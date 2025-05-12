@@ -1,17 +1,16 @@
 <template>
-  <div class="card border-none card-all-my-characters background-none align-items-content-justify-content
-  width-190-vh"
+  <div class="card border-none card-all-my-characters background-none align-items-content-justify-content width-190-vh"
   >
     <card-header
       v-bind:label="'Tous les personnages'"
       v-bind:route="'/CreateAnOriginalCharacter'"
       v-bind:NameLink="'Nouveau personnage'"
     />
-    <div class="card-body width-190-vh height-90-vh">
+    <div class="card-body width-190-vh  height-90-vh">
       <div
         class="character-container padding-0 list-all-characters-container padding-2-vh-0-0-1vh"
       >
-        <div class="row width-190-vh">
+        <div class="row row-cols-1 row-cols-md-2 g-4 width-190-vh">
           <filter-component
             @getCurrentName="getCurrentName"
             @onSelectClan="onSelectClan"

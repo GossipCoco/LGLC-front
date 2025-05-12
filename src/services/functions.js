@@ -3,30 +3,30 @@
  * 
 */
 
-const pica = require("pica")();
+// const pica = require("pica")();
 
-const resizeImage = (img, maxWidth, originalFile) => {
-  return new Promise((resolve, reject) => {
-    const canvas = document.createElement("canvas");
+// const resizeImage = (img, maxWidth, originalFile) => {
+//   return new Promise((resolve, reject) => {
+//     const canvas = document.createElement("canvas");
 
-    // Maintenir le ratio d'aspect en ajustant la largeur à `maxWidth`
-    const scaleFactor = maxWidth / img.width;
-    canvas.width = maxWidth;
-    canvas.height = img.height * scaleFactor;
+//     // Maintenir le ratio d'aspect en ajustant la largeur à `maxWidth`
+//     const scaleFactor = maxWidth / img.width;
+//     canvas.width = maxWidth;
+//     canvas.height = img.height * scaleFactor;
 
-    const ctx = canvas.getContext("2d");
-    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+//     const ctx = canvas.getContext("2d");
+//     ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
 
-    // Utiliser `pica` pour redimensionner et transformer le canvas en blob
-    pica.resize(canvas, canvas, { quality: 3, alpha: true })
-      .then(() => pica.toBlob(canvas, originalFile.type, 0.9))
-      .then(blob => {
-        const resizedFile = new File([blob], originalFile.name, { type: originalFile.type });
-        resolve(resizedFile);
-      })
-      .catch(reject);
-  });
-};
+//     // Utiliser `pica` pour redimensionner et transformer le canvas en blob
+//     pica.resize(canvas, canvas, { quality: 3, alpha: true })
+//       .then(() => pica.toBlob(canvas, originalFile.type, 0.9))
+//       .then(blob => {
+//         const resizedFile = new File([blob], originalFile.name, { type: originalFile.type });
+//         resolve(resizedFile);
+//       })
+//       .catch(reject);
+//   });
+// };
 
 const getDate = (value) => {
     const dateTest = new Date(value);
@@ -57,6 +57,35 @@ const getStepByScreenWidth = (width) => {
     return 2;
   }
 };
+const resizeImage = (file, maxWidth = 500, maxHeight = 700) => {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    const reader = new FileReader();
+
+    reader.onload = e => {
+      img.src = e.target.result;
+    };
+
+    img.onload = () => {
+      const canvas = document.createElement('canvas');
+      const ctx = canvas.getContext('2d');
+
+      let ratio = Math.min(maxWidth / img.width, maxHeight / img.height);
+      canvas.width = img.width * ratio;
+      canvas.height = img.height * ratio;
+
+      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+      canvas.toBlob(blob => {
+        const resizedFile = new File([blob], file.name, { type: file.type });
+        resolve(resizedFile);
+      }, file.type);
+    };
+
+    reader.onerror = reject;
+    reader.readAsDataURL(file);
+  });
+}
 
 
 const fonctions = {

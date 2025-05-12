@@ -94,3 +94,6 @@ th{
 p{
     margin: 0;
 }
+.transform-card{
+        transform: translate3d(0rem, 2vh, 0rem) scale(0.98);
+}
