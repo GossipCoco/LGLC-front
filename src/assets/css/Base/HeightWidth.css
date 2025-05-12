@@ -60,13 +60,6 @@
 .character-details .card-body {
     height: 95vh;
 }
-.all-characters-list-containers{
-    width: 133vh;
-}
-.all-characters-list-containers,
-.all-characters-list-containers .row{
-    height: 25vh;
-}
 .clan-detail-layout .card-header .row{
     width: 120vh;
 }
