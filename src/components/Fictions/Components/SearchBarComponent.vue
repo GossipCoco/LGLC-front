@@ -1,5 +1,5 @@
 <template>
-  <div class="row search-bar-component height-6-vh">
+  <div class="row">
     <SelectCharacterComponent
       v-bind:For="'SearchCharacter'"
       v-bind:label="'Chercher un personnage'"

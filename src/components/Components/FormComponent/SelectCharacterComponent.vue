@@ -1,6 +1,5 @@
 <template>
-
-    <div class="col-md-3">
+  <div class="col-md-3">
       <label :for="For" class="text-white form-label form-select-sm poppins-text">
         {{ label }}
       </label>
