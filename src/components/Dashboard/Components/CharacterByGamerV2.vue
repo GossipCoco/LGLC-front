@@ -8,7 +8,7 @@
       />
       <Spinner v-if="showspinner" />
       <div class="card-body display-flex-row flex-wrap align-items-content-justify-content" v-if="!showspinner">
-        <div class="row width-30-vh">
+        <div class="row width-30-vh flex-wrap-wrap">
           <div v-for="(character, index) in gamer" :key="index" class="col">
             <character-link
               v-bind:typeCharacter="'OC'"

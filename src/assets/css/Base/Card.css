@@ -91,9 +91,6 @@
 #quest-by-id .quest-by-id-card.card.quest-by-id-card.background-color-main-lineart{
     margin: 1vh 0 1vh 0;
 }
-.random-characters-card .card-body{
-    flex-wrap: wrap;
-}
 .my-oc-character-container{
     margin: 0 0.5rem;
 }
@@ -182,7 +179,6 @@ li.quest-container {
     overflow: scroll;
 }
 .row.top-dashboard .all-my-oc-card .card-body > div{
-    flex-wrap: wrap;
     margin: 9vh 0 0 0;
 }
 .summaray-title-text p{

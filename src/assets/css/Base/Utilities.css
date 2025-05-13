@@ -20,6 +20,9 @@
 .display-block{
     display: block;
 }
+.flex-wrap-wrap{
+    flex-wrap: wrap;
+}
 /* Alignement */
 .align-items-content-justify-content{
     align-items: center;
