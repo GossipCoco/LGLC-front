@@ -101,6 +101,9 @@
 .maTB-2vh-1vh{
     margin: 2vh 0 0 1vh;
 }
+.maR-0-5vh{
+    margin: 0 0 0 0.5vh;
+}
 /*  PADDING */
 .padding-0-rem{
     padding: 0;

@@ -86,9 +86,6 @@
     overflow-y: scroll;
     overflow-x: hidden;
 }
-.all-characters-list-containers .row{
-    padding: 0 0 0 0;
-}
 .illustration-arc-container{
     background-position: 2%;
 }
