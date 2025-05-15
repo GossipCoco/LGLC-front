@@ -120,7 +120,6 @@ export default {
 
       await this.getAllFictions(this.nav);
     },
-
     async countAllFictions() {
       try {
         const response = await FictionService.CountAllFictionsOnBases();
@@ -134,7 +133,6 @@ export default {
         console.error(error);
       }
     },
-
     async getAllFictions(nav) {
       try {
         const response = await FictionService.GetAllFictionsOnBase(nav);

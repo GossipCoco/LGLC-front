@@ -14,7 +14,7 @@
             />
         </div>
       </div>
-      <Rating :fictionId="IdFiction" :rating="rating" />
+      <rating v-bind:IdFiction="IdFiction" v-bind:rating="rating" />
       <TitleFiction
         v-bind:Title="Title"
         v-bind:Author="Author"
@@ -48,7 +48,7 @@ export default {
     name: "FictionHeaderCard",
     props: ['Title', 'Author',  'Id', 'rating', 'dateCreation'],
     components: {
-        CreateCommentModal,Rating,TitleFiction,
+        CreateCommentModal,TitleFiction, Rating
     }
     
 }
