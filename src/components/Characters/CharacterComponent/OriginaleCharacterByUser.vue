@@ -10,7 +10,7 @@
     />
     <div class="card-body height-90-vh">
       <div
-        class="character-container padding-0 list-all-characters-container padding-2-vh-0-0-1vh"
+        class="height-95-vh character-container padding-0 list-all-characters-container padding-2-vh-0-0-1vh"
       >
         <div
           id="original-characters-list"

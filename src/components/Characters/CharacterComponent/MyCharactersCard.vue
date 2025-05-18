@@ -4,7 +4,7 @@
             id="all-characters-container-card"
             class="row all-characters-container-card width-150-vh"
         >
-            <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 display-flex-row align-items-content-justify-content character-container overflowY-X-hidden">
+            <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 display-flex-row align-items-content-justify-content character-container height-95-vh overflowY-X-hidden">
                 <div class="card-character-container width-30-vh height-35-vh original-character-card-container"
                     v-for="(character, index) in allMyCharacters"
                     :key="index"
