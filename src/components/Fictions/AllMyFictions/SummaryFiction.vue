@@ -3,26 +3,21 @@
     <div class="row">
       <div class="col-2 col-xl-2 col-xxl-2 col-lg-2 col-md-2 col-sm-12 col xs-12">
         <div class="card background-color-dark-green-01 margin-2vh-0-0-0 height-80-vh">
-          <div class="card-header">
-            <h3 class="text-white poppins-text">Filtrer</h3>
-          </div>
-          <div class="card-body">
-            <div class="row"></div>
-          </div>
+          <filter-component />
         </div>
       </div>
       <div class="col-10 col-xl-10 col-xxl-10 col-lg-10 col-md-10 col-sm-12 col xs-12">      
         <AllCardsFictions :allFictions="allFictions" />        
       </div>
       <div class="row pagination-container margin-2vh">
-          <Pagination
-            v-if="!showspinner"
-            :nav="nav"
-            :filters="filters"
-            :getDatas="'FictionPagination'"
-            @FictionPagination="FictionPagination"
-          />
-        </div>
+        <Pagination
+          v-if="!showspinner"
+          :nav="nav"
+          :filters="filters"
+          :getDatas="'FictionPagination'"
+          @FictionPagination="FictionPagination"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -32,11 +27,12 @@ import GameService from "../../../services/GameService";
 import Pagination from "../../Components/GenericComponent/Pagination.vue";
 import FictionService from "../../../services/FictionService";
 import AllCardsFictions from "./AllCardsFictions.vue";
+import FilterComponent from "../Components/FilterComponent.vue";
 
 export default {
   name: "SummaryFiction",
   props: ["typePage"],
-  components: { AllCardsFictions, Pagination },
+  components: { AllCardsFictions, Pagination, FilterComponent },
   data() {
     return {
       userCurrent: this.$store.state.auth.user.usrID,

@@ -22,7 +22,7 @@ html, body, #app {
   overflow: hidden;
 }
 html,body {
-  background-image: var(--background-image);
+  background-image: var(--background-image-02);
   background-position: 100% 95%;
   background-size: cover;
   background-repeat: no-repeat;
