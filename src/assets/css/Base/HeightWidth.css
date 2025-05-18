@@ -44,7 +44,6 @@
 .image-fiction-container-background{
     height: 17vh;
 }
-
 .game-container img{
     width: 6vh;
 }
@@ -62,9 +61,9 @@
     width: 34vh;
     height: 35vh;
 }
-.all-fictions-container-global{
+/* .all-fictions-container-global{
     height: 95vh;
-}
+} */
 .flex-one .quest-button-text .btn.btn-primary{
     width: 18vh;
 }
