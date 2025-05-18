@@ -7,7 +7,7 @@
       <CharacterImageDetail v-bind:Image="character.Image" />
       <div class="col-8 col-md-8">
         <div class="card border-none height-95-vh overflowY-X-hidden background-color-main-lineart details-infos-characters border-radius-12px text-white">
-        <div class="card-body">
+        <div class="card-body height-95-vh">
           <div class="display-flex-row">
             <div class="display-flex flex-one">
               <h1 class="text-white card-title cinzel">{{ character.CurrentName }}</h1>

@@ -10,7 +10,7 @@
       </CharacterImageDetail>
       <div class="col-8 col-md-8">
         <div class="card border-none height-95-vh background-color-main-lineart details-infos-characters border-radius-12px poppins-text text-white">
-        <div class="card-body">
+        <div class="card-body height-95-vh">
           <div class="row display-flex-row">
             <div class="col-9">
               <h1 class="card-title cinzel">{{ currentName }}</h1>
