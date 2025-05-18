@@ -9,7 +9,6 @@
     min-width: 30vh;
     max-width: 30vh;
 }
-
 .row.bottom-dashboard-levele-one .card.random-characters-card{
     width: 112vh;
 }
@@ -25,12 +24,6 @@
 }
 .title-text-novel p a{
     width: 26vh;
-}
-/* .informations-gamer-container {
-    height: 45vh;
-} */
-.profil-user-card {
-    height: 85vh;
 }
 .character-container {
     height: 95vh;
