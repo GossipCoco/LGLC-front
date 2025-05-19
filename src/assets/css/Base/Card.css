@@ -257,3 +257,8 @@ li.quest-container {
     left: 18vh;
     top: 9vh;
 }
+.card-img-top {
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    height: 20vh;
+}

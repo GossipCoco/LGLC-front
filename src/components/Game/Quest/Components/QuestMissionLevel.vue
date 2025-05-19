@@ -1,18 +1,27 @@
 <template>
   <div class="display-flex-column one-quest flex-one">
     <div
-      class="display-flex-column quest-button-text height-30-vh align-items-content-justify-content vertical-align-middle"
+      class="display-flex-column quest-button-text height-20-vh align-items-content-justify-content vertical-align-middle"
     >
       <p
         class="display-flex-column quest-description height-5-vh width-20-vh font-weight-400 white-text display-none-responsive poppins-text"
       >
-        Difficulté : {{ quest.DifficultyLevel }}
+        <span class="badge text-bg-success" v-if="quest.DifficultyLevel === 'Facile'">
+        {{ quest.DifficultyLevel }}
+        </span>
+        <span class="badge text-bg-warning" v-if="quest.DifficultyLevel === 'Moyen'">
+        {{ quest.DifficultyLevel }}
+        </span>
+        <span class="badge text-bg-danger" v-if="quest.DifficultyLevel === 'Difficile'">
+        {{ quest.DifficultyLevel }}
+        </span>
+         
       </p>
-      <p
+      <!-- <p
         class="display-flex-column quest-description height-40-vh width-20-vh font-weight-400 white-text display-none-responsive poppins-text"
       >
         {{ quest.Description }}
-      </p>
+      </p> -->
       <p class="display-flex-column quest-button-link height-20-vh">
         <router-link
           :to="'/QuestById/' + quest.Id"
