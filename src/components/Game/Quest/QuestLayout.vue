@@ -97,7 +97,6 @@ export default {
       try {
         const response = await QuestService.GetAllQuests(nav);
         this.allQuests = response.data.ob;
-        console.log(this.allQuests)
         functions.CalcPagination(this.nbQuests, this.nav);
       } catch (e) {
         console.log(e);

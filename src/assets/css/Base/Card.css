@@ -112,6 +112,8 @@ li.quest-container {
 }
 .background-image-quest{
     background-position: 50% 45%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
 }
 .quest-details {
     margin-top: 20px;
