@@ -85,7 +85,6 @@ export default {
     GetOneOriginaleCharacterByName(name) {
       CharacterService.GetOneOriginaleCharacterByName(name)
         .then((response) => {
-          console.log(response.data.ob.Clan)
           this.Clan = response.data.ob.Clan
           this.character = response.data.ob;
           this.symbol = response.data.ob.Clan.Symbol

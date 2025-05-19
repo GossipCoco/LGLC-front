@@ -114,10 +114,8 @@ export default {
     getCharacter(id) {
       CharacterService.getCharacterByName(id)
         .then((response) => {
-          console.log(response.data.ob)
           this.character = response.data.ob;
           this.symboleClan = this.character.Clan.Symbol;
-          console.log(this.symboleClan)
           this.ClanId = this.character.Clan.Id
           this.NameClan = this.character.Clan.Name;
           this.image = response.data.ob.Image;
@@ -134,7 +132,6 @@ export default {
           this.Grade = response.data.ob.Grade.Name
           this.Relation = response.data.ob.RelationsOne
           this.Fictions = response.data.ob.GameCharacters
-
         })
         .catch((e) => {
           console.log(e);
