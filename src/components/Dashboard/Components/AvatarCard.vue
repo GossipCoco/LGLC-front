@@ -11,7 +11,7 @@
             <div class="row width-85-vh height-12-vh">
               <div class="col-xxl-1 col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
               <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-5 col-xs-5 avatar-col">
-                <ImageRondDashboard v-bind:src="'/images/Avatars/' + Avatar" v-bind:alt="Avatar" v-bind:classe="'card-img-top'" v-bind:edit="true"/>
+                <ImageRondDashboard v-bind:src="'/images/Avatars/' + Avatar" v-bind:alt="Avatar" v-bind:classe="''" v-bind:edit="true"/>
               </div>
               <div class="col-xxl-1 col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1">
                 <router-link :to="'/user/' + usrId">
