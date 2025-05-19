@@ -1,6 +1,6 @@
 <template>
   <div
-    class="border-none background-none flex-one card padding-0 one-quest-container height-32-vh align-items-content-justify-content padding-zero"
+    class="border-none background-none flex-one card padding-0 one-quest-container height-32-vh align-items-content-justify-content padding-0-re"
   >
     <CardHeader
       class="width-190-vh"
@@ -13,7 +13,9 @@
         class="row list-quest-card-container width-180-vh height-70-vh"
       >
         <div class="row width-180-vh">
-          <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
+          <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-12">
+            <filter-component />
+          </div>
           <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-10 col-xs-10">
             <div class="row width-160-vh">
               <div
@@ -50,9 +52,10 @@ import functions from "../../../services/functions";
 import CardHeader from "../../Components/GenericComponent/CardHeader.vue";
 import QuestCard from "./QuestCard.vue";
 import Spinner from "../../Components/GenericComponent/Spinner.vue";
+import FilterComponent from "./Components/FilterComponent.vue";
 export default {
   name: "Quest",
-  components: { Spinner, QuestCard, CardHeader, Pagination },
+  components: { Spinner, QuestCard, CardHeader, Pagination, FilterComponent },
   data() {
     return {
       userCurrent: null,
