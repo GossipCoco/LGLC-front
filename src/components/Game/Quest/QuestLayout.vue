@@ -1,20 +1,39 @@
 <template>
-  <div class=" border-none background-none flex-one card padding-0 one-quest-container height-32-vh align-items-content-justify-content padding-zero">
-    <CardHeader class="width-190-vh" v-bind:Title="'Liste des quêtes à réaliser'" />
+  <div
+    class="border-none background-none flex-one card padding-0 one-quest-container height-32-vh align-items-content-justify-content padding-zero"
+  >
+    <CardHeader
+      class="width-190-vh"
+      v-bind:Title="'Liste des quêtes à réaliser'"
+    />
     <div class="card-body height-90-vh">
       <Spinner v-if="showspinner" />
-      <div v-if="!showspinner" class="row list-quest-card-container width-190-vh height-70-vh">
-        <div
-          class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 display-flex-row flex-wrap quest--global-container flex-wrap height-40-vh margin-0-0-2vh-0"
-          v-for="(quest, index) in allQuests"
-          :key="index"
-        >
+      <div
+        v-if="!showspinner"
+        class="row list-quest-card-container width-180-vh height-70-vh"
+      >
+        <div class="row width-180-vh">
           <div
-            class="card border-none display-flex-column quest-container height-40-vh flex-wrap mb-4 background-lineart-other03"
-            v-for="(image, index) in quest.QuestImages"
-            :key="index"
+            class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-12"
+          ></div>
+          <div
+            class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-10 col-xs-10"
           >
-            <QuestCard v-bind:quest="quest" v-bind:image="image" />
+            <div class="row width-160-vh">
+              <div
+                class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 display-flex-row flex-wrap quest--global-container flex-wrap height-40-vh margin-0-0-2vh-0"
+                v-for="(quest, index) in allQuests"
+                :key="index"
+              >
+                <div
+                  class="card border-none display-flex-column quest-container height-40-vh flex-wrap mb-4 background-lineart-other03"
+                  v-for="(image, index) in quest.QuestImages"
+                  :key="index"
+                >
+                  <QuestCard v-bind:quest="quest" v-bind:image="image" />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -51,7 +70,7 @@ export default {
       nav: {
         current: 0,
         pages: 0,
-        step: 10,
+        step: 8,
       },
     };
   },
