@@ -13,12 +13,8 @@
         class="row list-quest-card-container width-180-vh height-70-vh"
       >
         <div class="row width-180-vh">
-          <div
-            class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-12"
-          ></div>
-          <div
-            class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-10 col-xs-10"
-          >
+          <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
+          <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-10 col-xs-10">
             <div class="row width-160-vh">
               <div
                 class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 display-flex-row flex-wrap quest--global-container flex-wrap height-40-vh margin-0-0-2vh-0"
