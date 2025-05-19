@@ -25,12 +25,7 @@
             <div class="col-12">
               <div class="information-global-character">
                 <div class="display-flex-row character-info-general-container">
-                    <back-clan v-bind:ClanId="Clan.Id" v-bind:symboleClan="symbol" />
-                  <!-- <div class="clan-logo-container">
-                    <router-link type="button" class="btn btn-primary" :to="'/clan/'+Clan.Id">
-                      <img :src="'/images/clans/'+symbol" />
-                    </router-link>
-                  </div> -->
+                  <back-clan v-bind:ClanId="Clan.Id" v-bind:symboleClan="symbol" />
                   <TableInformationCharacter
                     v-bind:NameClan="Clan.Name"
                     v-bind:genre="character.Genre"
