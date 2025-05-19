@@ -25,11 +25,12 @@
             <div class="col-12">
               <div class="information-global-character">
                 <div class="display-flex-row character-info-general-container">
-                  <div class="clan-logo-container">
+                    <back-clan v-bind:ClanId="Clan.Id" v-bind:symboleClan="symbol" />
+                  <!-- <div class="clan-logo-container">
                     <router-link type="button" class="btn btn-primary" :to="'/clan/'+Clan.Id">
                       <img :src="'/images/clans/'+symbol" />
                     </router-link>
-                  </div>
+                  </div> -->
                   <TableInformationCharacter
                     v-bind:NameClan="Clan.Name"
                     v-bind:genre="character.Genre"
@@ -63,12 +64,14 @@ import CharacterService from "../../../services/CharacterService";
 import CharacterImageDetail from "../GenericComponent/CharacterImageDetail.vue";
 import CharacterTabs from "../GenericComponent/CharacterTabs.vue";
 import TableInformationCharacter from "../GenericComponent/TableInformationCharacter.vue";
+import BackClan from "../GenericComponent/BackClan.vue";
 export default {
   name: "OriginalCharacterDetails",
   components: {
     CharacterImageDetail,
     CharacterTabs,
-    TableInformationCharacter
+    TableInformationCharacter,
+    BackClan
   },
   data() {
     return {

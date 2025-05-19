@@ -23,20 +23,21 @@
               >
                 Tous les personnages
               </router-link>  
-              <router-link type="button" class="btn btn-primary" :to="'/EditAnOriginalCharacter/'+ currentName">
+              <!-- <router-link type="button" class="btn btn-primary" :to="'/EditAnOriginalCharacter/'+ currentName">
                 Editer le personnage
-              </router-link>              
+              </router-link> -->
             </div>
           </div>
           <div class="row margin-3vh-0-0-0">
             <div class="col-12">
               <div class="information-global-character">
                 <div class="display-flex-row character-info-general-container">
-                  <div class="clan-logo-container">
+                  <back-clan v-bind:ClanId="ClanId" v-bind:symboleClan="symboleClan" />
+                  <!-- <div class="clan-logo-container">
                     <router-link type="button" class="btn btn-primary" :to="'/clan/'+ClanId">
                       <img :src="'/images/clans/'+symboleClan" />
                     </router-link>
-                  </div>
+                  </div> -->
                   <TableInformationCharacter
                     v-bind:NameClan="NameClan"
                     v-bind:genre="genre"
@@ -68,9 +69,10 @@ import CharacterService from "../../../services/CharacterService";
 import CharacterImageDetail from "../GenericComponent/CharacterImageDetail.vue";
 import CharacterTabs from "../GenericComponent/CharacterTabs.vue";
 import TableInformationCharacter from "../GenericComponent/TableInformationCharacter.vue";
+import BackClan from "../GenericComponent/BackClan.vue";
 export default {
   name: "CharacterDetails",
-  components: {TableInformationCharacter, CharacterTabs, CharacterImageDetail},
+  components: {TableInformationCharacter, CharacterTabs, CharacterImageDetail, BackClan},
   data() {
     return {
       url: "",
