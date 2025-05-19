@@ -6,13 +6,7 @@
       <p
         class="display-flex-column quest-description height-5-vh width-20-vh font-weight-400 white-text display-none-responsive poppins-text"
       >
-        <span class="badge text-bg-success" v-if="quest.DifficultyLevel === 'Facile'">
-        {{ quest.DifficultyLevel }}
-        </span>
-        <span class="badge text-bg-warning" v-if="quest.DifficultyLevel === 'Moyen'">
-        {{ quest.DifficultyLevel }}
-        </span>
-        <span class="badge text-bg-danger" v-if="quest.DifficultyLevel === 'Difficile'">
+        <span :class="['badge', `badge--${quest.DifficultyLevel}`]">
         {{ quest.DifficultyLevel }}
         </span>
          
@@ -33,5 +27,13 @@
 export default {
   name: "QuestMissionLevel",
   props: ["quest"],
+  data(){
+    return{
+        difficulty: null
+    }
+  },
+  mounted(){
+    this.difficulty = this.quest.DifficultyLevel
+  }
 };
 </script>
