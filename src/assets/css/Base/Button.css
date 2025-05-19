@@ -51,3 +51,14 @@
     background-color: rgba(var(--dark-green-01), 1);
     border: 1px solid rgba(var(--dark-green-01), 1);
 }
+.challenge-btn{
+    background-color: rgba(var(--dark-green-01), 1);
+    border: 1px solid rgba(var(--dark-green-01), 1);
+    color: rgb(var(--main-white), 1);
+}
+.challenge-btn:hover
+{
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(var(--main-black),.2);
+  color: rgb(var(--active-hover), 1);
+}

@@ -17,11 +17,6 @@
         </span>
          
       </p>
-      <!-- <p
-        class="display-flex-column quest-description height-40-vh width-20-vh font-weight-400 white-text display-none-responsive poppins-text"
-      >
-        {{ quest.Description }}
-      </p> -->
       <p class="display-flex-column quest-button-link height-20-vh">
         <router-link
           :to="'/QuestById/' + quest.Id"
