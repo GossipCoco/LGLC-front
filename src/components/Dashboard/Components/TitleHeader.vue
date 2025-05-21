@@ -1,8 +1,10 @@
 <template>
     <div class="card welcome-dashboard-container background-lineart border-none">
         <div class="card-body display-flex-row align-items-content-justify-content title-dashboard-container-header">
-            <h1 class=" font-variant-small-caps cinzel text-white">Bienvenue sur votre tableau de bord                
-                {{ User }}</h1>
+            <h1 class=" font-variant-small-caps cinzel text-white">
+                Bienvenue sur votre tableau de bord
+                <router-link class="text-white" :to="'/getUserBy/' + User">{{ User }}</router-link> 
+            </h1>
              <div class="image-messenger-container">
                 <router-link :to="'/user/messagerie/'+User" class="display-flex-row message-sent-container" >
                     <img src="/images/icons/envelope-solid.svg" class="border-radius-100 height-10-vh" loading="lazy"/>
