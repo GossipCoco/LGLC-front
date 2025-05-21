@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-12">
           <h4>
-          <router-link class="text-white" :to="'/getUserBy/' + title">{{ title }}</router-link>         
+          <router-link class="text-white font-size-1-25 poppins-text font-weight-600" :to="'/getUserBy/' + title">{{ title }}</router-link>         
           </h4>
         </div>
       </div>
@@ -12,7 +12,7 @@
     <div class="width-40-vh" v-else-if="type === 'fictions' ">
       <div class="row">
         <div class="col-12">
-          <h4 class="text-white" >
+          <h4 class="text-white  font-size-1-25 poppins-text font-weight-600" >
           {{ title }}          
           </h4>
         </div>
@@ -27,16 +27,16 @@
       <div class="row">
         <div class="col-12">
           <h4>
-            <router-link class="text-white" :to="route">{{ title }}</router-link>
+            <router-link class="text-white  font-size-1-25 poppins-text font-weight-600" :to="route">{{ title }}</router-link>
           </h4>
         </div>
       </div>
     </div>
     <div class="width-40-vh"
-      v-else-if="type === 'myCharacters' || type === 'chapters' || type === 'video'">
+      v-else-if="type === 'myCharacters' || type === 'chapters' || type === 'video' || type ==='OC' ">
       <div class="row">
         <div class="col-12">
-          <h4 class="text-white" >
+          <h4 class="text-white  font-size-1-25 poppins-text font-weight-600" >
           {{ title }}          
           </h4>
         </div>        
