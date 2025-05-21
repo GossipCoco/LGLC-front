@@ -2,28 +2,7 @@
   <div class="overflowX-hidden clans-location-container height-90-vh overflow-y-hidden">
     <div class="display-flex-row card-group clan-group width-120-vh overflow-y-hidden height-80-vh ">
       <div v-for="(clan, index) in clans" :key="index">
-        <div class="card background-color-dark-green-01 border-radius-100-100-8-8 location-clan-background-width-container">
-          <div
-            class="card-image clan-card background-position-50-percent width-30-vh height-30-vh background-size-cover background-color-dark-green-01"
-            v-bind:style="{
-              backgroundImage: 'url(' + clan.Image + ')',
-            }"
-          ></div>
-          <div class="card-header display-flex-row align-items-content-justify-content">
-            <div class="row">
-              <div class="display-flex align-items-content-justify-content">
-                <router-link
-                  type="button"
-                  class="btn btn-primary clan-btn width-30-vh"
-                  :to="'/clan/' + clan.Id"
-                  >
-                    {{ clan.Name }}
-                  </router-link
-                >
-              </div>
-            </div>
-          </div>
-        </div>
+        <clan-location-component v-bind:location="clan" />        
       </div>
     </div>
   </div>
@@ -39,10 +18,11 @@
 </template>
 <script>
 import ClanService from "../../services/ClansServices";
+import ClanLocationComponent from "./Components/ClanLocationComponent.vue";
 import Pagination from "../Components/GenericComponent/Pagination.vue";
 export default {
   name: "AllClans",
-  components: { Pagination },
+  components: { Pagination, ClanLocationComponent },
   data() {
     return {
       imageChar: "",
