@@ -2,7 +2,7 @@
   <div class="height-90-vh clans-location-container overflowX-hiddenoverflowY-hidden">
     <div class="height-80-vh display-flex-row card-group clan-group location-group-margin width-120-vh">
       <div v-for="(location, index) in allLocations" :key="index">
-        <clan-location-component v-bind:location="location" />
+        <clan-location-component v-bind:location="location" v-bind:route="'/LocationsDetails/'"/>
       </div>
     </div>
     <div class="row pagination-container all-locations-pagination-container">

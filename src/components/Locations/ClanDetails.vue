@@ -66,6 +66,7 @@ export default {
       ClanService.getClanByName(this.url)
         .then((response) => {
           this.clan = response.data.ob;
+          console.log(this.clan)
           this.Image = response.data.ob.Image;
         })
         .catch((e) => {

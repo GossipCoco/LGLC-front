@@ -16,7 +16,7 @@
           <router-link
             type="button"
             class="btn btn-primary margin-15vh width-30-vh"
-            :to="'/LocationsDetails/' + location.Id"
+            :to="route + location.Id"
             >{{ location.Name }}</router-link
           >
         </div>
@@ -27,6 +27,6 @@
 <script>
 export default {
   name: "ClanLocationComponent",
-  props: ["location"],
+  props: ["location", "route"],
 };
 </script>
