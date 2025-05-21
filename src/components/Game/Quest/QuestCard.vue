@@ -1,7 +1,7 @@
 <template>
-  <div class="display-flex-column width-35-vh">
-    <div class="card-header">
-      <h6 class="width-30-vh white-text">{{ quest.Title }}</h6>
+  <div class="display-flex-column width-30-vh">
+    <div class="card-header  display-flex align-items-content-justify-content">
+      <h6 class="width-25-vh white-text display-flex align-items-content-justify-content">{{ quest.Title }}</h6>
     </div>
     <div class="card-body card-quest-by-id-container padding-0">
       <img :src="image.Image" class="card-img-top" :alt="image.Image" />
