@@ -8,15 +8,12 @@
     />
     <div class="card-body width-190-vh height-90-vh">
       <div class="character-container height-95-vh padding-0 list-all-characters-container padding-2-vh-0-0-1vh">
-                  
-
         <div class="row row-cols-1 row-cols-md-2 g-4 width-190-vh">
           <filter-component
             @getCurrentName="getCurrentName"
             @onSelectClan="onSelectClan"
             @onSelectGrade="onSelectGrade"
           />
-
           <character-card
             v-if="ListAllCharacter && !useFiltered"
             v-bind:characters_props="allCharacters"
