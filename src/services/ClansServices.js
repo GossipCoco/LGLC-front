@@ -2,10 +2,10 @@ import http from '../http/http-common'
 
 class ClanService {
     countAllClans(){
-        return http.get('/clan/countAllClans')
+        return http.get('/clan/count/countAllClans')
     }
     countAllLocations(){
-        return http.get('/clan/countAllLocations')
+        return http.get('/clan/count/countAllLocations')
     }
     getAllClans(data) {
         return http.post('/clan', data)

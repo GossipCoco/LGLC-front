@@ -51,11 +51,12 @@ export default {
     async countAllClans() {
       try {
         const response = await ClanService.countAllClans();
+        console.log(response)
         this.NbAllClans = response.data.ob.count;
         if (window.innerWidth >= this.width) {
-          this.nav.step = 6;
+          this.nav.step = 8;
         } else {
-          this.nav.step = 6;
+          this.nav.step = 8;
         }
         this.nav.pages = Math.ceil(this.NbAllClans / this.nav.step);
       } catch (e) {
@@ -65,9 +66,9 @@ export default {
     async ClanPagination(page) {
       this.nav.current = page;
       if (window.innerWidth >= this.width) {
-        this.nav.step = 6;
+        this.nav.step = 8;
       } else {
-        this.nav.step = 6;
+        this.nav.step = 8;
       }
       await this.getAllClans(this.nav);
     },

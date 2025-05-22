@@ -1,6 +1,6 @@
 <template>
-  <div class="height-90-vh clans-location-container overflowX-hiddenoverflowY-hidden">
-    <div class="height-80-vh display-flex-row card-group clan-group location-group-margin width-120-vh">
+  <div class="overflowX-hidden clans-location-container height-90-vh overflow-y-hidden">
+    <div class="display-flex-row card-group clan-group width-120-vh overflow-y-hidden height-80-vh ">
       <div v-for="(location, index) in allLocations" :key="index">
         <clan-location-component v-bind:location="location" v-bind:route="'/LocationsDetails/'"/>
       </div>
@@ -31,7 +31,7 @@ export default {
       nav: {
         current: 0,
         pages: 0,
-        step: 6,
+        step: 8,
       },
     };
   },
