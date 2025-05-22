@@ -23,6 +23,6 @@
 <script>
 export default {
     name:'LevelRoleComponent',
-    props:['LevelRoleComponent', 'nameLevel', 'nameRole', 'imageRole']
+    props:['imageLevel', 'nameLevel', 'nameRole', 'imageRole']
 }
 </script>

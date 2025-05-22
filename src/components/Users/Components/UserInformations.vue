@@ -23,24 +23,13 @@
                   <p class="roboto roboto">{{ usrInformation.Biography }}</p>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-10 col-lg-4 col-xl-4 col-xxl-4">
-                  {{ imageLevel }}
                   <level-role-component
                     v-bind:nameLevel="nameLevel"
                     v-bind:imageLevel="imageLevel"
                     v-bind:nameRole="nameRole"
                     v-bind:imageRole="imageRole"
 
-                  />
-                  <!-- <div class="display-flex-row role-level-user-container">
-                    <div class="display-flex-column">
-                      <p class="roboto roboto">Niveau {{  nameLevel }}</p>
-                      <img :src="'/images/Levels/' + imageLevel" :alt="imageLevel" loading="lazy" class="width-15-vh height-15-vh"/>
-                    </div>
-                    <div class="display-flex-column">
-                      <p class="roboto roboto">Rôle {{  nameRole }}</p>
-                      <img :src="'/images/Levels/' + imageRole" :alt="imageRole" loading="lazy" class="width-15-vh height-15-vh"/>
-                    </div>
-                  </div> -->
+                  />                  
                 </div>
               </div>
             </div>
