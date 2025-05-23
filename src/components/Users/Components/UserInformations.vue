@@ -28,7 +28,6 @@
                     v-bind:imageLevel="imageLevel"
                     v-bind:nameRole="nameRole"
                     v-bind:imageRole="imageRole"
-
                   />                  
                 </div>
               </div>
