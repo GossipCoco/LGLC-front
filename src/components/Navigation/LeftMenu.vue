@@ -101,6 +101,18 @@
         </div>
       </li>
       <li class="li-level1 display-flex-column align-items-content-justify-content">
+        <router-link to="/GroupLayout">
+          <div class="menu-level1">
+            <div class="menu-li-contain">
+              <div class="icon-menu-container  border-radius-100 background-color-clear-green-02  display-flex align-items-content-justify-content">
+                <img src="/images/icons/home.svg" />                
+              </div>
+              <span class="menu-text poppins-text font-size-1em font-weight-600">Groupes & clubs</span>
+            </div>
+          </div>
+        </router-link>
+      </li>
+      <li class="li-level1 display-flex-column align-items-content-justify-content">
         <div
           to="/game"
           data-bs-toggle="collapse"
