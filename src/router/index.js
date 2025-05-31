@@ -52,6 +52,7 @@ import UserCard from '../components/Users/UserCard.vue'
 import Messagerie from "../components/UserPanel/UserMessagerie/Messagerie.vue";
 
 import AdminLayout from '../components/UserPanel/AdminDashboard'
+import GroupLayout from "../components/Group/GroupLayout.vue";
 
 const routes = [
   {
@@ -264,6 +265,10 @@ const routes = [
         path: '/EditChapter/:id',
         name: 'EditChapter',
         component: EditChapter
+      },{
+        path: '/GroupLayout',
+        name:'GroupLayout',
+        component: GroupLayout
       },
       {
         path: '/mouseShot',
