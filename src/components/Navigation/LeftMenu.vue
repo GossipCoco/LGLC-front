@@ -105,9 +105,9 @@
           <div class="menu-level1">
             <div class="menu-li-contain">
               <div class="icon-menu-container  border-radius-100 background-color-clear-green-02  display-flex align-items-content-justify-content">
-                <img src="/images/icons/home.svg" />                
+                <img src="/images/icons/people-group-solid.svg" />                
               </div>
-              <span class="menu-text poppins-text font-size-1em font-weight-600">Groupes & clubs</span>
+              <span class="menu-text poppins-text font-size-1em font-weight-600">Clubs</span>
             </div>
           </div>
         </router-link>
