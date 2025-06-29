@@ -8,8 +8,10 @@
 </template>
 <script>
 import GroupService from '../../services/GroupService';
+import CardHeader from '../Components/GenericComponent/CardHeader.vue';
 export default {
     name: 'GroupLayout',
+  components: { CardHeader},
     data(){
         return{
             AllGroups:{}
