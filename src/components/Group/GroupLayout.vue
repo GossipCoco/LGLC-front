@@ -1,9 +1,10 @@
 <template>
     <div id="group-container"
-    class="height-80-vh border-none background-none  flex-one card display-flex-column
-    margin-2vh padding-2-vh">
+    class="height-80-vh border-none background-none  flex-one card display-flex-column margin-2vh padding-2-vh">
         <CardHeader v-bind:Title="'Les clubs'" />
-        <div class="card-body padding-2-vh height-80-vh"></div>
+        <div class="card-body padding-2-vh height-80-vh">
+            
+        </div>
     </div>
 </template>
 <script>
