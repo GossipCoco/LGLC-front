@@ -6,23 +6,24 @@
     <CardHeader v-bind:Title="'Les clubs'" />
     <div class="card-body padding-2-vh height-80-vh">
       <div class="row">
-        <div class="col-sm-6 mb-3 mb-sm-0" v-for="(group, index) in AllGroups" :key="index">
-            <div class="card">
-      <div class="card-body">
-            {{ group }}
-            </div>
-            </div>
+        <div
+          class="col-sm-6 mb-3 mb-sm-0"
+          v-for="(group, index) in AllGroups"
+          :key="index"
+        >
+            <group-card v-bind:group="group" />
+        </div>
       </div>
     </div>
-  </div>
   </div>
 </template>
 <script>
 import GroupService from "../../services/GroupService";
 import CardHeader from "../Components/GenericComponent/CardHeader.vue";
+import GroupCard from "./GroupComponent/GroupCard.vue";
 export default {
   name: "GroupLayout",
-  components: { CardHeader },
+  components: { CardHeader, GroupCard },
   data() {
     return {
       AllGroups: {},
