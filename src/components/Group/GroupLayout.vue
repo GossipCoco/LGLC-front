@@ -7,7 +7,11 @@
     <div class="card-body padding-2-vh height-80-vh">
       <div class="row">
         <div class="col-sm-6 mb-3 mb-sm-0" v-for="(group, index) in AllGroups" :key="index">
+            <div class="card">
+      <div class="card-body">
             {{ group }}
+            </div>
+            </div>
       </div>
     </div>
   </div>
