@@ -6,9 +6,11 @@
     <CardHeader v-bind:Title="'Les clubs'" />
     <div class="card-body padding-2-vh height-80-vh">
       <div class="row">
-        <div class="col-sm-6 mb-3 mb-sm-0"></div>
+        <div class="col-sm-6 mb-3 mb-sm-0" v-for="(group, index) in AllGroups" :key="index">
+            {{ group }}
       </div>
     </div>
+  </div>
   </div>
 </template>
 <script>
@@ -30,6 +32,7 @@ export default {
       GroupService.GetAllGroups()
         .then((response) => {
           console.log(response.data.ob);
+          this.AllGroups = response.data.ob;
         })
         .catch((err) => {
           console.error("erreur", err);
