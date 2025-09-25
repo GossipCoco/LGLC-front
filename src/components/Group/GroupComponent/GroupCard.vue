@@ -2,7 +2,7 @@
     <div class="card">
          <img :src="group.Image" class="card-img-top" alt="..." />
         <div class="card-body">
-            {{ group.Name }}
+            <router-link :to="group.Id">{{ group.Name }}</router-link>
         </div>
     </div>
 </template>
