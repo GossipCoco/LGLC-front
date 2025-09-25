@@ -18,8 +18,7 @@ export default {
   },
   methods: {
     getGroup() {
-      GroupService.GetGroupById(this.url)
-      console.log(this.url)
+      GroupService.GetGroupById(this.url)      
         .then((response) => {
           this.group = response.data.ob;
           console.log(this.group);

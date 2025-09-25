@@ -5,7 +5,7 @@ class GroupService {
          return http.get('/Group/')
     }
     GetGroupById(id){
-        return http.get(`/Group/${id}`)
+        return http.post(`/Group/GetAGroupById/${id}`)
     }
 }
 

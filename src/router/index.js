@@ -53,6 +53,7 @@ import Messagerie from "../components/UserPanel/UserMessagerie/Messagerie.vue";
 
 import AdminLayout from '../components/UserPanel/AdminDashboard'
 import GroupLayout from "../components/Group/GroupLayout.vue";
+import OneGroupLayout from "../components/Group/GroupComponent/OneGroupLayout.vue";
 
 const routes = [
   {
@@ -269,6 +270,11 @@ const routes = [
         path: '/GroupLayout',
         name:'GroupLayout',
         component: GroupLayout
+      },
+      {
+        path: '/OneGroupLayout/:id',
+        name: 'OneGroupLayout',
+        component: OneGroupLayout,
       },
       {
         path: '/mouseShot',
