@@ -7,7 +7,7 @@
     <div class="card-body padding-2-vh height-80-vh">
       <div class="row">
         <div
-          class="col-sm-6 mb-3 mb-sm-0"
+          class="col-sm-3 mb-3 mb-sm-0"
           v-for="(group, index) in AllGroups"
           :key="index"
         >
