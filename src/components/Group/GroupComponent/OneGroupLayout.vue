@@ -1,5 +1,8 @@
 <template>
-  <div></div>
+  <div class="card">
+    <div class="card-title text-dark-green">{{ group.Name }}</div>
+    <div class="card-body">{{ group.Description }}</div>
+  </div>
 </template>
 <script>
 import GroupService from "../../../services/GroupService";
@@ -18,7 +21,7 @@ export default {
   },
   methods: {
     getGroup() {
-      GroupService.GetGroupById(this.url)      
+      GroupService.GetGroupById(this.url)
         .then((response) => {
           this.group = response.data.ob;
           console.log(this.group);
@@ -27,7 +30,8 @@ export default {
           console.log(e);
         });
     },
-  },  mounted() {
+  },
+  mounted() {
     this.getGroup();
   },
 };
