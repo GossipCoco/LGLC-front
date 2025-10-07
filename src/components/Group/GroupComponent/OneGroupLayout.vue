@@ -1,14 +1,28 @@
 <template>
-  <div class="card">
-    <img :src="group.Image" class="card-img-top" alt="..." />
-    <div class="card-title text-dark-green">{{ group.Name }}</div>
-    <div class="card-body">{{ group.Description }}</div>
+  <div
+    id="group-details"
+    class="width-190-vh height-95-vh background-none border-none padding-2-vh card mb-3"
+  >
+    <div class="row g-0">
+      <div class="col-4 col-md-4">
+        <group-image-detail v-bind:Image="group.Image"/>
+      </div>
+      <div class="col-8 col-md-8">
+        <div class="card">
+          <img :src="group.Image" class="card-img-top" alt="..." />
+          <div class="card-title text-dark-green">{{ group.Name }}</div>
+          <div class="card-body">{{ group.Description }}</div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <script>
 import GroupService from "../../../services/GroupService";
+import GroupImageDetail from "./GroupImageDetail.vue";
 export default {
   name: "OneGroupLayout",
+  components: { GroupImageDetail },
   data() {
     return {
       url: "",
