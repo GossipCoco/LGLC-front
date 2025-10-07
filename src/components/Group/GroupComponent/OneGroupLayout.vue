@@ -8,8 +8,7 @@
         <group-image-detail v-bind:Image="group.Image"/>
       </div>
       <div class="col-8 col-md-8">
-        <div class="card">
-          <img :src="group.Image" class="card-img-top" alt="..." />
+        <div class="card border-none height-95-vh background-color-main-lineart details-infos-characters border-radius-12px poppins-text text-white">          
           <div class="card-title text-dark-green">{{ group.Name }}</div>
           <div class="card-body">{{ group.Description }}</div>
         </div>
