@@ -1,5 +1,6 @@
 <template>
   <div class="card">
+    <img :src="group.Image" class="card-img-top" alt="..." />
     <div class="card-title text-dark-green">{{ group.Name }}</div>
     <div class="card-body">{{ group.Description }}</div>
   </div>
