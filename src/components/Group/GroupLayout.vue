@@ -27,14 +27,19 @@ export default {
   data() {
     return {
       AllGroups: {},
+      nav: {
+        current: 0,
+        pages: 0,
+        step:8,
+      },
     };
   },
   created() {
-    this.GetAllGroups();
+    this.GetAllGroups(this.nav);
   },
   methods: {
-    GetAllGroups() {
-      GroupService.GetAllGroups()
+    GetAllGroups(nav) {
+      GroupService.GetAllGroups(nav)
         .then((response) => {
           console.log(response.data.ob);
           this.AllGroups = response.data.ob;
