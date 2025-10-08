@@ -7,8 +7,8 @@ class GroupService {
     GetGroupById(id){
         return http.post(`/Group/GetAGroupById/${id}`)
     }
-    CreateGroup(data){
-        return http.post('/Group/CreateGroup', data)
+    CountAllGroups(){
+        return http.get('/Group/CountAllGroups')
     }
 }
 

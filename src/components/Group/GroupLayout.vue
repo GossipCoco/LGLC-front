@@ -53,11 +53,12 @@ export default {
         this.showspinner = false;
       }
     },
-        async countAllGroups() {
+    async countAllGroups() {
       try {
         // ⚠️ Ajuste si ta méthode diffère (ex: response.data.total)
         const response = await GroupService.CountAllGroups();
         this.NbAllGroups = response.data.ob.count;
+        console.log("Nombre total de groupes:", this.NbAllGroups);
         functions.CalcPagination(this.NbAllGroups, this.nav, this.nav.step);
       } catch (err) {
         console.error("Erreur count groups:", err);
