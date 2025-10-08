@@ -18,6 +18,7 @@
   </div>
 </template>
 <script>
+import functions from "../../services/functions";
 import GroupService from "../../services/GroupService";
 import CardHeader from "../Components/GenericComponent/CardHeader.vue";
 import GroupCard from "./GroupComponent/GroupCard.vue";
@@ -26,7 +27,10 @@ export default {
   components: { CardHeader, GroupCard },
   data() {
     return {
-      AllGroups: {},
+      AllGroups: {},      
+      showGroups: false,
+      showspinner: false,
+      NbAllCount: 0,
       nav: {
         current: 0,
         pages: 0,
@@ -34,20 +38,47 @@ export default {
       },
     };
   },
-  created() {
-    this.GetAllGroups(this.nav);
+  async created() {
+    await this.initPage();
   },
   methods: {
-    GetAllGroups(nav) {
-      GroupService.GetAllGroups(nav)
-        .then((response) => {
-          console.log(response.data.ob);
-          this.AllGroups = response.data.ob;
-        })
-        .catch((err) => {
-          console.error("erreur", err);
-        });
+    async initPage() {
+      this.showspinner = true;
+      try {
+        await this.countAllGroups();
+        await this.GetAllGroups(this.nav);
+      } catch (err) {
+        console.error("Erreur init groups:", err);
+      } finally {
+        this.showspinner = false;
+      }
     },
-  },
+        async countAllGroups() {
+      try {
+        // ⚠️ Ajuste si ta méthode diffère (ex: response.data.total)
+        const response = await GroupService.CountAllGroups();
+        this.NbAllGroups = response.data.ob.count;
+        functions.CalcPagination(this.NbAllGroups, this.nav, this.nav.step);
+      } catch (err) {
+        console.error("Erreur count groups:", err);
+        this.NbAllGroups = 0;
+        functions.CalcPagination(0, this.nav, this.nav.step);
+      }
+    },
+  async GetAllGroups(nav) {
+        this.showspinner = true;
+        try {
+          // ⚠️ Si ton API attend { page, limit } au lieu de nav brut :
+          // const response = await GroupService.GetAllGroups({ page: nav.current, limit: nav.step });
+          const response = await GroupService.GetAllGroups(nav);
+          this.AllGroups = Array.isArray(response.data.ob) ? response.data.ob : [];
+        } catch (err) {
+          console.error("Erreur GetAllGroups:", err);
+          this.AllGroups = [];
+        } finally {
+          this.showspinner = false;
+        }
+      },
+    },
 };
 </script>
