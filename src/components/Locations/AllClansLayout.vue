@@ -48,6 +48,7 @@ export default {
       }
       return text.substring(0, maxLength) + "...";
     },
+    
     async countAllClans() {
       try {
         const response = await ClanService.countAllClans();        

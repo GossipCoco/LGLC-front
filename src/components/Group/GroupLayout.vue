@@ -16,15 +16,25 @@
       </div>
     </div>
   </div>
+    <div class="row pagination-container all-clans-pagination-container">
+    <Pagination
+      v-if="!showspinner"
+      :nav="nav"
+      :filters="filters"
+      :getDatas="'GroupPagination'"
+      @GroupPagination="GroupPagination"
+    />
+  </div>
 </template>
 <script>
 import functions from "../../services/functions";
 import GroupService from "../../services/GroupService";
 import CardHeader from "../Components/GenericComponent/CardHeader.vue";
 import GroupCard from "./GroupComponent/GroupCard.vue";
+import Pagination from "../Components/GenericComponent/Pagination.vue";
 export default {
   name: "GroupLayout",
-  components: { CardHeader, GroupCard },
+  components: { CardHeader, GroupCard, Pagination },
   data() {
     return {
       AllGroups: {},      
@@ -55,22 +65,17 @@ export default {
     },
     async countAllGroups() {
       try {
-        // ⚠️ Ajuste si ta méthode diffère (ex: response.data.total)
         const response = await GroupService.CountAllGroups();
         this.NbAllGroups = response.data.ob.count;
         console.log("Nombre total de groupes:", this.NbAllGroups);
         functions.CalcPagination(this.NbAllGroups, this.nav, this.nav.step);
-      } catch (err) {
-        console.error("Erreur count groups:", err);
-        this.NbAllGroups = 0;
-        functions.CalcPagination(0, this.nav, this.nav.step);
+      } catch (e) {
+        console.log(e);
       }
     },
   async GetAllGroups(nav) {
         this.showspinner = true;
         try {
-          // ⚠️ Si ton API attend { page, limit } au lieu de nav brut :
-          // const response = await GroupService.GetAllGroups({ page: nav.current, limit: nav.step });
           const response = await GroupService.GetAllGroups(nav);
           this.AllGroups = Array.isArray(response.data.ob) ? response.data.ob : [];
         } catch (err) {
@@ -80,7 +85,15 @@ export default {
           this.showspinner = false;
         }
       },
-      
+      async GroupPagination(page) {
+        this.nav.current = page;
+        if (window.innerWidth >= this.width) {
+          this.nav.step = 8;
+        } else {
+          this.nav.step = 8;
+        }
+        await this.GetAllGroups(this.nav);
+      },
     },
 };
 </script>
