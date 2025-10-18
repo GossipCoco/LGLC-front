@@ -1,7 +1,11 @@
 <template>
-  <div class="card">
-    
-    <img :src="group.Image" class="card-img-top" alt="..." />
+  <div class="card  width-40-vh">
+        <div class="height-30-vh width-40-vh background-size-cover background-position-50-percent"
+          v-bind:style="{ backgroundImage: 'url(' + group.Image + ')',}"
+        >
+        <slot></slot>
+    </div>
+    <!-- <img :src="group.Image" class="card-img-top" alt="..." /> -->
     <div class="card-body">
       <router-link :to="'/OneGroupLayout/' + group.Id">{{
         group.Name
