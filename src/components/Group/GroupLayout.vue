@@ -88,9 +88,9 @@ export default {
       async GroupPagination(page) {
         this.nav.current = page;
         if (window.innerWidth >= this.width) {
-          this.nav.step = 6;
+          this.nav.step = 8;
         } else {
-          this.nav.step = 6;
+          this.nav.step = 8;
         }
         await this.GetAllGroups(this.nav);
       },
