@@ -1,6 +1,6 @@
 <template>
-  <div class="card  width-40-vh">
-        <div class="height-30-vh width-40-vh background-size-cover background-position-50-percent"
+  <div class="card  width-40-vh border-radius-top-100">
+        <div class="height-30-vh width-40-vh background-size-cover background-position-50-percent border-radius-top-100"
           v-bind:style="{ backgroundImage: 'url(' + group.Image + ')',}"
         >
         <slot></slot>
