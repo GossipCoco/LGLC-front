@@ -5,7 +5,7 @@
   >
     <CardHeader v-bind:Title="'Les clubs'" />
     <div class="card-body padding-2-vh height-80-vh">
-      <div class="row">
+      <div class="row row-cols-4 row-cols-md-4 g-4 width-190-vh">
         <div
           class="col-sm-3 mb-3 mb-sm-0"
           v-for="(group, index) in AllGroups"
