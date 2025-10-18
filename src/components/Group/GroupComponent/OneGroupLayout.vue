@@ -9,8 +9,17 @@
       </div>
       <div class="col-8 col-md-8">
         <div class="card border-none height-95-vh background-color-main-lineart details-infos-characters border-radius-12px poppins-text text-white">          
-          <div class="card-title text-dark-green">{{ group.Name }}</div>
-          <div class="card-body">{{ group.Description }}</div>
+          <div class="card-title text-white">{{ group.Name }}</div>
+          <div class="card-body">
+            <p>{{ group.Description }}</p>
+            <div v-for="(users, index) in group.UserGroups" :key="index">
+              <ul>
+                <li>
+                  {{ users.User.UserName }}
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
