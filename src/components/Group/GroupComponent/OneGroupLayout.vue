@@ -12,13 +12,7 @@
           <div class="card-title text-white">{{ group.Name }}</div>
           <div class="card-body">
             <p>{{ group.Description }}</p>
-            <div v-for="(users, index) in group.UserGroups" :key="index">
-              <ul>
-                <li>
-                  {{ users.User.UserName }}
-                </li>
-              </ul>
-            </div>
+            <list-members v-bind:group="group"/>
           </div>
         </div>
       </div>
@@ -28,9 +22,10 @@
 <script>
 import GroupService from "../../../services/GroupService";
 import GroupImageDetail from "./GroupImageDetail.vue";
+import ListMembers from "./ListMembers.vue";
 export default {
   name: "OneGroupLayout",
-  components: { GroupImageDetail },
+  components: { GroupImageDetail, ListMembers },
   data() {
     return {
       url: "",
