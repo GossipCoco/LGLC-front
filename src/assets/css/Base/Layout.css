@@ -117,3 +117,6 @@
 .one-arc-container{
     margin: 0 0 0 -87vh;
 }
+#group-details .row > div {
+    margin: -3vh 0 -1vh -1vh;
+}
