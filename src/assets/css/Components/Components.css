@@ -38,6 +38,10 @@
 .original-character-contain.card-image{
     background-position: 50%;
 }
+.group-club-image.card-image{
+    background-position-x: 20%;
+    background-position-y: 38%;
+}
 .fiction-container.all-fictions-container-global .card-header{
     margin: -1rem 1rem 0 -1rem;
 }
