@@ -12,7 +12,7 @@
         backgroundImage: 'url(' + group.Image + ')',
       }"
     >
-      <slot></slot>
+      <slot><h1>{{ group.Name }}</h1></slot>
     </div>
       </div>
     </div>

@@ -41,6 +41,7 @@
 .group-club-image.card-image{
     background-position-x: 20%;
     background-position-y: 38%;
+    border-radius: 12vh 12vh 0 0;
 }
 .fiction-container.all-fictions-container-global .card-header{
     margin: -1rem 1rem 0 -1rem;
