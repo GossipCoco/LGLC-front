@@ -3,23 +3,10 @@
     id="group-details"
     class="width-190-vh height-100-vh background-none border-none padding-2-vh card mb-3 overflowY-auto"
   >
-    <div class="row">
-      <div class="col-12 col-md-12">
-        <div class="background-size-cover display-flex background-size-cover
-        card-image flex-one border-card-color margin-1vh display-flex-row align-items-content-justify-content
-        group-club-image height-20-vh width-185-vh"
-      v-bind:style="{
-        backgroundImage: 'url(' + group.Image + ')',
-      }"
-    >
-      <slot><h1>{{ group.Name }}</h1></slot>
-    </div>
-      </div>
-    </div>
+    <group-header v-bind:group="group"/>
     <div class="row">
       <div class="col-12 col-md-12">
         <div class="card border-none height-95-vh background-color-main-lineart details-infos-characters border-radius-12px poppins-text text-white">          
-          <div class="card-title text-white">{{ group.Name }}</div>
           <div class="card-body">
             <p>{{ group.Description }}</p>
             <div class="row">
@@ -42,10 +29,11 @@
 </template>
 <script>
 import GroupService from "../../../services/GroupService";
+import GroupHeader from "./GroupHeader.vue";
 import ListMembers from "./ListMembers.vue";
 export default {
   name: "OneGroupLayout",
-  components: { ListMembers },
+  components: { GroupHeader, ListMembers },
   data() {
     return {
       url: "",
