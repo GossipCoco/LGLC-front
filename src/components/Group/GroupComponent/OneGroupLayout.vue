@@ -6,7 +6,7 @@
     <group-header v-bind:group="group"/>
     <div class="row">
       <div class="col-12 col-md-12">
-        <div class="card border-none height-95-vh background-color-main-lineart details-infos-characters border-radius-12px poppins-text text-white">          
+        <div class="card border-none height-95-vh background-color-main-lineart details-infos-group border-radius-12px poppins-text text-white">          
           <div class="card-body">
             <p>{{ group.Description }}</p>
             <div class="row">
