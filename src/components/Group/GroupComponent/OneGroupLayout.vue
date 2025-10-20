@@ -12,7 +12,18 @@
           <div class="card-title text-white">{{ group.Name }}</div>
           <div class="card-body">
             <p>{{ group.Description }}</p>
-            <list-members v-bind:group="group"/>
+            <div class="row">
+              <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">                
+                <list-members v-bind:group="group"/>
+              </div>
+              <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                
+                <div v-for="(posts, index) in group.GroupPosts" :key="index">
+                  <h2>{{ posts.Title}}</h2>
+                  <p>{{ posts.Content }}</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
