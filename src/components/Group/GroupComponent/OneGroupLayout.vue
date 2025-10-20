@@ -30,7 +30,7 @@
                 
                 <div v-for="(posts, index) in group.GroupPosts" :key="index">
                   <h2>{{ posts.Title}}</h2>
-                  <p>{{ posts.Content }}</p>
+                  <p class="text-align-justify">{{ posts.Content }}</p>
                 </div>
               </div>
             </div>
