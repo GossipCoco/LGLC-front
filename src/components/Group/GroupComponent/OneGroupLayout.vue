@@ -29,6 +29,7 @@
 </template>
 <script>
 import GroupService from "../../../services/GroupService";
+import PostAllCommentReactions from "../../../services/PostCommentReactions";
 import GroupHeader from "./GroupHeader.vue";
 import ListMembers from "./ListMembers.vue";
 export default {
@@ -38,14 +39,26 @@ export default {
     return {
       url: "",
       group: {},
+      Post:{}
     };
   },
   created() {
     console.log("created", this.$route.params.id);
     this.url = this.$route.params.id;
     console.log(this.url);
+    this.GetPostAllCommentReactions(this.url);
   },
   methods: {
+    GetPostAllCommentReactions(id){
+      PostAllCommentReactions.GetPostAllCommentReactions(id)
+      .then((response) => {
+        this.Post = response.data.ob;
+        console.log(this.Post);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+    },
     getGroup() {
       GroupService.GetGroupById(this.url)
         .then((response) => {
@@ -59,6 +72,7 @@ export default {
   },
   mounted() {
     this.getGroup();
+    
   },
 };
 </script>
