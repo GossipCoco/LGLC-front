@@ -1,10 +1,11 @@
 <template>
-    <div v-for="(users, index) in group.UserGroups" :key="index"
-        class="height-10-vh display-flex-row align-items-center">
+  <ul class="list-group">
+    <li class="list-group-item height-10-vh display-flex-row align-items-center" v-for="(users, index) in group.UserGroups" :key="index">
         <img loading="lazy"  :src="'/images/Avatars/'+users.User.Avatar" :alt="alt"
-        :class="'border-radius-100 display-flex-column width-12-vh height-12-vh '"/>
+        :class="'border-radius-100 display-flex-column width-10-vh height-10-vh '"/>
       {{ users.User.UserName }}
-    </div>
+    </li>
+  </ul>
 
 </template>
 <script>
