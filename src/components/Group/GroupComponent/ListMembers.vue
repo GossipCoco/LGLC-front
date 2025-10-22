@@ -1,6 +1,7 @@
 <template>
   <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
     <div class="card background-lineart">
+      <h5 class="card-title">Membres</h5>
       <div class="card-body">
         <ul class="list-group">
           <li
@@ -12,7 +13,7 @@
               loading="lazy"
               :src="'/images/Avatars/' + users.User.Avatar"
               :alt="alt"
-              :class="'border-radius-100 display-flex-column width-10-vh height-10-vh '"
+              :class="'border-radius-100 display-flex-column width-5-vh height-5-vh '"
             />
             <p class="text-white">{{ users.User.UserName }}</p>
           </li>
