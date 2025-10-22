@@ -4,20 +4,20 @@
     class="width-190-vh height-100-vh background-none border-none padding-2-vh card mb-3 overflowY-auto"
   >
     <group-header v-bind:group="group"/>
-    <div class="row gy-5">
+    <div class="row gy-2">
       <div class="col-12 col-md-12">
         <div class="card group-container border-none height-120-vh background-none details-infos-group border-radius-12px poppins-text text-white">          
           <div class="card-body">
            <div class="row height-5-vh margin-1vh">
             <div class="col-12 col-md-12">
-              <div class="card">
+              <div class="card background-lineart">
                 <div class="card-body">
-                  <p>{{ group.Description }}</p>
+                  <p class="text-white">{{ group.Description }}</p>
                 </div>
               </div>              
             </div>
            </div>
-            <div class="row gy-2 margin-1vh">
+            <div class="row gy-4 margin-1vh">
               <list-members v-bind:group="group"/>
               <group-last-post v-bind:Post="Post"/>
             </div>
