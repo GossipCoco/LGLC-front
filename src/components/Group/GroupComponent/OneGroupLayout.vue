@@ -19,7 +19,7 @@
            </div>
             <div class="row  gy-5 margin-1vh">
               <list-members v-bind:group="group"/>
-              <group-last-post v-bind:group="group"/>
+              <group-last-post v-bind:Post="Post"/>
             </div>
           </div>
         </div>

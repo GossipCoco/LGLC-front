@@ -1,5 +1,5 @@
 <template>
-  <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4">
+  <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
     <div class="card">
       <div class="card-body">
         <ul class="list-group">
