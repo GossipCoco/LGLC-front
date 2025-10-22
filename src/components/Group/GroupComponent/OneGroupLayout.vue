@@ -4,26 +4,24 @@
     class="width-190-vh height-100-vh background-none border-none padding-2-vh card mb-3 overflowY-auto"
   >
     <group-header v-bind:group="group"/>
-    <div class="row">
+    <div class="row gy-5">
       <div class="col-12 col-md-12">
         <div class="card border-none height-120-vh background-color-main-lineart details-infos-group border-radius-12px poppins-text text-white">          
           <div class="card-body">
-           <div class="row height-5-vh">
+           <div class="row height-5-vh margin-1vh">
             <div class="col-12 col-md-12">
-              <p>{{ group.Description }}</p>
+              <div class="card">
+                <div class="card-body">
+                  <p>{{ group.Description }}</p>
+                </div>
+              </div>              
             </div>
            </div>
-            <div class="row">
+            <div class="row  gy-5 margin-1vh">
               <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">                
                 <list-members v-bind:group="group"/>
               </div>
-              <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                
-                <div v-for="(posts, index) in group.GroupPosts" :key="index">
-                  <h2>{{ posts.Title}}</h2>
-                  <p class="text-align-justify">{{ posts.Content }}</p>
-                </div>
-              </div>
+              <group-last-post v-bind:group="group"/>
             </div>
           </div>
         </div>
@@ -36,9 +34,10 @@ import GroupService from "../../../services/GroupService";
 import PostAllCommentReactions from "../../../services/PostCommentReactions";
 import GroupHeader from "./GroupHeader.vue";
 import ListMembers from "./ListMembers.vue";
+import GroupLastPost from "./GroupLastPost.vue";
 export default {
   name: "OneGroupLayout",
-  components: { GroupHeader, ListMembers },
+  components: { GroupHeader, ListMembers, GroupLastPost },
   data() {
     return {
       url: "",
