@@ -8,15 +8,7 @@
       <div class="col-12 col-md-12">
         <div class="card group-container border-none height-120-vh background-none details-infos-group border-radius-12px poppins-text text-white">          
           <div class="card-body">
-           <div class="row height-5-vh margin-1vh">
-            <div class="col-12 col-md-12">
-              <div class="card background-lineart">
-                <div class="card-body">
-                  <p class="text-white">{{ group.Description }}</p>
-                </div>
-              </div>              
-            </div>
-           </div>
+            <group-description v-bind:group="group"/>          
             <div class="row gy-4 margin-1vh">
               <list-members v-bind:group="group"/>
               <group-last-post v-bind:Post="Post"/>
@@ -33,9 +25,10 @@ import PostAllCommentReactions from "../../../services/PostCommentReactions";
 import GroupHeader from "./GroupHeader.vue";
 import ListMembers from "./ListMembers.vue";
 import GroupLastPost from "./GroupLastPost.vue";
+import GroupDescription from "./GroupDescription.vue";
 export default {
   name: "OneGroupLayout",
-  components: { GroupHeader, ListMembers, GroupLastPost },
+  components: { GroupHeader, ListMembers, GroupLastPost, GroupDescription },
   data() {
     return {
       url: "",
