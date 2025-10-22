@@ -18,9 +18,7 @@
             </div>
            </div>
             <div class="row  gy-5 margin-1vh">
-              <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">                
-                <list-members v-bind:group="group"/>
-              </div>
+              <list-members v-bind:group="group"/>
               <group-last-post v-bind:group="group"/>
             </div>
           </div>
