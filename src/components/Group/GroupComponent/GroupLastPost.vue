@@ -1,9 +1,9 @@
 <template>
-  <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
-    <div class="card" style="width: 18rem">
+  <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4"  v-for="(posts, index) in Post" :key="index">
+    <div class="card">
       <div class="card-body">
         <h5 class="card-title">Card title</h5>
-        <div v-for="(posts, index) in Post" :key="index">
+        <div>
           <h2>{{ posts.Title }}</h2>
           <p class="text-align-justify">
             {{ truncateText(posts.Content, 255) }}

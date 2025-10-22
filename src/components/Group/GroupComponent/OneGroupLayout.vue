@@ -9,7 +9,7 @@
         <div class="card group-container border-none height-120-vh
           background-none details-infos-group border-radius-12px poppins-text text-white"       >
           <div class="card-body">
-            <div class="row height-30-vh margin-1vh">
+            <div class="row height-40-vh margin-1vh">
               <group-description v-bind:group="group" />
               <list-members v-bind:group="group" />
             </div>
