@@ -3,15 +3,18 @@
     id="group-details"
     class="width-190-vh height-100-vh background-none border-none padding-2-vh card mb-3 overflowY-auto"
   >
-    <group-header v-bind:group="group"/>
+    <group-header v-bind:group="group" />
     <div class="row gy-2">
       <div class="col-12 col-md-12">
-        <div class="card group-container border-none height-120-vh background-none details-infos-group border-radius-12px poppins-text text-white">          
+        <div class="card group-container border-none height-120-vh
+          background-none details-infos-group border-radius-12px poppins-text text-white"       >
           <div class="card-body">
-            <group-description v-bind:group="group"/>          
+            <div class="row height-30-vh margin-1vh">
+              <group-description v-bind:group="group" />
+              <list-members v-bind:group="group" />
+            </div>
             <div class="row gy-4 margin-1vh">
-              <list-members v-bind:group="group"/>
-              <group-last-post v-bind:Post="Post"/>
+              <group-last-post v-bind:Post="Post" />
             </div>
           </div>
         </div>
@@ -33,7 +36,7 @@ export default {
     return {
       url: "",
       group: {},
-      Post:{}
+      Post: {},
     };
   },
   created() {
@@ -43,15 +46,15 @@ export default {
     this.GetPostAllCommentReactions(this.url);
   },
   methods: {
-    GetPostAllCommentReactions(id){
+    GetPostAllCommentReactions(id) {
       PostAllCommentReactions.GetPostAllCommentReactions(id)
-      .then((response) => {
-        this.Post = response.data.ob;
-        console.log(this.Post);
-      })
-      .catch((e) => {
-        console.log(e);
-      });
+        .then((response) => {
+          this.Post = response.data.ob;
+          console.log(this.Post);
+        })
+        .catch((e) => {
+          console.log(e);
+        });
     },
     getGroup() {
       GroupService.GetGroupById(this.url)
@@ -66,7 +69,6 @@ export default {
   },
   mounted() {
     this.getGroup();
-    
   },
 };
 </script>
