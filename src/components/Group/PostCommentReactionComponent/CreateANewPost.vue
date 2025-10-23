@@ -1,7 +1,7 @@
 <template>
 <div class="card background-lineart height-90-vh">
   <div class="card-header text-white">
-    <h1>{{ url }} </h1>
+    <h1 class="text-white">{{ url }} </h1>
   </div>
   <div class="card-body">
     <h5 class="card-title">Créer un fil de discusssion</h5>
