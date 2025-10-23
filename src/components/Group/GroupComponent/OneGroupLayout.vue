@@ -6,9 +6,26 @@
     <group-header v-bind:group="group" />
     <div class="row gy-2">
       <div class="col-12 col-md-12">
-        <div class="card group-container border-none height-120-vh
-          background-none details-infos-group border-radius-12px poppins-text text-white"       >
+        <div
+          class="card group-container border-none height-120-vh background-none details-infos-group border-radius-12px poppins-text text-white"
+        >
           <div class="card-body">
+            <div class="row height-20-vh">
+              <div
+                class="col-12 display-flex align-items-content-justify-content"
+              >
+                <router-link
+                  to="/GroupLayout"
+                  class="btn btn-primary margin-1vh height-5-vh"
+                  >Retour à la liste des groupes</router-link
+                >
+                <router-link
+                  :to="'/CreateANewPost/' + group.Id"
+                  class="btn btn-primary margin-1vh height-5-vh"
+                  >Créer un nouveau post</router-link
+                >
+              </div>
+            </div>
             <div class="row height-40-vh margin-1vh">
               <group-description v-bind:group="group" />
               <list-members v-bind:group="group" />

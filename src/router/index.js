@@ -54,6 +54,7 @@ import Messagerie from "../components/UserPanel/UserMessagerie/Messagerie.vue";
 import AdminLayout from '../components/UserPanel/AdminDashboard'
 import GroupLayout from "../components/Group/GroupLayout.vue";
 import OneGroupLayout from "../components/Group/GroupComponent/OneGroupLayout.vue";
+import CreateANewPost from "../components/Group/PostCommentReactionComponent/CreateANewPost.vue";
 
 const routes = [
   {
@@ -275,6 +276,11 @@ const routes = [
         path: '/OneGroupLayout/:id',
         name: 'OneGroupLayout',
         component: OneGroupLayout,
+      },
+            {
+        path: '/CreateANewPost/:id',
+        name: 'CreateANewPost',
+        component: CreateANewPost,
       },
       {
         path: '/mouseShot',
