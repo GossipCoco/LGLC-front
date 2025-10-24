@@ -10,7 +10,7 @@
           class="card group-container border-none height-120-vh background-none details-infos-group border-radius-12px poppins-text text-white"
         >
           <div class="card-body">
-            <div class="row height-20-vh">
+            <div class="row height-10-vh">
               <div
                 class="col-12 display-flex align-items-content-justify-content"
               >
