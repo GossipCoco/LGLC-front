@@ -10,22 +10,7 @@
           class="card group-container border-none height-120-vh background-none details-infos-group border-radius-12px poppins-text text-white"
         >
           <div class="card-body">
-            <div class="row height-10-vh">
-              <div
-                class="col-12 display-flex align-items-content-justify-content"
-              >
-                <router-link
-                  to="/GroupLayout"
-                  class="btn btn-primary margin-1vh height-5-vh"
-                  >Retour à la liste des groupes</router-link
-                >
-                <router-link
-                  :to="'/CreateANewPost/' + group.Id"
-                  class="btn btn-primary margin-1vh height-5-vh"
-                  >Créer un nouveau post</router-link
-                >
-              </div>
-            </div>
+            <group-btn v-bind:group="group" />
             <div class="row height-40-vh margin-1vh">
               <group-description v-bind:group="group" />
               <list-members v-bind:group="group" />
@@ -43,12 +28,13 @@
 import GroupService from "../../../services/GroupService";
 import PostAllCommentReactions from "../../../services/PostCommentReactions";
 import GroupHeader from "./GroupHeader.vue";
+import GroupBtn from "./GroupBtn.vue";
 import ListMembers from "./ListMembers.vue";
 import GroupLastPost from "./GroupLastPost.vue";
 import GroupDescription from "./GroupDescription.vue";
 export default {
   name: "OneGroupLayout",
-  components: { GroupHeader, ListMembers, GroupLastPost, GroupDescription },
+  components: { GroupHeader, ListMembers, GroupLastPost, GroupDescription, GroupBtn },
   data() {
     return {
       url: "",
