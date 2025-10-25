@@ -11,7 +11,8 @@
             {{ truncateText(posts.Content, 255) }}
           </p>
           <p>
-            
+            <router-link :to="'/PostComment/' + posts.Id" class="btn btn-primary"
+              >Voir plus</router-link>
           </p>
         </div>
       </div>
