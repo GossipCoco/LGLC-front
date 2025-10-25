@@ -10,7 +10,9 @@
           <p class="text-align-justify text-white">
             {{ truncateText(posts.Content, 255) }}
           </p>
-          <p></p>
+          <p>
+            
+          </p>
         </div>
       </div>
     </div>
