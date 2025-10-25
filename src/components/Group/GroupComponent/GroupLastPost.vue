@@ -4,7 +4,7 @@
       <div class="card-body">
         <div class="display-flex display-flex-column align-items-content-justify-content margin-bottom-1vh">
           <h2 class="card-title text-white">{{ posts.Title }}</h2>
-          <h5 class="card-title text-white">{{ posts.User.UserName }}</h5>
+          <p class="card-title text-white font-size-0-65">{{ posts.User.UserName }}</p>
         </div>
         <div>
           <p class="text-align-justify text-white">
