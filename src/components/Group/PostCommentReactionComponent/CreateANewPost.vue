@@ -5,29 +5,32 @@
     </div>
     <div class="card-body">
       <h5 class="card-title">Créer un fil de discusssion</h5>
-      <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label"
-          >Titre</label
-        >
-        <input
-          type="text"
-          class="form-control"
-          id="exampleFormControlInput1"
-          placeholder="titre du post"
-          v-model="form.Title"
-        />
-      </div>
-      <div class="mb-3">
-        <label for="exampleFormControlTextarea1" class="form-label"
-          >Votre post</label
-        >
-        <textarea
-          class="form-control"
-          id="exampleFormControlTextarea1"
-          rows="3"
-          v-model="form.Content"
-        ></textarea>
-      </div>
+      <form class="row g-3 needs-validation" novalidate>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label text-white">Titre</label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="titre du post"
+            v-model="form.Title"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label text-white"
+            >Votre post</label
+          >
+          <textarea
+            class="form-control"
+            id="exampleFormControlTextarea1"
+            rows="3"
+            v-model="form.Content"
+          ></textarea>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">Submit form</button>
+        </div>
+      </form>
     </div>
   </div>
 </template>
