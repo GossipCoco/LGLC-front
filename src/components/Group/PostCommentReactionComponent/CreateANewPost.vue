@@ -14,6 +14,7 @@
           class="form-control"
           id="exampleFormControlInput1"
           placeholder="titre du post"
+          v-model="form.title"
         />
       </div>
       <div class="mb-3">
@@ -24,6 +25,7 @@
           class="form-control"
           id="exampleFormControlTextarea1"
           rows="3"
+          v-model="form.content"
         ></textarea>
       </div>
     </div>
@@ -36,6 +38,10 @@ export default {
     return {
       url: null,
       userCurrent: null,
+      form: {
+        title: "",
+        content: "",
+      },
     };
   },
   created() {
