@@ -5,7 +5,7 @@
     </div>
     <div class="card-body">
       <h5 class="card-title">Créer un fil de discusssion</h5>
-      <form class="row g-3 needs-validation" novalidate>
+      <form class="row g-3 needs-validation" novalidate @submit.prevent="onSubmit">
         <div class="mb-3">
           <label for="exampleFormControlInput1" class="form-label text-white">Titre</label>
           <input
@@ -35,6 +35,7 @@
   </div>
 </template>
 <script>
+import PostCommentReactions from "../../../services/PostCommentReactions";
 export default {
   name: "CreateANewPost",
   data() {
@@ -44,7 +45,7 @@ export default {
       form: {
         Title: "",
         Content: "",
-        UserID: null,
+        UserId: null,
       },
     };
   },
@@ -53,7 +54,37 @@ export default {
     this.userCurrent = this.$store.state.auth.user.usrID;
     console.log("CreateANewPost created with url:", this.url);
     console.log("Current user ID:", this.userCurrent);
-    this.form.UserID = this.userCurrent;
+    this.form.UserId = this.userCurrent;
+  },
+methods: {
+    toParagraphs(e) {
+      return (e || "")
+        .split("\n")
+        .filter(paragraph => paragraph.trim() !== "")
+        .map(paragraph => `<p>${paragraph}</p>`)
+        .join("");
+    },
+    async onSubmit() {
+      // validations simples
+      if (!this.form.Title?.trim() || !this.form.Content?.trim()) {
+        alert("Le titre et le contenu sont obligatoires.");
+        return;
+      }
+      const payload = {
+        Title: this.form.Title,
+        Content: this.toParagraphs(this.form.Content), // ← conversion ici
+        UserId: this.form.UserId,                      // ← mapping UserID → UserId
+      };
+
+      try {
+        await PostCommentReactions.CreateANewPost(this.url, payload);
+        // retour sur la page du groupe
+        this.$router.push({ path: `/OneGroupLayout/${this.url}` });
+      } catch (err) {
+        console.error("CreateANewPost error:", err);
+        alert("Impossible de publier le post pour le moment.");
+      }
+    },
   },
 };
 </script>
