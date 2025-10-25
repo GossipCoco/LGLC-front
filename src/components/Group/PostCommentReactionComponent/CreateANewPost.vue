@@ -14,7 +14,7 @@
           class="form-control"
           id="exampleFormControlInput1"
           placeholder="titre du post"
-          v-model="form.title"
+          v-model="form.Title"
         />
       </div>
       <div class="mb-3">
@@ -25,7 +25,7 @@
           class="form-control"
           id="exampleFormControlTextarea1"
           rows="3"
-          v-model="form.content"
+          v-model="form.Content"
         ></textarea>
       </div>
     </div>
@@ -39,8 +39,9 @@ export default {
       url: null,
       userCurrent: null,
       form: {
-        title: "",
-        content: "",
+        Title: "",
+        Content: "",
+        UserID: null,
       },
     };
   },
@@ -49,6 +50,7 @@ export default {
     this.userCurrent = this.$store.state.auth.user.usrID;
     console.log("CreateANewPost created with url:", this.url);
     console.log("Current user ID:", this.userCurrent);
+    this.form.UserID = this.userCurrent;
   },
 };
 </script>
