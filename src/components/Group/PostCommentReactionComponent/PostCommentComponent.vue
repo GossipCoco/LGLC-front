@@ -3,7 +3,7 @@
     id="post-comment-details"
     class="width-190-vh height-100-vh background-none border-none padding-2-vh card mb-3 overflowY-auto"
   >
-    <group-header v-bind:group="postCommentReactions.Group" />
+    <group-header v-bind:group="Group" />
     <div
       class="card group-container border-none height-120-vh background-lineart details-infos-group border-radius-12px poppins-text text-white"
     >
@@ -24,6 +24,7 @@ export default {
     return {
       url: "",
       postCommentReactions: {},
+      Group: {},
     };
   },
    created() {
@@ -39,6 +40,7 @@ export default {
           this.postCommentReactions = response.data.ob;
           console.log(this.postCommentReactions);          
           console.log(this.postCommentReactions.Group);
+          this.Group = this.postCommentReactions.Group;
         })
     }
    },
