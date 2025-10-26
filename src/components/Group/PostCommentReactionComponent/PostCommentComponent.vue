@@ -38,8 +38,7 @@ export default {
         PostCommentReactionsService.GetAPostAllCommentReactionsById(id)
         .then((response) => {
           this.postCommentReactions = response.data.ob;
-          console.log(this.postCommentReactions);          
-          console.log(this.postCommentReactions.Group);
+          console.log(this.postCommentReactions);
           this.Group = this.postCommentReactions.Group;
         })
     }
