@@ -8,7 +8,19 @@
       class="card group-container border-none height-120-vh background-lineart details-infos-group border-radius-12px poppins-text text-white"
     >
       <div class="card-body">
-
+        <div class="row">
+            <div class="col-8">
+                <h2 class="text-white">{{ postCommentReactions.Title }}</h2>
+            </div>
+            <div class="col-4 text-align-right">
+                <p class="text-white">{{ postCommentReactions.User.UserName }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <p class="text-align-justify text-white" v-html="postCommentReactions.Content"></p> 
+            </div>
+        </div>
       </div>
     </div>
   </div>
