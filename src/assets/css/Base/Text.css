@@ -18,6 +18,11 @@
   font-variant-caps: small-caps;
   margin: 0 0 0 -50vh;
 }
+.card-header h2.post-title-text {
+  font: 2em capitalize all-petite-caps;
+  font-variant-caps: small-caps;
+  margin: 0;
+}
 .login-card .card-header h2 {
   font: 2em capitalize all-petite-caps;
   font-variant-caps: small-caps;

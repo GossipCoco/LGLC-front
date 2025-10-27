@@ -9,16 +9,45 @@
     >
       <div class="card-body">
         <div class="row">
-            <div class="col-8">
-                <h2 class="text-white">{{ postCommentReactions.Title }}</h2>
+          <div class="col-12">
+            <div class="card background-color-dark-green-01">
+              <div class="card-header">
+                <div class="row">
+                  <div class="col-8">
+                    <h2 class="text-white post-title-text">{{ postCommentReactions.Title }}</h2>
+                  </div>
+                  <div class="col-4 text-align-right">
+                    <p class="text-white">{{ UserName }}</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body ">
+                <p
+                  class="text-align-justify text-white"
+                  v-html="postCommentReactions.Content"
+                ></p>
+              </div>
             </div>
-            <div class="col-4 text-align-right">
-                <p class="text-white">{{ postCommentReactions.User.UserName }}</p>
-            </div>
+          </div>
         </div>
-        <div class="row">
-            <div class="col-12">
-                <p class="text-align-justify text-white" v-html="postCommentReactions.Content"></p> 
+        <div class="row" v-for="(Comments, index) in Comments" :key="index">
+            <div class="card background-color-middle-green-01">
+              <!-- <div class="card-header">
+                <div class="row">
+                  <div class="col-8">
+                    <h2 class="text-white post-title-text">{{ postCommentReactions.Title }}</h2>
+                  </div>
+                  <div class="col-4 text-align-right">
+                    <p class="text-white">{{ UserName }}</p>
+                  </div>
+                </div>
+              </div> -->
+              <div class="card-body ">
+                <p
+                  class="text-align-justify text-white"
+                  v-html="Comments.Content"
+                ></p>
+              </div>
             </div>
         </div>
       </div>
@@ -31,29 +60,34 @@ import GroupHeader from "../GroupComponent/GroupHeader.vue";
 export default {
   name: "PostCommentReactionComponent",
   props: ["PostCommentReactions"],
-    components: { GroupHeader },
+  components: { GroupHeader },
   data() {
     return {
       url: "",
       postCommentReactions: {},
+      Comments:{},
       Group: {},
+      UserName: null,
     };
   },
-   created() {
+  created() {
     console.log("created", this.$route.params.id);
     this.url = this.$route.params.id;
     console.log(this.url);
     this.GetAPostAllCommentReactionsById(this.url);
-   },
-   methods: {
-    GetAPostAllCommentReactionsById(id){
-        PostCommentReactionsService.GetAPostAllCommentReactionsById(id)
-        .then((response) => {
+  },
+  methods: {
+    GetAPostAllCommentReactionsById(id) {
+      PostCommentReactionsService.GetAPostAllCommentReactionsById(id).then(
+        (response) => {
           this.postCommentReactions = response.data.ob;
           console.log(this.postCommentReactions);
           this.Group = this.postCommentReactions.Group;
-        })
-    }
-   },
+          this.UserName = this.postCommentReactions.User.UserName;
+          this.Comments = this.postCommentReactions.GroupComments;
+        }
+      );
+    },
+  },
 };
 </script>
