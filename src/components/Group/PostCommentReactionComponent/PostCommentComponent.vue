@@ -8,7 +8,8 @@
       class="card group-container border-none height-120-vh background-lineart details-infos-group border-radius-12px poppins-text text-white"
     >
       <div class="card-body">
-        <div class="row">
+        <PostCardComponent v-bind:post="postCommentReactions" v-bind:UserName="UserName" />
+        <!-- <div class="row">
           <div class="col-12">
             <div class="card background-color-dark-green-01 margin-1vh">
               <div class="card-header">
@@ -29,7 +30,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
         <div class="row margin-1vh" v-for="(Comments, index) in Comments" :key="index"  >
             <div class="card background-color-middle-green-01">
               <div class="card-header">
@@ -56,10 +57,11 @@
 <script>
 import PostCommentReactionsService from "../../../services/PostCommentReactions";
 import GroupHeader from "../GroupComponent/GroupHeader.vue";
+import PostCardComponent from "./PostCardComponent.vue";
 export default {
   name: "PostCommentReactionComponent",
   props: ["PostCommentReactions"],
-  components: { GroupHeader },
+  components: { GroupHeader, PostCardComponent},
   data() {
     return {
       url: "",
