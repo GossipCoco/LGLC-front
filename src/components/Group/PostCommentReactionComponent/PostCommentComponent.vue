@@ -59,11 +59,10 @@ export default {
     GetAPostAllCommentReactionsById(id) {
       PostCommentReactionsService.GetAPostAllCommentReactionsById(id).then(
         (response) => {
-          this.postCommentReactions = response.data.ob;
-          console.log(this.postCommentReactions);
-          this.Group = this.postCommentReactions.Group;
-          this.UserName = this.postCommentReactions.User.UserName;
-          this.Comments = this.postCommentReactions.GroupComments;
+            this.postCommentReactions = response.data.ob;
+            this.Group = this.postCommentReactions.Group;
+            this.UserName = this.postCommentReactions.User.UserName;
+            this.Comments = this.postCommentReactions.GroupComments;
         }
       );
     },
