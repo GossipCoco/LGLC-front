@@ -10,7 +10,7 @@
       <div class="card-body">
         <div class="row">
           <div class="col-12">
-            <div class="card background-color-dark-green-01">
+            <div class="card background-color-dark-green-01 margin-1vh">
               <div class="card-header">
                 <div class="row">
                   <div class="col-8">
@@ -30,7 +30,7 @@
             </div>
           </div>
         </div>
-        <div class="row" v-for="(Comments, index) in Comments" :key="index">
+        <div class="row margin-1vh" v-for="(Comments, index) in Comments" :key="index"  >
             <div class="card background-color-middle-green-01">
               <div class="card-header">
                 <div class="row">
