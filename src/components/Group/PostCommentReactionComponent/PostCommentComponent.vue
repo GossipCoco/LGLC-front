@@ -50,9 +50,7 @@ export default {
     };
   },
   created() {
-    console.log("created", this.$route.params.id);
     this.url = this.$route.params.id;
-    console.log(this.url);
     this.GetAPostAllCommentReactionsById(this.url);
   },
   methods: {
