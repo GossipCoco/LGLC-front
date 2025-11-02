@@ -44,6 +44,7 @@ export default {
             this.Group = this.postCommentReactions.Group;
             this.UserName = this.postCommentReactions.User.UserName;
             this.Comments = this.postCommentReactions.GroupComments;
+            console.log(this.Comments);
         }
       );
     },

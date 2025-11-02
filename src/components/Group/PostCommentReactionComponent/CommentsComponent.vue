@@ -15,6 +15,18 @@
       </div>
       <div class="card-body">
         <p class="text-align-justify text-white" v-html="Comments.Content"></p>
+        <div v-if="Comments.Replies.length > 0">
+          <h3 class="text-white">Réponses :</h3>
+          <div
+            class="card background-color-light-green-01 margin-1vh"
+            v-for="(reply, replyIndex) in Comments.Replies"
+            :key="replyIndex"
+          >
+            <div class="card-body">
+              <p class="text-align" v-html="reply.Content"></p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
