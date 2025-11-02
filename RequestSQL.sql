@@ -95,3 +95,17 @@ ADD FOREIGN KEY (StoryId) REFERENCES Story(Id)
 
 ALTER TABLE Story
 ADD FOREIGN KEY (UserId) REFERENCES [dbo].[user](Id)
+
+
+<p><span class="font-weight-600">Objectif</span> : progresser en écriture dans l’univers Warriors avec un cadre bienveillant et des retours concrets.</p>
+<p><span class="font-weight-600">Rythme</span> : un prompt hebdomadaire (+ un challenge mensuel) ; participation libre, lecture commune le week-end.</p>
+<p><span class="font-weight-600">Fonctionnement</span> : on poste son brouillon (300–800 mots), chacun laisse 2 retours utiles (forme + fond), puis réécriture courte.</p>
+<p><span class="font-weight-600">Prompts</span> : scènes d’amitié, batailles, introspections de guérisseurs, décisions de chefs, météo & terrain comme contraintes.</p>
+<p><span class="font-weight-600">Relectures</span> : focus sur clarté, voix des personnages, cohérence du lore, gestion des ellipses, et finition des dialogues.</p>
+<p><span class="font-weight-600">Règles</span> : respect, pas de spoilers majeurs sans balises, citer les références de canon si utilisées, indiquer le niveau de maturité.</p>
+<p><span class="font-weight-600">Niveau</span> : ouvert débutant→confirmé ; tag [Débutant] ou [Confirmé] pour recevoir un retour adapté.</p><p>Outils : fiche personnage type, check-list de relecture, banque d’astuces (verbes d’action, variantes de rythme, descriptions).</p>
+<p><span class="font-weight-600">Organisation</span> : un fil par prompt, posts épinglés (règles + calendrier), récap mensuel des progrès et coups de cœur.</p><p>Résultats attendus : 1 texte finalisé par mois, 2 retours donnés par texte posté, et un mini-portfolio personnel à la fin du trimestre.</p>
+
+
+
+
