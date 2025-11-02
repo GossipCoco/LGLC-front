@@ -7,8 +7,7 @@
           <p class="card-title text-white font-size-0-65">{{ posts.User.UserName }}</p>
         </div>
         <div>
-          <p class="text-align-justify text-white">
-            {{ truncateText(posts.Content, 255) }}
+          <p class="text-align-justify text-white" v-html="truncateText(posts.Content, 255)">  
           </p>
           <p>
             <router-link :to="'/PostComment/' + posts.Id" class="btn btn-primary"
