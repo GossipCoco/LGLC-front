@@ -1,11 +1,11 @@
 <template>
   <div
     id="post-comment-details"
-    class="width-190-vh height-100-vh background-none border-none padding-2-vh card mb-3 overflowY-auto"
+    class="width-190-vh height-auto background-none border-none padding-2-vh card mb-3 overflowY-auto"
   >
     <group-header v-bind:group="Group" />
     <div
-      class="card group-container border-none height-120-vh background-lineart details-infos-group border-radius-12px poppins-text text-white"
+      class="card group-container border-none height-auto background-lineart details-infos-group border-radius-12px poppins-text text-white"
     >
       <div class="card-body">
         <PostCardComponent v-bind:post="postCommentReactions" v-bind:UserName="UserName" />
