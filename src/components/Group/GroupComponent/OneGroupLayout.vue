@@ -8,21 +8,16 @@
       <div class="col-12 col-md-12">
         <div
           class="card group-container border-none height-120-vh details-infos-group border-radius-12px poppins-text text-white"
-          v-bind:style="{ backgroundImage: 'url(' + Background + ')' }"
+          v-bind:style="bgStyle"
         >
           <div class="card-body">
-            <div
-              :style="bgStyle"
-              class="background-size-cover width-190-vh display-flex-column background-fiction-contain"
-            >
-              <group-btn v-bind:group="group" />
-              <div class="row height-40-vh margin-1vh">
-                <group-description v-bind:group="group" />
-                <list-members v-bind:group="group" />
-              </div>
-              <div class="row gy-4 margin-1vh">
-                <group-last-post v-bind:Post="Post" />
-              </div>
+            <group-btn v-bind:group="group" />
+            <div class="row height-40-vh margin-1vh">
+              <group-description v-bind:group="group" />
+              <list-members v-bind:group="group" />
+            </div>
+            <div class="row gy-4 margin-1vh">
+              <group-last-post v-bind:Post="Post" />
             </div>
           </div>
         </div>
