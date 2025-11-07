@@ -12,7 +12,7 @@
         >
           <div class="card-body">
             <group-btn v-bind:group="group" />
-            <div class="row height-40-vh margin-1vh">
+            <div class="row height-60-vh margin-1vh">
               <group-description v-bind:group="group" />
               <list-members v-bind:group="group" />
             </div>

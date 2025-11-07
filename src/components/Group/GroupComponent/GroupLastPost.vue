@@ -1,6 +1,6 @@
 <template>
   <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4"  v-for="(posts, index) in Post" :key="index">
-    <div class="card  background-lineart">
+    <div class="card background-lineart height-40-vh">
       <div class="card-body">
         <div class="display-flex display-flex-column align-items-content-justify-content margin-bottom-1vh">
           <h2 class="card-title text-white">{{ posts.Title }}</h2>
