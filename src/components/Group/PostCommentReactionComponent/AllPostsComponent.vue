@@ -32,6 +32,15 @@
                 </div>
               </div>
             </div>
+            <div class="row pagination-container">
+                <Pagination
+                    v-if="!showspinner"
+                    :nav="nav"
+                    :filters="filters"
+                    :getDatas="'FictionPagination'"
+                    @FictionPagination="FictionPagination"
+                />
+            </div>
           </div>
         </div>
       </div>
@@ -41,10 +50,12 @@
 <script>
 import PostAllCommentReactions from "../../../services/PostCommentReactions";
 import GroupHeader from "../GroupComponent/GroupHeader.vue";
+import Pagination from "../../Components/GenericComponent/Pagination.vue";
 export default {
   name: "AllPostsComponent",
   components: {
     GroupHeader,
+    Pagination
   },
   data() {
     return {
@@ -53,6 +64,7 @@ export default {
       Group: {},
       Background: null,
       NbPosts: null,
+      showspinner: true,
       nav:{
         current: 0,
         pages: 0,
