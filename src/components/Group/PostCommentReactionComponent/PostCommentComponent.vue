@@ -66,6 +66,7 @@ export default {
       PostCommentReactionsService.GetAPostAllCommentReactionsById(id).then(
         (response) => {
           this.Background = response.data.ob.Group.Background;
+          console.log(response.data.ob);
           this.postCommentReactions = response.data.ob;
           this.Group = this.postCommentReactions.Group;
           this.UserName = this.postCommentReactions.User.UserName;
