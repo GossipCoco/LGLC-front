@@ -70,7 +70,7 @@ export default {
           this.postCommentReactions = response.data.ob;
           this.Group = this.postCommentReactions.Group;
           this.UserName = this.postCommentReactions.User.UserName;
-          this.Comments = this.postCommentReactions.GroupComments;
+          this.Comments = this.postCommentReactions.Comments;
         }
       );
     },
