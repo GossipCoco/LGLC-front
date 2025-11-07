@@ -1,9 +1,12 @@
 <template>
   <article class="card post-card border-none background-lineart poppins-text text-white padding-1-vh">
+    <div class="card-header">
     <!-- Header -->
     <header class="d-flex align-items-center gap-2 mb-2">
+      <h2 class="h5 mb-2">{{ post.Title }}</h2>
       <img :src="'/images/Avatars/'+post.User?.Avatar" alt="" class="rounded-circle avatar" />
       <div class="d-flex flex-column">
+
         <strong>{{ post.User?.UserName || 'Anonyme' }}</strong>
         <small class="opacity-75">{{ formatDate(post.CreatedAt) }}</small>
       </div>
@@ -11,9 +14,10 @@
     </header>
 
     <!-- Titre -->
-    <h2 class="h5 mb-2">{{ post.Title }}</h2>
-
+    
+    </div>
     <!-- Contenu tronqué -->
+     <div class="card-body">
     <div :class="['content', { collapsed: !expanded }]" v-html="post.Content"></div>
     <button v-if="shouldCollapse" class="link" @click="expanded = !expanded">
       {{ expanded ? 'Afficher moins' : 'Lire la suite' }}
@@ -25,6 +29,7 @@
       <span v-if="post.Group?.Name">🏷️ {{ post.Group.Name }}</span>
       <button class="btn btn-sm btn-outline-light ms-auto" @click="$emit('open', post.Id)">Ouvrir</button>
     </footer>
+  </div>
   </article>
 </template>
 

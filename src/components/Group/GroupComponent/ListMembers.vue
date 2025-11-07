@@ -1,6 +1,6 @@
 <template>
   <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
-    <div class="card background-lineart height-50-vh">
+    <div class="card background-lineart height-60-vh">
       <div class="card-header">
         <h5 class="card-title">Membres</h5>
       </div>
