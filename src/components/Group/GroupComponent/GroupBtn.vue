@@ -11,6 +11,11 @@
         class="btn btn-primary margin-1vh height-5-vh"
         >Créer un nouveau post</router-link
       >
+      <router-link
+        :to="'/AllPostsByGroup/' + group.Id"
+        class="btn btn-primary margin-1vh height-5-vh"
+        >Voir tous les posts</router-link
+      >
     </div>
   </div>
 </template>

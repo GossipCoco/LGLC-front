@@ -7,7 +7,7 @@
     <div class="row gy-2">
       <div class="col-12 col-md-12">
         <div
-          class="card group-container border-none height-120-vh details-infos-group border-radius-12px poppins-text text-white"
+          class="card group-container border-none height-auto details-infos-group border-radius-12px poppins-text text-white"
           v-bind:style="bgStyle"
         >
           <div class="card-body">

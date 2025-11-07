@@ -56,6 +56,7 @@ import GroupLayout from "../components/Group/GroupLayout.vue";
 import OneGroupLayout from "../components/Group/GroupComponent/OneGroupLayout.vue";
 import CreateANewPost from "../components/Group/PostCommentReactionComponent/CreateANewPost.vue";
 import PostCommentComponent from "../components/Group/PostCommentReactionComponent/PostCommentComponent.vue";
+import AllPostsComponent from "../components/Group/PostCommentReactionComponent/AllPostsComponent.vue";
 
 const routes = [
   {
@@ -281,6 +282,11 @@ const routes = [
         path: '/PostComment/:id',
         name: 'PostCommentComponent',
         component: PostCommentComponent,
+      },
+      {
+        path: '/AllPostsByGroup/:id',
+        name: 'AllPostsComponent',
+        component: AllPostsComponent,
       },
             {
         path: '/CreateANewPost/:id',
