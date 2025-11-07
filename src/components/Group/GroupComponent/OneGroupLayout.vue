@@ -7,19 +7,22 @@
     <div class="row gy-2">
       <div class="col-12 col-md-12">
         <div
-          class="card group-container border-none height-120-vh background-none details-infos-group border-radius-12px poppins-text text-white"
+          class="card group-container border-none height-120-vh details-infos-group border-radius-12px poppins-text text-white"
+          v-bind:style="{ backgroundImage: 'url(' + Background + ')' }"
         >
           <div class="card-body">
-            <div style="background-image: url('/images/Groups/Image_ 002.jpg');">
-
-            <group-btn v-bind:group="group" />
-            <div class="row height-40-vh margin-1vh">
-              <group-description v-bind:group="group" />
-              <list-members v-bind:group="group" />
-            </div>
-            <div class="row gy-4 margin-1vh">
-              <group-last-post v-bind:Post="Post" />
-            </div>
+            <div
+              :style="bgStyle"
+              class="background-size-cover width-190-vh display-flex-column background-fiction-contain"
+            >
+              <group-btn v-bind:group="group" />
+              <div class="row height-40-vh margin-1vh">
+                <group-description v-bind:group="group" />
+                <list-members v-bind:group="group" />
+              </div>
+              <div class="row gy-4 margin-1vh">
+                <group-last-post v-bind:Post="Post" />
+              </div>
             </div>
           </div>
         </div>
@@ -37,7 +40,13 @@ import GroupLastPost from "./GroupLastPost.vue";
 import GroupDescription from "./GroupDescription.vue";
 export default {
   name: "OneGroupLayout",
-  components: { GroupHeader, ListMembers, GroupLastPost, GroupDescription, GroupBtn },
+  components: {
+    GroupHeader,
+    ListMembers,
+    GroupLastPost,
+    GroupDescription,
+    GroupBtn,
+  },
   data() {
     return {
       url: "",
@@ -49,6 +58,19 @@ export default {
   created() {
     this.url = this.$route.params.id;
     this.GetPostAllCommentReactions(this.url);
+  },
+  computed: {
+    bgStyle() {
+      // 1) source = Background si dispo, sinon group.Background, sinon group.Image
+      const src = this.Background;
+      console.log("Background source:", src);
+      if (!src) return {}; // => pas de style tant qu’on n’a rien (évite url(null))
+      return {
+        backgroundImage: `url("${src}")`,
+        backgroundSize: "cover",
+        backgroundPosition: "center center",
+      };
+    },
   },
   methods: {
     GetPostAllCommentReactions(id) {
@@ -66,6 +88,7 @@ export default {
           this.group = response.data.ob;
           console.log(this.group.Background);
           this.Background = this.group.Background;
+          console.log(this.Background);
         })
         .catch((e) => {
           console.log(e);
