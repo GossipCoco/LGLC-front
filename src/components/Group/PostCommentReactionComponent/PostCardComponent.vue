@@ -2,7 +2,7 @@
   <article class="card post-card border-none background-lineart poppins-text text-white padding-1-vh">
     <!-- Header -->
     <header class="d-flex align-items-center gap-2 mb-2">
-      <img :src="post.User?.Avatar" alt="" class="rounded-circle avatar" />
+      <img :src="'/images/Avatars/'+post.User?.Avatar" alt="" class="rounded-circle avatar" />
       <div class="d-flex flex-column">
         <strong>{{ post.User?.UserName || 'Anonyme' }}</strong>
         <small class="opacity-75">{{ formatDate(post.CreatedAt) }}</small>
@@ -54,5 +54,14 @@ export default {
   }
 };
 </script>
-
-
+<style scoped>
+.avatar { width:34px; height:34px; object-fit:cover }
+.content { line-height:1.7; }
+.content.collapsed {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.link { background:none; border:none; color:#cfe; cursor:pointer; padding:0; margin-top:6px }
+:deep(p){ margin:0 0 .6rem; }
+</style>

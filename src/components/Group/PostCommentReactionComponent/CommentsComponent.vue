@@ -1,44 +1,65 @@
 <template>
-  <div
-    class="row margin-1vh"
-    v-for="(Comments, index) in Comments"
-    :key="index"
-  >
-    <div class="card background-color-middle-green-01">
-      <div class="card-header">
-        <div class="row">
-          <div class="col-8">
-            <h2 class="text-white post-title-text">Réponse</h2>
+  <div>
+    <!-- niveau courant -->
+    <div
+      class="row margin-1vh"
+      v-for="(c, idx) in Comments"
+      :key="c.Id || idx"
+    >
+      <div :class="cardClass">
+        <!-- en-tête uniquement au niveau racine -->
+        <div v-if="depth === 0" class="card-header">
+          <div class="row">
+            <div class="col-8">
+              <h2 class="text-white post-title-text">Réponse</h2>
+            </div>
+            <div class="col-4 text-align-right"></div>
           </div>
-          <div class="col-4 text-align-right"></div>
         </div>
-      </div>
-      <div class="card-body">
-        <p class="text-align-justify text-white" v-html="Comments.Content"></p>
-        <div v-if="Comments.Replies.length > 0">
-          <h3 class="text-white">Réponses :</h3>
-          <div
-            class="card background-color-light-green-01 margin-1vh"
-            v-for="(reply, replyIndex) in Comments.Replies"
-            :key="replyIndex"
-          >
-            <div class="card-body">
-              <p class="text-align" v-html="reply.Content"></p>
+
+        <div class="card-body">
+          <p class="text-align-justify text-white" v-html="c.Content"></p>
+
+          <!-- enfants -->
+          <div v-if="hasReplies(c)">
+            <h3 class="text-white">Réponses :</h3>
+            <div class="ms-3">
+              <!-- récursion sur CE MÊME composant -->
+              <CommentsComponent
+                :Comments="c.Replies"
+                :depth="depth + 1"
+              />
             </div>
           </div>
         </div>
       </div>
     </div>
+
   </div>
 </template>
+
 <script>
 export default {
   name: "CommentsComponent",
-  props: ["Comments"],
-  data() {
-    return {};
+  props: {
+    Comments: { type: Array, default: () => [] },
+    depth: { type: Number, default: 0 },
   },
-  created() {},
-  methods: {},
+  computed: {
+    cardClass() {
+      return this.depth === 0
+        ? "card background-color-middle-green-01"
+        : "card background-color-middle-green-01 margin-1vh";
+    },
+  },
+  methods: {
+    hasReplies(node) {
+      return Array.isArray(node.Replies) && node.Replies.length > 0;
+    },
+  },
+  created() {
+    // debug minimal
+    // console.log("CommentsComponent depth:", this.depth, "items:", this.Comments?.length);
+  },
 };
 </script>
