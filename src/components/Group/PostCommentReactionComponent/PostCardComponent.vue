@@ -2,13 +2,15 @@
   <article class="card post-card border-none background-lineart poppins-text text-white padding-1-vh">
     <div class="card-header">
     <!-- Header -->
-    <header class="d-flex align-items-center gap-2 mb-2">
-      <h2 class="h5 mb-2">{{ post.Title }}</h2>
-      <img :src="'/images/Avatars/'+post.User?.Avatar" alt="" class="rounded-circle avatar" />
-      <div class="d-flex flex-column">
+    <header class="d-flex align-items-center gap-2 mb-2 display-flex display-flex-column">
+      <div class="display-flex display-flex-row">
+        <h2 class="h5 mb-2">{{ post.Title }}</h2>
+        <img :src="'/images/Avatars/'+post.User?.Avatar" alt="" class="rounded-circle avatar" />
+        <div class="d-flex flex-column">
 
-        <strong>{{ post.User?.UserName || 'Anonyme' }}</strong>
-        <small class="opacity-75">{{ formatDate(post.CreatedAt) }}</small>
+          <strong>{{ post.User?.UserName || 'Anonyme' }}</strong>
+          <small class="opacity-75">{{ formatDate(post.CreatedAt) }}</small>
+        </div>
       </div>
       <span v-if="post.IsPinned" class="ms-auto badge bg-success">📌 Épinglé</span>
     </header>
