@@ -7,16 +7,23 @@
     <div class="row gy-2">
       <div class="col-12 col-md-12">
         <div
-          class="card group-container border-none height-auto details-infos-group border-radius-12px poppins-text text-white"
+          class="card group-container background-lineart poppins-text text-white border-none height-auto details-infos-group border-radius-12px poppins-text text-white"
           v-bind:style="bgStyle"
         >
           <div class="card-body">
             <div class="row">
+                <div class="col-12 mb-3">
+                    <router-link :to="'/OneGroupLayout/' + Group.Id" class="btn btn-primary margin-1vh height-5-vh">
+                        {{ Group.Name }}
+                    </router-link>                  
+                </div>
+            </div>
+            <div class="row">
               <div class="col-6" v-for="(posts, index) in Post" :key="index">
-                <div class="card mb-3 background-white text-black">
+                <div class="card mb-3 background-lineart poppins-text text-white">
                   <div class="card-body">
                     <h5 class="card-title">{{ posts.Title }}</h5>
-                    <p v-html="truncateText(posts.Content, 255)"></p>
+                    <p v-html="truncateText(posts.Content, 500)"></p>
                   </div>
                 </div>
               </div>
