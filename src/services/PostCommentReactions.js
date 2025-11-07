@@ -7,8 +7,9 @@ class PostCommentReactions {
     GetAPostAllCommentReactionsById(id){
         return http.get(`/PostCommentReactions/GetAPostAllCommentReactionsById/${id}`);
     }
-    GetAllPostsByGroupId(id){
-        return http.get(`/PostCommentReactions/GetAllPostsByGroupId/${id}`);
+    GetAllPostsByGroupId(id, data){
+        console.log("Service Group ID:", data);
+        return http.post(`/PostCommentReactions/GetAllPostsByGroupId/${id}`, data);
     }
     CountAllPostByGroupId(id){
         return http.get(`/PostCommentReactions/CountAllPostByGroupId/${id}`);

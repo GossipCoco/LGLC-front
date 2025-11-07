@@ -52,12 +52,17 @@ export default {
       Post: {},
       Group: {},
       Background: null,
-      NbPosts: null
+      NbPosts: null,
+      nav:{
+        current: 0,
+        pages: 0,
+        step: 12,      
+      }
     };
   },
   created() {
     this.url = this.$route.params.id;
-    this.GetAllPostsByGroupId(this.url);
+    this.GetAllPostsByGroupId(this.url, this.nav);
     this.CountAllPostByGroupId(this.url);
   },
   computed: {
@@ -90,8 +95,8 @@ export default {
             console.log(e);
             });
     },
-    GetAllPostsByGroupId(id) {
-      PostAllCommentReactions.GetAllPostsByGroupId(id)
+    GetAllPostsByGroupId(id, nav) {
+      PostAllCommentReactions.GetAllPostsByGroupId(id, nav)
         .then((response) => {
           this.Group = response.data.ob;
           console.log(this.Group);
