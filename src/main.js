@@ -8,8 +8,7 @@ import store from "./store"
 import Vue3YouTube from 'vue3-youtube';
 import io from 'socket.io-client'
 import IOController from '../src/api/SocketIoApi'
-import { QuillEditor } from '@vueup/vue-quill'
-import '@vueup/vue-quill/dist/vue-quill.snow.css';
+
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faCat, faEnvelope, faGamepad, faHome, faHouseUser, faUser, faUserAlt, faUserCog,
@@ -58,7 +57,7 @@ library.add(faUserSecret,faUser, faHouseUser, faGamepad, faUser, faHome, faEnvel
             faGear, faChevronDown, faStar, faPen)
 
 const app = createApp(App)
-app.component('QuillEditor', QuillEditor)
+
 app.component('font-awesome-icon', FontAwesomeIcon)
 app.use(Vuex)
 app.use(store)
