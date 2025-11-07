@@ -6,6 +6,7 @@
     <group-header v-bind:group="Group" />
     <div
       class="card group-container border-none height-auto background-lineart details-infos-group border-radius-12px poppins-text text-white"
+      v-bind:style="bgStyle"
     >
       <div class="card-body">
         <PostCardComponent v-bind:post="postCommentReactions" v-bind:UserName="UserName" />
@@ -30,21 +31,35 @@ export default {
       Comments:{},
       Group: {},
       UserName: null,
+      Background: null,
     };
   },
   created() {
     this.url = this.$route.params.id;
     this.GetAPostAllCommentReactionsById(this.url);
   },
+  computed: {
+    bgStyle() {
+      // 1) source = Background si dispo, sinon group.Background, sinon group.Image
+      const src = this.Background;
+      console.log("Background source:", src);
+      if (!src) return {}; // => pas de style tant qu’on n’a rien (évite url(null))
+      return {
+        backgroundImage: `url("${src}")`,
+        backgroundSize: "cover",
+        backgroundPosition: "center center",
+      };
+    },
+  },
   methods: {
     GetAPostAllCommentReactionsById(id) {
       PostCommentReactionsService.GetAPostAllCommentReactionsById(id).then(
         (response) => {
+          this.Background = response.data.ob.Group.Background;
             this.postCommentReactions = response.data.ob;
             this.Group = this.postCommentReactions.Group;
             this.UserName = this.postCommentReactions.User.UserName;
             this.Comments = this.postCommentReactions.GroupComments;
-            console.log(this.Comments);
         }
       );
     },

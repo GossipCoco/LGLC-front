@@ -81,9 +81,7 @@ export default {
       GroupService.GetGroupById(this.url)
         .then((response) => {
           this.group = response.data.ob;
-          console.log(this.group.Background);
           this.Background = this.group.Background;
-          console.log(this.Background);
         })
         .catch((e) => {
           console.log(e);
