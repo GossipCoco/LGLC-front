@@ -10,6 +10,8 @@
           class="card group-container border-none height-120-vh background-none details-infos-group border-radius-12px poppins-text text-white"
         >
           <div class="card-body">
+            <div style="background-image: url('/images/Groups/Image_ 002.jpg');">
+
             <group-btn v-bind:group="group" />
             <div class="row height-40-vh margin-1vh">
               <group-description v-bind:group="group" />
@@ -17,6 +19,7 @@
             </div>
             <div class="row gy-4 margin-1vh">
               <group-last-post v-bind:Post="Post" />
+            </div>
             </div>
           </div>
         </div>
@@ -40,12 +43,11 @@ export default {
       url: "",
       group: {},
       Post: {},
+      Background: null,
     };
   },
   created() {
-    console.log("created", this.$route.params.id);
     this.url = this.$route.params.id;
-    console.log(this.url);
     this.GetPostAllCommentReactions(this.url);
   },
   methods: {
@@ -53,7 +55,6 @@ export default {
       PostAllCommentReactions.GetPostAllCommentReactions(id)
         .then((response) => {
           this.Post = response.data.ob;
-          console.log(this.Post);
         })
         .catch((e) => {
           console.log(e);
@@ -63,7 +64,8 @@ export default {
       GroupService.GetGroupById(this.url)
         .then((response) => {
           this.group = response.data.ob;
-          console.log(this.group);
+          console.log(this.group.Background);
+          this.Background = this.group.Background;
         })
         .catch((e) => {
           console.log(e);
