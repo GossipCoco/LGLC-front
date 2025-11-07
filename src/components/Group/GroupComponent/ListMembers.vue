@@ -1,7 +1,9 @@
 <template>
-  <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
-    <div class="card background-lineart">
-      <h5 class="card-title">Membres</h5>
+  <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+    <div class="card background-lineart height-50-vh">
+      <div class="card-header">
+        <h5 class="card-title">Membres</h5>
+      </div>
       <div class="card-body">
         <ul class="list-group">
           <li
