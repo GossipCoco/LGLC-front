@@ -51,38 +51,35 @@
 import PostAllCommentReactions from "../../../services/PostCommentReactions";
 import GroupHeader from "../GroupComponent/GroupHeader.vue";
 import Pagination from "../../Components/GenericComponent/Pagination.vue";
+
 export default {
   name: "AllPostsComponent",
-  components: {
-    GroupHeader,
-    Pagination
-  },
+  components: { GroupHeader, Pagination },
   data() {
     return {
       url: "",
-      Post: {},
       Group: {},
+      Post: [],                 // <- tableau
       Background: null,
-      NbPosts: null,
-      showspinner: true,
-      nav:{
+      NbPosts: 0,
+      showspinner: false,
+      filters: [],              // comme AllFictions
+      width: 1700,              // breakpoints identiques
+      nav: {
         current: 0,
         pages: 0,
-        step: 12,      
-      }
+        step: 12,
+      },
     };
   },
   created() {
     this.url = this.$route.params.id;
-    this.GetAllPostsByGroupId(this.url, this.nav);
-    this.CountAllPostByGroupId(this.url);
+    this.initDataPosts();
   },
   computed: {
     bgStyle() {
-      // 1) source = Background si dispo, sinon group.Background, sinon group.Image
       const src = this.Background;
-      console.log("Background source:", src);
-      if (!src) return {}; // => pas de style tant qu’on n’a rien (évite url(null))
+      if (!src) return {};
       return {
         backgroundImage: `url("${src}")`,
         backgroundSize: "cover",
@@ -90,34 +87,52 @@ export default {
       };
     },
   },
-  methods: {    
+  methods: {
+    async initDataPosts() {
+      try {
+        this.showspinner = true;
+        await this.CountAllPostByGroupId(this.url);
+        // adapter le step à la largeur (même logique que AllFictions)
+        if (window.innerWidth >= this.width) this.nav.step = 12;
+        else this.nav.step = 8;
+        await this.GetAllPostsByGroupId(this.url, this.nav);
+      } catch (e) {
+        console.error(e);
+      } finally {
+        this.showspinner = false;
+      }
+    },
+
+    async FictionPagination(page) {
+      // évènement émis par ton <Pagination/> (on garde le même nom)
+      this.nav.current = page;
+      if (window.innerWidth >= this.width) this.nav.step = 12;
+      else this.nav.step = 8;
+      await this.GetAllPostsByGroupId(this.url, this.nav);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    },
+
     truncateText(text, maxLength) {
       if (text.length <= maxLength) {
         return text;
       }
       return text.substring(0, maxLength) + "...";
     },
-    CountAllPostByGroupId(id){
-        PostAllCommentReactions.CountAllPostByGroupId(id)
-            .then((response) => {
-            this.NbPosts = response.data.ob;
-            console.log(this.NbPosts);
-            })
-            .catch((e) => {
-            console.log(e);
-            });
+
+    async CountAllPostByGroupId(id) {
+      const res = await PostAllCommentReactions.CountAllPostByGroupId(id);
+      // compat : soit {ob: {count: n}} soit {ob: n}
+      const count = res?.data?.ob?.count ?? res?.data?.ob ?? 0;
+      this.NbPosts = count;
+      this.nav.pages = Math.ceil(count / this.nav.step || 1);
     },
-    GetAllPostsByGroupId(id, nav) {
-      PostAllCommentReactions.GetAllPostsByGroupId(id, nav)
-        .then((response) => {
-          this.Group = response.data.ob;
-          console.log(this.Group);
-          this.Post = this.Group.GroupPosts;
-          this.Background = this.Group.Background;
-        })
-        .catch((e) => {
-          console.log(e);
-        });
+
+    async GetAllPostsByGroupId(id, nav) {
+      const res = await PostAllCommentReactions.GetAllPostsByGroupId(id, nav);
+      // on s'attend à recevoir un Group avec GroupPosts paginés
+      this.Group = res.data.ob || {};
+      this.Post = this.Group.GroupPosts || [];
+      this.Background = this.Group.Background || this.Group.Image || null;
     },
   },
 };
