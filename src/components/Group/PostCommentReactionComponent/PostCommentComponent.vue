@@ -9,7 +9,17 @@
       v-bind:style="bgStyle"
     >
       <div class="card-body">
-        <PostCardComponent v-bind:post="postCommentReactions" v-bind:UserName="UserName" />
+        <div class="row height-10-vh">
+          <div class="col-12 display-flex align-items-content-justify-content">
+            <router-link :to="'/OneGroupLayout/' + Group.Id" class="btn btn-primary margin-1vh height-5-vh">
+              {{ Group.Name }}
+            </router-link>
+          </div>
+        </div>
+        <PostCardComponent
+          v-bind:post="postCommentReactions"
+          v-bind:UserName="UserName"
+        />
         <comments-component v-bind:Comments="Comments" />
       </div>
     </div>
@@ -23,12 +33,12 @@ import CommentsComponent from "./CommentsComponent.vue";
 export default {
   name: "PostCommentReactionComponent",
   props: ["PostCommentReactions"],
-  components: { GroupHeader, PostCardComponent, CommentsComponent},
+  components: { GroupHeader, PostCardComponent, CommentsComponent },
   data() {
     return {
       url: "",
       postCommentReactions: {},
-      Comments:{},
+      Comments: {},
       Group: {},
       UserName: null,
       Background: null,
@@ -56,10 +66,10 @@ export default {
       PostCommentReactionsService.GetAPostAllCommentReactionsById(id).then(
         (response) => {
           this.Background = response.data.ob.Group.Background;
-            this.postCommentReactions = response.data.ob;
-            this.Group = this.postCommentReactions.Group;
-            this.UserName = this.postCommentReactions.User.UserName;
-            this.Comments = this.postCommentReactions.GroupComments;
+          this.postCommentReactions = response.data.ob;
+          this.Group = this.postCommentReactions.Group;
+          this.UserName = this.postCommentReactions.User.UserName;
+          this.Comments = this.postCommentReactions.GroupComments;
         }
       );
     },
