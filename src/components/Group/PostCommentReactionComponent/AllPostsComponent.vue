@@ -24,6 +24,10 @@
                   <div class="card-body">
                     <h5 class="card-title">{{ posts.Title }}</h5>
                     <p v-html="truncateText(posts.Content, 500)"></p>
+                    <p>
+                        <router-link :to="'/PostComment/' + posts.Id" class="btn btn-primary"
+                        >Voir plus</router-link>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -48,11 +52,13 @@ export default {
       Post: {},
       Group: {},
       Background: null,
+      NbPosts: null
     };
   },
   created() {
     this.url = this.$route.params.id;
     this.GetAllPostsByGroupId(this.url);
+    this.CountAllPostByGroupId(this.url);
   },
   computed: {
     bgStyle() {
@@ -67,13 +73,22 @@ export default {
       };
     },
   },
-  methods: {
-    
+  methods: {    
     truncateText(text, maxLength) {
       if (text.length <= maxLength) {
         return text;
       }
       return text.substring(0, maxLength) + "...";
+    },
+    CountAllPostByGroupId(id){
+        PostAllCommentReactions.CountAllPostByGroupId(id)
+            .then((response) => {
+            this.NbPosts = response.data.ob;
+            console.log(this.NbPosts);
+            })
+            .catch((e) => {
+            console.log(e);
+            });
     },
     GetAllPostsByGroupId(id) {
       PostAllCommentReactions.GetAllPostsByGroupId(id)

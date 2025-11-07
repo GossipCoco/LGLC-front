@@ -10,6 +10,9 @@ class PostCommentReactions {
     GetAllPostsByGroupId(id){
         return http.get(`/PostCommentReactions/GetAllPostsByGroupId/${id}`);
     }
+    CountAllPostByGroupId(id){
+        return http.get(`/PostCommentReactions/CountAllPostByGroupId/${id}`);
+    }
     CreateANewPost(id, data){
         return http.post(`/PostCommentReactions/CreateANewPost/${id}`, data);
     }
