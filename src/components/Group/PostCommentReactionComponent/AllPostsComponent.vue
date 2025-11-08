@@ -15,23 +15,10 @@
                 <div class="col-12 mb-3">
                     <router-link :to="'/OneGroupLayout/' + Group.Id" class="btn btn-primary margin-1vh height-5-vh">
                         {{ Group.Name }}
-                    </router-link>                  
+                    </router-link>
                 </div>
             </div>
-            <div class="row">
-              <div class="col-6" v-for="(posts, index) in Post" :key="index">
-                <div class="card mb-3 background-lineart poppins-text text-white">
-                  <div class="card-body">
-                    <h5 class="card-title">{{ posts.Title }}</h5>
-                    <p v-html="truncateText(posts.Content, 500)"></p>
-                    <p>
-                        <router-link :to="'/PostComment/' + posts.Id" class="btn btn-primary"
-                        >Voir plus</router-link>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <extract-post-component :Post="Post" />
             <div class="row pagination-container">
                 <Pagination
                     v-if="!showspinner"
@@ -50,11 +37,12 @@
 <script>
 import PostAllCommentReactions from "../../../services/PostCommentReactions";
 import GroupHeader from "../GroupComponent/GroupHeader.vue";
+import ExtractPostComponent from "./ExtractPostComponent.vue";
 import Pagination from "../../Components/GenericComponent/Pagination.vue";
 
 export default {
   name: "AllPostsComponent",
-  components: { GroupHeader, Pagination },
+  components: { GroupHeader, ExtractPostComponent, Pagination },
   data() {
     return {
       url: "",
@@ -102,7 +90,6 @@ export default {
         this.showspinner = false;
       }
     },
-
     async FictionPagination(page) {
       // évènement émis par ton <Pagination/> (on garde le même nom)
       this.nav.current = page;
@@ -111,14 +98,6 @@ export default {
       await this.GetAllPostsByGroupId(this.url, this.nav);
       window.scrollTo({ top: 0, behavior: "smooth" });
     },
-
-    truncateText(text, maxLength) {
-      if (text.length <= maxLength) {
-        return text;
-      }
-      return text.substring(0, maxLength) + "...";
-    },
-
     async CountAllPostByGroupId(id) {
       const res = await PostAllCommentReactions.CountAllPostByGroupId(id);
       // compat : soit {ob: {count: n}} soit {ob: n}
@@ -126,7 +105,6 @@ export default {
       this.NbPosts = count;
       this.nav.pages = Math.ceil(count / this.nav.step || 1);
     },
-
     async GetAllPostsByGroupId(id, nav) {
       const res = await PostAllCommentReactions.GetAllPostsByGroupId(id, nav);
       // on s'attend à recevoir un Group avec GroupPosts paginés
