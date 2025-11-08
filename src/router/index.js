@@ -57,6 +57,7 @@ import OneGroupLayout from "../components/Group/GroupComponent/OneGroupLayout.vu
 import CreateANewPost from "../components/Group/PostCommentReactionComponent/CreateANewPost.vue";
 import PostCommentComponent from "../components/Group/PostCommentReactionComponent/PostCommentComponent.vue";
 import AllPostsComponent from "../components/Group/PostCommentReactionComponent/AllPostsComponent.vue";
+import NewResponseToPostComponent from "../components/Group/PostCommentReactionComponent/NewResponseToPostComponent.vue";
 
 const routes = [
   {
@@ -292,6 +293,10 @@ const routes = [
         path: '/CreateANewPost/:id',
         name: 'CreateANewPost',
         component: CreateANewPost,
+      },{
+        path: '/NewResponseToPost/:id',
+        name: 'NewResponseToPostComponent',
+        component: NewResponseToPostComponent,
       },
       {
         path: '/mouseShot',

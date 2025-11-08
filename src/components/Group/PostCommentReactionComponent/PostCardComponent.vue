@@ -2,56 +2,57 @@
   <article class="card post-card border-none background-lineart poppins-text text-white padding-1-vh">
     <div class="card-header">
     <!-- Header -->
-    <header class="d-flex align-items-center gap-2 mb-2 display-flex display-flex-column">
-      <div class="display-flex display-flex-row">
-        <h2 class="h5 mb-2">{{ post.Title }}</h2>
-        <img :src="'/images/Avatars/'+post.User?.Avatar" alt="" class="rounded-circle avatar" />
-        <div class="d-flex flex-column">
+      <header class="d-flex align-items-center gap-2 mb-2 display-flex display-flex-column">
+        <div class="display-flex display-flex-row">
+          <h2 class="h5 mb-2">{{ post.Title }}</h2>
+          <img :src="'/images/Avatars/'+post.User?.Avatar" alt="" class="rounded-circle avatar" />
+          <div class="d-flex flex-column">
 
-          <strong>{{ post.User?.UserName || 'Anonyme' }}</strong>
-          <small class="opacity-75">{{ formatDate(post.CreatedAt) }}</small>
+            <strong>{{ post.User?.UserName || 'Anonyme' }}</strong>
+            <small class="opacity-75">{{ formatDate(post.CreatedAt) }}</small>
+          </div>
         </div>
-      </div>
-      <span v-if="post.IsPinned" class="ms-auto badge bg-success">📌 Épinglé</span>
-    </header>
+        <span v-if="post.IsPinned" class="ms-auto badge bg-success">📌 Épinglé</span>
+      </header>
 
     <!-- Titre -->
     
     </div>
     <!-- Contenu tronqué -->
-     <div class="card-body">
-    <div :class="['content', { collapsed: !expanded }]" v-html="post.Content"></div>
-    <button v-if="shouldCollapse" class="link" @click="expanded = !expanded">
+    <div class="card-body">
+      <div :class="['content', { collapsed: !expanded }]" v-html="post.Content"></div>
+    <!-- <button v-if="shouldCollapse" class="link" @click="expanded = !expanded">
       {{ expanded ? 'Afficher moins' : 'Lire la suite' }}
-    </button>
+    </button> -->
 
     <!-- Méta + actions -->
-    <footer class="d-flex align-items-center gap-3 mt-2 opacity-85">
-      <span>💬 {{ commentCount }}</span>
-      <span v-if="post.Group?.Name">🏷️ {{ post.Group.Name }}</span>
-      <div class="row">
-        <Picker :data="emojiIndex" set="twitter" @select="showEmoji" />
-      </div>
-      <div class="row">
-        <div>
-          {{ emojisOutput }}
+      <footer class="d-flex align-items-center gap-3 mt-2 opacity-85">
+        <router-link :to="'/NewResponseToPost/'+ post.Id" class="btn btn-primary">💬 Commentez</router-link>
+        <span>💬 {{ commentCount }}</span>
+        <span v-if="post.Group?.Name">🏷️ {{ post.Group.Name }}</span>
+        <!-- <div class="row">
+          <Picker :data="emojiIndex" set="twitter" @select="showEmoji" />
         </div>
-      </div>
-      <!-- <button class="btn btn-sm btn-outline-light ms-auto" @click="$emit('open', post.Id)">Ouvrir</button> -->
-    </footer>
-  </div>
+        <div class="row">
+          <div>
+            {{ emojisOutput }}
+          </div>
+        </div> -->
+        <!-- <button class="btn btn-sm btn-outline-light ms-auto" @click="$emit('open', post.Id)">Ouvrir</button> -->
+      </footer>
+    </div>
   </article>
 </template>
 
 <script>
-import data from "emoji-mart-vue-fast/data/all.json";
-import "emoji-mart-vue-fast/css/emoji-mart.css";
-import { Picker, EmojiIndex } from "emoji-mart-vue-fast/src";
-let emojiIndex = new EmojiIndex(data);
+// import data from "emoji-mart-vue-fast/data/all.json";
+// import "emoji-mart-vue-fast/css/emoji-mart.css";
+// import { Picker, EmojiIndex } from "emoji-mart-vue-fast/src";
+// let emojiIndex = new EmojiIndex(data);
 export default {
   name: 'PostCardComponent',
   components: {
-    Picker
+    // Picker
   },
   props: {
     post: { type: Object, required: true },
@@ -60,8 +61,9 @@ export default {
   data() {
     return {
       expanded: false,
-      emojiIndex: emojiIndex,
-      emojisOutput: ''};
+      // emojiIndex: emojiIndex,
+      // emojisOutput: '',
+    };
   },
   computed: {
     commentCount() {
