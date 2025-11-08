@@ -1,50 +1,63 @@
 <template>
-  <div class="card background-lineart height-90-vh">
+  <div class="card background-lineart height-120-vh">
     <div class="card-header text-white">
       <h1 class="text-white">{{ url }}</h1>
     </div>
-
     <div class="card-body">
       <h5 class="card-title">Créer un fil de discussion</h5>
-
-      <form class="row g-3 needs-validation" novalidate @submit.prevent="onSubmit">
-        <!-- Titre -->
-        <div class="mb-3">
-          <label for="postTitle" class="form-label text-white">Titre</label>
-          <input
-            id="postTitle"
-            type="text"
-            class="form-control"
-            placeholder="Titre du post"
-            v-model="form.Title"
-            maxlength="140"
-          />
-          <small class="text-light opacity-75">{{ form.Title.length }}/140</small>
+      <form class="needs-validation" novalidate @submit.prevent="onSubmit">
+        <div class="row">
+          <div class="col-12 mb-3">
+            <label for="postTitle" class="form-label text-white">Titre</label>
+            <input
+              id="postTitle"
+              type="text"
+              class="form-control"
+              placeholder="Titre du post"
+              v-model="form.Title"
+              maxlength="140"
+            />
+            <small class="text-light opacity-75"
+              >{{ form.Title.length }}/140</small
+            >
+          </div>
         </div>
 
-        <!-- Corps (WYSIWYG) -->
-        <div class="mb-3">
-          <label class="form-label text-white">Votre post</label>
-          <QuillEditor
-            v-model:content="form.Content"
-            content-type="html"
-            theme="snow"
-            toolbar="full"
-            placeholder="Écris ton post ici…"
-            class="bg-white rounded"
-          />
-          <small class="text-light opacity-75 mt-1 d-block">
-            Astuce : formate ton texte (gras, italique, listes, titres). Le contenu est enregistré en HTML.
-          </small>
+        <div class="row">
+          <div class="col-12 mb-3">
+            <label class="form-label text-white">Votre post</label>
+            <QuillEditor
+              v-model:content="form.Content"
+              content-type="html"
+              theme="snow"
+              toolbar="full"
+              placeholder="Écris ton post ici…"
+              class="bg-white rounded"
+            />
+            <small class="text-light opacity-75 mt-1 d-block">
+              Astuce : formate ton texte (gras, italique, listes, titres). Le
+              contenu est enregistré en HTML.
+            </small>
+          </div>
         </div>
-
-        <div class="col-12">
-          <button class="btn btn-primary" type="submit" :disabled="submitting">
-            {{ submitting ? 'Publication…' : 'Publier' }}
-          </button>
-          <button class="btn btn-outline-light ms-2" type="button" @click="resetForm" :disabled="submitting">
-            Effacer
-          </button>
+        <div class="row">
+          <div class="col-12 mb-3">
+            <button
+              class="btn btn-primary"
+              type="submit"
+              :disabled="submitting"
+            >
+              {{ submitting ? "Publication…" : "Publier" }}
+            </button>
+            <button
+              class="btn btn-outline-light ms-2"
+              type="button"
+              @click="resetForm"
+              :disabled="submitting"
+            >
+              Effacer
+            </button>
+          </div>
         </div>
       </form>
     </div>
@@ -106,8 +119,8 @@ export default {
 
       const payload = {
         Title: this.form.Title.trim(),
-        Content: cleaned,          // on envoie le HTML produit par l’éditeur
-        UserId: this.form.UserId,  // mapping UserId
+        Content: cleaned, // on envoie le HTML produit par l’éditeur
+        UserId: this.form.UserId, // mapping UserId
       };
 
       try {
@@ -134,7 +147,7 @@ export default {
 /* Option : harmoniser la toolbar avec ton thème sombre */
 :deep(.ql-toolbar) {
   border-radius: 8px;
-  border: 1px solid rgba(255,255,255,.12);
-  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
 }
 </style>
