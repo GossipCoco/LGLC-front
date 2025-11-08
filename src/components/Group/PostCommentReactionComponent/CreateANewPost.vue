@@ -7,21 +7,19 @@
       <form class="needs-validation" novalidate @submit.prevent="onSubmit">
         <div class="row">
           <div class="col-12 mb-3">
-            <label for="postTitle" class="form-label text-white">Titre</label>
+            <label for="postTitle" class="form-label text-white">Titre</label> 
+            <small class="text-light opacity-75">{{ form.Title.length }}/140</small>
             <input
               id="postTitle"
               type="text"
               class="form-control"
               placeholder="Titre du post"
               v-model="form.Title"
-              maxlength="140"
+              maxlength="100"
             />
-            <small class="text-light opacity-75"
-              >{{ form.Title.length }}/140</small
-            >
           </div>
         </div>
-        <div class="row">
+        <div class="row height-40-vh">
           <div class="col-12 mb-3">
             <label class="form-label text-white">Votre post</label>
             <QuillEditor
