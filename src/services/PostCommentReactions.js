@@ -16,5 +16,8 @@ class PostCommentReactions {
     CreateANewPost(id, data){
         return http.post(`/PostCommentReactions/CreateANewPost/${id}`, data);
     }
+    CreateANewResponseToPost(id, data){
+        return http.post(`/PostCommentReactions/CreateANewResponseToPost/${id}`, data);
+    }
 }
 export default new PostCommentReactions;
