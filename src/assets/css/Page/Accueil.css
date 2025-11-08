@@ -79,7 +79,7 @@ h2{
 }
 
 #accueil #parallax .video-container{
-    background-image: url('/images/Backgrounds/Warriors_3684.jpg');
+    background-image: var(--background-home);
     background-repeat: no-repeat;
     background-size: cover;
     transform: translate3d(0, 0, 0);
