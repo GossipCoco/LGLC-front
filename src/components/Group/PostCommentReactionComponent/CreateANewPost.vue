@@ -1,10 +1,9 @@
 <template>
-  <div class="card background-lineart height-120-vh">
-    <div class="card-header text-white">
-      <h1 class="text-white">{{ url }}</h1>
+  <div class="card background-lineart height-95-vh">
+    <div class="card-header text-white display-flex display-row">
+      <h1 class="text-white">{{ url }}</h1> - <h5 class="card-title ">Créer un fil de discussion</h5>
     </div>
-    <div class="card-body">
-      <h5 class="card-title">Créer un fil de discussion</h5>
+    <div class="card-body height-90-vh">      
       <form class="needs-validation" novalidate @submit.prevent="onSubmit">
         <div class="row">
           <div class="col-12 mb-3">
@@ -22,7 +21,6 @@
             >
           </div>
         </div>
-
         <div class="row">
           <div class="col-12 mb-3">
             <label class="form-label text-white">Votre post</label>
@@ -40,7 +38,7 @@
             </small>
           </div>
         </div>
-        <div class="row">
+        <div id="btn-submit-post-form" class="row">
           <div class="col-12 mb-3">
             <button
               class="btn btn-primary"
