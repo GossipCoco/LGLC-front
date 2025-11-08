@@ -28,7 +28,7 @@
               v-model:content="form.Content"
               content-type="html"
               theme="snow"
-              toolbar="full"
+              :toolbar="toolbarOptions"
               placeholder="Écris ton post ici…"
               class="bg-white rounded"
             />
@@ -72,6 +72,7 @@ export default {
   components: { QuillEditor },
   data() {
     return {
+      toolbarOptions : ['bold', 'italic', 'underline', 'strike'],
       url: null,
       userCurrent: null,
       submitting: false,
