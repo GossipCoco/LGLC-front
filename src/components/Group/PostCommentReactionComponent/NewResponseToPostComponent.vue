@@ -55,7 +55,7 @@ export default {
           this.Group = response.data.ob;
           this.InfoGroup = this.Group.Group;
           this.Background = this.InfoGroup.Background;
-          console.log("Background :", this.Background);
+          console.log("Group :", this.Group);
         })
         .catch((error) => {
           console.error("Erreur lors de la récupération du groupe :", error);
