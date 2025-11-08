@@ -11,7 +11,9 @@
           class="card group-container border-none height-auto details-infos-group border-radius-12px poppins-text text-white"
           v-bind:style="bgStyle"
         >
-          <div class="card-body"></div>
+          <div class="card-body">
+
+          </div>
         </div>
       </div>
     </div>
@@ -24,16 +26,23 @@ export default {
   name: "NewResponseToPostComponent",
   components: { GroupHeader },
   data() {
-    return {
+    return {        
+      userCurrent: this.$store.state.auth.user.usrID,
       url: "",
       Group: {},
       InfoGroup: {},
       Background: null,
+      form:{
+        Content: "",
+        PostID: this.$route.params.id,
+        UserID: this.$store.state.auth.user.usrID,
+      }
     };
   },
   created() {
     this.url = this.$route.params.id;
     this.GetGroupByPostId(this.url);
+    console.log(this.form)
   },
   computed: {
     bgStyle() {
