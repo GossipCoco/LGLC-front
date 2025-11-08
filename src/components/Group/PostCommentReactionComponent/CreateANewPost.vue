@@ -138,7 +138,7 @@ export default {
 <style scoped>
 /* Zone de saisie confortable */
 :deep(.ql-editor) {
-  min-height: 240px;
+  min-height: 200px;
 }
 
 /* Option : harmoniser la toolbar avec ton thème sombre */
