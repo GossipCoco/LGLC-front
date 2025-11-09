@@ -23,17 +23,15 @@
             <p v-html="truncateText(posts.Content, 200)" class="text-white"></p>
           </div>
         </div>
-        <div class="row">
-          <div class="col-12 mb-3">
-            <p>
-              <router-link
+        <footer class="d-flex align-items-center gap-3 mt-2 opacity-85">
+          <router-link
                 :to="'/PostComment/' + posts.Id"
                 class="btn btn-primary"
                 >Voir plus</router-link
               >
-            </p>
-          </div>
-        </div>
+        <router-link :to="'/NewResponseToPost/'+ posts.Id" class="btn btn-primary">💬 Commentez</router-link>
+        <span>💬 {{ commentCount }}</span>
+        </footer>
       </div>
     </div>
   </div>
@@ -42,6 +40,16 @@
 export default {
   name: "GroupLastPost",
   props: ["Post"],
+  computed: {
+    commentCount() {
+      console.log(this.Post);
+      return this.Post.commentCount ?? (Array.isArray(this.Post.Comments) ? this.Post.Comments.length : 0);
+    },
+    shouldCollapse() {
+      // Laisse la main au CSS; le bouton est toujours visible, tu peux le cacher si pas nécessaire
+      return true;
+    }
+  },
   methods: {
     formatDate(d) {
       try {
