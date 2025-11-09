@@ -10,12 +10,11 @@
         <div class="header-group-container">
           <slot>
             <div class="row">
-              <div class="col-6">
+              <div class="col-6 padding-20vh">
                 <h1 class="text-white">{{ group.Name }}</h1>
-              </div>
-              
+              </div>              
               <div class="col-6">
-                <img :src="group.Symbol" />
+                <img :src="group.Symbol" class="height-40-vh"/>
               </div>
             </div>            
           </slot>
