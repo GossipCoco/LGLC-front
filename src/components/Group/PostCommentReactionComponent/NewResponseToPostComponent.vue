@@ -4,7 +4,6 @@
     class="width-190-vh height-100-vh background-none border-none padding-2-vh card mb-3 overflowY-auto"
   >
     <group-header v-bind:group="InfoGroup" />
-
     <div class="row gy-2">
       <div class="col-12 col-md-12">
         <div
@@ -64,7 +63,6 @@
 import { QuillEditor } from "@vueup/vue-quill";
 import "@vueup/vue-quill/dist/vue-quill.snow.css";
 import PostCommentReactions from "../../../services/PostCommentReactions";
-
 import GroupService from "../../../services/GroupService";
 import GroupHeader from "../GroupComponent/GroupHeader.vue";
 export default {
