@@ -8,9 +8,17 @@
           }"
         >
         <div class="header-group-container">
-          <slot
-            ><h1 class="text-white">{{ group.Name }}</h1></slot
-          >
+          <slot>
+            <div class="row">
+              <div class="col-6">
+                <h1 class="text-white">{{ group.Name }}</h1>
+              </div>
+              
+              <div class="col-6">
+                <img :src="group.Symbol" />
+              </div>
+            </div>            
+          </slot>
         </div>
       </div>
     </div>
