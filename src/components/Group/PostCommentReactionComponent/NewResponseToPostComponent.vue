@@ -12,7 +12,48 @@
           v-bind:style="bgStyle"
         >
           <div class="card-body">
-
+            <form
+              class="needs-validation"
+              novalidate
+              @submit.prevent="onSubmit"
+            >
+              <div class="row height-40-vh">
+                <div class="col-12 mb-3">
+                  <label class="form-label text-white">Votre post</label>
+                  <QuillEditor
+                    v-model:content="form.Content"
+                    content-type="html"
+                    theme="snow"
+                    :toolbar="toolbarOptions"
+                    placeholder="Écris ton post ici…"
+                    class="bg-white rounded black-text"
+                  />
+                  <small class="text-light opacity-75 mt-1 d-block">
+                    Astuce : formate ton texte (gras, italique, listes, titres).
+                    Le contenu est enregistré en HTML.
+                  </small>
+                </div>
+              </div>
+              <div id="btn-submit-post-form" class="row">
+                <div class="col-12 mb-3">
+                  <button
+                    class="btn btn-primary"
+                    type="submit"
+                    :disabled="submitting"
+                  >
+                    {{ submitting ? "Publication…" : "Publier" }}
+                  </button>
+                  <button
+                    class="btn btn-outline-light ms-2"
+                    type="button"
+                    @click="resetForm"
+                    :disabled="submitting"
+                  >
+                    Effacer
+                  </button>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -20,29 +61,34 @@
   </div>
 </template>
 <script>
+import { QuillEditor } from "@vueup/vue-quill";
+import "@vueup/vue-quill/dist/vue-quill.snow.css";
+// import PostCommentReactions from "../../../services/PostCommentReactions";
+
 import GroupService from "../../../services/GroupService";
 import GroupHeader from "../GroupComponent/GroupHeader.vue";
 export default {
   name: "NewResponseToPostComponent",
-  components: { GroupHeader },
+  components: { GroupHeader, QuillEditor },
   data() {
-    return {        
+    return {
+      toolbarOptions: ["bold", "italic", "underline", "strike"],
       userCurrent: this.$store.state.auth.user.usrID,
       url: "",
       Group: {},
       InfoGroup: {},
       Background: null,
-      form:{
+      form: {
         Content: "",
         PostID: this.$route.params.id,
         UserID: this.$store.state.auth.user.usrID,
-      }
+      },
     };
   },
   created() {
     this.url = this.$route.params.id;
     this.GetGroupByPostId(this.url);
-    console.log(this.form)
+    console.log(this.form);
   },
   computed: {
     bgStyle() {
