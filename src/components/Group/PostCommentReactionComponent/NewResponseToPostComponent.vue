@@ -63,7 +63,7 @@
 <script>
 import { QuillEditor } from "@vueup/vue-quill";
 import "@vueup/vue-quill/dist/vue-quill.snow.css";
-// import PostCommentReactions from "../../../services/PostCommentReactions";
+import PostCommentReactions from "../../../services/PostCommentReactions";
 
 import GroupService from "../../../services/GroupService";
 import GroupHeader from "../GroupComponent/GroupHeader.vue";
@@ -92,10 +92,9 @@ export default {
   },
   computed: {
     bgStyle() {
-      // 1) source = Background si dispo, sinon group.Background, sinon group.Image
       const src = this.Background;
       console.log("Background source:", src);
-      if (!src) return {}; // => pas de style tant qu’on n’a rien (évite url(null))
+      if (!src) return {}; 
       return {
         backgroundImage: `url("${src}")`,
         backgroundSize: "cover",
@@ -110,11 +109,48 @@ export default {
           this.Group = response.data.ob;
           this.InfoGroup = this.Group.Group;
           this.Background = this.InfoGroup.Background;
-          console.log("Group :", this.Group);
         })
         .catch((error) => {
           console.error("Erreur lors de la récupération du groupe :", error);
         });
+    },
+        isEmptyHtml(html) {
+      // Quill vide => "<p><br></p>"
+      return !html || html.trim() === "<p><br></p>";
+    },
+    sanitize(html) {
+      // Sanitation minimale côté front (la vraie sécurité doit rester côté back)
+      return String(html || "")
+        .replace(/<script[\s\S]*?>[\s\S]*?<\/script>/gi, "")
+        .replace(/\son\w+="[^"]*"/gi, "")
+        .replace(/\son\w+='[^']*'/gi, "");
+    },
+    resetForm() {
+      this.form.Content = "";
+    },
+    async onSubmit() {
+      const cleaned = this.sanitize(this.form.Content);
+      if (this.isEmptyHtml(cleaned)) {
+        alert("Le contenu est obligatoire.");
+        return;
+      }
+
+      const payload = {
+        Content: cleaned, // on envoie le HTML produit par l’éditeur
+        UserId: this.form.UserID, // mapping UserId
+        PostID: this.form.PostID,
+      };
+
+      try {
+        this.submitting = true;
+        await PostCommentReactions.CreateANewResponseToPost(this.form.PostID, payload);
+        this.$router.push({ path: `/PostComment/${this.form.PostID}` });
+      } catch (err) {
+        console.error("CreateANewPost error:", err);
+        alert("Impossible de publier le post pour le moment.");
+      } finally {
+        this.submitting = false;
+      }
     },
   },
 };
