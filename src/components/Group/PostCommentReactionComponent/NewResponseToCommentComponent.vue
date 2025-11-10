@@ -4,6 +4,16 @@
     class="width-190-vh height-100-vh background-none border-none padding-2-vh card mb-3 overflowY-auto"
   >
     <group-header v-bind:group="InfoGroup" />
+    <div class="row gy-2">
+      <div class="col-12 col-md-12">
+        <div
+          class="card group-container border-none height-auto details-infos-group border-radius-12px poppins-text text-white"
+          v-bind:style="bgStyle"
+        >
+          <div class="card-body"></div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <script>
