@@ -58,6 +58,7 @@ import CreateANewPost from "../components/Group/PostCommentReactionComponent/Cre
 import PostCommentComponent from "../components/Group/PostCommentReactionComponent/PostCommentComponent.vue";
 import AllPostsComponent from "../components/Group/PostCommentReactionComponent/AllPostsComponent.vue";
 import NewResponseToPostComponent from "../components/Group/PostCommentReactionComponent/NewResponseToPostComponent.vue";
+import NewResponseToCommentComponent from "../components/Group/PostCommentReactionComponent/NewResponseToCommentComponent.vue";
 
 const routes = [
   {
@@ -297,6 +298,10 @@ const routes = [
         path: '/NewResponseToPost/:id',
         name: 'NewResponseToPostComponent',
         component: NewResponseToPostComponent,
+      },{
+        path: '/NewResponseToComment/:id',
+        name: 'NewResponseToCommentComponent',
+        component: NewResponseToCommentComponent,
       },
       {
         path: '/mouseShot',

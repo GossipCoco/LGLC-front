@@ -19,7 +19,11 @@
 
         <div class="card-body">
           <p class="text-align-justify text-white" v-html="c.Content"></p>
-
+          <footer>
+            <router-link :to="'/NewResponseToComment/'+ c.Id" class="btn btn-primary margin-1vh height-5-vh">
+              Répondre
+            </router-link>
+          </footer>
           <!-- enfants -->
           <div v-if="hasReplies(c)">
             <div class="display-flex align-items-center margin-top-2vh">
@@ -31,7 +35,13 @@
               <CommentsComponent
                 :Comments="c.Replies"
                 :depth="depth + 1"
-              />
+              >              
+                <footer>
+                  <router-link :to="'/NewResponseToComment/'+ c.Id" class="btn btn-primary margin-1vh height-5-vh">
+                    Répondre
+                  </router-link>
+                </footer>
+              </CommentsComponent>
             </div>
           </div>
         </div>
