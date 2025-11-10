@@ -21,6 +21,7 @@ export default {
             GroupService.GetGroupByCommentById(id)
             .then((response) => {
                 this.Group = response.data.ob;
+                console.log(response.data.ob);
             })
             .catch((e) => {
                 console.log(e);
