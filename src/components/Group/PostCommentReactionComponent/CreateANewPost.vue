@@ -1,7 +1,12 @@
 <template>
+    <div
+    id="group-details"
+    class="width-190-vh height-100-vh background-none border-none padding-2-vh card mb-3 overflowY-auto"
+  >
+  <group-header v-bind:group="Group" />
   <div class="card background-lineart height-95-vh">
     <div class="card-header text-white display-flex display-row">
-      <h1 class="text-white">{{ url }}</h1> - <h5 class="card-title ">Créer un fil de discussion</h5>
+      <h5 class="card-title ">Créer un fil de discussion</h5>
     </div>
     <div class="card-body height-90-vh">      
       <form class="needs-validation" novalidate @submit.prevent="onSubmit">
@@ -58,19 +63,22 @@
       </form>
     </div>
   </div>
+  </div>
 </template>
 
 <script>
 import { QuillEditor } from "@vueup/vue-quill";
 import "@vueup/vue-quill/dist/vue-quill.snow.css";
 import PostCommentReactions from "../../../services/PostCommentReactions";
-
+import GroupService from "../../../services/GroupService";
+import GroupHeader from "../GroupComponent/GroupHeader.vue";
 export default {
   name: "CreateANewPost",
-  components: { QuillEditor },
+  components: { GroupHeader, QuillEditor },
   data() {
     return {
       toolbarOptions : ['bold', 'italic', 'underline', 'strike'],
+      Group: {},
       url: null,
       userCurrent: null,
       submitting: false,
@@ -78,6 +86,7 @@ export default {
         Title: "",
         Content: "", // HTML renvoyé par l’éditeur
         UserId: null,
+        Background: null,
       },
     };
   },
@@ -86,9 +95,35 @@ export default {
     this.userCurrent = this.$store.state.auth.user.usrID;
     this.form.UserId = this.userCurrent;
   },
+  
+  mounted() {
+    this.getGroup();
+  },
+  computed: {
+    bgStyle() {
+      // 1) source = Background si dispo, sinon group.Background, sinon group.Image
+      const src = this.Background;
+      console.log("Background source:", src);
+      if (!src) return {}; // => pas de style tant qu’on n’a rien (évite url(null))
+      return {
+        backgroundImage: `url("${src}")`,
+        backgroundSize: "cover",
+        backgroundPosition: "center center",
+      };
+    },
+  },
   methods: {
+    getGroup() {
+      GroupService.GetGroupById(this.url)
+        .then((response) => {
+          this.Group = response.data.ob;
+          this.Background = this.group.Background;
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+    },
     isEmptyHtml(html) {
-      // Quill vide => "<p><br></p>"
       return !html || html.trim() === "<p><br></p>";
     },
     sanitize(html) {
