@@ -15,6 +15,7 @@ export default {
     },
     created() {
         this.url = this.$route.params.id;
+        this.GetGroupByCommentById(this.url);
     },
     methods: {
         GetGroupByCommentById(id) {
