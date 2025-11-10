@@ -63,7 +63,8 @@ export default {
   },
   methods: {
     GetAPostAllCommentReactionsById(id) {
-      PostCommentReactionsService.GetAPostAllCommentReactionsById(id).then(
+      PostCommentReactionsService.GetAPostAllCommentReactionsById(id)
+      .then(
         (response) => {
           this.Background = response.data.ob.Group.Background;
           console.log(response.data.ob);
@@ -72,7 +73,10 @@ export default {
           this.UserName = this.postCommentReactions.User.UserName;
           this.Comments = this.postCommentReactions.Comments;
         }
-      );
+      )
+      .catch((e) => {
+        console.log(e);
+      });
     },
   },
 };
