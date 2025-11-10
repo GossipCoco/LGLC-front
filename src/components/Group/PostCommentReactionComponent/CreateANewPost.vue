@@ -1,68 +1,80 @@
 <template>
-    <div
+  <div
     id="group-details"
     class="width-190-vh height-100-vh background-none border-none padding-2-vh card mb-3 overflowY-auto"
   >
-  <group-header v-bind:group="Group" />
-  <div class="card background-lineart height-95-vh">
-    <div class="card-header text-white display-flex display-row">
-      <h5 class="card-title ">Créer un fil de discussion</h5>
-    </div>
-    <div class="card-body height-90-vh">      
-      <form class="needs-validation" novalidate @submit.prevent="onSubmit">
-        <div class="row">
-          <div class="col-12 mb-3">
-            <label for="postTitle" class="form-label text-white">Titre</label> 
-            <small class="text-light opacity-75">{{ form.Title.length }}/140</small>
-            <input
-              id="postTitle"
-              type="text"
-              class="form-control"
-              placeholder="Titre du post"
-              v-model="form.Title"
-              maxlength="100"
-            />
-          </div>
-        </div>
-        <div class="row height-40-vh">
-          <div class="col-12 mb-3">
-            <label class="form-label text-white">Votre post</label>
-            <QuillEditor
-              v-model:content="form.Content"
-              content-type="html"
-              theme="snow"
-              :toolbar="toolbarOptions"
-              placeholder="Écris ton post ici…"
-              class="bg-white rounded"
-            />
-            <small class="text-light opacity-75 mt-1 d-block">
-              Astuce : formate ton texte (gras, italique, listes, titres). Le
-              contenu est enregistré en HTML.
-            </small>
-          </div>
-        </div>
-        <div id="btn-submit-post-form" class="row">
-          <div class="col-12 mb-3">
-            <button
-              class="btn btn-primary"
-              type="submit"
-              :disabled="submitting"
+    <group-header v-bind:group="Group" />
+    <div class="row gy-2">
+      <div class="col-12 col-md-12">
+        <div
+          class="card group-container background-color-main-lineart border-none height-auto details-infos-group border-radius-12px poppins-text text-white"
+          v-bind:style="bgStyle"
+        >
+          <div class="card-body height-90-vh">
+            <form
+              class="needs-validation"
+              novalidate
+              @submit.prevent="onSubmit"
             >
-              {{ submitting ? "Publication…" : "Publier" }}
-            </button>
-            <button
-              class="btn btn-outline-light ms-2"
-              type="button"
-              @click="resetForm"
-              :disabled="submitting"
-            >
-              Effacer
-            </button>
+              <div class="row">
+                <div class="col-12 mb-3">
+                  <label for="postTitle" class="form-label text-white"
+                    >Titre</label
+                  >
+                  <small class="text-light opacity-75"
+                    >{{ form.Title.length }}/140</small
+                  >
+                  <input
+                    id="postTitle"
+                    type="text"
+                    class="form-control"
+                    placeholder="Titre du post"
+                    v-model="form.Title"
+                    maxlength="100"
+                  />
+                </div>
+              </div>
+              <div class="row height-40-vh">
+                <div class="col-12 mb-3">
+                  <label class="form-label text-white">Votre post</label>
+                  <QuillEditor
+                    v-model:content="form.Content"
+                    content-type="html"
+                    theme="snow"
+                    :toolbar="toolbarOptions"
+                    placeholder="Écris ton post ici…"
+                    class="bg-white rounded"
+                  />
+                  <small class="text-light opacity-75 mt-1 d-block">
+                    Astuce : formate ton texte (gras, italique, listes, titres).
+                    Le contenu est enregistré en HTML.
+                  </small>
+                </div>
+              </div>
+              <div id="btn-submit-post-form" class="row">
+                <div class="col-12 mb-3">
+                  <button
+                    class="btn btn-primary"
+                    type="submit"
+                    :disabled="submitting"
+                  >
+                    {{ submitting ? "Publication…" : "Publier" }}
+                  </button>
+                  <button
+                    class="btn btn-outline-light ms-2"
+                    type="button"
+                    @click="resetForm"
+                    :disabled="submitting"
+                  >
+                    Effacer
+                  </button>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
-      </form>
+      </div>
     </div>
-  </div>
   </div>
 </template>
 
@@ -77,16 +89,16 @@ export default {
   components: { GroupHeader, QuillEditor },
   data() {
     return {
-      toolbarOptions : ['bold', 'italic', 'underline', 'strike'],
+      toolbarOptions: ["bold", "italic", "underline", "strike"],
       Group: {},
       url: null,
       userCurrent: null,
       submitting: false,
+      Background: null,
       form: {
         Title: "",
         Content: "", // HTML renvoyé par l’éditeur
         UserId: null,
-        Background: null,
       },
     };
   },
@@ -95,7 +107,7 @@ export default {
     this.userCurrent = this.$store.state.auth.user.usrID;
     this.form.UserId = this.userCurrent;
   },
-  
+
   mounted() {
     this.getGroup();
   },
@@ -103,7 +115,7 @@ export default {
     bgStyle() {
       // 1) source = Background si dispo, sinon group.Background, sinon group.Image
       const src = this.Background;
-      console.log("Background source:", src);
+      console.log("Background source:", this.Background);
       if (!src) return {}; // => pas de style tant qu’on n’a rien (évite url(null))
       return {
         backgroundImage: `url("${src}")`,
@@ -117,7 +129,8 @@ export default {
       GroupService.GetGroupById(this.url)
         .then((response) => {
           this.Group = response.data.ob;
-          this.Background = this.group.Background;
+          this.Background = this.Group.Background;
+          console.log("Background:", this.Background);
         })
         .catch((e) => {
           console.log(e);
