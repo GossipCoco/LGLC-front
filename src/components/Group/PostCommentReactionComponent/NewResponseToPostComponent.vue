@@ -112,7 +112,7 @@ export default {
           console.error("Erreur lors de la récupération du groupe :", error);
         });
     },
-        isEmptyHtml(html) {
+    isEmptyHtml(html) {
       // Quill vide => "<p><br></p>"
       return !html || html.trim() === "<p><br></p>";
     },
