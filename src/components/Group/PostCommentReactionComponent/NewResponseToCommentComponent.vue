@@ -107,10 +107,11 @@ export default {
       GroupService.GetGroupByCommentById(id)
         .then((response) => {
           this.Group = response.data.ob;
-          console.log(this.Group);
+        //   console.log(this.Group);
           this.InfoGroup = this.Group.GroupPost.Group;
-          this.form.PostId = this.Group.GroupPost.Id;
+          this.form.PostId = this.Group.PostId;
           this.Background = this.InfoGroup.Background;
+          console.log(this.form);
         })
         .catch((e) => {
           console.log(e);
@@ -138,10 +139,10 @@ export default {
       }
 
       const payload = {
-        Content: cleaned, // on envoie le HTML produit par l’éditeur
-        UserId: this.form.UserId, // mapping UserId
-        PostID: this.form.PostId,
-        ParentID: this.form.ParentId,
+        Content: cleaned,
+        UserId: this.form.UserId,
+        PostID: this.form.PostId,   // ❌ PostID
+        ParentID: this.Group.Id,    // (inutile si on passe déjà id en param d’URL)
       };
 
       try {
