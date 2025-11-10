@@ -52,7 +52,7 @@
                   />
                 </div>
               </div>
-              <div class="row height-40-vh">
+              <div class="row height-auto">
                 <div class="col-12 mb-3">
                   <label class="form-label text-white">Votre post</label>
                   <QuillEditor
@@ -61,7 +61,7 @@
                     theme="snow"
                     :toolbar="toolbarOptions"
                     placeholder="Écris ton post ici…"
-                    class="bg-white rounded"
+                    class="bg-white rounded black-text"
                   />
                   <small class="text-light opacity-75 mt-1 d-block">
                     Astuce : formate ton texte (gras, italique, listes, titres).
