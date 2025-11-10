@@ -10,8 +10,8 @@
         <!-- en-tête uniquement au niveau racine -->
         <div v-if="depth === 0" class="card-header">
           <div class="row">
-            <div class="col-8">
-              <h2 class="text-white post-title-text">Réponse</h2>
+            <div class="col-8 display-flex">
+              <img :src="'/images/Avatars/'+ c.User.Avatar" class="rounded-circle avatar height-10-vh"/><h2 class="text-white post-title-text">{{ c.User.UserName }} répond : </h2>
             </div>
             <div class="col-4 text-align-right"></div>
           </div>
@@ -22,7 +22,10 @@
 
           <!-- enfants -->
           <div v-if="hasReplies(c)">
-            <h3 class="text-white">Réponses :</h3>
+            <div class="display-flex align-items-center margin-top-2vh">
+              <img :src="'/images/Avatars/'+ c.User.Avatar" class="rounded-circle avatar height-10-vh"/>
+              <h3 class="text-white">{{c.User.UserName}} répond :</h3>
+            </div>
             <div class="ms-3">
               <!-- récursion sur CE MÊME composant -->
               <CommentsComponent
@@ -54,6 +57,7 @@ export default {
   },
   methods: {
     hasReplies(node) {
+      console.log("node :", node);
       return Array.isArray(node.Replies) && node.Replies.length > 0;
     },
   },
