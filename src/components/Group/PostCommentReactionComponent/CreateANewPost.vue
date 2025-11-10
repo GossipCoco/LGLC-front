@@ -4,6 +4,7 @@
     class="width-190-vh height-100-vh background-none border-none padding-2-vh card mb-3 overflowY-auto"
   >
     <group-header v-bind:group="Group" />
+
     <div class="row gy-2">
       <div class="col-12 col-md-12">
         <div
@@ -11,6 +12,23 @@
           v-bind:style="bgStyle"
         >
           <div class="card-body height-90-vh">
+            <div class="row height-10-vh">
+              <div
+                class="col-12 display-flex align-items-content-justify-content"
+              >
+                <router-link
+                  to="/GroupLayout"
+                  class="btn btn-primary margin-1vh height-5-vh"
+                  >Retour à la liste des groupes</router-link
+                >
+               <router-link
+                  :to="'/OneGroupLayout/' + Group.Id"
+                  class="btn btn-primary margin-1vh height-5-vh"
+                >
+                  {{ Group.Name }}
+                </router-link>
+              </div>
+            </div>
             <form
               class="needs-validation"
               novalidate

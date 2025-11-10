@@ -12,21 +12,29 @@
         >
           <div class="card-body">
             <div class="row">
-                <div class="col-12 mb-3">
-                    <router-link :to="'/OneGroupLayout/' + Group.Id" class="btn btn-primary margin-1vh height-5-vh">
-                        {{ Group.Name }}
-                    </router-link>
-                </div>
+              <div class="col-12 mb-3">
+                <router-link
+                  :to="'/OneGroupLayout/' + Group.Id"
+                  class="btn btn-primary margin-1vh height-5-vh"
+                >
+                  {{ Group.Name }}
+                </router-link>
+                <router-link
+                  :to="'/CreateANewPost/' + Group.Id"
+                  class="btn btn-primary margin-1vh height-5-vh"
+                  >Créer un nouveau post</router-link
+                >
+              </div>
             </div>
             <extract-post-component :Post="Post" />
             <div class="row pagination-container">
-                <Pagination
-                    v-if="!showspinner"
-                    :nav="nav"
-                    :filters="filters"
-                    :getDatas="'FictionPagination'"
-                    @FictionPagination="FictionPagination"
-                />
+              <Pagination
+                v-if="!showspinner"
+                :nav="nav"
+                :filters="filters"
+                :getDatas="'FictionPagination'"
+                @FictionPagination="FictionPagination"
+              />
             </div>
           </div>
         </div>
@@ -47,12 +55,12 @@ export default {
     return {
       url: "",
       Group: {},
-      Post: [],                 // <- tableau
+      Post: [], // <- tableau
       Background: null,
       NbPosts: 0,
       showspinner: false,
-      filters: [],              // comme AllFictions
-      width: 1700,              // breakpoints identiques
+      filters: [], // comme AllFictions
+      width: 1700, // breakpoints identiques
       nav: {
         current: 0,
         pages: 0,
