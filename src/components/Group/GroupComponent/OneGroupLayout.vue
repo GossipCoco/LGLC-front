@@ -4,7 +4,7 @@
     class="width-190-vh height-100-vh background-none border-none padding-2-vh card mb-3 overflowY-auto"
   >
     <group-header v-bind:group="group" />
-    <div class="row gy-2">
+    <div class="row gy-2 height-auto">
       <div class="col-12 col-md-12">
         <div
           class="card group-container border-none height-auto details-infos-group border-radius-12px poppins-text text-white"
@@ -12,7 +12,7 @@
         >
           <div class="card-body">
             <group-btn v-bind:group="group" />
-            <div class="row height-60-vh margin-1vh">
+            <div class="row height-auto margin-1vh">
               <group-description v-bind:group="group" />
               <list-members v-bind:group="group" />
             </div>
