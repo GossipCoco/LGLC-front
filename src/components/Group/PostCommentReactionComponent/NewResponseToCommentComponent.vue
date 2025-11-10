@@ -10,7 +10,13 @@ export default {
     data() {
         return {
             url: null,
-            Group:{}
+            Group:{},
+            form:{
+                Content: "", // HTML renvoyé par l’éditeur
+                UserId: this.$store.state.auth.user.usrID,
+                PostId: null,
+                ParentId: this.$route.params.id,
+            }
         };
     },
     created() {
@@ -22,7 +28,8 @@ export default {
             GroupService.GetGroupByCommentById(id)
             .then((response) => {
                 this.Group = response.data.ob;
-                console.log(response.data.ob);
+                console.log(this.Group.GroupPost.Id);
+                this.form.PostId = this.Group.GroupPost.Id;
             })
             .catch((e) => {
                 console.log(e);
