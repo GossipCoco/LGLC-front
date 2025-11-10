@@ -28,7 +28,6 @@ export default {
             GroupService.GetGroupByCommentById(id)
             .then((response) => {
                 this.Group = response.data.ob;
-                console.log(this.Group.GroupPost.Id);
                 this.form.PostId = this.Group.GroupPost.Id;
             })
             .catch((e) => {
