@@ -7,7 +7,7 @@
     >
       <slot></slot>
     </div>
-    <div class="card-body">
+    <div class="card-body text-align-center">
       <router-link :to="'/OneGroupLayout/' + group.Id" class="text-white">
         {{ group.Name }} - {{ group.Type }}
       </router-link>
