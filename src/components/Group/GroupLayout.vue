@@ -67,7 +67,6 @@ export default {
       try {
         const response = await GroupService.CountAllGroups();
         this.NbAllGroups = response.data.ob.count;
-        console.log("Nombre total de groupes:", this.NbAllGroups);
         functions.CalcPagination(this.NbAllGroups, this.nav, this.nav.step);
       } catch (e) {
         console.log(e);
