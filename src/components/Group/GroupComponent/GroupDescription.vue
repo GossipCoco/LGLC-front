@@ -6,7 +6,7 @@
         </div>
         <div class="card-body">
           <p class="text-white">{{ group.Description }}</p>
-          <p class="text-white text-align-justify" v-html="group.CompleteDescription"></p>
+          <div class="text-white text-align-justify" v-html="group.CompleteDescription"></div>
         </div>
       </div>
     </div>
