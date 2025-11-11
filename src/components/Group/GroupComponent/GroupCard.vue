@@ -9,7 +9,7 @@
     </div>
     <div class="card-body">
       <router-link :to="'/OneGroupLayout/' + group.Id" class="text-white">
-        {{ group.Name }}
+        {{ group.Name }} - {{ group.Type }}
       </router-link>
     </div>
   </div>
