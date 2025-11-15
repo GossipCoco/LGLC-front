@@ -3,7 +3,9 @@
     id="group-details"
     class="width-190-vh height-100-vh background-none border-none padding-2-vh card mb-3 overflowY-auto"
   >
-    <group-header v-bind:group="Group" />
+    <group-header v-bind:group="Group">
+      <header-component v-bind:group="Group" />
+    </group-header>
 
     <div class="row gy-2">
       <div class="col-12 col-md-12">
@@ -102,9 +104,10 @@ import "@vueup/vue-quill/dist/vue-quill.snow.css";
 import PostCommentReactions from "../../../services/PostCommentReactions";
 import GroupService from "../../../services/GroupService";
 import GroupHeader from "../GroupComponent/GroupHeader.vue";
+import HeaderComponent from "../GroupComponent/HeaderComponent.vue";
 export default {
   name: "CreateANewPost",
-  components: { GroupHeader, QuillEditor },
+  components: { GroupHeader, QuillEditor, HeaderComponent },
   data() {
     return {
       toolbarOptions: ["bold", "italic", "underline", "strike"],
