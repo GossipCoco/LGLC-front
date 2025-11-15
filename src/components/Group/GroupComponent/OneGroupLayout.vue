@@ -13,7 +13,6 @@
           v-bind:style="bgStyle"
         >
           <div class="card-body">
-            <!-- <group-btn v-bind:group="group" /> -->
             <div class="row height-auto margin-1vh">
               <group-description v-bind:group="group" />
               <list-members v-bind:group="group" />
@@ -31,7 +30,6 @@
 import GroupService from "../../../services/GroupService";
 import PostAllCommentReactions from "../../../services/PostCommentReactions";
 import GroupHeader from "./GroupHeader.vue";
-// import GroupBtn from "./GroupBtn.vue";
 import ListMembers from "./ListMembers.vue";
 import GroupLastPost from "./GroupLastPost.vue";
 import GroupDescription from "./GroupDescription.vue";
