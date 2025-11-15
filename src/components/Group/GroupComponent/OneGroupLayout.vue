@@ -3,7 +3,9 @@
     id="group-details"
     class="width-190-vh height-100-vh background-none border-none padding-2-vh card mb-3 overflowY-auto"
   >
-    <group-header v-bind:group="group" />
+    <group-header v-bind:group="group">
+      <header-component v-bind:group="group" />
+    </group-header>
     <div class="row gy-2 height-auto">
       <div class="col-12 col-md-12">
         <div
@@ -33,6 +35,7 @@ import GroupBtn from "./GroupBtn.vue";
 import ListMembers from "./ListMembers.vue";
 import GroupLastPost from "./GroupLastPost.vue";
 import GroupDescription from "./GroupDescription.vue";
+import HeaderComponent from "./HeaderComponent.vue";
 export default {
   name: "OneGroupLayout",
   components: {
@@ -41,6 +44,7 @@ export default {
     GroupLastPost,
     GroupDescription,
     GroupBtn,
+    HeaderComponent
   },
   data() {
     return {
