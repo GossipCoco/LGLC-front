@@ -3,7 +3,9 @@
     id="group-details"
     class="width-190-vh height-100-vh background-none border-none padding-2-vh card mb-3 overflowY-auto"
   >
-    <group-header v-bind:group="Group" />
+    <group-header v-bind:group="Group">
+      <header-component v-bind:group="Group" />
+    </group-header>
     <div class="row gy-2">
       <div class="col-12 col-md-12">
         <div
@@ -45,12 +47,13 @@
 <script>
 import PostAllCommentReactions from "../../../services/PostCommentReactions";
 import GroupHeader from "../GroupComponent/GroupHeader.vue";
+import HeaderComponent from "../GroupComponent/HeaderComponent.vue";
 import ExtractPostComponent from "./ExtractPostComponent.vue";
 import Pagination from "../../Components/GenericComponent/Pagination.vue";
 
 export default {
   name: "AllPostsComponent",
-  components: { GroupHeader, ExtractPostComponent, Pagination },
+  components: { GroupHeader, ExtractPostComponent, Pagination, HeaderComponent },
   data() {
     return {
       url: "",
