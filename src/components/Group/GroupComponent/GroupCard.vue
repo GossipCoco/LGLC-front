@@ -5,7 +5,7 @@
     <div class="height-30-vh width-30-vh background-size-cover background-position-50-percent border-radius-top-100"
       v-bind:style="{ backgroundImage: 'url(' + group.Image + ')' }"
     >
-      <slot></slot>
+      <img :src="group.Symbol" class="height-15-vh"/>
     </div>
     <div class="card-body text-align-center">
       <router-link :to="'/OneGroupLayout/' + group.Id" class="text-white">
