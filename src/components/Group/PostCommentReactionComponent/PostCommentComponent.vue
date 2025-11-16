@@ -11,13 +11,6 @@
       v-bind:style="bgStyle"
     >
       <div class="card-body">
-        <div class="row height-10-vh">
-          <div class="col-12 display-flex align-items-content-justify-content">
-            <router-link :to="'/OneGroupLayout/' + Group.Id" class="btn btn-primary margin-1vh height-5-vh">
-              {{ Group.Name }}
-            </router-link>
-          </div>
-        </div>
         <PostCardComponent
           v-bind:post="postCommentReactions"
           v-bind:UserName="UserName"
