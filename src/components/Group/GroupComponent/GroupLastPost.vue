@@ -4,7 +4,7 @@
     v-for="(posts, index) in Post"
     :key="index"
   >
-    <div class="card background-lineart height-50-vh">
+    <div class="card background-lineart height-60-vh">
       <div
         class="card-header text-center text-white width-40-vh height-20-vh display-flex display-flex-column flex-wrap-wrap"
       >
