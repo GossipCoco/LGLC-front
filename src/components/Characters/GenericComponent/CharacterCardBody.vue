@@ -4,7 +4,7 @@
       <router-link
         :to="route + name"
         type="button"
-        class="btn btn-primary poppins-text background-color-active height-6-vh width-28-vh marginTR--6-2-5-vh"
+        class="btn btn-primary poppins-text background-color-active height-6-vh width-30-vh marginTR--6-2-5-vh"
       >
           {{ name }}
         </router-link>

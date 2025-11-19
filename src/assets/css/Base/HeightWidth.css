@@ -52,9 +52,6 @@
     width: 34vh;
     height: 35vh;
 }
-/* .all-fictions-container-global{
-    height: 95vh;
-} */
 .flex-one .quest-button-text .btn.btn-primary{
     width: 18vh;
 }
@@ -63,7 +60,6 @@
 }
 #original-characters-list .name-characatrer-link .btn{
     height: 8vh;
-    width: 30vh;
 }
 .fiction-container .card-header{
     height: 13vh;
