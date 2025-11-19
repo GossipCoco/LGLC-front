@@ -141,6 +141,12 @@
 .padding-1-0-0-1vh{
     padding: 1vh 0 0 1vh
 }
+.padding-0-0-0-1vh{
+    padding: 0 0 0 1vh;
+}
+.padding-0-0-0-3vh{
+    padding: 0 0 0 3vh;
+}
 .padding-0-0-0-5vh{
     padding: 0 0 0 5vh;
 }
