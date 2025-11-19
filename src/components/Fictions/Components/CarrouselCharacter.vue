@@ -4,11 +4,12 @@
       <Slide v-for="(character, slide) in Characters" :key="slide">
         <div class="display-flex-column align-items-content-justify-content carousel__item">
           <img v-if="character.Character"
-              class="height-auto"
+              class="height-auto width-15-vh"
               :src="character.Character.Image"
               :alt="character.Character.CurrentName"
             />
             <img v-else-if="character.Gamer"
+              class="height-auto width-15-vh"
             :src="character.Gamer.Image"
               :alt="character.Gamer.CurrentName"
             />
