@@ -1,6 +1,6 @@
 <template>
   <div
-    class="height-77-vh border-none background-color-main-lineart card display-flex-column padding-2-vh overflowY-X-hiddencreate-chapter-card-container"
+    class="height-85-vh border-none background-color-main-lineart card display-flex-column padding-2-vh overflowY-X-hidden"
   >
     <CardHeader v-bind:Title="'Chapitre : ' + NextChapter" />
     <div class="card-body height-80">
