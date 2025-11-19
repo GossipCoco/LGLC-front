@@ -193,7 +193,7 @@ export default {
       logo: "/images/Logos/LaGuerredesClansLogos2.png",
       SecondeSubMenu:
             [{ title: "Personnages", link: "/allCharacters" },
-            {title: 'Map', link: '/MapForest'},
+            // {title: 'Map', link: '/MapForest'},
             { title: "Clans", link: "/AllClansLayout" },
             { title: "Lieux", link: "/AllLocationsLayout" },
             { title: "Arcs & Livres", link: "/ArcBookLayout" },],
