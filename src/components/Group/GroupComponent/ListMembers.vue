@@ -6,22 +6,22 @@
       </div>
       <div class="card-body">
         <div class="list-group">
-          <div v-for="(Group, index) in group.UserGroups" :key="index" class="text-white">
-            <img
-              loading="lazy"
-              :src="Group.Badge"
-              :alt="alt"
-              :class="'border-radius-100 display-flex-column width-5-vh height-5-vh '"
-            />
-            <p>{{  Group.User.UserName }}
-            <img
-              loading="lazy"
-              :src="'/images/Avatars/' + Group.User.Avatar"
-              :alt="alt"
-              :class="'border-radius-100 display-flex-column width-5-vh height-5-vh '"
-            />
-            
-          </p>
+          <div v-for="(Group, index) in group.UserGroups" :key="index" class="text-white">            
+            <p>{{  Group.User.UserName }}</p>
+            <div class="display-flex display-flex-row gap-1-vh">
+              <img
+                loading="lazy"
+                :src="Group.Badge"
+                :alt="alt"
+                :class="'border-radius-100 display-flex-column width-10-vh height-10-vh '"
+              />
+              <img
+                loading="lazy"
+                :src="'/images/Avatars/' + Group.User.Avatar"
+                :alt="alt"
+                :class="'border-radius-100 display-flex-column width-10-vh height-10-vh '"
+              />
+            </div>
           </div>
         </div>
       </div>
