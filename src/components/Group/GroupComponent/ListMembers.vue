@@ -5,21 +5,25 @@
         <h5 class="card-title">Membres</h5>
       </div>
       <div class="card-body">
-        <ul class="list-group">
-          <li
-            class="list-group-item height-10-vh display-flex-row align-items-center"
-            v-for="(users, index) in group.UserGroups"
-            :key="index"
-          >
+        <div class="list-group">
+          <div v-for="(Group, index) in group.UserGroups" :key="index" class="text-white">
             <img
               loading="lazy"
-              :src="'/images/Avatars/' + users.User.Avatar"
+              :src="Group.Badge"
               :alt="alt"
               :class="'border-radius-100 display-flex-column width-5-vh height-5-vh '"
             />
-            <p class="text-white">{{ users.User.UserName }}</p>
-          </li>
-        </ul>
+            <p>{{  Group.User.UserName }}
+            <img
+              loading="lazy"
+              :src="'/images/Avatars/' + Group.User.Avatar"
+              :alt="alt"
+              :class="'border-radius-100 display-flex-column width-5-vh height-5-vh '"
+            />
+            
+          </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
