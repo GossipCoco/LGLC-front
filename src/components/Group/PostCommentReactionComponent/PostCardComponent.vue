@@ -21,24 +21,19 @@
     <!-- Contenu tronqué -->
     <div class="card-body">
       <div :class="['content', 'text-align-justify', { collapsed: !expanded }]" v-html="post.Content"></div>
-    <!-- <button v-if="shouldCollapse" class="link" @click="expanded = !expanded">
-      {{ expanded ? 'Afficher moins' : 'Lire la suite' }}
-    </button> -->
-
-    <!-- Méta + actions -->
       <footer class="d-flex align-items-center gap-3 mt-2 opacity-85">
         <router-link :to="'/NewResponseToPost/'+ post.Id" class="btn btn-primary">💬 Commentez</router-link>
         <span>💬 {{ commentCount }}</span>
         <span v-if="post.Group?.Name">🏷️ {{ post.Group.Name }}</span>
         <div class="row">
-              <ReactionBar
-      :user-id="$store.state.auth.user.usrID"
-      target-type="post"
-      :target-id="post.Id"
-      :initial-reactions="post.Reactions || []"
-      @react="onReact"
-      @unreact="onUnreact"
-    />
+          <ReactionBar
+            :user-id="$store.state.auth.user.usrID"
+            target-type="post"
+            :target-id="post.Id"
+            :initial-reactions="post.Reactions || []"
+            @react="onReact"
+            @unreact="onUnreact"
+          />
         </div>
       </footer>
     </div>
