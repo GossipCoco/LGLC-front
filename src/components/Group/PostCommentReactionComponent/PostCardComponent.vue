@@ -31,28 +31,31 @@
         <span>💬 {{ commentCount }}</span>
         <span v-if="post.Group?.Name">🏷️ {{ post.Group.Name }}</span>
         <div class="row">
-          <Picker :data="emojiIndex" set="twitter" @select="showEmoji" />
+              <ReactionBar
+      :user-id="$store.state.auth.user.usrID"
+      target-type="post"
+      :target-id="post.Id"
+      :initial-reactions="post.Reactions || []"
+      @react="onReact"
+      @unreact="onUnreact"
+    />
         </div>
-        <div class="row">
-          <div>
-            {{ emojisOutput }}
-          </div>
-        </div> 
-          <button class="btn btn-sm btn-outline-light ms-auto" @click="$emit('open', post.Id)">Ouvrir</button>
       </footer>
     </div>
   </article>
 </template>
 
 <script>
-import data from "emoji-mart-vue-fast/data/all.json";
-import "emoji-mart-vue-fast/css/emoji-mart.css";
-import { Picker, EmojiIndex } from "emoji-mart-vue-fast/src";
-let emojiIndex = new EmojiIndex(data);
+// import data from "emoji-mart-vue-fast/data/all.json";
+// import "emoji-mart-vue-fast/css/emoji-mart.css";
+// import { Picker, EmojiIndex } from "emoji-mart-vue-fast/src";
+// let emojiIndex = new EmojiIndex(data);
+import ReactionBar from './ReactionBar.vue';
 export default {
   name: 'PostCardComponent',
   components: {
-    Picker
+    ReactionBar,
+    // Picker
   },
   props: {
     post: { type: Object, required: true },
