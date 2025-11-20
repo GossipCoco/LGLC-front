@@ -20,7 +20,7 @@
       <div class="card-body">
         <div class="row">
           <div class="col-12 mb-3 height-20-vh">
-            <p v-html="truncateText(posts.Content, 200)" class="text-white"></p>
+            <p v-html="truncateText(posts.Content, 200)" class="text-white text-align-justify"></p>
           </div>
         </div>
         <footer class="d-flex align-items-center gap-3 mt-2 opacity-85">

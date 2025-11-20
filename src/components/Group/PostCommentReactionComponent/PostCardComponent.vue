@@ -20,7 +20,7 @@
     </div>
     <!-- Contenu tronqué -->
     <div class="card-body">
-      <div :class="['content', { collapsed: !expanded }]" v-html="post.Content"></div>
+      <div :class="['content', 'text-align-justify', { collapsed: !expanded }]" v-html="post.Content"></div>
     <!-- <button v-if="shouldCollapse" class="link" @click="expanded = !expanded">
       {{ expanded ? 'Afficher moins' : 'Lire la suite' }}
     </button> -->
