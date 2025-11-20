@@ -97,6 +97,14 @@ th{
 p{
     margin: 0;
 }
+.clamp-3 {
+   display: -webkit-box;
+/* stylelint-disable-next-line property-no-unknown */
+  line-clamp: 4;
+/* stylelint-disable-next-line property-no-unknown */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 /* .transform-card{
         transform: translate3d(0rem, 2vh, 0rem) scale(0.98);
 } */

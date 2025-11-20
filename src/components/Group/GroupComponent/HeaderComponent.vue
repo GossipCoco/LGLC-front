@@ -5,7 +5,7 @@
         <div class="col-12">
           <h1 class="text-white">{{ group.Name }}</h1>
           <br />
-          <h3 class="text-white text-align-justify">{{ group.Subtitle }}</h3>
+          <h3 class="text-white text-align-justify clamp-3">{{ group.Subtitle }}</h3>
         </div>
       </div>
       <div class="row">
