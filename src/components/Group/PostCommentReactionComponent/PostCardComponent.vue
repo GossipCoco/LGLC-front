@@ -20,7 +20,7 @@
     </div>
     <!-- Contenu tronqué -->
     <div class="card-body">
-      <div :class="['content', 'text-align-justify', { collapsed: !expanded }]" v-html="post.Content"></div>
+      <div class="content text-align-justify" v-html="post.Content"></div>
       <footer class="d-flex align-items-center gap-3 mt-2 opacity-85">
         <router-link :to="'/NewResponseToPost/'+ post.Id" class="btn btn-primary">💬 Commentez</router-link>
         <span>💬 {{ commentCount }}</span>
@@ -66,10 +66,6 @@ export default {
     commentCount() {
       return this.post.commentCount ?? (Array.isArray(this.post.Comments) ? this.post.Comments.length : 0);
     },
-    shouldCollapse() {
-      // Laisse la main au CSS; le bouton est toujours visible, tu peux le cacher si pas nécessaire
-      return true;
-    }
   },
   methods: {
     onReact(emoji) {
@@ -91,11 +87,6 @@ export default {
 <style scoped>
 .avatar { width:34px; height:34px; object-fit:cover }
 .content { line-height:1.7; }
-.content.collapsed {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
 .link { background:none; border:none; color:#cfe; cursor:pointer; padding:0; margin-top:6px }
 :deep(p){ margin:0 0 .6rem; }
 </style>
