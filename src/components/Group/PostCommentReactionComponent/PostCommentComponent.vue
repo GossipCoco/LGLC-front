@@ -48,7 +48,6 @@ export default {
     bgStyle() {
       // 1) source = Background si dispo, sinon group.Background, sinon group.Image
       const src = this.Background;
-      console.log("Background source:", src);
       if (!src) return {}; // => pas de style tant qu’on n’a rien (évite url(null))
       return {
         backgroundImage: `url("${src}")`,
@@ -63,7 +62,6 @@ export default {
       .then(
         (response) => {
           this.Background = response.data.ob.Group.Background;
-          console.log(response.data.ob);
           this.postCommentReactions = response.data.ob;
           this.Group = this.postCommentReactions.Group;
           this.UserName = this.postCommentReactions.User.UserName;
