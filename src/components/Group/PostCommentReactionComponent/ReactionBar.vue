@@ -1,5 +1,5 @@
 <template>
-  <div class="reaction-bar">
+  <div class="reaction-bar display-flex display-flex-row align-items-content-justify-content">
     <!-- réactions courantes -->
     <button
       v-for="r in visibleReactions"
@@ -119,7 +119,7 @@ export default {
 </script>
 
 <style scoped>
-.reaction-bar { display:flex; gap:.4rem; align-items:center; flex-wrap:wrap; }
+
 .chip{
   display:inline-flex; align-items:center; gap:.35rem;
   padding:.25rem .5rem; border-radius:999px;

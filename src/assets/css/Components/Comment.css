@@ -68,3 +68,7 @@
 #btn-submit-post-form{
   margin-top: 15vh;
 }
+.reaction-bar {
+  gap:.4rem;
+  flex-wrap:wrap;
+}
