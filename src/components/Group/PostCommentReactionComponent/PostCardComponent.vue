@@ -55,6 +55,11 @@ export default {
     return {
       expanded: false,
       emojisOutput: '',
+      form:{
+        PostId: null,
+        Emoji: null,
+        UserId: null
+      }
     };
   },
   computed: {
@@ -67,6 +72,13 @@ export default {
     }
   },
   methods: {
+    onReact(emoji) {
+      // console.log('Reacted with', emoji);
+      this.form.PostId = emoji.targetId;
+      this.form.Emoji = emoji.emoji;
+      this.form.UserId = this.$store.state.auth.user.usrID;
+      console.log(this.form);
+    },
     showEmoji(emoji) {
       this.emojisOutput = this.emojisOutput + emoji.native;
     },
