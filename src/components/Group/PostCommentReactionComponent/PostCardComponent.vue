@@ -41,16 +41,11 @@
 </template>
 
 <script>
-// import data from "emoji-mart-vue-fast/data/all.json";
-// import "emoji-mart-vue-fast/css/emoji-mart.css";
-// import { Picker, EmojiIndex } from "emoji-mart-vue-fast/src";
-// let emojiIndex = new EmojiIndex(data);
 import ReactionBar from './ReactionBar.vue';
 export default {
   name: 'PostCardComponent',
   components: {
-    ReactionBar,
-    // Picker
+    ReactionBar
   },
   props: {
     post: { type: Object, required: true },
