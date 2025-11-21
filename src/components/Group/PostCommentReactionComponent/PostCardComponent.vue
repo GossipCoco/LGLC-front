@@ -1,28 +1,40 @@
 <template>
-  <article class="card post-card border-none background-lineart poppins-text text-white padding-1-vh">
+  <article
+    class="card post-card border-none background-lineart poppins-text text-white padding-1-vh"
+  >
     <div class="card-header">
-    <!-- Header -->
-      <header class="d-flex align-items-center gap-2 mb-2 display-flex display-flex-column">
+      <!-- Header -->
+      <header
+        class="d-flex align-items-center gap-2 mb-2 display-flex display-flex-column"
+      >
         <div class="display-flex display-flex-row">
           <h2 class="h5 mb-2">{{ post.Title }}</h2>
-          <img :src="'/images/Avatars/'+post.User?.Avatar" :alt="post.User?.Avatar" class="rounded-circle avatar" />
+          <img
+            :src="'/images/Avatars/' + post.User?.Avatar"
+            :alt="post.User?.Avatar"
+            class="rounded-circle avatar"
+          />
           <div class="d-flex flex-column">
-
-            <strong>{{ post.User?.UserName || 'Anonyme' }}</strong>
+            <strong>{{ post.User?.UserName || "Anonyme" }}</strong>
             <small class="opacity-75">{{ formatDate(post.CreatedAt) }}</small>
           </div>
         </div>
-        <span v-if="post.IsPinned" class="ms-auto badge bg-success">📌 Épinglé</span>
+        <span v-if="post.IsPinned" class="ms-auto badge bg-success"
+          >📌 Épinglé</span
+        >
       </header>
 
-    <!-- Titre -->
-    
+      <!-- Titre -->
     </div>
     <!-- Contenu tronqué -->
     <div class="card-body">
       <div class="content text-align-justify" v-html="post.Content"></div>
       <footer class="d-flex align-items-center gap-3 mt-2 opacity-85">
-        <router-link :to="'/NewResponseToPost/'+ post.Id" class="btn btn-primary">💬 Commentez</router-link>
+        <router-link
+          :to="'/NewResponseToPost/' + post.Id"
+          class="btn btn-primary"
+          >💬 Commentez</router-link
+        >
         <span>💬 {{ commentCount }}</span>
         <span v-if="post.Group?.Name">🏷️ {{ post.Group.Name }}</span>
         <div class="row">
@@ -30,10 +42,26 @@
             :user-id="$store.state.auth.user.usrID"
             target-type="post"
             :target-id="post.Id"
-            :initial-reactions="post.Reactions || []"
+            :initial-reactions="reactionsAgg"
             @react="onReact"
             @unreact="onUnreact"
           />
+          <div class="reaction-summary d-flex gap-2 mt-2">
+            <span
+              v-for="r in reactionsAggSorted"
+              :key="r.emoji"
+              class="chip"
+              :class="{ mine: r.reacted }"
+              title="Nombre de réactions"
+            >
+              <span class="emoji">{{ r.emoji }}</span>
+              <span class="count">{{ r.count }}</span>
+            </span>
+
+            <span class="badge bg-dark ms-2" v-if="totalReactions > 0">
+              {{ totalReactions }} réaction{{ totalReactions > 1 ? "s" : "" }}
+            </span>
+          </div>
         </div>
       </footer>
     </div>
@@ -41,37 +69,61 @@
 </template>
 
 <script>
-import ReactionBar from './ReactionBar.vue';
-import PostCommentReactions from '../../../services/PostCommentReactions';
+import ReactionBar from "./ReactionBar.vue";
+import PostCommentReactions from "../../../services/PostCommentReactions";
 export default {
-  name: 'PostCardComponent',
+  name: "PostCardComponent",
   components: {
-    ReactionBar
+    ReactionBar,
   },
   props: {
     post: { type: Object, required: true },
-    clampLines: { type: Number, default: 10 }
+    clampLines: { type: Number, default: 10 },
   },
   data() {
     return {
       expanded: false,
-      emojisOutput: '',
-      url: '',
-      form:{
+      emojisOutput: "",
+      url: "",
+      form: {
         PostId: null,
         Emoji: null,
-        UserId: null
-      }
+        UserId: null,
+      },
     };
   },
   computed: {
     commentCount() {
-      return this.post.commentCount ?? (Array.isArray(this.post.Comments) ? this.post.Comments.length : 0);
+      return (
+        this.post.commentCount ??
+        (Array.isArray(this.post.Comments) ? this.post.Comments.length : 0)
+      );
+    },
+    reactionsAgg() {
+      const map = new Map();
+      const me = this.$store.state.auth.user.usrID;
+      (this.post.PostReactions || []).forEach((r) => {
+        const key = r.Emoji;
+        const rec = map.get(key) || { emoji: key, count: 0, reacted: false };
+        rec.count += 1;
+        if (r.UserId === me) rec.reacted = true;
+        map.set(key, rec);
+      });
+      return Array.from(map.values());
+    },
+
+    // Option: tri décroissant
+    reactionsAggSorted() {
+      return [...this.reactionsAgg].sort((a, b) => b.count - a.count);
+    },
+
+    totalReactions() {
+      return (this.post.PostReactions || []).length;
     },
   },
   created() {
     // console.log('PostCardComponent created with post:', this.post);
-    this.url = this.$route.params.id
+    this.url = this.$route.params.id;
   },
   methods: {
     onReact(emoji) {
@@ -83,27 +135,46 @@ export default {
       this.CreateANewReactionToPost(this.form);
     },
     CreateANewReactionToPost(form) {
-      console.log('Creating reaction with form:', form);
+      console.log("Creating reaction with form:", form);
       PostCommentReactions.CreateANewReactionToPost(this.url, form)
-        .then(response => {
-          console.log('Reaction sent successfully:', response);
+        .then((response) => {
+          console.log("Reaction sent successfully:", response);
         })
-        .catch(error => {
-          console.error('Error sending reaction:', error);
+        .catch((error) => {
+          console.error("Error sending reaction:", error);
         });
     },
     showEmoji(emoji) {
       this.emojisOutput = this.emojisOutput + emoji.native;
     },
     formatDate(d) {
-      try { return new Date(d).toLocaleString(); } catch { return d || ''; }
-    }
-  }
+      try {
+        return new Date(d).toLocaleString();
+      } catch {
+        return d || "";
+      }
+    },
+  },
 };
 </script>
 <style scoped>
-.avatar { width:34px; height:34px; object-fit:cover }
-.content { line-height:1.7; }
-.link { background:none; border:none; color:#cfe; cursor:pointer; padding:0; margin-top:6px }
-:deep(p){ margin:0 0 .6rem; }
+.avatar {
+  width: 34px;
+  height: 34px;
+  object-fit: cover;
+}
+.content {
+  line-height: 1.7;
+}
+.link {
+  background: none;
+  border: none;
+  color: #cfe;
+  cursor: pointer;
+  padding: 0;
+  margin-top: 6px;
+}
+:deep(p) {
+  margin: 0 0 0.6rem;
+}
 </style>
