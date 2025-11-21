@@ -42,6 +42,7 @@
 
 <script>
 import ReactionBar from './ReactionBar.vue';
+import PostCommentReactions from '../../../services/PostCommentReactions';
 export default {
   name: 'PostCardComponent',
   components: {
@@ -55,6 +56,7 @@ export default {
     return {
       expanded: false,
       emojisOutput: '',
+      url: '',
       form:{
         PostId: null,
         Emoji: null,
@@ -67,13 +69,28 @@ export default {
       return this.post.commentCount ?? (Array.isArray(this.post.Comments) ? this.post.Comments.length : 0);
     },
   },
+  created() {
+    // console.log('PostCardComponent created with post:', this.post);
+    this.url = this.$route.params.id
+  },
   methods: {
     onReact(emoji) {
       // console.log('Reacted with', emoji);
       this.form.PostId = emoji.targetId;
       this.form.Emoji = emoji.emoji;
       this.form.UserId = this.$store.state.auth.user.usrID;
-      console.log(this.form);
+      console.log();
+      this.CreateANewReactionToPost(this.form);
+    },
+    CreateANewReactionToPost(form) {
+      console.log('Creating reaction with form:', form);
+      PostCommentReactions.CreateANewReactionToPost(this.url, form)
+        .then(response => {
+          console.log('Reaction sent successfully:', response);
+        })
+        .catch(error => {
+          console.error('Error sending reaction:', error);
+        });
     },
     showEmoji(emoji) {
       this.emojisOutput = this.emojisOutput + emoji.native;
