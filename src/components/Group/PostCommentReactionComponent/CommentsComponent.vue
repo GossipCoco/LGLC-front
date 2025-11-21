@@ -67,7 +67,6 @@ export default {
   },
   methods: {
     hasReplies(node) {
-      console.log("node :", node);
       return Array.isArray(node.Replies) && node.Replies.length > 0;
     },
   },
