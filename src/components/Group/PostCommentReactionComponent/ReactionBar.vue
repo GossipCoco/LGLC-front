@@ -40,6 +40,7 @@
 
 <script>
 import data from "emoji-mart-vue-fast/data/all.json";
+import "emoji-mart-vue-fast/css/emoji-mart.css";
 import { EmojiIndex } from "emoji-mart-vue-fast/src"; // léger, sans picker
 const emojiIndex = new EmojiIndex(data);
 
