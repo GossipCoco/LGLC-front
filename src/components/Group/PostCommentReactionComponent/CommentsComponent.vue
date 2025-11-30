@@ -9,7 +9,8 @@
         <div class="card-header">
           <div class="row">
             <div class="col-8 display-flex">
-              <img :src="'/images/Avatars/'+ comment.User.Avatar" class="rounded-circle avatar height-10-vh"/><h2 class="text-white post-title-text">{{ comment.User.UserName }} répond : </h2>
+              <img :src="'/images/Avatars/'+ comment.User.Avatar" class="rounded-circle avatar height-10-vh"/>
+              <h2 class="text-white post-title-text">{{ comment.User.UserName }} répond : </h2>
             </div>
             <div class="col-4 text-align-right"></div>
           </div>
