@@ -30,15 +30,9 @@ export default {
     Comments: { type: Array, default: () => [] },
     depth: { type: Number, default: 0 },
   },
-  computed: {
-    cardClass() {
-      return this.depth === 0
-        ? "card background-color-middle-green-01"
-        : "card background-color-middle-green-01 margin-1vh";
-    },
+  computed: {    
   },
   methods: {
-
   },
   created() {
     // debug minimal
