@@ -5,7 +5,7 @@
       v-for="(comment, index) in Comments"
       :key="index"
     >
-      <div :class="cardClass">
+      <div class="card background-color-middle-green-01">
         <div class="card-header">
           <div class="row">
             <div class="col-8 display-flex">
