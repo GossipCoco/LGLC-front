@@ -188,7 +188,7 @@
         margin: 0 0 0 8vh;
     }
     .row.top-dashboard .all-my-oc-card .card-body > div {
-        width: 28vh;
+        width: 100vh;
     }
     .welcome-dashboard-container{
         width: 195vh;
