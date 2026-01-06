@@ -58,9 +58,6 @@
 .location-clan-background-width-container .btn.btn-primary{
     max-width: 30vh;
 }
-/* #original-characters-list .name-characatrer-link .btn{
-    height: 8vh;
-} */
 .fiction-container .card-header{
     height: 13vh;
 }
@@ -155,10 +152,6 @@
 .quest-container .card-header h6{
     height: 4vh;
 }
-/* .avatar-gamer{
-    width: 15vh;
-    height: 15vh;
-} */
 .card-body.one-quest {
     height: 32vh;
     width: 16vh;
