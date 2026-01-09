@@ -13,7 +13,7 @@
               <div class="icon-menu-container  border-radius-100 background-color-clear-green-02  display-flex align-items-content-justify-content">
                 <img src="/images/icons/home.svg" />                
               </div>
-              <span class="menu-text poppins-text font-size-1em font-weight-600">Dashboard</span>
+              <span class="menu-text poppins-text font-size-1em font-weight-600">Accueil</span>
             </div>
           </div>
         </router-link>
@@ -145,7 +145,7 @@
               <div class="icon-menu-container  border-radius-100  background-color-clear-green-02  display-flex align-items-content-justify-content">
                 <img src="/images/icons/calendar-days-solid.svg" />
               </div>              
-              <span class="menu-text poppins-text font-size-1em font-weight-600">Évènement</span>
+              <span class="menu-text poppins-text font-size-1em font-weight-600">Event</span>
             </div>
           </div>
         </router-link>
