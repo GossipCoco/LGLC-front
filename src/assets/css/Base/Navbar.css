@@ -20,7 +20,7 @@
   position: fixed;
 }
 .menu-left ul {
-  width: 16vh;  
+  width: 11vh;  
   padding: 0 0 4vh 0;
 }
 #collapseExample3 p {
@@ -29,7 +29,7 @@
   margin: 0;
 }
 .menu-level1 {
-  margin: 0 0 2vh 4vh;
+  margin: 0 0 2vh 2vh;
 }
 .icon-menu-container{
   width: 8vh;
