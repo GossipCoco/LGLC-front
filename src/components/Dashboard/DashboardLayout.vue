@@ -5,7 +5,7 @@
         <TitleHeader
           v-if="!showspinner"
           v-bind:UserName="UserName"
-          v-bind:User="usr"
+          v-bind:User="UserName"
           v-bind:usrId="usrId"
         />
       </div>
@@ -16,7 +16,7 @@
         <AvatarCard
           v-if="!showspinner"
           v-bind:Avatar="Avatar"
-          v-bind:UserName="usr"
+          v-bind:UserName="UserName"
           v-bind:LastConnexion="LastConnexion"
           v-bind:Inscription="Inscription"
           v-bind:level="level"
@@ -217,8 +217,7 @@ export default {
           console.log(response.data.ob)
           this.userInfo = response.data.ob;
           this.Avatar = response.data.ob.Avatar;
-          this.usr = response.data.ob.UserName;
-          this.UserName = this.usr;
+          this.UserName = response.data.ob.UserName;
           this.LastConnexion = response.data.ob.LastConnexion;
           this.Inscription = response.data.ob.Inscription;
           this.LvelImf = this.userInfo.Level.Image;
