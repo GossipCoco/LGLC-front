@@ -10,6 +10,7 @@ import About from "../components/Page/Accueil/About.vue";
 import Home from "../components/Page/Home";
 import LgdcVue from "../components/Navigation/LgdcVue.vue";
 import CreationVue from "../components/Navigation/CreationVue.vue";
+import GamesVue from "../components/Navigation/GamesVue.vue";
 
 import DashboardLayout from "../components/Dashboard/DashboardLayout";
 
@@ -117,6 +118,11 @@ const routes = [
         path: '/creation',
         name: 'creationVue',
         component: CreationVue
+      },
+      {
+        path: '/games',
+        name: 'GamesVue',
+        component: GamesVue
       },
       {
         path: "/user/:id",

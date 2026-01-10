@@ -29,7 +29,7 @@
         <li
           class="li-level1 display-flex-column align-items-content-justify-content"
         >
-        <router-link to="/lgdc">
+          <router-link to="/lgdc">
             <div class="menu-level1">
               <div class="menu-li-contain">
                 <div
@@ -63,50 +63,8 @@
               </div>
             </div>
           </router-link>
-          
         </li>
-        <!-- <li
-          class="li-level1 display-flex-column align-items-content-justify-content"
-        >
-          <div
-            data-bs-toggle="collapse"
-            href="#creation-fiction-oc"
-            role="button"
-            aria-expanded="false"
-            aria-controls="creation-fiction-oc"
-          >
-            <div class="menu-level1">
-              <div class="menu-li-contain">
-                <div
-                  class="icon-menu-container border-radius-100 background-color-clear-green-02 display-flex align-items-content-justify-content"
-                >
-                  <img src="/images/icons/pen-nib-solid.svg" />
-                </div>
-                <span
-                  class="menu-text poppins-text font-size-1em font-weight-600"
-                  >Imaginer</span
-                >
-              </div>
-            </div>
-          </div>
-          <div
-            class="collapse display-flex-column align-items-content-justify-content"
-            id="creation-fiction-oc"
-          >
-            <router-link
-              class="link-collapse width-15-vh color-clear-green-02 font-size-0-65 display-flex-column align-items-content-justify-content"
-              to="/createANewFiction"
-            >
-              Nouvelle fiction
-            </router-link>
-            <router-link
-              to="/CreateAnOriginalCharacter"
-              class="link-collapse width-15-vh color-clear-green-02 font-size-0-65 display-flex-column align-items-content-justify-content"
-            >
-              Nouvel OC
-            </router-link>
-          </div>
-        </li> -->
+
         <li
           class="li-level1 display-flex-column align-items-content-justify-content"
         >
@@ -129,14 +87,7 @@
         <li
           class="li-level1 display-flex-column align-items-content-justify-content"
         >
-          <div
-            to="/game"
-            data-bs-toggle="collapse"
-            href="#collapseExample0"
-            role="button"
-            aria-expanded="false"
-            aria-controls="collapseExample0"
-          >
+          <router-link to="/games">
             <div class="menu-level1">
               <div class="menu-li-contain">
                 <div
@@ -150,20 +101,7 @@
                 >
               </div>
             </div>
-          </div>
-          <div
-            class="collapse display-flex-column align-items-content-justify-content"
-            id="collapseExample0"
-          >
-            <div v-for="(menu, index) in GameMenu" :key="index">
-              <router-link
-                :to="menu.link"
-                class="link-collapse width-15-vh color-clear-green-02 font-size-0-65 display-flex-column align-items-content-justify-content"
-              >
-                {{ menu.title }}
-              </router-link>
-            </div>
-          </div>
+          </router-link>
         </li>
         <li
           class="li-level1 display-flex-column align-items-content-justify-content"
