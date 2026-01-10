@@ -19,10 +19,6 @@
 .menu-left {
   position: fixed;
 }
-.menu-left ul {
-
-  padding: 0 0 4vh 0;
-}
 #collapseExample3 p {
   font-size: 0.865em;
   font-variant-caps: all-small-caps;
