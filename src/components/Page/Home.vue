@@ -1,14 +1,16 @@
 <template>
   <div class="container-fluid">
-    <div class="row height-100">
-      <div class="col-xs-12 col-sm-12 col-md-1 col-lg-1 col-xl-1 col-xxl-1">
+    <div class="row height-20-vh width-100-100">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
         <LeftMenu />
       </div>
-      <div class="height-100 col-xs-12 col-sm-12 col-md-11 col-lg-11 col-xl-11 col-xxl-11 padding-1-vh-0-0-1vh">
-        <main class="container-fluid height-100 display-flex-column main-global-container">          
-          <router-view></router-view>
-        </main>
-      </div>
+      </div>      
+      <div class="row height-100">
+        <div class="height-100 col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 padding-1-vh-0-0-1vh">
+          <main class="container-fluid height-100 display-flex-column main-global-container">          
+            <router-view></router-view>
+          </main>
+          </div>
     </div>
   </div>
 </template>

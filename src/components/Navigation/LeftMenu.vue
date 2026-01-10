@@ -1,11 +1,11 @@
 <template>
   <div class="left-menu-content" :class="{ 'menu-expanded': isExpanded }">
   <div
-    class="menu-left background-lineart-other03 d-flex flex-column overflowY-auto
-    flex-shrink-0 height-100-vh width-15-vh margin--0-0--2 scrollbar-color"
+    class="menu-left background-lineart-other03 d-flex display-flex-row overflowY-auto
+    flex-shrink-0 height-15-vh width-100-100 margin--0-0--2 scrollbar-color"
   >
     <Logo v-bind:img="logo" />
-    <ul class="nav nav-pills flex-column mb-auto display-flex align-items-content-justify-content width-10-vh">
+    <ul class="nav nav-pills display-flex-row mb-auto display-flex align-items-content-justify-content width-100-100">
       <li class="li-level1 display-flex-column align-items-content-justify-content">
         <router-link to="/dashboard">
           <div class="menu-level1">
