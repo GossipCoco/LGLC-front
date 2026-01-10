@@ -1,8 +1,8 @@
 <template>
   <div class="left-menu-content" :class="{ 'menu-expanded': isExpanded }">
   <div
-    class="menu-left background-lineart-other03 d-flex display-flex-row overflowY-auto
-    flex-shrink-0 height-15-vh width-100-100 margin--0-0--2 scrollbar-color"
+    class="menu-left background-lineart-other03 d-flex display-flex-row
+    flex-shrink-0 height-25-vh width-100-100 margin--0-0--2 scrollbar-color"
   >
     <Logo v-bind:img="logo" />
     <ul class="nav nav-pills display-flex-row mb-auto display-flex align-items-content-justify-content width-100-100">
@@ -18,6 +18,16 @@
           </div>
         </router-link>
       </li>
+      <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown link
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li> -->
       <li class="li-level1 display-flex-column align-items-content-justify-content">
         <div
           data-bs-toggle="collapse"
@@ -37,6 +47,7 @@
               <span class="menu-text poppins-text font-size-1em font-weight-600">LGDC</span>
             </div>
           </div>
+
         </div>
         <div class="collapse display-flex-column align-items-content-justify-content " id="univers-LGDC">          
           <div v-for="(menu, index) in SecondeSubMenu" :key="index">
