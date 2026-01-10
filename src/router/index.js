@@ -8,6 +8,7 @@ import Contact from '../components/Page/Accueil/Contact.vue'
 import Login from '../components/Page/Login'
 import About from "../components/Page/Accueil/About.vue";
 import Home from "../components/Page/Home";
+import LgdcVue from "../components/Navigation/LgdcVue.vue";
 
 import DashboardLayout from "../components/Dashboard/DashboardLayout";
 
@@ -105,7 +106,12 @@ const routes = [
     path: "/home",
     name: "home",
     component: Home,
-    children: [
+    children: [      
+      {
+        path: '/lgdc',
+        name: 'LgdcVue',
+        component: LgdcVue
+      },
       {
         path: "/user/:id",
         name: "UserLayout",

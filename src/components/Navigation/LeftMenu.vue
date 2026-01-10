@@ -26,7 +26,7 @@
             </div>
           </router-link>
         </li>
-        <li class="nav-item dropdown">
+        <!-- <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
             href="#"
@@ -52,26 +52,17 @@
             <li><a class="dropdown-item" href="#">Another action</a></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
-        </li>
+        </li> -->
         <li
           class="li-level1 display-flex-column align-items-content-justify-content"
         >
-          <div
-            data-bs-toggle="collapse"
-            href="#univers-LGDC"
-            role="button"
-            aria-expanded="false"
-            aria-controls="univers-LGDC"
-          >
+                    <router-link to="/lgdc">
             <div class="menu-level1">
               <div class="menu-li-contain">
                 <div
                   class="icon-menu-container border-radius-100 background-color-clear-green-02 display-flex align-items-content-justify-content"
                 >
-                  <img
-                    src="/images/icons/Logo-thunderclan-textless.png"
-                    style="width: 1.5rem"
-                  />
+                  <img src="/images/icons/Logo-thunderclan-textless.png" />
                 </div>
                 <span
                   class="menu-text poppins-text font-size-1em font-weight-600"
@@ -79,20 +70,7 @@
                 >
               </div>
             </div>
-          </div>
-          <div
-            class="collapse display-flex-column align-items-content-justify-content"
-            id="univers-LGDC"
-          >
-            <div v-for="(menu, index) in SecondeSubMenu" :key="index">
-              <router-link
-                :to="menu.link"
-                class="link-collapse width-15-vh color-clear-green-02 font-size-0-65 display-flex-column align-items-content-justify-content"
-              >
-                {{ menu.title }}
-              </router-link>
-            </div>
-          </div>
+          </router-link>
         </li>
         <li
           class="li-level1 display-flex-column align-items-content-justify-content"
