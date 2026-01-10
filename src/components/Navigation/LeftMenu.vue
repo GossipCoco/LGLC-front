@@ -5,7 +5,7 @@
     >
       <Logo v-bind:img="logo" />
       <ul
-        class="nav nav-pills display-flex-row mb-auto display-flex align-items-content-justify-content width-100-100"
+        class="nav nav-pills display-flex-row mb-auto margin-1vh display-flex align-items-content-justify-content width-100-100"
       >
         <li
           class="li-level1 display-flex-column align-items-content-justify-content"
