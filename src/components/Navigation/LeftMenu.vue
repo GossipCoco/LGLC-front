@@ -176,66 +176,8 @@ export default {
       role: null,
       isMenuOpen: false,
       showSubMenu: false,
-      logo: "/images/Logos/LaGuerredesClansLogos2.png",
-      SecondeSubMenu: [
-        { title: "Personnages", link: "/allCharacters" },
-        // {title: 'Map', link: '/MapForest'},
-        { title: "Clans", link: "/AllClansLayout" },
-        { title: "Lieux", link: "/AllLocationsLayout" },
-        { title: "Arcs & Livres", link: "/ArcBookLayout" },
-      ],
-      GameMenu: [
-        { title: "Jeu de dé", link: "/rollOfDice" },
-        { title: "Puzzle", link: "/puzzle" },
-        { title: "Attrape la souris", link: "/mouseShot" },
-        { title: "Jeu de l'oie", link: "/GooseGameLayout" },
-        { title: "Chasse au trésor", link: "/TreasureHunt" },
-        { title: "Quêtes", link: "/Quest" },
-      ],
+      logo: "/images/Logos/LaGuerredesClansLogos2.png",      
       menuItems: [
-        {
-          title: "Dashboard",
-          icon: "/images/icons/home.svg",
-          link: "/dashboard",
-        },
-        {
-          title: "Univers LGDC",
-          icon: "/images/icons/Logo-thunderclan-textless.png",
-          link: "/allCharacters",
-          submenu: [
-            { title: "Personnages", link: "/allCharacters" },
-            { title: "Clans", link: "/AllClansLayout" },
-            { title: "Lieux", link: "/AllLocationsLayout" },
-            { title: "Arcs & Livres", link: "/ArcBookLayout" },
-          ],
-        },
-        {
-          title: "Fictions",
-          icon: "/images/icons/cloud-solid.svg",
-          link: "/AllExistingFictionsLayout",
-          submenu: [
-            {
-              title: "Nouveau personnage original",
-              link: "/CreateAnOriginalCharacter",
-            },
-            { title: "Mes personnages", link: "/OriginaleCharacterByUser" },
-            { title: "Mes fictions", link: "/allFictions/" + this.usrId },
-            { title: "Lire des fictions", link: "/AllExistingFictionsLayout" },
-          ],
-        },
-        {
-          title: "Jeux",
-          icon: "/images/icons/gamepad-solid.svg",
-          link: "/game",
-          submenu: [
-            { title: "Jeu de dé", link: "/rollOfDice" },
-            { title: "Puzzle", link: "/puzzle" },
-            { title: "Attrape la souris", link: "/mouseShot" },
-            { title: "Jeu de l'oie", link: "/GooseGameLayout" },
-            { title: "Chasse au trésor", link: "/TreasureHunt" },
-            { title: "Quêtes", link: "/Quest" },
-          ],
-        },
         {
           title: "Événements",
           icon: "/images/icons/calendar-days-solid.svg",

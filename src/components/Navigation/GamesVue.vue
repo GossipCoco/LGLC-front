@@ -4,7 +4,7 @@
     <div class="card">
       <img src="/images/Backgrounds/Warriors_043355.png" class="card-img-top" alt="Warriors_043355.png">
       <div class="card-body">
-        <router-link to="/OriginaleCharacterByUser">Mes Personnages</router-link>
+        <router-link to="/rollOfDice">Jeu de dés</router-link>
       </div>
     </div>
   </div>
@@ -12,7 +12,7 @@
     <div class="card">
       <img src="/images/Backgrounds/Warriors_043355.png" class="card-img-top" alt="Warriors_043355.png">
       <div class="card-body">
-        <router-link :to="'/allFictions/' + usrId">Mes fictions</router-link>
+        <router-link to="/puzzle">Puzzles</router-link>
       </div>
     </div>
   </div>
@@ -20,7 +20,7 @@
     <div class="card">
       <img src="/images/Backgrounds/Warriors_043355.png" class="card-img-top" alt="Warriors_043355.png">
       <div class="card-body">
-        <router-link to="/AllExistingFictionsLayout">Lire des fictions</router-link>
+        <router-link to="/mouseShot">Attrape la souris</router-link>
       </div>
     </div>
   </div>
@@ -28,7 +28,7 @@
     <div class="card">
       <img src="/images/Backgrounds/Warriors_043355.png" class="card-img-top" alt="Warriors_043355.png">
       <div class="card-body">
-        <router-link to="/createANewFiction">Nouvelle fiction</router-link>
+        <router-link to="/GooseGameLayout">Jeu de l'oie</router-link>
       </div>
     </div>
   </div>
@@ -36,7 +36,15 @@
     <div class="card">
       <img src="/images/Backgrounds/Warriors_043355.png" class="card-img-top" alt="Warriors_043355.png">
       <div class="card-body">
-        <router-link to="/CreateAnOriginalCharacter">Créer un personnage</router-link>
+        <router-link to="/TreasureHunt">Chasse au trésor</router-link>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="/images/Backgrounds/Warriors_043355.png" class="card-img-top" alt="Warriors_043355.png">
+      <div class="card-body">
+        <router-link to="/Quest">Quêtes</router-link>
       </div>
     </div>
   </div>
