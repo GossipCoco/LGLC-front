@@ -18,7 +18,7 @@
           </div>
         </router-link>
       </li>
-      <!-- <li class="nav-item dropdown">
+      <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown link
           </a>
@@ -27,7 +27,7 @@
             <li><a class="dropdown-item" href="#">Another action</a></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
-        </li> -->
+        </li>
       <li class="li-level1 display-flex-column align-items-content-justify-content">
         <div
           data-bs-toggle="collapse"

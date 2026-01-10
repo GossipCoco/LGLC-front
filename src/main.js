@@ -20,6 +20,7 @@ import 'popper.js/dist/umd/popper.min.js'
 import 'popper.js'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 
 import './assets/css/Base/Base.css'
 import './assets/css/Base/Utilities.css'
