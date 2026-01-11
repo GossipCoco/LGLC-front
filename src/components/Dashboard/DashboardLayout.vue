@@ -39,13 +39,16 @@
       <div class="row bottom-dashboard-levele-one">
         <div class="col-xxl-5 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <Video v-if="!showspinner" ></Video>
-          <new-arc v-if="!showspinner" />
-          <LastBook v-if="!showspinner"/>
-          
-        </div>
+        </div>        
         <div class="col-xxl-7 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <CharacterRandom v-if="!showspinner" v-bind:randomCharacters="randomCharacters"/>
+        </div>
+        <div class="col-xxl-6 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">       
+          <new-arc v-if="!showspinner" />
+          <LastBook v-if="!showspinner"/>          
+        </div>
+        <div class="col-xxl-6 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <div class="row fictions-games-container">
-            <CharacterRandom v-if="!showspinner" v-bind:randomCharacters="randomCharacters"/>            
             <ListAllFictions v-if="!showspinner" />       
           </div>
         </div>

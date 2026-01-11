@@ -4,7 +4,7 @@
       <TitleHeaderDashboard v-bind:title="'Lire des fictions'"  v-bind:type="'fictions'" v-bind:route="'/AllExistingFictionsLayout'" v-bind:nameRoute="'Lire des fictions'"/>
       <div class="card-body padding-2-vh display-flex-column">        
           <div
-            class="display-flex-row width-110-vh padding-2-vh"
+            class="display-flex-row width-100-vh padding-2-vh"
             v-for="(fiction, index) in fiveGames"
             :key="index"
           >
