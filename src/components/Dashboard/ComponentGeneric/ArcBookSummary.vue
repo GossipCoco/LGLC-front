@@ -7,8 +7,8 @@
                 {{ Title }}
             </router-link>
         </h2>
-        <div class="summary-book-dashboard display-flex-row align-items-content-justify-content width-70-vh margin--0-0--4">
-        <img :src="Image" width="20%" class="border-radius-12px"/>
+        <div class="summary-book-dashboard display-flex-row align-items-content-justify-content width-95-vh">
+        <img :src="Image" width="10%" class="border-radius-12px"/>
         <div v-html="Summary" class="text-white text-align-justify overflowY-scroll summmary-book-height-dashboard poppins-text text-white padding-1-vh"></div>
         </div>
     </div>    
