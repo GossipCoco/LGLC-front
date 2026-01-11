@@ -9,9 +9,7 @@
     min-width: 30vh;
     max-width: 30vh;
 }
-.row.bottom-dashboard-levele-one .card.random-characters-card{
-    width: 112vh;
-}
+
 .row.top-dashboard .card-body .title-text-novel{
     width: 42vh;
 }
@@ -131,9 +129,6 @@
     height: 82vh;
 }
 .card.video{
-    width: 74vh;
-}
-.card.arc-card.last-arc-container{
     width: 74vh;
 }
 .col-8.location-clan-card-details{
