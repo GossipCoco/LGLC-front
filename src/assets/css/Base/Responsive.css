@@ -175,9 +175,6 @@
     .row.top-dashboard .all-my-oc-card .card-body > div {
         width: 100vh;
     }
-    .welcome-dashboard-container{
-        width: 195vh;
-    }
     .row.top-dashboard .card.my-oc-card {
         height: 28vh;
         margin: 1rem auto;
@@ -382,8 +379,8 @@
         height: 65vh;
     }
     .card.background-lineart.border-none.arc-card.last-arc-container.height-40-vh.margin-0-0-0-1vh{
-        width: 193vh;
         height: 60vh;
+        width: 100%;
     }
     .row.top-dashboard{
         height: 130vh;
@@ -391,14 +388,13 @@
     .row.top-dashboard .card-global{
         height: 95vh;
     }
-    .card.background-lineart.border-none.arc-card.last-arc-container.height-40-vh.margin-0-0-0-1vh{
-        width: 195vh;
-    }
+
     .summmary-book-height-dashboard {
         height: auto;
 }
     .summary-book-dashboard.display-flex-row.align-items-content-justify-content.width-70-vh.margin--0-0--4{
-        width: 196vh;
+        width: 200vh;
+        margin: 0 0 0 4vh;
     }
     .one-book-container-wrapper .fiction-container .card-body, #book-container .fiction-container .card-body, .illustration-arc-container, .one-book-container-wrapper .fiction-container .card-body, .row.top-dashboard .card {
         height: 95vh;
@@ -418,10 +414,7 @@
     .list-all-fictions-globale--container {
         width: 187vh;
         margin: 0 0 0 8vh;
-    }
-    .welcome-dashboard-container{
-        width: 195vh;
-    }    
+    } 
     .row.top-dashboard .card.my-oc-card {
         height: 28vh;
         margin: 1rem auto;
