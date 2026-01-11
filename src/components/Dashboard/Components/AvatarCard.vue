@@ -1,5 +1,5 @@
 <template>
-  <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 card-global">
+  <div class="col-xxl-3 col-xl-4 col-lg-6 col-md-12 col-sm-12 col-xs-12 card-global">
     <div class="card height-60-vh padding-0-rem border-none display-flex-column profil-card fiction-card background-lineart">
       <TitleHeaderDashboard
         v-bind:title="UserName"
