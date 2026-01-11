@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid">
-    <div class="row height-20-vh width-100-100">
+    <div class="row height-10-vh width-100-100">
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
         <LeftMenu />
       </div>
