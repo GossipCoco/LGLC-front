@@ -5,9 +5,9 @@
   >
     <CardHeader v-bind:Title="'Les clubs'" />
     <div class="card-body padding-2-vh height-80-vh">
-      <div class="row row-cols-4 row-cols-md-4 g-4 width-150-vh">
+      <div class="row row-cols-6 row-cols-md-6 g-6 width-200-vh">
         <div
-          class="col-sm-3 mb-3 mb-sm-0"
+          class="col-sm-2"
           v-for="(group, index) in AllGroups"
           :key="index"
         >
@@ -44,7 +44,7 @@ export default {
       nav: {
         current: 0,
         pages: 0,
-        step:8,
+        step:10,
       },
     };
   },
@@ -87,9 +87,9 @@ export default {
       async GroupPagination(page) {
         this.nav.current = page;
         if (window.innerWidth >= this.width) {
-          this.nav.step = 8;
+          this.nav.step = 10;
         } else {
-          this.nav.step = 8;
+          this.nav.step = 10;
         }
         await this.GetAllGroups(this.nav);
       },
