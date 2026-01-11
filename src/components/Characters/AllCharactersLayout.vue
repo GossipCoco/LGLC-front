@@ -1,12 +1,13 @@
 <template>
-  <div class="card border-none card-all-my-characters background-none align-items-content-justify-content width-190-vh"
+  <div class="card border-none card-all-my-characters background-none align-items-content-justify-content width-190-vh
+  overflowY-auto margin-0-0-4vh-0"
   >
     <card-header
       v-bind:label="'Tous les personnages'"
       v-bind:route="'/CreateAnOriginalCharacter'"
       v-bind:NameLink="'Nouveau personnage'"
     />
-    <div class="card-body width-190-vh height-90-vh">
+    <div class="card-body width-190-vh height-120-vh overflowY-auto margin-0-0-7vh-0">
       <div class="character-container height-95-vh padding-0 list-all-characters-container padding-2-vh-0-0-1vh">
         <div class="row row-cols-1 row-cols-md-2 g-4 width-190-vh">
           <filter-component
