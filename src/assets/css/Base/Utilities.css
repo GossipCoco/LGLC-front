@@ -108,3 +108,6 @@ p{
 /* .transform-card{
         transform: translate3d(0rem, 2vh, 0rem) scale(0.98);
 } */
+ .position-fixed{
+    position: fixed;
+ }
