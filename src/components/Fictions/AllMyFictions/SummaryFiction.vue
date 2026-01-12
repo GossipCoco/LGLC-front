@@ -1,23 +1,31 @@
 <template>
-  <div class="height-90-vh width-100-100">
+  <div
+    class="height-90-vh width-100-100 margin-0-0-10vh-0 overflowY-scroll overflowX-hidden"
+  >
     <div class="row">
-      <div class="col-2 col-xl-2 col-xxl-2 col-lg-2 col-md-2 col-sm-12 col xs-12">
-        <div class="card background-color-dark-green-01 margin-2vh-0-0-0 height-80-vh">
+      <div
+        class="col-2 col-xl-2 col-xxl-2 col-lg-2 col-md-2 col-sm-12 col xs-12"
+      >
+        <div
+          class="card background-color-dark-green-01 margin-2vh-0-0-0 height-80-vh"
+        >
           <filter-component />
         </div>
       </div>
-      <div class="col-10 col-xl-10 col-xxl-10 col-lg-10 col-md-10 col-sm-12 col xs-12">      
-        <AllCardsFictions :allFictions="allFictions" />        
+      <div
+        class="col-10 col-xl-10 col-xxl-10 col-lg-10 col-md-10 col-sm-12 col xs-12"
+      >
+        <AllCardsFictions :allFictions="allFictions" />
       </div>
-      <div class="row pagination-container margin-2vh">
-        <Pagination
-          v-if="!showspinner"
-          :nav="nav"
-          :filters="filters"
-          :getDatas="'FictionPagination'"
-          @FictionPagination="FictionPagination"
-        />
-      </div>
+    </div>
+    <div class="row pagination-container margin-2vh">
+      <Pagination
+        v-if="!showspinner"
+        :nav="nav"
+        :filters="filters"
+        :getDatas="'FictionPagination'"
+        @FictionPagination="FictionPagination"
+      />
     </div>
   </div>
 </template>
@@ -62,8 +70,8 @@ export default {
       } else if (width >= 1920) {
         return 16; // Grand écran standard
       } else if (width >= 1600) {
-        return 16; // Écran intermédiaire        
-      }else if (width >= 1400) {
+        return 16; // Écran intermédiaire
+      } else if (width >= 1400) {
         return 10; // Écran intermédiaire
       } else if (width >= 1366) {
         return 10; // Portable classique
