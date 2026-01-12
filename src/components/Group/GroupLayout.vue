@@ -1,24 +1,24 @@
 <template>
   <div
     id="group-container"
-    class="height-80-vh border-none background-none flex-one card display-flex-column margin-2vh padding-2-vh"
+    class="height-90-vh border-none background-none flex-one card display-flex-column"
   >
     <CardHeader v-bind:Title="'Les clubs'" />
-    <div class="card-body padding-2-vh height-80-vh">
-      <div class="row row-cols-6 row-cols-md-6 g-6 width-200-vh">
+    <div class="card-body height-85-vh">
+      <div class="row row-cols-4 row-cols-md-4 g-4 width-150-vh margin-0-0-2vh-0">
         <div class="col-sm-2" v-for="(group, index) in AllGroups" :key="index">
           <group-card v-bind:group="group" />
         </div>
       </div>
-    </div>
-    <div class="row pagination-container all-clans-pagination-container">
-      <Pagination
-        v-if="!showspinner"
-        :nav="nav"
-        :filters="filters"
-        :getDatas="'GroupPagination'"
-        @GroupPagination="GroupPagination"
-      />
+      <div class="row pagination-container all-clans-pagination-container">
+        <Pagination
+          v-if="!showspinner"
+          :nav="nav"
+          :filters="filters"
+          :getDatas="'GroupPagination'"
+          @GroupPagination="GroupPagination"
+        />
+      </div>
     </div>
   </div>
 </template>
