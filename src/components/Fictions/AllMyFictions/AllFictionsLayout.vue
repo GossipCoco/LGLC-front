@@ -1,7 +1,7 @@
 
 <template>
   <div class="card-body margin--3-0-0-0">
-    <div class="row height-70-vh">
+    <div class="row height-75-vh margin-1vh padding-1-vh">
       <div class="col-2 col-xl-2 col-xxl-2 col-lg-2 col-md-2 col-sm-12 col xs-12">
         <div class="card background-color-dark-green-01 margin-2vh-0-0-0 height-80-vh">
           <div class="card-header">
@@ -54,7 +54,7 @@ export default {
       nav: {
         current: 0,
         pages: 0,
-        step: 12,
+        step: 16,
       },
     };
   },
@@ -82,7 +82,7 @@ export default {
       try{
         await this.countAllMyFictions();
         if(window.innerWidth >= this.width){
-          this.nav.step = 12
+          this.nav.step = 16
         }else if(window.innerWidth < this.width)
         {
           this.nav.step = 6
@@ -97,7 +97,7 @@ export default {
     async FictionPagination(page) {
       this.nav.current = page;
       if(window.innerWidth >= this.width){
-          this.nav.step = 12
+          this.nav.step = 16
         }else if(window.innerWidth < this.width)
         {
           this.nav.step = 6
@@ -109,7 +109,7 @@ export default {
         const response = await FictionService.CountAllMyFictions(this.userCurrent);
         this.NbAllMyGamesFictions = response.data.ob.count;
         if(window.innerWidth >= this.width){
-          this.nav.step = 12
+          this.nav.step = 16
         }else if(window.innerWidth < this.width)
         {
           this.nav.step = 6

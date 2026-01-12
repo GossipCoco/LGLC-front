@@ -1,5 +1,5 @@
 <template>
-  <div class="height-90-vh width-185-vh">
+  <div class="height-90-vh width-100-100">
     <div class="row">
       <div class="col-2 col-xl-2 col-xxl-2 col-lg-2 col-md-2 col-sm-12 col xs-12">
         <div class="card background-color-dark-green-01 margin-2vh-0-0-0 height-80-vh">
@@ -60,9 +60,9 @@ export default {
       if (width >= 4400) {
         return 20; // Très grands écrans
       } else if (width >= 1920) {
-        return 12; // Grand écran standard
+        return 16; // Grand écran standard
       } else if (width >= 1600) {
-        return 12; // Écran intermédiaire        
+        return 16; // Écran intermédiaire        
       }else if (width >= 1400) {
         return 10; // Écran intermédiaire
       } else if (width >= 1366) {
