@@ -1,19 +1,21 @@
 <template>
-  <div class="overflowX-hidden clans-location-container height-90-vh overflow-y-hidden">
-    <div class="display-flex-row card-group clan-group width-160-vh overflow-y-hidden height-80-vh ">
-      <div v-for="(clan, index) in clans" :key="index">
-        <clan-location-component v-bind:location="clan" v-bind:route="'/clan/'"/>        
+  <div class="clan-container">
+    <div class="overflowX-hidden clans-location-container overflow-y-hidden">
+      <div class="display-flex-row card-group clan-group width-160-vh overflow-y-hidden height-80-vh ">
+        <div v-for="(clan, index) in clans" :key="index">
+          <clan-location-component v-bind:location="clan" v-bind:route="'/clan/'"/>        
+        </div>
       </div>
     </div>
-  </div>
-  <div class="row pagination-container all-clans-pagination-container">
-    <Pagination
-      v-if="!showspinner"
-      :nav="nav"
-      :filters="filters"
-      :getDatas="'ClanPagination'"
-      @ClanPagination="ClanPagination"
-    />
+    <div class="row pagination-container all-clans-pagination-container">
+      <Pagination
+        v-if="!showspinner"
+        :nav="nav"
+        :filters="filters"
+        :getDatas="'ClanPagination'"
+        @ClanPagination="ClanPagination"
+      />
+    </div>
   </div>
 </template>
 <script>

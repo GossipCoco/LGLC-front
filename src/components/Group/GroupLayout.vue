@@ -6,24 +6,20 @@
     <CardHeader v-bind:Title="'Les clubs'" />
     <div class="card-body padding-2-vh height-80-vh">
       <div class="row row-cols-6 row-cols-md-6 g-6 width-200-vh">
-        <div
-          class="col-sm-2"
-          v-for="(group, index) in AllGroups"
-          :key="index"
-        >
-            <group-card v-bind:group="group" />
+        <div class="col-sm-2" v-for="(group, index) in AllGroups" :key="index">
+          <group-card v-bind:group="group" />
         </div>
       </div>
     </div>
-  </div>
     <div class="row pagination-container all-clans-pagination-container">
-    <Pagination
-      v-if="!showspinner"
-      :nav="nav"
-      :filters="filters"
-      :getDatas="'GroupPagination'"
-      @GroupPagination="GroupPagination"
-    />
+      <Pagination
+        v-if="!showspinner"
+        :nav="nav"
+        :filters="filters"
+        :getDatas="'GroupPagination'"
+        @GroupPagination="GroupPagination"
+      />
+    </div>
   </div>
 </template>
 <script>
@@ -37,14 +33,14 @@ export default {
   components: { CardHeader, GroupCard, Pagination },
   data() {
     return {
-      AllGroups: {},      
+      AllGroups: {},
       showGroups: false,
       showspinner: false,
       NbAllCount: 0,
       nav: {
         current: 0,
         pages: 0,
-        step:10,
+        step: 8,
       },
     };
   },
@@ -72,27 +68,29 @@ export default {
         console.log(e);
       }
     },
-  async GetAllGroups(nav) {
-        this.showspinner = true;
-        try {
-          const response = await GroupService.GetAllGroups(nav);
-          this.AllGroups = Array.isArray(response.data.ob) ? response.data.ob : [];
-        } catch (err) {
-          console.error("Erreur GetAllGroups:", err);
-          this.AllGroups = [];
-        } finally {
-          this.showspinner = false;
-        }
-      },
-      async GroupPagination(page) {
-        this.nav.current = page;
-        if (window.innerWidth >= this.width) {
-          this.nav.step = 10;
-        } else {
-          this.nav.step = 10;
-        }
-        await this.GetAllGroups(this.nav);
-      },
+    async GetAllGroups(nav) {
+      this.showspinner = true;
+      try {
+        const response = await GroupService.GetAllGroups(nav);
+        this.AllGroups = Array.isArray(response.data.ob)
+          ? response.data.ob
+          : [];
+      } catch (err) {
+        console.error("Erreur GetAllGroups:", err);
+        this.AllGroups = [];
+      } finally {
+        this.showspinner = false;
+      }
     },
+    async GroupPagination(page) {
+      this.nav.current = page;
+      if (window.innerWidth >= this.width) {
+        this.nav.step = 8;
+      } else {
+        this.nav.step = 8;
+      }
+      await this.GetAllGroups(this.nav);
+    },
+  },
 };
 </script>
