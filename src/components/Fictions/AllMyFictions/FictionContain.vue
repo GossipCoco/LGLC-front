@@ -21,18 +21,18 @@
       <BackToFileBtnGroup v-bind:Author="Author" />
     </div>    
     <Spinner v-if="showspinner" />
-    <div class="card-body height-60-vh padding-1-0-0-1vh" v-if="!showspinner">
+    <div class="card-body height-60-vh padding-1-0-0-1vh overflowY-scroll overflowX-hidden" v-if="!showspinner">
       <div class="row">
         <div class="col-12">
-          <div class="display-flex-column flex-one width-190-vh">
-            <div class="character-chapters width-190-vh display-flex-column flex-one
+          <div class="display-flex-column flex-one">
+            <div class="character-chapters display-flex-column flex-one
             overflowY-X-hidden background-summary-global-container border-radius-12px">
-              <div class="display-flex-row character-chapters-container width-190-vh">
+              <div class="display-flex-row character-chapters-container ">
                 <div
                   :style="{
                     backgroundImage: 'url(' + backgroundImageFiction + ')',
                   }"
-                  class="background-size-cover width-190-vh display-flex-column background-fiction-contain"
+                  class="background-size-cover width-100-100 display-flex-column background-fiction-contain"
                 >
                   <ListOfChapter
                     v-bind:AuthorId="AuthorId"
