@@ -28,7 +28,7 @@
       <div class="col">
         <div class="card background-color-dark-green-01">
           <img
-            src="/images/Backgrounds/Warriors_043355.png"
+            src="/images/Backgrounds/the-lake3.jpg"
             class="card-img-top"
             alt="Warriors_043355.png"
           />
@@ -42,7 +42,7 @@
       <div class="col">
         <div class="card background-color-dark-green-01">
           <img
-            src="/images/Backgrounds/Warriors_043355.png"
+            src="/images/Backgrounds/the-lake3.jpg"
             class="card-img-top"
             alt="Warriors_043355.png"
           />
