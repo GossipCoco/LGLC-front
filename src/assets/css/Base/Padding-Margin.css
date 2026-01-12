@@ -78,6 +78,9 @@
 .margin-5vh{
     margin: 5vh;
 }
+.margin-5vh-auto{
+    margin: 5vh auto;
+}
 /* EN négatif & spécific*/
 .margin--1vh-0-0-0-5vh{
     margin: 1vh 0 0 0.5vh;
