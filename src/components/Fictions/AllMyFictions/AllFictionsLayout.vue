@@ -1,8 +1,8 @@
 
 <template>
   <div class="card-body margin--3-0-0-0">
-    <div class="row">
-        <div class="col-2 col-xl-2 col-xxl-2 col-lg-2 col-md-2 col-sm-12 col xs-12">
+    <div class="row height-70-vh">
+      <div class="col-2 col-xl-2 col-xxl-2 col-lg-2 col-md-2 col-sm-12 col xs-12">
         <div class="card background-color-dark-green-01 margin-2vh-0-0-0 height-80-vh">
           <div class="card-header">
             <h3 class="text-white poppins-text">Filtrer</h3>
@@ -85,7 +85,7 @@ export default {
           this.nav.step = 12
         }else if(window.innerWidth < this.width)
         {
-          this.nav.step = 8
+          this.nav.step = 6
         }
         await this.GetAllFictionsByUser(this.userCurrent, this.nav);
       }
@@ -100,7 +100,7 @@ export default {
           this.nav.step = 12
         }else if(window.innerWidth < this.width)
         {
-          this.nav.step = 8
+          this.nav.step = 6
         }
       this.GetAllFictionsByUser(this.userCurrent, this.nav);
     },
@@ -112,7 +112,7 @@ export default {
           this.nav.step = 12
         }else if(window.innerWidth < this.width)
         {
-          this.nav.step = 8
+          this.nav.step = 6
         }
         this.nav.pages = Math.ceil(this.NbAllMyGamesFictions / this.nav.step);
       } catch (error) {
