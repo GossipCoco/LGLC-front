@@ -6,7 +6,7 @@
       </div>
       </div>      
       <div class="row height-100">
-        <div class="height-100 col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 padding-1-vh-0-0-1vh">
+        <div class="height-100 col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">  
           <main class="container-fluid height-100 display-flex-column main-global-container">          
             <router-view></router-view>
           </main>

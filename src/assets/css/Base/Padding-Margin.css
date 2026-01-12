@@ -78,6 +78,9 @@
 .margin-5vh{
     margin: 5vh;
 }
+.margin-10vh-20vh{
+    margin: 10vh 20vh;
+}
 .margin-5vh-auto{
     margin: 5vh auto;
 }

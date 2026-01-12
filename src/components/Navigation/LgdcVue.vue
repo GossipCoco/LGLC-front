@@ -1,5 +1,5 @@
 <template>
-  <div id="ldgc-hub" class="margin-5vh-auto">
+  <div id="ldgc-hub" class="margin-10vh-20vh">
     <div class="row">
       <div class="col">
         <div class="card background-color-dark-green-01">
