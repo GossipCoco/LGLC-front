@@ -8,7 +8,7 @@
             }"
             >
         </div>
-        <div class="summary-fiction-container-wrapper border-radius-12px width-50-vh height-35-vh overflowY-scroll margin-1vh-0-0-1vh">
+        <div class="summary-fiction-container-wrapper border-radius-12px width-60-vh height-35-vh overflowY-scroll margin-1vh-0-0-1vh">
             <p class="text-align-justify overflowY-auto summary-height-container Noto-Sans" v-html="Summary"></p>
         </div>
         </div>

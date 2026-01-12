@@ -21,7 +21,7 @@
       <BackToFileBtnGroup v-bind:Author="Author" />
     </div>    
     <Spinner v-if="showspinner" />
-    <div class="card-body height-60-vh padding-1-0-0-1vh overflowY-scroll overflowX-hidden" v-if="!showspinner">
+    <div class="card-body margin-0-0-5vh-0 width-100-100 height-60-vh padding-1-0-0-1vh overflowY-scroll overflowX-hidden" v-if="!showspinner">
       <div class="row">
         <div class="col-12">
           <div class="display-flex-column flex-one">

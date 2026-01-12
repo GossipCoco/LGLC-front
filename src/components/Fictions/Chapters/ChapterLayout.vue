@@ -52,7 +52,7 @@
                     </div>
                 </div>
             </div>
-            <div class="display-flex-row chapter-global-content height-70-vh display-flex width-180-vh">        
+            <div class="display-flex-row chapter-global-content height-70-vh display-flex">        
                 <chapter-image v-bind:ImageChapter="ImageChapter" />
                 <chapter-text v-bind:Content="Content" />
             </div>            
