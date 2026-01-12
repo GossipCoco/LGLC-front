@@ -14,7 +14,7 @@
       >
         <div
           id="original-characters-list"
-          class="row row-cols-1 row-cols-md-4 g-4 width-190-vh"
+          class="row row-cols-1 row-cols-md-4 g-4 width-100-100"
         >
           <filter-component
             @getCurrentName="getCurrentName"

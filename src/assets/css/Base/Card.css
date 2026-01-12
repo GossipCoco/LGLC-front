@@ -166,9 +166,6 @@ li.quest-container {
     aspect-ratio: 1;
     transform: scale(0.95);
 }
-#original-characters-list{
-    margin: -2vh 0 0 2vh;;
-}
 .row.btn-create-character{
     margin:0;
 }
