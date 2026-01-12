@@ -1,6 +1,6 @@
 
 <template>
-  <div class="card-body height-80-vh margin--3-0-0-0">
+  <div class="card-body margin--3-0-0-0">
     <div class="row">
         <div class="col-2 col-xl-2 col-xxl-2 col-lg-2 col-md-2 col-sm-12 col xs-12">
         <div class="card background-color-dark-green-01 margin-2vh-0-0-0 height-80-vh">
