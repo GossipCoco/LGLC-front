@@ -1,7 +1,7 @@
 <template>
   <div
     class="card border-none card-all-my-characters background-none
-    align-items-content-justify-content width-190-vh"
+    align-items-content-justify-content width-100-100"
   >
     <card-header
       v-bind:label="'Tous Mes personnages'"
