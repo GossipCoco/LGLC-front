@@ -10,7 +10,7 @@
     />
     <div class="card-body width-100-100">
       <div
-        class="height-95-vh character-container padding-0 list-all-characters-container padding-2-vh-0-0-1vh"
+        class="character-container padding-0 list-all-characters-container padding-2-vh-0-0-1vh"
       >
         <div
           id="original-characters-list"
@@ -24,7 +24,7 @@
           <my-characters-card v-if="allCharacters" v-bind:allMyCharacters="allMyCharacters" />          
           <my-characters-card v-if="allSearchedCharacter" v-bind:allMyCharacters="searchCharacter" />
         </div>
-        <div class="row pagination-row-container margin--5vh-0-0-0">
+        <div class="row pagination-row-container">
           <div clss="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <Pagination
               v-if="!showspinner && nav.pages > 0"
