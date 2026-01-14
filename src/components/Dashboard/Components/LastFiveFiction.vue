@@ -23,7 +23,7 @@
           <div
             class="title-text-novel margin-0-0-0-1vh padding-0 font-variant-small-caps display-block flex-one display-flex-column justify-content-left"
           >
-            <p class="poppins-text margin-0-rem">
+            <p class="poppins-text margin-0-rem width-35-vh">
               <router-link
                 class="poppins-text text-ternary-green font-size-1em"
                 :to="'/fiction/' + fiction.Title"
@@ -31,7 +31,7 @@
                 {{ fiction.Title }}
               </router-link>
             </p>
-            <div v-html="truncateText(fiction.Summary, 50)" class="font-size-1 text-white text-align-justify poppins-text"></div>
+            <div v-html="truncateText(fiction.Summary, 50)" class="font-size-1 text-white text-align-justify poppins-text width-35-vh"></div>
           </div>
         </div>
         </div>
