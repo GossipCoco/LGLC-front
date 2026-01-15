@@ -1,6 +1,6 @@
 <template>
   <div class="title-author-container flex-one display-flex-column flex-one">
-    <h1 class="text-white font-variant-all-small-caps">{{ Title }}</h1>
+    <h1 class="text-white font-variant-all-small-caps font-weight-500 font-variant-petite-caps">{{ Title }}</h1>
     <div class="info-fan">
       <div class="display-flex-row flex-on align-items-content-justify-content">
         <h3 class="text-white">

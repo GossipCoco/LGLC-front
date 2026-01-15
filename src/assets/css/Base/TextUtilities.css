@@ -44,6 +44,9 @@
 .font-weight-400{
     font-weight: 400;
 }
+.font-weight-500{
+    font-weight: 500;
+}
 .font-weight-600{
     font-weight: 600;
 }
@@ -52,6 +55,9 @@
 }
 .font-variant-all-small-caps{    
     font-variant-caps: all-small-caps;
+}
+.font-variant-petite-caps{    
+    font-variant-caps: petite-caps;
 }
 .font-variant-normal{
     font-variant-caps: normal;
