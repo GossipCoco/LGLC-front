@@ -1,7 +1,7 @@
 <template>
   <div class="display-flex-column form-character-container flex-one opensans-text">
     <div class="card border-none background-color-main-lineart overflowY-X-hidden 
-    text-white display-flex-column card-form-create-character height-90-vh padding-4-vh
+    text-white display-flex-column card-form-create-character height-90-vh
     align-items-content-justify-content flex-one mb-12 margin-0-0-4-0">
       <CardHeader :Title="title"/>
       <OriginalCharacterForm />
