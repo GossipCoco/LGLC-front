@@ -1,7 +1,7 @@
 <template>
   <div
     class="display-flex card-header display-flex-row flex-one
-    align-items-content-justify-content text-white cinzel background-color-dark-green-01"
+    align-items-content-justify-content text-white cinzel background-color-dark-green-01 width-100-100"
   >
     <div class="row width-100-100">
       <div class="col-8">
