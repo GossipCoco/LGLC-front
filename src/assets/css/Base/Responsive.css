@@ -21,18 +21,13 @@
     .Comment-icon, .Comment-icon .display-flex-column, .Comment-icon .flex-one .btn {
         width: 23vh;
     }    
-    .rating {
-        margin: 5vh 0 0 10vh;
-    }
     .character-details-chatper.card{
         margin: -2vh 0 0 0;
     }
     .author-text{
         font-size: .85em;
     }
-    .title-author-container.flex-one{
-        flex: 0.2;
-    }
+
     .character-chapters-fiction-container .character-chapters-container,.illustration-background {
         width: 140vh;
     }    
@@ -273,23 +268,14 @@
         margin: 0 0 0 -35vh;
         width: 150vh;
     }
-    .Comment-icon{
-        margin: 4vh 0 0 -38vh;
-    }
+
     .fiction-globale-container h3{
         font-size: 1.25em;
     }
     .Comment-icon {
-        margin: 4vh 0 0 -9vh;
+        margin: 4vh 0 0 -1vh;
     }
-    .rating {
-        width: 10vh;
-        height: 10vh;
-        margin: 5vh 0 0 10vh;
-    }
-    .title-author-container.flex-one{
-        flex:0.7;
-    }
+
     .character-chapters-fiction-container .character-chapters-container,.illustration-background {
         width: 185vh;
     }    
