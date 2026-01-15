@@ -22,13 +22,8 @@
         width: 23vh;
     }    
     .rating {
-        width: 10vh;
-        height: 10vh;
         margin: 5vh 0 0 10vh;
     }
-    .chapter-global-content.height-70-vh, .chapter-text-content{
-        height: 60vh;
-    }    
     .Comment-icon > div > div.flex-one.display-flex-column{
         display: flex;
         flex-direction: row;
