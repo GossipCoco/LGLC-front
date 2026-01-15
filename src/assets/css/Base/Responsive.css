@@ -258,7 +258,7 @@
         height: 22vh;
     }
     .title-author-container h1{
-        font: 500 1.5rem petite-caps;
+        font: 500 1.75rem petite-caps;
         font-variant-caps: all-petite-caps;
     }
     .Comment-icon, .Comment-icon .display-flex-column, .Comment-icon .flex-one .btn {
