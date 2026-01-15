@@ -1,7 +1,7 @@
 <template>
   <div class="clan-container">
     <div class="overflowX-hidden clans-location-container overflow-y-hidden">
-      <div class="display-flex-row card-group clan-group width-160-vh overflow-y-hidden height-80-vh ">
+      <div class="display-flex-row card-group clan-group width-100-100 overflow-y-hidden height-80-vh ">
         <div v-for="(clan, index) in clans" :key="index">
           <clan-location-component v-bind:location="clan" v-bind:route="'/clan/'"/>        
         </div>
@@ -32,7 +32,7 @@ export default {
       nav: {
         current: 0,
         pages: 0,
-        step: 6,
+        step: 10,
       },
     };
   },
@@ -56,9 +56,9 @@ export default {
         const response = await ClanService.countAllClans();        
         this.NbAllClans = response.data.ob.count;
         if (window.innerWidth >= this.width) {
-          this.nav.step = 8;
+          this.nav.step = 10;
         } else {
-          this.nav.step = 8;
+          this.nav.step = 10;
         }
         this.nav.pages = Math.ceil(this.NbAllClans / this.nav.step);
       } catch (e) {
@@ -68,9 +68,9 @@ export default {
     async ClanPagination(page) {
       this.nav.current = page;
       if (window.innerWidth >= this.width) {
-        this.nav.step = 8;
+        this.nav.step = 10;
       } else {
-        this.nav.step = 8;
+        this.nav.step = 10;
       }
       await this.getAllClans(this.nav);
     },
