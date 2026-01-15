@@ -24,12 +24,6 @@
     .rating {
         margin: 5vh 0 0 10vh;
     }
-    .Comment-icon > div > div.flex-one.display-flex-column{
-        display: flex;
-        flex-direction: row;
-        width: 46vh;
-        margin: -7vh 0 0 -8vh;
-    }
     .character-details-chatper.card{
         margin: -2vh 0 0 0;
     }
