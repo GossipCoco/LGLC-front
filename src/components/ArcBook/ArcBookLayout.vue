@@ -2,7 +2,7 @@
   <div
     id="arc-book-container"
     class="height-80-vh border-none background-color-main-lineart flex-one card display-flex-column
-    margin-2vh padding-2-vh"
+    margin-0-0-10vh-0"
   >
     <CardHeader v-bind:Title="'Les romans de La Guerre des Clans'" />
     <div class="card-body padding-2-vh height-80-vh">
