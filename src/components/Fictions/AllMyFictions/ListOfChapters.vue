@@ -30,7 +30,7 @@
                 </div>
               </div>
             </div>
-            <div class="row width-60-vh">
+            <div class="row">
               <AddANewCharacterModal
                 v-if="AuthorId === usrCurrent"
                 v-bind:IdGame="IdGame"
@@ -40,7 +40,7 @@
                 v-bind:IdGame="IdGame"
                 />
             </div>
-            <div class="row width-60-vh margin-2vh-0-0-0">
+            <div class="row">
               <CarrouselCharacter v-bind:Characters="Characters" />
               <CarrouselCharacter v-bind:Characters="OCCharacters" />
             </div>

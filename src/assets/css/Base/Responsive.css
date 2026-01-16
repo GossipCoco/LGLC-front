@@ -430,6 +430,13 @@
     .row.bottom-dashboard-levele-three{
         height: 125vh;
     }
+    .summary-container .row.top-fiction{
+        height: 5vh;
+        margin: 5vh 0 0 0;
+    }
+    .summary-container .middle-fiction-card .image-fiction-container{
+        height: 40vh;
+    }
 }
 @media (max-width: 1400px) {
 
