@@ -11,9 +11,9 @@
 @media (min-width: 1921px) and (max-width: 2560px) {}
 @media (min-width: 1440px) and (max-width: 1920px) {}
 @media (min-width: 1367px) and (max-width:  1439px) {
-    .Comment-icon, .Comment-icon .display-flex-column, .Comment-icon .flex-one .btn {
+    /* .Comment-icon, .Comment-icon .display-flex-column, .Comment-icon .flex-one .btn {
         width: 23vh;
-    }    
+    }     */
     .character-details-chatper.card{
         margin: -2vh 0 0 0;
     }
@@ -250,9 +250,9 @@
         font: 500 1.75rem petite-caps;
         font-variant-caps: all-petite-caps;
     }
-    .Comment-icon, .Comment-icon .display-flex-column, .Comment-icon .flex-one .btn {
+    /* .Comment-icon, .Comment-icon .display-flex-column, .Comment-icon .flex-one .btn {
         width: 30vh;
-    }
+    } */
     .chapter-title-content{
         margin: 0 0 0 -35vh;
         width: 150vh;
@@ -261,9 +261,9 @@
     .fiction-globale-container h3{
         font-size: 1.25em;
     }
-    .Comment-icon {
+    /* .Comment-icon {
         margin: 4vh 0 0 -1vh;
-    }
+    } */
 
     .character-chapters-fiction-container .character-chapters-container,.illustration-background {
         width: 185vh;
