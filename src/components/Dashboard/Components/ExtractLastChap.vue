@@ -4,7 +4,7 @@
       <TitleHeaderDashboard v-bind:title="'Mes 4 derniers chapitres'" v-bind:type="'chapters'"/>
       <div class="card-body last-chapter-card display-flex-column align-items-content-justify-content height-50-vh padding-2-vh">
         <div
-          class="display-flex-row three-last-chapters-container"
+          class="display-flex-row three-last-chapters-container width-100-100"
           v-for="(chapter, index) in FiveLastChapters"
           :key="index"
         >
