@@ -15,7 +15,11 @@
         width: 23vh;
     }     */
     .character-details-chatper.card{
-        margin: -2vh 0 0 0;
+        margin: 0 0 5vh 0;
+    }
+    .back-to-fiction-btn-container{
+        display: flex;
+        flex-direction: row;
     }
     .author-text{
         font-size: .85em;
@@ -253,10 +257,10 @@
     /* .Comment-icon, .Comment-icon .display-flex-column, .Comment-icon .flex-one .btn {
         width: 30vh;
     } */
-    .chapter-title-content{
+    /* .chapter-title-content{
         margin: 0 0 0 -35vh;
         width: 150vh;
-    }
+    } */
 
     .fiction-globale-container h3{
         font-size: 1.25em;
