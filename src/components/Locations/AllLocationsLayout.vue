@@ -1,6 +1,6 @@
 <template>
   <div class="overflowX-hidden clans-location-container height-90-vh overflow-y-hidden">
-    <div class="display-flex-row card-group clan-group width-120-vh overflow-y-hidden height-80-vh ">
+    <div class="display-flex-row card-group clan-group width-100-100 overflow-y-hidden height-80-vh ">
       <div v-for="(location, index) in allLocations" :key="index">
         <clan-location-component v-bind:location="location" v-bind:route="'/LocationsDetails/'"/>
       </div>
@@ -54,9 +54,9 @@ export default {
         const response = await ClansServices.countAllLocations();
         this.NbLocations = response.data.ob.count;
         if (window.innerWidth >= this.width) {
-          this.nav.step = 6;
+          this.nav.step = 10;
         } else {
-          this.nav.step = 4;
+          this.nav.step = 8;
         }
         this.nav.pages = Math.ceil(this.NbLocations / this.nav.step);
       } catch (e) {
@@ -66,9 +66,9 @@ export default {
     async LocationPagination(page) {
       this.nav.current = page;
       if (window.innerWidth >= this.width) {
-        this.nav.step = 6;
+        this.nav.step = 10;
       } else {
-        this.nav.step = 4;
+        this.nav.step = 8;
       }
       await this.GetAllLocations(this.nav);
     },
