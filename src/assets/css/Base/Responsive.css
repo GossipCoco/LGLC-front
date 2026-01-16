@@ -127,9 +127,6 @@
         height: 58vh;
     }
     /* DASHBOARD */
-    .row.top-dashboard{
-        height: 137vh;
-    }
     .row.top-dashboard .card-global{
         height: 95vh;
     }

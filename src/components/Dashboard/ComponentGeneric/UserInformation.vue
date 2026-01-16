@@ -1,13 +1,13 @@
 <template>
   <div class="row user-all-information-container padding-1-vh">
-    <div class="col-7">
+    <div class="col-xxl-7 col-xl-7 col-lg-12 col-md-12 col-sm-12 col-xs-12">
       <p class="display-flex-row font-size-0-85" v-for="(info, index) in information" :key="index">
         <span class="label-profil poppins-text text-white flex-one font-size-0-85" v-for="(name, index) in info" :key="index">
           {{ name }}</span
         >
       </p>
     </div>
-    <div class="col-5">
+    <div class="col-xxl-5 col-xl-5 col-lg-12 col-md-12 col-sm-12 col-xs-12">
       <p class="display-flex-row font-weight-600 font-size-0-85">
         <span>{{ formatDate(Inscription) }}</span>
       </p>
