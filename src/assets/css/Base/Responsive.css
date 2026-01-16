@@ -7,15 +7,9 @@
         overflow-x: hidden;
     }
 }
-@media (min-width: 2561px) and (max-width: 3840px) {
-    
-}
-@media (min-width: 1921px) and (max-width: 2560px) {
-    
-}
-@media (min-width: 1440px) and (max-width: 1920px) {
-
-}
+@media (min-width: 2561px) and (max-width: 3840px) {}
+@media (min-width: 1921px) and (max-width: 2560px) {}
+@media (min-width: 1440px) and (max-width: 1920px) {}
 @media (min-width: 1367px) and (max-width:  1439px) {
 
     .Comment-icon, .Comment-icon .display-flex-column, .Comment-icon .flex-one .btn {
@@ -71,15 +65,15 @@
     .summary-container input{
         margin: -3vh 0 0 0;
     }
-    .dashboard-max-card-container.card.fiction-container{
+    /* .dashboard-max-card-container.card.fiction-container{
         width: 20vh;
         max-width: 25vh;
         margin: 0 0 0 3vh;
-    }
-    .card.fiction-container.all-fictions-container-global{
+    } */
+    /* .card.fiction-container.all-fictions-container-global{
         width: 120vh;
         max-width: 125vh;
-    }
+    } */
     #book-container.dashboard-max-card-container.card.fiction-container{
         width: 120vh;
         max-width: 125vh;
@@ -133,12 +127,12 @@
     .one-book-container-wrapper .fiction-container .card-body, #book-container .fiction-container .card-body, .illustration-arc-container, .one-book-container-wrapper .fiction-container .card-body, .row.top-dashboard .card {
         height: 95vh;
     }
-    .row.avatar-row, .row.top-dashboard .card-body.user-info-text > div{
+    /* .row.avatar-row, .row.top-dashboard .card-body.user-info-text > div{
         width: 62vh;
     }
     .row.top-dashboard .card-body > div{
         width: 60vh;
-    }
+    } */
     .title-text-novel p {
         width: 39vh;
     }
@@ -366,9 +360,9 @@
     .one-book-container-wrapper .fiction-container .card-body, #book-container .fiction-container .card-body, .illustration-arc-container, .one-book-container-wrapper .fiction-container .card-body, .row.top-dashboard .card {
         height: 95vh;
     }
-    .row.avatar-row, .row.top-dashboard .card-body.user-info-text > div{
+    /* .row.avatar-row, .row.top-dashboard .card-body.user-info-text > div{
         width: 62vh;
-    }
+    } */
     .row.top-dashboard .card-body > div{
         width: 60vh;
     }

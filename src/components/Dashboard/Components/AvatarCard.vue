@@ -6,7 +6,7 @@
         v-bind:type="'username'"
       />
       <div class="card-body user-info-text">
-        <div class="row margin-2vh-0 avatar-row width-50-vh height-12-vh">
+        <div class="row margin-2vh-0 avatar-row width-100-100 height-12-vh">
           <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 avatar-avatar-card-container display-flex display-flex-row align-items-content-justify-content">
             <div class="row width-100-100 height-12-vh">
               <div class="col-xxl-1 col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
