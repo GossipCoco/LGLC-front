@@ -11,9 +11,6 @@
 @media (min-width: 1921px) and (max-width: 2560px) {}
 @media (min-width: 1440px) and (max-width: 1920px) {}
 @media (min-width: 1367px) and (max-width:  1439px) {
-    /* .Comment-icon, .Comment-icon .display-flex-column, .Comment-icon .flex-one .btn {
-        width: 23vh;
-    }     */
     .character-details-chatper.card{
         margin: 0 0 5vh 0;
     }
