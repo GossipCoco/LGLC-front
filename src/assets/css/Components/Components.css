@@ -37,6 +37,7 @@
 }
 .original-character-contain.card-image{
     background-position: 50%;
+    height: 45vh;
 }
 .group-club-image.card-image{
     background-position-x: 20%;

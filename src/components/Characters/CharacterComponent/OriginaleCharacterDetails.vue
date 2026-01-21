@@ -1,11 +1,12 @@
 <template>
   <div
     id="original-character-global-container"
-    class="character-details width-190-vh height-95-vh padding-2-vh card mb-3 background-none border-none"
+    class="character-details width-100-100 ove height-95-vh padding-2-vh card 
+    overflowY-auto background-none border-none"
   >
-    <div class="row g-0">
+    <div class="row">
       <CharacterImageDetail v-bind:Image="character.Image" />
-      <div class="col-8 col-md-8">
+      <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="card border-none height-95-vh overflowY-X-hidden background-color-main-lineart details-infos-characters border-radius-12px text-white">
         <div class="card-body height-95-vh">
           <div class="display-flex-row">
