@@ -14,10 +14,13 @@
     .character-details-chatper.card{
         margin: 0 0 5vh 0;
     }
-    .back-to-fiction-btn-container{
+    /* .back-to-fiction-btn-container{
         display: flex;
         flex-direction: row;
-    }
+    } */
+     #creation-hub{
+        margin: 10vh;
+     }
     .author-text{
         font-size: .85em;
     }
@@ -80,10 +83,10 @@
     .display-none-responsive p{
         display: none;
     }
-    .row-cols-md-4>*{
+    /* .row-cols-md-4>*{
         width: 37vh;
         height: 20vh;
-    }
+    } */
     .fiction-container .pagination-container-row{
         margin: 14vh;
     }
