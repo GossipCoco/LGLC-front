@@ -2,7 +2,7 @@
     <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-10 col-xs-10">
         <div
             id="all-characters-container-card"
-            class="row all-characters-container-card width-150-vh"
+            class="row all-characters-container-card width-100-100"
         >
             <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 display-flex-row align-items-content-justify-content character-container overflowY-X-hidden">
                 <div class="card-character-container width-30-vh height-35-vh original-character-card-container"
