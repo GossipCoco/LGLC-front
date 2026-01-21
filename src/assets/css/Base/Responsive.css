@@ -309,10 +309,10 @@
         width: 100%;
     }
     .row.top-dashboard{
-        height: 130vh;
+        height: 105vh;
     }
     .row.top-dashboard .card-global{
-        height: 95vh;
+        height: 75vh;
     }
 
     .summmary-book-height-dashboard {
