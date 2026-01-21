@@ -9,7 +9,8 @@
           />
       </CharacterImageDetail>
       <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <div class="card border-none height-85 background-color-main-lineart details-infos-characters border-radius-12px poppins-text text-white">
+        <div class="card border-none height-85 background-color-main-lineart
+        details-infos-characters border-radius-12px poppins-text text-white margin--1vh-0-0-0-0">
         <div class="card-body height-85">
           <div class="row display-flex-row">
             <div class="col-9">
