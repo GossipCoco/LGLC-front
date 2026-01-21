@@ -440,6 +440,10 @@
     }
     .summary-container .middle-fiction-card .image-fiction-container{
         height: 40vh;
+        width: 50vh;
+    }
+    .summary-fiction-container-wrapper{
+        width: 50vh;
     }
 }
 @media (max-width: 1400px) {
