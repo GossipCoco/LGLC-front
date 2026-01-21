@@ -31,7 +31,7 @@
         height: 75vh;
     }    
     .opacity-container{
-        height: 75vh;
+        height: 90vh;
     }
     .middle-fiction-card .col-xxl-6.col-xl-12.col-lg-12.col-md-12.col-sm-12.col-xs-12{
         width: 62vh;
@@ -68,15 +68,6 @@
     .summary-container input{
         margin: -3vh 0 0 0;
     }
-    /* .dashboard-max-card-container.card.fiction-container{
-        width: 20vh;
-        max-width: 25vh;
-        margin: 0 0 0 3vh;
-    } */
-    /* .card.fiction-container.all-fictions-container-global{
-        width: 120vh;
-        max-width: 125vh;
-    } */
     #book-container.dashboard-max-card-container.card.fiction-container{
         width: 120vh;
         max-width: 125vh;
@@ -130,12 +121,6 @@
     .one-book-container-wrapper .fiction-container .card-body, #book-container .fiction-container .card-body, .illustration-arc-container, .one-book-container-wrapper .fiction-container .card-body, .row.top-dashboard .card {
         height: 95vh;
     }
-    /* .row.avatar-row, .row.top-dashboard .card-body.user-info-text > div{
-        width: 62vh;
-    }
-    .row.top-dashboard .card-body > div{
-        width: 60vh;
-    } */
     .title-text-novel p {
         width: 39vh;
     }
@@ -176,8 +161,7 @@
     .character-card.card .card-image {
         height: 25vh;
         width: 22vh;
-    }
-    
+    }    
     #all-characters-container-card .character-card.card{
         display: flex;
         flex-direction: column;
@@ -195,11 +179,9 @@
     }
     .character-details-card .card-body p{
         margin: -11vh 0 0 0; 
-
     }
 }
- @media (min-width: 1400px) and (max-width:1710px){
-    
+ @media (min-width: 1400px) and (max-width:1710px){    
     .card.fiction-container.all-fictions-container-global{
         width: 120vh;
         max-width: 125vh;
@@ -217,8 +199,7 @@
         margin: -15vh 0 0 0;
     }
     .character-details-card .card-body p{
-        margin: -11vh 0 0 0; 
-
+        margin: -11vh 0 0 0;
     }
  }
 @media (min-width: 1201px) and (max-width: 1400px) { 
@@ -242,7 +223,6 @@
     .tab-pane{
         overflow-y: scroll;
     }
-
     .fiction-globale-container.card.fiction-container {
         width: 195vh;
         min-width: 195vh;
@@ -254,36 +234,21 @@
         font: 500 1.75rem petite-caps;
         font-variant-caps: all-petite-caps;
     }
-    /* .Comment-icon, .Comment-icon .display-flex-column, .Comment-icon .flex-one .btn {
-        width: 30vh;
-    } */
-    /* .chapter-title-content{
-        margin: 0 0 0 -35vh;
-        width: 150vh;
-    } */
-
     .fiction-globale-container h3{
         font-size: 1.25em;
     }
-    /* .Comment-icon {
-        margin: 4vh 0 0 -1vh;
-    } */
-
     .character-chapters-fiction-container .character-chapters-container,.illustration-background {
         width: 185vh;
     }    
     .illustration-background .background-fiction-contain{
         height: 75vh;
     }    
-    .opacity-container{
-        height: 75vh;
-    }
     .middle-fiction-card .col-xxl-6.col-xl-12.col-lg-12.col-md-12.col-sm-12.col-xs-12{
         width: 62vh;
         margin: 0 0 0 6vh;
     }
     .summary-height-container p{
-        font-size: 1.5em;
+        font-size: 1.25em;
     }
     .middle-fiction-card a{
         font-size: 1.25em;
@@ -434,6 +399,9 @@
     .row.bottom-dashboard-levele-three{
         height: 125vh;
     }
+    .summary-container{
+        height: 90vh;
+    }
     .summary-container .row.top-fiction{
         height: 5vh;
         margin: 5vh 0 0 0;
@@ -444,6 +412,10 @@
     }
     .summary-fiction-container-wrapper{
         width: 50vh;
+    }
+    .all-characters-of-fiction .row:first-child{
+        width: 50vh;
+        height: 25vh;
     }
 }
 @media (max-width: 1400px) {
