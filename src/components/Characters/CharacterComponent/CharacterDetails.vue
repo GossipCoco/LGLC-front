@@ -8,7 +8,7 @@
             :alt="image"
           />
       </CharacterImageDetail>
-      <div class="col-8 col-md-8">
+      <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-10 col-sm-10 col-xs-10">
         <div class="card border-none height-85 background-color-main-lineart details-infos-characters border-radius-12px poppins-text text-white">
         <div class="card-body height-85">
           <div class="row display-flex-row">
