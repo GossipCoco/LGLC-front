@@ -150,7 +150,7 @@
     /* Page all characters */
     .all-characters-container-card {
         margin-top: 8vh;
-        width: 134vh;
+        width: 100%;
     }
     .info-original-character-height{
         width: 75vh;
@@ -161,24 +161,22 @@
         overflow-y: hidden;
         overflow-x: hidden
     }
-    .character-card.card .card-image {
+    /* .character-card.card .card-image {
         height: 25vh;
         width: 22vh;
-    }    
+    }     */
     #all-characters-container-card .character-card.card{
         display: flex;
         flex-direction: column;
         margin: 0 4vh 8vh 0;
-        height: 34vh;
-        width: 32vh;
-    }
+     }
     span.name-characatrer-link{
         margin: -15vh 0 0 0;
     }
 
     .character-list-wrapper .card-body{
         height: 2vh;
-        margin: 12vh 0 0 0;
+        margin: 0;
     }
     .character-details-card .card-body p{
         margin: -11vh 0 0 0; 
@@ -371,9 +369,7 @@
     span.name-characatrer-link{
         margin: -15vh 0 0 0;
     }
-    .character-list-wrapper .card-body{
-        margin: 12vh 0 0 0;
-    }
+
     .name-characatrer-link.flex-one .btn{
         margin: 13vh 0 0 -1px;
         padding: 1vh 0 0 0;
@@ -392,10 +388,7 @@
     .search-clan, .search-grade{
         margin: 3vh 0 0 0;
     }
-    .character-list-wrapper .card-body{
-        height: 2vh;
-        margin: 12vh 0 0 0;
-    }
+
     .character-details-card .card-body p{
         margin: -11vh 0 0 0; 
     }
