@@ -322,14 +322,17 @@
         width: 200vh;
         margin: 0 0 0 4vh;
     }
-    .one-book-container-wrapper .fiction-container .card-body, #book-container .fiction-container .card-body, .illustration-arc-container, .one-book-container-wrapper .fiction-container .card-body, .row.top-dashboard .card {
+    .one-book-container-wrapper .fiction-container .card-body,
+    #book-container .fiction-container .card-body,
+    .illustration-arc-container,
+    .one-book-container-wrapper .fiction-container .card-body {
         height: 95vh;
     }
-    /* .row.avatar-row, .row.top-dashboard .card-body.user-info-text > div{
-        width: 62vh;
-    } */
+    .row.top-dashboard .card {
+        height: 75vh;
+    }
     .row.top-dashboard .card-body > div{
-        width: 60vh;
+        width: 50vh;
     }
     .title-text-novel p {
         width: 39vh;
