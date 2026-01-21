@@ -16,13 +16,14 @@
           id="original-characters-list"
           class="row row-cols-1 row-cols-md-4 g-4 width-100-100"
         >
+          <my-characters-card v-if="allCharacters" v-bind:allMyCharacters="allMyCharacters" />          
+          <my-characters-card v-if="allSearchedCharacter" v-bind:allMyCharacters="searchCharacter" />
+          
           <filter-component
             @getCurrentName="getCurrentName"
             @onSelectClan="onSelectClan"
             @onSelectGrade="onSelectGrade"
           />
-          <my-characters-card v-if="allCharacters" v-bind:allMyCharacters="allMyCharacters" />          
-          <my-characters-card v-if="allSearchedCharacter" v-bind:allMyCharacters="searchCharacter" />
         </div>
         <div class="row pagination-row-container">
           <div clss="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
