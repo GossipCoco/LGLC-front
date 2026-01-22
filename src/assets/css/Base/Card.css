@@ -28,7 +28,7 @@
     padding: 0 1vh 1vh 1vh;
 }
 .clan-detail-card {
-    margin: 10vh 0 0 0;
+    margin: 2vh 0 0 0;
 }
 .display-flex-row.card-group.clan-group .card.location-clan-background-width-container::before {
     left: 66%;
