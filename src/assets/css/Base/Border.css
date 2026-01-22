@@ -42,7 +42,7 @@
     border-radius: 100% 100% 0 0;
 }
 .image-illustration-right{
-    border-radius: 100% 0 0 100%;
+    border-radius: 12px 12px 0 0;
     border : 1rem solid rgba(var(--clear-green-01), 1);
 }
 .character-card.card .card-image {

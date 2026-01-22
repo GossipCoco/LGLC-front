@@ -172,11 +172,6 @@ li.quest-container {
 .card-text{
     padding: 1.5rem;
 }
-.clan-detail-layout .card-image img{
-    position: relative;
-    top: 10vh;
-    right: 10vh;
-}
 .clan-detail-card > .col-2{
     margin: 0 2rem;
 }

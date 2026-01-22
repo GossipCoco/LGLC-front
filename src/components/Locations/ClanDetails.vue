@@ -1,7 +1,7 @@
 <template>
-  <div class="card border-none clan-detail-layout margin-1vh-0-0-0 height-85-vh display-flex-row mb-3">
+  <div class="card border-none clan-detail-layout margin-1vh-0-0-0 height-85-vh display-flex-row mb-3 overflowY-auto">
     <div class="row">
-      <div class="col-3">
+      <div class="col-12">
       <cardImageBackground v-bind:Image="Image">
         <div
           class="col-2 display-flex-row align-items-content-justify-content"
@@ -17,7 +17,7 @@
         </div>
       </cardImageBackground>
       </div>
-      <div class="col-9 col-md-9 flex-one background-color-main-lineart display-flex-column location-clan-card-details">
+      <div class="col-12 col-md-12 flex-one background-color-main-lineart display-flex-column location-clan-card-details">
         <CardHeader v-bind:Title="clan.Name">
           <div class="display-flex-row">
             <img :src="'/images/clans/' + clan.Symbol"/>            
