@@ -1,62 +1,82 @@
 <template>
-  <div id="existing-character" class="overflowY-auto character-details width-100-100 height-90 background-none border-none padding-2-vh card mb-3">
+  <div
+    id="existing-character"
+    class="overflowY-auto character-details width-100-100 height-90 background-none border-none padding-2-vh card mb-3"
+  >
     <div class="row">
       <CharacterImageDetail v-bind:Image="background">
         <img
-            class="height-auto display-block width-30-vh overflow-hidden"
-            :src="image"
-            :alt="image"
-          />
+          class="height-auto display-block width-30-vh overflow-hidden"
+          :src="image"
+          :alt="image"
+        />
       </CharacterImageDetail>
       <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <div class="card border-none height-85 background-color-main-lineart
-        details-infos-characters border-radius-12px poppins-text text-white margin--1vh-0-0-0-0">
-        <div class="card-body height-85">
-          <div class="row display-flex-row">
-            <div class="col-9">
-              <h1 class="card-title cinzel">{{ currentName }}</h1>
-            </div>            
-            <div class="col-3 display-flex-column">
-              <router-link
-                to="/allCharacters"
-                type="button"
-                class="btn btn-primary text-align-justify poppins-text text-white file-character-btn margin-0-0-2vh-0"
-              >
-                Tous les personnages
-              </router-link>  
-              <!-- <router-link type="button" class="btn btn-primary" :to="'/EditAnOriginalCharacter/'+ currentName">
+        <div
+          class="card border-none height-85 background-color-main-lineart details-infos-characters border-radius-12px poppins-text text-white margin--1vh-0-0-0-0"
+        >
+          <div class="card-body height-85">
+            <div class="row display-flex-row">
+              <div class="col-9">
+                <h1 class="card-title cinzel">{{ currentName }}</h1>
+              </div>
+              <div class="col-3 display-flex-column">
+                <router-link
+                  to="/allCharacters"
+                  type="button"
+                  class="btn btn-primary text-align-justify poppins-text text-white file-character-btn margin-0-0-2vh-0"
+                >
+                  Tous les personnages
+                </router-link>
+                <!-- <router-link type="button" class="btn btn-primary" :to="'/EditAnOriginalCharacter/'+ currentName">
                 Editer le personnage
               </router-link> -->
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-              <div class="information-global-character">
-                <div class="display-flex-row character-info-general-container">
-                  <back-clan v-bind:ClanId="ClanId" v-bind:symboleClan="symboleClan" />
-                  <TableInformationCharacter
-                    v-bind:NameClan="NameClan"
-                    v-bind:genre="genre"
-                    v-bind:Grade="Grade"
-                    v-bind:kitty="kitty"
-                    v-bind:apprentice="apprentice"
-                    v-bind:warrior="warrior"
-                    v-bind:ClanId="ClanId"
-                  />
+            <div class="row">
+              <div class="col-12">
+                <div class="information-global-character">
+                  <div
+                    class="display-flex-row character-info-general-container"
+                  >
+                    <div class="row">
+                      <div
+                        class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2"
+                      >
+                        <back-clan
+                          v-bind:ClanId="ClanId"
+                          v-bind:symboleClan="symboleClan"
+                        />
+
+                        <TableInformationCharacter
+                          v-bind:NameClan="NameClan"
+                          v-bind:genre="genre"
+                          v-bind:Grade="Grade"
+                          v-bind:kitty="kitty"
+                          v-bind:apprentice="apprentice"
+                          v-bind:warrior="warrior"
+                          v-bind:ClanId="ClanId"
+                        />
+                      </div>
+                      <div
+                        class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-10 col-xs-10"
+                      >
+                        <CharacterTabs
+                          v-bind:Description="description"
+                          v-bind:Personnality="personnality"
+                          v-bind:Biography="character.Biography"
+                          v-bind:Relation="Relation"
+                          v-bind:Fictions="Fictions"
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <CharacterTabs
-                v-bind:Description="description"
-                v-bind:Personnality="personnality"
-                v-bind:Biography="character.Biography"
-                v-bind:Relation="Relation"
-                v-bind:Fictions="Fictions"
-                />                    
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
     </div>
   </div>
 </template>
@@ -68,7 +88,12 @@ import TableInformationCharacter from "../GenericComponent/TableInformationChara
 import BackClan from "../GenericComponent/BackClan.vue";
 export default {
   name: "CharacterDetails",
-  components: {TableInformationCharacter, CharacterTabs, CharacterImageDetail, BackClan},
+  components: {
+    TableInformationCharacter,
+    CharacterTabs,
+    CharacterImageDetail,
+    BackClan,
+  },
   data() {
     return {
       url: "",
@@ -90,7 +115,7 @@ export default {
       ClanId: null,
       Grade: null,
       Relation: {},
-      Fictions:{}
+      Fictions: {},
     };
   },
   created() {},
@@ -117,7 +142,7 @@ export default {
         .then((response) => {
           this.character = response.data.ob;
           this.symboleClan = this.character.Clan.Symbol;
-          this.ClanId = this.character.Clan.Id
+          this.ClanId = this.character.Clan.Id;
           this.NameClan = this.character.Clan.Name;
           this.image = response.data.ob.Image;
           this.background = response.data.ob.Clan.Image;
@@ -130,9 +155,9 @@ export default {
           this.description = response.data.ob.Description;
           this.Biography = response.data.ob.Biography;
           this.personnality = response.data.ob.Personnality;
-          this.Grade = response.data.ob.Grade.Name
-          this.Relation = response.data.ob.RelationsOne
-          this.Fictions = response.data.ob.GameCharacters
+          this.Grade = response.data.ob.Grade.Name;
+          this.Relation = response.data.ob.RelationsOne;
+          this.Fictions = response.data.ob.GameCharacters;
         })
         .catch((e) => {
           console.log(e);

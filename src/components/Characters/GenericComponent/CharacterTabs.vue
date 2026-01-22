@@ -1,5 +1,5 @@
 <template>
-  <div class="col-12">
+
     <ul class="nav nav-pills" id="pills-tab" role="tablist">
       <li class="nav-item" role="presentation">
         <button
@@ -153,7 +153,7 @@
         </div>
       </div>
     </div>
-  </div>
+
 </template>
 <script>
 import RelationCharacterComponent from "./RelationCharacterComponent.vue";
