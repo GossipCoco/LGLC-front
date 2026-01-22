@@ -1,25 +1,46 @@
 <template>
   <div class="one-book-container-wrapper margin-2vh-0">
-    <div class="display-flex-row flex-one">
-      <card-image-background v-bind:Image="background">
-        <img :src="Image" :alt="Title" class="image-book border-radius-2vh-0-0-2vh height-30-vh" />
-      </card-image-background>
-      <div id="book-container" class="border-none background-color-main-lineart flex-one card display-flex-column height-90-vh padding-2-vh">
-        <CardHeader v-bind:Title="Title">
-          <router-link to="/ArcBookLayout" class="btn btn-primary arc-back-btn">Retour à la liste des arcs & romans</router-link>
-        </CardHeader>
-        <div class="card-body width-120-vh height-80-vh padding-2-vh margin-2vh-0">
-          <div class="row">
-            <div class="col-12">
-              <p class="text-white text-align-justify poppins-text">{{ Title }}</p>
-              <p class="text-white text-align-justify poppins-text">{{ TypeBook }}</p>
-              <div
-                class="text-white text-align-justify poppins-text"
-                v-html="book.Summary"
-              ></div>
+    <div class="row">
+      <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <card-image-background v-bind:Image="background">
+          <img
+            :src="Image"
+            :alt="Title"
+            class="image-book border-radius-2vh-0-0-2vh height-30-vh"
+          />
+        </card-image-background>
+      </div>
+      <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div
+          id="book-container"
+          class="border-none background-color-main-lineart flex-one card display-flex-column height-90-vh padding-2-vh"
+        >
+          <CardHeader v-bind:Title="Title">
+            <router-link
+              to="/ArcBookLayout"
+              class="btn btn-primary arc-back-btn"
+              >Retour à la liste des arcs & romans</router-link
+            >
+          </CardHeader>
+          <div
+            class="card-body width-120-vh height-80-vh padding-2-vh margin-2vh-0"
+          >
+            <div class="row">
+              <div class="col-12">
+                <p class="text-white text-align-justify poppins-text">
+                  {{ Title }}
+                </p>
+                <p class="text-white text-align-justify poppins-text">
+                  {{ TypeBook }}
+                </p>
+                <div
+                  class="text-white text-align-justify poppins-text"
+                  v-html="book.Summary"
+                ></div>
+              </div>
             </div>
+            <CharactersByBook v-bind:characters="book.BookCharacters" />
           </div>
-          <CharactersByBook v-bind:characters="book.BookCharacters" />
         </div>
       </div>
     </div>
@@ -40,7 +61,7 @@ export default {
       background: null,
       Title: null,
       TypeBook: null,
-      Image: null
+      Image: null,
     };
   },
   created() {
@@ -53,11 +74,10 @@ export default {
         .then((response) => {
           console.log(response.data.ob.Title);
           this.book = response.data.ob;
-          this.background = response.data.ob.IllustrationOne
-          this.Title = response.data.ob.Title
-          this.TypeBook = response.data.ob.TypeBook
-          this.Image = response.data.ob.Image
-
+          this.background = response.data.ob.IllustrationOne;
+          this.Title = response.data.ob.Title;
+          this.TypeBook = response.data.ob.TypeBook;
+          this.Image = response.data.ob.Image;
         })
         .catch((e) => {
           console.log(e);
