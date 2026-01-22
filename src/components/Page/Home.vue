@@ -19,9 +19,10 @@ import EventBus from "../../http/EventBus";
 import UserService from "../../services/UserService";
 import jwtAPI from "../../api/JwtApi";
 import LeftMenu from "../Navigation/LeftMenu.vue";
+// import FooterAccueil from "./Accueil/FooterAccueil.vue";
 export default {
   name: "Home",
-  components: { LeftMenu },
+  components: { LeftMenu},
   data() {
     return {
       publicPath: process.env.BASE_URL,
