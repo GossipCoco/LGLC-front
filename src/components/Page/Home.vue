@@ -1,11 +1,11 @@
 <template>
   <div class="container-fluid">
-    <div class="row height-10-vh width-100-100">
+    <div class="row height-10-vh width-100-100 ">
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
         <LeftMenu />
       </div>
       </div>      
-      <div class="row height-100  width-100-100 padding-0">
+      <div class="row height-100  width-100-100 padding-1-vh">
         <div class="height-100 width-100-100 col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 padding-0">  
           <main class="container-fluid height-100 display-flex-column main-global-container width-100-100 padding-0">          
             <router-view></router-view>
