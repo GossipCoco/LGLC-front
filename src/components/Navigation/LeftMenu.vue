@@ -11,7 +11,7 @@
           class="li-level1 display-flex-column align-items-content-justify-content"
         >
           <router-link to="/dashboard">
-            <div class="menu-level1">
+            <div class="menu-level1  height-10-vh width-10-vh">
               <div class="menu-li-contain">
                 <span
                   class="menu-text poppins-text font-size-1em font-weight-600"
@@ -25,7 +25,7 @@
           class="li-level1 display-flex-column align-items-content-justify-content"
         >
           <router-link to="/lgdc">
-            <div class="menu-level1">
+            <div class="menu-level1  height-10-vh width-10-vh">
               <div class="menu-li-contain">
                 <span
                   class="menu-text poppins-text font-size-1em font-weight-600"
@@ -39,7 +39,7 @@
           class="li-level1 display-flex-column align-items-content-justify-content"
         >
           <router-link to="/creation">
-            <div class="menu-level1">
+            <div class="menu-level1  height-10-vh width-10-vh">
               <div class="menu-li-contain">
                 <span
                   class="menu-text poppins-text font-size-1em font-weight-600"
@@ -53,7 +53,7 @@
           class="li-level1 display-flex-column align-items-content-justify-content"
         >
           <router-link to="/GroupLayout">
-            <div class="menu-level1">
+            <div class="menu-level1  height-10-vh width-10-vh">
               <div class="menu-li-contain">
                 <span
                   class="menu-text poppins-text font-size-1em font-weight-600"
@@ -67,7 +67,7 @@
           class="li-level1 display-flex-column align-items-content-justify-content"
         >
           <router-link to="/games">
-            <div class="menu-level1">
+            <div class="menu-level1  height-10-vh width-10-vh">
               <div class="menu-li-contain">
                 <span
                   class="menu-text poppins-text font-size-1em font-weight-600"
@@ -81,7 +81,7 @@
           class="li-level1 display-flex-column align-items-content-justify-content"
         >
           <router-link to="/EventGlobal">
-            <div class="menu-level1">
+            <div class="menu-level1  height-10-vh width-10-vh">
               <div class="menu-li-contain">
                 <span
                   class="menu-text poppins-text font-size-1em font-weight-600"
@@ -93,7 +93,7 @@
         </li>
         <li class="li-level1" v-if="role === 'Administrateur'">
           <router-link to="/admin">
-            <div class="menu-level1">
+            <div class="menu-level1  height-10-vh width-10-vh">
               <span class="menu-text poppins-text font-size-1em font-weight-600"
                 >Admin</span
               >
@@ -102,7 +102,7 @@
         </li>
         <li>
           <div class="menu-li-contain">
-            <div class="menu-level1">
+            <div class="menu-level1  height-10-vh width-10-vh">
               <a
                 href="#"
                 @click.prevent="logout"
