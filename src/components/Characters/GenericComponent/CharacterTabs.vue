@@ -118,7 +118,7 @@
       </p>
       <div
         v-if="!EditDescriptionTextArea"
-        class="text-align-justify height-30-vh overflowY-auto"
+        class="text-align-justify height-50-vh overflowY-auto"
         v-html="Description"
       ></div>
       <TextAreaOriginalCharacter
@@ -154,7 +154,7 @@
       </p>
       <div
         v-if="!EditPersonnalityTextArea"
-        class="text-align-justify height-30-vh overflowY-auto"
+        class="text-align-justify height-50-vh overflowY-auto"
         v-html="Personnality"
       ></div>
       <TextAreaOriginalCharacter
@@ -190,7 +190,7 @@
       </p>
       <div
         v-if="!EditBiographyTextArea"
-        class="text-align-justify height-30-vh overflowY-auto"
+        class="text-align-justify height-50-vh overflowY-auto"
         v-html="Biography"
       ></div>
       <TextAreaOriginalCharacter
