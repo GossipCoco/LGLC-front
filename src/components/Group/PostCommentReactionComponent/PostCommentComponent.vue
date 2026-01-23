@@ -1,7 +1,7 @@
 <template>
   <div
     id="post-comment-details"
-    class="width-190-vh height-auto background-none border-none padding-2-vh card mb-3 overflowY-auto"
+    class="width-100-100 height-auto background-none border-none  padding-2vh-2vh-10vh-2vh  card mb-3 overflowY-auto"
   >
     <group-header v-bind:group="Group">
       <header-component v-bind:group="Group" />
