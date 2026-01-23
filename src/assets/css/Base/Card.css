@@ -5,7 +5,6 @@
     content: var(--cat-corner);
     position: absolute;
     top: -2%;
-    left: 30%;
     z-index: 99999;
 }
 .fiction-globale-container .card-body::before{
