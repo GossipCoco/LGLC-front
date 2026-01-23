@@ -10,19 +10,10 @@
     max-width: 30vh;
 }
 
-/* .row.top-dashboard .card-body .title-text-novel{
-    width: 42vh;
-} */
 .rating svg {
     width: 1vh;
     height: 3vh
 }
-/* .title-text-novel p{
-    width: 32vh;
-} */
-/* .title-text-novel p a{
-    width: 26vh;
-} */
 .clan-detail-layout .card-header img{
     width: 8vh;
     height: 8vh;
@@ -68,7 +59,6 @@
     height: 14vh;
     width: 90vh;
 }
-
 .avatar-navabar, .avatar-navabar img {
     width: 6vh;
     height: 6vh;
@@ -111,7 +101,6 @@
 .carousel {
     height: 24vh;
 }
-
 #accueil li.nav-item{
     width: 40vh;
 }
