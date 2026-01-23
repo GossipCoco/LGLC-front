@@ -87,7 +87,7 @@
   </ul>
   <div class="tab-content height-50-vh" id="pills-tabContent">
     <div
-      class="tab-pane fade show active height-50-vh background-lineart02 overflowY-auto border-radius-12px padding-2-vh"
+      class="tab-pane fade show active height-50-vh width-200-vh background-lineart02 overflowY-auto border-radius-12px padding-2-vh"
       id="pills-general-info"
       role="tabpanel"
       aria-labelledby="pills-general-info-tab"
