@@ -94,7 +94,6 @@
       tabindex="0"
     >
       <back-clan v-bind:ClanId="ClanId" v-bind:symboleClan="symboleClan" />
-
       <TableInformationCharacter
         v-bind:NameClan="NameClan"
         v-bind:genre="genre"
@@ -105,9 +104,8 @@
         v-bind:ClanId="ClanId"
       />
     </div>
-
     <div
-      class="tab-pane fade height-50-vh  width-200-vh background-lineart02 overflowY-auto border-radius-12px padding-2-vh"
+      :class="classCSS"
       id="pills-description"
       role="tabpanel"
       aria-labelledby="pills-description-tab"
@@ -143,7 +141,7 @@
       </TextAreaOriginalCharacter>
     </div>
     <div
-      class="tab-pane fade height-50-vh  width-200-vh background-lineart02 overflowY-auto border-radius-12px padding-2-vh"
+      :class="classCSS"
       id="pills-profile"
       role="tabpanel"
       aria-labelledby="pills-profile-tab"
@@ -179,7 +177,7 @@
       </TextAreaOriginalCharacter>
     </div>
     <div
-      class="tab-pane fade height-50-vh  width-200-vh background-lineart02 overflowY-auto border-radius-12px padding-2-vh"
+      :class="classCSS"
       id="pills-contact"
       role="tabpanel"
       aria-labelledby="pills-contact-tab"
@@ -215,7 +213,7 @@
       </TextAreaOriginalCharacter>
     </div>
     <div
-      class="tab-pane fade height-50-vh  width-200-vh background-lineart02 overflowY-auto border-radius-12px padding-2-vh"
+      :class="classCSS"
       id="pills-family"
       role="tabpanel"
       aria-labelledby="pills-family-tab"
@@ -224,7 +222,7 @@
       <RelationCharacterComponent v-bind:Relation="Relation" />
     </div>
     <div
-      class="tab-pane fade height-50-vh width-200-vh  background-lineart02 overflowY-auto border-radius-12px padding-2-vh"
+      :class="classCSS"
       id="pills-fiction"
       role="tabpanel"
       aria-labelledby="pills-fiction-tab"
@@ -285,6 +283,7 @@ export default {
       newDescription: null,
       newPersonnality: null,
       newBiography: null,
+      classCSS: 'tab-pane fade height-50-vh  width-200-vh background-lineart02 overflowY-auto border-radius-12px padding-2-vh'
     };
   },
   methods: {
