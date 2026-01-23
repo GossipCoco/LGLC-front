@@ -62,7 +62,15 @@
                       <div
                         class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-10 col-xs-10"
                       >
-                        <CharacterTabs
+                        <CharacterTabs                        
+                          v-bind:ClanId="ClanId"
+                          v-bind:symboleClan="symboleClan"
+                          v-bind:NameClan="NameClan"
+                          v-bind:genre="genre"
+                          v-bind:Grade="Grade"
+                          v-bind:kitty="kitty"
+                          v-bind:apprentice="apprentice"
+                          v-bind:warrior="warrior"
                           v-bind:Description="description"
                           v-bind:Personnality="personnality"
                           v-bind:Biography="character.Biography"
