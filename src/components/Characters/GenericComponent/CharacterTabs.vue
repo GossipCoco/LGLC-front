@@ -17,13 +17,13 @@
       </li>
       <li class="nav-item" role="presentation">
         <button
-          class="nav-link color-clear-green-01 border-radius-none"
-          id="pills-home-tab"
+          class="nav-link white-text background-color-dark-green-01 border-radius-none"
+          id="pills-description-tab"
           data-bs-toggle="pill"
-          data-bs-target="#pills-home"
+          data-bs-target="#pills-description"
           type="button"
           role="tab"
-          aria-controls="pills-home"
+          aria-controls="pills-description"
           aria-selected="false"
         >
           Description
@@ -96,11 +96,11 @@
       >
       </div>
       <div
-        class="tab-pane fade show active height-50-vh background-lineart02 overflowY-auto border-radius-12px padding-2-vh"
-        id="pills-home"
+        class="tab-pane fade height-50-vh background-lineart02 overflowY-auto border-radius-12px padding-2-vh"
+        id="pills-description"
         role="tabpanel"
-        aria-labelledby="pills-home-tab"
-        tabindex="0"
+        aria-labelledby="pills-description-tab"
+        tabindex="1"
       >
         <p>
           <button type="button" class="btn btn-primary" @click="editDescription">
@@ -118,7 +118,7 @@
         id="pills-profile"
         role="tabpanel"
         aria-labelledby="pills-profile-tab"
-        tabindex="1"
+        tabindex="2"
       >
         <p>
           <button type="button" class="btn btn-primary" @click="editPersonnality">
@@ -136,7 +136,7 @@
         id="pills-contact"
         role="tabpanel"
         aria-labelledby="pills-contact-tab"
-        tabindex="2"
+        tabindex="3"
       >
         <p>
           <button type="button" class="btn btn-primary" @click="editBiography">
@@ -154,7 +154,7 @@
         id="pills-family"
         role="tabpanel"
         aria-labelledby="pills-family-tab"
-        tabindex="3"
+        tabindex="4"
       >
         <RelationCharacterComponent v-bind:Relation="Relation" />
       </div>
@@ -163,7 +163,7 @@
         id="pills-fiction"
         role="tabpanel"
         aria-labelledby="pills-fiction-tab"
-        tabindex="5"
+        tabindex="6"
       >
         <p>Les fictions de ce personnage</p>
         <div v-for="(games, index) in Fictions" :key="index">
