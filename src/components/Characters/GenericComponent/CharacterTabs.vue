@@ -85,9 +85,9 @@
       </button>
     </li>
   </ul>
-  <div class="tab-content height-50-vh" id="pills-tabContent">
+  <div class="tab-content height-60-vh" id="pills-tabContent">
     <div
-      class="tab-pane fade show active height-50-vh width-200-vh background-lineart02 overflowY-auto border-radius-12px padding-2-vh"
+      class="tab-pane fade show active height-60-vh width-200-vh background-lineart02 overflowY-auto border-radius-12px padding-2-vh"
       id="pills-general-info"
       role="tabpanel"
       aria-labelledby="pills-general-info-tab"
@@ -283,7 +283,7 @@ export default {
       newDescription: null,
       newPersonnality: null,
       newBiography: null,
-      classCSS: 'tab-pane fade height-50-vh  width-200-vh background-lineart02 overflowY-auto border-radius-12px padding-2-vh'
+      classCSS: 'tab-pane fade height-60-vh  width-200-vh background-lineart02 overflowY-auto border-radius-12px padding-2-vh'
     };
   },
   methods: {

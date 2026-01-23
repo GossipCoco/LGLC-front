@@ -29,9 +29,6 @@
                 >
                   Tous les personnages
                 </router-link>
-                <!-- <router-link type="button" class="btn btn-primary" :to="'/EditAnOriginalCharacter/'+ currentName">
-                Editer le personnage
-              </router-link> -->
               </div>
             </div>
             <div class="row">
@@ -41,24 +38,6 @@
                     class="display-flex-row character-info-general-container"
                   >
                     <div class="row">
-                      <!-- <div
-                        class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2"
-                      >
-                        <back-clan
-                          v-bind:ClanId="ClanId"
-                          v-bind:symboleClan="symboleClan"
-                        />
-
-                        <TableInformationCharacter
-                          v-bind:NameClan="NameClan"
-                          v-bind:genre="genre"
-                          v-bind:Grade="Grade"
-                          v-bind:kitty="kitty"
-                          v-bind:apprentice="apprentice"
-                          v-bind:warrior="warrior"
-                          v-bind:ClanId="ClanId"
-                        />
-                      </div> -->
                       <div
                         class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12"
                       >
