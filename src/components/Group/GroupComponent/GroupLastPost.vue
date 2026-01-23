@@ -6,7 +6,7 @@
   >
     <div class="card background-lineart height-60-vh">
       <div
-        class="card-header text-center text-white width-40-vh height-20-vh display-flex display-flex-column flex-wrap-wrap"
+        class="card-header text-center text-white height-20-vh display-flex display-flex-column flex-wrap-wrap"
       >
         <h4 class="card-title text-white">{{ posts.Title }}</h4>
         <p class="card-title text-white font-size-0-65">
