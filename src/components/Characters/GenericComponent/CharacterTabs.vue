@@ -4,13 +4,27 @@
       <li class="nav-item" role="presentation">
         <button
           class="nav-link active color-clear-green-01"
+          id="pills-general-info-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#pills-general-info"
+          type="button"
+          role="tab"
+          aria-controls="pills-general-info"
+          aria-selected="true"
+        >
+          Informations Générales
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link color-clear-green-01 border-radius-none"
           id="pills-home-tab"
           data-bs-toggle="pill"
           data-bs-target="#pills-home"
           type="button"
           role="tab"
           aria-controls="pills-home"
-          aria-selected="true"
+          aria-selected="false"
         >
           Description
         </button>
@@ -73,6 +87,14 @@
       </li>
     </ul>
     <div class="tab-content height-50-vh" id="pills-tabContent">
+      <div
+        class="tab-pane fade show active height-50-vh background-lineart02 overflowY-auto border-radius-12px padding-2-vh"
+        id="pills-general-info"
+        role="tabpanel"
+        aria-labelledby="pills-general-info-tab"
+        tabindex="0"
+      >
+      </div>
       <div
         class="tab-pane fade show active height-50-vh background-lineart02 overflowY-auto border-radius-12px padding-2-vh"
         id="pills-home"
