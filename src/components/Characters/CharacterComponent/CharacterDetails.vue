@@ -41,7 +41,7 @@
                     class="display-flex-row character-info-general-container"
                   >
                     <div class="row">
-                      <div
+                      <!-- <div
                         class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2"
                       >
                         <back-clan
@@ -58,9 +58,9 @@
                           v-bind:warrior="warrior"
                           v-bind:ClanId="ClanId"
                         />
-                      </div>
+                      </div> -->
                       <div
-                        class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-10 col-xs-10"
+                        class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12"
                       >
                         <CharacterTabs                        
                           v-bind:ClanId="ClanId"
@@ -93,15 +93,12 @@
 import CharacterService from "../../../services/CharacterService";
 import CharacterImageDetail from "../GenericComponent/CharacterImageDetail.vue";
 import CharacterTabs from "../GenericComponent/CharacterTabs.vue";
-import TableInformationCharacter from "../GenericComponent/TableInformationCharacter.vue";
-import BackClan from "../GenericComponent/BackClan.vue";
+
 export default {
   name: "CharacterDetails",
   components: {
-    TableInformationCharacter,
     CharacterTabs,
     CharacterImageDetail,
-    BackClan,
   },
   data() {
     return {
