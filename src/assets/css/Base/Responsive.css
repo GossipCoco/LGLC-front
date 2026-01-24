@@ -15,12 +15,8 @@
         margin: 0 0 5vh 0;
     }
     #original-characters-list .card-character-container{
-    margin: 0vh 1vh 1vh 0;
-}
-    /* .back-to-fiction-btn-container{
-        display: flex;
-        flex-direction: row;
-    } */
+        margin: 0vh 1vh 1vh 0;
+    }
      #creation-hub{
         margin: 10vh;
      }
