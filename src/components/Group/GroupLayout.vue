@@ -5,12 +5,12 @@
   >
     <CardHeader v-bind:Title="'Les clubs'" />
     <div class="card-body height-90-vh">
-      <div class="row row-cols-6 row-cols-md-6 g-6 width-100-100">
+      <div class="row row-cols-5 row-cols-md-5 g-5 width-100-100">
         <div class="col-sm-2" v-for="(group, index) in AllGroups" :key="index">
           <group-card v-bind:group="group" />
         </div>
       </div>
-      <div class="row pagination-container all-clans-pagination-container">
+      <div class="row pagination-container all-clans-pagination-container margin-2vh">
         <Pagination
           v-if="!showspinner"
           :nav="nav"
