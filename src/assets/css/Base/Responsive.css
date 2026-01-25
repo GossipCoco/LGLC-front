@@ -82,10 +82,6 @@
     .display-none-responsive p{
         display: none;
     }
-    /* .row-cols-md-4>*{
-        width: 37vh;
-        height: 20vh;
-    } */
     .fiction-container .pagination-container-row{
         margin: 14vh;
     }
@@ -157,10 +153,6 @@
         overflow-y: hidden;
         overflow-x: hidden
     }
-    /* .character-card.card .card-image {
-        height: 25vh;
-        width: 22vh;
-    }     */
     #all-characters-container-card .character-card.card{
         display: flex;
         flex-direction: column;
