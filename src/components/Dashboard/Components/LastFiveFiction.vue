@@ -12,7 +12,7 @@
       <div
         class="card-body all-last-three-fictions-container padding-0 margin-0-rem display-flex-column align-items-content-justify-content"
       >
-        <div v-for="(fiction, index) in GamesAndFictions" :key="index" class="title-text-novel display-block flex-one display-flex-column justify-content-left width-100-100">
+        <div v-for="(fiction, index) in GamesAndFictions" :key="index" class="title-text-novel display-block flex-one display-flex-column justify-content-left width-100-100 padding-1-vh">
           <div class="title-text-novel flex-one display-flex-row justify-content-left">
           <ImageRondDashboard
             v-bind:src="fiction.Image"
