@@ -7,9 +7,9 @@
       v-bind:route="'/CreateAnOriginalCharacter'"
       v-bind:NameLink="'Nouveau personnage'"
     />
-    <div class="card-body width-195-vh height-120-vh overflowY-auto margin-0-0-7vh-0">
+    <div class="card-body width-100-100 height-120-vh overflowY-auto margin-0-0-7vh-0">
       <div class="character-container height-95-vh padding-0 list-all-characters-container padding-2-vh-0-0-1vh">
-        <div class="row row-cols-1 row-cols-md-2 g-4 width-190-vh">
+        <div class="row row-cols-1 row-cols-md-2 g-4 width-100-100">
           <character-card
             v-if="ListAllCharacter && !useFiltered"
             v-bind:characters_props="allCharacters"
