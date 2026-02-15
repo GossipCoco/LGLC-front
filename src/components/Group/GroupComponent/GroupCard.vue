@@ -2,7 +2,7 @@
   <div
     class="card background-color-dark-green-01 width-30-vh height-30-vh"
   >
-    <div class="height-20-vh width-30-vh background-size-cover background-position-50-percent border-radius-top-100"
+    <div class="height-20-vh width-30-vh background-size-cover background-position-50-percent"
       v-bind:style="{ backgroundImage: 'url(' + group.Image + ')' }"
     >
     </div>
