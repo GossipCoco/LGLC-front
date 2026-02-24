@@ -15,7 +15,7 @@
       </div>
     </div>
     <div class="col-4">
-      <img :src="group.Symbol" class="height-40-vh" />
+      <img :src="group.Symbol" class="height-40-vh" :alt="group.Name"/>
     </div>
   </div>
 </template>
