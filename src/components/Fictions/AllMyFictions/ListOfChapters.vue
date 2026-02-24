@@ -102,11 +102,11 @@ export default {
   created(){
     this.getNbKind()
     this.getAllIllustration()
-    this.getNbWords()
+    // this.getNbWords()
   },
   mounted() {
-    console.log("Chapters type:", typeof this.fiction.Chapters);
-    console.log("Chapters value:", this.fiction.Chapters);
+    // console.log("Chapters type:", typeof this.fiction.Chapters);
+    // console.log("Chapters value:", this.fiction.Chapters);
   },
   computed: {
     totalNbWords() {
