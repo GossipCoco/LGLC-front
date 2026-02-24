@@ -68,7 +68,7 @@ import Spinner from "../../Components/GenericComponent/Spinner.vue";
 import BackToFileBtnGroup from "../Components/BackToFileBtnGroup.vue";
 export default {
   name: "FictionContain",
-  inject: ["user"],
+  // inject: ["user"],
   components: {
     Rating,
     TitleFiction,
