@@ -12,13 +12,13 @@
               <img
                 loading="lazy"
                 :src="Group.Badge"
-                :alt="alt"
+                :alt="Group.Badge"
                 :class="'border-radius-100 display-flex-column width-10-vh height-10-vh '"
               />
               <img
                 loading="lazy"
                 :src="'/images/Avatars/' + Group.User.Avatar"
-                :alt="alt"
+                :alt="Group.User.UserName"
                 :class="'border-radius-100 display-flex-column width-10-vh height-10-vh '"
               />
             </div>
