@@ -1,5 +1,9 @@
 <template>
-  <div id="dashboard-layout-container" class="scroll-bar-container" v-if="!showspinner">
+  <div
+    id="dashboard-layout-container"
+    class="scroll-bar-container"
+    v-if="!showspinner"
+  >
     <div class="row title-dashboard">
       <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <TitleHeader
@@ -11,67 +15,70 @@
       </div>
     </div>
     <Spinner v-if="showspinner" />
-    <div>
-      <div class="row top-dashboard">
-        <AvatarCard
+    <div class="row top-dashboard">
+      <AvatarCard
+        v-if="!showspinner"
+        v-bind:Avatar="Avatar"
+        v-bind:UserName="UserName"
+        v-bind:LastConnexion="LastConnexion"
+        v-bind:Inscription="Inscription"
+        v-bind:level="level"
+        v-bind:Role="role"
+        v-bind:nBFiction="nBFictionV2"
+        v-bind:totalWords="totalWordsV2"
+        v-bind:totalPoints="totalPoints"
+        v-bind:roleImage="roleImage"
+        v-bind:NameRole="NameRole"
+        v-bind:LevelName="LevelName"
+        v-bind:NbOCs="NbOCs"
+      />
+      <LastFiveFiction v-if="!showspinner" />
+      <ExtractLastChap v-if="!showspinner" />
+      <CharacterByGamerV2 v-bind:gamer="gamer" v-if="!showspinner" />
+    </div>
+    <div class="row middle-dashboard">
+      <separator v-bind:Title="'Tout sur l\'univers de la Guerre des Clans'" />
+    </div>
+    <div class="row bottom-dashboard-levele-one">
+      <div class="col-xxl-5 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <Video v-if="!showspinner"></Video>
+      </div>
+      <div class="col-xxl-7 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <CharacterRandom
           v-if="!showspinner"
-          v-bind:Avatar="Avatar"
-          v-bind:UserName="UserName"
-          v-bind:LastConnexion="LastConnexion"
-          v-bind:Inscription="Inscription"
-          v-bind:level="level"
-          v-bind:Role="role"
-          v-bind:nBFiction="nBFictionV2"
-          v-bind:totalWords="totalWordsV2"
-          v-bind:totalPoints="totalPoints"
-          v-bind:roleImage="roleImage"
-          v-bind:NameRole="NameRole"
-          v-bind:LevelName="LevelName"
-          v-bind:NbOCs="NbOCs"
-        />      
-        <LastFiveFiction v-if="!showspinner" />
-        <ExtractLastChap v-if="!showspinner" />
-        <CharacterByGamerV2 v-bind:gamer="gamer" v-if="!showspinner" />
+          v-bind:randomCharacters="randomCharacters"
+        />
       </div>
-      <div class="row middle-dashboard">
-        <separator v-bind:Title="'Tout sur l\'univers de la Guerre des Clans'" />
+      <div class="col-xxl-6 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <new-arc v-if="!showspinner" />
+        <LastBook v-if="!showspinner" />
       </div>
-      <div class="row bottom-dashboard-levele-one">
-        <div class="col-xxl-5 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          <Video v-if="!showspinner" ></Video>
-        </div>        
-        <div class="col-xxl-7 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <CharacterRandom v-if="!showspinner" v-bind:randomCharacters="randomCharacters"/>
-        </div>
-        <div class="col-xxl-6 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">       
-          <new-arc v-if="!showspinner" />
-          <LastBook v-if="!showspinner"/>          
-        </div>
-        <div class="col-xxl-6 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          <div class="row fictions-games-container">
-            <ListAllFictions v-if="!showspinner" />       
-          </div>
+      <div class="col-xxl-6 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="row fictions-games-container">
+          <ListAllFictions v-if="!showspinner" />
         </div>
       </div>
-      <div class="row middle-separator">
-        <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          <separator v-bind:Title="'Nos jeux & vos créations'" />
-        </div>
-      </div>      
-      <div class="row bottom-dashboard-levele-three mar-2vh-0-24vh-0 height-60-vh">
-        <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-12 col-sm-12 col-xs-12">
-          <GamesLinks v-if="!showspinner" />
-        </div>
-        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
-          <easy-action />          
-          <music-player />
-        </div>        
-        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
-          <!-- <tchat-component /> -->
-        </div>
+    </div>
+    <div class="row middle-separator">
+      <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <separator v-bind:Title="'Nos jeux & vos créations'" />
       </div>
+    </div>
+    <div
+      class="row bottom-dashboard-levele-three mar-2vh-0-24vh-0 height-60-vh"
+    >
+      <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-12 col-sm-12 col-xs-12">
+        <GamesLinks v-if="!showspinner" />
+      </div>
+      <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+        <easy-action />
+        <music-player />
+      </div>
+      <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+        <!-- <tchat-component /> -->
+      </div>
+    </div>
   </div>
-</div>
 </template>
 <script>
 import UserService from "../../services/UserService";
@@ -123,7 +130,7 @@ export default {
       LastConnexion: null,
       role: null,
       NameRole: null,
-      LevelName:null,
+      LevelName: null,
       Nbmessages: null,
       NbOCs: null,
       totalWordsByFiction: {}, // Objet pour stocker les totaux par fiction
@@ -146,17 +153,17 @@ export default {
     this.GetUserById(this.usrId);
     this.CountTotalWordByUserV2(this.usrId);
     this.GetAllCharactersDashboard(this.nav);
-    this.CountNbOriginaleCharacterByUser(this.usrId)
+    this.CountNbOriginaleCharacterByUser(this.usrId);
   },
   methods: {
-    CountNbOriginaleCharacterByUser(e){
+    CountNbOriginaleCharacterByUser(e) {
       CharacterService.CountNbOriginaleCharacterByUser(e)
-      .then((response) => {
-        this.NbOCs = response.data.ob.count
-      })
-      .catch((err) => {
-          console.error("erreur", err)
-      });
+        .then((response) => {
+          this.NbOCs = response.data.ob.count;
+        })
+        .catch((err) => {
+          console.error("erreur", err);
+        });
     },
     GetAllCharactersDashboard(nav) {
       this.showspinner = true;
@@ -214,7 +221,7 @@ export default {
         current: 0,
         pages: 0,
         step: 4,
-      }
+      };
       UserService.getUserById(e)
         .then((response) => {
           this.userInfo = response.data.ob;
@@ -223,13 +230,13 @@ export default {
           this.LastConnexion = response.data.ob.LastConnexion;
           this.Inscription = response.data.ob.Inscription;
           this.LvelImf = this.userInfo.Level.Image;
-          this.LevelName = this.userInfo.Level.Name
+          this.LevelName = this.userInfo.Level.Name;
           this.role = this.userInfo.Role;
-          this.NameRole = this.userInfo.Role.Name
-          this.roleImage = this.userInfo.Role.Image;          
+          this.NameRole = this.userInfo.Role.Name;
+          this.roleImage = this.userInfo.Role.Image;
           this.totalPoints = this.calculateTotalPoints(this.userInfo.Points);
           this.level = this.userInfo.Level;
-          this.gamer = this.userInfo.Gamers;          
+          this.gamer = this.userInfo.Gamers;
           this.showspinner = false;
         })
         .catch((error) => {

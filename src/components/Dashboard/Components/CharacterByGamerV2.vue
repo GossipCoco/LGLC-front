@@ -1,5 +1,5 @@
 <template>
-  <div class="col-xxl-3 col-xl-12 col-lg-6 col-md-12 col-sm-12 col-xs-12 card-global all-my-oc-card">
+  <!-- <div class="col-xxl-3 col-xl-12 col-lg-6 col-md-12 col-sm-12 col-xs-12 card-global all-my-oc-card"> -->
     <div class="card height-60-vh border-none display-flex-column profil-card fiction-card background-lineart my-oc-card">
       <TitleHeaderDashboard
         v-bind:title="'Mes OC\'s'"
@@ -20,7 +20,7 @@
         </div>
       </div>
     </div>
-  </div>
+  <!-- </div> -->
 </template>
 <script>
 import TitleHeaderDashboard from "../../Components/SpecificComponent/TitleHeaderDashboard.vue";
