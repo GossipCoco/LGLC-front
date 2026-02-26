@@ -53,18 +53,18 @@
     <div class="row bottom-dashboard-levele-two">
       <div class="col-xxl-6 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <new-arc v-if="!showspinner" />
-        <LastBook v-if="!showspinner" />
-      </div>
+      </div>      
       <div class="col-xxl-6 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <div class="row fictions-games-container">
-          <ListAllFictions v-if="!showspinner" />
-        </div>
+        <LastBook v-if="!showspinner" />
       </div>
     </div>
     <div class="row middle-separator">
       <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <separator v-bind:Title="'Nos jeux & vos créations'" />
       </div>
+    </div>
+    <div class="row bottom-dashboard-level-one mar-2vh-0-24vh-0 fictions-games-container">
+      <ListAllFictions v-if="!showspinner" />
     </div>
     <div class="row bottom-dashboard-levele-three mar-2vh-0-24vh-0 height-60-vh">
       <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-12 col-sm-12 col-xs-12">
