@@ -113,8 +113,7 @@ export default {
     EasyAction,
     MusicPlayer,
     Video,
-    NewArc,
-    // TchatComponent
+    NewArc
   },
   data() {
     return {
