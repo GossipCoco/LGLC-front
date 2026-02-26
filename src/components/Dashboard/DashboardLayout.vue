@@ -49,6 +49,8 @@
           v-bind:randomCharacters="randomCharacters"
         />
       </div>
+    </div>
+    <div class="row bottom-dashboard-levele-two">
       <div class="col-xxl-6 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <new-arc v-if="!showspinner" />
         <LastBook v-if="!showspinner" />
