@@ -14,7 +14,7 @@
         />
       </div>
     </div>
-    <Spinner v-if="showspinner" />
+    <Spinner v-if="showspinner"/>
     <div class="row top-dashboard">
       <AvatarCard
         v-if="!showspinner"
