@@ -217,7 +217,6 @@ export default {
       }
       UserService.getUserById(e)
         .then((response) => {
-          console.log(response.data.ob)
           this.userInfo = response.data.ob;
           this.Avatar = response.data.ob.Avatar;
           this.UserName = response.data.ob.UserName;
