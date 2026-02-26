@@ -50,7 +50,7 @@
         />
       </div>
     </div>
-    <div class="row bottom-dashboard-levele-two">
+    <div class="row bottom-dashboard-levele-two margin-0-0-2vh-0">
       <div class="col-xxl-6 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <new-arc v-if="!showspinner" />
       </div>      
@@ -63,7 +63,7 @@
         <separator v-bind:Title="'Nos jeux & vos créations'" />
       </div>
     </div>
-    <div class="row bottom-dashboard-level-one mar-2vh-0-24vh-0 fictions-games-container">
+    <div class="row bottom-dashboard-level-one margin-1vh-0-0-0 fictions-games-container">
       <ListAllFictions v-if="!showspinner" />
     </div>
     <div class="row bottom-dashboard-levele-three mar-2vh-0-24vh-0 height-60-vh">
