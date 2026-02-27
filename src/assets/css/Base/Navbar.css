@@ -115,3 +115,19 @@ ul {
   -webkit-background-clip: text; /* nécessaire */
   -webkit-text-fill-color: transparent; /* nécessaire */
 }
+.menu-link {
+  text-decoration: none;
+  display: block;
+  height: 5vh;
+}
+
+.menu-link--exact-active .menu-level1,
+.menu-link--active .menu-level1 {
+  background: #e7f3ea;
+  border-radius: 12px;
+}
+
+.menu-link--exact-active .menu-text,
+.menu-link--active .menu-text {
+  color: #1b2b1e;
+}

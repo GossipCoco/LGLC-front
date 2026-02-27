@@ -10,7 +10,10 @@
         <li
           class="li-level1 display-flex-column align-items-content-justify-content"
         >
-          <router-link to="/dashboard">
+          <router-link to="/dashboard"
+            active-class="menu-link--active"
+            exact-active-class="menu-link--exact-active"
+          >
             <div class="menu-level1  height-10-vh width-10-vh">
               <div class="menu-li-contain">
                 <span
@@ -22,9 +25,11 @@
           </router-link>
         </li>
         <li
-          class="li-level1 display-flex-column align-items-content-justify-content"
-        >
-          <router-link to="/lgdc">
+          class="li-level1 display-flex-column align-items-content-justify-content">
+          <router-link to="/lgdc"          
+            active-class="menu-link--active"
+            exact-active-class="menu-link--exact-active"
+          >
             <div class="menu-level1  height-10-vh width-10-vh">
               <div class="menu-li-contain">
                 <span
@@ -38,7 +43,10 @@
         <li
           class="li-level1 display-flex-column align-items-content-justify-content"
         >
-          <router-link to="/creation">
+          <router-link to="/creation"
+            active-class="menu-link--active"
+            exact-active-class="menu-link--exact-active"
+          >
             <div class="menu-level1  height-10-vh width-10-vh">
               <div class="menu-li-contain">
                 <span
@@ -52,7 +60,10 @@
         <li
           class="li-level1 display-flex-column align-items-content-justify-content"
         >
-          <router-link to="/GroupLayout">
+          <router-link to="/GroupLayout"          
+            active-class="menu-link--active"
+            exact-active-class="menu-link--exact-active"
+          >
             <div class="menu-level1  height-10-vh width-10-vh">
               <div class="menu-li-contain">
                 <span
@@ -66,7 +77,10 @@
         <li
           class="li-level1 display-flex-column align-items-content-justify-content"
         >
-          <router-link to="/games">
+          <router-link to="/games"
+            active-class="menu-link--active"
+            exact-active-class="menu-link--exact-active"
+          >
             <div class="menu-level1  height-10-vh width-10-vh">
               <div class="menu-li-contain">
                 <span
@@ -80,7 +94,10 @@
         <li
           class="li-level1 display-flex-column align-items-content-justify-content"
         >
-          <router-link to="/EventGlobal">
+          <router-link to="/EventGlobal"
+            active-class="menu-link--active"
+            exact-active-class="menu-link--exact-active"
+          >
             <div class="menu-level1  height-10-vh width-10-vh">
               <div class="menu-li-contain">
                 <span
@@ -92,7 +109,10 @@
           </router-link>
         </li>
         <li class="li-level1" v-if="role === 'Administrateur'">
-          <router-link to="/admin">
+          <router-link to="/admin"
+            active-class="menu-link--active"
+            exact-active-class="menu-link--exact-active"
+          >
             <div class="menu-level1  height-10-vh width-10-vh">
               <span class="menu-text poppins-text font-size-1em font-weight-600"
                 >Admin</span
