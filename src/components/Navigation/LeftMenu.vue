@@ -14,7 +14,7 @@
             active-class="menu-link--active"
             exact-active-class="menu-link--exact-active"
           >
-            <div class="menu-level1  height-10-vh width-10-vh">
+            <div class="menu-level1 width-10-vh">
               <div class="menu-li-contain">
                 <span
                   class="menu-text poppins-text font-size-1em font-weight-600"
@@ -30,7 +30,7 @@
             active-class="menu-link--active"
             exact-active-class="menu-link--exact-active"
           >
-            <div class="menu-level1  height-10-vh width-10-vh">
+            <div class="menu-level1 width-10-vh">
               <div class="menu-li-contain">
                 <span
                   class="menu-text poppins-text font-size-1em font-weight-600"
@@ -47,7 +47,7 @@
             active-class="menu-link--active"
             exact-active-class="menu-link--exact-active"
           >
-            <div class="menu-level1  height-10-vh width-10-vh">
+            <div class="menu-level1 width-10-vh">
               <div class="menu-li-contain">
                 <span
                   class="menu-text poppins-text font-size-1em font-weight-600"
@@ -64,7 +64,7 @@
             active-class="menu-link--active"
             exact-active-class="menu-link--exact-active"
           >
-            <div class="menu-level1  height-10-vh width-10-vh">
+            <div class="menu-level1 width-10-vh">
               <div class="menu-li-contain">
                 <span
                   class="menu-text poppins-text font-size-1em font-weight-600"
@@ -81,7 +81,7 @@
             active-class="menu-link--active"
             exact-active-class="menu-link--exact-active"
           >
-            <div class="menu-level1  height-10-vh width-10-vh">
+            <div class="menu-level1 width-10-vh">
               <div class="menu-li-contain">
                 <span
                   class="menu-text poppins-text font-size-1em font-weight-600"
@@ -98,7 +98,7 @@
             active-class="menu-link--active"
             exact-active-class="menu-link--exact-active"
           >
-            <div class="menu-level1  height-10-vh width-10-vh">
+            <div class="menu-level1 width-10-vh">
               <div class="menu-li-contain">
                 <span
                   class="menu-text poppins-text font-size-1em font-weight-600"
@@ -113,7 +113,7 @@
             active-class="menu-link--active"
             exact-active-class="menu-link--exact-active"
           >
-            <div class="menu-level1  height-10-vh width-10-vh">
+            <div class="menu-level1 width-10-vh">
               <span class="menu-text poppins-text font-size-1em font-weight-600"
                 >Admin</span
               >
@@ -122,7 +122,7 @@
         </li>
         <li>
           <div class="menu-li-contain">
-            <div class="menu-level1  height-10-vh width-10-vh">
+            <div class="menu-level1 width-10-vh">
               <a
                 href="#"
                 @click.prevent="logout"
