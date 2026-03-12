@@ -30,7 +30,7 @@
         >
           <router-link to="/lgdc">
             <div
-              class="menu-level1 height-10-vh width-10-vh"
+              class="menu-level1 width-10-vh"
               :class="{ 'menu-level1--active': isSectionActive('lgdc') }"
             >
               <div class="menu-li-contain">
