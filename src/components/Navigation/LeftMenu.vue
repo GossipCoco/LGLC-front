@@ -47,17 +47,18 @@
         <li
           class="li-level1 display-flex-column align-items-content-justify-content"
         >
-          <router-link
-            to="/creation"
-            active-class="menu-link--active"
-            exact-active-class="menu-link--exact-active"
-          >
-            <div class="menu-level1 width-10-vh">
+          <router-link to="/creation">
+            <div
+              class="menu-level1 width-10-vh"
+              :class="{ 'menu-level1--active': isSectionActive('creation') }"
+            >
               <div class="menu-li-contain">
                 <span
                   class="menu-text poppins-text font-size-1em font-weight-600"
-                  >Créations</span
+                  :class="{ 'menu-text--active': isSectionActive('creation') }"
                 >
+                  Créations
+                </span>
               </div>
             </div>
           </router-link>

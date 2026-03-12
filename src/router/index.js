@@ -112,8 +112,7 @@ const routes = [
       {
         path: '/lgdc',
         name: 'LgdcVue',
-        component: LgdcVue,
-        meta: { section: "lgdc" },
+        component: LgdcVue
       },
       {
         path: '/creation',
@@ -144,19 +143,16 @@ const routes = [
         path: "/allCharacters",
         name: "allCharacters",
         component: AllCharactersLayout,
-        meta: { section: "lgdc" },
       },
       {
         path: "/CharacterCreate",
         name: "CharacterCreate",
         component: CharacterCreate,
-        meta: { section: "lgdc" },
       },
       {
         path: "/characterDetails/:id",
         name: "characterDetails",
         component: CharacterDetails,
-        meta: { section: "lgdc" },
       },{
         path: "/OriginaleCharacterDetails/:id",
         name: "OriginaleCharacterDetails",
@@ -179,19 +175,16 @@ const routes = [
         path: "/MapForest",
         name: "MapForest",
         component: MapForest,
-        meta: { section: "lgdc" },
       },
       {
         path: "/AllClansLayout",
         name: "AllClansLayout",
         component: AllClansLayout,
-        meta: { section: "lgdc" },
       },
       {
         path: "/clan/:id",
         name: "clanDetails",
         component: ClanDetails,
-        meta: { section: "lgdc" },
       }, {
         path: '/dashboard',
         name: 'Dashboard',
@@ -224,32 +217,27 @@ const routes = [
       {
         path: '/AllLocationsLayout',
         name: 'AllLocationsLayout',
-        component: AllLocationsLayout,
-        meta: { section: "lgdc" },
+        component: AllLocationsLayout
       },
       {
         path: '/LocationsDetails/:id',
         name: 'LocationsDetails',
-        component: LocationsDetails,
-        meta: { section: "lgdc" },
+        component: LocationsDetails
       },
       {
         path: '/ArcBookLayout',
         name: 'ArcBookLayout',
-        component: ArcBookLayout,
-        meta: { section: "lgdc" },
+        component: ArcBookLayout
       },
       {
         path: '/OneArc/:id',
         name: 'OneArc',
-        component: OneArc,
-        meta: { section: "lgdc" },
+        component: OneArc
       },
       {
         path: '/BookByTitle/:id',
         name: 'OneBook',
         component: OneBook,
-        meta: { section: "lgdc" },
         props: true
       },
       {
