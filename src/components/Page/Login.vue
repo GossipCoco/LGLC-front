@@ -91,7 +91,7 @@ export default {
         })
         .then(
           () => {
-            this.$router.push({ path: "/Dashboard" });
+            this.$router.push({ path: "/dashboard" });
           },
           (error) => {
             if (!error) {

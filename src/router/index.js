@@ -140,11 +140,6 @@ const routes = [
         component : UserCard
       },
       {
-        path: "/Dashboard",
-        name: "dashboard",
-        component: DashboardLayout,
-      },
-      {
         path: "/allCharacters",
         name: "allCharacters",
         component: AllCharactersLayout,
