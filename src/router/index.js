@@ -140,15 +140,15 @@ const clubsRoutes = [
 ];
 
 const gamesRoutes = [
-  { path: "/games", name: "GamesVue", component: GamesVue },
-  { path: "/game", name: "Game", component: GameLayout },
-  { path: "/mouseShot", name: "MouseShot", component: MouseShot },
-  { path: "/GooseGameLayout", name: "GooseGameLayout", component: GooseGameLayout },
-  { path: "/Quest", name: "QuestLayout", component: QuestLayout },
-  { path: "/QuestById/:id", name: "QuestById", component: QuestById },
-  { path: "/TreasureHunt", name: "TreasureHunt", component: TreasureHunt },
-  { path: "/rollOfDice", name: "RollOfDiceLayout", component: RollOfDiceLayout },
-  { path: "/puzzle", name: "PuzzleLayout", component: PuzzleLayout },
+  { path: "/games", name: "GamesVue", component: GamesVue, meta: { section: "game" } },
+  { path: "/game", name: "Game", component: GameLayout, meta: { section: "game" } },
+  { path: "/mouseShot", name: "MouseShot", component: MouseShot, meta: { section: "game" } },
+  { path: "/GooseGameLayout", name: "GooseGameLayout", component: GooseGameLayout, meta: { section: "game" } },
+  { path: "/Quest", name: "QuestLayout", component: QuestLayout, meta: { section: "game" } },
+  { path: "/QuestById/:id", name: "QuestById", component: QuestById , meta: { section: "game" }},
+  { path: "/TreasureHunt", name: "TreasureHunt", component: TreasureHunt, meta: { section: "game" } },
+  { path: "/rollOfDice", name: "RollOfDiceLayout", component: RollOfDiceLayout, meta: { section: "game" } },
+  { path: "/puzzle", name: "PuzzleLayout", component: PuzzleLayout, meta: { section: "game" } },
 ];
 
 const eventsRoutes = [
