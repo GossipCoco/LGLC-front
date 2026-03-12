@@ -66,17 +66,18 @@
         <li
           class="li-level1 display-flex-column align-items-content-justify-content"
         >
-          <router-link
-            to="/GroupLayout"
-            active-class="menu-link--active"
-            exact-active-class="menu-link--exact-active"
-          >
-            <div class="menu-level1 width-10-vh">
+          <router-link to="/GroupLayout">
+            <div
+              class="menu-level1 width-10-vh"
+              :class="{ 'menu-level1--active': isSectionActive('clubs') }"
+            >
               <div class="menu-li-contain">
                 <span
                   class="menu-text poppins-text font-size-1em font-weight-600"
-                  >Clubs</span
+                  :class="{ 'menu-text--active': isSectionActive('clubs') }"
                 >
+                  Clubs
+                </span>
               </div>
             </div>
           </router-link>
