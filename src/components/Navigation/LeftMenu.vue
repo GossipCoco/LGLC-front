@@ -123,7 +123,7 @@
             </div>
           </router-link>
         </li>
-        <li class="li-level1" v-if="role === 'Administrateur'">
+        <li class="li-level1 display-flex-column align-items-content-justify-content" v-if="role === 'Administrateur'">
           <router-link
             to="/admin"
             active-class="menu-link--active"
