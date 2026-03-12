@@ -131,3 +131,24 @@ ul {
 .menu-link--active .menu-text {
   color: #1b2b1e;
 }
+/* Actif exact : /dashboard uniquement */
+.menu-left a.router-link-exact-active .menu-level1 {
+  background: #1f3a2a;   /* exemple: fond */
+  border-radius: 12px;
+}
+
+.menu-left a.router-link-exact-active .menu-text {
+  color: #e9f6ee;        /* exemple: texte */
+}
+
+/* Optionnel: Actif “section” (si tu veux aussi router-link-active) */
+.menu-left a.router-link-active .menu-level1 {
+  background: #1f3a2a;
+  border-radius: 12px;
+}
+
+.menu-left a.router-link-active .menu-text {
+  color: #e9f6ee;
+}
+.menu-level1--active { background:#1f3a2a; border-radius:12px; }
+.menu-text--active { color:#e9f6ee; }

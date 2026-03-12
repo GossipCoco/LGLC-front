@@ -10,7 +10,8 @@
         <li
           class="li-level1 display-flex-column align-items-content-justify-content"
         >
-          <router-link to="/dashboard"
+          <router-link
+            to="/dashboard"
             active-class="menu-link--active"
             exact-active-class="menu-link--exact-active"
           >
@@ -25,17 +26,20 @@
           </router-link>
         </li>
         <li
-          class="li-level1 display-flex-column align-items-content-justify-content">
-          <router-link to="/lgdc"          
-            active-class="menu-link--active"
-            exact-active-class="menu-link--exact-active"
-          >
-            <div class="menu-level1 width-10-vh">
+          class="li-level1 display-flex-column align-items-content-justify-content"
+        >
+          <router-link to="/lgdc">
+            <div
+              class="menu-level1 height-10-vh width-10-vh"
+              :class="{ 'menu-level1--active': isSectionActive('lgdc') }"
+            >
               <div class="menu-li-contain">
                 <span
                   class="menu-text poppins-text font-size-1em font-weight-600"
-                  >LGDC</span
+                  :class="{ 'menu-text--active': isSectionActive('lgdc') }"
                 >
+                  LGDC
+                </span>
               </div>
             </div>
           </router-link>
@@ -43,7 +47,8 @@
         <li
           class="li-level1 display-flex-column align-items-content-justify-content"
         >
-          <router-link to="/creation"
+          <router-link
+            to="/creation"
             active-class="menu-link--active"
             exact-active-class="menu-link--exact-active"
           >
@@ -60,7 +65,8 @@
         <li
           class="li-level1 display-flex-column align-items-content-justify-content"
         >
-          <router-link to="/GroupLayout"          
+          <router-link
+            to="/GroupLayout"
             active-class="menu-link--active"
             exact-active-class="menu-link--exact-active"
           >
@@ -77,7 +83,8 @@
         <li
           class="li-level1 display-flex-column align-items-content-justify-content"
         >
-          <router-link to="/games"
+          <router-link
+            to="/games"
             active-class="menu-link--active"
             exact-active-class="menu-link--exact-active"
           >
@@ -94,7 +101,8 @@
         <li
           class="li-level1 display-flex-column align-items-content-justify-content"
         >
-          <router-link to="/EventGlobal"
+          <router-link
+            to="/EventGlobal"
             active-class="menu-link--active"
             exact-active-class="menu-link--exact-active"
           >
@@ -109,7 +117,8 @@
           </router-link>
         </li>
         <li class="li-level1" v-if="role === 'Administrateur'">
-          <router-link to="/admin"
+          <router-link
+            to="/admin"
             active-class="menu-link--active"
             exact-active-class="menu-link--exact-active"
           >
@@ -123,10 +132,7 @@
         <li>
           <div class="menu-li-contain">
             <div class="menu-level1 width-10-vh">
-              <a
-                href="#"
-                @click.prevent="logout"
-              >
+              <a href="#" @click.prevent="logout">
                 <span
                   class="menu-text poppins-text font-size-1em font-weight-600"
                   >Logout</span
@@ -159,6 +165,9 @@ export default {
     this.GetUserById(this.usrId);
   },
   methods: {
+    isSectionActive(section) {
+      return this.$route.matched.some((r) => r.meta?.section === section);
+    },
     GetUserById(e) {
       UserService.getUserById(e)
         .then((response) => {
