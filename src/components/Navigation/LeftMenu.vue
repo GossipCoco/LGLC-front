@@ -156,8 +156,8 @@ export default {
       isMenuOpen: false,
       showSubMenu: false,
       logo: "/images/Logos/LaGuerredesClansLogos2.png",
-      menuClass:'menu-left background-lineart-other03 d-flex display-flex-row flex-shrink-0 height-10-vh width-100-100 margin--0-0--2 scrollbar-color',
-      ulClass: 'nav nav-pills display-flex-row mb-auto display-flex align-items-content-justify-content width-100-100',
+      menuClass:'menu-left background-lineart-other03 d-flex display-flex-row flex-shrink-0 height-15-vh width-100-100 margin--0-0--2 scrollbar-color',
+      ulClass: 'nav nav-pills display-flex-row mb-auto display-flex align-items-content-justify-content width-100-100 padding-2-vh-0',
       lilevel1: 'li-level1 display-flex-column align-items-content-justify-content',
       activeClass:'menu-link--active',
       exactActiveClass:'menu-link--exact-active'
