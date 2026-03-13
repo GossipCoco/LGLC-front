@@ -178,7 +178,8 @@ ul {
 /* Et si tu survoles un item actif, on garde la couleur active */
 .menu-level1--active:hover .menu-text,
 .menu-link--active:hover .menu-text,
+.menu-link--exact-active:hover .menu-text,
 .menu-link--exact-active:hover .menu-text {
-  -webkit-text-fill-color: rgba(var(--active-hover), 1) !important;
-  color: rgba(var(--active-hover), 1) !important;
+  -webkit-text-fill-color: rgba(var(--dark-green-01), 1) !important;
+  color: rgba(var(--dark-green-01), 1) !important;
 }
