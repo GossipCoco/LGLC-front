@@ -13,19 +13,9 @@
   font-size: 18px;
 }
 /* MENU LEFT */
-.li-level1 {
-  margin-left: -1rem;
-}
-.menu-left {
-  position: fixed;
-}
-#collapseExample3 p {
-  font-size: 0.865em;
-  font-variant-caps: all-small-caps;
-  margin: 0;
-}
+
 .menu-level1 {
-  margin: 0 0 2vh 2vh;
+  margin: -2vh 0 0vh 2vh;
 }
 .icon-menu-container{
   width: 6vh;
@@ -120,17 +110,6 @@ ul {
   display: block;
   height: 5vh;
 }
-
-/* .menu-link--exact-active .menu-level1,
-.menu-link--active .menu-level1 {
-  background: rgba(var(--active-hover), 1);
-  border-radius: 12px;
-}
-
-.menu-link--exact-active .menu-text,
-.menu-link--active .menu-text {
-  color: #1b2b1e;
-}
 /* Actif exact : /dashboard uniquement */
 .menu-left a.router-link-exact-active .menu-level1 {
   background: #1f3a2a;   /* exemple: fond */
@@ -181,8 +160,8 @@ ul {
 .menu-level1--active {
   background: rgba(var(--ternary-green), 1) !important;
   border-radius: 8vh;
-  height: 5vh;
-  padding: 1vh 0 0 0;
+  height: 10vh;
+  padding: 3.5vh 0 0 0;
 }
 
 /* Tous les états "actifs" -> même texte (on écrase le gradient) */
