@@ -179,7 +179,7 @@ ul {
 .menu-left a.router-link-active .menu-level1,
 .menu-left a.router-link-exact-active .menu-level1,
 .menu-level1--active {
-  background: #1f3a2a !important;
+  background: rgba(var(--ternary-green), 1) !important;
   border-radius: 8vh;
   height: 5vh;
   padding: 1vh 0 0 0;
@@ -193,8 +193,8 @@ ul {
 .menu-text--active {
   background: none !important;
   background-clip: border-box !important;
-  -webkit-text-fill-color: rgba(var(--active-hover), 1) !important;
-  color: rgba(var(--active-hover), 1) !important;
+  -webkit-text-fill-color: rgba(var(--dark-green-text), 1) !important;
+  color: rgba(var(--dark-green-text), 1) !important;
 }
 
 /* Et si tu survoles un item actif, on garde la couleur active */
