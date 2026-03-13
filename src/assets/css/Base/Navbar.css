@@ -54,14 +54,7 @@ ul {
   padding: 0;
   margin: -7vh 0 0 -29vh;
 }
-#accueil .navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark{
-  padding: 0;
-  margin: -1.5rem 0 0rem 0;
-}
 
-.menu-hidden {
-  display: none;
-}
 .menu-left ul li {
     margin: 2vh 0;
     display: flex;

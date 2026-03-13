@@ -12,10 +12,7 @@
 .mini-rond-messages p{
     margin: 1vh 0 2vh 0;
 }
-/* Menu left */
-/* .nav-link, .nav-pills .show>.nav-link{
-    color: rgba(var(--main-white), 1);
-} */
+
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
     background-color: rgba(var(--dark-green-01), 1);
 }
