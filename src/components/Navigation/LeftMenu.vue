@@ -15,7 +15,7 @@
             active-class="menu-link--active"
             exact-active-class="menu-link--exact-active"
           >
-            <div class="menu-level1 width-10-vh">
+            <div class="menu-level1 width-15-vh">
               <div class="menu-li-contain">
                 <span
                   class="menu-text poppins-text font-size-1em font-weight-600"
@@ -30,7 +30,7 @@
         >
           <router-link to="/lgdc">
             <div
-              class="menu-level1 width-10-vh"
+              class="menu-level1 width-15-vh"
               :class="{ 'menu-level1--active': isSectionActive('lgdc') }"
             >
               <div class="menu-li-contain">
@@ -38,7 +38,7 @@
                   class="menu-text poppins-text font-size-1em font-weight-600"
                   :class="{ 'menu-text--active': isSectionActive('lgdc') }"
                 >
-                  LGDC
+                  L'univers de LGDC
                 </span>
               </div>
             </div>
@@ -49,7 +49,7 @@
         >
           <router-link to="/creation">
             <div
-              class="menu-level1 width-10-vh"
+              class="menu-level1 width-15-vh"
               :class="{ 'menu-level1--active': isSectionActive('creation') }"
             >
               <div class="menu-li-contain">
@@ -68,7 +68,7 @@
         >
           <router-link to="/GroupLayout">
             <div
-              class="menu-level1 width-10-vh"
+              class="menu-level1 width-15-vh"
               :class="{ 'menu-level1--active': isSectionActive('clubs') }"
             >
               <div class="menu-li-contain">
@@ -91,7 +91,7 @@
             exact-active-class="menu-link--exact-active"
           >
             <div
-              class="menu-level1 width-10-vh"
+              class="menu-level1 width-15-vh"
               :class="{ 'menu-level1--active': isSectionActive('game') }"
             >
               <div class="menu-li-contain">
@@ -113,7 +113,7 @@
             active-class="menu-link--active"
             exact-active-class="menu-link--exact-active"
           >
-            <div class="menu-level1 width-10-vh">
+            <div class="menu-level1 width-15-vh">
               <div class="menu-li-contain">
                 <span
                   class="menu-text poppins-text font-size-1em font-weight-600"
@@ -129,7 +129,7 @@
             active-class="menu-link--active"
             exact-active-class="menu-link--exact-active"
           >
-            <div class="menu-level1 width-10-vh">
+            <div class="menu-level1 width-15-vh">
               <span class="menu-text poppins-text font-size-1em font-weight-600"
                 >Admin</span
               >
@@ -138,7 +138,7 @@
         </li>
         <li>
           <div class="menu-li-contain">
-            <div class="menu-level1 width-10-vh">
+            <div class="menu-level1 width-15-vh">
               <a href="#" @click.prevent="logout">
                 <span
                   class="menu-text poppins-text font-size-1em font-weight-600"

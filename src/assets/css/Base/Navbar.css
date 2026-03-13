@@ -159,7 +159,7 @@ ul {
 
 /* (Optionnel mais conseillé) donner une vraie zone de "pill" */
 .menu-level1 {
-  padding: 0.55rem 0.8rem;
+  padding: 1vh;
   display: flex;
   align-items: center;
   justify-content: center;
