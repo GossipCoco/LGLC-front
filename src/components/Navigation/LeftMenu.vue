@@ -46,8 +46,7 @@
             </span>
           </div>
         </router-link>
-      </li>
-      
+      </li>      
       <li :class="lilevel1">
         <router-link to="/games" class="menu-level1 width-20-vh" :class="{ 'menu-level1--active': isSectionActive('game') }">
           <div class="menu-li-contain">
