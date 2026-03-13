@@ -95,10 +95,10 @@ ul {
   display: none;
 }
 .menu-left ul li {
-  margin: 2vh 0;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+    margin: 2vh 2vh;
+    display: flex;
+    align-items: center;
+    gap: 3vh;
 }
 .menu-level1 span{
   /* margin: 1vh 0 0 -1vh; */
@@ -123,7 +123,7 @@ ul {
 
 .menu-link--exact-active .menu-level1,
 .menu-link--active .menu-level1 {
-  background: #e7f3ea;
+  background: rgba(var(--active-hover), 1);
   border-radius: 12px;
 }
 
@@ -191,14 +191,14 @@ ul {
 .menu-text--active {
   background: none !important;
   background-clip: border-box !important;
-  -webkit-text-fill-color: #e9f6ee !important;
-  color: #e9f6ee !important;
+  -webkit-text-fill-color: rgba(var(--active-hover), 1) !important;
+  color: rgba(var(--active-hover), 1) !important;
 }
 
 /* Et si tu survoles un item actif, on garde la couleur active */
 .menu-level1--active:hover .menu-text,
 .menu-link--active:hover .menu-text,
 .menu-link--exact-active:hover .menu-text {
-  -webkit-text-fill-color: #e9f6ee !important;
-  color: #e9f6ee !important;
+  -webkit-text-fill-color: rgba(var(--active-hover), 1) !important;
+  color: rgba(var(--active-hover), 1) !important;
 }
