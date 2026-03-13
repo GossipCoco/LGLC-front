@@ -9,7 +9,7 @@
             :active-class="activeClass"
             :exact-active-class="exactActiveClass"
           >
-            <div class="menu-level1 width-15-vh">
+            <div class="menu-level1 width-20-vh">
               <div class="menu-li-contain">
                 <span
                   class="menu-text poppins-text font-size-1em font-weight-600"
@@ -22,7 +22,7 @@
         <li :class="lilevel1">
           <router-link to="/lgdc">
             <div
-              class="menu-level1 width-15-vh"
+              class="menu-level1 width-20-vh"
               :class="{ 'menu-level1--active': isSectionActive('lgdc') }"
             >
               <div class="menu-li-contain">
@@ -39,7 +39,7 @@
         <li :class="lilevel1">
           <router-link to="/creation">
             <div
-            class="menu-level1 width-15-vh"
+            class="menu-level1 width-20-vh"
             :class="{ 'menu-level1--active': isSectionActive('creation') }"
             >
               <div class="menu-li-contain">
@@ -58,7 +58,7 @@
         >
           <router-link to="/GroupLayout">
             <div
-              class="menu-level1 width-15-vh"
+              class="menu-level1 width-20-vh"
               :class="{ 'menu-level1--active': isSectionActive('clubs') }"
             >
               <div class="menu-li-contain">
@@ -81,7 +81,7 @@
             :exact-active-class="exactActiveClass"
           >
             <div
-              class="menu-level1 width-15-vh"
+              class="menu-level1 width-20-vh"
               :class="{ 'menu-level1--active': isSectionActive('game') }"
             >
               <div class="menu-li-contain">
@@ -103,7 +103,7 @@
             :active-class="activeClass"
             :exact-active-class="exactActiveClass"
           >
-            <div class="menu-level1 width-15-vh">
+            <div class="menu-level1 width-20-vh">
               <div class="menu-li-contain">
                 <span
                   class="menu-text poppins-text font-size-1em font-weight-600"
@@ -119,7 +119,7 @@
             :active-class="activeClass"
             :exact-active-class="exactActiveClass"
           >
-            <div class="menu-level1 width-15-vh">
+            <div class="menu-level1 width-20-vh">
               <span class="menu-text poppins-text font-size-1em font-weight-600"
                 >Admin</span
               >
@@ -128,7 +128,7 @@
         </li>
         <li :class="lilevel1">
           <div class="menu-li-contain">
-            <div class="menu-level1 width-15-vh">
+            <div class="menu-level1 width-20-vh">
               <a href="#" @click.prevent="logout">
                 <span
                   class="menu-text poppins-text font-size-1em font-weight-600"
