@@ -6,10 +6,7 @@
         <router-link to="/dashboard" :active-class="activeClass" :exact-active-class="exactActiveClass">
           <div class="menu-level1 width-20-vh">
             <div class="menu-li-contain">
-              <span
-                class="menu-text poppins-text font-size-1em font-weight-600"
-                >Tableau de bord</span
-              >
+              <span class="menu-text poppins-text font-size-1em font-weight-600">Tableau de bord</span>
             </div>
           </div>
         </router-link>
