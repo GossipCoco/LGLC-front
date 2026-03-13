@@ -3,11 +3,7 @@
     <Logo v-bind:img="logo" />
     <ul :class="ulClass">
       <li :class="lilevel1">
-        <router-link
-          to="/dashboard"
-          :active-class="activeClass"
-          :exact-active-class="exactActiveClass"
-        >
+        <router-link to="/dashboard" :active-class="activeClass" :exact-active-class="exactActiveClass">
           <div class="menu-level1 width-20-vh">
             <div class="menu-li-contain">
               <span
@@ -19,70 +15,44 @@
         </router-link>
       </li>
       <li :class="lilevel1">
-        <router-link to="/lgdc">
-          <div
-            class="menu-level1 width-20-vh"
-            :class="{ 'menu-level1--active': isSectionActive('lgdc') }"
-          >
-            <div class="menu-li-contain">
-              <span
-                class="menu-text poppins-text font-size-1em font-weight-600"
-                :class="{ 'menu-text--active': isSectionActive('lgdc') }"
-              >
-                L'univers de LGDC
-              </span>
-            </div>
+        <router-link to="/lgdc" class="menu-level1 width-20-vh" :class="{ 'menu-level1--active': isSectionActive('lgdc') }">
+          <div class="menu-li-contain">
+            <span
+              class="menu-text poppins-text font-size-1em font-weight-600"
+              :class="{ 'menu-text--active': isSectionActive('lgdc') }"
+            >
+              L'univers de LGDC
+            </span>
           </div>
         </router-link>
       </li>
       <li :class="lilevel1">
-        <router-link to="/creation">
-          <div
-          class="menu-level1 width-20-vh"
-          :class="{ 'menu-level1--active': isSectionActive('creation') }"
-          >
-            <div class="menu-li-contain">
-              <span
-                class="menu-text poppins-text font-size-1em font-weight-600"
-                :class="{ 'menu-text--active': isSectionActive('creation') }"
-              >
-                Créations
-              </span>
-            </div>
+        <router-link to="/creation" class="menu-level1 width-20-vh" :class="{ 'menu-level1--active': isSectionActive('creation') }">
+          <div class="menu-li-contain">
+            <span
+              class="menu-text poppins-text font-size-1em font-weight-600"
+              :class="{ 'menu-text--active': isSectionActive('creation') }"
+            >
+              Créations
+            </span>
           </div>
         </router-link>
       </li>
-      <li
-        :class="lilevel1"
-      >
-        <router-link to="/GroupLayout">
-          <div
-            class="menu-level1 width-20-vh"
-            :class="{ 'menu-level1--active': isSectionActive('clubs') }"
-          >
-            <div class="menu-li-contain">
-              <span
-                class="menu-text poppins-text font-size-1em font-weight-600"
-                :class="{ 'menu-text--active': isSectionActive('clubs') }"
-              >
-                Clubs
-              </span>
-            </div>
+      <li :class="lilevel1">
+        <router-link to="/GroupLayout" class="menu-level1 width-20-vh" :class="{ 'menu-level1--active': isSectionActive('clubs') }">
+          <div class="menu-li-contain">
+            <span
+              class="menu-text poppins-text font-size-1em font-weight-600"
+              :class="{ 'menu-text--active': isSectionActive('clubs') }"
+            >
+              Clubs
+            </span>
           </div>
         </router-link>
       </li>
-      <li
-        :class="lilevel1"
-      >
-        <router-link
-          to="/games"
-          :active-class="activeClass"
-          :exact-active-class="exactActiveClass"
-        >
-          <div
-            class="menu-level1 width-20-vh"
-            :class="{ 'menu-level1--active': isSectionActive('game') }"
-          >
+      <li :class="lilevel1">
+        <router-link  to="/games" :class="{ 'menu-level1--active': isSectionActive('game') }" :active-class="activeClass" :exact-active-class="exactActiveClass">
+          <div class="menu-level1 width-20-vh">
             <div class="menu-li-contain">
               <span
                 class="menu-text poppins-text font-size-1em font-weight-600"
@@ -94,9 +64,7 @@
           </div>
         </router-link>
       </li>
-      <li
-        :class="lilevel1"
-      >
+      <li :class="lilevel1">
         <router-link
           to="/EventGlobal"
           :active-class="activeClass"
