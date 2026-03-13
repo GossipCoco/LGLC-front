@@ -1,6 +1,6 @@
 <template>
-    <header data-bs-theme="dark">
-      <nav class="navbar align-items-content-justify-content navbar-expand-md navbar-dark fixed-top">
+    <header class="background-lineart-other03k">
+      <nav class="navbar align-items-content-justify-content navbar-expand-md background-lineart-other03k fixed-top">
         <div class="container-fluid header-container overflowY-X-hidden overflow-hidden">
           <div class="logo-accueil-container flex-one">
           <router-link to="/Accueil" class="navbar-brand">

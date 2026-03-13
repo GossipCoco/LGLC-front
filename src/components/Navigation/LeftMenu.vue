@@ -1,15 +1,13 @@
 <template>
   <div class="left-menu-content">
-    <div
-      class="menu-left background-lineart-other03 d-flex display-flex-row flex-shrink-0 height-10-vh width-100-100 margin--0-0--2 scrollbar-color"
-    >
+    <div :class="menuClass">
       <Logo v-bind:img="logo" />
       <ul :class="ulClass">
         <li :class="lilevel1">
           <router-link
             to="/dashboard"
-            active-class="menu-link--active"
-            exact-active-class="menu-link--exact-active"
+            :active-class="activeClass"
+            :exact-active-class="exactActiveClass"
           >
             <div class="menu-level1 width-15-vh">
               <div class="menu-li-contain">
@@ -79,8 +77,8 @@
         >
           <router-link
             to="/games"
-            active-class="menu-link--active"
-            exact-active-class="menu-link--exact-active"
+            :active-class="activeClass"
+            :exact-active-class="exactActiveClass"
           >
             <div
               class="menu-level1 width-15-vh"
@@ -102,8 +100,8 @@
         >
           <router-link
             to="/EventGlobal"
-            active-class="menu-link--active"
-            exact-active-class="menu-link--exact-active"
+            :active-class="activeClass"
+            :exact-active-class="exactActiveClass"
           >
             <div class="menu-level1 width-15-vh">
               <div class="menu-li-contain">
@@ -118,8 +116,8 @@
         <li :class="lilevel1" v-if="role === 'Administrateur'">
           <router-link
             to="/admin"
-            active-class="menu-link--active"
-            exact-active-class="menu-link--exact-active"
+            :active-class="activeClass"
+            :exact-active-class="exactActiveClass"
           >
             <div class="menu-level1 width-15-vh">
               <span class="menu-text poppins-text font-size-1em font-weight-600"
@@ -158,8 +156,11 @@ export default {
       isMenuOpen: false,
       showSubMenu: false,
       logo: "/images/Logos/LaGuerredesClansLogos2.png",
+      menuClass:'menu-left background-lineart-other03 d-flex display-flex-row flex-shrink-0 height-10-vh width-100-100 margin--0-0--2 scrollbar-color',
       ulClass: 'nav nav-pills display-flex-row mb-auto display-flex align-items-content-justify-content width-100-100',
-      lilevel1: 'li-level1 display-flex-column align-items-content-justify-content'
+      lilevel1: 'li-level1 display-flex-column align-items-content-justify-content',
+      activeClass:'menu-link--active',
+      exactActiveClass:'menu-link--exact-active'
     };
   },
   created() {

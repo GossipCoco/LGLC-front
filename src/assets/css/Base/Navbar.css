@@ -38,11 +38,11 @@
 .li-level1:hover, .link-collapse:hover {
   color: rgba(var(--active-hover), 1);
 }
-.icon-menu-container svg,
+/* .icon-menu-container svg,
 .icon-menu-container i,
 .icon-menu-container img {
   color: rgba(var(--dark-green-02), 1);
-}
+} */
 ul {
   list-style: none;
 }
