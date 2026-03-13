@@ -9,7 +9,7 @@
             alt="Warriors_043355.png"
           />
           <div class="card-body text-align-center">
-            <router-link to="/allCharacters" class="text-white">Les Personnages</router-link>
+            <router-link to="/allCharacters" class="text-white poppins-text">Les Personnages</router-link>
           </div>
         </div>
       </div>
@@ -21,7 +21,7 @@
             alt="Warriors_043355.png"
           />
           <div class="card-body text-align-center">
-            <router-link to="/AllClansLayout" class="text-white">Les Clans</router-link>
+            <router-link to="/AllClansLayout" class="text-white poppins-text">Les Clans</router-link>
           </div>
         </div>
       </div>
@@ -33,7 +33,7 @@
             alt="Warriors_043355.png"
           />
           <div class="card-body text-align-center">
-            <router-link to="/AllLocationsLayout" class="text-white">
+            <router-link to="/AllLocationsLayout" class="text-white poppins-text">
               Les lieux emblématique
             </router-link>
           </div>
@@ -47,7 +47,7 @@
             alt="Warriors_043355.png"
           />
           <div class="card-body text-align-center">
-            <router-link to="/ArcBookLayout" class="text-white">Arcs & livres</router-link>
+            <router-link to="/ArcBookLayout" class="text-white poppins-text">Arcs & livres</router-link>
           </div>
         </div>
       </div>
