@@ -1,6 +1,6 @@
 <template>
   <div
-    class="height-90-vh width-100-100 margin-0-0-10vh-0 overflowY-scroll overflowX-hidden"
+    class="height-90-vh width-100-100 margin-0-0-15vh-0 overflowY-scroll overflowX-hidden"
   >
     <div class="row">
       <div
@@ -15,17 +15,24 @@
       <div
         class="col-10 col-xl-10 col-xxl-10 col-lg-10 col-md-10 col-sm-12 col xs-12"
       >
-        <AllCardsFictions :allFictions="allFictions" />
+        <div class="row">
+          <div
+            class="col-12 col-xl-12 col-xxl-12 col-lg-12 col-md-12 col-sm-12 col xs-12"
+          >
+            <AllCardsFictions :allFictions="allFictions" />
+          </div>
+        </div>
+
+        <div class="row pagination-container margin-2vh">
+          <Pagination
+            v-if="!showspinner"
+            :nav="nav"
+            :filters="filters"
+            :getDatas="'FictionPagination'"
+            @FictionPagination="FictionPagination"
+          />
+        </div>
       </div>
-    </div>
-    <div class="row pagination-container margin-2vh">
-      <Pagination
-        v-if="!showspinner"
-        :nav="nav"
-        :filters="filters"
-        :getDatas="'FictionPagination'"
-        @FictionPagination="FictionPagination"
-      />
     </div>
   </div>
 </template>
