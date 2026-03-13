@@ -28,11 +28,6 @@
 .li-level1:hover, .link-collapse:hover {
   color: rgba(var(--active-hover), 1);
 }
-/* .icon-menu-container svg,
-.icon-menu-container i,
-.icon-menu-container img {
-  color: rgba(var(--dark-green-02), 1);
-} */
 ul {
   list-style: none;
 }
@@ -54,16 +49,7 @@ ul {
   word-break: break-word;
   margin: 0.5vh 0 1vh 3vh;
 }
-.menu-li-contain svg {
-  margin: 1rem -1rem 0 1rem;
-}
-.link-collapse {
-  font-family: "Poppins", sans-serif;
-  font-size: 0.5em;
-  white-space: normal;
-  overflow-wrap: break-word;
-  line-height: 1.5;
-}
+
 .logo-accueil-container{
   padding: 0;
   margin: -7vh 0 0 -29vh;
@@ -72,15 +58,7 @@ ul {
   padding: 0;
   margin: -1.5rem 0 0rem 0;
 }
-/* FITLER */
-.row-filter{
-  padding: 1rem 0 0 2rem;
-  margin: 0.5rem 0 0 1rem;
-}
-.list-all-characters-container .row-filter{
-  padding: 2rem 0 0 2rem;
-  margin: 1.5rem 0 0 1rem;
-}
+
 .menu-hidden {
   display: none;
 }
