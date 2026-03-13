@@ -47,17 +47,16 @@
           </div>
         </router-link>
       </li>
+      
       <li :class="lilevel1">
-        <router-link  to="/games" :class="{ 'menu-level1--active': isSectionActive('game') }" :active-class="activeClass" :exact-active-class="exactActiveClass">
-          <div class="menu-level1 width-20-vh">
-            <div class="menu-li-contain">
-              <span
-                class="menu-text poppins-text font-size-1em font-weight-600"
-                :class="{ 'menu-text--active': isSectionActive('game') }"
-              >
-                Jeux
-              </span>
-            </div>
+        <router-link to="/games" class="menu-level1 width-20-vh" :class="{ 'menu-level1--active': isSectionActive('game') }">
+          <div class="menu-li-contain">
+            <span
+              class="menu-text poppins-text font-size-1em font-weight-600"
+              :class="{ 'menu-text--active': isSectionActive('game') }"
+            >
+              Jeux
+            </span>
           </div>
         </router-link>
       </li>

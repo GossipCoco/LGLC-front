@@ -15,7 +15,7 @@
 /* MENU LEFT */
 
 .menu-level1 {
-  margin: -2vh 0 0vh 2vh;
+  margin: 1vh 0 0 1vh
 }
 .icon-menu-container{
   width: 6vh;
@@ -91,7 +91,6 @@ ul {
     gap: 3vh;
 }
 .menu-level1 span{
-  /* margin: 1vh 0 0 -1vh; */
   background: var(--lineart-menu-title);
   color: transparent;
   background-clip: text;
@@ -158,10 +157,10 @@ ul {
 .menu-left a.router-link-active .menu-level1,
 .menu-left a.router-link-exact-active .menu-level1,
 .menu-level1--active {
-  background: rgba(var(--ternary-green), 1) !important;
-  border-radius: 8vh;
-  height: 10vh;
-  padding: 3.5vh 0 0 0;
+  background: rgba(var(--ternary-green), 1);
+      border-radius: 4vh 4vh 0 0;
+    height: 10vh;
+    padding: 3.5vh 0 0 0;
 }
 
 /* Tous les états "actifs" -> même texte (on écrase le gradient) */
