@@ -121,7 +121,7 @@ ul {
   height: 5vh;
 }
 
-.menu-link--exact-active .menu-level1,
+/* .menu-link--exact-active .menu-level1,
 .menu-link--active .menu-level1 {
   background: rgba(var(--active-hover), 1);
   border-radius: 12px;
@@ -151,7 +151,7 @@ ul {
   color: #e9f6ee;
 }
 .menu-level1--active { background:#1f3a2a; border-radius:12px; }
-.menu-text--active { color:#e9f6ee; }
+.menu-text--active { color:#e9f6ee; } */
 
 /* =========================
    MENU LEFT - ACTIVE UNIFIED

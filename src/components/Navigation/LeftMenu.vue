@@ -8,7 +8,7 @@
         class="nav nav-pills display-flex-row mb-auto display-flex align-items-content-justify-content width-100-100"
       >
         <li
-          class="li-level1 display-flex-column align-items-content-justify-content"
+          :class="lilevel1"
         >
           <router-link
             to="/dashboard"
@@ -26,7 +26,7 @@
           </router-link>
         </li>
         <li
-          class="li-level1 display-flex-column align-items-content-justify-content"
+          :class="lilevel1"
         >
           <router-link to="/lgdc">
             <div
@@ -45,7 +45,7 @@
           </router-link>
         </li>
         <li
-          class="li-level1 display-flex-column align-items-content-justify-content"
+          :class="lilevel1"
         >
           <router-link to="/creation">
             <div
@@ -64,7 +64,7 @@
           </router-link>
         </li>
         <li
-          class="li-level1 display-flex-column align-items-content-justify-content"
+          :class="lilevel1"
         >
           <router-link to="/GroupLayout">
             <div
@@ -83,7 +83,7 @@
           </router-link>
         </li>
         <li
-          class="li-level1 display-flex-column align-items-content-justify-content"
+          :class="lilevel1"
         >
           <router-link
             to="/games"
@@ -106,7 +106,7 @@
           </router-link>
         </li>
         <li
-          class="li-level1 display-flex-column align-items-content-justify-content"
+          :class="lilevel1"
         >
           <router-link
             to="/EventGlobal"
@@ -123,7 +123,7 @@
             </div>
           </router-link>
         </li>
-        <li class="li-level1 display-flex-column align-items-content-justify-content" v-if="role === 'Administrateur'">
+        <li :class="lilevel1" v-if="role === 'Administrateur'">
           <router-link
             to="/admin"
             active-class="menu-link--active"
@@ -136,7 +136,7 @@
             </div>
           </router-link>
         </li>
-        <li>
+        <li :class="lilevel1">
           <div class="menu-li-contain">
             <div class="menu-level1 width-15-vh">
               <a href="#" @click.prevent="logout">
@@ -166,6 +166,7 @@ export default {
       isMenuOpen: false,
       showSubMenu: false,
       logo: "/images/Logos/LaGuerredesClansLogos2.png",
+      lilevel1: 'li-level1 display-flex-column align-items-content-justify-content'
     };
   },
   created() {
