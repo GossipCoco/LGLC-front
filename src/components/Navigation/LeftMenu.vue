@@ -1,145 +1,143 @@
 <template>
-  <div class="left-menu-content">
-    <div :class="menuClass">
-      <Logo v-bind:img="logo" />
-      <ul :class="ulClass">
-        <li :class="lilevel1">
-          <router-link
-            to="/dashboard"
-            :active-class="activeClass"
-            :exact-active-class="exactActiveClass"
-          >
-            <div class="menu-level1 width-20-vh">
-              <div class="menu-li-contain">
-                <span
-                  class="menu-text poppins-text font-size-1em font-weight-600"
-                  >Accueil</span
-                >
-              </div>
-            </div>
-          </router-link>
-        </li>
-        <li :class="lilevel1">
-          <router-link to="/lgdc">
-            <div
-              class="menu-level1 width-20-vh"
-              :class="{ 'menu-level1--active': isSectionActive('lgdc') }"
-            >
-              <div class="menu-li-contain">
-                <span
-                  class="menu-text poppins-text font-size-1em font-weight-600"
-                  :class="{ 'menu-text--active': isSectionActive('lgdc') }"
-                >
-                  L'univers de LGDC
-                </span>
-              </div>
-            </div>
-          </router-link>
-        </li>
-        <li :class="lilevel1">
-          <router-link to="/creation">
-            <div
-            class="menu-level1 width-20-vh"
-            :class="{ 'menu-level1--active': isSectionActive('creation') }"
-            >
-              <div class="menu-li-contain">
-                <span
-                  class="menu-text poppins-text font-size-1em font-weight-600"
-                  :class="{ 'menu-text--active': isSectionActive('creation') }"
-                >
-                  Créations
-                </span>
-              </div>
-            </div>
-          </router-link>
-        </li>
-        <li
-          :class="lilevel1"
+  <div :class="menuClass">
+    <Logo v-bind:img="logo" />
+    <ul :class="ulClass">
+      <li :class="lilevel1">
+        <router-link
+          to="/dashboard"
+          :active-class="activeClass"
+          :exact-active-class="exactActiveClass"
         >
-          <router-link to="/GroupLayout">
-            <div
-              class="menu-level1 width-20-vh"
-              :class="{ 'menu-level1--active': isSectionActive('clubs') }"
-            >
-              <div class="menu-li-contain">
-                <span
-                  class="menu-text poppins-text font-size-1em font-weight-600"
-                  :class="{ 'menu-text--active': isSectionActive('clubs') }"
-                >
-                  Clubs
-                </span>
-              </div>
-            </div>
-          </router-link>
-        </li>
-        <li
-          :class="lilevel1"
-        >
-          <router-link
-            to="/games"
-            :active-class="activeClass"
-            :exact-active-class="exactActiveClass"
-          >
-            <div
-              class="menu-level1 width-20-vh"
-              :class="{ 'menu-level1--active': isSectionActive('game') }"
-            >
-              <div class="menu-li-contain">
-                <span
-                  class="menu-text poppins-text font-size-1em font-weight-600"
-                  :class="{ 'menu-text--active': isSectionActive('game') }"
-                >
-                  Jeux
-                </span>
-              </div>
-            </div>
-          </router-link>
-        </li>
-        <li
-          :class="lilevel1"
-        >
-          <router-link
-            to="/EventGlobal"
-            :active-class="activeClass"
-            :exact-active-class="exactActiveClass"
-          >
-            <div class="menu-level1 width-20-vh">
-              <div class="menu-li-contain">
-                <span
-                  class="menu-text poppins-text font-size-1em font-weight-600"
-                  >Event</span
-                >
-              </div>
-            </div>
-          </router-link>
-        </li>
-        <li :class="lilevel1" v-if="role === 'Administrateur'">
-          <router-link
-            to="/admin"
-            :active-class="activeClass"
-            :exact-active-class="exactActiveClass"
-          >
-            <div class="menu-level1 width-20-vh">
-              <span class="menu-text poppins-text font-size-1em font-weight-600"
-                >Admin</span
+          <div class="menu-level1 width-20-vh">
+            <div class="menu-li-contain">
+              <span
+                class="menu-text poppins-text font-size-1em font-weight-600"
+                >Tableau de bord</span
               >
             </div>
-          </router-link>
-        </li>
-        <li :class="lilevel1">
-          <div class="menu-li-contain">
-            <div class="menu-level1 width-20-vh">
-              <a href="#" @click.prevent="logout">
-                <span
-                  class="menu-text poppins-text font-size-1em font-weight-600"
-                  >Logout</span
-                >
-              </a>
+          </div>
+        </router-link>
+      </li>
+      <li :class="lilevel1">
+        <router-link to="/lgdc">
+          <div
+            class="menu-level1 width-20-vh"
+            :class="{ 'menu-level1--active': isSectionActive('lgdc') }"
+          >
+            <div class="menu-li-contain">
+              <span
+                class="menu-text poppins-text font-size-1em font-weight-600"
+                :class="{ 'menu-text--active': isSectionActive('lgdc') }"
+              >
+                L'univers de LGDC
+              </span>
             </div>
           </div>
-        </li>
-      </ul>
-    </div>
+        </router-link>
+      </li>
+      <li :class="lilevel1">
+        <router-link to="/creation">
+          <div
+          class="menu-level1 width-20-vh"
+          :class="{ 'menu-level1--active': isSectionActive('creation') }"
+          >
+            <div class="menu-li-contain">
+              <span
+                class="menu-text poppins-text font-size-1em font-weight-600"
+                :class="{ 'menu-text--active': isSectionActive('creation') }"
+              >
+                Créations
+              </span>
+            </div>
+          </div>
+        </router-link>
+      </li>
+      <li
+        :class="lilevel1"
+      >
+        <router-link to="/GroupLayout">
+          <div
+            class="menu-level1 width-20-vh"
+            :class="{ 'menu-level1--active': isSectionActive('clubs') }"
+          >
+            <div class="menu-li-contain">
+              <span
+                class="menu-text poppins-text font-size-1em font-weight-600"
+                :class="{ 'menu-text--active': isSectionActive('clubs') }"
+              >
+                Clubs
+              </span>
+            </div>
+          </div>
+        </router-link>
+      </li>
+      <li
+        :class="lilevel1"
+      >
+        <router-link
+          to="/games"
+          :active-class="activeClass"
+          :exact-active-class="exactActiveClass"
+        >
+          <div
+            class="menu-level1 width-20-vh"
+            :class="{ 'menu-level1--active': isSectionActive('game') }"
+          >
+            <div class="menu-li-contain">
+              <span
+                class="menu-text poppins-text font-size-1em font-weight-600"
+                :class="{ 'menu-text--active': isSectionActive('game') }"
+              >
+                Jeux
+              </span>
+            </div>
+          </div>
+        </router-link>
+      </li>
+      <li
+        :class="lilevel1"
+      >
+        <router-link
+          to="/EventGlobal"
+          :active-class="activeClass"
+          :exact-active-class="exactActiveClass"
+        >
+          <div class="menu-level1 width-20-vh">
+            <div class="menu-li-contain">
+              <span
+                class="menu-text poppins-text font-size-1em font-weight-600"
+                >Event</span
+              >
+            </div>
+          </div>
+        </router-link>
+      </li>
+      <li :class="lilevel1" v-if="role === 'Administrateur'">
+        <router-link
+          to="/admin"
+          :active-class="activeClass"
+          :exact-active-class="exactActiveClass"
+        >
+          <div class="menu-level1 width-20-vh">
+            <span class="menu-text poppins-text font-size-1em font-weight-600"
+              >Admin</span
+            >
+          </div>
+        </router-link>
+      </li>
+      <li :class="lilevel1">
+        <div class="menu-li-contain">
+          <div class="menu-level1 width-20-vh">
+            <a href="#" @click.prevent="logout">
+              <span
+                class="menu-text poppins-text font-size-1em font-weight-600"
+                >Logout</span
+              >
+            </a>
+          </div>
+        </div>
+      </li>
+    </ul>
   </div>
 </template>
 <script>
