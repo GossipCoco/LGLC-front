@@ -4,12 +4,8 @@
       class="menu-left background-lineart-other03 d-flex display-flex-row flex-shrink-0 height-10-vh width-100-100 margin--0-0--2 scrollbar-color"
     >
       <Logo v-bind:img="logo" />
-      <ul
-        class="nav nav-pills display-flex-row mb-auto display-flex align-items-content-justify-content width-100-100"
-      >
-        <li
-          :class="lilevel1"
-        >
+      <ul :class="ulClass">
+        <li :class="lilevel1">
           <router-link
             to="/dashboard"
             active-class="menu-link--active"
@@ -25,9 +21,7 @@
             </div>
           </router-link>
         </li>
-        <li
-          :class="lilevel1"
-        >
+        <li :class="lilevel1">
           <router-link to="/lgdc">
             <div
               class="menu-level1 width-15-vh"
@@ -44,13 +38,11 @@
             </div>
           </router-link>
         </li>
-        <li
-          :class="lilevel1"
-        >
+        <li :class="lilevel1">
           <router-link to="/creation">
             <div
-              class="menu-level1 width-15-vh"
-              :class="{ 'menu-level1--active': isSectionActive('creation') }"
+            class="menu-level1 width-15-vh"
+            :class="{ 'menu-level1--active': isSectionActive('creation') }"
             >
               <div class="menu-li-contain">
                 <span
@@ -166,6 +158,7 @@ export default {
       isMenuOpen: false,
       showSubMenu: false,
       logo: "/images/Logos/LaGuerredesClansLogos2.png",
+      ulClass: 'nav nav-pills display-flex-row mb-auto display-flex align-items-content-justify-content width-100-100',
       lilevel1: 'li-level1 display-flex-column align-items-content-justify-content'
     };
   },
