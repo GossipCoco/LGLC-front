@@ -89,10 +89,10 @@ h2{
     margin-top: 10rem;
 }
 #accueil nav.bg-dark, #accueil nav .container-fluid {
-    background-color: rgba(var(--main-black), 1);
+    background: var(--lineart-other03);
 }
 #accueil header {
-    background-color: rgba(var(--main-black), 1);
+    background: var(--lineart-other03);
   }
 #accueil .accueil-header {
     display: flex;
