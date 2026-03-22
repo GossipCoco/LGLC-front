@@ -6,7 +6,9 @@
         <router-link to="/dashboard" :active-class="activeClass" :exact-active-class="exactActiveClass">
           <div class="menu-level1 width-20-vh">
             <div class="menu-li-contain">
-              <span class="menu-text poppins-text font-size-1em font-weight-600">Tableau de bord</span>
+              <span class="menu-text poppins-text font-size-1em font-weight-600 color-ternary-green">
+                Tableau de bord
+              </span>
             </div>
           </div>
         </router-link>
@@ -15,7 +17,7 @@
         <router-link to="/lgdc" class="menu-level1 width-20-vh" :class="{ 'menu-level1--active': isSectionActive('lgdc') }">
           <div class="menu-li-contain">
             <span
-              class="menu-text poppins-text font-size-1em font-weight-600"
+              class="menu-text poppins-text font-size-1em font-weight-600 color-ternary-green"
               :class="{ 'menu-text--active': isSectionActive('lgdc') }"
             >
               L'univers de LGDC
@@ -27,7 +29,7 @@
         <router-link to="/creation" class="menu-level1 width-20-vh" :class="{ 'menu-level1--active': isSectionActive('creation') }">
           <div class="menu-li-contain">
             <span
-              class="menu-text poppins-text font-size-1em font-weight-600"
+              class="menu-text poppins-text font-size-1em font-weight-600 color-ternary-green"
               :class="{ 'menu-text--active': isSectionActive('creation') }"
             >
               Créations
@@ -39,7 +41,7 @@
         <router-link to="/GroupLayout" class="menu-level1 width-20-vh" :class="{ 'menu-level1--active': isSectionActive('clubs') }">
           <div class="menu-li-contain">
             <span
-              class="menu-text poppins-text font-size-1em font-weight-600"
+              class="menu-text poppins-text font-size-1em font-weight-600 color-ternary-green"
               :class="{ 'menu-text--active': isSectionActive('clubs') }"
             >
               Clubs
@@ -51,7 +53,7 @@
         <router-link to="/games" class="menu-level1 width-20-vh" :class="{ 'menu-level1--active': isSectionActive('game') }">
           <div class="menu-li-contain">
             <span
-              class="menu-text poppins-text font-size-1em font-weight-600"
+              class="menu-text poppins-text font-size-1em font-weight-600 color-ternary-green"
               :class="{ 'menu-text--active': isSectionActive('game') }"
             >
               Jeux
@@ -68,7 +70,7 @@
           <div class="menu-level1 width-20-vh">
             <div class="menu-li-contain">
               <span
-                class="menu-text poppins-text font-size-1em font-weight-600"
+                class="menu-text poppins-text font-size-1em font-weight-600 color-ternary-green"
                 >Event</span
               >
             </div>
@@ -82,7 +84,7 @@
           :exact-active-class="exactActiveClass"
         >
           <div class="menu-level1 width-20-vh">
-            <span class="menu-text poppins-text font-size-1em font-weight-600"
+            <span class="menu-text poppins-text font-size-1em font-weight-600 color-ternary-green"
               >Admin</span
             >
           </div>
@@ -93,7 +95,7 @@
           <div class="menu-level1 width-20-vh">
             <a href="#" @click.prevent="logout">
               <span
-                class="menu-text poppins-text font-size-1em font-weight-600"
+                class="menu-text poppins-text font-size-1em font-weight-600 color-ternary-green"
                 >Logout</span
               >
             </a>
