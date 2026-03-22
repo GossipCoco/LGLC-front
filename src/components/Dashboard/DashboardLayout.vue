@@ -34,7 +34,12 @@
       />
       <LastFiveFiction v-if="!showspinner" />
       <ExtractLastChap v-if="!showspinner" />
+    </div>    
+    <div class="row top-middle-dashboard  margin-0-2vh-0-0">
       <CharacterByGamerV2 v-bind:gamer="gamer" v-if="!showspinner" />
+      <div class="col-xxl-4 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <easy-action />
+      </div>
     </div>
     <div class="row middle-dashboard">
       <separator v-bind:Title="'Tout sur l\'univers de la Guerre des Clans'" />
@@ -70,10 +75,7 @@
       <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-12 col-sm-12 col-xs-12">
         <GamesLinks v-if="!showspinner" />
       </div>
-      <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
-        <easy-action />
-        <music-player />
-      </div>
+
     </div>
   </div>
 </template>
@@ -93,7 +95,7 @@ import Spinner from "../Components/GenericComponent/Spinner.vue";
 import CharacterByGamerV2 from "./Components/CharacterByGamerV2.vue";
 import Separator from "./ComponentGeneric/Separator.vue";
 import EasyAction from "./Components/EasyAction.vue";
-import MusicPlayer from "./Components/MusicPlayer.vue";
+// import MusicPlayer from "./Components/MusicPlayer.vue";
 import Video from "./Components/Video.vue";
 import NewArc from "./Components/NewArc.vue";
 export default {
@@ -111,7 +113,7 @@ export default {
     CharacterByGamerV2,
     Separator,
     EasyAction,
-    MusicPlayer,
+
     Video,
     NewArc
   },

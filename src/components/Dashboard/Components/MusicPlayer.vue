@@ -1,4 +1,5 @@
 <template>
+    <div class="col-xxl-4 col-xl-12 col-lg-6 col-md-12 col-sm-12 col-xs-12">
   <div class="card background-lineart02 border-none music-card">
     <TitleHeaderDashboard v-bind:title="'Musique'" v-bind:type="'fictions'" />
     <div class="card-body height-20-vh">
@@ -23,6 +24,7 @@
         </div>
       </div>
     </div>
+  </div>
   </div>
 </template>
 <script>

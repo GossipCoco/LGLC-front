@@ -1,6 +1,6 @@
 <template>
-  <div class="col-xxl-3 col-xl-12 col-lg-6 col-md-12 col-sm-12 col-xs-12 card-global all-my-oc-card">
-    <div class="card height-60-vh border-none display-flex-column profil-card fiction-card background-lineart02 my-oc-card">
+  <div class="col-xxl-8 col-xl-12 col-lg-6 col-md-12 col-sm-12 col-xs-12 card-global all-my-oc-card">
+    <div class="card height-25-vh border-none display-flex-column profil-card fiction-card background-lineart02 my-oc-card">
       <TitleHeaderDashboard
         v-bind:title="'Mes OC\'s'"
         v-bind:route="'OriginaleCharacterByUser'"
@@ -8,7 +8,7 @@
       />
       <Spinner v-if="showspinner" />
       <div class="card-body display-flex-row flex-wrap align-items-content-justify-content" v-if="!showspinner">
-        <div class="row width-30-vh flex-wrap-wrap">
+        <div class="row width-100-100 flex-wrap-wrap">
           <div v-for="(character, index) in gamer" :key="index" class="col">
             <character-link
               v-bind:typeCharacter="'OC'"
