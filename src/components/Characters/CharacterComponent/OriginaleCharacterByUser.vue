@@ -8,7 +8,7 @@
       v-bind:route="'/CreateAnOriginalCharacter'"
       v-bind:NameLink="'Nouveau personnage'"
     />
-    <div class="card-body width-100-100">
+    <div class="card-body width-100-100 height-70-vh overflowY-scroll margin-0-0-5vh-0">
       <div
         class="character-container padding-0 list-all-characters-container padding-2-vh-0-0-1vh"
       >
