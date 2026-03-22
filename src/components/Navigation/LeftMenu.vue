@@ -118,7 +118,7 @@ export default {
       role: null,
       isMenuOpen: false,
       showSubMenu: false,
-      logo: "/images/Logos/LaGuerredesClansLogos2.png",
+      logo: "/images/Logos/lgdlc-logo-v4.png",
       menuClass:'menu-left background-lineart-menu d-flex display-flex-row flex-shrink-0 height-15-vh width-100-100 margin--0-0--2 scrollbar-color',
       ulClass: 'nav nav-pills display-flex-row mb-auto display-flex align-items-content-justify-content width-100-100 padding-2-vh-0',
       lilevel1: 'li-level1 display-flex-column align-items-content-justify-content',
