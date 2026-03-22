@@ -108,7 +108,7 @@ ul {
     background: rgba(var(--ternary-green), 1);
     border-radius: 4vh 4vh 0 0;
     height: 12vh;
-    padding: 4vh 0 0 0;
+    padding: 0;
 }
 
 /* Tous les états "actifs" -> même texte (on écrase le gradient) */
