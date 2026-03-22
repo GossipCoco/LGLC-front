@@ -1,5 +1,5 @@
 <template>
-    <div class="card border-none background-lineart fiction-card random-characters-card width-120-vh height-45-vh padding-0 margin-0-rem">
+    <div class="card border-none background-lineart02 fiction-card random-characters-card width-120-vh height-45-vh padding-0 margin-0-rem">
       <TitleHeaderDashboard v-bind:title="'Personnages aléatoires'" v-bind:type="'myCharacters'"/>
       <div class="card-body flex-wrap-wrap display-flex-row align-items-content-justify-content">
           <div class="display-flex-row align-items-content-justify-content height-15-vh margin-0-2vh-0-0" 

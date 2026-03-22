@@ -1,5 +1,5 @@
 <template>
-  <div class="card background-lineart border-none music-card">
+  <div class="card background-lineart02 border-none music-card">
     <TitleHeaderDashboard v-bind:title="'Musique'" v-bind:type="'fictions'" />
     <div class="card-body height-20-vh">
       <div class="music-player">

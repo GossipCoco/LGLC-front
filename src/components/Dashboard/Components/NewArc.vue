@@ -1,6 +1,6 @@
 <template>
   <div
-    class="card background-lineart border-none arc-card last-arc-container height-40-vh margin-0-0-0-1vh"
+    class="card background-lineart02 border-none arc-card last-arc-container height-40-vh margin-0-0-0-1vh"
   >
     <TitleHeaderDashboard
       v-bind:title="'Dernier arc en cours'"

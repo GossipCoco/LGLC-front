@@ -1,6 +1,6 @@
 <template>
   <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 card-global">
-    <div class="card background-lineart border-none fiction-card all-fictions-card">
+    <div class="card background-lineart02 border-none fiction-card all-fictions-card">
       <TitleHeaderDashboard v-bind:title="'Lire des fictions'"  v-bind:type="'fictions'" v-bind:route="'/AllExistingFictionsLayout'" v-bind:nameRoute="'Lire des fictions'"/>
       <div class="card-body padding-2-vh display-flex-column">        
           <div

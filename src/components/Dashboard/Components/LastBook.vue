@@ -1,5 +1,5 @@
 <template>
-  <div class="card background-lineart border-none fiction-card last-book-container height-40-vh margin-0-0-0-1vh">
+  <div class="card background-lineart02 border-none fiction-card last-book-container height-40-vh margin-0-0-0-1vh">
     <TitleHeaderDashboard
       v-bind:title="'Dernier roman paru'"
       v-bind:type="'chapters'"

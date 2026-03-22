@@ -1,5 +1,5 @@
 <template>  
-    <div class="card height-25-vh border-none background-lineart fiction-card margin-0-0-2vh-0"> 
+    <div class="card height-25-vh border-none background-lineart02 fiction-card margin-0-0-2vh-0"> 
       <TitleHeaderDashboard
             v-bind:title="'Actions rapides'"
             v-bind:type="'chapters'"

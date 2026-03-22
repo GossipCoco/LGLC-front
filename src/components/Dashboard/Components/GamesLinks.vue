@@ -3,7 +3,7 @@
     class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 card-global"
   >
     <div
-      class="card height-60-vh background-lineart border-none fiction-card game-container"
+      class="card height-60-vh background-lineart02 border-none fiction-card game-container"
     >
       <TitleHeaderDashboard
         v-bind:title="'Nos jeux'"
