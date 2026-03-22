@@ -2,12 +2,12 @@
   <div class="Comment-icon">
     <div class="display-flex-column">
       <div class="flex-one display-flex-column">
-        <router-link :to="'/CommentByFiction/' + Title" class="btn btn-primary">
+        <router-link :to="'/CommentByFiction/' + Title" class="btn btn-secondary">
           Lire les commentaires
         </router-link>
         <button
           type="button"
-          class="btn btn-primary"
+          class="btn btn-secondary"
           data-bs-toggle="modal"
           data-bs-target="#commentFanfiction"
         >
