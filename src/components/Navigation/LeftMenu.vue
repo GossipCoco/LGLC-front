@@ -6,7 +6,7 @@
         <router-link to="/dashboard" :active-class="activeClass" :exact-active-class="exactActiveClass">
           <div class="menu-level1 width-20-vh">
             <div class="menu-li-contain">
-              <span class="menu-text poppins-text font-size-1em font-weight-600 color-ternary-green">
+              <span :class="textLink">
                 Tableau de bord
               </span>
             </div>
@@ -123,7 +123,8 @@ export default {
       ulClass: 'nav nav-pills display-flex-row mb-auto display-flex align-items-content-justify-content width-100-100 padding-2-vh-0',
       lilevel1: 'li-level1 display-flex-column align-items-content-justify-content',
       activeClass:'menu-link--active',
-      exactActiveClass:'menu-link--exact-active'
+      exactActiveClass:'menu-link--exact-active',
+      textLink: 'menu-text poppins-text font-size-1em font-weight-600 color-ternary-green'
     };
   },
   created() {
