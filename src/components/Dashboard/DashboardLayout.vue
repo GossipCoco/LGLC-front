@@ -45,10 +45,10 @@
       <separator v-bind:Title="'Tout sur l\'univers de la Guerre des Clans'" />
     </div>
     <div class="row bottom-dashboard-levele-one">
-      <div class="col-xxl-5 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="col-xxl-4 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <Video v-if="!showspinner"></Video>
       </div>
-      <div class="col-xxl-7 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="col-xxl-8 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <CharacterRandom
           v-if="!showspinner"
           v-bind:randomCharacters="randomCharacters"
@@ -113,7 +113,6 @@ export default {
     CharacterByGamerV2,
     Separator,
     EasyAction,
-
     Video,
     NewArc
   },
@@ -171,7 +170,7 @@ export default {
           this.showspinner = false;
           if (response && response.data) {
             const characters = response.data.ob;
-            const randomCharacters = this.getRandomCharacters(characters, 6);
+            const randomCharacters = this.getRandomCharacters(characters, 8);
             this.randomCharacters = randomCharacters;
           }
         })
