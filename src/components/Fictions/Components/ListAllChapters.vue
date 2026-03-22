@@ -9,7 +9,7 @@
           :key="index"
         >
           <router-link :to="'/chapter/' + chapter.Title"
-            class="title-fiction-links font-size-1 font-weight-400 color-clear-green-01 poppins-text"       
+            class="title-fiction-links font-size-1 font-weight-400 color-ternary-green poppins-text"       
           >
             {{ chapter.Title }} -  {{ chapter.NbWords }} mots
           </router-link>
