@@ -2,7 +2,6 @@
 @import '../variables.scss';
 
 *,html,body {
-  /* font-family: 'Roboto', sans-serif; */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -35,7 +34,7 @@ a {
   color: inherit;
   font-family: var(--opensans-text);
 }
-a,h1,h2,h3,h4,h5,h6,h4 a,.h5-container a {
+a,h1,h2,h3,h4,h5,h6,h4 a {
   font-family: 'Cinzel';
   margin: 0;
 }

@@ -133,14 +133,6 @@
 .fiction-card .card-header {
     border-bottom: rgba(var(--clear-green-02), 0);
 }
-
-/* .card {
-    border: none;
-} */
-
-/* .form-control-dark:focus {
-    border-color: rgba(var(--main-black), 1);
-} */
 .character-illustration-container{
     border: 4px solid rgba(var(--clear-green-02), 1);
 }  
