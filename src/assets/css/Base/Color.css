@@ -17,6 +17,9 @@
 .background-lineart02{
     background: var(--lineart-other02);
 }
+.background-lineart-menu{
+    background: var(--lineart-menu);
+}
 .background-lineart-other03{    
   background: var(--lineart-other03);
 }
@@ -47,6 +50,7 @@
 .background-color-active{
     background-color: rgba(var(--active-hover), 1);
 }
+
 /*  Color */
 .white-text{
     color: rgba(var(--main-white), 1)
