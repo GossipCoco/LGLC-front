@@ -159,10 +159,10 @@ ul {
 .menu-left a.router-link-active .menu-level1,
 .menu-left a.router-link-exact-active .menu-level1,
 .menu-level1--active {
-  background: rgba(var(--ternary-green), 1);
-  border-radius: 4vh 4vh 0 0;
-  height: 10vh;
-  padding: 3.5vh 0 0 0;
+    background: rgba(var(--ternary-green), 1);
+    border-radius: 4vh 4vh 0 0;
+    height: 12vh;
+    padding: 4vh 0 0 0;
 }
 
 /* Tous les états "actifs" -> même texte (on écrase le gradient) */
