@@ -1,5 +1,5 @@
 <template>
-    <div class="card-body height-7-vh padding-0-0-0-3vh align-items-content-justify-content
+    <div class="card-body height-7-vh align-items-content-justify-content
     name-characatrer-link">
       <router-link
         :to="route + name"
