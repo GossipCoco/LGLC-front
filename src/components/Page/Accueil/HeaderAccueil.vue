@@ -4,7 +4,7 @@
         <div class="container-fluid header-container overflowY-X-hidden overflow-hidden">
           <div class="logo-accueil-container flex-one">
           <router-link to="/Accueil" class="navbar-brand">
-            <img src="../../../../public/images/Logos/lGdC-logo.png" class="width-50-vh" />
+            <img src="../../../../public/images/Logos/lgdlc-logo-v5.png" class="width-50-vh" />
           </router-link>
           </div>          
           <div class="collapse navbar-collapse" id="navbarCollapse">
