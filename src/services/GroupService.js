@@ -13,6 +13,9 @@ class GroupService {
     GetGroupByCommentById(id){ 
         return http.get(`/Group/GetGroupByCommentById/${id}`)
     }
+    GetAllGroupsByUser(id){
+        return http.get(`/Group/GetAllGroupsByUser/${id}`)
+    }
     CountAllGroups(){
         return http.get('/Group/CountAllGroups')
     }
