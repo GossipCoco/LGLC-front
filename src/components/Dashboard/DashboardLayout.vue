@@ -34,6 +34,7 @@
       />
       <LastFiveFiction v-if="!showspinner" />
       <ExtractLastChap v-if="!showspinner" />
+      <club-card v-if="!showspinner" />
     </div>    
     <div class="row top-middle-dashboard  margin-0-2vh-0-0">
       <CharacterByGamerV2 v-bind:gamer="gamer" v-if="!showspinner" />
@@ -87,6 +88,7 @@ import TitleHeader from "./Components/TitleHeader.vue";
 import AvatarCard from "./Components/AvatarCard.vue";
 import LastFiveFiction from "./Components/LastFiveFiction.vue";
 import ExtractLastChap from "./Components/ExtractLastChap.vue";
+import ClubCard from "./Components/ClubCard.vue";
 import CharacterRandom from "./Components/CharacterRandom.vue";
 import ListAllFictions from "./Components/ListAllFictions.vue";
 import LastBook from "./Components/LastBook.vue";
@@ -107,6 +109,7 @@ export default {
     TitleHeader,
     CharacterRandom,
     ListAllFictions,
+    ClubCard,
     LastBook,
     GamesLinks,
     Spinner,
