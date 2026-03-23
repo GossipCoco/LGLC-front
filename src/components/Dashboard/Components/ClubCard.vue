@@ -9,7 +9,7 @@
       />
     </div>
     <div class="card-body all-last-three-fictions-container padding-0 margin-0-rem display-flex-column align-items-content-justify-content">
-        
+
     </div>
 </div>
 </template>
@@ -17,6 +17,12 @@
 import TitleHeaderDashboard from "../../Components/SpecificComponent/TitleHeaderDashboard.vue";
 export default {
     components: { TitleHeaderDashboard },
+  data() {
+    return {
+      usrId: this.$store.state.auth.user.usrID,
+      Clubs: {},
+    };
+  },
     
 }
 </script>
