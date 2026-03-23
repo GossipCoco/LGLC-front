@@ -7,9 +7,11 @@
         v-bind:title="'Mes clubs'"
         v-bind:type="'fictions'"
       />
-    </div>
-    <div class="card-body all-last-three-fictions-container padding-0 margin-0-rem display-flex-column align-items-content-justify-content">
-
+      <div class="card-body all-last-three-fictions-container padding-0 margin-0-rem display-flex-column align-items-content-justify-content">
+        <div v-for="(club, index) in Clubs" :key="index">
+          <img :src="club.Group.Symbol" :alt="club.GroupId" width="25%"/>
+        </div>
+      </div>
     </div>
 </div>
 </template>
