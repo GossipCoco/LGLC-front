@@ -14,6 +14,7 @@
 </div>
 </template>
 <script>
+import GroupService from "../../../services/GroupService";
 import TitleHeaderDashboard from "../../Components/SpecificComponent/TitleHeaderDashboard.vue";
 export default {
     components: { TitleHeaderDashboard },
@@ -23,6 +24,21 @@ export default {
       Clubs: {},
     };
   },
+    created() {
+    this.GetAllGroupsByUser(this.usrId);
+  },
+  methods:{
+    GetAllGroupsByUser(e){
+        GroupService.GetAllGroupsByUser(e)
+        .then((response) => {
+          this.Clubs = response.data.ob;
+          console.log(this.Clubs)
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    }
+  }
     
 }
 </script>
