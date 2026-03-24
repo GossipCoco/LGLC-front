@@ -1,7 +1,7 @@
 
 <template>
   <div class="card-body margin--3-0-15vh-0 overflowY-scroll">
-    <div class="row height-75-vh margin-1vh padding-1-vh">
+    <div class="row height-75-vh margin-1vh">
       <div class="col-2 col-xl-2 col-xxl-2 col-lg-2 col-md-2 col-sm-12 col xs-12">
         <div class="card background-color-dark-green-01 margin-2vh-0-0-0 height-80-vh">
           <div class="card-header">
