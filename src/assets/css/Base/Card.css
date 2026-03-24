@@ -175,8 +175,7 @@ li.quest-container {
 }
 .fiction-globale-container ul{
     margin: 0 0 1rem 0;
-    height: 67vh;
-    overflow: scroll;
+    height: 70vh;
 }
 .row.top-dashboard .all-my-oc-card .card-body > div{
     margin: 9vh 0 0 0;
