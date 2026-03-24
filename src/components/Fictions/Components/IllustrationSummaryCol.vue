@@ -1,16 +1,16 @@
 <template>
     <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 padding-0-0-0-5vh col-left">
         <div class="display-flex-column">
-        <div
-            class="display-flex-column border-radius-12px image-fiction-container border-radius-12px margin-21vh-0-0-0 all-illustrations-fiction-container padding-2-vh overflowY-X-hidden background-size-cover"
-            v-bind:style="{
-                backgroundImage: 'url(' + backgroundImageFiction + ')',
-            }"
-            >
-        </div>
-        <div class="summary-fiction-container-wrapper border-radius-12px width-60-vh height-35-vh margin-1vh-0-0-1vh">
-            <p class="text-align-justify overflowY-auto summary-height-container Noto-Sans" v-html="Summary"></p>
-        </div>
+            <div
+                class="display-flex-column border-radius-12px image-fiction-container border-radius-12px margin-21vh-0-0-0 all-illustrations-fiction-container padding-2-vh overflowY-X-hidden background-size-cover"
+                v-bind:style="{
+                    backgroundImage: 'url(' + backgroundImageFiction + ')',
+                }"
+                >
+            </div>
+            <div class="summary-fiction-container-wrapper border-radius-12px width-60-vh height-70-vh margin-1vh-0-0-1vh">
+                <p class="text-align-justify overflowY-auto summary-height-container Noto-Sans" v-html="Summary"></p>
+            </div>
         </div>
     </div>
 </template>
