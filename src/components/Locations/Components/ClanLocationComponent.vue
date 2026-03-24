@@ -1,6 +1,6 @@
 <template>
   <div
-    class="card background-color-dark-green-01 border-radius-100-100-8-8 location-clan-background-width-container"
+    class="card background-color-dark-green-01 border-radius-100-100-8-8 height-35-vh width-35-vh location-clan-background-width-container"
   >
     <div
       class="card-image clan-card background-position-50-percent width-30-vh height-30-vh background-size-cover"

@@ -20,10 +20,6 @@
 .all-characters-by-user-container .card{
     height: 33vh;
 }
-.card.location-clan-background-width-container{
-    width: 34vh;
-    height: 35vh;
-}
 .flex-one .quest-button-text .btn.btn-primary{
     width: 18vh;
 }
