@@ -1,6 +1,6 @@
 <template>
     <header class="background-lineart-menu">
-      <nav class="navbar align-items-content-justify-content navbar-expand-md background-lineart-menu fixed-top">
+      <nav class="navbar align-items-content-justify-content navbar-expand-md fixed-top">
         <div class="container-fluid header-container overflowY-X-hidden overflow-hidden">
           <div class="logo-accueil-container flex-one">
           <router-link to="/Accueil" class="navbar-brand">
@@ -10,16 +10,16 @@
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
               <li class="nav-item" v-if="!isLoggedIn">
-                <router-link class="roboto text-white" to="/login">Se connecter</router-link>
+                <router-link class="poppins-text text-white" to="/login">Se connecter</router-link>
               </li>
-              <li class="nav-item roboto text-white"  v-if="!isLoggedIn">
-                <router-link to="/Register" class="nav-item roboto text-white">Créer son compte</router-link>
+              <li class="nav-item poppins-text text-white"  v-if="!isLoggedIn">
+                <router-link to="/Register" class="nav-item poppins-text text-white">Créer son compte</router-link>
               </li>
-              <li class="nav-item roboto text-white"  v-if="isLoggedIn">
-                <router-link to="/dashboard" class="nav-item roboto text-white">Aller sur son Dashboard</router-link>
+              <li class="nav-item poppins-text text-white"  v-if="isLoggedIn">
+                <router-link to="/dashboard" class="nav-item poppins-text text-white">Aller sur son Dashboard</router-link>
               </li>
-              <li class="nav-item logout-li-container display-flex-row roboto text-white" v-if="isLoggedIn">
-                <a href="#" @click.prevent="logout" class="logout-li-container roboto text-white">
+              <li class="nav-item logout-li-container display-flex-row poppins-text text-white" v-if="isLoggedIn">
+                <a href="#" @click.prevent="logout" class="logout-li-container poppins-text text-white">
                     Logout <img src="../../../../public/images/icons/right-from-bracket-solid.svg" width="25px"/>
                 </a>
               </li>
