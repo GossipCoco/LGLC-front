@@ -9,6 +9,9 @@
     min-width: 30vh;
     max-width: 30vh;
 }
+.location-clan-background-width-container .btn.btn-primary{
+    max-width: 30vh;
+}
 .rating svg {
     width: 1vh;
     height: 3vh
@@ -23,9 +26,6 @@
 .flex-one .quest-button-text .btn.btn-primary{
     width: 18vh;
 }
-.location-clan-background-width-container .btn.btn-primary{
-    max-width: 30vh;
-}
 .btn.btn-primary.btn-character-in-clan-detail{
     width: 14vh;
     height: 8vh;
@@ -33,7 +33,6 @@
 .summary-height-container{
     height: 66vh;
 }
-/* NavNar en Vh */
 #navbarCollapse {
     height: 14vh;
     width: 90vh;
