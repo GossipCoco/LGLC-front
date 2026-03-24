@@ -69,14 +69,9 @@
         <separator v-bind:Title="'Nos jeux & vos créations'" />
       </div>
     </div>
-    <div class="row bottom-dashboard-level-one margin-1vh-0-0-0 fictions-games-container">
+    <div class="row bottom-dashboard-level-one height-100-vh margin-1vh-0-0-0 fictions-games-container">
       <ListAllFictions v-if="!showspinner" />
-    </div>
-    <div class="row bottom-dashboard-levele-three mar-2vh-0-24vh-0 height-60-vh">
-      <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-12 col-sm-12 col-xs-12">
-        <GamesLinks v-if="!showspinner" />
-      </div>
-
+      <GamesLinks v-if="!showspinner" />
     </div>
   </div>
 </template>
