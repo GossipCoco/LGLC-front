@@ -1,5 +1,5 @@
 <template>
-  <div class="opacity-container height-80-vh display-flex-row">
+  <div class="opacity-container height-90-vh display-flex-row">
     <div class="summary-container width-100-100 height-80-vh overflow-hidden">
       <div class="row top-fiction height-5-vh" v-if="AuthorId === usrCurrent">
         <EditSummary v-bind:FictionId="IdFiction" v-bind:Summary="Summary" v-if="AuthorId === usrCurrent"/>         
