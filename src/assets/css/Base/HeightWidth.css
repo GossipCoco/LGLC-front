@@ -62,9 +62,6 @@
     height: 5vh;
     width: 5vh;
 }
-#book-container.dashboard-max-card-container.card-height .card-body{
-    height: 80vh;
-}
 /* Fiction */
 .image-fiction-container {
     width: 10vh;

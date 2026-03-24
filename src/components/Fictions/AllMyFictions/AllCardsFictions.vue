@@ -4,7 +4,7 @@
       <div class="card fiction-summary-card height-17-vh width-40-vh border-radius-12px padding-0-1-vh-0-1vh clear-green-bacground">
         <div class="row">
           <div
-            class="col-2 col-xl-2 col-xxl-4 col-lg-12 col-md-12 col-sm-12 col xs-12 image-fiction-container border-radius-12px border-radius-2vh-0-0-2vh height-15-vh width-10-vh background-size-cover"
+            class="col-2 col-xl-2 col-xxl-4 col-lg-12 col-md-12 col-sm-12 col xs-12 image-fiction-container border-radius-12px border-radius-2vh-0-0-2vh width-10-vh background-size-cover"
             v-bind:style="{
               backgroundImage: 'url(' + fiction.Image + ')',
             }"
