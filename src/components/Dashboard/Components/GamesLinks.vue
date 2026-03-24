@@ -3,7 +3,7 @@
     class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 card-global"
   >
     <div
-      class="card height-60-vh background-lineart02 border-none fiction-card game-container"
+      class="card height-60-vh  background-lineart02 border-none fiction-card game-container"
     >
       <TitleHeaderDashboard
         v-bind:title="'Nos jeux'"
@@ -15,7 +15,7 @@
             <div class="display-flex-column align-items-content-justify-content padding-2-vh">
               <div class="display-flex-column align-items-content-justify-content">
                 <div class="display-flex-row align-items-content-justify-content">
-                  <img loading="lazy" src="../../../../public/images/Game/puzzle.png"/>
+                  <img loading="lazy" src="../../../../public/images/Game/puzzle.png" class="width-10-vh"/>
                   <p>
                     <router-link class="text-white poppins-text" to="/puzzle">
                       Jeu du puzzle
@@ -34,7 +34,7 @@
             <div class="display-flex-column align-items-content-justify-content">
               <div class="display-flex-column align-items-content-justify-content">
                 <div class="display-flex-row align-items-content-justify-content">
-                  <img loading="lazy" src="../../../../public/images/Game/mouse01.png"/>
+                  <img loading="lazy" src="../../../../public/images/Game/mouse01.png"  class="width-10-vh"/>
                   <p>
                     <router-link class="text-white poppins-text" to="/mouseShot"
                       >Attrape la souris!
@@ -56,7 +56,7 @@
             <div class="display-flex-column align-items-content-justify-content padding-2-vh">
               <div class="display-flex-column align-items-content-justify-content">
                 <div class="display-flex-row align-items-content-justify-content">
-                  <img loading="lazy" src="../../../../public/images/Game/treasure.png"/>
+                  <img loading="lazy" src="../../../../public/images/Game/treasure.png" class="width-10-vh"/>
                   <p>
                     <router-link class="text-white poppins-text" to="/TreasureHunt">
                       Chasse au trésor
@@ -75,7 +75,7 @@
             <div class="display-flex-column align-items-content-justify-content">
               <div class="display-flex-column align-items-content-justify-content">
                 <div class="display-flex-row align-items-content-justify-content">
-                  <img loading="lazy" src="../../../../public/images/Game/dice.png"/>
+                  <img loading="lazy" src="../../../../public/images/Game/dice.png" class="width-10-vh"/>
                   <p>
                     <router-link class="text-white poppins-text" to="/rollOfDice"
                       >Jeu de Dé
@@ -96,7 +96,7 @@
             <div class="display-flex-column align-items-content-justify-content">
               <div class="display-flex-column align-items-content-justify-content">
                 <div class="display-flex-row align-items-content-justify-content">
-                  <img loading="lazy" src="../../../../public/images/Game/oie01.png"/>
+                  <img loading="lazy" src="../../../../public/images/Game/oie01.png" class="width-10-vh"/>
                   <p>
                     <router-link class="text-white poppins-text" to="/GooseGameLayout">Jeu de l'Oie</router-link>
                   </p>
@@ -113,7 +113,7 @@
             <div class="display-flex-column align-items-content-justify-content">
               <div class="display-flex-column align-items-content-justify-content">
                 <div class="display-flex-row align-items-content-justify-content">
-                  <img loading="lazy" src="../../../../public/images/Game/quête.png"/>
+                  <img loading="lazy" src="../../../../public/images/Game/quête.png" class="width-10-vh"/>
                   <p>
                     <router-link class="text-white poppins-text" to="/Quest">Quêtes</router-link>
                   </p>
