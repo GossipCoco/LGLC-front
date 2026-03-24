@@ -63,13 +63,7 @@
     width: 5vh;
 }
 /* Fiction */
-.image-fiction-container {
-    width: 10vh;
-    height: 17vh;
-}
-.summary-container .middle-fiction-card .image-fiction-container{
-    width: 60vh;
-}
+
 .carousel {
     height: 24vh;
 }
