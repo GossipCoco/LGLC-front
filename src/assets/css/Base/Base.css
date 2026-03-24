@@ -15,6 +15,7 @@
 *::-webkit-scrollbar-thumb {
   border-radius: 20px;
   border: 3px solid rgba(var(--dark-green-01), 1);
+  font-family: 'Poppins';
 }
 html, body, #app {
   height: 100vh;
@@ -34,7 +35,7 @@ a {
   color: inherit;
   font-family: var(--opensans-text);
 }
-a,h1,h2,h3,h4,h5,h6,h4 a {
+h1,h2,h3,h4,h5,h6,h4 a {
   font-family: 'Cinzel';
   margin: 0;
 }
