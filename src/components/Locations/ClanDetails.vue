@@ -20,7 +20,7 @@
       <div class="col-12 col-md-12 flex-one background-color-main-lineart display-flex-column location-clan-card-details">
         <CardHeader v-bind:Title="clan.Name">
           <div class="display-flex-row">
-            <img :src="'/images/clans/' + clan.Symbol"/>            
+            <img :src="'/images/clans/' + clan.Symbol" class="height-10-vh width-10-vh"/>            
           </div>
         </CardHeader>
         <div class="card-body height-77-vh text-white background-color-main-lineart details-infos-characters border-radius-12px poppins-text text-white">

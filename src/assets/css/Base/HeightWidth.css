@@ -9,15 +9,11 @@
     min-width: 30vh;
     max-width: 30vh;
 }
-
 .rating svg {
     width: 1vh;
     height: 3vh
 }
-.clan-detail-layout .card-header img{
-    width: 8vh;
-    height: 8vh;
-}
+
 .h5-container{
     height: 9vh;
 }
