@@ -8,7 +8,7 @@
              <div class="image-messenger-container">
                 <router-link :to="'/user/messagerie/'+User" class="display-flex-row message-sent-container" >
                     <img src="/images/icons/envelope-solid.svg" class="border-radius-100 height-10-vh" loading="lazy"/>
-                    <div class="mini-rond-messages padding-1-vh-0-0-0 border-radius-100 background-color-active display-flex align-items-content-justify-content text-dark-green">
+                    <div class="mini-rond-messages height-5-vh width-5-vh padding-1-vh-0-0-0 border-radius-100 background-color-active display-flex align-items-content-justify-content text-dark-green">
                         <p class="color-dark-green-01">{{ NbUnreadMessage }}</p>
                     </div>
                 </router-link>
