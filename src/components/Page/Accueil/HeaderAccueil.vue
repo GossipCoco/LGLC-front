@@ -9,16 +9,16 @@
           </div>          
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
-              <li class="nav-item" v-if="!isLoggedIn">
+              <li class="nav-item width-40-vh" v-if="!isLoggedIn">
                 <router-link class="poppins-text text-white" to="/login">Se connecter</router-link>
               </li>
-              <li class="nav-item poppins-text text-white"  v-if="!isLoggedIn">
+              <li class="nav-item poppins-text text-white width-40-vh"  v-if="!isLoggedIn">
                 <router-link to="/Register" class="nav-item poppins-text text-white">Créer son compte</router-link>
               </li>
-              <li class="nav-item poppins-text text-white"  v-if="isLoggedIn">
+              <li class="nav-item poppins-text text-white width-40-vh"  v-if="isLoggedIn">
                 <router-link to="/dashboard" class="nav-item poppins-text text-white">Aller sur son Dashboard</router-link>
               </li>
-              <li class="nav-item logout-li-container display-flex-row poppins-text text-white" v-if="isLoggedIn">
+              <li class="nav-item logout-li-container display-flex-row poppins-text text-white width-40-vh" v-if="isLoggedIn">
                 <a href="#" @click.prevent="logout" class="logout-li-container poppins-text text-white">
                     Logout <img src="../../../../public/images/icons/right-from-bracket-solid.svg" width="25px"/>
                 </a>
