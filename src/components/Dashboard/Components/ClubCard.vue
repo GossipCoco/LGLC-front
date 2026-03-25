@@ -9,7 +9,7 @@
       />
       <div class="card-body all-last-three-fictions-container padding-0 margin-2vh-0-0-0
                   height-40-vh overflowY-scroll display-flex-column align-items-content-justify-content">
-        <div v-for="(club, index) in Clubs" :key="index" class="display-flex-row">
+        <div v-for="(club, index) in Clubs.slice(0,3)" :key="index" class="display-flex-row">
           <img :src="club.Group.Symbol" :alt="club.GroupId" width="25%"/>
           <span class="poppins-text white-text">{{ club.GroupId }}</span>
         </div>
