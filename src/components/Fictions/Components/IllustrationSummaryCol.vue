@@ -9,7 +9,7 @@
                 >
             </div>
             <div class="summary-fiction-container-wrapper border-radius-12px width-60-vh height-70-vh margin-1vh-0-0-1vh">
-                <p class="text-align-justify overflowY-auto summary-height-container Noto-Sans" v-html="Summary"></p>
+                <p class="text-align-justify overflowY-auto summary-height-container height-100-vh Noto-Sans" v-html="Summary"></p>
             </div>
         </div>
     </div>
