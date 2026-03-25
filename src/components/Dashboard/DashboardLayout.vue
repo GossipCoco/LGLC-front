@@ -168,7 +168,7 @@ export default {
           this.showspinner = false;
           if (response && response.data) {
             const characters = response.data.ob;
-            const randomCharacters = this.getRandomCharacters(characters, 8);
+            const randomCharacters = this.getRandomCharacters(characters, 7);
             this.randomCharacters = randomCharacters;
           }
         })
