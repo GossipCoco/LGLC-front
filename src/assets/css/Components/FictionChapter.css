@@ -86,7 +86,7 @@ th {
     margin-top: 1rem;
 }
 .row.bottom-dashboard-levele-one {
-    margin: 1vh -2vh 2vh -4vh;
+    margin: 1vh 0 2vh 0;
 }
 .row.bottom-dashboard-levele-one .card.all-fictions-card{
     margin: 2vh 0 0 0;
