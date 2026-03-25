@@ -1,7 +1,7 @@
 <template>
     <router-link v-if="typeCharacter === 'ExistedCharacter'" :to="route + CurrentName" class="display-flex-column">
         <div
-            class="rond-character-background border-radius-100 background-size-cover
+            class="rond-character-background width-15-vh height-15-vh border-radius-100 background-size-cover
             display-flex-row align-items-content-justify-content"
             v-bind:style="{ backgroundImage: 'url(' + ClanImage + ')' }"
         >
