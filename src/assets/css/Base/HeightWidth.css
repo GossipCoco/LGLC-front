@@ -40,20 +40,6 @@
 .col-btn-container .btn.btn-primary{
     width: 38vh;
 }
-/* QUEST */
-.one-quest h6{
-    width: 18vh;
-}
-.list-quest-card-container .background-image-quest{
-    height: 34vh;
-}
-.quest-container .card-header h6{
-    height: 4vh;
-}
-.card-body.one-quest {
-    height: 32vh;
-    width: 16vh;
-}
 .login-card .card-body{
     height: 30vh;
 }
