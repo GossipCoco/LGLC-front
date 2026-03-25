@@ -7,7 +7,7 @@
         <create-chapter-button v-if="AuthorId === usrCurrent" v-bind:="lastChap" v-bind:IdFiction="IdFiction"/>
         <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3 upload-input-component"></div>
       </div>
-      <div class="row middle-fiction-card">
+      <div class="row middle-fiction-card height-80-vh">
         <illustration-summary-col v-bind:backgroundImageFiction="backgroundImageFiction" v-bind:Summary="Summary"/>
         <ListAllChapters v-bind:Chapters="fiction.Chapters" />
         <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 right-column-image-container col-right">
