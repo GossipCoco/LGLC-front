@@ -9,7 +9,7 @@
         </h2>
         <div class="summary-book-dashboard display-flex-row align-items-content-justify-content">
             <img :src="Image" width="10%" class="border-radius-12px"/>
-            <div v-html="Summary" class="text-white text-align-justify overflowY-scroll summmary-book-height-dashboard poppins-text text-white padding-1-vh"></div>
+            <div v-html="Summary" class="text-white text-align-justify overflowY-scroll height-20-vh summmary-book-height-dashboard poppins-text text-white padding-1-vh"></div>
         </div>
     </div>    
 </template>
