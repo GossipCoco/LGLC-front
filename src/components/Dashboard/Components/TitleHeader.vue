@@ -1,6 +1,6 @@
 <template>
     <div class="card welcome-dashboard-container background-color-dark-green-01 border-none">
-        <div class="card-body display-flex-row align-items-content-justify-content title-dashboard-container-header">
+        <div class="card-body display-flex-row align-items-content-justify-content title-dashboard-container-header height-15-vh">
             <h1 class=" font-variant-small-caps cinzel text-white">
                 Bienvenue sur votre tableau de bord
                 <router-link class="text-white" :to="'/getUserBy/' + User">{{ User }}</router-link> 
