@@ -1,5 +1,5 @@
 <template>
-    <header class="background-lineart-menu">
+    <header class="background-lineart-menu height-15-vh">
       <nav class="navbar align-items-content-justify-content navbar-expand-md fixed-top">
         <div class="container-fluid header-container overflowY-X-hidden overflow-hidden">
           <div class="logo-accueil-container width-20-vh height-20-vh flex-one">

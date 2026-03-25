@@ -23,13 +23,6 @@
     width: 14vh;
     height: 8vh;
 }
-#accueil .navbar.navbar-expand-md.navbar-dark.fixed-top{
-    height: 15vh;
-    width: 214vh;
-}
-#accueil header {
-    height: 14vh;
-}
 /* Fiction */
 .carousel {
     height: 24vh;
