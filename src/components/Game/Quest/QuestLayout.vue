@@ -1,23 +1,23 @@
 <template>
   <div
-    class="border-none background-none flex-one card padding-0 one-quest-container height-32-vh align-items-content-justify-content padding-0-re"
+    class="border-none background-none flex-one card padding-0 one-quest-container height-32-vh align-items-content-justify-content"
   >
     <CardHeader
-      class="width-190-vh"
+      class="width-100-100"
       v-bind:Title="'Liste des quêtes à réaliser'"
     />
-    <div class="card-body height-90-vh">
+    <div class="card-body height-90-vh overflowY-scroll margin-0-0-10vh-0">
       <Spinner v-if="showspinner" />
       <div
         v-if="!showspinner"
-        class="row list-quest-card-container width-180-vh height-70-vh"
+        class="row list-quest-card-container width-100-100vh height-70-vh"
       >
-        <div class="row width-180-vh">
+        <div class="row width-100-100">
           <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-12">
             <filter-component />
           </div>
           <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-10 col-xs-10">
-            <div class="row width-160-vh">
+            <div class="row width-100-100">
               <div
                 class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 display-flex-row flex-wrap quest--global-container flex-wrap height-40-vh margin-0-0-2vh-0"
                 v-for="(quest, index) in allQuests"
@@ -32,16 +32,18 @@
                 </div>
               </div>
             </div>
+            <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 margin--10vh-0-10vh-0">
+              <pagination
+                v-if="!showspinner"
+                v-bind:nav="nav"
+                v-bind:filters="filters"
+                v-bind:getDatas="'QuestPagination'"
+                @QuestPagination="QuestPagination"
+              />
+            </div>
           </div>
         </div>
       </div>
-      <pagination
-        v-if="!showspinner"
-        v-bind:nav="nav"
-        v-bind:filters="filters"
-        v-bind:getDatas="'QuestPagination'"
-        @QuestPagination="QuestPagination"
-      />
     </div>
   </div>
 </template>
@@ -69,7 +71,7 @@ export default {
       nav: {
         current: 0,
         pages: 0,
-        step: 8,
+        step: 10,
       },
     };
   },
