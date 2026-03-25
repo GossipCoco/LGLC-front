@@ -45,17 +45,10 @@
     height: 15vh;
     width: 214vh;
 }
-.row-filter{
-    height: 8vh;
-}
-.list-all-characters-container .row-filter{
-    height: 10vh;
-}
 #accueil header {
     height: 14vh;
 }
 /* Fiction */
-
 .carousel {
     height: 24vh;
 }
