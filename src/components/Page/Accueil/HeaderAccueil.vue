@@ -7,7 +7,7 @@
             <img src="../../../../public/images/Logos/lgdlc-logo-v5.png" class="width-50-vh" />
           </router-link>
           </div>          
-          <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="collapse navbar-collapse height-15-vh width-90-vh" id="navbarCollapse">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
               <li class="nav-item width-40-vh" v-if="!isLoggedIn">
                 <router-link class="poppins-text text-white" to="/login">Se connecter</router-link>
