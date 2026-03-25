@@ -2,7 +2,7 @@
     <header class="background-lineart-menu">
       <nav class="navbar align-items-content-justify-content navbar-expand-md fixed-top">
         <div class="container-fluid header-container overflowY-X-hidden overflow-hidden">
-          <div class="logo-accueil-container flex-one">
+          <div class="logo-accueil-container width-20-vh height-20-vh flex-one">
           <router-link to="/Accueil" class="navbar-brand">
             <img src="../../../../public/images/Logos/lgdlc-logo-v5.png" class="width-50-vh" />
           </router-link>

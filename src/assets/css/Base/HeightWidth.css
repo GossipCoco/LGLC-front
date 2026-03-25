@@ -23,14 +23,6 @@
     width: 14vh;
     height: 8vh;
 }
-.avatar-navabar, .avatar-navabar img {
-    width: 6vh;
-    height: 6vh;
-}
-.logo-accueil-container{
-    width: 18vh;
-    height: 18vh;
-}
 #accueil .navbar.navbar-expand-md.navbar-dark.fixed-top{
     height: 15vh;
     width: 214vh;
