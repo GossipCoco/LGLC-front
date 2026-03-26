@@ -1,6 +1,6 @@
 <template>
   <div class="overflowX-hidden clans-location-container height-90-vh overflow-y-hidden">
-    <div class="display-flex-row card-group clan-group width-100-100 overflow-y-hidden height-80-vh ">
+    <div class="display-flex-row card-group clan-group margin-0-2vh-0-0 width-100-100 overflow-y-hidden height-80-vh ">
       <div v-for="(location, index) in allLocations" :key="index">
         <clan-location-component v-bind:location="location" v-bind:route="'/LocationsDetails/'"/>
       </div>
