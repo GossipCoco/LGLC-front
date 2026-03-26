@@ -16,9 +16,6 @@
     left: 90%;
     z-index: 99999;
 }
-.card-quest-by-id-container .card-body{
-    margin: -2vh 0 1vh 4vh;
-}
 #original-characters-list .card-character-container{
     margin: 0vh 4vh 4vh 0;
 }
