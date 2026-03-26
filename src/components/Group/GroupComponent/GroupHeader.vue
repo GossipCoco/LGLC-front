@@ -9,7 +9,7 @@
             backgroundImage: 'url(' + group.Image + ')',
           }"
         >
-        <div class="header-group-container">
+        <div class="header-group-container width-100-100 height-50-vh">
           <slot>
 
           </slot>
