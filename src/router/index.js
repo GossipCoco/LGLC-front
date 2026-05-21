@@ -21,6 +21,7 @@ import GamesVue from "../components/Navigation/GamesVue.vue";
 
 // DASHBOARD
 import DashboardLayout from "../components/Dashboard/DashboardLayout";
+import WelcomeLayout from '../components/Welcome/WelcomeLayout.vue'
 
 // LGDC
 import AllCharactersLayout from "../components/Characters/AllCharactersLayout";
@@ -168,6 +169,7 @@ const adminRoutes = [
 const appChildren = [
   // DASHBOARD
   { path: "/dashboard", name: "Dashboard", component: DashboardLayout },
+  { path: "/welcome", name: "Welcome", component: WelcomeLayout },
 
   // SECTIONS
   ...lgdcRoutes,

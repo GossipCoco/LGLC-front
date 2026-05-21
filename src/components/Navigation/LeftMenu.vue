@@ -3,6 +3,17 @@
     <Logo v-bind:img="logo" />
     <ul :class="ulClass">
       <li :class="lilevel1">
+        <router-link to="/welcome" :active-class="activeClass" :exact-active-class="exactActiveClass">
+          <div class="menu-level1 width-20-vh">
+            <div class="menu-li-contain">
+              <span :class="textLink">
+                Accueil
+              </span>
+            </div>
+          </div>
+        </router-link>
+      </li>
+      <li :class="lilevel1">
         <router-link to="/dashboard" :active-class="activeClass" :exact-active-class="exactActiveClass">
           <div class="menu-level1 width-20-vh">
             <div class="menu-li-contain">
