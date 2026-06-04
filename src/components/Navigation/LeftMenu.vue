@@ -18,7 +18,7 @@
           <div class="menu-level1 width-20-vh">
             <div class="menu-li-contain">
               <span :class="textLink">
-                Tableau de bord
+                Dashboard
               </span>
             </div>
           </div>
@@ -31,7 +31,7 @@
               class="menu-text poppins-text font-size-1em font-weight-600 color-ternary-green"
               :class="{ 'menu-text--active': isSectionActive('lgdc') }"
             >
-              L'univers de LGDC
+              L'univers
             </span>
           </div>
         </router-link>
