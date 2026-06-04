@@ -72,7 +72,7 @@
           </div>
         </router-link>
       </li>
-      <li :class="lilevel1">
+      <!-- <li :class="lilevel1">
         <router-link
           to="/EventGlobal"
           :active-class="activeClass"
@@ -87,7 +87,7 @@
             </div>
           </div>
         </router-link>
-      </li>
+      </li> -->
       <li :class="lilevel1" v-if="role === 'Administrateur'">
         <router-link
           to="/admin"
