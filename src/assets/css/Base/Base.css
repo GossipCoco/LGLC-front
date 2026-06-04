@@ -23,7 +23,7 @@ html, body, #app {
 }
 html,body {
   background-image: var(--background-image-02);
-  background-position: 100% 95%;
+  background-position: 0 5%;
   background-size: cover;
   background-repeat: no-repeat;
 }
