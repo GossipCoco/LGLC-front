@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid">
     <div class="row height-100-vh">
-      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-3 col-xxl-3">
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-3 col-xxl-3  padding-2-vh">
         <profil-component />
       </div>
       <div class="col-sm-12 col-md-12 col-lg-12 col-xl-9 col-xxl-9">
