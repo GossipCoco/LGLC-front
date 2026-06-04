@@ -1,5 +1,5 @@
 <template>
-  <div class="card background-color-dark-green-01" style="width: 18rem">
+  <div class="card background-color-dark-green-01">
     <div class="card-body">
       <h5 class="card-title">Mes clubs</h5>
       <p class="card-text white-text">
