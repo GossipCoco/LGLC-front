@@ -143,6 +143,9 @@
 {
     margin: 2vh 0 24vh 0;
 }
+.mar-0-auto{
+    margin: 0 auto;
+}
 /*  PADDING */
 .padding-0-rem{
     padding: 0;
