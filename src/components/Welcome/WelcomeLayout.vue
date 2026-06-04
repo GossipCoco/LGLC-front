@@ -5,12 +5,12 @@
         <profil-component />
       </div>
       <div class="col-sm-12 col-md-12 col-lg-12 col-xl-9 col-xxl-9">
-        <div class="row">
+        <div class="row height-25-vh">
           <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 padding-2-vh">
             <title-welcome-component></title-welcome-component>
           </div>
         </div>
-        <div class="row">
+        <div class="row  height-30-vh">
           <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
             <div class="row">
               <div class="col-sm-12 col-md-12 col-lg-12 col-xl-4 col-xxl-4">
@@ -24,6 +24,15 @@
               </div>
             </div>
           </div>
+        </div>
+        
+        <div class="row  height-30-vh">
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-8 col-xxl-8"></div>
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-4 col-xxl-4"></div>
+        </div>        
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-8 col-xxl-8"></div>
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-4 col-xxl-4"></div>          
         </div>
       </div>
     </div>
