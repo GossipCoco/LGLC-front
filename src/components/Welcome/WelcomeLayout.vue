@@ -5,7 +5,7 @@
         <profil-component />
       </div>
       <div class="col-sm-12 col-md-12 col-lg-12 col-xl-9 col-xxl-9">
-        <div class="row height-20-vh">
+        <div class="row height-18-vh">
           <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 padding-2-vh">
             <title-welcome-component></title-welcome-component>
           </div>
