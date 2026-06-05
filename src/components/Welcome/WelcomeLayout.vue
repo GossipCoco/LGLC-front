@@ -26,7 +26,7 @@
           </div>
         </div>
         
-        <div class="row margin-0-0-2vh-0 height-30-vh">
+        <div class="row margin-0-0-2vh-0 height-25-vh">
           <div class="col-sm-12 col-md-12 col-lg-12 col-xl-8 col-xxl-8">
             <my-characters-component />
           </div>
