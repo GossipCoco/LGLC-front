@@ -35,8 +35,12 @@
           </div>
         </div>        
         <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-8 col-xxl-8"></div>
-          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-4 col-xxl-4"></div>          
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-8 col-xxl-8">
+            <citation-component />
+          </div>
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-4 col-xxl-4">
+            <parameters-component />
+          </div>          
         </div>
       </div>
     </div>
@@ -50,6 +54,8 @@ import LastChapters from "./GenericComponent/LastChapters.vue";
 import MyClubsComponents from "./GenericComponent/MyClubsComponents.vue";
 import MyCharactersComponent from "./GenericComponent/MyCharactersComponent.vue";
 import EasyActionsComponents from "./GenericComponent/EasyActionsComponents.vue";
+import CitationComponent from "./GenericComponent/CitationComponent.vue";
+import ParametersComponent from "./GenericComponent/ParametersComponent.vue";
 export default {
   name: "WelcomeLayout",
   components: {
@@ -59,7 +65,9 @@ export default {
     LastChapters,
     MyClubsComponents,
     MyCharactersComponent,
-    EasyActionsComponents
+    EasyActionsComponents,
+    CitationComponent,
+    ParametersComponent
   },
   data() {
     return {
