@@ -1,7 +1,7 @@
 <template>
   <div class="card background-color-dark-green-01">
     <div class="card-body">
-      <p class="card-text white-text  font-size-1em">
+      <p class="white-text  font-size-1em">
         Paramètres
       </p>      
     </div>
