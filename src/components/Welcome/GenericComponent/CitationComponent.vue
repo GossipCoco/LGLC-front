@@ -1,7 +1,7 @@
 <template>
   <div class="card background-color-dark-green-01">
     <div class="card-body">
-      <p class="card-text white-text">
+      <p class="card-text white-text font-size-1em">
         J'ai mené une bonne vie. J'ai eu des amis formidables et des camarades loyaux. J'ai aimé et j'ai été aimé en retour.
       </p>      
     </div>
