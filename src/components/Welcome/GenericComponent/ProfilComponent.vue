@@ -1,5 +1,5 @@
 <template>
-  <div class="card background-color-dark-green-01 width-45-vh height-70-vh">
+  <div class="card background-color-dark-green-01 height-70-vh">
     <div class="card-body">
       <h5 class="card-title">Etoile d'Aulnes</h5>
       <p class="card-text white-text">
