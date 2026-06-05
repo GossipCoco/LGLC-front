@@ -30,7 +30,9 @@
           <div class="col-sm-12 col-md-12 col-lg-12 col-xl-8 col-xxl-8">
             <my-characters-component />
           </div>
-          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-4 col-xxl-4"></div>
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-4 col-xxl-4">
+            <easy-actions-components />
+          </div>
         </div>        
         <div class="row">
           <div class="col-sm-12 col-md-12 col-lg-12 col-xl-8 col-xxl-8"></div>
@@ -47,6 +49,7 @@ import LastFictionsComponent from "./GenericComponent/LastFictionsComponent.vue"
 import LastChapters from "./GenericComponent/LastChapters.vue";
 import MyClubsComponents from "./GenericComponent/MyClubsComponents.vue";
 import MyCharactersComponent from "./GenericComponent/MyCharactersComponent.vue";
+import EasyActionsComponents from "./GenericComponent/EasyActionsComponents.vue";
 export default {
   name: "WelcomeLayout",
   components: {
@@ -55,7 +58,8 @@ export default {
     LastFictionsComponent,
     LastChapters,
     MyClubsComponents,
-    MyCharactersComponent
+    MyCharactersComponent,
+    EasyActionsComponents
   },
   data() {
     return {
