@@ -1,7 +1,7 @@
 <template>
   <div class="card background-color-dark-green-01 height-70-vh">
     <div class="card-body">
-      <h5 class="card-title">Etoile d'Aulnes</h5>
+      <h5 class="card-title">{{ UserName }}</h5>
       <p class="white-text font-size-1em">
         Some quick example text to build on the card title and make up the bulk
         of the card’s content.
@@ -12,5 +12,9 @@
 <script>
 export default {
   name: "ProfilComponent",
+  props: [
+    "Avatar",
+    "UserName",
+]
 };
 </script>

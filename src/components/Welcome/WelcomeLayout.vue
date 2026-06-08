@@ -2,7 +2,9 @@
   <div class="container-fluid">
     <div class="row height-100-vh">
       <div class="col-sm-12 col-md-12 col-lg-12 col-xl-2 col-xxl-2  padding-2-vh">
-        <profil-component />
+        <profil-component
+        v-bind:Avatar="Avatar" 
+        v-bind:UserName="UserName"/>
       </div>
       <div class="col-sm-12 col-md-12 col-lg-12 col-xl-10 col-xxl-10">
         <div class="row height-18-vh">
@@ -107,6 +109,7 @@ export default {
       UserService.getUserById(e)
         .then((response) => {
           this.userInfo = response.data.ob;
+          console.log(response.data.ob)
           this.Avatar = response.data.ob.Avatar;
           this.UserName = response.data.ob.UserName;
           this.LastConnexion = response.data.ob.LastConnexion;
@@ -117,8 +120,6 @@ export default {
           this.NameRole = this.userInfo.Role.Name;
           this.roleImage = this.userInfo.Role.Image;
           this.totalPoints = this.calculateTotalPoints(this.userInfo.Points);
-          this.level = this.userInfo.Level;
-          this.gamer = this.userInfo.Gamers;
           this.showspinner = false;
         })
         .catch((error) => {
