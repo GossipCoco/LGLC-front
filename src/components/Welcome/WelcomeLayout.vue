@@ -46,6 +46,7 @@
   </div>
 </template>
 <script>
+import UserService from "../../services/UserService.js";
 import ProfilComponent from "./GenericComponent/ProfilComponent.vue";
 import TitleWelcomeComponent from "./GenericComponent/TitleWelcomeComponent.vue";
 import LastFictionsComponent from "./GenericComponent/LastFictionsComponent.vue";
@@ -72,7 +73,59 @@ export default {
     return {
       showspinner: false,
       usrId: this.$store.state.auth.user.usrID,
+      Avatar: null,
+      UserName: null,
+      Inscription: null,
+      LastConnexion: null,
+      role: null,
+      NameRole: null,
+      LevelName: null,
+      Nbmessages: null,
+      NbOCs: null,
+      totalWordsByFiction: {}, // Objet pour stocker les totaux par fiction
+      nBFictionV2: 0, // Nombre de fictions
+      totalWordsV2: 0, // Total de mots de toutes les fictions
+      totalPoints: 0,
     };
   },
+  
+  created() {
+    this.GetUserById(this.usrId);
+  },
+  
+  methods: {
+    calculateTotalPoints(pointsArray) {
+      return pointsArray.reduce((total, point) => total + point.Points, 0);
+    },
+    GetUserById(e) {
+      this.showspinner = true;
+      this.nav = {
+        current: 0,
+        pages: 0,
+        step: 4,
+      };
+      UserService.getUserById(e)
+        .then((response) => {
+          this.userInfo = response.data.ob;
+          this.Avatar = response.data.ob.Avatar;
+          this.UserName = response.data.ob.UserName;
+          this.LastConnexion = response.data.ob.LastConnexion;
+          this.Inscription = response.data.ob.Inscription;
+          this.LvelImf = this.userInfo.Level.Image;
+          this.LevelName = this.userInfo.Level.Name;
+          this.role = this.userInfo.Role;
+          this.NameRole = this.userInfo.Role.Name;
+          this.roleImage = this.userInfo.Role.Image;
+          this.totalPoints = this.calculateTotalPoints(this.userInfo.Points);
+          this.level = this.userInfo.Level;
+          this.gamer = this.userInfo.Gamers;
+          this.showspinner = false;
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    },
+
+  }
 };
 </script>
