@@ -8,8 +8,7 @@
       class="'avatar-dahboard-container border-radius-100 display-flex-column width-12-vh height-12-vh" 
       />
       <p class="white-text font-size-1em">
-        Some quick example text to build on the card title and make up the bulk
-        of the card’s content.
+        STest à la con
       </p>
     </div>
   </div>
